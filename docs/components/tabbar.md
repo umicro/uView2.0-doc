@@ -5,7 +5,6 @@
 #### 优点：
 
 此组件提供了自定义tabbar的能力，具有如下特点：
-- 可以设置个性化的凸起按钮，具有醒目效果而且是全端通用的
 - 图标可以使用字体图标(内置图标和扩展图标)或者图片
 - 可以动态切换菜单的数量以及配置
 - 切换菜单之前，可以进行回调鉴权
@@ -35,215 +34,165 @@
 
 ### 基本使用
 
-在使用的时候，需要注意组件的位置，要将它放在和页面包裹所有内容的元素同级的位置，否则可能会造成组件的高度塌陷，有如下几个需要注意的点：
+推荐您使用list数组遍历循环，案例使用基础方式构建，请根据`click`事件回调进行后续逻辑操作。
 
-- 通过`list`参数配置每一个item的参数
-- 如果需要配置凸起的按钮，这个按钮的配置需要在`list`数组的**中间位置**，同时需要配置`mid-button`参数为`true`
-- 将组件放在和页面包裹所有内容的元素同级的位置
-- 通过`v-model`绑定一个数值变量，用于指示当前激活项的索引
+``` html
+<u-tabbar
+	:value="value1"
+	@change="change1"
+	:fixed="false"
+	:placeholder="false"
+	:safeAreaInsetBottom="false"
+>
+	<u-tabbar-item text="首页" icon="home" @click="click1" ></u-tabbar-item>
+	<u-tabbar-item text="放映厅" icon="photo" @click="click1" ></u-tabbar-item>
+	<u-tabbar-item text="直播" icon="play-right" @click="click1" ></u-tabbar-item>
+	<u-tabbar-item text="我的" icon="account" @click="click1" ></u-tabbar-item>
+</u-tabbar>
+<!-- js -->
+click1(e) {
+	console.log('click1', e);
+}
+```
+### 显示徽标
 
-下面解释`list`数组中元素参数的作用：
+使用`dot`属性添加--小点--类型徽标，使用`badge`属性添加--数字--类型徽标。您也可以使用`:badge='badge'`动态设置徽标数量，
+这在消息盒子的展示中是比较好用的功能，
 
-```js
-let list = [
-	{
-		// 非凸起按钮未激活的图标，可以是uView内置图标名或自定义扩展图标库的图标
-		// 或者png图标的【绝对路径】，建议尺寸为80px * 80px
-		// 如果是中间凸起的按钮，只能使用图片，且建议为120px * 120px的png图片
-		iconPath: "home",
-		// 激活(选中)的图标，同上
-		selectedIconPath: "home-fill",
-		// 显示的提示文字
-		text: '首页',
-		// 红色角标显示的数字，如果需要移除角标，配置此参数为0即可
-		count: 2,
-		// 如果配置此值为true，那么角标将会以红点的形式显示
-		isDot: true,
-		// 如果使用自定义扩展的图标库字体，需配置此值为true
-		// 自定义字体图标库教程：https://www.uviewui.com/guide/customIcon.html
-		customIcon: false,
-		// 如果是凸起按钮项，需配置此值为true
-		midButton: false,
-		// 点击某一个item时，跳转的路径，此路径必须是pagees.json中tabBar字段中定义的路径
-		pagePath: '', // 1.5.6新增，路径需要以"/"开头
-	}
-]
+``` html
+<u-tabbar
+	:value="value2"
+	:placeholder="false"
+	@change="name => value2 = name"
+	:fixed="false"
+	:safeAreaInsetBottom="false"
+>
+	<u-tabbar-item text="首页" icon="home" dot ></u-tabbar-item>
+	<u-tabbar-item text="放映厅" icon="photo" badge="3"></u-tabbar-item>
+	<u-tabbar-item text="直播" icon="play-right" ></u-tabbar-item>
+	<u-tabbar-item text="我的" icon="account" ></u-tabbar-item>
+</u-tabbar>
+<!-- data -->
+value2: 1,
+```
+### 匹配标签的名称
+
+``` html
+<u-tabbar
+:placeholder="false"
+:value="value3"
+@change="name => value3 = name"
+:fixed="false"
+:safeAreaInsetBottom="false"
+>
+	<u-tabbar-item text="首页" icon="home" name="home"></u-tabbar-item>
+	<u-tabbar-item text="放映厅" icon="photo" name="photo" ></u-tabbar-item>
+	<u-tabbar-item text="直播" icon="play-right" name="play-right"></u-tabbar-item>
+	<u-tabbar-item text="我的" name="account" icon="account" ></u-tabbar-item>
+</u-tabbar>
+<!-- data -->
+value3: 'play-right',
 ```
 
-#### 示例代码
+### 自定义图标/颜色
 
-```html
-<template>
-	<view>
-		<view class="u-page">
-			<!-- 所有内容的容器 -->
-		</view>
-		<!-- 与包裹页面所有内容的元素u-page同级，且在它的下方 -->
-		<u-tabbar v-model="current" :list="list" :mid-button="true"></u-tabbar>
-	</view>
-</template>
+如您需要自定义图标/颜色，在`u-tabbar-item`标签中使用插槽`active-icon`和`inactive-icon`来定义图标和颜色
 
-<script>
-	export default {
-		data() {
-			return {
-				list: [{
-						iconPath: "home",
-						selectedIconPath: "home-fill",
-						text: '首页',
-						count: 2,
-						isDot: true,
-						customIcon: false,
-					},
-					{
-						iconPath: "photo",
-						selectedIconPath: "photo-fill",
-						text: '放映厅',
-						customIcon: false,
-					},
-					{
-						iconPath: "https://cdn.uviewui.com/uview/common/min_button.png",
-						selectedIconPath: "https://cdn.uviewui.com/uview/common/min_button_select.png",
-						text: '发布',
-						midButton: true,
-						customIcon: false,
-					},
-					{
-						iconPath: "play-right",
-						selectedIconPath: "play-right-fill",
-						text: '直播',
-						customIcon: false,
-					},
-					{
-						iconPath: "account",
-						selectedIconPath: "account-fill",
-						text: '我的',
-						count: 23,
-						isDot: false,
-						customIcon: false,
-					},
-				],
-				current: 0
-			}
-		},
-	}
-</script>
+``` html
+<u-tabbar
+	:value="value4"
+	@change="name => value4 = name"
+	:fixed="false"
+	:placeholder="false"
+	activeColor="#d81e06"
+	:safeAreaInsetBottom="false"
+>
+	<u-tabbar-item text="首页">
+		<image
+			class="u-page__item__slot-icon"
+			slot="active-icon"
+			src="https://cdn.uviewui.com/uview/common/bell-selected.png"
+		></image>
+		<image
+			class="u-page__item__slot-icon"
+			slot="inactive-icon"
+			src="https://cdn.uviewui.com/uview/common/bell.png"
+		></image>
+	</u-tabbar-item>
+	<u-tabbar-item text="放映厅" icon="photo" ></u-tabbar-item>
+	<u-tabbar-item text="直播" icon="play-right" ></u-tabbar-item>
+	<u-tabbar-item text="我的" icon="account" ></u-tabbar-item>
+</u-tabbar>
+<!-- data -->
+value4: 0,
 ```
 
+### 拦截切换事件(点击第二个标签)
 
-### 外观配置
-
-可以通过以下参数，进行组件的整体外观配置
-
-- `height`配置导航栏高度，建议使用默认值即可，默认为`50px`，与uni-app自带系统导航栏高度一致
-- `bg-color`组件的背景颜色
-- `active-color`与`inactive-color`配置提示文字和图标的颜色(如果是字体图标的话)，可以搭配`bg-color`达到自定义导航栏主题的效果
-
-
-### 切换前的回调
-
-在点击切换之前，如果配置了`before-switch`参数并绑定的是一个方法的话，将会抛出点击项的索引，并执行此方法。  
-
-此回调可以返回一个`promise`、`true`，或者`false`，下面分别阐述三者的处理情况：
-
-- `false`——如果返回`false`，将不会切换`tab`项
-- `true`——如果返回`true`，将会切换`tab`项
-- `promise`——如果返回的是一个`promise`，如果进入`then`回调，就会和返回`true`的情况一样，如果进入`catch`回调，就会和返回`false`的情况一样
-
-下面举例说明：
-
-由于篇幅问题，以下示例可不直接运行，仅作举例作用。
-
-#### 1. 普通返回
-
-```html
-<template>
-	<u-tabbar :before-switch="beforeSwitch"></u-tabbar>
-</template>
-
-<script>
-	export default {
-		methods: {
-			beforeSwitch(index) {
-				// 只能切换偶数项
-				if(index % 2 == 0) return true;
-				else return false;
-			}
-		}
-	}
-</script>
-```
-
-#### 2. 请求之后再返回
-
-```html
-<template>
-	<u-tabbar :before-switch="beforeSwitch"></u-tabbar>
-</template>
-
-<script>
-	export default {
-		methods: {
-			async beforeSwitch(index) {
-				// await等待一个请求，请求回来后再返回true，再进行切换
-				let data = await this.$u.post('url');
-				return true; // 或者根据逻辑返回false
-			}
-		}
-	}
-</script>
-```
-
-#### 3. 返回一个Promise
-
-```html
-<template>
-	<u-tabbar :before-switch="beforeSwitch"></u-tabbar>
-</template>
-
-<script>
-	export default {
-		methods: {
-			beforeSwitch(index) {
-				// 返回一个promise
-				return new Promise((resolve, reject) => {
-					this.$u.post('url').then(res => {
-						// resolve()之后，将会进入promise的组件内部的then回调，相当于返回true
-						resolve();
-					}).catch(err => {
-						// reject()之后，将会进入promise的组件内部的catch回调，相当于返回false
-						reject();
-					})
-				})
-			}
-		}
-	}
-</script>
+在切换事件中，处理拦截事件或者您其他js操作逻辑。
+``` html
+<u-tabbar
+	:value="value5"
+	:fixed="false"
+	@change="change5"
+	:safeAreaInsetBottom="false"
+	:placeholder="false"
+>
+	<u-tabbar-item text="首页" icon="home" ></u-tabbar-item>
+	<u-tabbar-item text="放映厅" icon="photo" ></u-tabbar-item>
+	<u-tabbar-item text="直播" icon="play-right" ></u-tabbar-item>
+	<u-tabbar-item text="我的" icon="account" ></u-tabbar-item>
+</u-tabbar>
+<!-- data -->
+value5: 0,
+<!-- js -->
+change5(name) {
+	if (name === 1) return uni.$u.toast('请您先登录')
+	else this.value5 = name
+},
 ```
 
 
 ### 边框
 
-组件默认带了顶部边框，如果有配置中部凸起按钮的话，此按钮同时也会有外层边框，如果不需要，配置`border-top`为`false`即可。
+组件默认带了顶部边框，如果不需要，配置`border`为`false`即可。
+```html
+<u-tabbar
+	:value="value7"
+	:placeholder="false"
+	:border="false"
+	@change="name => value7 = name"
+	:fixed="false"
+	:safeAreaInsetBottom="false"
+>
+	<u-tabbar-item text="首页" icon="home" ></u-tabbar-item>
+	<u-tabbar-item text="放映厅" icon="photo" ></u-tabbar-item>
+	<u-tabbar-item text="直播" icon="play-right" ></u-tabbar-item>
+	<u-tabbar-item text="我的" icon="account" ></u-tabbar-item>
+</u-tabbar>
+<!-- data -->
+value7: 3
+```
+### 固定在底部(固定在屏幕最下方)
 
+与原生效果无异，但您可以按照api配置您需要的其他配置，如徽标，边框等
 
-### 实战教程 <Badge text="1.5.6" />
-
-自定义tabbar场景，我们不建议在一个页面内通过几个组件，用`v-if`切换去模拟各个页面，而应该使用uni-app自带的tabbar系统，同时隐藏原生的tabbar，
-再引入自定导航栏，这样可以保证原有性能，同时又能自定义tabbar，思路如下：
-
-1. 在pages.json中正常定义tabbar逻辑和字段，只需配置`tabBar`字段`list`中的`pagePath`(需以"/"开头)属性即可
-2. 在各个tabbar页面引入`u-tabbar`组件，组件会默认自动通过`uni.hideTabBar()`隐藏系统tabbar
-3. 通过`vuex`引用同一份tabbar组件的`list`参数，这样可以做到修改某一个页面的`u-tabbar`数据，其他页面的`u-tabbar`也能同步更新
-4. 组件内部会自动处理各种跳转的逻辑，同时需要注意以下两点：
-
-- 要在`list`参数中配置`pagePath`路径，此路径为`pages.json`中定义的tabbar字段的路径
-- 此种方式，无需通过`v-model`绑定活动项，内部会自动进行判断和跳转
-
-我们为此做了一个演示`demo`，您可以在下载页找到对应的资源，下载运行即可，[点此跳转下载页](/components/resource.html)
-
-
-
+```html
+<u-tabbar
+	:value="value6"
+	@change="name => value6 = name"
+	:fixed="true"
+	:placeholder="true"
+	:safeAreaInsetBottom="true"
+>
+	<u-tabbar-item text="首页" icon="home" ></u-tabbar-item>
+	<u-tabbar-item text="放映厅" icon="photo" ></u-tabbar-item>
+	<u-tabbar-item text="直播" icon="play-right" ></u-tabbar-item>
+	<u-tabbar-item text="我的" icon="account" ></u-tabbar-item>
+</u-tabbar>
+<!-- data -->
+value6: 0,
+```
 ### API
 
 ### Table Props
