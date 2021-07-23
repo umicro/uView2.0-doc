@@ -13,12 +13,19 @@
 
 ### 基本使用
 
-- 可以通过设置`file-list`参数(数组，元素为对象)，显示预置的图片。其中元素的`url`属性为图片路径
+- 可以通过设置`fileList`参数(数组，元素为对象)，显示预置的图片。其中元素的`url`属性为图片路径
 - 设置`action`参数为后端服务器地址，注意H5在浏览器可能会有跨域限制，让后端允许域即可
 
 ```html
 <template>
-	<u-upload :action="action" :file-list="fileList" ></u-upload>
+	<u-upload
+		:fileList="fileList1"
+		@afterRead="afterRead"
+		@delete="deletePic"
+		name="1"
+		multiple
+		:maxCount="10"
+	></u-upload>
 </template>
 
 <script>
@@ -26,18 +33,43 @@
 		data() {
 			return {
 				// 演示地址，请勿直接使用
-				action: 'http://www.example.com/upload',
-				fileList: [
-					{
-						url: 'http://pics.sc.chinaz.com/files/pic/pic9/201912/hpic1886.jpg',
-					}
-				]
+				fileList1: [],
 			}
+		},
+		methods:{
+			// 删除图片
+			deletePic(event) {
+				this[`fileList${event.name}`].splice(event.index, 1)
+			},
+			async afterRead(event) {
+				console.log(event)
+				// 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
+				let lists = [].concat(event.file)
+				let fileListLen = this[`fileList${event.name}`].length
+				lists.map((item) => {
+					this[`fileList${event.name}`].push({
+						...item,
+						status: 'uploading',
+						message: '上传中'
+					})
+				})
+				for (let i = 0; i < lists.length; i++) {
+					const result = await this.uploadFilePromise(lists[i].thumb)
+					let item = this[`fileList${event.name}`][fileListLen]
+					this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
+						status: 'success',
+						message: '',
+						url: result
+					}))
+					fileListLen++
+				}
+			},
 		}
+
 	}
 </script>
 ```
-
+<!-- 
 ### 手动上传
 
 组件默认为自动上传，可以设置`auto-upload`为`false`，然后通过`ref`调用组件的`upload`方法，手动上传图片
@@ -381,7 +413,7 @@ lists = [
 		height: 140rpx;
 	}
 </style>
-```
+``` -->
 
 
 ### API
@@ -407,7 +439,7 @@ lists = [
 | multiple | 是否开启图片多选，部分安卓机型不支持  | Boolean  | true | false |
 | deletable | 是否显示删除图片的按钮 | Boolean  | true | false |
 | max-size | 选择单个文件的最大大小，单位B(byte)，默认不限制 | String \| Number  | Number.MAX_VALUE | - |
-| file-list | 默认显示的图片列表，数组元素为对象，必须提供`url`属性 | Array\<Object\>  | - | - |
+| fileList | 默认显示的图片列表，数组元素为对象，必须提供`url`属性 | Array\<Object\>  | - | - |
 | upload-text | 选择图片按钮的提示文字 | String  | 选择图片 | - |
 | auto-upload | 选择完图片是否自动上传，见上方说明 | Boolean  | true | false |
 | show-tips | 特殊情况下是否自动提示toast，见上方说明 | Boolean  | true | false |
