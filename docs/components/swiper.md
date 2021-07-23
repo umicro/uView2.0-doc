@@ -18,68 +18,176 @@
 
 ### 基本使用
 
-通过`list`参数传入轮播图列表值，该值为一个数组，元素为对象，见如下：
-- `list`的"image"属性为轮播图的图片路径
-- `list`的"title"属性为需要显示的标题
-
-
-**说明：** 某些情况下  
-1. 您从服务端获取的数据，里面的数组对于图片的属性名不一定为`image`，如果让您再历遍修改为`image`属性，显示是不人性的，
-所以uView提供了一个`name`参数，比如您数组中的图片名称为`img`，您可以设置`u-swiper`组件的`name`参数为`img`值。
-
-2. 您也可以直接传递一个元素为图片路径的数组给`list`参数，如下(1.6.5支持)：
+通过`list`参数传入轮播图列表值，该值为一个数组，键值为图片路径，例如：
 ```html
-<u-swiper :list="list"></u-swiper>
-
-let list = [
-	'1.png',
-	'2.png'
-];
+<u-swiper
+	:list="list1"
+	@change="change"
+	@click="click"
+></u-swiper>
+list1: [
+        'https://cdn.uviewui.com/uview/swiper/swiper1.png',
+        'https://cdn.uviewui.com/uview/swiper/swiper2.png',
+        'https://cdn.uviewui.com/uview/swiper/swiper3.png',
+],
 ```
 
-::: warning 注意
-如果需要显示标题，还需要设置`title`参数为`true`
-:::
+### 带标题
+
+添加`showTitle`属性以展示标题，此时`list`的参数应为一个对象：例如：
+<br/>
+（请注意：您期望使用对象作为参数时，需要配置`u-swiper`组件的`keyName`参数为`您当前对象的图片key`值）如：`keyName="image"`
 
 ```html
-<template>
-	<view class="wrap">
-		<u-swiper :list="list"></u-swiper>
+<u-swiper
+	:list="list2"
+	keyName="image"
+	showTitle
+	:autoplay="false"
+	circular
+></u-swiper>
+list2: [{
+		image: 'https://cdn.uviewui.com/uview/swiper/swiper2.png',
+		title: '昨夜星辰昨夜风，画楼西畔桂堂东',
+	},
+	{
+		image: 'https://cdn.uviewui.com/uview/swiper/swiper1.png',
+		title: '身无彩凤双飞翼，心有灵犀一点通'
+	},
+	{
+		image: 'https://cdn.uviewui.com/uview/swiper/swiper3.png',
+		title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳'
+	}
+],
+```
+### 带指示器
+
+通过`list`参数传入轮播图列表值，该值为一个数组，元素为对象，添加`showTitle`属性展示标题，例如：
+<br/>
+（请注意：您期望使用对象作为参数时，需要配置`u-swiper`组件的`keyName`参数为`您当前对象的图片key`值）如：`keyName="image"`
+
+```html
+<u-swiper
+	:list="list3"
+	indicator
+	indicatorMode="line"
+	circular
+></u-swiper>
+list3: [
+	'https://cdn.uviewui.com/uview/swiper/swiper3.png',
+	'https://cdn.uviewui.com/uview/swiper/swiper2.png',
+	'https://cdn.uviewui.com/uview/swiper/swiper1.png',
+],
+```
+### 加载中
+
+通过添加`loading`属性达到加载中的状态，例如：
+<br/>
+您也可以动态的来控制加载状态，比如：`:loading='loading'`
+```html
+<u-swiper
+	:list="list3"
+	loading
+></u-swiper>
+list3: [
+	'https://cdn.uviewui.com/uview/swiper/swiper3.png',
+	'https://cdn.uviewui.com/uview/swiper/swiper2.png',
+	'https://cdn.uviewui.com/uview/swiper/swiper1.png',
+],
+```
+### 嵌入视频
+
+我们提供了嵌入视频的能力，为避免资源浪费，在您切换轮播的时候视频会停止播放，你可以设置`poster`指定视频封面，案例如下：
+
+```html
+<u-swiper
+	:list="list4"
+	keyName="url"
+	:autoplay="false"
+></u-swiper>
+list4: [{
+		url: 'https://cdn.uviewui.com/uview/resources/video.mp4',
+		title: '昨夜星辰昨夜风，画楼西畔桂堂东',
+		poster: 'https://cdn.uviewui.com/uview/swiper/swiper1.png'
+	},
+	{
+		url: 'https://cdn.uviewui.com/uview/swiper/swiper2.png',
+		title: '身无彩凤双飞翼，心有灵犀一点通'
+	},
+	{
+		url: 'https://cdn.uviewui.com/uview/swiper/swiper3.png',
+		title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳'
+	}
+],
+```
+### 自定义指示器
+
+如您需要以指示点或数字形式来自定义指示器，请参考如下案例：
+
+```html
+<u-swiper
+	:list="list5"
+	@change="e => current = e.current"
+	:autoplay="false"
+>
+	<view
+		slot="indicator"
+		class="indicator"
+	>
+		<view
+			class="indicator__dot"
+			v-for="(item, index) in list5"
+			:key="index"
+			:class="[index === current && 'indicator__dot--active']"
+		>
+		</view>
 	</view>
-</template>
+</u-swiper>
+list5: [
+	'https://cdn.uviewui.com/uview/swiper/swiper3.png',
+	'https://cdn.uviewui.com/uview/swiper/swiper2.png',
+	'https://cdn.uviewui.com/uview/swiper/swiper1.png',
+],
+<u-swiper
+	:list="list6"
+	@change="e => currentNum = e.current"
+	:autoplay="false"
+	indicatorStyle="right: 20px"
+>
+	<view
+		slot="indicator"
+		class="indicator-num"
+	>
+		<text class="indicator-num__text">{{ currentNum + 1 }}/{{ list6.length }}</text>
+	</view>
+</u-swiper>
 
-<script>
-	export default {
-		data() {
-			return {
-				list: [{
-						image: 'https://cdn.uviewui.com/uview/swiper/1.jpg',
-						title: '昨夜星辰昨夜风，画楼西畔桂堂东'
-					},
-					{
-						image: 'https://cdn.uviewui.com/uview/swiper/2.jpg',
-						title: '身无彩凤双飞翼，心有灵犀一点通'
-					},
-					{
-						image: 'https://cdn.uviewui.com/uview/swiper/3.jpg',
-						title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳'
-					}
-				],
-			}
-		},
-		methods: {
-
-		}
-	}
-</script>
-
-<style lang="scss" scoped>
-	.wrap {
-		padding: 40rpx;
-	}
-</style>
+list6: [
+	'https://cdn.uviewui.com/uview/swiper/swiper2.png',
+	'https://cdn.uviewui.com/uview/swiper/swiper3.png',
+	'https://cdn.uviewui.com/uview/swiper/swiper1.png',
+]
 ```
+### 卡片式轮播
 
+在实际开发中，普通的轮播或许不能满足您的开发需求，`swiper`组件提供了卡片式轮播的api，您可以参考一下案例实现此功能
+```html
+<!-- #ifndef APP-NVUE || MP-TOUTIAO -->
+	<view class="u-demo-block">
+		<text class="u-demo-block__title">卡片式</text>
+		<u-swiper
+			:list="list3"
+			previousMargin="30"
+			nextMargin="30"
+			circular
+			:autoplay="false"
+			radius="5"
+			bgColor="#ffffff"
+		></u-swiper>
+	</view>
+<!-- #endif -->
+```
+<!-- 
 ### 指示器类型
 
 本组件内置了多种指示器，通过配置`mode`参数即可，有如下：
@@ -150,4 +258,4 @@ let list = [
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
 | click | 点击轮播图时触发 | index：点击了第几张图片，从0开始 |
-| change | 轮播图切换时触发(自动或者手动切换) | index：切换到了第几张图片，从0开始 |
+| change | 轮播图切换时触发(自动或者手动切换) | index：切换到了第几张图片，从0开始 | -->
