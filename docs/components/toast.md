@@ -3,11 +3,7 @@
 <demo-model url="/pages/componentsA/toast/index"></demo-model>
 
 
-此组件表现形式类似uni的`uni.showToast`API，但也有不同的地方，具体表现在：
-- uView的`toast`有5种主题可选
-- 可以配置toast结束后，跳转相应URL
-- 目前没有加载中的状态，请用uni的`uni.showLoading`，这个需求uni已经做得很好
-
+Toast 组件主要用于消息通知、加载提示、操作结果提示等醒目提示效果，我们为其提供了七种丰富的API。
 
 :::warning 注意：
 由于uni中无法通过js创建元素，所以需要在页面中调用`<toast />`组件，再通过`ref`开启
@@ -15,66 +11,118 @@
 
 ### 基本使用
 
-以下为一个模拟登录成功后，弹出toast提示，并在一定时间(默认2000ms)后，自动跳转页面到个人中心页(也可以配置跳转的参数)的示例
+以下为不同能力的toast的具体表现
 
 ``` html
 <template>
 	<view>
-		<u-toast ref="uToast" />
+		<u-toast ref="uToast"></u-toast>
+		<u-cell-group title-bg-color="rgb(243, 244, 246)">
+			<u-cell
+				:titleStyle="{fontWeight: 500}"
+				:title="item.title"
+				v-for="(item, index) in list"
+				:key="index"
+				isLink
+				:icon="item.iconUrl"
+				@click="showToast(item)"
+			>
+			</u-cell>
+		</u-cell-group>
 	</view>
 </template>
 
 <script>
 	export default {
+		data() {
+			return {
+				show: false,
+				list: [{
+						type: 'default',
+						title: '默认主题',
+						message: "锦瑟无端五十弦",
+						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/default.png'
+					},
+					{
+						type: 'error',
+						icon: false,
+						title: '失败主题',
+						message: "一弦一柱思华年",
+						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/error.png'
+					},
+					{
+						type: 'success',
+						title: '成功主题(带图标)',
+						message: "庄生晓梦迷蝴蝶",
+						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/success.png'
+					},
+					{
+						type: 'warning',
+						position: "top",
+						title: '位置偏移上方',
+						message: "望帝春心托杜鹃",
+						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/top.png'
+					},
+					{
+						type: 'loading',
+						title: '正在加载',
+						message: "正在加载",
+						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/loading.png'
+					},
+					{
+						type: 'default',
+						title: '结束后跳转标签页',
+						message: "此情可待成追忆",
+						url: '/pages/componentsB/tag/tag',
+						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/jump.png'
+					},
+					{
+						title: '禁止触摸穿透',
+						overlay: true,
+						message: "只是当时已惘然",
+						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/overlay.png'
+					},
+				],
+			}
+		},
+		computed: {
+			getIcon() {
+				return path => {
+					return 'https://cdn.uviewui.com/uview/example/' + path + '.png';
+				}
+			},
+		},
 		methods: {
-			showToast() {
+			showToast(params) {
 				this.$refs.uToast.show({
-					title: '登录成功',
-					type: 'success',
-					url: '/pages/user/index'
+					...params,
+					complete() {
+						params.url && uni.navigateTo({
+							url: params.url
+						})
+					}
 				})
 			}
+
 		}
 	}
 </script>
-```
-
-### 配置toast主题
-
-一共有6种主题可选，如下：
-- default-灰黑色，最普通的场景，此为默认主题，可以不用填`type`参数
-- error-红色，代表错误
-- success-绿色，代表成功
-- warning-黄色，代表警告
-- info-灰色，比default浅一点
-- primary-蓝色，uView的主色调
-
-除了`default`状态，其他5种主题，都是默认带有一个左边的图标，可以通过配置`icon`参数为`none`来取消
-
-``` js
-this.$refs.uToast.show({
-	title: '操作成功',
-	// 如果不传此type参数，默认为default，也可以手动写上 type: 'default'
-	// type: 'success', 
-	// 如果不需要图标，请设置为false
-	// icon: false
-})
-```
-
-### toast结束跳转URL
-
-- 如果配置了`url`参数，在toast结束的时候，就会用`uni.navigateTo`(默认)或者`uni.switchTab`(需另外设置`isTab`为`true`)
-- 如果配置了`params`参数，就会在跳转时自动在URL后面拼接上这些参数，具体用法如下：
-
-``` js
-this.$refs.uToast.show({
-	title: '操作成功',
-	url: '/pages/user/index',
-	params: {
-		id: 1,
-		menu: 3
+<style lang="scss">
+	.u-page {
+		padding: 0;
 	}
-})
+
+	.u-cell-icon {
+		width: 36rpx;
+		height: 36rpx;
+		margin-right: 8rpx;
+	}
+
+	.u-cell-group__title__text {
+		font-weight: bold;
+	}
+</style>
+
 ```
 
 ### API
@@ -91,7 +139,7 @@ this.$refs.uToast.show({
 
 | 参数      | 说明        | 类型     |  默认值  |  可选值   |
 |-----------|-----------|----------|----------|---------|
-| title | 显示的文本  | String | - | - |
+| message | 显示的文本  | String | - | - |
 | type | 主题类型，不填默认为`default` | String  | default | primary / success / error / warning / info |
 | duration | toast的持续时间，单位ms | Nubmer  | 2000 | - |
 | url | toast结束跳转的url，不填不跳转，优先级高于`back`参数 | String  | - | - |
