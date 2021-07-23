@@ -74,16 +74,20 @@ value1: true,
 ```
 ### 自定义样式
 
-同事设置`activeColor`和`inactiveColor`属性，可以让您自定义`switch`的样式，同样支持多种设置方式
+同时设置`activeColor`和`inactiveColor`属性，可以让您自定义`switch`的样式，同样支持多种设置方式
 
 ```html
 <u-switch
-	space="2" v-model="value12" activeColor="#f9ae3d" 
+	space="2" v-model="value11" activeColor="#f9ae3d" 
+	inactiveColor="rgb(230, 230, 230)">
+</u-switch>
+<u-switch
+	space="2" v-model="value12" activeColor="#f9ae3d"
 	inactiveColor="rgb(230, 230, 230)">
 </u-switch>
 <!-- data -->
-value3: false,
-value4: true,
+value11: false,
+value12: true,
 ```
 
 ### 异步控制
