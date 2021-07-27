@@ -3,10 +3,7 @@
 <demo-model url="/pages/componentsA/tag/index"></demo-model>
 
 
-该组件一般用于标记和选择，有如下特点：
-- `mode`参数可以设置3种模式，`dark`(深色背景)、`light`(浅色背景)、`plain`(白色背景)
-- `shape`参数可以设置多种形状，`circle`（两边半圆形）, `square`（方形，带圆角），`circleLeft`（左边半圆），`circleRight`（右边半圆）
-- `type`参数可以设置5种主题，`primary`，`success`，`warning`，`error`，`info`
+tag组件一般用于标记和选择，我们提供了更加丰富的表现形式，能够较全面的涵盖您的使用场景
 
 ### 平台差异说明
 
@@ -17,57 +14,168 @@
 ### 基本使用
 
 - 通过`type`参数设置主题类型，默认为`primary`
-- `text`设置标签内容
+- 属性`text`设置标签内容
 
 ```html
-<u-tag text="雪月夜" type="success" />
+<u-tag text="标签" plain size="mini" type="warning"></u-tag>
 ```
 
-### 设置标签的类型
-
-- 通过设置`mode`参数，可以设置标签的类型，`dark`(深色背景)、`light`(浅色背景)、`plain`(白色背景)
+### 自定义主题
 
 ```html
-<u-tag text="一丘之貉" mode="dark" />
-<u-tag text="沆瀣一气" mode="light" />
-<u-tag text="狼狈为奸" mode="plain" />
+<u-tag text="标签"></u-tag>
+<u-tag text="标签" type="warning"></u-tag>
+<u-tag text="标签"type="success"></u-tag>
+<u-tag text="标签" type="error"></u-tag>
 ```
 
-### 设置标签的形状
+### 圆形标签
 
-通过`shape`参数，可以设置标签的形状，默认是`square`（方形，带圆角），可选：`circle`（两边半圆形）, `circleLeft`（左边半圆），`circleRight`（右边半圆）
+- 类似胶囊形状
+```html
+<u-tag text="标签" plain shape="circle"></u-tag>
+<u-tag text="标签" type="warning" shape="circle"></u-tag>
+```
+### 镂空标签
 
 ```html
-<u-tag text="主谓宾" shape="circle" />
-<u-tag text="定状补" shape="circleLeft" />
+<u-tag text="标签" plain > </u-tag>
+<u-tag text="标签" type="warning" plain></u-tag>
+<u-tag text="标签" type="success" plain></u-tag>
+<u-tag text="标签" type="error" plain></u-tag>
 ```
 
-### 设置标签是否可以关闭
+### 镂空带背景色
 
-设置`closeable`参数为`true`，会在标签上自动添加一个关闭图标  
-设置可关闭后，点击关闭按钮，会发出`close`事件，回调中手动设置`show`参数为`false`，可以隐藏`Tag`
-
+- 添加`plainFill`属性镂空带背景色
 ```html
-<template>
-	<u-tag text="要清楚" closeable :show="show" @close="tagClick" />
-</template>
+<u-tag text="标签" plain > </u-tag>
+<u-tag text="标签" type="warning" plain plainFill></u-tag>
+<u-tag text="标签" type="success" plain plainFill></u-tag>
+<u-tag text="标签" type="error" plain plainFill></u-tag>
+```
+
+### 自定义尺寸
+
+- `size`属性为您提供了三种规格的标签大小，默认中等。
+```html
+<u-tag text="标签" plain size="mini"></u-tag>
+<u-tag text="标签" type="warning"></u-tag>
+<u-tag text="标签" type="success" plain size="large"></u-tag>
+```
+### 可关闭标签
+
+- `tag`在右上角提供了删除标签的样式
+```html
+<u-tag text="标签" size="mini" closable :show="close1" @close="close1 = false"></u-tag>
+<u-tag text="标签" type="warning" closable :show="close2" @close="close2 = false"></u-tag>
+<u-tag text="标签" type="success" plain size="large" 
+closable :show="close3" @close="close3 = false"></u-tag>
 
 <script>
 	export default {
 		data() {
 			return {
-				show: true
+				close1: true,
+				close2: true,
+				close3: true,
+				radios: [{
+						checked: true
+					},
+					{
+						checked: false
+					},
+					{
+						checked: false
+					}
+				],
+				checkboxs: [{
+						checked: true
+					},
+					{
+						checked: false
+					},
+					{
+						checked: false
+					}
+				]
 			}
 		},
-		methods: {
-			tagClick(index) {
-				this.show = false;
-			}
-		}
 	}
 </script>
 ```
 
+### 带图片和图标
+
+```html
+<u-tag text="标签" size="mini" icon="map" plain></u-tag>
+<u-tag text="标签" type="warning" icon="tags-fill"></u-tag>
+<u-tag text="标签" type="success" plain size="large"
+icon="https://cdn.uviewui.com/uview/example/tag.png"></u-tag>
+```
+
+### 单选标签 和 多选标签
+
+- 我们为您提供了单选和多选的事件，您可以在事件中获取参数列表
+```html
+<template>
+<!-- 单选 -->
+<view class="u-page__tag-item" v-for="(item, index) in radios" :key="index">
+	<u-tag :text="`选项${index + 1}`" :plain="!item.checked" type="warning" :name="index"
+		@click="radioClick">
+	</u-tag>
+</view>
+<!-- 多选 -->
+<view class="u-page__tag-item" v-for="(item, index) in checkboxs" :key="index">
+	<u-tag :text="`选项${index + 1}`" :plain="!item.checked" type="warning" :name="index"
+		@click="checkboxClick">
+	</u-tag>
+</view>
+</template>
+<script>
+	export default {
+		data() {
+			return {
+				radios: [{
+						checked: true
+					},
+					{
+						checked: false
+					},
+					{
+						checked: false
+					}
+				],
+				checkboxs: [{
+						checked: true
+					},
+					{
+						checked: false
+					},
+					{
+						checked: false
+					}
+				]
+			}
+		},
+		methods: {
+			radioClick(name) {
+				this.radios.map((item, index) => {
+					item.checked = index === name ? true : false
+				})
+			},
+			checkboxClick(name) {
+				this.checkboxs[name].checked = !this.checkboxs[name].checked
+			}
+		}
+	}
+</script>
+<style lang="scss">
+	.u-page__tag-item {
+		margin-right: 20px;
+	}
+</style>
+```
 ### API
 
 ### Props
