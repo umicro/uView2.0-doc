@@ -184,14 +184,10 @@ icon="https://cdn.uviewui.com/uview/example/tag.png"></u-tag>
 |-------------  |---------------- |---------------|------------------ |-------- |
 | type | 主题类型  | String	 | primary | success / info / warning / error |
 | size | 标签大小  | String	 | default | mini |
-| shape | 标签形状 | String | square | circle / circleLeft / circleRight |
+| shape | 标签形状 | String | square | circle  |
 | text | 标签的文字内容 | String | - | - |
-| bg-color | 自定义标签的背景颜色 | String  | - | - |
 | color | 文字的颜色 | String  | - | - |
-| border-color | 标签的边框颜色  | String | - | - |
-| close-color | 关闭按钮的颜色  | String | - | - |
 | index | 点击标签时，会通过`click`事件返回该值  | String \| Number | - | - |
-| mode | 模式选择，见上方说明 | String | light | dark / plain |
 | closeable | 是否可关闭，设置为`true`，文字右边会出现一个关闭图标  | Boolean | false | true |
 | show | 标签显示与否  | Boolean | true | false |
 

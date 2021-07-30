@@ -63,9 +63,7 @@ list2: [{
 ```
 ### 带指示器
 
-通过`list`参数传入轮播图列表值，该值为一个数组，元素为对象，添加`showTitle`属性展示标题，例如：
-<br/>
-（请注意：您期望使用对象作为参数时，需要配置`u-swiper`组件的`keyName`参数为`您当前对象的图片key`值）如：`keyName="image"`
+通过`indicator`属性添加指示器，例如：
 
 ```html
 <u-swiper
@@ -188,35 +186,8 @@ list6: [
 	</view>
 <!-- #endif -->
 ```
-<!-- 
-### 指示器类型
 
-本组件内置了多种指示器，通过配置`mode`参数即可，有如下：
-- `rect`-指示器为方块状
-- `dot`-指示器为圆点
-- `number`-指示器为数字
-- `round`-激活的指示器为块状，未激活的未点状，为默认值
-- `none`-不显示指示器
 
-通过`indicator-pos`参数配置指示器的位置，有如下值：
-- `topLeft`-指示器位于左上角
-- `topCenter`-指示器位于上方中间位置
-- `topRight`-指示器位于右上角
-- `bottomLeft`-指示器位于左下角
-- `bottomCenter`-指示器位于底部中间位置，为默认值
-- `bottomRight`-指示器位于右下角
-
-```html
-<u-swiper :list="list" mode="dot" indicator-pos="bottomRight"></u-swiper>
-```
-
-### 是否开启3D效果
-
-配置`effect3d`为`true`即可，该效果左右两边可以缩略形式预览前后一个swiper-item的一部分
-
-```html
-<u-swiper :list="list" :effect3d="true"></u-swiper>
-```
 
 ### 控制轮播效果
 
@@ -225,10 +196,6 @@ list6: [
 - `duration`-切换一张轮播图所需的时间
 - `circular`-是否衔接滑动，即到最后一张时，是否可以直接转到第一张
 
-```html
-<u-swiper :list="list" duration="3000" :circular="false"></u-swiper>
-```
-
 ### API
 
 ### Props
@@ -236,22 +203,14 @@ list6: [
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | list | 轮播图数据，见上方"基本使用"说明 | Array | - | - |
-| title | 是否显示标题文字，需要配合`list`参数，见上方说明 | Boolean  | false | true |
-| mode | 指示器模式，见上方说明 | String  | round | rect / dot / number / none |
+| showTitle | 是否显示标题文字，需要配合`list`参数，见上方说明 | Boolean  | false | true |
 | height | 轮播图组件高度，单位rpx | String \| Number  | 250 | - |
-| indicator-pos | 指示器的位置 | String  | bottomCenter | topLeft / topCenter / topRight / bottomLeft / bottomRight |
-| effect3d | 是否开启3D效果 | Boolean  | false | true |
 | autoplay | 是否自动播放 | Boolean  | true | false |
 | interval | 自动轮播时间间隔，单位ms | String \| Number  | 2500 | - |
 | circular | 是否衔接播放，见上方说明 | Boolean  | true | false |
 | duration | 切换一张轮播图所需的时间，单位ms | String \| Number  | 500 | - |
-| border-radius | 轮播图圆角值，单位rpx | String \| Number  | 8 | - |
-| title-style | 自定义标题样式 | Object  | - | - |
-| effect3d-previous-margin | effect3d = true模式的情况下，激活项与前后项之间的距离，单位rpx | String \| Number  | 50 | - |
-| img-mode | 图片的裁剪模式，详见[image组件裁剪模式](https://uniapp.dcloud.io/component/image) | String  | aspectFill | - |
-| name | 组件内部读取的`list`参数中的属性名，见上方说明 | string  | name | - |
-| bg-color | 背景颜色 | string  | #f3f4f6 | - |
-| current <Badge text="1.6.2" /> | 初始化时，默认显示第几项 | String \| Number  | 0 | - |
+| keyName | 组件内部读取的`list`参数中的属性名，见上方说明 | string  | image | - |
+| current | 初始化时，默认显示第几项 | String \| Number  | 0 | - |
 
 
 ### Events
@@ -259,4 +218,4 @@ list6: [
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
 | click | 点击轮播图时触发 | index：点击了第几张图片，从0开始 |
-| change | 轮播图切换时触发(自动或者手动切换) | index：切换到了第几张图片，从0开始 | -->
+| change | 轮播图切换时触发(自动或者手动切换) | index：切换到了第几张图片，从0开始 |

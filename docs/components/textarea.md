@@ -49,7 +49,7 @@
 
 ### 禁用状态
 
-设置`disabled`属性实现自动增高
+设置`disabled`属性实现进行禁用，您也可以动态设置是否禁用
 ```html
 <u--textarea v-model="value4" placeholder="文本域已被禁用" disabled count></u--textarea>
 <script>

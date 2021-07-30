@@ -12,17 +12,17 @@
 - 有效防止组件区域高度塌陷，无需给父元素额外的内边距或者外边距来避开导航的区域
 
 
-#### 缺点：
+<!-- #### 缺点：
 
 为了实现自定义tabbar的能力，使用此组件也同样带来了不可避免的缺点：
 - 在uni-app的vue版本上，自定义tabbar让您不得不在一个webview内模拟出多个页面，这存在着严重的性能问题
 - 相比原生的uni-app的tabbar，自定义tabbar让你失去了路由管理的功能
-- 在渲染层面来说，它的渲染速度略慢一些，但并不严重
+- 在渲染层面来说，它的渲染速度略慢一些，但并不严重 -->
 
 
-:::tip 提示
+<!-- :::tip 提示
 以上的缺点，是指自定义模拟tabbar页面的情形，我们提供了一个解决方案，可以使用uni-app自带tabbar系统，保证性能的同时，又能尽情自定义tabbar导航栏，见下方`实战教程`说明。
-:::
+::: -->
 
 
 ### 平台差异说明
@@ -50,6 +50,7 @@
 	<u-tabbar-item text="我的" icon="account" @click="click1" ></u-tabbar-item>
 </u-tabbar>
 <!-- js -->
+value1: 0,
 click1(e) {
 	console.log('click1', e);
 }
@@ -200,18 +201,9 @@ value6: 0,
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | list | 各项的配置参数，见顶部说明，数组形式 | Array  | - | - |
-| show | 是否显示组件 | Boolean | true | false |
-| v-model | 双向绑定的激活项的索引值 | String \| Number | 0 | - |
-| bg-color | 组件的背景颜色 | String  | #ffffff | - |
-| height | 高度，单位任意，数值则为rpx单位，不建议修改 | String \| Number  | 50px | - |
-| icon-size | 非中部凸起图标的大小，单位任意，数值则为rpx单位 | String \| Number  | 40 | - |
-| mid-button-size | 凸起的图标的大小，单位任意，数值则为rpx单位 | String \| Number  | 90 | - |
-| active-color | 文字和字体图标激活时的颜色 | String  | #303133 | - |
-| inactive-color | 文字和字体图标未激活时的颜色 | String  | #606266 | - |
-| mid-button | 是否需要中部凸起的按钮，配置了此值，依然需要配置`list`参数中需凸起项的`midButton`为`true`，见上方说明 | Boolean  | false | true |
-| before-switch | 切换之前的回调钩子，见上方说明 | Function  | - | - |
-| border-top | 是否显示顶部的边框 | Boolean | true | false |
-| hide-tab-bar <Badge text="1.5.6" /> | 是否隐藏原生tabbar | Boolean | true | false |
+| value1 | 绑定的激活项的索引值 | String \| Number | 0 | - |
+| activeColor | 文字和字体图标激活时的颜色 | String  | #303133 | - |
+| false | 是否显示顶部的边框 | Boolean | true | false |
 
 
 ### Events
@@ -219,19 +211,3 @@ value6: 0,
 | 事件名 | 说明 | 回调参数 |
 | :- | :- | :- |
 | change | 切换选项时触发 | index：当前要切换项的索引 |
-
-
-
-<style scoped>
-h3[id=table-props] + table thead tr th:nth-child(2){
-	width: 40%;
-}
-
-h3[id=td-props] + table thead tr th:nth-child(2){
-	width: 43%;
-}
-
-h3[id=th-props] + table thead tr th:nth-child(2){
-	width: 43%;
-}
-</style>

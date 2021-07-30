@@ -196,7 +196,8 @@ data(){
 	width="250"
 	height="150"
 >
-	<image src="https://cdn.uviewui.com/uview/demo/upload/positive.png" mode="widthFix" style="width: 250px;height: 150px;"></image>
+	<image src="https://cdn.uviewui.com/uview/demo/upload/positive.png" 
+	mode="widthFix" style="width: 250px;height: 150px;"></image>
 </u-upload>
 <!-- data -->
 data(){

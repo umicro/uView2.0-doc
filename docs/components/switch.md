@@ -143,15 +143,12 @@ value12: true,
 | loading | 是否处于加载中  | Boolean | false | true |
 | disabled | 是否禁用  | Boolean | false | true |
 | size | 开关尺寸，单位rpx | String \| Number  | 50 | - |
-| active-color | 打开时的背景色 | String  | #2979ff | - |
-| inactive-color | 关闭时的背景色 | String  | #ffffff | - |
-| vibrate-short | 是否使手机发生短促震动，目前只在iOS的微信小程序和微信小程序开发工具有效  | Boolean | false | true |
-| active-value | 打开选择器时通过change事件发出的值 | Boolean \| Number \| String  | true | |
-| inactive-value | 关闭选择器时通过change事件发出的值 | Boolean \| Number \| String | false |
+| activeColor | 打开时的背景色 | String  | #2979ff | - |
+| inactiveColor | 关闭时的背景色 | String  | #ffffff | - |
 
 
 ### Switch Event
 
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
-| change | 在`switch`打开或关闭时触发 | value：打开时为`active-value`值，关闭时为`inactive-value`值 |
+| change | 在`switch`打开或关闭时触发 | value：打开时为`activeColor`值，关闭时为`inactiveColor`值 |
