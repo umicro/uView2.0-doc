@@ -101,7 +101,8 @@ module.exports = {
                         '/components/layout',
                         '/components/cell',
                         '/components/badge',
-                        '/components/tag'
+                        '/components/tag',
+                        '/components/loadingIcon'
                     ]
                 },
                 {
@@ -206,7 +207,6 @@ module.exports = {
                         '/components/lazyLoad',
                         '/components/gap',
                         '/components/avatar',
-                        '/components/loading'
                     ]
                 },
                 ]
