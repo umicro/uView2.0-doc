@@ -115,17 +115,19 @@ uView有[键盘](/components/keyboard.html)组件，如果您想结合键盘组�
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| maxlength | 输入字符个数 | String \| Number | 4 | - |
-| dot-fill | 是否用圆点填充  | Boolean | false | true |
+| maxlength | 输入字符个数 | String \ Number | 4 | - |
+| dot | 是否用圆点填充  | Boolean | false | true / false |
 | mode | 模式选择，见上方"基本使用"说明 | String | box | bottomLine / middleLine |
-| value | 预置值 | String \| Number | - | - |
-| focus | 是否自动获取焦点 | Boolean | false | true |
-| bold | 字体和输入横线是否加粗 | Boolean | true | false |
-| font-size | 字体大小，单位rpx | String \| Number | 60 | - |
-| active-color | 当前激活输入框的样式 | String | #2979ff | - |
-| inactive-color | 非激活输入框的样式，文字颜色同此值 | String | #606266 | - |
-| width | 输入框的宽度(高等于宽)，单位rpx | String \| Number | 80 | - |
-| disabled-keyboard | 禁止点击输入框唤起系统键盘 | Boolean  | false | true |
+| hairline | 是否细边框 | Boolean | false | true / false |
+| space | 字符间的距离 | String \ Number | 10 | - |
+| value | 预置值 | String \ Number | - | - |
+| focus | 是否自动获取焦点 | Boolean | false | true / false |
+| bold | 字体和输入横线是否加粗 | Boolean | true | true / false |
+| font-size | 字体大小，单位rpx | String \ Number | 18 | - |
+| size | 输入框的大小，宽等于高 | String \ Number | 35 | - |
+| disabled-keyboard | 禁止点击输入框唤起系统键盘 | Boolean  | false |  false /true |
+| color | 字体颜色 | String  | #606266 | - |
+| borderColor | 边框和线条颜色 | String  | #c9cacc | - |
 
 ### Events
 
