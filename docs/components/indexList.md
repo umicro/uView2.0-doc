@@ -13,25 +13,28 @@
 
 ### 基本使用
 
-外层包裹一个`index-list`组件，内部锚点通过`index-anchor`组件传入，其余内容可以自定义
+外层包裹一个`index-list`组件，锚点通过`index-anchor`组件传入，自定义列表内容通过`index-item`嵌套使用
+- nvue需要将`index-anchor`写在`index-item`的外部
+- 非nvue需要将`index-anchor`嵌套在`index-item`的内部
 - 可以通过`index-list`参数自定义索引字符列表
 - 需要监听页面的onPageScroll事件，将当前滚动条高度传入`index-list`组件
 
 ```html
 <template>
-	<u-index-list :scrollTop="scrollTop">
-		<view v-for="(item, index) in indexList" :key="index">
-			<u-index-anchor :index="item" />
-			<view class="list-cell">
-				列表1
-			</view>
-			<view class="list-cell">
-				列表2
-			</view>
-			<view class="list-cell">
-				列表3
-			</view>
-		</view>
+	<u-index-list :index-list="indexList">
+		<template v-for="(item, index) in itemArr">
+			<!-- #ifdef APP-NVUE -->
+			<u-index-anchor :text="indexList[index]"></u-index-anchor>
+			<!-- #endif -->
+			<u-index-item>
+				<!-- #ifndef APP-NVUE -->
+				<u-index-anchor :text="indexList[index]"></u-index-anchor>
+				<!-- #endif -->
+				<view class="list-cell" v-for="(cell, index) in item">
+					{{cell}}
+				</view>
+			</u-index-item>
+		</template>
 	</u-index-list>
 </template>
 
@@ -39,14 +42,13 @@
 	export default {
 		data() {
 			return {
-				scrollTop: 0,
-				indexList: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U",
-					"V", "W", "X", "Y", "Z"
+				indexList: ["A", "B", "C"],
+				itemArr: [
+					['列表A1','列表A2','列表A3'],
+					['列表B1','列表B2','列表B3'],
+					['列表C1','列表C2','列表C3']
 				]
 			}
-		},
-		onPageScroll(e) {
-			this.scrollTop = e.scrollTop;
 		}
 	}
 </script>
@@ -66,58 +68,14 @@
 </style>
 ```
 
-### 自定义锚点样式
-
-`index-anchor`锚点组件默认显示`index`参数的值，可以通过设置`use-slot`为`true`，传入自定义内容，同时设定
-自己的样式
-
-```html
-<template>
-	<u-index-list :scrollTop="scrollTop">
-		<view v-for="(item, index) in indexList" :key="index">
-			<u-index-anchor :use-slot="true">
-				<text class="anchor-text">{{item}}</text>
-			</u-index-anchor>
-			<view class="list-cell">
-				列表1
-			</view>
-			<view class="list-cell">
-				列表2
-			</view>
-			<view class="list-cell">
-				列表3
-			</view>
-		</view>
-	</u-index-list>
-</template>
-
-<style lang="scss" scoped>
-	.list-cell {
-		display: flex;
-		box-sizing: border-box;
-		width: 100%;
-		padding: 10px 24rpx;
-		overflow: hidden;
-		color: #323233;
-		font-size: 14px;
-		line-height: 24px;
-		background-color: #fff;
-	}
-	
-	.anchor-text {
-		color: red;
-	}
-</style>
-```
 
 
 ### 自定义导航栏
 
-默认情况下，组件的锚点是吸附在导航栏下方的，如果您修改了导航栏，比如取消导航栏、或者自定义了导航栏，就需要指定吸顶的高度，也就是`offset-top`
-的值，注意这个值的单位为`rpx`：
+默认情况下，组件的锚点是吸附在导航栏下方的，如果您修改了导航栏，比如取消导航栏、或者自定义了导航栏，就需要指定吸顶的高度，也就是`custom-nav-height`
+的值，注意这个值的单位为`px`：
 
-- 如果取消导航栏，需要将`offset-top`为`0`
-- 如果自定义了导航栏，需要`offset-top`设置为导航栏的高度
+- 如果自定义了导航栏，需要`custom-nav-height`设置为导航栏的高度
 
 
 ### API
@@ -126,20 +84,21 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| scroll-top | 当前滚动高度，自定义组件无法获得滚动条事件，所以依赖接入方传入 | Number \| String | - | - |
+| inactive-color | 右边锚点状态非激活时的颜色 | String | #606266 | - |
+| active-color | 右边锚点状态激活时的颜色 | String | #5677fc | - |
 | index-list | 索引字符列表，数组  | Array[string \| number] | A-Z | - |
-| z-index | 锚点吸顶时的层级  | Number \| String | 965 | - |
-| sticky | 是否开启锚点自动吸顶  | Boolean | true | false |
-| offset-top | 锚点自动吸顶时与顶部的距离，单位rpx，见上方"自定义导航栏"说明  | Number \| String | 0 | - |
-| active-color | 锚点和右边索引字符高亮颜色  | String | #2979ff | - |
+| sticky | 是否开启锚点自动吸顶 | Boolean | true | false |
+| custom-nav-height | 自定义导航栏的高度，单位默认px  | String \| Number | 0 | - |
 
 ### IndexAnchor Props
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| use-slot | 是否使用自定义内容的插槽  | Boolean | false | true |
-| index | 索引字符，如果定义了`use-slot`，此参数自动失效   | String \| Number | - | - |
-| custom-style | 自定义样式，对象形式，如"{color: 'red'}"  | Object | - | - |
+| text | 列表锚点文本内容 | String \| Number | - | - |
+| color | 列表锚点文字颜色 | String | #606266 | - |
+| size | 列表锚点文字大小，单位默认px | String \| Number | 14 | - |
+| bg-color | 列表锚点背景颜色 | String | #dedede | - |
+| height | 列表锚点高度，单位默认px | String \| Number | 32 | - |
 
 
 ### IndexBar Events
@@ -148,8 +107,8 @@
 |:-|:-|:-|:-|
 | select | 选中右边索引字符时触发 | index: 索引字符 | - |
  
- ### IndexAnchor Slots
+ ### IndexItem Slots
 
 | 名称 | 说明 |
 |:-|:-|
-| default | 锚点位置显示内容，默认为索引字符 |
+| default | 自定义列表内容 |
