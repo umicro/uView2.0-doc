@@ -1,4 +1,4 @@
-## VerificationCode 验证码倒计时 <to-api/>
+## Code 验证码输入框 <to-api/>
 
 <demo-model url="/pages/componentsA/verificationCode/index"></demo-model>
 
@@ -24,14 +24,14 @@
 过程中，该值为`false`，如果为`false`应该给予提示并不要再次向后端请求验证码，如果为`true`，则为获取验证码
 之前，或者倒计结束之后，可以再次向后端请求验证码。
 
-以下为完整示例，见如下： 
+以下为完整示例，见如下：
 
 ```html
 <template>
 	<view class="wrap">
 		<u-toast ref="uToast"></u-toast>
-		<u-verification-code :seconds="seconds" @end="end" @start="start" ref="uCode" 
-		@change="codeChange"></u-verification-code>
+		<u-code :seconds="seconds" @end="end" @start="start" ref="uCode" 
+		@change="codeChange"></u-code>
 		<u-button @tap="getCode">{{tips}}</u-button>
 	</view>
 </template>
@@ -81,7 +81,7 @@
 	}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	.wrap {
 		padding: 24rpx;
 	}
@@ -125,7 +125,7 @@
 | change-text | 倒计时期间的提示语，必须带有字母"x"，见上方说明 | String  | X秒重新获取 | - |
 | end-text | 倒计结束的提示语，见上方说明 | String  | 重新获取 | - |
 | keep-running | 是否在H5刷新或各端返回再进入时继续倒计时 | Boolean  | false | true |
-| unique-key <Badge text="1.3.4" /> | 多个组件之间继续倒计时的区分`key`，见上方说明 | String  | - | - |
+| unique-key | 多个组件之间继续倒计时的区分`key`，见上方说明 | String  | - | - |
 
 
 ### Methods

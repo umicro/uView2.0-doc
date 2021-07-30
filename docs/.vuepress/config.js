@@ -52,7 +52,7 @@ module.exports = {
         // {
         // 	text: '课程',
         // 	link: '/course/promise'
-        // }, 
+        // },
         {
             text: '资源',
             link: '/components/resource'
@@ -119,7 +119,7 @@ module.exports = {
                         '/components/search',
                         '/components/numberBox',
                         '/components/upload',
-                        '/components/verificationCode',
+                        '/components/code',
                         '/components/field',
                         '/components/checkbox',
                         '/components/radio',
@@ -332,7 +332,7 @@ module.exports = {
             '/components/search',
             '/components/numberBox',
             '/components/upload',
-            '/components/verificationCode',
+            '/components/code',
             '/components/field',
             '/components/tabsSwiper',
             '/components/checkbox',
