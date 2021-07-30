@@ -199,7 +199,7 @@ module.exports = {
                     sidebarDepth: 0,
                     children: [
                         '/components/parse',
-                        '/components/messageInput',
+                        '/components/codeInput',
                         '/components/avatarCropper',
                         '/components/loadMore',
                         '/components/readMore',
@@ -369,7 +369,7 @@ module.exports = {
             '/components/link',
             '/components/section',
             '/js/apiManage',
-            '/components/messageInput',
+            '/components/codeInput',
             '/components/changeGuide',
             '/components/avatarCropper',
             '/components/loadMore',

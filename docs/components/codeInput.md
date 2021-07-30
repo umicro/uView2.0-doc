@@ -1,4 +1,4 @@
-## MessageInput 验证码输入 <to-api/>
+## CodeInput 验证码输入 <to-api/>
 
 <demo-model url="/pages/componentsC/messageInput/index"></demo-model>
 
@@ -19,16 +19,55 @@
 - `middleLine`-中部显示一条横线
 
 ```html
-<u-message-input mode="bottomLine"></u-message-input>
+<u-code-input v-model="value"></u-code-input>
 ```
 
-### 设置最大长度和初始值
+### 横线模式
 
-- 通过`maxlength`参数配置可输入的方框个数，如5位验证码，该值设置为5即可
-- 如果需要显示默认值，请通过`value`参数配置
+- 通过`mode="line"`可设置显示为横线模式
 
 ```html
-<u-message-input maxlength="5" value="46821"></u-message-input>
+<u-code-input v-model="value2" mode="line"></u-code-input>
+```
+
+### 设置长度
+
+- 通过`maxlength`参数配置可输入的方框个数，如6位验证码，该值设置为6即可
+
+```html
+<u-code-input v-model="value3" :maxlength="6"></u-code-input>
+```
+
+### 横线间距
+
+- 通过`space`可设置显示为横线模式
+
+```html
+<u-code-input v-model="value4" :space="0" ></u-code-input>
+```
+
+### 细边框
+
+- 通过`hairline`可设置细边框
+
+```html
+<u-code-input v-model="value5" mode="box" :space="0" :maxlength="4" hairline></u-code-input>
+```
+
+### 调整颜色
+
+- 通过`color`和`borderColor`可设置颜色
+
+```html
+<u-code-input v-model="value6" hairline color="#f56c6c" borderColor="#f56c6c"></u-code-input>
+```
+
+### 用"●"替代输入内容
+
+`dot`参数配置后，输入内容将不可见，用点替代，事件回调中会返回真实值
+
+```html
+<u-code-input v-model="value5" mode="box" dot></u-code-input>
 ```
 
 ### 是否自动获取焦点
@@ -36,25 +75,8 @@
 如果需要一打开页面，就自动弹出键盘获取焦点，请配置`focus`值为true，否则需要用户手动点击输入区域才能唤起键盘
 
 ```html
-<u-message-input :focus="true"></u-message-input>
+<u-code-input v-model="value4" :focus="true"></u-code-input>
 ```
-
-### 配置呼吸灯效果
-
-配置`breathe`为`true`，当前激活输入框的样式会有一个类似光标一闪一闪的由浅到深的效果
-
-```html
-<u-message-input :breathe="true"></u-message-input>
-```
-
-### 用"●"替代输入内容
-
-`dot-fill`参数配置后，输入内容将不可见，用点替代，事件回调中会返回真实值
-
-```html
-<u-message-input :dot-fill="true"></u-message-input>
-```
-
 
 ### 禁止唤起系统键盘
 
@@ -69,7 +91,7 @@ uView有[键盘](/components/keyboard.html)组件，如果您想结合键盘组�
 ```html
 <template>
 	<view>
-		<u-message-input @change="change" @finish="finish"></u-message-input>
+		<u-code-input @change="change" @finish="finish"></u-code-input>
 	</view>
 </template>
 
@@ -97,7 +119,6 @@ uView有[键盘](/components/keyboard.html)组件，如果您想结合键盘组�
 | dot-fill | 是否用圆点填充  | Boolean | false | true |
 | mode | 模式选择，见上方"基本使用"说明 | String | box | bottomLine / middleLine |
 | value | 预置值 | String \| Number | - | - |
-| breathe | 是否开启呼吸效果，见上方说明 | Boolean | true | false |
 | focus | 是否自动获取焦点 | Boolean | false | true |
 | bold | 字体和输入横线是否加粗 | Boolean | true | false |
 | font-size | 字体大小，单位rpx | String \| Number | 60 | - |
