@@ -8,34 +8,55 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|  App  |  H5   | 微信小程序 | 支付宝小程序 | 百度小程序 | 头条小程序 | QQ小程序 |
+| :---: | :---: | :--------: | :----------: | :--------: | :--------: | :------: |
+|   √   |   √   |     √      |      √       |     √      |     √      |    √     |
 
 
 ### 基本使用
 
-默认情况下，该组件只有向左的箭头，**点击**可以返回上一页，如果您想将自定义导航栏用在tabbar(不存在要返回的逻辑)页面，应该将`is-back`设置为`false`，
+默认情况下，该组件只有向左的箭头，**点击**可以返回上一页，如果您想将自定义导航栏用在tabbar(不存在要返回的逻辑)页面，
 这样会隐藏左边的返回图标区域。
 
-- 如果想在返回箭头的右边自定义类似"返回"字样，可以将`back-text`设置为"返回"，前提是`is-back`要为`true`(默认)
+- 如果想在返回箭头的右边自定义类似"返回"字样，可以将`left-text`设置为"返回"
 - 通过`title`参数传入需要显示的标题，通过`title-width`(rpx)设置标题区域的宽度，文字超出会通过省略号隐藏
-- 通过`is-fixed`配置是否将导航栏固定在顶部
+- 通过`fixed`配置是否将导航栏固定在顶部
 
 :::tip 说明
 - 在小程序中，导航栏会自动适配导航栏右侧的胶囊位置，避开该区域
-- 组件底部默认有一条下边框，如您不需要，可以设置`border-bottom`为`false`即可
+- 组件底部默认有一条下边框，如您不需要，可以设置`border`为`false`即可
 :::
 
 ``` html
 <template>
 	<view>
-		<u-navbar back-text="返回" title="剑未配妥，出门已是江湖"></u-navbar>
+		<u-navbar 
+            title="剑未配妥，出门已是江湖" 
+            left-text="返回" 
+            right-text="帮助" 
+            @click-left="onClickBack" 
+            @click-right="onClickRight"
+        ></u-navbar>
 		<view class="content">
 			<!-- 正文内容 -->
 		</view>
 	</view>
 </template>
+
+<script>
+    methods:{
+        /**
+         * 点击返回页面
+         */
+        onClickBack(){
+            uni.navigateBack()
+        },
+
+        onClickRight(){
+            // do something...
+        }
+    }
+</script>
 ```
 
 ### 注意事项
@@ -69,22 +90,16 @@
 
 ### 自定义导航栏内容
 
-一般需要自定义导航栏内部的内容的时候，分几种情况：
-
-- `is-back`为`false`可以去除导航栏左侧默认的返回图标和文字。
-- 如有必要，将`title`设置空字符串，同时将会去除导航栏中间显示标题的占位区域。
-
-当将`is-back`设置为`false`，`title`设置为空字符串之后，导航栏将不会有任何默认的内容，您可以通过`slot`传入任意自定义内容，在APP和小程序上，导航栏
-会自动添加状态栏的占位区域。
-
-
-**注意：** 通过自定义`slot`传入的内容，为了能在导航栏中垂直居中，您可能需要注意下方示例的css的`slot-wrap`类的内容：
+通过自定义`slot`传入的内容
 
 ``` html
 <template>
 	<view>
-		<u-navbar :is-back="false" title="">
-			<view class="slot-wrap">
+		<u-navbar title="首页">
+            <view slot="left">
+				......
+			</view>
+            <view slot="right">
 				......
 			</view>
 		</u-navbar>
@@ -93,17 +108,6 @@
 		</view>
 	</view>
 </template>
-
-<style scoped lang="scss">
-	.slot-wrap {
-		display: flex;
-		align-items: center;
-		/* 如果您想让slot内容占满整个导航栏的宽度 */
-		/* flex: 1; */
-		/* 如果您想让slot内容与导航栏左右有空隙 */
-		/* padding: 0 30rpx; */
-	}
-</style>
 ```
 
 
@@ -115,18 +119,12 @@ uView有写一个完善的导航栏自定义内容案例，如右侧演示区域
 
 ### 自定义导航栏背景颜色
 
-uView提供了一个`background`参数(需对象形式)，可以自定义导航栏的背景颜色：
-
-- 这个颜色，在APP和小程序上，包括状态的颜色在内
-- 如果是定义纯色的背景，可以设置`backgroundColor`属性
-- 如果是定义渐变的背景，可以设置`backgroundImage`属性
-- 如果是定义背景图，可以设置`background`属性，还可以加上其他属性，比如`no-repeat`，`center`等
-
+uView提供了一个`bg-color`参数，可以自定义导航栏的背景颜色：
 
 ``` html
 <template>
 	<view>
-		<u-navbar :is-back="false" title="" :background="background">
+		<u-navbar title="" :bg-color="bgColor">
 			
 		</u-navbar>
 		<view class="content">
@@ -139,17 +137,7 @@ uView提供了一个`background`参数(需对象形式)，可以自定义导航�
 	export default {
 		data() {
 			return {
-				background: {
-					backgroundColor: '#001f3f',
-					
-					// 导航栏背景图
-					// background: 'url(https://cdn.uviewui.com/uview/swiper/1.jpg) no-repeat',
-					// 还可以设置背景图size属性
-					// backgroundSize: 'cover',
-					
-					// 渐变色
-					// backgroundImage: 'linear-gradient(45deg, rgb(28, 187, 180), rgb(141, 198, 63))'
-				}
+				bgColor: '#001f3f',
 			}
 		}
 	}
@@ -162,34 +150,35 @@ uView提供了一个`background`参数(需对象形式)，可以自定义导航�
 ### Props
 
 
-| 参数      | 说明        | 类型     |  默认值  |  可选值   |
-|-----------|-----------|----------|----------|---------|
-| height | 导航栏高度(不包括状态栏高度在内，内部自动加上)，注意这里的单位是<span style="color: red;">**px**</span>  | String \| Number | 44 | - |
-| back-icon-color | 左边返回图标的颜色 | String  | #606266 | - |
-| back-icon-name | 左边返回图标的名称，只能为uView自带的图标，`1.5.5`起由arrow-left调整为nav-back | String  | nav-back | - |
-| back-icon-size | 左边返回图标的大小，单位rpx | String \| Number  | 30 | - |
-| back-text | 返回图标右边的辅助提示文字 | String  | - | - |
-| back-text-style | 返回图标右边的辅助提示文字的样式，对象形式 | Object  | { color: '#606266' } | - |
-| title | 导航栏标题，如设置为空字符，将会隐藏标题占位区域 | String  | - | - |
-| title-width | 导航栏标题的最大宽度，内容超出会以省略号隐藏，单位rpx | String \| Number  | 250 | - |
-| title-color | 标题的颜色 | String  | #606266 | - |
-| title-size | 导航栏标题字体大小，单位rpx，`1.5.5`起由32调整为44 | String \| Number  | 44 | - |
-| z-index | 固定在顶部时的`z-index`值 | String \| Number  | 980 | - |
-| is-back | 是否显示导航栏左边返回图标和辅助文字 | Boolean  | true | false |
-| background | 导航栏背景设置(APP和小程序上包括状态栏的颜色)，见上方说明 | Object  | { background: '#ffffff' } | - |
-| is-fixed | 导航栏是否固定在顶部 | Boolean  | true | false |
-| border-bottom | 导航栏底部是否显示下边框，如定义了较深的背景颜色，可取消此值 | Boolean  | true | false |
-| custom-back <Badge text="1.3.4" /> | 自定义返回逻辑方法，如传入，点击返回按钮执行函数，否则正常返回上一页，注意模板中不需要写方法参数的括号 | Function  | - | - |
-| immersive <Badge text="1.5.6" /> | 沉浸式，允许fixed定位后导航栏塌陷，仅fixed定位下生效 | Boolean  | false | true |
-| title-bold | 导航栏标题字体是否加粗 <Badge text="1.7.8" /> | Boolean  | false | true |
+| 参数                | 说明                                                   | 类型             | 默认值     | 可选值 |
+| ------------------- | ------------------------------------------------------ | ---------------- | ---------- | ------ |
+| height              | 导航栏高度(不包括状态栏高度在内，内部自动加上)，单位px | String \| Number | 44         | -      |
+| placeholder         | 固定在顶部时，是否生成一个等高元素，以防止塌陷         | Boolean          | false      | true   |
+| fixed               | 导航栏是否固定在顶部                                   | Boolean          | true       | false  |
+| border              | 导航栏底部是否显示下边框                               | Boolean          | false      | true   |
+| left-icon           | 左边返回图标的名称，只能为uView自带的图标              | String           | arrow-left | -      |
+| left-text           | 左边的提示文字                                         | String           | -          | -      |
+| right-icon          | 右边返回图标的名称，只能为uView自带的图标              | String           | -          | -      |
+| right-text          | 右边的提示文字                                         | String           | -          | -      |
+| title               | 导航栏标题，如设置为空字符，将会隐藏标题占位区域       | String           | -          | -      |
+| bg-color            | 导航栏背景设置                                         | String           | #ffffff    | -      |
+| title-width         | 导航栏标题的最大宽度，内容超出会以省略号隐藏，单位rpx  | String \| Number | 400        | -      |
+| safe-area-inset-top | 是否开启顶部安全区适配                                 | Boolean          | true       | false  |
 
+
+### Event
+
+| 名称        | 说明         | 类型    |
+| ----------- | ------------ | ------- |
+| left-click  | 点击左侧区域 | Handler |
+| right-click | 点击右侧区域 | Handler |
 
 ### Slot
 
-| 名称          | 说明            |
-|-------------  |---------------- |
-| - | 自定义中间部分的内容  |
-| right | 自定义右侧部分内容 |
+| 名称  | 说明         |
+| ----- | ------------ |
+| left  | 点击左侧区域 |
+| right | 点击右侧区域 |
 
 
 
