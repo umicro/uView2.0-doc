@@ -4,383 +4,207 @@
 
 
 该组件用于上传图片场景
-
+<!-- https://api.aeshanvip.com/upload -->
 ### 平台差异说明
 
 |App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |√|√|√|√|√|√|√|
 
-### 基本使用
+### 基础用法
 
-- 可以通过设置`file-list`参数(数组，元素为对象)，显示预置的图片。其中元素的`url`属性为图片路径
+- 可以通过设置`fileList`参数(数组，元素为对象)，显示预置的图片。其中元素的`url`属性为图片路径
 - 设置`action`参数为后端服务器地址，注意H5在浏览器可能会有跨域限制，让后端允许域即可
 
 ```html
 <template>
-	<u-upload :action="action" :file-list="fileList" ></u-upload>
+	<u-upload
+		:fileList="fileList1"
+		@afterRead="afterRead"
+		@delete="deletePic"
+		name="1"
+		multiple
+		:maxCount="10"
+		action='链接地址'
+	></u-upload>
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
-				// 演示地址，请勿直接使用
-				action: 'http://www.example.com/upload',
-				fileList: [
-					{
-						url: 'http://pics.sc.chinaz.com/files/pic/pic9/201912/hpic1886.jpg',
-					}
-				]
-			}
-		}
-	}
-</script>
-```
-
-### 手动上传
-
-组件默认为自动上传，可以设置`auto-upload`为`false`，然后通过`ref`调用组件的`upload`方法，手动上传图片
-
-```html
-<template>
-	<view>
-		<u-upload ref="uUpload" :action="action" :auto-upload="false" ></u-upload>
-		<u-button @click="submit">提交</u-button>
-	</view>
-</template>
-
-<script>
-	export default {
-		data() {
-			return {
-				// 非真实地址
-				action: 'http://www.example.com/upload',
+				fileList1: [],
 			}
 		},
-		methods: {
-			submit() {
-				this.$refs.uUpload.upload();
+		methods:{
+			// 删除图片
+			deletePic(event) {
+				this[`fileList${event.name}`].splice(event.index, 1)
 			},
-		}
-	}
-</script>
-```
-
-### 获取上传的图片列表
-
-图片选择或者上传成功后，会保存在组件内部的`lists`数组中，数组元素为对象，有如下属性：
-- url: 图片地址
-- error：组件内部使用，不应根据此值判断上传是否成功，而应根据`progress`属性
-- progress：如果值为100，表示图片上传成功
-- response：上传成功后，服务器返回的数据，这是最有用的了
-
-为了获得上传的文件列表，可以在提交表单时，通过`ref`获取组件内部的`lists`文件数组，历遍元素筛选出`progress`为100的文件
-
-```html
-<template>
-	<view>
-		<u-upload ref="uUpload" :action="action" :auto-upload="true" ></u-upload>
-		<u-button @click="submit">提交</u-button>
-	</view>
-</template>
-
-<script>
-	export default {
-		data() {
-			return {
-				action: 'http://www.example.com/upload',
-				filesArr: []
-			}
-		},
-		methods: {
-			submit() {
-				let files = [];
-				// 通过filter，筛选出上传进度为100的文件(因为某些上传失败的文件，进度值不为100，这个是可选的操作)
-				files = this.$refs.uUpload.lists.filter(val => {
-					return val.progress == 100;
-				})
-				// 如果您不需要进行太多的处理，直接如下即可
-				// files = this.$refs.uUpload.lists;
-				console.log(files)
-			}
-		}
-	}
-</script>
-```
-
-### 报错提示
-
-在以下几种情况，组件会默认通过toast提示用户信息，可以把`show-tips`设置为`false`取消默认的提示，这时可以通过API
-中的各种事件，进行自定义的个性化提示
-- 超出允许的最大上传数量
-- 图片大小超出最大允许大小
-- 上传图片出错
-- 移除图片
-
-以下示例为屏蔽组件内部的提示，在移除图片时，监听`onRemove`事件，手动提示的情况
-
-```html
-<template>
-	<u-upload ref="uUpload" :action="action" :show-tips="false" @on-remove="onRemove"></u-upload>
-</template>
-
-<script>
-	export default {
-		data() {
-			return {
-				action: 'http://www.example.com/upload',
-			}
-		},
-		methods: {
-			onRemove(index, lists) {
-				console.log('图片已被移除')
-			},
-		}
-	}
-</script>
-```
-
-### 限制图片数量和大小
-
-- 通过`max-count`可以设置最多可以选择的图片的数量
-- 通过`max-size`设置单张图片最大的大小，单位为B(byte)，默认不限制
-
-下方示例为单张最大为5M，最多选择6张的情况：
-
-```html
-<u-upload :max-size="5 * 1024 * 1024" max-count="6"></u-upload>
-```
-
-
-### 上传前的钩子 <Badge text="1.3.7" />
-
-某些时候，**每个文件**上传前可能需要动态修改文件名，修改额外参数等，就会需要用到一个叫`before-upload`的钩子(参数注意不要加括号)，也即回调方法，此方法会返回两个参数：
-
-- `index`——即当前上传文件在上传列表中的索引
-- `lists`——当前所有的文件列表
-
-此回调可以返回一个`promise`、`true`，或者`false`，下面分别阐述三者的处理情况：
-
-- `false`——如果返回`false`，将会跳过当前文件，继续上传下一张图片(如果有)，并且再次执行`before-upload`钩子
-- `true`——如果返回`true`，会随即上传当前文件，上传成功后，继续上传下一张图片(如果有)，并且再次执行`before-upload`钩子
-- `promise`——如果返回的是一个`promise`，如果进入`then`回调，就会和返回`true`的情况一样，如果进入`catch`回调，就会和返回`false`的情况一样
-
-下面举例说明：
-
-#### 1. 普通返回
-
-```html
-<template>
-	<u-upload :before-upload="beforeUpload"></u-upload>
-</template>
-
-<script>
-	export default {
-		methods: {
-			beforeUpload(index, list) {
-				// 只上传偶数索引的文件
-				if(index % 2 == 0) return true;
-				else return false;
-			}
-		}
-	}
-</script>
-```
-
-#### 2. 请求之后再返回
-
-```html
-<template>
-	<u-upload :before-upload="beforeUpload"></u-upload>
-</template>
-
-<script>
-	export default {
-		methods: {
-			async beforeUpload(index, list) {
-				// await等待一个请求，请求回来后再返回true，继续上传文件
-				let data = await this.$u.post('url');
-				return true; // 或者根据逻辑返回false
-			}
-		}
-	}
-</script>
-```
-
-#### 3. 返回一个Promise
-
-```html
-<template>
-	<u-upload :before-upload="beforeUpload"></u-upload>
-</template>
-
-<script>
-	export default {
-		methods: {
-			beforeUpload(index, list) {
-				// 返回一个promise
-				return new Promise((resolve, reject) => {
-					this.$u.post('url').then(res => {
-						// resolve()之后，将会进入promise的组件内部的then回调，相当于返回true
-						resolve();
-					}).catch(err => {
-						// reject()之后，将会进入promise的组件内部的catch回调，相当于返回false
-						reject();
+			// 新增图片
+			async afterRead(event) {
+				console.log(event)
+				// 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
+				let lists = [].concat(event.file)
+				let fileListLen = this[`fileList${event.name}`].length
+				lists.map((item) => {
+					this[`fileList${event.name}`].push({
+						...item,
+						status: 'uploading',
+						message: '上传中'
 					})
 				})
-			}
+				for (let i = 0; i < lists.length; i++) {
+					const result = await this.uploadFilePromise(lists[i].thumb)
+					let item = this[`fileList${event.name}`][fileListLen]
+					this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
+						status: 'success',
+						message: '',
+						url: result
+					}))
+					fileListLen++
+				}
+			},
+			uploadFilePromise(url) {
+				return new Promise((resolve, reject) => {
+					let a = uni.uploadFile({
+						url: 'http://192.168.2.21:7001/upload', // 仅为示例，非真实的接口地址
+						filePath: url,
+						name: 'file',
+						formData: {
+							user: 'test'
+						},
+						success: (res) => {
+							console.log(res)
+							setTimeout(() => {
+								resolve(res.data.data)
+							}, 1000)
+						},
+						fail:(err)=>{
+							console.log(err)
+						}
+					});
+				})
+			},
 		}
+
 	}
 </script>
 ```
 
-### 移除前的钩子 <Badge text="1.6.8" />
+### 上传视频
 
-某些时候，文件被移除前可能需要进行判断是否可以被移除，就会需要用到一个叫`before-remove`的钩子(参数注意不要加括号)，也即回调方法，此方法会返回两个参数：
-
-- `index`——即当前上传文件在上传列表中的索引
-- `lists`——当前所有的文件列表
-
-此回调可以返回一个`promise`、`true`，或者`false`，下面分别阐述三者的处理情况：
-
-- `false`——如果返回`false`，终止移除操作
-- `true`——如果返回`true`，执行移除操作
-- `promise`——如果返回的是一个`promise`，如果进入`then`回调，就会和返回`true`的情况一样，如果进入`catch`回调，就会和返回`false`的情况一样
-
-此处不举例说明，参考`before-upload`的示例即可。
-
-
-### 自定义相关说明
-
-1. 组件内部样式  
-组件默认选取图片会展示预览缩略图，包括默认的选取图片的按钮，他们的宽高都是`200rpx`，`border-radius`值为`10rpx`，
-另外预览图片的盒子有一个默认的边框，值为`border: 1px solid rgb(235, 236, 238)`。如果用户需要自定义上传按钮，可以参考这些值。
-
-2. 自定义上传按钮  
-通过传递名为`addBtn`的`slot`，同时配置`custom-btn`为`true`，可以自定义想要的上传按钮。
-
-如下所示：
-
+- 通过设置`accept='video'`属性，将上传改为视频上传。
 ```html
-<u-upload :custom-btn="true">
-	<view slot="addBtn" class="slot-btn" hover-class="slot-btn__hover" hover-stay-time="150">
-		<u-icon name="photo" size="60" :color="$u.color['lightColor']"></u-icon>
-	</view>
+<u-upload
+	:fileList="fileList2"
+	@afterRead="afterRead"
+	@delete="deletePic"
+	name="2"
+	multiple
+	:maxCount="10"
+	accept="video"
+></u-upload>
+<!-- data -->
+data(){
+	return{
+		fileList2: [],
+	}
+}
+```
+
+### 文件预览
+
+- 通过设置`:previewFullImage="true"'`属性，达到文件预览的目的。
+```html
+<u-upload
+	:fileList="fileList3"
+	@afterRead="afterRead"
+	@delete="deletePic"
+	name="3"
+	multiple
+	:maxCount="10"
+	:previewFullImage="true"
+></u-upload>
+<!-- data -->
+data(){
+	return{
+		fileList3: [{
+			url: 'https://cdn.uviewui.com/uview/swiper/1.jpg',
+		}],
+	}
+}
+```
+
+### 隐藏上传按钮
+
+- 上传数量等于`maxCount`所规定的数据时，隐藏上传按钮。
+```html
+<u-upload
+	:fileList="fileList4"
+	@afterRead="afterRead"
+	@delete="deletePic"
+	name="4"
+	multiple
+	:maxCount="2"
+></u-upload>
+<!-- data -->
+data(){
+	return{
+		fileList4: [{
+				url: 'https://cdn.uviewui.com/uview/swiper/1.jpg',
+			},
+			{
+				url: 'https://cdn.uviewui.com/uview/swiper/1.jpg',
+			}
+		],
+	}
+}
+```
+
+### 限制上传数量
+
+- 同上，规定`maxCount`的数据时。
+```html
+<u-upload
+	:fileList="fileList5"
+	@afterRead="afterRead"
+	@delete="deletePic"
+	name="5"
+	multiple
+	:maxCount="3"
+></u-upload>
+<!-- data -->
+data(){
+	return{
+		fileList5: [],
+	}
+}
+```
+
+### 自定义上传样式
+
+- 添加`image`以自定义上传样式，达到身份证，银行卡等不同场景需求。
+```html
+<u-upload
+	:fileList="fileList6"
+	@afterRead="afterRead"
+	@delete="deletePic"
+	name="6"
+	multiple
+	:maxCount="1"
+	width="250"
+	height="150"
+>
+	<image src="https://cdn.uviewui.com/uview/demo/upload/positive.png" 
+	mode="widthFix" style="width: 250px;height: 150px;"></image>
 </u-upload>
-
-<style>
-.slot-btn {
-	width: 329rpx;
-	height: 140rpx;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: rgb(244, 245, 246);
-	border-radius: 10rpx;
+<!-- data -->
+data(){
+	return{
+		fileList6: [],
+	}
 }
-
-.slot-btn__hover {
-	background-color: rgb(235, 236, 238);
-}
-</style>
-```
-
-3. 自定义预览列表
-首先需要设置`show-upload-list`为`false`来去除组件内部的默认预览列表，其次需要通过`ref`获取组件，进而
-操作组件内部的变量和方法，下面为一些组件内部的方法和变量说明：
-- `lists`(变量)，可以通过此值，构建自定义的预览列表，该变量内部如下：
-
-```js
-lists = [
-	{
-		url: 'xxx.png', // 预览图片的地址
-		error: false, // 上传失败，此值为true
-		progress: 100, // 0-100之间的值
-	},
-	......
-]
-```
-
-- `deleteItem(index)`(方法)，可以用此方法在自定义列表中通过`ref`删除某一张图片
-
-以下为完整的自定义图片预览列表示例：
-
-```html
-<template>
-	<view class="wrap">
-		<view class="pre-box" v-if="!showUploadList">
-			<view class="pre-item" v-for="(item, index) in lists" :key="index">
-				<image class="pre-item-image" :src="item.url" mode="aspectFill"></image>
-			</view>
-		</view>
-		<u-upload :custom-btn="true" ref="uUpload" :show-upload-list="showUploadList" :action="action"> 
-			<view slot="addBtn" class="slot-btn" hover-class="slot-btn__hover" hover-stay-time="150">
-				<u-icon name="photo" size="60" color="#c0c4cc"></u-icon>
-			</view>
-		</u-upload>
-	</view>
-</template>
-
-<script>
-	export default {
-		data() {
-			return {
-				action: 'http://www.example.com', // 演示地址
-				showUploadList: false, 
-				// 如果将某个ref的组件实例赋值给data中的变量，在小程序中会因为循环引用而报错
-				// 这里直接获取内部的lists变量即可
-				lists: []
-			}
-		},
-		// 只有onReady生命周期才能调用refs操作组件
-		onReady() {
-			// 得到整个组件对象，内部图片列表变量为"lists"
-			this.lists = this.$refs.uUpload.lists;
-		}
-	}
-</script>
-
-<style lang="scss">
-	.wrap {
-		padding: 24rpx;
-	}
-	
-	.slot-btn {
-		width: 341rpx;
-		height: 140rpx;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background: rgb(244, 245, 246);
-		border-radius: 10rpx;
-	}
-
-	.slot-btn__hover {
-		background-color: rgb(235, 236, 238);
-	}
-
-	.pre-box {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		flex-wrap: wrap;
-	}
-
-	.pre-item {
-		flex: 0 0 48.5%;
-		border-radius: 10rpx;
-		height: 140rpx;
-		overflow: hidden;
-		position: relative;
-		margin-bottom: 20rpx;
-	}
-
-	.pre-item-image {
-		width: 100%;
-		height: 140rpx;
-	}
-</style>
 ```
 
 
@@ -407,7 +231,7 @@ lists = [
 | multiple | 是否开启图片多选，部分安卓机型不支持  | Boolean  | true | false |
 | deletable | 是否显示删除图片的按钮 | Boolean  | true | false |
 | max-size | 选择单个文件的最大大小，单位B(byte)，默认不限制 | String \| Number  | Number.MAX_VALUE | - |
-| file-list | 默认显示的图片列表，数组元素为对象，必须提供`url`属性 | Array\<Object\>  | - | - |
+| fileList | 默认显示的图片列表，数组元素为对象，必须提供`url`属性 | Array\<Object\>  | - | - |
 | upload-text | 选择图片按钮的提示文字 | String  | 选择图片 | - |
 | auto-upload | 选择完图片是否自动上传，见上方说明 | Boolean  | true | false |
 | show-tips | 特殊情况下是否自动提示toast，见上方说明 | Boolean  | true | false |

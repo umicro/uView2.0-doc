@@ -3,7 +3,7 @@
 <demo-model url="/pages/componentsB/switch/index"></demo-model>
 
 
-选择开关一般用于只有两个选择，且只能选其一的场景。
+选择开关用于在打开和关闭状态之间进行切换。
 
 ### 平台差异说明
 
@@ -11,140 +11,117 @@
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |√|√|√|√|√|√|√|
 
-### 基本使用
+### 基础使用
 
 通过`v-model`绑定一个`布尔值`变量，这个变量是双向绑定的，当用户开或关选择器的时候，在父组件的该值也会相应的变为`true`或者`false`，也就是说，
 您不用监听`change`事件，也能知道选择器当前处于**开**或者**关**的状态。
 
+我们为其提供了`加载中 禁用 自定义尺寸 自定义颜色 自定义样式 异步控制`等六种能力，并在以下案例中为您展示
 
 ```html
-<template>
-	<u-switch v-model="checked"></u-switch>
-</template>
+<u-switch v-model="value" @change="change"></u-switch>
+<!-- methods -->
+change(e) {
+	console.log('change', e);
+},
 
-<script>
-	export default {
-		data() {
-			return {
-				checked: false,
-			};
-		},
-		methods: {
-			// switch打开或者关闭时触发，值为true或者false
-			// 即使不监听此事件，this.checked此时也会相应的变成true或者false
-			change(status) {
-				// console.log(status);
-			},
-		}
-	};
-</script>
 ```
 
+### 加载中
+
+设置`loading`属性，默认为`true`，可以让`switch`处于加载中的状态，这时`switch`是不可操作的，您可以通过`:loading='loading'`以动态设置加载状态
+
+```html
+<u-switch v-model="value3" loading ></u-switch>
+<u-switch v-model="value4" loading ></u-switch>
+<!-- data -->
+value3: false,
+value4: true,
+```
 ### 禁用switch
 
-设置`disabled`为`true`，即可禁用某个组件，让用户无法点击，禁用分为两种状态：
+设置`disabled`属性,默认为`true`，即可禁用某个组件，让用户无法点击，禁用分为两种状态：
 
 - 一是关闭情况下的禁用，这时只显示一个白色的区域。
 - 二是打开后再禁用，这时会在原有的颜色上加一个`opacity`透明度，但此时依然是不可操作的。
 
 ```html
-<u-switch v-model="checked" :disabled="true"></u-switch>
+<u-switch v-model="value" disabled ></u-switch>
 ```
 
-### 加载中
 
-通过设置`loading`变量为`true`，可以让`switch`处于加载中的状态，这时`switch`是不可操作的
+### 自定义尺寸
+
+设置`size`属性，可以让您自定义`switch`的尺寸，单位为`px`
 
 ```html
-<u-switch v-model="checked" :loading="true"></u-switch>
-
-<!-- 等价于 -->
-<u-switch v-model="checked" loading></u-switch>
+<u-switch v-model="value3" size="28" ></u-switch>
+<u-switch v-model="value4" size="20" ></u-switch>
+<!-- data -->
+value3: false,
+value4: true,
 ```
-
 ### 自定义颜色
 
-```html
-<u-switch v-model="checked" active-color="red" inactive-color="#eee"></u-switch>
-```
-
-### 自定义值
-
-可以通过设置`active-value`和`inactive-value`来控制选择器打开或者关闭时，通过`change`事件发出的回调值。
+设置`activeColor`属性，可以让您自定义`switch`的颜色，支持多种设置方式，如：`activeColor="#f56c6c" activeColor="red" activeColor="rgb(0,0,0)" `
 
 ```html
-<u-switch v-model="checked" active-value="1" inactive-value="0"></u-switch>
+<u-switch v-model="value" activeColor="#f56c6c" loading ></u-switch>
+<u-switch v-model="value1" activeColor="#5ac725" loading ></u-switch>
+<!-- data -->
+value: true,
+value1: true,
 ```
+### 自定义样式
 
+同时设置`activeColor`和`inactiveColor`属性，可以让您自定义`switch`的样式，同样支持多种设置方式
+
+```html
+<u-switch
+	space="2" v-model="value11" activeColor="#f9ae3d" 
+	inactiveColor="rgb(230, 230, 230)">
+</u-switch>
+<u-switch
+	space="2" v-model="value12" activeColor="#f9ae3d"
+	inactiveColor="rgb(230, 230, 230)">
+</u-switch>
+<!-- data -->
+value11: false,
+value12: true,
+```
 
 ### 异步控制
 
-这种场景，一般发生在用户打开或者关闭选择器时，需要本地或者向后端请求判断，是否允许用户打开或者关闭的场景。  
-
-- 假设原来是打开状态
-
-1. 您通过`watch`监听`v-model`绑定的`checked`变量，或者通过监听`switch`的`change`事件，得知`checked`变量发生了变化
-2. 这时您可以通过设置`loading`为`true`，同时将`checked`值设置为`true`(因为用户已关闭，这里让它重新打开，并处于加载中)
-3. 等请求结束后，根据判断结果，把`checked`值设置为`true`或者`false`，同时去掉加载中状态(`loading`设置为`false`)，让组件呈现最终的状态
-
-<br>
-
-- 假设原来处于关闭状态
-
-处理方法同上，只不过对应的状态是反过来的  
-
-下面示例为原本是打开状态，用户把它关闭，我们通过异步控制的场景
+异步控制场景，一般发生在用户打开或者关闭选择器时，需要本地或者向后端请求判断，是否允许用户打开或者关闭的场景。  
+同时您也可以组合使用，例如根据接口结果添加`disabled`，`loading`属性等
 
 :::warning 注意
-此处示例中，我们通过`watch`监听`checked`变量为`false`的情景，在定时器模拟回调中又将`checked`设置为`false`，会造成无限循环，所以这里
-引入了一个中间变量`controlStatus`来识别
+请添加`asyncChange`属性来支持异步控制操作，否则您将先操作`v-model`绑定的值，并失去控制效果
 :::
 
 
 ```html
 <template>
-	<u-switch v-model="checked" :loading="loading"></u-switch>
+	<u-switch v-model="value13" asyncChange @change="asyncChange" ></u-switch>
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
-				checked: true,
-				loading: false,
-				// 中间变量，避免在watch中多次回调，造成无限循环
-				controlStatus: false
+				value13:true
 			};
 		},
-		watch: {
-			checked(val) {
-				// 等于false，意味着用户手动关闭了switch
-				if (val == false) {
-					if(this.controlStatus == true) {
-						this.controlStatus = false;
-						return ;
-					}
-					// 重新打开switch，并让它处于加载中的状态
-					this.checked = true;
-					this.loading = true;
-					// 模拟向后端发起请求
-					this.getRestultFromServer();
-				}
-			}
-		},
 		methods: {
-			// switch打开或者关闭时触发，值为true或者false
-			change(status) {
-				// console.log(status);
-			},
-			getRestultFromServer() {
-				// 通过定时器模拟向后端请求
-				setTimeout(() => {
-					this.controlStatus = true;
-					// 后端允许用户关闭switch，设置checked为false，结束loading状态
-					this.loading = false;
-					this.checked = false;
-				}, 1500);
+			asyncChange(e) {
+				uni.showModal({
+					content: e ? '确定要打开吗' : '确定要关闭吗',
+					success: (res) => {
+						if (res.confirm) {
+							this.value13 = e
+						}
+					}
+				})
 			}
 		}
 	};
@@ -166,15 +143,12 @@
 | loading | 是否处于加载中  | Boolean | false | true |
 | disabled | 是否禁用  | Boolean | false | true |
 | size | 开关尺寸，单位rpx | String \| Number  | 50 | - |
-| active-color | 打开时的背景色 | String  | #2979ff | - |
-| inactive-color | 关闭时的背景色 | String  | #ffffff | - |
-| vibrate-short | 是否使手机发生短促震动，目前只在iOS的微信小程序和微信小程序开发工具有效  | Boolean | false | true |
-| active-value | 打开选择器时通过change事件发出的值 | Boolean \| Number \| String  | true | |
-| inactive-value | 关闭选择器时通过change事件发出的值 | Boolean \| Number \| String | false |
+| activeColor | 打开时的背景色 | String  | #2979ff | - |
+| inactiveColor | 关闭时的背景色 | String  | #ffffff | - |
 
 
 ### Switch Event
 
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
-| change | 在`switch`打开或关闭时触发 | value：打开时为`active-value`值，关闭时为`inactive-value`值 |
+| change | 在`switch`打开或关闭时触发 | value：打开时为`activeColor`值，关闭时为`inactiveColor`值 |
