@@ -132,6 +132,7 @@ module.exports = {
                     collapsable: false,
                     sidebarDepth: 0,
                     children: [
+                        '/components/list',
                         '/components/circleProgress',
                         '/components/lineProgress',
                         '/components/table',
@@ -340,6 +341,7 @@ module.exports = {
             '/components/switch',
             '/components/modal',
             '/components/fullScreen',
+            '/components/list',
             '/components/circleProgress',
             '/components/lineProgress',
             '/components/table',

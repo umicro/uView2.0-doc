@@ -16,10 +16,22 @@
 
 ### 基本使用
 
-- 通过`href`设置打开的链接，`slot`传入显示的内容
+- 通过`href`设置打开的链接，`text`设置显示的内容
 
 ```html
-<u-link href="http://www.uviewui.com">蜀道难，难于上青天</u-link>
+<template>
+	<u-link href="https://uviewui.com/" text="打开uView UI文档" @click="click"></u-link>
+</template>
+
+<script>
+	export default {
+		methods: {
+			click() {
+				console.log('click');
+			}
+		}
+	}
+</script>
 ```
 
 ### 下划线
@@ -27,8 +39,22 @@
 通过`under-line`设置是否显示链接的下划线
 
 ```html
-<u-link href="http://www.uviewui.com" :under-line="true">蒹葭苍苍，白露为霜</u-link>
+<template>
+	<u-link href="https://uviewui.com/" text="打开uView UI文档" :under-line="true"></u-link>
+</template>
 ```
+
+### 自定义颜色
+
+- 通过`color`设置文字颜色
+- 通过`line-color`设置下划线颜色
+
+```html
+<template>
+	<u-link href="https://uviewui.com/" text="打开uView UI文档" color="#19be6b" line-color="#19be6b"></u-link>
+</template>
+```
+
 
 ### API
 
@@ -36,9 +62,10 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| color | 文字颜色 | String | #606266 | - |
-| font-size | 字体大小，单位rpx | String \| Number  | 28 | - |
+| color | 文字颜色 | String | #3c9cff | - |
+| font-size | 字体大小，默认单位px | String \| Number  | 15 | - |
 | under-line | 是否显示下划线 | Boolean  | false | true |
 | href | 跳转的链接，要带上http(s) | String  | - | - |
-| line-color | 下划线颜色，默认同`color`参数颜色 | String  | - | - |
 | mp-tips | 各个小程序平台把链接复制到粘贴板后的提示语 | String  | 链接已复制，请在浏览器打开 | - |
+| line-color | 下划线颜色，默认同`color`参数颜色 | String  | - | - |
+| text | 超链接的问题，不使用slot形式传入，是因为nvue下无法修改颜色 | String  | - | - |

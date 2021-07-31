@@ -1,4 +1,4 @@
-## Image 图片 <Badge text="1.4.0" /> <to-api/>
+## Image 图片 <to-api/>
 
 <demo-model url="/pages/componentsB/image/index"></demo-model>
 
@@ -20,14 +20,14 @@
 
 ```html
 <template>
-	<u-image width="100%" height="300rpx" :src="src"></u-image>
+	<u--image :showLoading="true" :src="src" width="80px" height="80px" @click="click"></u--image>
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
-				src: 'https://cdn.uviewui.com/uview/example/fade.jpg'
+				src: 'https://cdn.uviewui.com/uview/album/1.jpg'
 			}
 		}
 	}
@@ -35,12 +35,12 @@
 ```
 
 
-### 填充模式
+### 裁剪模式
 
 通过`mode`参数配置填充模式，此模式用法与uni-app的`image`组件的`mode`参数完全一致，详见：[Image](https://uniapp.dcloud.io/component/image)
 
 ```html
-<u-image src="https://cdn.uviewui.com/uview/example/fade.jpg" mode="widthFix"></u-image>
+<u-image src="https://cdn.uviewui.com/uview/album/1.jpg" mode="widthFix"></u-image>
 ```
 
 ### 图片形状
@@ -49,7 +49,7 @@
 - 如果为方形时，还可以通过`border-radius`参数设置圆角值
 
 ```html
-<u-image src="https://cdn.uviewui.com/uview/example/fade.jpg" shape="circle"></u-image>
+<u-image src="https://cdn.uviewui.com/uview/album/1.jpg" shape="circle"></u-image>
 ```
 
 
@@ -58,7 +58,7 @@
 注意：此功能只对微信小程序、App、百度小程序、字节跳动小程序有效，默认开启。
 
 ```html
-<u-image src="https://cdn.uviewui.com/uview/example/fade.jpg" :lazy-load="true"></u-image>
+<u-image src="https://cdn.uviewui.com/uview/album/1.jpg" :lazy-load="true"></u-image>
 ```
 
 
@@ -67,7 +67,7 @@
 图片加载过程中，为加载中状态(默认显示一个小图标)，可以通过`loading`自定义插槽，结合uView的`u-loading`组件，实现加载的动画效果。
 
 ```html
-<u-image src="https://cdn.uviewui.com/uview/example/fade.jpg">
+<u-image src="https://cdn.uviewui.com/uview/album/1.jpg">
 	<u-loading slot="loading"></u-loading>
 </u-image>
 ```
@@ -78,7 +78,7 @@
 图片加载失败时，默认显示一个错误提示图标，可以通过`error`自定义插槽，实现个性化的提示方式。
 
 ```html
-<u-image src="https://cdn.uviewui.com/uview/example/fade.jpg">
+<u-image src="https://cdn.uviewui.com/uview/album/1.jpg">
 	<view slot="error" style="font-size: 24rpx;">加载失败</view>
 </u-image>
 ```
@@ -92,7 +92,7 @@
 - 通过`duration`参数配置动画的过渡时间，单位ms
 
 ```html
-<u-image src="https://cdn.uviewui.com/uview/example/fade.jpg" :fade="true" duration="450"></u-image>
+<u-image src="https://cdn.uviewui.com/uview/album/1.jpg" :fade="true" duration="450"></u-image>
 ```
 
 
@@ -105,7 +105,7 @@
 <!-- 点击图片将不会触发clickHandler -->
 <view @tap="clickHandler">
 	<view @tap.stop>
-		<u-image src="https://cdn.uviewui.com/uview/example/fade.jpg"></u-image>
+		<u-image src="https://cdn.uviewui.com/uview/album/1.jpg"></u-image>
 	</view>
 </view>
 ```
@@ -115,18 +115,16 @@
 
 ### Props
 
-**注意：** 此组件为1.4.0版本加入的，[如何查看版本？](/components/install.html)
-
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | src | 图片地址，**强烈建议**使用绝对或者网络路径 | String | - | - |
 | mode | 裁剪模式，见上方说明 | String  | aspectFill | - |
-| width | 宽度，单位任意，如果为数值，则为rpx单位 | String \| Number  | 100% | - |
-| height | 高度，单位任意，如果为数值，则为rpx单位 | String \| Number  | auto | - |
-| shape | 图片形状，circle-圆形，square-方形 | String  | square | circle |
-| border-radius | 圆角值，单位任意，如果为数值，则为rpx单位 | String \| Number  | 0 | - |
+| width | 宽度，单位任意，如果为数值，默认单位px | String \| Number  | 300 | - |
+| height | 高度，单位任意，如果为数值，默认单位px | String \| Number  | 225 | - |
+| shape | 图片形状，circle-圆形，square-方形 | String  | square | square |
+| radius | 圆角，默认单位px | String \| Number  | 0 | - |
 | lazy-load | 是否懒加载，仅微信小程序、App、百度小程序、字节跳动小程序有效 | Boolean  | true | - |
-| show-menu-by-longpress | 是否开启长按图片显示识别小程序码菜单，仅微信小程序有效 | Boolean  | false | - |
+| show-menu-by-longpress | 是否开启长按图片显示识别小程序码菜单，仅微信小程序有效 | Boolean  | true | - |
 | loading-icon | 加载中的图标，或者小图片 | String  | photo | - |
 | error-icon | 加载失败的图标，或者小图片 | String  | error-circle | - |
 | show-loading | 是否显示加载中的图标或者自定义的slot | Boolean  | true | false |
@@ -134,7 +132,7 @@
 | fade | 是否需要淡入效果 | Boolean  | true | false |
 | webp | 只支持网络资源，只对微信小程序有效 | Boolean  | false | true |
 | duration | 搭配`fade`参数的过渡时间，单位ms | String \| Number   | 500 | - |
-| bg-color <Badge text="1.6.2" /> | 背景颜色 | String   | #f3f4f6 | - |
+| bg-color | 背景颜色，用于深色页面加载图片时，为了和背景色融合 | String   | #f3f4f6 | - |
 
 
 

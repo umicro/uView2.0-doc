@@ -17,34 +17,33 @@
 
 - `color`为线条的颜色
 - `direction`为线条的方向，默认为横向
-- `hair-line`为是否设置细线条(0.5px)，默认为`true`
 - `length`参数需要特别留意，它需要带上单位，比如设置为"50%"，"500rpx"等，在线条为横向时，表现为线条的长度；在线条为竖向时，表现为线条的高度。
 
 ```html
 <template>
-	<u-line color="red" />
+	/* 基础使用 */
+	<u-line></u-line>
 	
-	/* 等同于 */
-	<u-line color="red"></u-line>
+	/* 自定义颜色 */
+	<u-line color="#2979ff"></u-line>
+	
+	/* 自定义线条方向 */
+	<u-line direction="col"></u-line>
+	
+	/* 自定义线条长度 */
+	<u-line length="50%"></u-line>
 </template>
 ```
 
 
-### 线条类型 <Badge text="1.3.7" />
+### 是否虚线 
 
-我们可以通过`border-style`参数设置线条的类型，有如下三种可选项：
-
-- `solid`表示实线
-- `dashed`表示方形虚线
-- `dotted`表示圆点虚线
-
-
-### 兼容性
-
-由于`头条小程序`的兼容性，如果组件无效的情况下，您可能需要给组件加上`u-line`类，如下：
+- `dashed`控制线条是否虚线：
 
 ```html
-<u-line class="u-line"></u-line>
+<template>
+	<u-line dashed></u-line>
+</template>
 ```
 
 
@@ -54,12 +53,12 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| color | 线条的颜色 | String | #e4e7ed | - |
-| length | 长度，竖向时表现为高度，横向时表现为长度，可以为百分比，带rpx单位的值等 | String | 100% | - |
+| color | 线条的颜色 | String | #d6d7d9 | - |
+| length | 长度，竖向时表现为高度，横向时表现为长度，可以为百分比，带rpx单位的值等 | String \| Number | 100% | - |
 | direction | 线条的方向，`row`-横向，`col`-竖向 | String | row | col |
-| hair-line | 是否显示细线条 | Boolean  | true | false |
-| margin | 线条与上下左右元素的间距，字符串形式，如"30rpx"、"20rpx 30rpx" | String  | - | - |
-| border-style <Badge text="1.3.7" /> | 线条类型，见上方说明 | String  | solid | dashed / dotted |
+| hairline | 是否显示细边框 | Boolean | true | false |
+| margin | 线条与上下左右元素的间距，字符串形式，如"30rpx"、"20rpx 30rpx"，默认单位px | String \| Number  | 0 | - |
+| dashed | 是否虚线，false-实线，true-虚线 | Boolean  | false | true |
 
 
 <style scoped>
