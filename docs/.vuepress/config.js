@@ -102,7 +102,8 @@ module.exports = {
                         '/components/cell',
                         '/components/badge',
                         '/components/tag',
-                        '/components/loadingIcon'
+                        '/components/loadingIcon',
+                        '/components/loadingPage',
                     ]
                 },
                 {
