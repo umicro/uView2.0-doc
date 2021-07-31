@@ -1,4 +1,4 @@
-## loadMore 加载更多 <to-api/>
+## LoadMore 加载更多 <to-api/>
 
 <demo-model url="/pages/componentsC/loadmore/index"></demo-model>
 
@@ -10,9 +10,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|  App  |  H5   | 微信小程序 | 支付宝小程序 | 百度小程序 | 头条小程序 | QQ小程序 |
+| :---: | :---: | :--------: | :----------: | :--------: | :--------: | :------: |
+|   √   |   √   |     √      |      √       |     √      |     √      |    √     |
 
 ### 基本使用
 
@@ -67,13 +67,18 @@
 
 ### 控制组件的提示以及动画效果
 
-- 可以通过`icon-type`设置加载中的图标为`flower`或者`circle`，如果不需要图标，可以设置`icon`为`false`
+- 如果不需要图标，可以设置`icon`为`false`
 - 可以设置`is-dot`为`true`，在没有数据时，内容显示为一个"●"替代默认的"没有更多了"
-- 可以通过配置`load-text`配置提示的文字，该参数为一个对象值，可以修改默认的文字提示，见如下：
+- 可以通过配置`loading-text`配置提示的文字，该参数为一个对象值，可以修改默认的文字提示，见如下：
 
 ```html
 <template>
-	<u-loadmore :status="status" :icon-type="iconType" :load-text="loadText" />
+	<u-loadmore 
+        :status="status" 
+        :loading-text="loadingText" 
+        :loadmore-text="loadmoreText" 
+        :nomore-text="nomoreText" 
+    />
 </template>
 
 <script>
@@ -81,12 +86,9 @@
 		data() {
 			return {
 				status: 'loadmore',
-				iconType: 'flower',
-				loadText: {
-					loadmore: '轻轻上拉',
-					loading: '努力加载中',
-					nomore: '实在没有了'
-				}
+                loadingText: '努力加载中'
+                loadmoreText: '轻轻上拉',
+                nomoreText: '实在没有了'
 			}
 		}
 	}
@@ -104,24 +106,28 @@
 
 ### Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| status | 组件状态  | String | loadmore | loading / nomore |
-| bg-color | 组件背景颜色，在页面是非白色时会用到(1.7.0起废弃此参数，默认为transparent)  | String	 | #ffffff | - |
-| icon | 加载中时是否显示图标  | Boolean | true | false |
-| icon-type | 加载中时的图标类型， | String | circle | flower |
-| icon-color | `icon-type`为`circle`时有效，加载中的动画图标的颜色  | String | #b7b7b7 | - |
-| is-dot |  `status`为`nomore`时，内容显示为一个"●" | Boolean | false | true |
-| color | 字体颜色  | String | #606266 | - |
-| font-size | 字体大小，单位rpx  | String \| Number | 28 | - |
-| load-text | 自定义显示的文字，见上方说明示例  | Object | - | - |
-| margin-top | 与前一个元素的距离，单位rpx | String \| Number  | 0 | - |
-| margin-bottom | 与后一个元素的距离，单位rpx | String \| Number  | 0 | - |
+| 参数          | 说明                                                    | 类型             | 默认值      | 可选值               |
+| ------------- | ------------------------------------------------------- | ---------------- | ----------- | -------------------- |
+| status        | 组件状态                                                | String           | loadmore    | loading / nomore     |
+| bg-color      | 组件背景颜色，在页面是非白色时会用到(默认为transparent) | String           | #ffffff     | -                    |
+| icon          | 加载中时是否显示图标                                    | Boolean          | true        | false                |
+| icon-color    | 加载中的动画图标的颜色                                  | String           | #b7b7b7     | -                    |
+| is-dot        | `status`为`nomore`时，内容显示为一个"●"                 | Boolean          | false       | true                 |
+| color         | 字体颜色                                                | String           | #606266     | -                    |
+| font-size     | 字体大小，单位rpx                                       | String \| Number | 28          | -                    |
+| height        | 高度                                                    | String \| Number | auto        | -                    |
+| margin-top    | 与前一个元素的距离，单位rpx                             | String \| Number | 20          | -                    |
+| margin-bottom | 与后一个元素的距离，单位rpx                             | String \| Number | 20          | -                    |
+| loading-icon  | 加载中状态的图标                                        | String           | circle      | spinner / semicircle |
+| loading-text  | 加载中提示语                                            | String           | 正在加载... | -                    |
+| loadmore-text | 加载前的提示语                                          | String           | 加载更多    | -                    |
+| nomore-text   | 没有更多的提示语                                        | String           | 没有更多了  | -                    |
+| line          | 是否显示左边分割线                                      | Boolean          | false       | true                 |
 
 
 ### Event
 
 
-|事件名|说明|回调参数|版本|
-|:-|:-|:-|:-|
-| loadmore | `status`为`loadmore`时，点击组件会发出此事件 | - | - |
+| 事件名   | 说明                                         | 回调参数 | 版本 |
+| :------- | :------------------------------------------- | :------- | :--- |
+| loadmore | `status`为`loadmore`时，点击组件会发出此事件 | -        | -    |
