@@ -21,54 +21,69 @@
 
 ```html
 <template>
-	<view class="wrap">
-		<u-row gutter="16">
-			<u-col span="3">
-				<view class="demo-layout bg-purple"></view>
-			</u-col>
-			<u-col span="4">
-				<view class="demo-layout bg-purple-light"></view>
-			</u-col>
-			<u-col span="5">
-				<view class="demo-layout bg-purple-dark"></view>
-			</u-col>
-		</u-row>
-		<u-row gutter="16" justify="space-between">
-			<u-col span="3">
-				<view class="demo-layout bg-purple"></view>
-			</u-col>
-			<u-col span="9">
-				<view class="demo-layout bg-purple-light"></view>
-			</u-col>
-		</u-row>
-	</view>
+    <view class="u-page">
+        <view class="u-demo-block">
+            <text class="u-demo-block__title">基础使用</text>
+            <view class="u-demo-block__content">
+                <u-row customStyle="margin-bottom: 10px">
+                    <u-col span="6">
+                        <view class="demo-layout bg-purple-light"></view>
+                    </u-col>
+                    <u-col span="6">
+                        <view class="demo-layout bg-purple"></view>
+                    </u-col>
+                </u-row>
+                <u-row customStyle="margin-bottom: 10px">
+                    <u-col span="4">
+                        <view class="demo-layout bg-purple"></view>
+                    </u-col>
+                    <u-col span="4">
+                        <view class="demo-layout bg-purple-light"></view>
+                    </u-col>
+                    <u-col span="4">
+                        <view class="demo-layout bg-purple-dark"></view>
+                    </u-col>
+                </u-row>
+                <u-row justify="space-between">
+                    <u-col span="3">
+                        <view class="demo-layout bg-purple"></view>
+                    </u-col>
+                    <u-col span="3">
+                        <view class="demo-layout bg-purple-light"></view>
+                    </u-col>
+                    <u-col span="3">
+                        <view class="demo-layout bg-purple"></view>
+                    </u-col>
+                    <u-col span="3">
+                        <view class="demo-layout bg-purple-light"></view>
+                    </u-col>
+                </u-row>
+            </view>
+        </view>
+    </view>
 </template>
 
-<style scoped lang="scss">
-	.wrap {
-		padding: 24rpx;
-	}
+<style lang="scss">
+    .wrap {
+        padding: 12px;
+    }
 
-	.u-row {
-		margin: 40rpx 0;
-	}
+    .demo-layout {
+        height: 25px;
+        border-radius: 4px;
+    }
 
-	.demo-layout {
-		height: 80rpx;
-		border-radius: 8rpx;
-	}
+    .bg-purple {
+        background: #CED7E1;
+    }
 
-	.bg-purple {
-		background: #d3dce6;
-	}
+    .bg-purple-light {
+        background: #e5e9f2;
+    }
 
-	.bg-purple-light {
-		background: #e5e9f2;
-	}
-
-	.bg-purple-dark {
-		background: #99a9bf;
-	}
+    .bg-purple-dark {
+        background: #99a9bf;
+    }
 </style>
 ```
 
@@ -77,16 +92,94 @@
 通过设置`row`组件的`gutter`参数，来指定每一栏之间的间隔(最终表现为左边内边距各为gutter/2)，默认间隔为0
 
 ```html
-<u-row gutter="16">
-	<u-col span="3">
-		<view class="demo-layout bg-purple">
-		</view>
-	</u-col>
-	<u-col span="9">
-		<view class="demo-layout bg-purple-light">
-		</view>
-	</u-col>
-</u-row>
+<view class="u-demo-block__content">
+    <u-row
+            justify="space-between"
+            gutter="10"
+    >
+        <u-col span="3">
+            <view class="demo-layout bg-purple"></view>
+        </u-col>
+        <u-col span="3">
+            <view class="demo-layout bg-purple-light"></view>
+        </u-col>
+        <u-col span="3">
+            <view class="demo-layout bg-purple"></view>
+        </u-col>
+        <u-col span="3">
+            <view class="demo-layout bg-purple-light"></view>
+        </u-col>
+    </u-row>
+</view>
+
+<style lang="scss">
+    .wrap {
+        padding: 12px;
+    }
+
+    .demo-layout {
+        height: 25px;
+        border-radius: 4px;
+    }
+
+    .bg-purple {
+        background: #CED7E1;
+    }
+
+    .bg-purple-light {
+        background: #e5e9f2;
+    }
+
+    .bg-purple-dark {
+        background: #99a9bf;
+    }
+</style>
+```
+
+### 混合布局
+
+通过指定`col`组件的`span`属性，指定不同的值，达到不同的比例
+
+```html
+<view class="u-demo-block__content">
+    <u-row
+        justify="space-between"
+        gutter="10"
+    >
+        <u-col span="2">
+            <view class="demo-layout bg-purple-light"></view>
+        </u-col>
+        <u-col span="4">
+            <view class="demo-layout bg-purple"></view>
+        </u-col>
+        <u-col span="6">
+            <view class="demo-layout bg-purple-dark"></view>
+        </u-col>
+    </u-row>
+</view>
+
+<style lang="scss">
+    .wrap {
+        padding: 12px;
+    }
+
+    .demo-layout {
+        height: 25px;
+        border-radius: 4px;
+    }
+
+    .bg-purple {
+        background: #CED7E1;
+    }
+
+    .bg-purple-light {
+        background: #e5e9f2;
+    }
+
+    .bg-purple-dark {
+        background: #99a9bf;
+    }
+</style>
 ```
 
 ### 分栏偏移
@@ -94,14 +187,36 @@
 通过指定`col`组件的`offset`属性可以指定分栏偏移的栏数。
 
 ```html
-<u-row gutter="16">
-	<u-col span="3">
-		<view class="demo-layout bg-purple"></view>
-	</u-col>
-	<u-col span="3" offset="6">
-		<view class="demo-layout bg-purple-light"></view>
-	</u-col>
-</u-row>
+<view class="u-demo-block__content">
+    <u-row
+            justify="space-between"
+            customStyle="margin-bottom: 10px"
+    >
+        <u-col
+                span="3"
+                offset="3"
+        >
+            <view class="demo-layout bg-purple-light"></view>
+        </u-col>
+        <u-col
+                span="3"
+                offset="3"
+        >
+            <view class="demo-layout bg-purple"></view>
+        </u-col>
+    </u-row>
+    <u-row>
+        <u-col span="3">
+            <view class="demo-layout bg-purple-light"></view>
+        </u-col>
+        <u-col
+                span="3"
+                offset="3"
+        >
+            <view class="demo-layout bg-purple"></view>
+        </u-col>
+    </u-row>
+</view>
 ```
 
 ### 对齐方式
@@ -113,14 +228,33 @@
 **注意**：由于持微信小程序编译后的特殊结构，此方式不支持微信小程序。
 
 ```html
-<u-row gutter="16" justify="center">
-	<u-col span="3">
-		<view class="demo-layout bg-purple"></view>
-	</u-col>
-	<u-col span="3">
-		<view class="demo-layout bg-purple-light"></view>
-	</u-col>
-</u-row>
+<view class="u-demo-block__content">
+    <u-row
+            justify="space-between"
+            customStyle="margin-bottom: 10px"
+    >
+        <u-col
+                span="3"
+        >
+            <view class="demo-layout bg-purple-light"></view>
+        </u-col>
+        <u-col
+                span="3"
+        >
+            <view class="demo-layout bg-purple"></view>
+        </u-col>
+    </u-row>
+    <u-row>
+        <u-col span="3">
+            <view class="demo-layout bg-purple-light"></view>
+        </u-col>
+        <u-col
+                span="3"
+        >
+            <view class="demo-layout bg-purple"></view>
+        </u-col>
+    </u-row>
+</view>
 ```
 
 ### API
@@ -130,7 +264,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | gutter | 栅格间隔，左右各为此值的一半，单位rpx  | String \| Number | 0 | - |
-| justify | 水平排列方式(微信小程序暂不支持)  | String | start(或flex-start) | end(或flex-end) / center / around(或space-around) / between(或space-between) |
+| justify | 水平排列方式(微信小程序暂不支持)  | String | `start`(或`flex-start`) | `end`(或`flex-end`) / `center` / `around`(或`space-around`) / `between`(或`space-between`) |
 | align | 垂直排列方式 | String | center | top / bottom |
 
 ### Col Props
@@ -139,17 +273,19 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | span | 栅格占据的列数，总12等分  | String \| Number | 0 | 1-12 | 
 | offset | 分栏左边偏移，计算方式与`span`相同  | String \| Number | 0 | - |
-| text-align <Badge text="1.5.5" /> | 文字水平对齐方式  | String | left | center / right | 
+| justify | 水平排列方式  | String | start | `start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`) |
+| align | 垂直对齐方式  | String | stretch | `top`、`center`、`bottom`、`stretch` |
+| text-align | 文字水平对齐方式  | String | left | center / right | 
 
 
-### Row Events <Badge text="1.4.3" />
+### Row Events
 
 |事件名|说明|回调参数|
 |:-|:-|:-|
 | click | `row`被点击 | - |
 
 
-### Col Events <Badge text="1.4.3" />
+### Col Events
 
 |事件名|说明|回调参数|
 |:-|:-|:-|
