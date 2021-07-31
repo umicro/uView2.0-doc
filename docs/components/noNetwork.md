@@ -14,58 +14,91 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|x|√|
+|  App  |  H5   | 微信小程序 | 支付宝小程序 | 百度小程序 | 头条小程序 | QQ小程序 |
+| :---: | :---: | :--------: | :----------: | :--------: | :--------: | :------: |
+|   √   |   √   |     √      |      √       |     √      |     x      |    √     |
 
 ### 基本使用
 
 ```html
 <template>
 	<view>
-		<view class="u-text">
-			这里是页面正式内容
+		<u-no-network
+			@disconnected="disconnected"
+			@connected="connected"
+			@retry="retry"
+		></u-no-network>
+		<view class="u-content">
+			<view class="u-content__circle">
+				<u-icon
+					name="checkbox-mark"
+					color="#fff"
+					size="30"
+				></u-icon>
+			</view>
+			<text class="u-content__normal">网络正常</text>
 		</view>
-		<u-no-network></u-no-network>
 	</view>
 </template>
 
 <script>
 	export default {
-		
+		methods: {
+			disconnected() {
+				console.log('disconnected');
+			},
+			connected() {
+				console.log('connected');
+			},
+			retry() {
+				console.log('retry');
+			}
+		},
 	}
 </script>
 
 <style lang="scss" scoped>
-	.u-text {
-		padding-top: 300rpx;
-		font-size: 30rpx;
-		color: $u-type-primary;
-		text-align: center;
+	.u-content {
+		padding: 150px 60px 0;
+		@include flex(column);
+		align-items: center;
+		justify-content: center;
+
+		&__circle {
+			background-color: $u-success;
+			@include flex;
+			border-radius: 100px;
+			width: 60px;
+			height: 60px;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&__normal {
+			font-size: 15px;
+			color: $u-success;
+			margin-top: 15px;
+		}
 	}
 </style>
 ```
-
-
-### 兼容性
-
-- `头条小程序`不支持监听网络状态变化，故本组件不支持`头条小程序`
-
 
 ### API
 
 ### Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| tips | 没有网络时的提示语 | String | 哎呀，网络信号丢失 | - |
-| zIndex | 组件的`z-index`值  | String \| Number | 10080 | - |
-| image | 无网络的图片提示，可用的src地址或base64图片 | String | - | - |
+| 参数   | 说明                                        | 类型             | 默认值             | 可选值 |
+| ------ | ------------------------------------------- | ---------------- | ------------------ | ------ |
+| tips   | 没有网络时的提示语                          | String           | 哎呀，网络信号丢失 | -      |
+| zIndex | 组件的`z-index`值                           | String \| Number | 10080              | -      |
+| image  | 无网络的图片提示，可用的src地址或base64图片 | String           | -                  | -      |
 
 ### Events
 
 
-| 事件名 | 说明 | 回调参数 |
-| :- | :- | :- |
-| retry | 用户点击页面的"重试"按钮时触发 | - |
+| 事件名       | 说明                           | 回调参数 |
+| :----------- | :----------------------------- | :------- |
+| retry        | 用户点击页面的"重试"按钮时触发 | -        |
+| connected    | "重试"后，有网络触发           | -        |
+| disconnected | "重试"后，无网络触发           | -        |
 
