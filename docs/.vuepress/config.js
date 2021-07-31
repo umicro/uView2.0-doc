@@ -166,6 +166,7 @@ module.exports = {
                     collapsable: false,
                     sidebarDepth: 0,
                     children: [
+						'/components/statusBar',
                         '/components/line',
                         '/components/card',
                         '/components/mask',

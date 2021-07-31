@@ -4,6 +4,11 @@
 
 该组件一般用于表单中，手动选择一个区间范围的场景。
 
+::: tip 说明
+该组件在```H5```，```微信小程序```和```APP-VUE```等平台上使用了```WXS```技术，在```NVUE```平台使用了```BindingX```技术，
+故在滑动过程中可以获得细腻流畅的跟随效果。
+:::
+
 ### 平台差异说明
 
 |App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
@@ -17,9 +22,7 @@
 
 ```html
 <template>
-	<view class="wrap">
-		<u-slider v-model="value"></u-slider>
-	</view>
+	<u-slider v-model="value"></u-slider>
 </template>
 	
 <script>
@@ -31,12 +34,6 @@
 		}
 	}
 </script>
-
-<style scoped lang="scss">
-	.wrap {
-		padding: 30rpx;
-	}
-</style>
 ```
 
 ### 设置最大和最小值
@@ -60,25 +57,26 @@
 <u-slider v-model="value" step="20" min="30" max="100"></u-slider>
 ```
 
+### 禁用状态
+
+```html
+<u-slider v-model="value" disabled></u-slider>
+```
+
 
 ### 自定义按钮的内容和样式
 
-通过设置`use-slot`为`true`，可以以传入`slot`的形式，替换默认的滑块按钮。
-
-以下示例结合了`value`值，在按钮上实时显示选择的值：
+- ```activeColor```，设置进度条的激活部分颜色
+- ```inactiveColor```，进度条的激活部分颜色
+- ```inactiveColor```，进度条的背景颜色
+- ```blockColor```，滑块的背景颜色
+- ```blockStyle```，用户对滑块的自定义样式(颜色)
 
 ```html
 <template>
-	<view class="wrap">
-		<u-slider v-model="value" :use-slot="true">
-			<!-- 这里外面需要多一层view，否则".badge-button"样式可能不生效 -->
-			<view class="">
-				<view class="badge-button">
-					{{value}}
-				</view>
-			</view>
-		</u-slider>
-	</view>
+	<u-slider v-model="value" activeColor="#3c9cff" inactiveColor="#c0c4cc">
+	
+	</u-slider>
 </template>
 	
 <script>
@@ -90,21 +88,6 @@
 		}
 	}
 </script>
-
-<style scoped lang="scss">
-	.wrap {
-		padding: 30rpx;
-	}
-	
-	.badge-button {
-		padding: 4rpx 6rpx;
-		background-color: $u-type-error;
-		color: #fff;
-		border-radius: 10rpx;
-		font-size: 22rpx;
-		line-height: 1;
-	}
-</style>
 ```
 
 
@@ -133,14 +116,13 @@
 | min | 可选的最小值(0-100之间)  | String \| Number | 0 | - |
 | max | 可选的最大值(0-100之间)  | String \| Number | 100 | - |
 | step | 选择的步长  | String \| Number | 1 | - |
-| block-width | 滑动按钮的宽度(高等于宽)，单位rpx  | String \| Number | 30 | - |
-| height | 滑动选择条的高度，单位rpx | String \| Number | 6 | - |
-| inactive-color | 滑动选择条的底部背景颜色  | String | #c0c4cc | - |
-| active-color | 底部选择部分的背景颜色  | String | #2979ff | - |
-| block-color | 滑块背景颜色  | String | #ffffff | - |
-| block-style | 给滑块按钮自定义样式，对象形式  | Object | - | - |
 | disabled | 是否禁用滑块  | Boolean | false | true |
-| use-slot | 是否使用slot传入自定义滑块  | Boolean | false | true |
+| blockHeight | 滑块宽度，高等于宽 | String \| Number | 15 | - |
+| height | 滑块条高度 | String \| Number | 10 | - |
+| inactiveColor | 进度条的背景颜色  | String | #c0c4cc | - |
+| activeColor | 进度条的激活部分颜色  | String | #2979ff | - |
+| blockColor | 滑块背景颜色  | String | #ffffff | - |
+| blockStyle | 滑块按钮自定义样式，对象形式  | Object \| String | - | - |
 
 
 ### Slot
@@ -150,12 +132,8 @@
 | - | 自定义滑块内容  |
 
 
-
-### Events
-
-|事件名|说明|回调参数|
-|:-|:-|:-|:-|
-| start | 触发滑块移动 | - |
-| moving | 正在滑动中 | - |
-| end | 滑动结束 | - |
-
+<style >
+h3[id=slot] + table thead tr th:nth-child(2){
+	width: 50%;
+}
+</style>
