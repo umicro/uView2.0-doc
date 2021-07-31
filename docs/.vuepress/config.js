@@ -165,7 +165,7 @@ module.exports = {
                     children: [
                         '/components/line',
                         '/components/card',
-                        '/components/mask',
+                        '/components/overlay',
                         '/components/noNetwork',
                         '/components/grid',
                         '/components/swiper',
@@ -354,7 +354,7 @@ module.exports = {
             '/components/collapse',
             '/components/popup',
             '/components/swipeAction',
-            '/components/mask',
+            '/components/overlay',
             '/components/noNetwork',
             '/components/grid',
             '/components/swiper',
