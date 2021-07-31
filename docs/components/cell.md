@@ -7,15 +7,15 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|  App  |  H5   | 微信小程序 | 支付宝小程序 | 百度小程序 | 头条小程序 | QQ小程序 |
+| :---: | :---: | :--------: | :----------: | :--------: | :--------: | :------: |
+|   √   |   √   |     √      |      √       |     √      |     √      |    √     |
 
-### 基本使用
+### 基础功能
 
 - 该组件需要搭配`cell-group`使用，并由它实现列表组的上下边框，如不需要上下边框，配置`cellGroup`的`border`参数为`false`即可。
 - 通过`title`设置左侧标题，`value`设置右侧内容。
-- 通过`icon`字段设置图标，值为uView自带的[Icon 图标](/components/icon.html)名。
+- 通过`icon`字段设置图标，，或者图片链接(本地文件建议使用绝对地址)。
 
 **注意：** 由于`cell`组件需要由`cellGroup`组件提供参数值，这些父子组件间通过Vue的"provide/inject"特性注入依赖，
 所以您必须使用`cellGroup`包裹`cell`组件才能正常使用。
@@ -49,41 +49,104 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 如上所示，可以给`cell-item`组件通过`slot="right-icon"`设定右边uView自带的`badge`或者`switch`组件：
 - 如果搭配的是`badge`组件，注意设置`absolute`参数为`false`去掉绝对定位，否则其位于右侧的恰当位置，详见[Badge 徽标数](/components/badge.html)。
 - 如果搭配的是`switch`组件，注意要通过`v-model`绑定一个内容为布尔值的变量，否则无法操作`switch`，详见[Switch 开关选择器](/components/switch.html)。
+### 自定义大小
+
+设置`size`可自定义大小
+
+```html
+
+<u-cell-group>
+	<u-cell
+	    size="large"
+	    title="单元格"
+	    value="内容"
+	    isLink
+	></u-cell>
+	<u-cell
+	    size="large"
+	    title="单元格"
+	    value="内容"
+	    label="描述信息"
+	></u-cell>
+</u-cell-group>
+```
 
 ### 展示右箭头
 
-设置`arrow`为`true`，将会显示右侧的箭头，可以通过arrow-direction控制箭头的方向
+设置`isLink`为`true`，将会显示右侧的箭头，可以通过arrow-direction控制箭头的方向
 
 ```html
 <u-cell-group>
-	<u-cell-item icon="share" title="停车坐爱枫林晚" :arrow="true" arrow-direction="down"></u-cell-item>
-	<u-cell-item icon="map" title="霜叶红于二月花" :arrow="false"></u-cell-item>
+	<u-cell-item icon="share" title="停车坐爱枫林晚" :isLink="true" arrow-direction="down"></u-cell-item>
+	<u-cell-item icon="map" title="霜叶红于二月花" :isLink="false"></u-cell-item>
 </u-cell-group>
 ```
+### 跳转页面
 
-### 分组标题
-
-通过`cell-group`的`title`参数可以指定分组标题
+设置`isLink`为`true`，单元格点击可跳转页面,传入`url`设置跳转地址
 
 ```html
-<u-cell-group title="设置喜好">
-	<u-cell-item icon="setting-fill" title="个人设置"></u-cell-item>
-	<u-cell-item icon="integral-fill" title="会员等级" value="新版本"></u-cell-item>
+<u-cell-group>
+	<u-cell
+	    title="打开标签页"
+	    isLink
+	    url="/pages/componentsB/tag/tag"
+	></u-cell>
+	<u-cell
+	    title="打开徽标页"
+	    isLink
+	    url="/pages/componentsB/badge/badge"
+	></u-cell>
 </u-cell-group>
 ```
+### 跳转页面
 
-
-### 是否开启点击反馈
-
-如果将`arrow`参数设置为`true`，意味着这是一个可点击的Cell，默认会给一个点击的反馈效果，如果您想自定义这个反馈效果，可以通过
-`hover-class`参数传入一个样式类名，这个类必须写在全局样式中，如`App.vue`、或通过`Apop.vue`引入的全局样式中，一般建议定义反馈的背景颜色，或者是透明度即可。
-如果不想要任何效果，将`hover-class`设置为`none`即可。
+设置`center`为`true`，可将右侧内容垂直居中
 
 ```html
-<u-cell-group title="设置喜好">
-	<u-cell-item icon="setting-fill" title="个人设置" hover-class="cell-hover-class"></u-cell-item>
+<u-cell-group>
+    <u-cell
+        title="单元格"
+        value="内容"
+        label="描述信息"
+        center
+    ></u-cell>
 </u-cell-group>
 ```
+### 自定义插槽
+
+设置`slot`为`title`，可自定义左侧区域内容
+设置`slot`为`value`，可自定义右侧区域内容
+
+```html
+<u-cell-group>
+    <u-cell value="内容">
+    	<view
+    	    slot="title"
+    	    class="u-slot-title"
+    	>
+    		<text class="u-cell-text">单元格</text>
+    		<u-tag
+    		    text="标签"
+    		    plain
+    		    size="mini"
+    		    type="warning"
+    		>
+    		</u-tag>
+    	</view>
+    </u-cell>
+    <u-cell
+        title="单元格"
+    	isLink
+    >
+    	<text
+    	    slot="value"
+    	    class="u-slot-value"
+    	>99</text>
+    </u-cell>
+</u-cell-group>
+```
+
 
 ```css
 /* App.vue */
@@ -101,52 +164,53 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 
 ### CellGroup Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| title | 分组标题  | String | - | - |
-| border | 是否显示外边框 | Boolean  | true | false |
-| title-style | 分组标题的的样式，对象形式，如{'font-size': '24rpx'} 或 {'fontSize': '24rpx'} | object  | - | - |
+| 参数        | 说明                                                                          | 类型    | 默认值 | 可选值 |
+| ----------- | ----------------------------------------------------------------------------- | ------- | ------ | ------ |
+| title       | 分组标题                                                                      | String  | -      | -      |
+| border      | 是否显示外边框                                                                | Boolean | true   | false  |
+| customStyle | 分组标题的的样式，对象形式，如{'font-size': '24rpx'} 或 {'fontSize': '24rpx'} | object  | -      | -      |
 
 ### CellItem Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| title | 左侧标题  | String | - | - |
-| icon | 左侧图标名，只支持uView内置图标，见[Icon 图标](/components/icon.html) | String  | - | - |
-| icon-style <Badge text="1.4.0" /> | icon的样式，对象形式 | Object | - | - |
-| value | 右侧内容 | String  | - | - |
-| label | 标题下方的描述信息 | String | - | - |
-| border-bottom | 是否显示cell的下边框 | Boolean  | true | false |
-| border-top | 是否显示cell的上边框 | Boolean  | false | true |
-| border-gap | `border-bottom`为`true`时，Cell列表中间的条目的下边框是否与左边有一个间隔 <Badge type="error" text="1.4.0已废弃" />  | Boolean  | true | false |
-| hover-class | 是否开启点击反馈，`none`为无效果，见上方说明 | String  | - | none |
-| arrow | 是否显示右侧箭头，开启的话，将会默认带上点击反馈，可通过`hover-class`配置 | Boolean | true | false |
-| arrow-direction | 箭头方向，可选值为 | String  | right | up / down |
-| title-style | 标题样式，对象形式 | Object | - | - |
-| required | 是否显示左边表示必填的星号 | Boolean | false | true |
-| value-style | 右侧内容样式，对象形式 | Object | - | - |
-| label-style | 标题下方描述信息的样式，对象形式 | Object | - | - |
-| bg-color | 背景颜色，默认透明背景 | String  | transparent | - |
-| index | 用于在`click`事件回调中返回，标识当前是第几个Item  | String \| Number | - | - |
-| title-width | 标题的宽度，单位rpx | Number \| String | - | - |
-| icon-size | 左边通过`icon`参数传入的图标的大小，单位rpx | Number \| String | 34 | - |
-| center | 是否使内容垂直居中 | Boolean | false | true |
+| 参数                              | 说明                                                                                                                | 类型             | 默认值      | 可选值    |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ---------------- | ----------- | --------- |
+| title                             | 左侧标题                                                                                                            | String           | -           | -         |
+| label                             | 标题下方的描述信息  | String           | -           | -         |
+| value                             | 右侧的内容  | String           | -           | -         |
+| icon                              | 左侧图标名称，或者图片链接(本地文件建议使用绝对地址)   | String           | -           | -         |
+| titleWidth | 标题的宽度，单位任意，数值默认为rpx单位 | String \| Number           | -           | -         |
+| disabled                             | 是否禁用cell| Boolean           | false         | true       |
+| border                             | 是否显示下边框  | Boolean           | true           | false        |
+| center                     | 内容是否垂直居中(主要是针对右侧的value部分)  | Boolean          | false        | true     |
+| url                      | 点击后跳转的URL地址   | String          | -       | -      |
+| linkType                        | 链接跳转的方式，内部使用的是uView封装的route方法，可能会进行拦截操作 | String          | -        | -     |
+| clickable                      | 是否开启点击反馈(表现为点击时加上灰色背景) | Boolean           | true         | false      |
+| isLink                             | 是否展示右侧箭头并开启点击反馈      | Boolean          | true        | false     |
+| required                | 是否显示表单状态下的必填星号(此组件可能会内嵌入input组件)     | Boolean           | false       | true |
+| rightIcon                     | 右侧的图标箭头     | String           | -           | -         |
+| arrowDirection                          | 右侧箭头的方向，可选值为：left，up，down | String          | right       | left\|up\|down |
+| iconStyle                       | 左侧图标样式    | Object           | -           | -         |
+| rightIconStyle                    | 右侧箭头图标的样式  | Object           | -           | -         |
+|titleStyle                        | 标题的样式 | Object           | - | -         |
+| size                             | 单位元的大小，可选值为large   | String  | -           | -         |
+| stop              | 点击cell是否阻止事件传播  | Boolean | false       | true     |
 
 
 ### CellItem Slot
 
-| 名称          | 说明            |
-|-------------  |---------------- |
-| title | 自定义左侧标题部分的内容，如需使用，请勿定义`title`参数，或赋值`null`即可  |
-| icon | 自定义左侧的图标 |
-| right-icon | 自定义右侧图标内容，需设置`arrow`为`false`才起作用 |
-| label | 自定义`label`内容，需同时设置`use-label-slot`为`true` |
+| 名称       | 说明                                                                      |
+| ---------- | ------------------------------------------------------------------------- |
+| title      | 自定义左侧标题部分的内容，如需使用，请勿定义`title`参数，或赋值`null`即可 |
+| value      | 自定义右侧标题部分的内容，如需使用，请勿定义`value`参数，或赋值`null`即可 |
+| icon       | 自定义左侧的图标                                                          |
+| right-icon | 自定义右侧图标内容，需设置`arrow`为`false`才起作用                        |
+| label      | 自定义`label`内容  |
 
 ### CellItem Event
 
-|事件名|说明|回调参数|
-|:-|:-|:-|:-|
-| click | 点击cell列表时触发 | index: 通过`props`传递的`index`参数 |
+| 事件名 | 说明 | 回调参数 |
+| :----- | :--- | :------- |
+| click  | 点击cell列表时触发 ||
 
 
 
