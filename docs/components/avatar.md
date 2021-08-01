@@ -108,36 +108,84 @@
 
 如果头像加载失败，导致加载图片失败，将会显示一个默认的灰色头像
 
+### 头像组
+
+使用`u-avatar-group`实现头像组
+
+```html
+<template>
+    <u-avatar-group
+            :urls="urls"
+            size="35"
+            gap="0.4"
+    ></u-avatar-group>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                urls: [
+                    'https://cdn.uviewui.com/uview/album/1.jpg',
+                    'https://cdn.uviewui.com/uview/album/2.jpg',
+                    'https://cdn.uviewui.com/uview/album/3.jpg',
+                    'https://cdn.uviewui.com/uview/album/4.jpg',
+                    'https://cdn.uviewui.com/uview/album/7.jpg',
+                    'https://cdn.uviewui.com/uview/album/6.jpg',
+                    'https://cdn.uviewui.com/uview/album/5.jpg'
+                ]
+            }
+        }
+</script>
+```
+
 
 ### API
 
-### Props
+### Avatar Props
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| bg-color | 背景颜色，一般显示文字时用  | String | #ffffff | - |
-| src | 头像路径，如加载失败，将会显示默认头像  | String	 | - | - |
-| size | 头像尺寸，可以为指定字符串(large, default, mini)，或者数值，单位rpx | String \| Number  | default | - |
-| mode | 显示类型，见上方说明 | String  | circle | square |
+| src | 头像路径，如加载失败，将会显示默认头像(不能为相对路径) | String	 | - | - |
+| shape | 头像形状 | String | circle | square |
+| size | 头像尺寸，可以为指定字符串(large, default, mini)，或者数值 | String \| Number | default | - |
+| mode | 头像图片的裁剪类型，与uni的`image`组件的`mode`参数一致，如效果达不到需求，可尝试传`widthFix`值 | String  | aspectFill | - |
 | text | 用文字替代图片，级别优先于`src` | String  | - | - |
-| img-mode | 头像图片的裁剪类型，与uni的`image`组件的`mode`参数一致，如效果达不到需求，可尝试传`widthFix`值 | String  | aspectFill | - |
-| show-sex <Badge text="1.5.6" /> | 是否显示右上角的性别图标 | Boolean  | false | true |
-| sex-icon <Badge text="1.5.6" /> | 右上角性别图标，可传入图片路径，或内置图标名 | String  | man | woman |
-| sex-bg-color <Badge text="1.5.6" /> | 性别图标的背景颜色 | String  | man-primary主题，woman-error主题 | - |
-| show-level <Badge text="1.5.6" /> | 是否显示右下角的等级图标 | Boolean  | false | true |
-| level-icon <Badge text="1.5.6" /> | 右下角等级图标，可传入图片路径，或内置图标名 | String  | level | - |
-| level-bg-color <Badge text="1.5.6" /> | 等级图标的背景颜色 | String  | warning主题 | - |
+| bg-color | 背景颜色，一般显示文字时用  | String | #ffffff | - |
+| color | 文字颜色 | String  | #ffffff | - |
+| font-size | 文字大小 | String \| Number  | 18 | - |
+| icon | 显示的图标 | String  | - | - |
+| mp-avatar | 显示小程序头像，只对百度，微信，QQ小程序有效 | Boolean  | false | true |
+| random-bg-color | 是否使用随机背景色 | Boolean  | false | true |
+| default-url | 加载失败的默认头像(组件有内置默认图片) | String  | - | - |
+| color-index | 如果配置了randomBgColor为true，且配置了此值，则从默认的背景色数组中取出对应索引的颜色值，取值0-19之间 | String \| Number  | - | - |
+| name | 组件标识符 | String  | level | - |
 
 
-
-### Event
+### Avatar Event
 
 |事件名|说明|回调参数|
 |:-|:-|:-|
 | click | 头像被点击 | index: 用户传递的标识符 |
 
+### AvatarGroup Props
 
+| 参数          | 说明            | 类型            | 默认值             |  可选值   |
+|-------------  |---------------- |---------------|------------------ |-------- |
+| urls | 头像图片组 | Array	 | [] | - |
+| max-count | 最多展示的头像数量 | String \| Number | 5 | - |
+| shape | 头像形状 | String | circle | square |
+| mode | 图片裁剪模式 | String  | aspectFill | - |
+| show-more | 超出maxCount时是否显示查看更多的提示 | Boolean  | true | - |
+| size | 头像大小 | String \| Number | 40 | - |
+| key-name | 指定从数组的对象元素中读取哪个属性作为图片地址 | String  | - | - |
+| gap | 头像之间的遮挡比例（0.4代表遮挡40%） | String \| Number  | 0.5 | - |
 
+### AvatarGroup Event
+
+|事件名|说明|回调参数|
+|:-|:-|:-|
+| showMore | 头像组更多点击 | - |
 
 <style scoped>
 h3[id=props] + table thead tr th:nth-child(2){
