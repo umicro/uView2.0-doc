@@ -17,59 +17,69 @@
 
 ### 基本使用
 
-- 通过`title`和`description`设置组件的标题和描述内容，如果内容和标题同时存在，标题字体会被加粗加大
+- 通过`title`和`description`设置组件的标题和描述内容
 - 通过`type`设置主题类型，有`primary`,`success`,`error`,`warning`,`info`可选值
-
+- 通过`effect`设置主题浅或深色调，有`light`(浅色 默认),`dark`(深色)可选值
 ```html
 <template>
-	<u-alert-tips type="warning" :title="title" :description="description"></u-alert-tips>
+	<view>
+		<u-alert :title="title" type = "warning" :description = "description"></u-alert>
+		<u-alert :title="title" type = "warning" effect="dark" :description = "description"></u-alert>
+	</view>
 </template>
 
 <script>
-	export default {
-		data() {
-			title: '登高望远',
-			description: '欲穷千里目，更上一层楼'
-		}
+export default {
+	data() {
+		return {
+			title:'uView的目标是成为uni-app生态最优秀的UI框架',
+			description:'uView是uni-app生态专用的UI框架'
+		};
+	},
+	onLoad() {},
+	methods: {
 	}
+};
 </script>
 ```
 
 ### 图标
 
-通过`show-icon`设置是否显示图标，作用是让信息类型更加醒目。
+通过`showIcon`设置是否显示图标，作用是让信息类型更加醒目。
 
 **注意**：当前版本图标为uView内置图标，根据`type`参数显示不同的图标，无法自定义。
 
 ```html
-<u-alert-tips type="warning" :show-icon="true"></u-alert-tips>
+<u-alert type="warning" :show-icon="true"></u-alert>
 ```
 
 ### 可关闭的警告提示
 
 显示关闭按钮，点击可关闭警告提示。
-- `close-text`参数配置关闭的文字，默认为一个叉的icon图标。`close-able`为`true`时有效
-- `close-able`参数配置是否允许关闭的文字或图标
+- `closable`参数配置是否可关闭
 
-::: warning 注意
-由于`props`传参的限制，您需要监听组件的`close`事件，并在此此事件中设置`show`参数为`false`，才能关闭组件。
-:::
 
 ```html
 <template>
-	<u-alert-tips :show="show" type="error" @close="show = false" :title="title" :close-able="true"></u-alert-tips>
+	<view>
+		<u-alert :title="title"  type = "warning" :closable="closable" :description = "description"></u-alert>
 	
-	<u-alert-tips type="error" :title="title" close-text="close" :description="description" :close-able="true"></u-alert-tips>
+	</view>
 </template>
 
 <script>
-	export default {
-		data() {
-			title: '寻隐者不遇',
-			description: '松下问童子，言师采药去。只在此山中，云深不知处。',
-			show: true
-		}
+export default {
+	data() {
+		return {
+			title:'uView的目标是成为uni-app生态最优秀的UI框架',
+			description:'uView是uni-app生态专用的UI框架',
+			closable:true
+		};
+	},
+	onLoad() {},
+	methods: {
 	}
+};
 </script>
 ```
 
@@ -81,19 +91,15 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | title | 显示的文字  | String | - | - |
 | description | 辅助性文字，颜色比`title`浅一点，字号也小一点，可选 | String  | - | - |
-| close-able | 关闭按钮(默认为叉号icon图标) | Boolean  | false | true |
+| closable | 关闭按钮(默认为叉号icon图标) | Boolean  | false | true |
 | type | 使用预设的颜色 | String  | warning | success / primary / error / info |
-| close-text | 用文字替代关闭图标，`close-able`为`true`时有效 | String  | - | - |
-| show-icon | 是否显示左边的辅助图标 | Boolean  | false | true |
-| show | 显示或隐藏组件 | Boolean  | true | false |
-| icon <Badge text="1.5.8" /> | 左侧的图标名称，如设置`type`和`show-icon`值，会有一个默认的图标 | String  | - | - |
-| icon-style <Badge text="1.5.8" /> | 自定义图标的样式，对象形式 | Object  | - | - |
-| title-style <Badge text="1.5.8" /> | 自定义标题的样式，对象形式 | Object  | - | - |
-| desc-style <Badge text="1.5.8" /> | 自定义内容的样式，对象形式 | Object  | - | - |
+| showIcon | 是否显示左边的辅助图标 | String  | light(浅色) | dark(深色) |
+| center | 文字是否居中 | Boolean  | false | true |
+| fontSize | 字体大小 | 	Number / String  | - | - |
+
 
 ### Events
 
 |事件名|说明|回调参数|
 |:-|:-|:-|
-|close|点击关闭按钮时触发，需在此回调设置`show`为`false`|-|
 |click|点击组件时触发|-|
