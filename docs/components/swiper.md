@@ -314,7 +314,7 @@
 
 ### API
 
-### Props
+### Swiper Props
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
@@ -343,10 +343,20 @@
 | loading | 是否加载中 | Boolean | false | true |
 | show-title | 是否显示标题，要求数组对象中有title属性 | Boolean | false | - |
 
-
-### Events
+### Swiper Events
 
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
 | click | 点击轮播图时触发 | index：点击了第几张图片，从0开始 |
 | change | 轮播图切换时触发(自动或者手动切换) | index：切换到了第几张图片，从0开始 |
+
+### SwiperIndicator Props
+
+| 参数          | 说明            | 类型            | 默认值             |  可选值   |
+|-------------  |---------------- |---------------|------------------ |-------- |
+| length | 轮播的长度 | String \| Number | 0 | - |
+| current | 当前处于活动状态的轮播的索引 | String \| Number  | 0 | - |
+| indicator-active-color | 指示器非激活颜色 | String | - | - |
+| indicator-inactive-color | 指示器的激活颜色 | String  | - | - |
+| indicator-style | 指示器的形式 | String | line | dot |
+
