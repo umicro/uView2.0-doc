@@ -16,32 +16,26 @@
 
 默认情况下，模态框只有一个`确认`按钮：
 - 请至少要配置弹框的内容参数`content`。
-- 通过`v-model`绑定一个布尔变量来控制模态框的显示与否。
+- 通过`show`绑定一个布尔变量来控制模态框的显示与否。
 
 ```html
 <template>
-	<view>
-		<u-modal v-model="show" :content="content"></u-modal>
-		<u-button @click="open">
-			打开模态框
-		</u-button>
+	<view >
+		<u-modal :show="show" :title="title" :content='content'></u-modal>
+		<u-button @click="show = true">打开</u-button>
 	</view>
 </template>
-	
+
 <script>
-	export default {
-		data() {	
-			return {
-				show: false,
-				content: '东临碣石，以观沧海'
-			}
-		},
-		methods: {
-			open() {
-				this.show = true;
-			}
-		}
+export default {
+	data() {
+		return {
+			show:false,
+			title:'标题',
+			content:'uView的目标是成为uni-app生态最优秀的UI框架'
+		};
 	}
+};
 </script>
 ```
 
@@ -53,54 +47,39 @@
 
 ```html
 <template>
-	<view>
-		<u-modal v-model="show" :title-style="{color: 'red'}">
+	<view >
+		<u-modal :show="show"  :title="title" >
 			<view class="slot-content">
 				<rich-text :nodes="content"></rich-text>
 			</view>
 		</u-modal>
-		<u-button @click="open">
-			打开模态框
-		</u-button>
+		<u-button @click="show = true">打开</u-button>
 	</view>
 </template>
-	
+
 <script>
-	export default {
-		data() {	
-			return {
-				show: false,
-				content: `
-					空山新雨后<br>
-					天气晚来秋
-				`
-			}
-		},
-		methods: {
-			open() {
-				this.show = true;
-			}
-		}
+export default {
+	data() {
+		return {
+			show:false,
+			title:'标题',
+			content:`空山新雨后<br>
+					天气晚来秋`
+		};
 	}
+};
 </script>
-<style lang="scss" scoped>
-	.slot-content {
-		font-size: 28rpx;
-		color: $u-content-color;
-		padding-left: 30rpx;
-	}
-</style>
 ```
 
 ### 异步关闭
 
-异步关闭只对"确定"按钮起作用，需要设置`async-close`为`true`，当点击确定按钮的时候，按钮的文字变成一个loading动画，此动画的颜色为
-`confirm-color`参数的颜色，同时Modal不会自动关闭，需要手动设置通过`v-model`绑定的变量为`false`来实现手动关闭。
+异步关闭只对"确定"按钮起作用，需要设置`asyncClose`为`true`，当点击确定按钮的时候，按钮的文字变成一个loading动画，此动画的颜色为
+`confirm-color`参数的颜色，同时Modal不会自动关闭，需要手动设置通过`show`绑定的变量为`false`来实现手动关闭。
 
 ```html
 <template>
 	<view class="">
-		<u-modal v-model="show" @confirm="confirm" ref="uModal" :async-close="true"></u-modal>
+		<u-modal :show="show" @confirm="confirm" ref="uModal" :asyncClose="true"></u-modal>
 		<u-button @click="showModal">弹起Modal</u-button>
 	</view>
 </template>
@@ -134,28 +113,19 @@ export default {
 
 ### 点击遮罩关闭
 
-有时候我们不显示"关闭"按钮的时候，需要点击遮罩也可以关闭Modal，这时通过配置`mask-close-able`为`true`即可
+有时候我们不显示"关闭"按钮的时候，需要点击遮罩也可以关闭Modal，这时通过配置`closeOnClickOverly`为`true`即可
 
 ```html
-<u-modal v-model="show" :mask-close-able="true"></u-modal>
+<u-modal :show="show" :closeOnClickOverly="true"></u-modal>
 ```
 
 ### 控制模态框宽度
 
-可以通过设置`width`参数控制模态框的宽度，此值可以为数值(单位rpx)，百分比，`auto`等。
+可以通过设置`width`参数控制模态框的宽度，不支持百分比，可以数值，px，rpx单位
 
 
 ```html
-<u-modal v-model="show" width="70%"></u-modal>
-```
-
-
-### 自定义样式
-
-此组件有完善的自定义功能，可以配置标题，内容，按钮等样式(传入对象形式)，具体参数详见底部的API说明
-
-```html
-<u-modal v-model="show" :title-style="{color: 'red'}"></u-modal>
+<u-modal v-model="show" width="300px"></u-modal>
 ```
 
 
@@ -172,39 +142,34 @@ export default {
 
 ### Props
 
-注意：需要给`modal`组件通过`v-model`绑定一个布尔值，来初始化`modal`的状态，随后该值被双向绑定。
+注意：需要给`modal`组件通过`show`绑定一个布尔值，来初始化`modal`的状态，随后该值被双向绑定。
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| show | 是否显示模态框，请赋值给`v-model` | Boolean  | false | true |
-| z-index | 层级  | String \| Number | 1075 | - |
-| title | 标题内容  | String | 提示 | - |
-| width | 模态框宽度，数值时单位为rpx | String \| Number  | 600 | 百分比 / auto |
+| show | 是否显示模态框，请赋值给`show` | Boolean  | false | true |
+| title | 标题内容  | String | - | - |
 | content | 模态框内容，如传入`slot`内容，则此参数无效 | String  | 内容 | - |
-| show-title | 是否显示标题 | Boolean  | true | false |
-| show-confirm-button | 是否显示确认按钮 | Boolean  | true | false |
-| show-cancel-button | 是否显示取消按钮 | Boolean  | false | true |
-| confirm-text | 确认按钮的文字 | String  | 确认 | - |
-| cancel-text | 取消按钮的文字 | String  | 取消 | - |
-| cancel-color | 取消按钮的颜色 | String  | #606266 | - |
-| confirm-color | 确认按钮的颜色 | String  | #2979ff | - |
-| border-radius | 模态框圆角值，单位rpx | String \| Number  | 16 | - |
-| title-style | 自定义标题样式，对象形式 | Object  | - | - |
-| content-style | 自定义内容样式，对象形式 | Object  | - | - |
-| cancel-style | 自定义取消按钮样式，对象形式 | Object  | - | - |
-| confirm-style | 自定义确认按钮样式，对象形式 | Object  | - | - |
+| confirmText | 确认按钮的文字 | String  | 确认 | - |
+| cancelText | 取消按钮的文字 | String  | 取消 | - |
+| showConfirmButton | 是否显示确认按钮 | Boolean  | true | false |
+| showCancelButton | 是否显示取消按钮 | Boolean  | false | true |
+| confirmColor | 确认按钮的颜色 | String  | #2979ff | - |
+| cancelColor | 取消按钮的颜色 | String  | #606266 | - |
+| buttonReverse | 对调确认和取消的位置 | Boolean  | false | true |
 | zoom | 是否开启缩放模式 | Boolean  | true | false |
-| async-close | 是否异步关闭，只对确定按钮有效，见上方说明 | Boolean  | false | true |
-| mask-close-able | 是否允许点击遮罩关闭Modal | Boolean  | false | true |
-| negative-top | 往上偏移的值，以避免可能弹出的键盘重合，单位任意，数值则默认为rpx单位 <Badge text="1.4.4" />  | String \| Number | 0 | - |
-
+| asyncClose | 是否异步关闭，只对确定按钮有效，见上方说明 | Boolean  | false | true |
+| closeOnClickOverly | 是否允许点击遮罩关闭Modal | Boolean  | false | true |
+| negativeTop | 往上偏移的值，给一个负的margin-top，往上偏移，避免和键盘重合的情况，单位任意，数值则默认为rpx单位 | String \| Number | 0 | - |
+| width | modal宽度，不支持百分比，可以数值，px，rpx单位 | String \| Number  | 650px | px \| rpx |
+| confirmButtonShape | 确认按钮的样式,如设置，将不会显示取消按钮 | String | - | circle(圆形) \| square(方形)  |
 
 ### Event
 
 |事件名|说明|回调参数|
-|:-|:-|:-|:-|
+|:-|:-|:-|
 | confirm | 点击确认按钮时触发 | - |
 | cancel | 点击取消按钮时触发 | - |
+| close | 点击遮罩关闭出发，closeOnClickOverly为true有效 | - |
 
 
 ### Method

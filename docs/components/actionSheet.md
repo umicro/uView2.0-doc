@@ -13,104 +13,120 @@
 
 ### 基本使用
 
-
-- 通过`list`设置需要显示的菜单，该值为一个数组，元素为对象，对象至少要提供`text`属性，另外可选的有`fontSize`(字体大小)，`color`(颜色)，`disabled`(是否禁用，1.5.6引入)，
-`subText`(描述信息，1.6.8引入) 
-- 通过`v-model`绑定一个值为布尔值的变量控制组件的弹出与收起，`v-model`的值是双向绑定的
+- 通过`title`(设置标题)，`cancelText`(取消按钮的文字，不为空时显示按钮)，`description`(选项上方的描述信息)
+- 通过`actions`设置需要显示的菜单，该值为一个数组，元素为对象，对象至少要提供`name`属性，另外可选的有`subname`(描述)，`disabled`(是否禁用)，`loading`(加载动画)，
+`color`(字体颜色)，`fontSize`(字体大小)，
+- 通过`show`绑定一个值为布尔值的变量控制组件的弹出与收起，`show`的值是双向绑定的
 
 ```html
 <template>
 	<view>
-		<u-action-sheet :list="list" v-model="show"></u-action-sheet>
+		<u-action-sheet :actions="list" :title="title" :show="show"></u-action-sheet>
 		<u-button @click="show = true">打开ActionSheet</u-button>
 	</view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				list: [{
-					text: '点赞',
-					color: 'blue',
-					fontSize: 28,
-					subText: '感谢您的点赞'
-				}, {
-					text: '分享'
-				}, {
-					text: '评论' 
-				}],
-				show: false
-			}
-		}
-	}
-</script>
-```
-
-### 配置顶部的提示信息和底部取消按钮
-
-- `tips`参数为一个对象类型，属性可以设置`text`，`fontSize`(字体大小)，`color`(颜色)，文本内容将会显示组件的上方，起提示作用。
-- `cancel-btn`参数配置是否显示底部的取消按钮，默认显示
-
-```html
-<template>
-	<u-action-sheet :list="list" v-model="show" :tips="tips" :cancel-btn="true"></u-action-sheet>
-</template>
-
-<script>
-	export default {
-		data() {
-			return {
-				tips: {
-					text: '在水一方',
-					color: '#909399',
-					fontSize: 24
+export default {
+	data() {
+		return {
+			title:'标题',
+			list: [
+				{
+					name:'选项一',
+					subname:"选项一描述",
+					color:'#ffaa7f',
+					fontSize:'20'
 				},
-				list: [{
-					text: '点赞',
-					color: 'blue',
-					fontSize: 28
-				}],
-				show: true
-			}
-		}
+				{
+					name: '选项二禁用',
+					disabled:true
+				},
+				{
+					name: '开启load加载', //开启后文字不显示
+					loading:true
+				}
+			],
+			show: false
+		};
 	}
+};
 </script>
 ```
 
-### 如何知道点了第几项
+### 配置点击遮罩关闭和点击某个菜单项时关闭弹窗
 
-`click`回调事件带有一个`index`值，这个索引值为传递的`list`数组的索引值，根据回调事件，能获得点击了
-第几项和该项的内容
+- 通过`closeOnClickAction`参数来配置点击某个菜单项时是否关闭弹窗。
+- 通过`closeOnClickOverly`参数配置点击遮罩是否允许关闭
+
+```html
+<template>
+	<view>
+		<u-action-sheet :actions="list" :closeOnClickOverly="true" :closeOnClickAction="true"  :title="title" :show="show"></u-action-sheet>
+		<u-button @click="show = true">打开ActionSheet</u-button>
+	</view>
+</template>
+
+<script>
+export default {
+	data() {
+		return {
+			title:'标题',
+			list: [
+				{
+					name:'选项一'
+				},
+				{
+					name: '选项二'
+				}
+			],
+			show: false
+		};
+	},
+	onLoad() {},
+	methods: {
+	}
+};
+</script>
+```
+
+### 点击获取所点击选项name
+
+`select`回调事件带有一个`object`值，这个索引值为传递的`select`数组的name值，根据回调事件，能获得点击了
+该项的内容
 
 
 ```html
 <template>
-	<u-action-sheet :list="list" @click="click" v-model="show"></u-action-sheet>
+	<view>
+		<u-action-sheet :actions="list" @select="selectClick" :title="title" :show="show"></u-action-sheet>
+		<u-button @click="show = true">打开ActionSheet</u-button>
+	</view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				list: [{
-					text: '点赞',
-					color: 'blue',
-					fontSize: 28
-				}, {
-					text: '分享'
-				}, {
-					text: '评论'
-				}],
-				show: true
-			}
-		},
-		methods: {
-			click(index) {
-				console.log(`点击了第${index + 1}项，内容为：${this.list[index].text}`)
-			}
+export default {
+	data() {
+		return {
+			title:'标题',
+			list: [
+				{
+					name:'选项一'
+				},
+				{
+					name: '选项二'
+				}
+			],
+			show: false
+		};
+	},
+	onLoad() {},
+	methods: {
+		selectClick(index){
+			console.log(index)
 		}
 	}
+};
 </script>
 ```
 
@@ -119,24 +135,32 @@
 
 ### Props
 
-注意：props中没有控制组件弹出与收起的参数，因为这是通过v-model绑定变量实现的，见上方说明。
+注意：props中没有控制组件弹出与收起的参数，因为这是通过show绑定变量实现的，见上方说明。
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| list | 按钮的文字数组，见上方文档示例  | Array\<Object\>	 | [ ] | - |
-| tips | 顶部的提示文字，见上方文档示例 | Object  | - | - |
-| cancelBtn | 是否显示底部的取消按钮 | Boolean  | true | false |
-| borderRadius | 弹出部分顶部左右的圆角值，单位rpx | Number \ String  | 0 | - |
-| maskCloseAble | 点击遮罩是否可以关闭 | Boolean  | true | false |
+| actions | 按钮的文字数组，见上方文档示例  | Array\<Object\>	 | [ ] | - |
+| show | 是否展示 | Boolean  | false | - |
+| title | 设置标题 | String  | - | - |
+| description | 选项上方的描述信息，见上方文档示例 | String | - | - |
+| cancelText | 取消按钮的文字，不为空时显示按钮 | String  | - | - |
+| closeOnClickAction | 点击某个菜单项时是否关闭弹窗，见上方文档示例 | String  | - | - |
 | safeAreaInsetBottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
-| zIndex | `z-index`值 | Number \ String  | 1075 | - |
-| cancelText | 取消按钮的提示文字 | String  | 取消 | - |
+| openType | 小程序的打开方式 | Number \ String  | - | - |
+| closeOnClickOverly | 点击遮罩是否允许关闭，见上方文档示例 | String  | - | - |
+| round | 是否显示圆角 | Boolean  | false | - |
 
 
 ### Event
 
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
-| click | 点击ActionSheet列表项时触发 | index: 点击了第几个，从0开始 | - |
+| select |点击ActionSheet列表项时触发 （默认true） | index: 选项名字 | - |
 | close | 点击取消按钮时触发 | - | - |
+| getuserinfo | 用户点击该按钮时，会返回获取到的用户信息，回调的 detail 数据与 wx.getUserInfo 返回的一致，openType="getUserInfo"时有效 | detail | - |
+| contact | 客服消息回调，openType="contact"时有效 | - | - |
+| getphonenumber | 获取用户手机号回调，openType="getPhoneNumber"时有效 | - | - |
+| error | 当使用开放能力时，发生错误的回调，openType="launchApp"时有效 | - | - |
+| launchapp | 打开 APP 成功的回调，openType="launchApp"时有效 | - | - |
+| opensetting | 在打开授权设置页后回调，openType="openSetting"时有效 | - | - |
 

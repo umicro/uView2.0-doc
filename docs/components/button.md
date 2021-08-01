@@ -5,7 +5,6 @@
 
 该组件内部实现以uni-app`button`组件为基础，进行二次封装，主要区别在于：
 - 按钮`type`值有更多的主题颜色
-- 有可选的按钮点击水波纹效果
 - 按钮`size`值有更多的尺寸可选
 
 ::: warning 注意
@@ -28,60 +27,47 @@ uni-app`button`组件比较特殊，因为它有一些其他小程序平台的�
 <u-button>月落</u-button>
 ```
 
-### 设置按钮的主题
+### 设置按钮的多种形态
 
-`type`值可选的有`default`(默认)、`primary`、`success`、`info`、`warning`、`error`
-
-```html
-<u-button >默认按钮</u-button>
-<u-button type="primary">主要按钮</u-button>
-<u-button type="success">成功按钮</u-button>
-<u-button type="info">信息按钮</u-button>
-<u-button type="warning">警告按钮</u-button>
-<u-button type="error">危险按钮</u-button>
-```
-
-### 设置按钮为半圆形  
-
-`shape`默认值为`square`(按钮为圆角矩形)，设置为`circle`，则按钮两边为半圆形
+- `type`值可选的有`default`(默认)、`primary`、`success`、`info`、`warning`、`error`
+- 通过`plain`值设置是否镂空
+- 通过`hairline`值设置是否细边
+- 通过`disabled`值设置是否禁用
+- 通过`loading`值设置是否开启加载图标，`loadingText`设置加载中文字
+- 通过`icon`值设置是否显示图标
+- 通过`shape`值设置按钮形状，circle为圆角
+- 通过`color`值设置按钮渐变颜色
+- 通过`size`值设置按钮的大小
 
 ```html
-<u-button shape="square">乌啼</u-button>
+<template>
+	<view style="padding: 20px;">
+		<u-button type="primary">确定</u-button>
+		<u-button type="primary" :plain="true">镂空</u-button>
+		<u-button type="primary" :plain="true" :hairline="true">细边</u-button>
+		<u-button type="primary" :disabled="disabled">禁用</u-button>
+		<u-button type="primary" loading="true" loadingText="加载中"></u-button>
+		<u-button type="primary" icon="map">图标按钮</u-button>
+		<u-button type="primary" shape="circle">按钮形状</u-button>
+		<u-button text="渐变色按钮" color="linear-gradient(to right, rgb(66, 83, 216), rgb(213, 51, 186))"></u-button>
+		<u-button type="primary" size="small">大小尺寸</u-button>
+	</view>
+</template>
+
+<script>
+export default {
+	data() {
+		return {
+			disabled: true
+		};
+	}
+};
+</script>
 ```
 
-### 设置尺寸
 
-`button`组件的`size`（可选值为`default`(默认)，`mini`(小尺寸)和`medium`(中等尺寸)）
 
-```html
-<u-button size="default">江湖</u-button>
-<u-button size="medium">夜雨</u-button>
-<u-button size="mini">十年灯</u-button>
-```
-
-### 设置按钮的镂空状态
-
-镂空状态按钮背景为白色，边框和文字同色，通过`plain`来设置
-
-```html
-<u-button plain>披荆</u-button>
-
-<!-- 或者显式设置为true -->
-<u-button :plain="true">斩棘</u-button>
-```
-
-### 设置点击按钮的水波纹效果
-
-该效果通过给按钮绝对定位形式覆盖一个`view`，点击时改变`view`的`scale`，`opacity`样式属性，形成扩散再消失的水波纹效果。
-
-```html
-<u-button :ripple="true">十年</u-button>
-
-<!-- 通过rippleBgColor设置水波纹的背景颜色 -->
-<u-button :ripple="true" ripple-bg-color="#909399">之约</u-button>
-```
-
-### 如何修改按钮的样式
+### 定义需要用到的外部样式
 
 1. 针对非微信小程序平台，组件的根元素就是uni-app`button`组件，所以修改按钮的样式很容易，直接给组件定义`类名`或者嵌入`内联样式`即可。  
 2. 如果是微信小程序，编译后页面会有组件同名的元素存在，导致样式传递有问题。 
@@ -90,26 +76,33 @@ uni-app`button`组件比较特殊，因为它有一些其他小程序平台的�
 所以：我们提供了一个`custom-style`参数，推荐用户可以用对象形式传递样式给组件内部，注意驼峰命名。
 
 ```html
-/* 以下形式在微信小程序会无效，APP和H5有效 */
-<u-button class="custom-style">雪月夜</u-button>
+<template>
+	<view style="padding: 20px;">
+		 <!-- 以下形式在微信小程序会无效，APP和H5有效  -->
+		<u-button class="custom-style">雪月夜</u-button>
+	</view>
+</template>
 
-<style scoped>
+<script>
+export default {
+	data() {
+		return {
+			disabled: true,
+			customStyle: {
+				marginTop: '20px', // 注意驼峰命名，并且值必须用引号包括，因为这是对象
+				color: 'red'
+			}
+		};
+	}
+};
+</script>
+
+<style lang="scss" scoped>
 	.custom-style {
-		color: #606266;
+		color: #ff0000;
 		width: 400rpx;
 	}
 </style>
-
-
-/* 推荐如下 */
-<u-button :custom-style="customStyle">雪月夜</u-button>
-
-<script>
-	customStyle: {
-		marginTop: '20px', // 注意驼峰命名，并且值必须用引号包括，因为这是对象
-		color: 'red'
-	}
-</script>
 ```
 
 
@@ -124,30 +117,34 @@ uView已对接uni-app档关于[uni-app方button组件](https://uni-app.dcloud.io
 
 |属性名|说明|类型|默认值|可选值|平台差异说明|
 |:-|:-|:-|:-|:-|:-|
-|size|按钮的大小|String|default|medium / mini|-|
-|ripple|是否开启点击水波纹效果|Boolean|false|true|-|
-|ripple-bg-color|水波纹的背景色，ripple为true时有效|String|rgba(0, 0, 0, 0.15)|-|-|
+|hairline|是否显示按钮的细边框|Boolean|true|false|-|
 |type|按钮的样式类型|String|default|primary / success / info/ warning / error|-|
+|size|按钮的大小|String|default|medium / mini|-|
+|shape|按钮外观形状，见上方说明|String|square|circle/|-|
 |plain|按钮是否镂空，背景色透明|Boolean|false|true|-|
 |disabled|是否禁用|Boolean|false|true|-|
-|hair-line|是否显示按钮的细边框|Boolean|true|false|-|
-|shape|按钮外观形状，见上方说明|String|square|circle|-|
 |loading|按钮名称前是否带 loading 图标|Boolean|false|true|App-nvue 平台，在 ios 上为雪花，Android上为圆圈|
-|form-type|用于 `<form>` 组件，点击分别会触发 `<form>` 组件的 submit/reset 事件|String|-|submit / reset|-|
-|open-type|开放能力|String|请参考uni-app方文档|-|-|
-|hover-class|指定按钮按下去的样式类。当 hover-class="none" 时，没有点击态效果|String|button-hover|-|App-nvue 平台暂不支持|
-|hover-start-time|按住后多久出现点击态，单位毫秒|String \| Number|20|-|-|
-|hover-stay-time|手指松开后点击态保留时间，单位毫秒|String \| Number|150|-|-|
-|custom-style|对按钮的自定义样式，对象形式，见上方说明|Object|-|-|-|
-|app-parameter|打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效|Boolean|false|true|微信小程序、QQ小程序|
-|hover-stop-propagation|指定是否阻止本节点的祖先节点出现点击态|Boolean|false|true|微信小程序|
-|lang|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文|String|en|zh_CN \ zh_TW  |微信小程序|
-|session-from|会话来源，open-type="contact"时有效|String|-|-|微信小程序|
-|send-message-title|会话内消息卡片标题，open-type="contact"时有效|String|当前标题|-|微信小程序|
-|send-message-path|会话内消息卡片点击跳转小程序路径，open-type="contact"时有效	|String|当前分享路径|-|微信小程序|
-|send-message-img|会话内消息卡片图片，open-type="contact"时有效	|String|当前页面截图|-|微信小程序|
-|show-message-card|是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，用户点击后可以快速发送小程序消息，open-type="contact"时有效|String|-|-|微信小程序|
-|throttle-time <Badge text="1.5.8" />| 节流的时间间隔(一定时间内无论点击多少次，只会触发一次`click`事件)，单位ms，详见[节流防抖](/js/debounce.html) |String \| Number |500|-|-|
+|loadingText|加载中提示文字|String|-|-|-|
+|loadingMode|加载状态图标类型|String|spinner|-|-|
+|loadingSize|加载图标大小|String / Number|16|-|-|
+|openType|开放能力，具体请看uniapp稳定关于button组件部分说明|String|-|-|-|
+|formType|用于 <form> 组件，点击分别会触发 <form> 组件的 submit/reset 事件|String|-|-|-|
+|appParameter|打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效 （注：只微信小程序、QQ小程序有效）|String|-|-|-|
+|hoverStopPropagation|指定是否阻止本节点的祖先节点出现点击态，微信小程序有效（默认 true）|Boolean|default|medium / mini|-|
+|lang|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文|String|-|-|-|
+|sessionFrom|会话来源，openType="contact"时有效|String|-|-|-|
+|sendMessageTitle|会话内消息卡片标题，openType="contact"时有效|String|-|-|-|
+|sendMessagePath|会话内消息卡片点击跳转小程序路径，openType="contact"时有效|String|-|-|-|
+|sendMessageImg|会话内消息卡片图片，openType="contact"时有效|String|-|-|-|
+|showMessageCard|是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，用户点击后可以快速发送小程序消息，openType="contact"时有效（默认false）|String|-|-|-|
+|dataName|额外传参参数，用于小程序的data-xxx属性，通过target.dataset.name获取|String|-|-|-|
+|throttleTime|节流，一定时间内只能触发一次|String | Number|-|-|-|
+|hoverStartTime|按住后多久出现点击态，单位毫秒|String | Number|-|-|-|
+|hoverStayTime|手指松开后点击态保留时间，单位毫秒|String | Number|-|-|-|
+|text|按钮文字，之所以通过props传入，是因为slot传入的话（注：nvue中无法控制文字的样式）|String | Number|-|-|-|
+|icon|按钮图标|String|-|-|-|
+|color|按钮颜色，支持传入linear-gradient渐变色|String|-|-|-|
+|customStyle|定义需要用到的外部样式,详细见上方文档|Object|-|-|-|
 
 
 ### Events

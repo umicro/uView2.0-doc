@@ -57,27 +57,27 @@ export default {
 
 ### 自定义返回顶部的图标和提示
 
-- 通过`icon`修改返回顶部按钮的图标，可以是uView内置的图标，或者图片路径(需要1.3.0及以上版本)
-- 通过`tips`参数修改返回顶部按钮的文字提示信息，如果需要修改文字的颜色和大小，可以通过`custom-style`参数
+- 通过`icon`修改返回顶部按钮的图标，可以是uView内置的图标，或者图片路径
+- 通过`text`参数修改返回顶部按钮的文字提示信息，如果需要修改文字的颜色和大小，可以通过`customStyle`参数
 
 ```html
-<u-back-top :scroll-top="scrollTop" icon="arrow-up" tips="返回"></u-back-top>
+<u-back-top :scroll-top="scrollTop" icon="arrow-up" text="返回"></u-back-top>
 ```
 
 
 ### 其他自定义样式
 
-- 通过`icon-style`参数自定义图标的样式，比如颜色，大小等
-- 通过`custom-style`修改返回按钮的背景颜色，大小等
+- 通过`iconStyle`参数自定义图标的样式，比如颜色，大小等
+- 通过`customStyle`修改返回按钮的背景颜色，大小等
 - 通过`mode`修改按钮的形状，`circle`为圆形，`square`为方形
 
-注意：如果通过`icon`参数传入图片路径的话，需要通过`icon-style`参数设置图片的`width`和`height`属性
+注意：如果通过`icon`参数传入图片路径的话，需要通过`iconStyle`参数设置图片的`width`和`height`属性
 
 ```html
 <template>
 	<view class="wrap">
 		<text>滑动页面，返回顶部按钮将出现在右下角</text>
-		<u-back-top :scrollTop="scrollTop" :mode="mode" :icon-style="iconStyle"></u-back-top>
+		<u-back-top :scrollTop="scrollTop" :mode="mode" :iconStyle="iconStyle"></u-back-top>
 	</view>
 </template>
 
@@ -116,15 +116,15 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | mode | 按钮形状 | String | circle | square |
 | icon | uView内置图标名称，或图片路径 | String  | arrow-upward | - |
-| tips | 返回顶部按钮的提示文字 | String  | - | - |
+| text | 返回顶部按钮的提示文字 | String  | - | - |
 | duration | 返回顶部过程中的过渡时间，单位ms | String \| Number  | 100 | - |
-| scroll-top | 页面的滚动距离，通过`onPageScroll`生命周期获取 | String \| Number  | 0 | - |
+| scrollTop | 页面的滚动距离，通过`onPageScroll`生命周期获取 | String \| Number  | 0 | - |
 | top | 滚动条滑动多少距离时显示，单位rpx | String \| Number  | 400 | - |
 | bottom | 返回按钮位置到屏幕底部的距离，单位rpx | String \| Number  | 200 | - |
 | right | 返回按钮位置到屏幕右边的距离，单位rpx | String \| Number  | 40 | - |
 | z-index | 返回顶部按钮的层级 | String \| Number  | 9 | - |
-| icon-style | 图标的样式，对象形式 | Object  | - | - |
-| custom-style | 按钮外层的自定义样式 | Object  | - | - |
+| iconStyle | 图标的样式，对象形式 | Object  | - | - |
+| customStyle | 按钮外层的自定义样式 | Object  | - | - |
 
 
 
