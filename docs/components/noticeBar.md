@@ -79,13 +79,13 @@
 | icon | 是否显示左侧的音量图标 | String | volume | - |
 | mode | 通告模式，link-显示右箭头，closable-显示右侧关闭图标 | String | - | link / closable |
 | color | 文字颜色 | String | - | #f9ae3d |
-| bg-color | 背景颜色 | String | #fdf6ec | - |
+| bgColor | 背景颜色 | String | #fdf6ec | - |
 | speed | 水平滚动时的滚动速度，即每秒滚动多少px(rpx)，这有利于控制文字无论多少时，都能有一个恒定的速度 | Number / String | 80 | - |
-| font-size | 字体大小 | Number / String | 14 | - |
+| fontSize | 字体大小 | Number / String | 14 | - |
 | duration | 滚动一个周期的时间长，单位ms | Number / String | 2000 | - |
-| disable-touch | 是否禁止用手滑动切换（目前HX2.6.11，只支持App 2.5.5+、H5 2.5.5+、支付宝小程序、字节跳动小程序） | Boolean | true | false |
+| disableTouch | 是否禁止用手滑动切换（目前HX2.6.11，只支持App 2.5.5+、H5 2.5.5+、支付宝小程序、字节跳动小程序） | Boolean | true | false |
 | url | 跳转的页面路径 | String | - | - |
-| link-type | 页面跳转的类型 | String | navigateTo | - |
+| linkType | 页面跳转的类型 | String | navigateTo | - |
 
 
 ### Events

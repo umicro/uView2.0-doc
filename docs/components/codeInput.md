@@ -123,11 +123,11 @@ uView有[键盘](/components/keyboard.html)组件，如果您想结合键盘组�
 | value | 预置值 | String \ Number | - | - |
 | focus | 是否自动获取焦点 | Boolean | false | false |
 | bold | 字体和输入横线是否加粗 | Boolean | true | true |
-| font-size | 字体大小，单位rpx | String \ Number | 18 | - |
+| fontSize | 字体大小，单位rpx | String \ Number | 18 | - |
 | size | 输入框的大小，宽等于高 | String \ Number | 35 | - |
-| disabled-keyboard | 禁止点击输入框唤起系统键盘 | Boolean  | false | true |
+| disabledKeyboard | 禁止点击输入框唤起系统键盘 | Boolean  | false | true |
 | color | 字体颜色 | String  | #606266 | - |
-| border-color | 边框和线条颜色 | String  | #c9cacc | - |
+| borderColor | 边框和线条颜色 | String  | #c9cacc | - |
 
 ### Events
 

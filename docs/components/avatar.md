@@ -173,12 +173,12 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | urls | 头像图片组 | Array	 | [] | - |
-| max-count | 最多展示的头像数量 | String \| Number | 5 | - |
+| maxCount | 最多展示的头像数量 | String \| Number | 5 | - |
 | shape | 头像形状 | String | circle | square |
 | mode | 图片裁剪模式 | String  | aspectFill | - |
-| show-more | 超出maxCount时是否显示查看更多的提示 | Boolean  | true | - |
+| showMore | 超出maxCount时是否显示查看更多的提示 | Boolean  | true | - |
 | size | 头像大小 | String \| Number | 40 | - |
-| key-name | 指定从数组的对象元素中读取哪个属性作为图片地址 | String  | - | - |
+| keyName | 指定从数组的对象元素中读取哪个属性作为图片地址 | String  | - | - |
 | gap | 头像之间的遮挡比例（0.4代表遮挡40%） | String \| Number  | 0.5 | - |
 
 ### AvatarGroup Event

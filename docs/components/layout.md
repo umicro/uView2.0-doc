@@ -275,7 +275,7 @@
 | offset | 分栏左边偏移，计算方式与`span`相同  | String \| Number | 0 | - |
 | justify | 水平排列方式  | String | start | `start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`) |
 | align | 垂直对齐方式  | String | stretch | `top`、`center`、`bottom`、`stretch` |
-| text-align | 文字水平对齐方式  | String | left | center / right | 
+| textAlign | 文字水平对齐方式  | String | left | center / right | 
 
 
 ### Row Events

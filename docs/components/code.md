@@ -121,11 +121,11 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | seconds | 倒计时所需的秒数  | Number \| String | 60 | - |
-| start-text | 开始前的提示语，见上方说明  | String | 获取验证码 | - |
-| change-text | 倒计时期间的提示语，必须带有字母"x"，见上方说明 | String  | X秒重新获取 | - |
-| end-text | 倒计结束的提示语，见上方说明 | String  | 重新获取 | - |
-| keep-running | 是否在H5刷新或各端返回再进入时继续倒计时 | Boolean  | false | true |
-| unique-key | 多个组件之间继续倒计时的区分`key`，见上方说明 | String  | - | - |
+| startText | 开始前的提示语，见上方说明  | String | 获取验证码 | - |
+| changeText | 倒计时期间的提示语，必须带有字母"x"，见上方说明 | String  | X秒重新获取 | - |
+| endText | 倒计结束的提示语，见上方说明 | String  | 重新获取 | - |
+| keepRunning | 是否在H5刷新或各端返回再进入时继续倒计时 | Boolean  | false | true |
+| uniqueKey | 多个组件之间继续倒计时的区分`key`，见上方说明 | String  | - | - |
 
 
 ### Methods

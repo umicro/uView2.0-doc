@@ -129,9 +129,9 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| dest-width | 输出图片宽度，高等于宽，单位**px**  | String \| Number | 200 | - |
-| rect-width | 裁剪框宽度，高等于宽，单位**px**  | String \| Number | 200 | - |
-| file-type | 输出的图片类型，如果'png'类型发现裁剪的图片太大，改成"jpg"即可  | String | jpg | png |
+| destWidth | 输出图片宽度，高等于宽，单位**px**  | String \| Number | 200 | - |
+| rectWidth | 裁剪框宽度，高等于宽，单位**px**  | String \| Number | 200 | - |
+| fileType | 输出的图片类型，如果'png'类型发现裁剪的图片太大，改成"jpg"即可  | String | jpg | png |
 
 
 ### Event

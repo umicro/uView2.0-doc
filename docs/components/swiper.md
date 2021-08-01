@@ -320,28 +320,28 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | list | 轮播图数据，见上方"基本使用"说明 | Array | - | - |
 | indicator | 是否显示面板指示器 | Boolean  | false | true |
-| indicator-active-color | 指示器非激活颜色 | String | #FFFFFF | - |
-| indicator-inactive-color | 指示器的激活颜色 | String  | rgba(255, 255, 255, 0.35) | - |
-| indicator-style | 指示器样式，可通过bottom，left，right进行定位 | String \| Object | - | - |
-| indicator-mode | 指示器模式 | String | line | dot |
+| indicatorActiveColor | 指示器非激活颜色 | String | #FFFFFF | - |
+| indicatorInactiveColor | 指示器的激活颜色 | String  | rgba(255, 255, 255, 0.35) | - |
+| indicatorStyle | 指示器样式，可通过bottom，left，right进行定位 | String \| Object | - | - |
+| indicatorMode | 指示器模式 | String | line | dot |
 | autoplay | 是否自动切换 | Boolean | true | false |
 | current | 当前所在滑块的 index | Number \| String  | 0 | - |
-| current-item-id | 当前所在滑块的 item-id ，不能与 current 被同时指定 | String | - | - |
+| currentItemId | 当前所在滑块的 item-id ，不能与 current 被同时指定 | String | - | - |
 | interval | 滑块自动切换时间间隔（ms） | String \| Number | 3000 | - |
 | duration | 滑块切换过程所需时间（ms） | String \| Number | 300 | - |
 | circular | 播放到末尾后是否重新回到开头 | Boolean | false | true |
-| previous-margin | 前边距，可用于露出前一项的一小部分，nvue和支付宝不支持 | String \| Number | 0 | - |
-| next-margin | 后边距，可用于露出后一项的一小部分，nvue和支付宝不支持 | String \| Number | 0 | - |
+| previousMargin | 前边距，可用于露出前一项的一小部分，nvue和支付宝不支持 | String \| Number | 0 | - |
+| nextMargin | 后边距，可用于露出后一项的一小部分，nvue和支付宝不支持 | String \| Number | 0 | - |
 | acceleration | 当开启时，会根据滑动速度，连续滑动多屏，支付宝不支持 | Boolean | false | true |
-| display-multiple-items | 同时显示的滑块数量，nvue、支付宝小程序不支持 | Number | 1 | - |
-| easing-function | 指定swiper切换缓动动画类型， 只对微信小程序有效 | String | default | linear、easeInCubic、easeOutCubic、easeInOutCubic |
-| key-name | list数组中指定对象的目标属性名 | String | url | - |
-| img-mode | 图片的裁剪模式 | String | aspectFill | 详见图片裁剪 |
+| displayMultipleItems | 同时显示的滑块数量，nvue、支付宝小程序不支持 | Number | 1 | - |
+| easingFunction | 指定swiper切换缓动动画类型， 只对微信小程序有效 | String | default | linear、easeInCubic、easeOutCubic、easeInOutCubic |
+| keyName | list数组中指定对象的目标属性名 | String | url | - |
+| imgMode | 图片的裁剪模式 | String | aspectFill | 详见图片裁剪 |
 | height | 组件高度 | String \| Number | 130 | - |
-| bg-color | 背景颜色 | String | #f3f4f6 | - |
+| bgColor | 背景颜色 | String | #f3f4f6 | - |
 | radius | 组件圆角，数值或带单位的字符串 | String \| Number | 4 | - |
 | loading | 是否加载中 | Boolean | false | true |
-| show-title | 是否显示标题，要求数组对象中有title属性 | Boolean | false | - |
+| showTitle | 是否显示标题，要求数组对象中有title属性 | Boolean | false | - |
 
 ### Swiper Events
 
@@ -356,7 +356,7 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | length | 轮播的长度 | String \| Number | 0 | - |
 | current | 当前处于活动状态的轮播的索引 | String \| Number  | 0 | - |
-| indicator-active-color | 指示器非激活颜色 | String | - | - |
-| indicator-inactive-color | 指示器的激活颜色 | String  | - | - |
-| indicator-style | 指示器的形式 | String | line | dot |
+| indicatorActiveColor | 指示器非激活颜色 | String | - | - |
+| indicatorInactiveColor | 指示器的激活颜色 | String  | - | - |
+| indicatorStyle | 指示器的形式 | String | line | dot |
 

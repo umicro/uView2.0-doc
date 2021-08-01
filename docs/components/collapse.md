@@ -255,7 +255,7 @@
 | title | 头部的内容 |
 | icon | icon |
 | value | 右侧value |
-| right-icon | 右侧icon |
+| rightIcon | 右侧icon |
 
 
 <style scoped>
