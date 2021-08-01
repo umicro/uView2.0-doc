@@ -38,9 +38,9 @@
 </script>
 ```
 
-### 头像类型
+### 头像形状
 
-- `mode`参数指定头像的类型，取值`circle`为圆形，取值`square`为圆角方形
+- `mode`参数指定头像的形状，取值`circle`为圆形，取值`square`为圆角方形
 
 ```html
 <template>
@@ -56,6 +56,52 @@
 		}
 	}
 </script>
+```
+
+### 图标头像
+
+- `icon`参数指定头像的图标，图标可参考`icon`组件
+
+```html
+<view class="u-demo-block__content">
+    <view class="u-avatar-item">
+        <u-avatar
+                icon="red-packet-fill"
+                fontSize="22"
+        ></u-avatar>
+    </view>
+    <view class="u-avatar-item">
+        <u-avatar
+                icon="star-fill"
+                fontSize="22"
+        ></u-avatar>
+    </view>
+</view>
+
+<style lang="scss">
+    .u-demo-block__content {
+        @include flex;
+        align-items: center;
+    }
+
+    .u-avatar-item {
+        margin-right: 30px;
+    }
+</style>
+```
+
+### 文字头像（自动背景色）
+
+- `randomBgColor`参数开启头像的自动背景色
+
+```html
+<template>
+    <u-avatar
+            text="北"
+            fontSize="18"
+            randomBgColor
+    ></u-avatar>
+</template>
 ```
 
 ### 默认头像
