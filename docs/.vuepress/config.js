@@ -129,6 +129,7 @@ module.exports = {
                         '/components/radio',
                         '/components/switch',
                         '/components/slider',
+                        '/components/album',
                     ]
                 },
                 {
@@ -332,6 +333,7 @@ module.exports = {
             '/components/divider',
             '/components/tag',
             '/components/slider',
+            '/components/album',
             '/components/keyboard',
             '/components/picker',
             '/components/rate',
