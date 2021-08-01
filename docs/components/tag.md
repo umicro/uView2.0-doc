@@ -183,13 +183,20 @@ icon="https://cdn.uviewui.com/uview/example/tag.png"></u-tag>
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | type | 主题类型  | String	 | primary | success / info / warning / error |
-| size | 标签大小  | String	 | default | mini |
+| disabled | 不可用  | Boolean \| String | false | - |
+| size | 标签大小  | String | medium | large、mini |
 | shape | 标签形状 | String | square | circle  |
-| text | 标签的文字内容 | String | - | - |
-| color | 文字的颜色 | String  | - | - |
-| index | 点击标签时，会通过`click`事件返回该值  | String \| Number | - | - |
+| text | 标签的文字内容 | String \| Number | - | - |
+| bg-color | 背景颜色，默认为空字符串，即不处理 | String  | - | - |
+| color | 标签字体颜色，默认为空字符串，即不处理 | String  | - | - |
+| border-color | 镂空形式标签的边框颜色 | String  | - | - |
+| close-color | 关闭按钮图标的颜色 | String  | - | - |
+| name | 点击时返回的索引值，用于区分例遍的数组哪个元素被点击了 | String \| Number | - | - |
+| plain-fill | 镂空时是否填充背景色 | Boolean | false | true |
+| plain | 是否镂空 | Boolean | false | true |
 | closeable | 是否可关闭，设置为`true`，文字右边会出现一个关闭图标  | Boolean | false | true |
 | show | 标签显示与否  | Boolean | true | false |
+| icon | 内置图标，或绝对路径的图片  | String | - | - |
 
 ### Event
 
