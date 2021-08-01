@@ -218,7 +218,7 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | time | 倒计时时长，单位ms | String \| Number | 0 | - |
 | format | 时间格式，DD-日，HH-时，mm-分，ss-秒，SSS-毫秒 | String | HH:mm:ss | - |
-| autoStart | 是否自动开始倒计时 | Boolean  | true | false |
+| auto-start | 是否自动开始倒计时 | Boolean  | true | false |
 | millisecond | 是否展示毫秒倒计时 | Boolean | false | true |
 
 ### Events

@@ -127,7 +127,7 @@ uView有[键盘](/components/keyboard.html)组件，如果您想结合键盘组�
 | size | 输入框的大小，宽等于高 | String \ Number | 35 | - |
 | disabled-keyboard | 禁止点击输入框唤起系统键盘 | Boolean  | false | true |
 | color | 字体颜色 | String  | #606266 | - |
-| borderColor | 边框和线条颜色 | String  | #c9cacc | - |
+| border-color | 边框和线条颜色 | String  | #c9cacc | - |
 
 ### Events
 
