@@ -3,7 +3,7 @@
 <demo-model url="/pages/componentsA/toast/index"></demo-model>
 
 
-Toast 组件主要用于消息通知、加载提示、操作结果提示等醒目提示效果，我们为其提供了七种丰富的API。
+Toast 组件主要用于消息通知、加载提示、操作结果提示等醒目提示效果，我们为其提供了多种丰富的API。
 
 :::warning 注意：
 由于uni中无法通过js创建元素，所以需要在页面中调用`<toast />`组件，再通过`ref`开启
@@ -133,21 +133,25 @@ Toast 组件主要用于消息通知、加载提示、操作结果提示等醒�
 |-----------|-----------|----------|----------|---------|
 | z-index | toast展示时的`z-index`值  | String \| Number | 10090 | - |
 
+
 ### Params
 
 这些参数为通过`ref`调用`<toast/>`组件内部的`show`方法时，需要传递参数
 
 | 参数      | 说明        | 类型     |  默认值  |  可选值   |
 |-----------|-----------|----------|----------|---------|
-| message | 显示的文本  | String | - | - |
-| type | 主题类型，不填默认为`default` | String  | default | primary / success / error / warning / info |
-| duration | toast的持续时间，单位ms | Nubmer  | 2000 | - |
-| url | toast结束跳转的url，不填不跳转，优先级高于`back`参数 | String  | - | - |
-| icon | 是否显示显示`type`对应的图标，为`false`不显示图标 | Boolean  | true | false |
-| position | toast出现的位置 | String  | center | top / bottom |
-| callback <Badge text="1.3.6" /> | toast结束后执行的回调方法 | Function  | - | - |
-| isTab | toast结束后，跳转tab页面时需要配置为`true` | Boolean  | false | true |
-| back <Badge text="1.4.0" /> | toast结束后，是否返回上一页，优先级低于`url`参数 | Boolean  | false | true |
+| loading | 是否加载中 | Boolean | false | true |
+| text | 显示的文本  | String \| Number | - | - |
+| icon | 图标，或者绝对路径的图片 | String | - | - |
+| type | 主题类型 | String | - | - |
+| overlay | 是否显示透明遮罩，防止点击穿透 | Boolean | false | true |
+| position | 位置 | String | center | top / bottom |
+| params | 跳转的参数 | Object | - | - |
+| duration | 展示时间，单位ms | String \| Number | 2000 | - |
+| isTab | 是否返回的为tab页面 | Boolean | false | - |
+| url | toast消失后是否跳转页面，有则跳转，优先级高于back参数 | String | - | - |
+| callback | 执行完后的回调函数 | Function | null | - |
+| back | 结束toast是否自动返回上一页 | Boolean | false | true |
 
 ### Methods
 
