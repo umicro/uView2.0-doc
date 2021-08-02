@@ -4,7 +4,6 @@
 
 
 该组件用于上传图片场景
-<!-- https://api.aeshanvip.com/upload -->
 ### 平台差异说明
 
 |App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
@@ -43,7 +42,6 @@
 			},
 			// 新增图片
 			async afterRead(event) {
-				console.log(event)
 				// 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
 				let lists = [].concat(event.file)
 				let fileListLen = this[`fileList${event.name}`].length
@@ -75,13 +73,9 @@
 							user: 'test'
 						},
 						success: (res) => {
-							console.log(res)
 							setTimeout(() => {
 								resolve(res.data.data)
 							}, 1000)
-						},
-						fail:(err)=>{
-							console.log(err)
 						}
 					});
 				})
@@ -105,7 +99,7 @@
 	:maxCount="10"
 	accept="video"
 ></u-upload>
-<!-- data -->
+<!-- data 方法请参考 基本用法 -->
 data(){
 	return{
 		fileList2: [],
@@ -126,7 +120,7 @@ data(){
 	:maxCount="10"
 	:previewFullImage="true"
 ></u-upload>
-<!-- data -->
+<!-- data 方法请参考 基本用法 -->
 data(){
 	return{
 		fileList3: [{
@@ -148,7 +142,7 @@ data(){
 	multiple
 	:maxCount="2"
 ></u-upload>
-<!-- data -->
+<!-- data 方法请参考 基本用法 -->
 data(){
 	return{
 		fileList4: [{
@@ -174,7 +168,7 @@ data(){
 	multiple
 	:maxCount="3"
 ></u-upload>
-<!-- data -->
+<!-- data 方法请参考 基本用法 -->
 data(){
 	return{
 		fileList5: [],
@@ -199,7 +193,7 @@ data(){
 	<image src="https://cdn.uviewui.com/uview/demo/upload/positive.png" 
 	mode="widthFix" style="width: 250px;height: 150px;"></image>
 </u-upload>
-<!-- data -->
+<!-- data 方法请参考 基本用法 -->
 data(){
 	return{
 		fileList6: [],
@@ -214,36 +208,26 @@ data(){
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| action | 服务器上传地址  | String | - | - |
+| accept | 接受的文件类型 | String | image | all media image file video |
+| capture | 图片或视频拾取模式，当accept为image类型时设置capture可选额外camera可以直接调起摄像头 | String \| Array | image | - |
+| compressed | 当accept为video时生效，是否压缩视频，默认为true | Boolean | true | false |
+| camera | 当accept为video时生效，可选值为back或front | String | - | - |
+| max-duration | 当accept为video时生效，拍摄视频最长拍摄时间，单位秒 | Boolean | false | true |
+| upload-icon | 上传区域的图标，只能内置图标 | String  | - | - |
+| use-before-read | 是否启用(显示/隐藏)组件 | Boolean  | false | true |
+| preview-full-image | previewFullImage | Boolean  | false | true |
 | max-count | 最大选择图片的数量 | String \| Number | 99 | - |
-| width | 图片预览区域和添加图片按钮的宽度，单位rpx，不能是百分比，或者`auto` | String \| Number | 200 | - |
-| height <Badge text="1.6.4" /> | 图片预览区域和添加图片按钮的高度，单位rpx，不能是百分比，或者`auto` | String \| Number | 200 | - |
-| custom-btn | 如果需要自定义选择图片的按钮，设置为`true` | Boolean | false | true |
-| show-progress | 是否显示进度条 | Boolean  | true | false |
 | disabled | 是否启用(显示/隐藏)组件 | Boolean  | false | true |
-| image-mode | 预览图片等显示模式，可选值为uni的image的`mode`属性值 | String  | aspectFill | - |
-| header | 上传携带的头信息，对象形式 | Object | {} | - |
-| form-data | 上传额外携带的参数 | Object | {} | - |
-| name | 上传文件的字段名，供后端获取使用 | String  | file | - |
+| image-mode |  预览上传的图片时的裁剪模式，和image组件mode属性一致 | String  | - | - |
+| name | 标识符，可以在回调函数的第二项参数中获取 | String  | file | - |
 | size-type | original 原图，compressed 压缩图，默认二者都有，H5无效 | Array\<String\>  | ['original', 'compressed'] | - |
-| source-type | 选择图片的来源，album-从相册选图，camera-使用相机，默认二者都有 | Array\<String\>  | ['album', 'camera'] | - |
-| preview-full-image | 是否可以通过`uni.previewImage`预览已选择的图片 | Boolean  | true | false |
 | multiple | 是否开启图片多选，部分安卓机型不支持  | Boolean  | true | false |
 | deletable | 是否显示删除图片的按钮 | Boolean  | true | false |
 | max-size | 选择单个文件的最大大小，单位B(byte)，默认不限制 | String \| Number  | Number.MAX_VALUE | - |
-| fileList | 默认显示的图片列表，数组元素为对象，必须提供`url`属性 | Array\<Object\>  | - | - |
-| upload-text | 选择图片按钮的提示文字 | String  | 选择图片 | - |
-| auto-upload | 选择完图片是否自动上传，见上方说明 | Boolean  | true | false |
-| show-tips | 特殊情况下是否自动提示toast，见上方说明 | Boolean  | true | false |
-| show-upload-list | 是否显示组件内部的图片预览 | Boolean  | true | false |
-| del-icon | 右上角删除图标名称，只能为uView内置图标 | String  | close | - |
-| del-bg-color | 右上角关闭按钮的背景颜色 | String  | #fa3534 | - |
-| del-color | 右上角关闭按钮图标的颜色 | String  | #ffffff | - |
-| to-json <Badge text="1.3.7" /> | 如果上传后服务端返回的值为`json`字符串的话，是否自动转为`json` | Boolean | true  | false |
-| before-upload <Badge text="1.3.7" /> | 每个文件上传前触发的钩子回调函数，见上方说明，注意不要加括号 | Function | - | - |
-| limitType <Badge text="1.5.5" /> | 允许的图片后缀 | Array | ['png', 'jpg', 'jpeg', 'webp', 'gif'] | - |
-| index  <Badge text="1.6.1" /> | 在各个回调事件中的最后一个参数返回，用于区别是哪一个组件的事件 | String \| Number  | - | - |
-
+| file-list | 显示已上传的文件列表 | Array | - | - |
+| upload-text | 上传区域的提示文字 | String | - | - |
+| width | 内部预览图片区域和选择图片按钮的区域宽度，单位rpx，不能是百分比，或者`auto` | String \| Number | 200 | - |
+| height | 内部预览图片区域和选择图片按钮的区域高度，单位rpx，不能是百分比，或者`auto` | String \| Number | 200 | - |
 
 ### Methods
 
@@ -251,27 +235,31 @@ data(){
 
 | 名称          | 说明            |
 |-------------  |---------------- |
-| upload | 调用此方法，手动上传图片  |
-| clear | 调用此方法，清空内部文件列表  |
-| reUpload | 调用此方法，重新上传内部上传失败或者尚未上传的图片  |
-| remove(index) | 手动移除列表的某一个图片，`index`为`lists`数组的索引  |
-
+| afterRead | 读取后的处理函数  |
+| beforeRead | 读取前的处理函数  |
 
 ### Slot
 
+slot中您可以内置任何您所需要的样式。
+
 |名称|说明|
 |:-|:-|
-| addBtn | 自定义的选择图片按钮 |
+| addBtn | 自定义上传样式 |
 
 
 
 ### Events
 
-回调参数中的`lists`参数，为目前组件内的所有图片数组，`index`为当前操作的图片的索引，`name`为通过`props`传递的`index`参数(1.6.1加入)
+回调参数中的`event`参数，为当前删除元素的所有信息，`index`为当前操作的图片的索引，`name`为删除名称，`file`包含删除的url信息
 
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
+| on-after-read  | 读取后的处理函数 | (error)，错误信息 | 
+| on-before-read  | 读取后的处理函数 | (error)，错误信息 | 
 | on-oversize | 图片大小超出最大允许大小 | (file, lists, name), name为通过`props`传递的`index`参数 |
+| on-click-preview | 全屏预览图片时触发 | (url, lists, name)，url为当前选中的图片地址，index为通过`props`传递的`index`参数 |
+| on-delete | 删除图片 | 传递`index` 回调 event 参数 包含`index，file，name` |
+<!-- 
 | on-preview | 全屏预览图片时触发 | (url, lists, name)，url为当前选中的图片地址，index为通过`props`传递的`index`参数 |
 | on-remove | 移除图片时触发 | (index, lists, name)，name为通过`props`传递的`index`参数 |
 | on-success | 图片上传成功时触发 | (data, index, lists, name)，data为服务器返回的数据，name为通过`props`传递的`index`参数 |
@@ -281,8 +269,7 @@ data(){
 | on-uploaded | 所有图片上传完毕触发 | (lists, name)，可以通过此事件，将lists参数获取，提交给后端使用，name为通过`props`传递的`index`参数 |
 | on-choose-complete | 每次选择图片后触发，只是让外部可以得知每次选择后，内部的文件列表 | (lists, name)，内部当前的文件列表，name为通过`props`传递的`index`参数 |
 | on-list-change | 当内部文件列表被加入文件、移除文件，或手动调用`clear`方法时触发 | (lists, name)，内部文件变化之后的列表，name为通过`props`传递的`index`参数 |
-| on-choose-fail <Badge text="1.7.0" /> | 选择文件出错时触发，比如选择文件时取消了操作，只在微信和APP有效 | (error)，错误信息 |
-
+| on-choose-fail  | 选择文件出错时触发，比如选择文件时取消了操作，只在微信和APP有效 | (error)，错误信息 | -->
 
 <style scoped>
 h3[id=props] + table thead tr th:nth-child(2){
