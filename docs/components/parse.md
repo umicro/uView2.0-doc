@@ -176,7 +176,6 @@ H5、App（含NVUE）外链可以直接打开，小程序端将自动复制链�
 |showImgMenu 	| 是否开启图片被长按时显示菜单 | Boolean | true | false |
 |scrollTable    | 是否自动给 table 添加一个滚动层（使表格可以单独横向滚动）| Boolean | false | true |
 |setTitle       | 是否自动将 title 标签的内容设置到页面标题 | Boolean | true | false |
-|compress       | 压缩等级，可以选择是否移除 id 和 class(不建议修改) | Number | 0 | 1 / 2 / 3 |
 |selectable     | 是否开启长按复制内容	| Boolean | false | true |
 |tagStyle       | 设置标签的默认样式 | Object | - | - |
 |useAnchor      | 是否使用页面内锚点 | Boolean/Number | false | true |
