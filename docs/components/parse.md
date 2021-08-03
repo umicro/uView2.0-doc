@@ -1,6 +1,6 @@
 ## Parse 富文本解析器 <Badge text="1.5.3" /> <to-api/>
-      
-<demo-model url="/pages/componentsA/parse/index"></demo-model>
+
+<demo-model url="/pages/componentsB/parse/parse"></demo-model>
 
 该组件一般用于富文本解析场景，比如解析文章内容，商品详情，带原生HTML标签的各类字符串等，此组件和uni-app官方的`rich-text`组件功能有重合之处，但是也有不同的地方。
 
@@ -16,7 +16,6 @@
 :::tip 提示
 此组件源于开源的优秀作品[mp-html](https://github.com/jin-yufeng/mp-html)，本文档只对重要的功能进行介绍，如果需要更详细的说明，请参考[mp-html官方文档](https://jin-yufeng.gitee.io/mp-html/#/overview/quickstart?id=uni-app)。
 :::
-
 
 ### 平台差异说明
 
@@ -49,12 +48,11 @@
 </script>
 
 <style lang="scss" scoped>
-	.u-content {
-		margin-top: 100rpx;
-	}
+    .u-content {
+        padding: 24rpx;
+    }
 </style>
 ```
-
 
 ### 长按复制
 
@@ -63,7 +61,6 @@
 ```html
 <u-parse :content="content" :selectable="true"></u-parse>
 ```
-
 
 ### 设置样式
 
@@ -97,7 +94,6 @@
 </script>
 ```
 
-
 - 通过父元素标签，统一设置全文的颜色，行高，字体大小等，注意这种方式无法对单独的标签设置样式：
 
 ```html
@@ -121,20 +117,14 @@
 </script>
 
 <style lang="scss" scoped>
-	.u-content {
-		margin-top: 100rpx;
-		color: $u-content-color;
-		font-size: 32rpx;
-		line-height: 1.8;
-		
-		// 标签形式无效
-		p {
-			color: $u-tips-color;
-		}
-	}
+    .u-content {
+        padding: 24rpx;
+        font-size: 32rpx;
+        color: $u-content-color;
+        line-height: 1.6;
+    }
 </style>
 ```
-
 
 ### 懒加载和占位图
 
@@ -145,13 +135,19 @@
 <u-parse :content="content" :lazy-load="true" :loading-img="/xxx/xxx.jpg"></u-parse>
 ```
 
-### 链接跳转
+### 链接跳转/锚点
 
 H5、App（含NVUE）外链可以直接打开，小程序端将自动复制链接  
 小程序端`a`标签设置`app-id`后可以跳转到其他小程序
 
-<br>
+```html
+<a href="#">跳转到顶部</a>
+<a href="#list">跳转到列表</a>
+<a href="https://github.com/jin-yufeng/mp-html">外部链接</a>
+<a href="/pages/componentsB/parse/jump">内部链接</a>
+```
 
+<br>
 
 ### 其他配置
 

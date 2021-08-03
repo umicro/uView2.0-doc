@@ -1,12 +1,8 @@
-## Select 列选择器 <Badge text="1.3.0" type="tip"/> <to-api/>
+## Picker 选择器 <to-api/>
 
-<demo-model url="/pages/componentsA/select/index"></demo-model>
-
+<demo-model url="/pages/componentsC/picker/picker"></demo-model>
 
 此选择器用于单列，多列，多列联动的选择场景。
-
-**注意：** 从`1.3.0`版本起，不建议使用`Picker`组件的单列和多列模式，`Select`组件是专门为列选择而构造的组件，更简单易用。
-
 
 ### 平台差异说明
 
@@ -16,7 +12,6 @@
 
 
 ### 基本使用
-
 
 所有的配置模式中，都要求传入数组的元素(对象)中含有`value`和`label`属性(可以通过`value-name`和`label-name`参数自定义)，
 `value`用于在回调时，区别选择了哪一个(针对开发者)，`label`用于展示在选择器中，供用户选择和查看(针对用户)。
@@ -298,32 +293,31 @@ res = [
 ### Props
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| mode | 模式选择，"single-column"-单列模式，"mutil-column"-多列模式，"mutil-column-auto"-多列联动模式  | String	 | single-column | mutil-column / mutil-column-auto |
-| list | 列数据，数组形式，见上方说明 | Array | - | - |
-| v-model | 布尔值变量，用于控制选择器的弹出与收起 | Boolean | false | true |
-| safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
-| cancel-color | 取消按钮的颜色  | String | #606266 | - |
-| confirm-color | 确认按钮的颜色  | String | #2979ff | - |
-| default-value | 提供的默认选中的下标，见上方说明  | Array | - | - |
-| mask-close-able | 是否允许通过点击遮罩关闭Picker  | Boolean | true | false |
-| z-index | 弹出时的`z-index`值 | String \| Number | 10075 | - |
-| value-name | 自定义`list`数据的`value`属性名 <Badge text="1.3.6" /> | String | value | - |
-| label-name | 自定义`list`数据的`label`属性名 <Badge text="1.3.6" /> | String | label | - |
-| child-name | 自定义`list`数据的`children`属性名，只对多列联动模式有效 <Badge text="1.3.6" /> | String | children | - |
-| title | 顶部中间的标题 <Badge text="1.3.6" /> | String | - | - |
-| confirm-text  <Badge text="1.5.6" /> | 确认按钮的文字 | String | 确认 | - |
-| cancel-text  <Badge text="1.5.6" /> | 取消按钮的文字 | String | 取消 | - |
-
+|------------- |---------------- |---------------|------------------ |-------- |
+| show         | 用于控制选择器的弹出与收起 | Boolean | false | true |
+| showToolbar  | 是否显示顶部的操作栏 | Boolean | true | false |
+| title        | 顶部中间的标题 | String | - | - |
+| columns      | 设置每一列的数据，见上方说明 | Array | - | - |
+| loading      | 加载状态 | Boolean | false | true |
+| itemHeight   | 各列中，单个选项的高度 | String \| Number | 44 | - |
+| confirmText  | 确认按钮的文字 | String | 确认 | - |
+| cancelText   | 取消按钮的文字 | String | 取消 | - |
+| confirmColor | 确认按钮的颜色 | String | #3c9cff | - |
+| cancelColor  | 取消按钮的颜色 | String | #909193 | - |
+| singleIndex  | 选择器只有一列时，默认选中项的索引，从0开始 | String \| Number | 0 | - |
+| visibleItemCount | 每列中可见选项的数量 | String \| Number | 5 | - |
+| keyName      | 自定义需要展示的`text`属性键名 | String | text | - |
+| closeOnClickOverly | 是否允许点击遮罩关闭选择器 | Boolean | false | true |
+| defaultIndex | 各列的默认索引 | Array | - | - |
 
 ### Events
 
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
-| confirm | 点击确定按钮，返回当前选择的值 | Array: 见上方"回调参数"部分说明 | - |
-| cancel | 点击取消按钮，返回当前选择的值 | Array: 见上方"回调参数"部分说明 | - |
-
-
+| close  | 关闭选择器时触发 | - | - |
+| confirm| 点击确定按钮，返回当前选择的值 | Array: 见上方"回调参数"部分说明 | - |
+| change | 当选择值变化时触发 | Array: 见上方"回调参数"部分说明 | - |
+| cancel | 点击取消按钮 | - | - |
 
 <style scoped>
 h3[id=props] + table thead tr th:nth-child(2){
