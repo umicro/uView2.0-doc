@@ -76,11 +76,11 @@ export default {
 | top                 | 到顶部的距离                           | String \| Number | 0       | -      |
 | type                | 主题，primary，success，warning，error | String           | primary | -      |
 | color               | 字体颜色                               | String           | #ffffff | -      |
-| bg-color            | 背景颜色                               | String           | -       | -      |
+| bgColor            | 背景颜色                               | String           | -       | -      |
 | message             | 展示的文字内容                         | String           | -       | -      |
 | duration            | 展示时长，为0时不消失，单位ms          | String \| Number | 3000    | -      |
-| font-size           | 字体大小，单位rpx                      | String \| Number | 30      | -      |
-| safe-area-inset-top | 是否留出顶部安全距离（状态栏高度）     | Boolean          | false   | true   |
+| fontSize           | 字体大小，单位rpx                      | String \| Number | 30      | -      |
+| safeAreaInsetTop | 是否留出顶部安全距离（状态栏高度）     | Boolean          | false   | true   |
 
 
 ### Slot
