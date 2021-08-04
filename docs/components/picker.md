@@ -202,6 +202,12 @@
 | closeOnClickOverly | 是否允许点击遮罩关闭选择器 | Boolean | false | true |
 | defaultIndex | 各列的默认索引 | Array | - | - |
 
+### Methods
+| 名称          | 说明            |
+|------------- |---------------- |
+| setIndexs    | (index, setLastIndex) 设置对应列的选择值 |
+| setColumnValues | 多列联动时需要用到，见上方说明 |
+
 ### Events
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
