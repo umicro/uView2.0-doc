@@ -166,6 +166,7 @@ module.exports = {
                     collapsable: false,
                     sidebarDepth: 0,
                     children: [
+                        '/components/scrollList',
 						'/components/statusBar',
                         '/components/line',
                         '/components/card',
@@ -212,6 +213,7 @@ module.exports = {
                         '/components/lazyLoad',
                         '/components/gap',
                         '/components/avatar',
+                        '/components/transition',
                     ]
                 },
                 ]
@@ -383,6 +385,8 @@ module.exports = {
             '/components/avatarCropper',
             '/components/loadMore',
             '/components/readMore',
+            '/components/scrollList',
+            '/components/transition',
             '/components/lazyLoad',
             '/components/gap',
             '/components/avatar',

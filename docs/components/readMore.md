@@ -1,6 +1,6 @@
 ## ReadMore 展开阅读更多 <to-api/>
 
-<demo-model url="/pages/componentsC/readMore/index"></demo-model>
+<demo-model url="/pages/componentsC/readMore/readMore"></demo-model>
 
 该组件一般用于内容较长，预先收起一部分，点击展开全部内容的场景。
 
@@ -179,6 +179,7 @@
 | openText     | 展开时的提示文字 | String  | 收起 | - |
 | fontSize     | 提示文字的大小，默认单位px | String \| Number  | 14 | - |
 | color        | 提示文字的颜色 | String  | #2979ff | - |
+| textIndent   | 段落首行缩进的字符个数 | String  | 2em | - |
 | shadowStyle  | 对阴影的自定义处理，对象形式 | Object  | 见上方说明 | - |
 | name         | 用于在`open`和`close`事件中当作回调参数返回 | String \| Number  | - | - |
 
