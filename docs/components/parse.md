@@ -71,7 +71,7 @@
 ```html
 <template>
 	<view class="u-content">
-		<u-parse :content="content" :tag-style="style"></u-parse>
+		<u-parse :content="content" :tagStyle="style"></u-parse>
 	</view>
 </template>
 
@@ -132,7 +132,7 @@
 - 设置`loadingImg`为网络路径或者base64图片，可以在图片加载完成前展示占位图
 
 ```html
-<u-parse :content="content" :lazy-load="true" :loading-img="/xxx/xxx.jpg"></u-parse>
+<u-parse :content="content" :lazyLoad="true" :loadingImg="/xxx/xxx.jpg"></u-parse>
 ```
 
 ### 链接跳转/锚点
