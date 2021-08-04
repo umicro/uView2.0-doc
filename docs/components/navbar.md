@@ -156,22 +156,22 @@ uView提供了一个`bg-color`参数，可以自定义导航栏的背景颜色�
 | placeholder         | 固定在顶部时，是否生成一个等高元素，以防止塌陷         | Boolean          | false      | true   |
 | fixed               | 导航栏是否固定在顶部                                   | Boolean          | true       | false  |
 | border              | 导航栏底部是否显示下边框                               | Boolean          | false      | true   |
-| left-icon           | 左边返回图标的名称，只能为uView自带的图标              | String           | arrow-left | -      |
-| left-text           | 左边的提示文字                                         | String           | -          | -      |
-| right-icon          | 右边返回图标的名称，只能为uView自带的图标              | String           | -          | -      |
-| right-text          | 右边的提示文字                                         | String           | -          | -      |
+| leftIcon           | 左边返回图标的名称，只能为uView自带的图标              | String           | arrow-left | -      |
+| leftText           | 左边的提示文字                                         | String           | -          | -      |
+| rightIcon          | 右边返回图标的名称，只能为uView自带的图标              | String           | -          | -      |
+| rightText          | 右边的提示文字                                         | String           | -          | -      |
 | title               | 导航栏标题，如设置为空字符，将会隐藏标题占位区域       | String           | -          | -      |
-| bg-color            | 导航栏背景设置                                         | String           | #ffffff    | -      |
-| title-width         | 导航栏标题的最大宽度，内容超出会以省略号隐藏，单位rpx  | String \| Number | 400        | -      |
-| safe-area-inset-top | 是否开启顶部安全区适配                                 | Boolean          | true       | false  |
+| bgColor            | 导航栏背景设置                                         | String           | #ffffff    | -      |
+| titleWidth         | 导航栏标题的最大宽度，内容超出会以省略号隐藏，单位rpx  | String \| Number | 400        | -      |
+| safeAreaInsetTop | 是否开启顶部安全区适配                                 | Boolean          | true       | false  |
 
 
 ### Event
 
 | 名称        | 说明         | 类型    |
 | ----------- | ------------ | ------- |
-| left-click  | 点击左侧区域 | Handler |
-| right-click | 点击右侧区域 | Handler |
+| leftClick  | 点击左侧区域 | Handler |
+| rightClick | 点击右侧区域 | Handler |
 
 ### Slot
 

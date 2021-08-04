@@ -91,13 +91,13 @@
 | 参数          | 说明                              | 类型    | 默认值   | 可选值               |
 | ------------- | --------------------------------- | ------- | -------- | -------------------- |
 | loading       | 是否加载中                        | boolean | false    | true                 |
-| loading-text  | 提示内容                          | String  | 正在加载 | -                    |
-| loading-mode  | 加载动画的模式                    | String  | circle   | spinner \ semicircle |
+| loadingText  | 提示内容                          | String  | 正在加载 | -                    |
+| loadingMode  | 加载动画的模式                    | String  | circle   | spinner \ semicircle |
 | image         | 文字上方用于替换loading动画的图片 | String  | -        | -                    |
 | color         | 文字颜色                          | String  | #C8C8C8  | -                    |
-| font-size     | 文字大小                          | String  | 19       | -                    |
-| bg-color      | 背景颜色                          | String  | #ffffff  | -                    |
-| loading-color | 加载中图标的颜色                  | String  | #C8C8C8  | -                    |
+| fontSize     | 文字大小                          | String  | 19       | -                    |
+| bgColor      | 背景颜色                          | String  | #ffffff  | -                    |
+| loadingColor | 加载中图标的颜色                  | String  | #C8C8C8  | -                    |
 
 
 

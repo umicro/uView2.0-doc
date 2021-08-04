@@ -109,19 +109,19 @@
 | 参数          | 说明                                                    | 类型             | 默认值      | 可选值               |
 | ------------- | ------------------------------------------------------- | ---------------- | ----------- | -------------------- |
 | status        | 组件状态                                                | String           | loadmore    | loading / nomore     |
-| bg-color      | 组件背景颜色，在页面是非白色时会用到(默认为transparent) | String           | #ffffff     | -                    |
+| bgColor      | 组件背景颜色，在页面是非白色时会用到(默认为transparent) | String           | #ffffff     | -                    |
 | icon          | 加载中时是否显示图标                                    | Boolean          | true        | false                |
-| icon-color    | 加载中的动画图标的颜色                                  | String           | #b7b7b7     | -                    |
-| is-dot        | `status`为`nomore`时，内容显示为一个"●"                 | Boolean          | false       | true                 |
+| iconColor    | 加载中的动画图标的颜色                                  | String           | #b7b7b7     | -                    |
+| isDot        | `status`为`nomore`时，内容显示为一个"●"                 | Boolean          | false       | true                 |
 | color         | 字体颜色                                                | String           | #606266     | -                    |
-| font-size     | 字体大小，单位rpx                                       | String \| Number | 28          | -                    |
+| fontSize     | 字体大小，单位rpx                                       | String \| Number | 28          | -                    |
 | height        | 高度                                                    | String \| Number | auto        | -                    |
-| margin-top    | 与前一个元素的距离，单位rpx                             | String \| Number | 20          | -                    |
-| margin-bottom | 与后一个元素的距离，单位rpx                             | String \| Number | 20          | -                    |
-| loading-icon  | 加载中状态的图标                                        | String           | circle      | spinner / semicircle |
-| loading-text  | 加载中提示语                                            | String           | 正在加载... | -                    |
-| loadmore-text | 加载前的提示语                                          | String           | 加载更多    | -                    |
-| nomore-text   | 没有更多的提示语                                        | String           | 没有更多了  | -                    |
+| marginTop    | 与前一个元素的距离，单位rpx                             | String \| Number | 20          | -                    |
+| marginBottom | 与后一个元素的距离，单位rpx                             | String \| Number | 20          | -                    |
+| loadingIcon  | 加载中状态的图标                                        | String           | circle      | spinner / semicircle |
+| loadingText  | 加载中提示语                                            | String           | 正在加载... | -                    |
+| loadmoreText | 加载前的提示语                                          | String           | 加载更多    | -                    |
+| nomoreText   | 没有更多的提示语                                        | String           | 没有更多了  | -                    |
 | line          | 是否显示左边分割线                                      | Boolean          | false       | true                 |
 
 
