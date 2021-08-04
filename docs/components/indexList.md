@@ -84,11 +84,11 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| inactive-color | 右边锚点状态非激活时的颜色 | String | #606266 | - |
-| active-color | 右边锚点状态激活时的颜色 | String | #5677fc | - |
-| index-list | 索引字符列表，数组  | Array[string \| number] | A-Z | - |
+| inactiveColor | 右边锚点状态非激活时的颜色 | String | #606266 | - |
+| activeColor | 右边锚点状态激活时的颜色 | String | #5677fc | - |
+| indexList | 索引字符列表，数组  | Array[string \| number] | A-Z | - |
 | sticky | 是否开启锚点自动吸顶 | Boolean | true | false |
-| custom-nav-height | 自定义导航栏的高度，单位默认px  | String \| Number | 0 | - |
+| customNavHeight | 自定义导航栏的高度，单位默认px  | String \| Number | 0 | - |
 
 ### IndexAnchor Props
 
@@ -97,7 +97,7 @@
 | text | 列表锚点文本内容 | String \| Number | - | - |
 | color | 列表锚点文字颜色 | String | #606266 | - |
 | size | 列表锚点文字大小，单位默认px | String \| Number | 14 | - |
-| bg-color | 列表锚点背景颜色 | String | #dedede | - |
+| bgColor | 列表锚点背景颜色 | String | #dedede | - |
 | height | 列表锚点高度，单位默认px | String \| Number | 32 | - |
 
 

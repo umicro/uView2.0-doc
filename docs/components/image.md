@@ -123,12 +123,12 @@
 | height | 高度，单位任意，如果为数值，默认单位px | String \| Number  | 225 | - |
 | shape | 图片形状，circle-圆形，square-方形 | String  | square | square |
 | radius | 圆角，默认单位px | String \| Number  | 0 | - |
-| lazy-load | 是否懒加载，仅微信小程序、App、百度小程序、字节跳动小程序有效 | Boolean  | true | - |
-| show-menu-by-longpress | 是否开启长按图片显示识别小程序码菜单，仅微信小程序有效 | Boolean  | true | - |
-| loading-icon | 加载中的图标，或者小图片 | String  | photo | - |
-| error-icon | 加载失败的图标，或者小图片 | String  | error-circle | - |
-| show-loading | 是否显示加载中的图标或者自定义的slot | Boolean  | true | false |
-| show-error | 是否显示加载错误的图标或者自定义的slot | Boolean  | true | false |
+| lazyLoad | 是否懒加载，仅微信小程序、App、百度小程序、字节跳动小程序有效 | Boolean  | true | - |
+| showMenuByLongpress | 是否开启长按图片显示识别小程序码菜单，仅微信小程序有效 | Boolean  | true | - |
+| loadingIcon | 加载中的图标，或者小图片 | String  | photo | - |
+| errorIcon | 加载失败的图标，或者小图片 | String  | error-circle | - |
+| showLoading | 是否显示加载中的图标或者自定义的slot | Boolean  | true | false |
+| showError | 是否显示加载错误的图标或者自定义的slot | Boolean  | true | false |
 | fade | 是否需要淡入效果 | Boolean  | true | false |
 | webp | 只支持网络资源，只对微信小程序有效 | Boolean  | false | true |
 | duration | 搭配`fade`参数的过渡时间，单位ms | String \| Number   | 500 | - |
