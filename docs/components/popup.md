@@ -1,9 +1,9 @@
 ## Popup 弹出层 <to-api/>
 
-<demo-model url="/pages/componentsC/popup/index"></demo-model>
+<demo-model url="/pages/componentsA/popup/popup"></demo-model>
 
 
-弹出层容器，用于展示弹窗、信息提示等内容，支持上、下、左、右和中部弹出。组件只提供容器，内部内容由用户自定义
+弹出层容器，用于展示弹窗、信息提示等内容，支持上、下、左、右和中部弹出。组件只提供容器，内部内容由用户自定义。
 
 ### 平台差异说明
 
@@ -13,21 +13,20 @@
 
 ### 基本使用
 
-
 - 弹出层的内容通过`slot`传入，由用户自定义
-- 通过`v-model`绑定一个布尔值的变量控制弹出层的打开和收起
-
+- 通过`show`绑定一个布尔值的变量控制弹出层的打开和收起
 
 ```html
 <template>
 	<view>
-		<u-popup v-model="show">
-			<view>出淤泥而不染，濯清涟而不妖</view>
+		<u-popup :show="show">
+            <view>
+                <text>出淤泥而不染，濯清涟而不妖</text>
+            </view>
 		</u-popup>
 		<u-button @click="show = true">打开</u-button>
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {
@@ -45,28 +44,45 @@
 
 ```html
 <template>
-	<u-popup v-model="show" mode="top">
-		<view>
-			人生若只如初见，何事秋风悲画扇
-		</view>
+	<u-popup :show="show" mode="top">
+        <view>
+            <text>人生若只如初见，何事秋风悲画扇</text>
+        </view>
 	</u-popup>
 </template>
+<script>
+    export default {
+        data() {
+            return {
+                show: true
+            }
+        }
+    }
+</script>
 ```
 
 ### 设置弹出层的圆角
 
-可以给`border-radius`设置一个值来给弹窗增加圆角，单位rpx。
+需要将`round`设置为`ture`，并给`borderRadius`设置一个值来给弹窗增加圆角，单位rpx。
 
 ```html
 <template>
-	<u-popup v-model="show" mode="top" border-radius="14">
+	<u-popup :show="show" :round="true" mode="top" borderRadius="12">
 		<view>
-			人生若只如初见，何事秋风悲画扇
+            <text>人生若只如初见，何事秋风悲画扇</text>
 		</view>
 	</u-popup>
 </template>
+<script>
+    export default {
+        data() {
+            return {
+                show: true
+            }
+        }
+    }
+</script>
 ```
-
 
 ### 控制弹窗的宽度 | 高度
 
