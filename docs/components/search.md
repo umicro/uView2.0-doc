@@ -1,6 +1,6 @@
 ## Search 搜索 <to-api/>
 
-<demo-model url="/pages/componentsB/search/index"></demo-model>
+<demo-model url="/pages/componentsB/search/search"></demo-model>
 
 <custom-block text="由于右侧的演示是通过iframe引入的，缺少移动端的@touchstart事件，故清除控件无效，请在真机演示中查看效果。"></custom-block>
 
