@@ -1,4 +1,4 @@
-## SwipeAction 滑动操作 <to-api/>
+## SwipeAction 滑动单元格 <to-api/>
 
 <demo-model url="/pages/componentsB/swipeAction/index"></demo-model>
 
@@ -22,24 +22,23 @@
 - 通过slot传入内部内容即可，可以将`v-for`的"index"索引值传递给`index`参数，用于点击时，在回调方法中对某一个数据进行操作(点击回调时第一个参数会返回此索引值)  
 - 内部的按钮通过`options`参数配置，此参数为一个数组，元素为对象，可以配置按钮的文字，背景颜色(建议只配置此两个参数即可)，**请勿配置宽高等属性**。
 
-说明：有时候，我们在打开一个swipeAction的同时，需要自动关闭其他的swipeAction，这时需要通过`open`事件实现，见如下：
 
 ```html
 <template>
 	<view>
-		<u-swipe-action :show="item.show" :index="index" 
-			v-for="(item, index) in list" :key="item.id" 
-			@click="click" @open="open"
-			:options="options"
-		>
-			<view class="item u-border-bottom">
-				<image mode="aspectFill" :src="item.images" />
-				<!-- 此层wrap在此为必写的，否则可能会出现标题定位错误 -->
-				<view class="title-wrap">
-					<text class="title u-line-2">{{ item.title }}</text>
-				</view>
-			</view>
-		</u-swipe-action>
+        <u-swipe-action>
+            <u-swipe-action-item
+                    :rightOptions="options1"
+            >
+                <u-line></u-line>
+                <view class="swipe-action">
+                    <view class="swipe-action__content">
+                        <text class="swipe-action__content__text">基础使用</text>
+                    </view>
+                </view>
+                <u-line></u-line>
+            </u-swipe-action-item>
+        </u-swipe-action>
 	</view>
 </template>
 
@@ -47,128 +46,243 @@
 	export default {
 		data() {
 			return {
-				list: [
-					{
-						id: 1,
-						title: '长安回望绣成堆，山顶千门次第开，一骑红尘妃子笑，无人知是荔枝来',
-						images: 'https://cdn.uviewui.com/uview/common/logo.png',
-						show: false
-					},
-					{
-						id: 2,
-						title: '新丰绿树起黄埃，数骑渔阳探使回，霓裳一曲千峰上，舞破中原始下来',
-						images: 'https://cdn.uviewui.com/uview/common/logo.png',
-						show: false
-					},
-					{
-						id: 3,
-						title: '登临送目，正故国晚秋，天气初肃。千里澄江似练，翠峰如簇',
-						images: 'https://cdn.uviewui.com/uview/common/logo.png',
-						show: false,
-					}
-				],
-				disabled: false,
-				btnWidth: 180,
-				show: false,
-				options: [
-					{
-						text: '收藏',
-						style: {
-							backgroundColor: '#007aff'
-						}
-					},
-					{
-						text: '删除',
-						style: {
-							backgroundColor: '#dd524d'
-						}
-					}
-				]
+                options1: [{
+                    text: '删除',
+                    style: {
+                        backgroundColor: '#f56c6c'
+                    }
+                }]
 			};
 		},
-		methods: {
-			click(index, index1) {
-				if(index1 == 1) {
-					this.list.splice(index, 1);
-					this.$u.toast(`删除了第${index}个cell`);
-				} else {
-					this.list[index].show = false;
-					this.$u.toast(`收藏成功`);
-				}
-			},
-			// 如果打开一个的时候，不需要关闭其他，则无需实现本方法
-			open(index) {
-				// 先将正在被操作的swipeAction标记为打开状态，否则由于props的特性限制，
-				// 原本为'false'，再次设置为'false'会无效
-				this.list[index].show = true;
-				this.list.map((val, idx) => {
-					if(index != idx) this.list[idx].show = false;
-				})
-			}
-		}
 	};
 </script>
 
-<style lang="scss" scoped>
-	.item {
-		display: flex;
-		padding: 20rpx;
-	}
-	
-	image {
-		width: 120rpx;
-		flex: 0 0 120rpx;
-		height: 120rpx;
-		margin-right: 20rpx;
-		border-radius: 12rpx;
-	}
-	
-	.title {
-		text-align: left;
-		font-size: 28rpx;
-		color: $u-content-color;
-		margin-top: 20rpx;
-	}
+<style lang="scss">
+    .u-page {
+        padding: 0;
+    }
+
+    .u-demo-block__title {
+        padding: 10px 0 2px 15px;
+    }
+
+    .swipe-action {
+        &__content {
+             padding: 25rpx 0;
+    
+            &__text {
+                 font-size: 15px;
+                 color: $u-main-color;
+                 padding-left: 30rpx;
+             }
+        }
+    }
 </style>
 ```
 
-### 修改按钮样式
+### 多个按钮并列
 
-- 通过`options`参数配置按钮的数量和样式，见上方说明
-- 通过`btn-width`设置按钮的宽度，单位rpx
+- 通过添加`rightOptions`的值，达到多个并列的效果
+
 
 ```html
-<u-swipe-action btn-width="180" :options="options">
-	...
-</u-swipe-action>
+<template>
+	<view>
+        <u-swipe-action>
+            <u-swipe-action-item :rightOptions="options2">
+                <u-line></u-line>
+                <view class="swipe-action">
+                    <view class="swipe-action__content">
+                        <text class="swipe-action__content__text">两个按钮并列</text>
+                    </view>
+                </view>
+                <u-line></u-line>
+            </u-swipe-action-item>
+        </u-swipe-action>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+                options2: [{
+                    text: '收藏',
+                    style: {
+                        backgroundColor: '#3c9cff'
+                    }
+                }, {
+                    text: '删除',
+                    style: {
+                        backgroundColor: '#f56c6c'
+                    }
+                }],
+			};
+		},
+	};
+</script>
+
+<style lang="scss">
+    .u-page {
+        padding: 0;
+    }
+
+    .u-demo-block__title {
+        padding: 10px 0 2px 15px;
+    }
+
+    .swipe-action {
+        &__content {
+             padding: 25rpx 0;
+    
+            &__text {
+                 font-size: 15px;
+                 color: $u-main-color;
+                 padding-left: 30rpx;
+             }
+        }
+    }
+</style>
 ```
 
+### 组合使用
 
-### 点击事件
+- 通过增设`rightOptions`的`options`达成组合效果
 
-`click`点击事件回调中，有两个参数，第一个参数为通过Props传入的`index`参数，第二个参数为滑动按钮的索引，即`options`数组的索引，
-用于标识第几个按钮被点击。
+
+```html
+<template>
+	<view>
+        <u-swipe-action>
+            <u-swipe-action-item
+                    :rightOptions="item.options"
+                    v-for="(item, index) in options4"
+                    :disabled="item.disabled"
+                    :key="index"
+            >
+                <u-line v-if="index === 0"></u-line>
+                <view class="swipe-action">
+                    <view class="swipe-action__content">
+                        <text class="swipe-action__content__text">{{ item.text }}</text>
+                    </view>
+                </view>
+                <u-line></u-line>
+            </u-swipe-action-item>
+        </u-swipe-action>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+                options4: [{
+                    text: '禁用状态',
+                    disabled: true,
+                    options: [{
+                        text: '置顶',
+                        style: {
+                            backgroundColor: '#3c9cff',
+                        }
+                    },
+                        {
+                            text: '取消',
+                            style: {
+                                backgroundColor: '#f9ae3d',
+                            }
+                        },
+                    ],
+                }, {
+                    text: '正常状态',
+                    disabled: false,
+                    options: [{
+                        text: '置顶',
+                        style: {
+                            backgroundColor: '#3c9cff',
+                        }
+                    },
+                        {
+                            text: '取消',
+                            style: {
+                                backgroundColor: '#f9ae3d',
+                            }
+                        },
+                    ],
+                }, {
+                    text: '自动关闭',
+                    disabled: false,
+                    options: [{
+                        text: '置顶',
+                        style: {
+                            backgroundColor: '#3c9cff',
+                        }
+                    },
+                        {
+                            text: '取消',
+                            style: {
+                                backgroundColor: '#f9ae3d',
+                            }
+                        },
+                    ],
+                }],
+			};
+		},
+	};
+</script>
+
+<style lang="scss">
+    .u-page {
+        padding: 0;
+    }
+
+    .u-demo-block__title {
+        padding: 10px 0 2px 15px;
+    }
+
+    .swipe-action {
+        &__content {
+             padding: 25rpx 0;
+    
+            &__text {
+                 font-size: 15px;
+                 color: $u-main-color;
+                 padding-left: 30rpx;
+             }
+        }
+    }
+</style>
+```
 
 
 ### API
 
-### Props
+### SwipeAction Props
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| bg-color | 整个组件背景颜色 | String  | #ffffff | - |
-| index | 标识符，点击时候用于区分点击了哪一个，用`v-for`循环时的index即可 | String \| Number  | - | - |
-| btn-width | 按钮宽度，单位rpx | String \| Number  | 180 | - |	
-| disabled | 是否禁止某个swipeAction滑动 | Boolean  | false | true |	
-| vibrate-short | 是否使手机发生短促震动，目前只在iOS的微信小程序和微信小程序开发工具有效  | Boolean | false | true |
-| show | 打开或者关闭某个组件 | Boolean  | false | true |
-| options | 按钮组的配置参数，数组形式，见上方说明 | Array  | [ ] | - |
+| autoClose | 是否自动关闭其他swipe按钮组 | Boolean  | true | false |
 
-### Event
+### SwipeAction Event
 
 |事件名|说明|回调参数|
 |:-|:-|:-|
-| click | 点击组件时触发 | (index1, index)，见上方"点击事件"的说明 |
-| close | 组件触发关闭状态时 | index: 通过props传递的`index` | 
-| open | 组件触发打开状态时 | index: 通过props传递的`index` | 
-| content-click | 点击内容时触发 | index: 通过props传递的`index` | 
+| click | 点击组件时触发 | (index) |
+
+### SwipeActionItem Props
+
+| 参数          | 说明            | 类型            | 默认值             |  可选值   |
+|-------------  |---------------- |---------------|------------------ |-------- |
+| show | 控制打开或者关闭 | Boolean  | false | true |
+| index | 标识符，如果是v-for，可用index索引 | String \| Number | - | - |
+| disabled | 是否禁用 | Boolean  | false | true |
+| autoClose | 是否自动关闭其他swipe按钮组 | Boolean  | true | false |
+| threshold | 滑动距离阈值，只有大于此值，才被认为是要打开菜单 | Number  | 30 | - |
+| rightOptions | 右侧按钮内容 | Array  | [] | - |
+| duration | 动画过渡时间，单位ms | String \| Number  | 350 | - |
+
+### SwipeActionItem Event
+
+|事件名|说明|回调参数|
+|:-|:-|:-|
+| open | 组件打开时触发 | (index) |
+| close | 组件关闭时触发 | (index) |
