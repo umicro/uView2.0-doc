@@ -13,26 +13,45 @@
 
 ### 基本使用
 
-文字内容通过`slot`传入
+文字内容通过`text`传入
 
 ```html
-<u-divider>大漠孤烟直</u-divider>
+<u-divider text="分割线"></u-divider>
 ```
 
-### 设置文字颜色
-可以通过`color`指定文字的颜色
+### 设置虚线
+可以通过`dashed`指定虚线
 ```html
-<u-divider color="#fa3534">长河落日圆</u-divider>
+<u-divider text="分割线" :dashed="true"></u-divider>
 ```
 
-### 设置单边边线条宽度和颜色
-
-- `half-width`指定文字某一边的线条宽度(注意这里设置的是一边，而不是文字两边线条的总长度)，`half-width`可以是数值(rpx)或者百分比
-- `type`可以快捷的设置线条为某一个主题色(默认`primary`)，`border-color`参数同样也能设置线条颜色，优先级高于`type`，也即是说二者同时
-设置了值，将会是`border-color`起作用。反之，如果要让`type`值起作用，就要将`border-color`置为空字符串或者`null`。
-
+### 设置细线
+可以通过`hairline`指定细线
 ```html
-<u-divider color="#fa3534" half-width="200" border-color="#6d6d6d">姑苏城外寒山寺</u-divider>
+<u-divider text="分割线" :hairline="true"></u-divider>
+```
+
+### 设置以点代替文字
+可以通过`dot`指定以点代替文字
+```html
+<u-divider text="分割线" :dot="true"></u-divider>
+```
+
+### 设置文本靠左靠右
+可以通过`textPosition`指定文字靠左靠右
+```html
+<u-divider text="靠左" textPosition="left"></u-divider>
+<u-divider text="靠右" textPosition="right"></u-divider>
+```
+
+### 设置文本颜色和线条颜色
+可以通过`textColor`和`lineColor`指定文字刚线条颜色
+```html
+<u-divider
+        text="分割线"
+        textColor="#2979ff"
+        lineColor="#ff0000"
+></u-divider>
 ```
 
 
@@ -42,21 +61,17 @@
 
 | 参数          | 说明            | 类型            |        默认值        | 可选值   |
 |-------------  |---------------- |---------------- |---------------------- |-------- |
-| half-width | 文字左或右边线条宽度，数值或百分比，数值时单位为rpx  | String \| Number | - | 150 |
-| border-color | 线条颜色，优先级高于`type` | String  | #dcdfe6 | - |
-| color | 文字颜色 | String  | #909399 | - |
-| fontSize | 字体大小，单位rpx | String \| Number  | 26 | - |
-| bg-color | 整个divider的背景颜色 | String  | #ffffff | - |
-| height | 整个divider的高度，单位rpx | string \| Number  | 40 | - |
-| type | 将线条设置主题色 | string  | primary | info \ success \ warning \ error |
-| margin-top | 与前一个元素的距离，单位rpx | String \| Number  | 0 | - |
-| margin-bottom | 与后一个元素的距离，单位rpx | String \| Number  | 0 | - |
-| use-slot | 是否使用slot传入内容，如果不传入，中间不会有空隙 | Boolean  | true | false |
-
+| dashed | 是否虚线 | Boolean | false | true |
+| hairline | 是否细线 | Boolean  | false | true |
+| dot | 是否以点替代文字，优先于text字段起作用 | Boolean  | false | true |
+| textPosition | 内容文本的位置 | String \ | center | left、right |
+| text | 文本内容 | String \| Number  | - | - |
+| textSize | 文本大小 | String \| Number  | 14 | - |
+| textColor | 文本颜色 | String  | #909399 | - |
+| lineColor | 线条颜色 | String | #dcdfe6 | - |
 
 
 ### Events
-
 
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
