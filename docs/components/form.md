@@ -18,111 +18,59 @@
 此组件一般是用于表单验证使用，每一个表单域由一个`u-form-item`组成，表单域中可以放置`u-input`、`u-checkbox`、`u-radio`、`u-switch`等。
 
 - 在表单组中，通过`model`参数绑定一个对象，这个对象的属性为各个`u-form-item`内组件的对应变量。
-- 由于表单验证和绑定表单规则时，需要通过`ref`操作，故这里需要给`form`组件声明`ref="uForm"`属性。
+- 由于表单验证和绑定表单规则时，需要通过`ref`操作，故这里需要给`form`组件声明`ref="form1"`属性。
 - 关于`u-from-item`内其他可能包含的诸如`input`、`radio`等组件，请见各自组件的相关文档说明。
 
-下方为一个经典表单的示例，包含`input`、`textarea`、`radio`、`checkbox`、`switch`的组合使用：
 
 ```html
 <template>
-	<u-form :model="form" ref="uForm">
-		<u-form-item label="姓名"><u-input v-model="form.name" /></u-form-item>
-		<u-form-item label="简介"><u-input v-model="form.intro" /></u-form-item>
-		<u-form-item label="性别"><u-input v-model="form.sex" type="select" /></u-form-item>
-		<u-form-item label="水果">
-			<u-checkbox-group>
-				<u-checkbox v-model="item.checked" v-for="(item, index) in checkboxList" :key="index" :name="item.name">
-					{{ item.name }}
-				</u-checkbox>
-			</u-checkbox-group>
-		</u-form-item>
-		<u-form-item label="味道">
-			<u-radio-group v-model="radio">
-				<u-radio v-for="(item, index) in radioList" :key="index" :name="item.name" :disabled="item.disabled">
-					{{ item.name }}
-				</u-radio>
-			</u-radio-group>
-		</u-form-item>
-		<u-form-item label="开关"><u-switch slot="right" v-model="switchVal"></u-switch></u-form-item>
-	</u-form>
-</template>
-
-<script>
-export default {
-	data() {
-		return {
-			form: {
-				name: '',
-				intro: '',
-				sex: ''
-			},
-			checkboxList: [
-				{
-					name: '苹果',
-					checked: false,
-					disabled: false
-				},
-				{
-					name: '雪梨',
-					checked: false,
-					disabled: false
-				},
-				{
-					name: '柠檬',
-					checked: false,
-					disabled: false
-				}
-			],
-			radioList: [
-				{
-					name: '鲜甜',
-					disabled: false
-				},
-				{
-					name: '麻辣',
-					disabled: false
-				}
-			],
-			radio: '',
-			switchVal: false
-		};
-	}
-};
-</script>
-```
-
-
-### Form-item组件说明
-
-此组件一般需要搭配`Form`组件使用，也可以单独搭配`Input`等组件使用，由于此组件参数较多，这里只对其中参数最简要介绍，其余请见底部的API说明：
-
-- `prop`为传入`Form`组件的`model`中的属性字段，如果需要表单验证，此属性是必填的。
-- `label-position`可以配置左侧"label"的对齐方式，可选为`left`和`top`。
-- `border-bottom`是否显示表单域的下划线，如果给`Input`组件配置了边框，可以将此属性设置为`false`，从而隐藏默认的下划线。
-- 如果想在表单域配置左右的图标(或小图片，1.3.0开始，[Icon 图标](/components/icon.html)可以配置图片)，可以通过`left-icon`和`right-icon`参数实现。
-
-
-### 表单验证
-
-uView的表单组件具备完整的验证功能，在开始之前，需要了解如下几个注意事项，方面您快速上手：
-
-#### `Form`组件绑定`model`参数
-
-- `model`参数为一个对象，对象属性为需要验证的变量名。
-- 通过`ref`，在`onReady`生命周期调用组件的`setRules`方法绑定验证规则，无法通过`props`传递变量，是因为微信小程序会过滤掉对象中的方法，导致自定义验证规则无效。
-
-```html
-<template>
-	<view class="">
-		<u-form :model="form" ref="uForm">
-			<u-form-item label="姓名" prop="name">
-				<u-input v-model="form.name" />
+	<view>
+		<u--form
+				labelPosition="left"
+				:model="model1"
+				:rules="rules"
+				ref="form1"
+		>
+			<u-form-item
+					label="姓名"
+					prop="userInfo.name"
+					borderBottom
+					ref="item1"
+			>
+				<u--input
+						v-model="model1.userInfo.name"
+						border="none"
+				></u--input>
 			</u-form-item>
-			<u-form-item label="简介" prop="intro">
-				<u-input v-model="form.intro" />
+			<u-form-item
+					label="性别"
+					prop="userInfo.sex"
+					borderBottom
+					@click="showSex = true; hideKeyboard()"
+					ref="item1"
+			>
+				<u--input
+						v-model="model1.userInfo.sex"
+						disabled
+						disabledColor="#ffffff"
+						placeholder="请选择性别"
+						border="none"
+				></u--input>
+				<u-icon
+						slot="right"
+						name="arrow-right"
+				></u-icon>
 			</u-form-item>
-		</u-form>
-		<u-button @click="submit">提交</u-button>
+		</u--form>
+		<u-action-sheet
+				:show="showSex"
+				:actions="actions"
+				title="请选择性别"
+				description="如果选择保密会报错"
+				@close="showSex = false"
+				@select="sexSelect"
+		>
+		</u-action-sheet>
 	</view>
 </template>
 
@@ -130,108 +78,64 @@ uView的表单组件具备完整的验证功能，在开始之前，需要了解
 export default {
 	data() {
 		return {
-			form: {
-				name: '',
-				intro: '',
+			showSex: false,
+			model1: {
+				userInfo: {
+					name: 'uView UI',
+					sex: '',
+				},
 			},
+			actions: [{
+				name: '男',
+				},
+				{
+					name: '女',
+				},
+				{
+					name: '保密',
+				},
+			],
 			rules: {
-				name: [
-					{ 
-						required: true, 
-						message: '请输入姓名', 
-						// 可以单个或者同时写两个触发验证方式 
-						trigger: ['change','blur'],
-					}
-				],
-				intro: [
-					{
-						min: 5, 
-						message: '简介不能少于5个字', 
-						trigger: 'change'
-					}
-				]
-			}
+				'userInfo.name': {
+					type: 'string',
+					required: true,
+					message: '请填写姓名',
+					trigger: ['blur', 'change']
+				},
+				'userInfo.sex': {
+					type: 'string',
+					max: 1,
+					required: true,
+					message: '请选择男或女',
+					trigger: ['blur', 'change']
+				},
+			},
+			radio: '',
+			switchVal: false
 		};
-	},
+	}
 	methods: {
-		submit() {
-			this.$refs.uForm.validate(valid => {
-				if (valid) {
-					console.log('验证通过');
-				} else {
-					console.log('验证失败');
-				}
-			});
-		}
+		sexSelect(e) {
+			this.model1.userInfo.sex = e.name
+			this.$refs.form1.validateField('userInfo.sex')
+		},
 	},
-	// 必须要在onReady生命周期，因为onLoad生命周期组件可能尚未创建完毕
-	onReady() {
-		this.$refs.uForm.setRules(this.rules);
-	}
 };
 </script>
 ```
 
-
-#### U-form-item绑定`label`和`prop`
-
-此组件最大的作用是与`u-form`和`u-input`等组件进行交互，在表单验证时，需要绑定`prop`参数，此参数为`u-form`组件的`model`对象中的属性名，
-目的是在验证时，通过这个`prop`属性名将父组件`u-form`的`model`和`rules`规则关联起来。
-
-注意点：
-
-- 通过`prop`绑定对应的属性名，这里是字符串，而不是一个变量。
-- 通过`lable`参数设置左边显示的提示文字，另外通过`label-position`可以配置`label`在左边还是上方。
-
-```html
-<template>
-	<u-form :model="form">
-		<u-form-item label="姓名" prop="name">
-			<u-input v-model="form.name" />
-		</u-form-item>
-		<u-form-item label="简介" prop="intro">
-			<u-input v-model="form.intro" />
-		</u-form-item>
-	</u-form>
-</template>
-
-<script>
-export default {
-	data() {
-		return {
-			form: {
-				name: '',
-				intro: ''
-			},
-			rules: {
-				name: [
-					{
-						required: true,
-						message: '请输入姓名',
-						// 可以单个或者同时写两个触发验证方式
-						trigger: 'blur,change'
-					}
-				],
-				intro: [
-					{
-						min: 5,
-						message: '简介不能少于5个字',
-						trigger: 'change'
-					}
-				]
-			}
-		};
-	},
-	// 必须要在onReady生命周期，因为onLoad生命周期组件可能尚未创建完毕
-	onReady() {
-		this.$refs.uForm.setRules(this.rules);
-	}
-};
-</script>
-```
 
 从上面的示例我们可以看到，`rules`中的属性名和`form`的属性名是一致的，同时传递给`u-form-item`的`prop`参数绑定的也是相同的属性名，注意这里`prop`参数绑定的是
 字符串(属性名)，而不是一个变量。
+
+### Form-item组件说明
+
+此组件一般需要搭配`Form`组件使用，也可以单独搭配`Input`等组件使用，由于此组件参数较多，这里只对其中参数最简要介绍，其余请见底部的API说明：
+
+- `prop`为传入`Form`组件的`model`中的属性字段，如果需要表单验证，此属性是必填的。
+- `labelPosition`可以配置左侧"label"的对齐方式，可选为`left`和`top`。
+- `borderBottom`是否显示表单域的下划线，如果给`Input`组件配置了边框，可以将此属性设置为`false`，从而隐藏默认的下划线。
+- 如果想在表单域配置左右的图标或小图片，可以通过`leftIcon`和`rightIcon`参数实现。
 
 
 #### 验证规则
@@ -241,21 +145,61 @@ export default {
 
 ```js
 rules: {
-	name: [
-		// 对name字段进行长度验证
-		{
-			min: 5,
-			message: '简介不能少于5个字',
-			trigger: 'change'
-		},
-		// 对name字段进行必填验证
-		{
-			required: true,
-			message: '请填写姓名',
-			trigger: ['change','blur']
-		},
-	]
-}
+	'userInfo.name': {
+		type: 'string',
+				required: true,
+				message: '请填写姓名',
+				trigger: ['blur', 'change']
+	},
+	code: {
+		type: 'string',
+				required: true,
+				len: 4,
+				message: '请填写4位验证码',
+				trigger: ['blur']
+	},
+	'userInfo.sex': {
+		type: 'string',
+				max: 1,
+				required: true,
+				message: '请选择男或女',
+				trigger: ['blur', 'change']
+	},
+	radiovalue1: {
+		type: 'string',
+				min: 1,
+				max: 2,
+				message: '生命是美好的，请不要放弃治疗',
+				trigger: ['change']
+	},
+	checkboxValue1: {
+		type: 'array',
+				min: 2,
+				required: true,
+				message: '不能太宅，至少选两项',
+				trigger: ['change']
+	},
+	intro: {
+		type: 'string',
+				min: 3,
+				required: true,
+				message: '不低于3个字',
+				trigger: ['change']
+	},
+	hotel: {
+		type: 'string',
+				min: 2,
+				required: true,
+				message: '请选择住店时间',
+				trigger: ['change']
+	},
+	'userInfo.birthday': {
+		type: 'string',
+				required: true,
+				message: '请选择生日',
+				trigger: ['change']
+	},
+},
 ```
 
 
@@ -437,9 +381,9 @@ uView提供了多种校验的错误提示方式，这些值需要包含在数组
 
 ```html
 <template>
-	<u-form :error-type="errorType">
+	<u--form :errorType="errorType">
 		......
-	</u-form>
+	</u--form>
 </template>
 
 <script>
@@ -467,11 +411,11 @@ export default {
 ```html
 <template>
 	<view class="">
-		<u-form :model="form" ref="uForm">
+		<u--form :model="form" ref="uForm">
 			<u-form-item label="姓名" prop="name">
 				<u-input v-model="form.name" />
 			</u-form-item>
-		</u-form>
+		</u--form>
 		<u-button @click="submit">提交</u-button>
 	</view>
 </template>
@@ -505,10 +449,6 @@ export default {
 			});
 		}
 	},
-	// 必须要在onReady生命周期，因为onLoad生命周期组件可能尚未创建完毕
-	onReady() {
-		this.$refs.uForm.setRules(this.rules);
-	}
 };
 </script>
 ```
@@ -523,12 +463,12 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | model | 表单数据对象  | Object	 | - | - |
 | rules | 通过`ref`设置，见上方说明 | Object | - | - |
-| error-type | 错误的提示方式，数组形式，见上方说明 | Array | ['message'] | - |
-| border-bottom <Badge text="1.4.6" /> | 是否显示表单域的下划线边框 | Boolean | true | - |
-| label-position <Badge text="1.4.6" /> | 表单域提示文字的位置，`left`-左侧，`top`-上方 | String | left | top |
-| label-width <Badge text="1.4.6" /> | 提示文字的宽度，单位rpx | String \| Number | 90 | 数值 / auto |
-| label-style <Badge text="1.4.6" /> | `lable`的样式，对象形式 | Object | - | - |
-| label-align <Badge text="1.4.6" /> | `lable`的对齐方式 | String | left |  center / right |
+| errorType | 错误的提示方式，数组形式，见上方说明 | Array | ['message', 'toast'] | - |
+| borderBottom | 是否显示表单域的下划线边框 | Boolean | true | - |
+| labelPosition | 表单域提示文字的位置，`left`-左侧，`top`-上方 | String | left | top |
+| labelWidth | 提示文字的宽度，单位rpx | String \| Number | 45 | 数值 / auto |
+| labelAlign | lable字体的对齐方式 | String | left | center / right |
+| labelStyle | lable的样式，对象形式 | Object | - |  - |
 
 
 ### Form Methods
@@ -537,9 +477,10 @@ export default {
 
 | 名称          | 说明            |    参数   |
 |-------------  |---------------- |  ---------------- |  
-| setRules | 调用此方法，设置校验规则  | Function(rules) |
+| validate | 对整个表单进行校验的方法  |- |
+| validateField | 对部分表单字段进行校验  | Function(value, Function(errorsRes)) |
 | resetFields | 对整个表单进行重置，将所有字段值重置为初始值并移除校验结果  | - |
-| validate | 对整个表单进行校验的方法  | Function(callback: Function(boolean)) |
+| clearValidate | 清空校验结果  | Function(props) |
 
 
 ### Form-item Props
@@ -548,16 +489,11 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | label | 左侧提示文字  | String	 | - | - |
 | prop | 表单域`model`对象的属性名，在使用 validate、resetFields 方法的情况下，该属性是必填的 | String | - | - |
-| border-bottom | 是否显示下边框，如不需要下边框，需同时将`u-form`的同名参数设置为`false` | Boolean | true | true / false |
-| label-position | 表单域提示文字的位置，`left`-左侧，`top`-上方，如设置，将覆盖`u-form`的同名参数 | String | - | left / top |
-| label-width | 提示文字的宽度，单位rpx，如设置，将覆盖`u-form`的同名参数| String \| Number | - | - |
-| label-style | `lable`的样式，对象形式，如设置，将覆盖`u-form`的同名参数 | Object | - | - |
-| label-align | `lable`的对齐方式，如设置，将覆盖`u-form`的同名参数 | String | - |  - |
-| right-icon | 右侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |
-| left-icon | 左侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |
-| left-icon-style | 左侧图标的样式，对象形式 | Object | - | - |
-| right-icon-style | 右侧图标的样式，对象形式 | Object | - | - |
-| required <Badge text="1.3.5" /> | 是否显示左边的"*"号，这里仅起展示作用，如需校验必填，请通过`rules`配置必填规则 | Boolean | false | true |
+| borderBottom | 是否显示下边框，如不需要下边框，需同时将`u-form`的同名参数设置为`false` | Boolean | true | true / false |
+| labelWidth | 提示文字的宽度，单位rpx，如设置，将覆盖`u-form`的同名参数| String \| Number | - | - |
+| rightIcon | 右侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |
+| leftIcon | 左侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |
+| required | 是否显示左边的"*"号，这里仅起展示作用，如需校验必填，请通过`rules`配置必填规则 | Boolean | false | true |
 
 
 ### Form-item Slot
@@ -567,7 +503,11 @@ export default {
 | - | Form Item 的内容 |
 | right | 右侧自定义内容，可以在此传入一个按钮，用于获取验证码等场景 |
 
+### Form-item Events
 
+|事件名|说明|回调参数|版本|
+|:-|:-|:-|:-|
+|click|点击时触发|-|-|
 
 
 
