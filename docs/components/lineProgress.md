@@ -111,10 +111,10 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| active-color | 进度条激活部分的颜色 | String  | #19be6b | - |
-| inactive-color | 进度条的底色，默认为灰色 | String  | #ececec | - |
+| activeColor | 进度条激活部分的颜色 | String  | #19be6b | - |
+| inactiveColor | 进度条的底色，默认为灰色 | String  | #ececec | - |
 | percentage | 进度百分比，数值 | String \| Number | 0 | - |
-| show-text | 是否在进度条内部显示百分比的值 | Boolean | true | false |
+| showText | 是否在进度条内部显示百分比的值 | Boolean | true | false |
 | height | 进度条的高度，默认单位px | String \| Number  | 12 | - |
 
 

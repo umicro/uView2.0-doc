@@ -63,9 +63,9 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | color | 文字颜色 | String | #3c9cff | - |
-| font-size | 字体大小，默认单位px | String \| Number  | 15 | - |
-| under-line | 是否显示下划线 | Boolean  | false | true |
+| fontSize | 字体大小，默认单位px | String \| Number  | 15 | - |
+| underLine | 是否显示下划线 | Boolean  | false | true |
 | href | 跳转的链接，要带上http(s) | String  | - | - |
-| mp-tips | 各个小程序平台把链接复制到粘贴板后的提示语 | String  | 链接已复制，请在浏览器打开 | - |
-| line-color | 下划线颜色，默认同`color`参数颜色 | String  | - | - |
+| mpTips | 各个小程序平台把链接复制到粘贴板后的提示语 | String  | 链接已复制，请在浏览器打开 | - |
+| lineColor | 下划线颜色，默认同`color`参数颜色 | String  | - | - |
 | text | 超链接的问题，不使用slot形式传入，是因为nvue下无法修改颜色 | String  | - | - |

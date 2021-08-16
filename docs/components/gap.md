@@ -14,12 +14,13 @@
 ### 基本使用
 
 直接引入即可使用
-- 通过`height`配置高度，单位rpx
-- 通过`bg-color`配置背景颜色
+- 通过`height`配置高度，单位px
+- 通过`bgColor`配置背景颜色
 
 ```html
-<u-gap height="80" bg-color="#bbb"></u-gap>
+<u-gap height="80" bgColor="#bbb"></u-gap>
 ```
+
 
 ### API
 
@@ -27,7 +28,7 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| bg-color |  背景颜色 | String	 | transparent(背景透明) | - |
-| height | 间隔槽高度，单位rpx  | String \| Number | 30 | - |
-| margin-top | 与前一个元素的距离，单位rpx | String \| Number  | 0 | - |
-| margin-bottom | 与后一个元素的距离，单位rpx | String \| Number  | 0 | - |
+| bgColor |  背景颜色 | String	 | transparent(背景透明) | - |
+| height | 间隔槽高度，单位rpx  | String \| Number | 20 | - |
+| marginTop | 与前一个元素的距离，单位px | String \| Number  | 0 | - |
+| marginBottom | 与后一个元素的距离，单位px | String \| Number  | 0 | - |

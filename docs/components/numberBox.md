@@ -219,21 +219,21 @@ export default {
 | step           | 步长，每次加或减的值， 支持小数值，如需小数              | String \|  Number | 1                         | -      |
 | integer        | 是否只能输入正整数                                       | Boolean           | false                     | true   |
 | disabled       | 是否禁用操作，包括输入框，加减按钮                       | Boolean           | false                     | true   |
-| disabled-input | 是否禁止输入框                                           | Boolean           | false                     | true   |
-| disabled-input | 是否禁止输入框                                           | Boolean           | false                     | true   |
-| async-change   | 是否开启异步变更，开启后需要手动控制输入值               | Boolean           | false                     | true   |
-| input-width    | 输入框宽度，单位px                                       | String \| Number  | 35                        | -      |
-| show-minus     | 是否显示减少按钮                                         | Boolean           | true                      | false  |
-| show-plus      | 是否显示增加按钮                                         | Boolean           | true                      | false  |
-| decimal-length | 显示的小数位数                                           | String \| Number  | -                         | -      |
-| long-press     | 输入框文字和按钮字体大小，单位rpx                        | Boolean           | true                      | false  |
+| disabledInput | 是否禁止输入框                                           | Boolean           | false                     | true   |
+| disabledInput | 是否禁止输入框                                           | Boolean           | false                     | true   |
+| asyncChange   | 是否开启异步变更，开启后需要手动控制输入值               | Boolean           | false                     | true   |
+| inputWidth    | 输入框宽度，单位px                                       | String \| Number  | 35                        | -      |
+| showMinus     | 是否显示减少按钮                                         | Boolean           | true                      | false  |
+| showPlus      | 是否显示增加按钮                                         | Boolean           | true                      | false  |
+| decimalLength | 显示的小数位数                                           | String \| Number  | -                         | -      |
+| longPress     | 输入框文字和按钮字体大小，单位rpx                        | Boolean           | true                      | false  |
 | color          | 输入框文字和加减按钮图标的颜色                           | String            | #323233                   | -      |
-| button-size    | 按钮大小，宽高等于此值，单位px，输入框高度和此值保持一致 | String \| Number  | 30                        | -      |
-| bg-color       | 输入框和按钮的背景颜色                                   | String            | #EBECEE                   | -      |
-| cursor-spacing | 指定光标于键盘的距离，避免键盘遮挡输入框，单位px         | String \| Number  | 100                       | -      |
-| disable-plus   | 是否禁用增加按钮                                         | Boolean           | false                     | true   |
-| disable-minus  | 是否禁用减少按钮                                         | Boolean           | false                     | true   |
-| icon-style     | 加减按钮图标的样式                                       | String            | -                         | -      |
+| buttonSize    | 按钮大小，宽高等于此值，单位px，输入框高度和此值保持一致 | String \| Number  | 30                        | -      |
+| bgColor       | 输入框和按钮的背景颜色                                   | String            | #EBECEE                   | -      |
+| cursorSpacing | 指定光标于键盘的距离，避免键盘遮挡输入框，单位px         | String \| Number  | 100                       | -      |
+| disablePlus   | 是否禁用增加按钮                                         | Boolean           | false                     | true   |
+| disableMinus  | 是否禁用减少按钮                                         | Boolean           | false                     | true   |
+| iconStyle     | 加减按钮图标的样式                                       | String            | -                         | -      |
 
 
 ### Events
