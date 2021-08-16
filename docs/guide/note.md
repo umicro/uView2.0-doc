@@ -9,9 +9,10 @@ uView有很多的自带的js工具函数，挂载在`$u`对象中，而`$u`又�
 #### uView对nvue的支持
 
 什么是`nvue`？见[关于nvue](/guide/design.html#关于nvue)  
-目前uView是`vue`版本，nvue版本正在开发中，如果您查看uView的源码的话，您会发现，内部的css类名都是不嵌套的，因为`nvue`不支持类名嵌套，uView这是
-为了兼容`nvue`做准备，我们后面会将`vue`和`nvue`打通在一个版本中。
-
+<!-- 目前uView是`vue`版本，nvue版本正在开发中，如果您查看uView的源码的话，您会发现，内部的css类名都是不嵌套的，因为`nvue`不支持类名嵌套，uView这是
+为了兼容`nvue`做准备，我们后面会将`vue`和`nvue`打通在一个版本中。 -->
+在uview2.0中，我们为兼容`nvue`做了不懈的努力，终于在无数个日夜后将`vue`和`nvue`打通在uview2.0的版本中，我们相信：
+您在使用2.0版本的uview开发`nvue`时将会如鱼得水，信手拈来。
 
 #### 技术点要求
 
