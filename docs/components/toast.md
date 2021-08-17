@@ -57,13 +57,6 @@ Toast 组件主要用于消息通知、加载提示、操作结果提示等醒�
 						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/success.png'
 					},
 					{
-						type: 'warning',
-						position: "top",
-						title: '位置偏移上方',
-						message: "望帝春心托杜鹃",
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/top.png'
-					},
-					{
 						type: 'loading',
 						title: '正在加载',
 						message: "正在加载",
@@ -75,13 +68,7 @@ Toast 组件主要用于消息通知、加载提示、操作结果提示等醒�
 						message: "此情可待成追忆",
 						url: '/pages/componentsB/tag/tag',
 						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/jump.png'
-					},
-					{
-						title: '禁止触摸穿透',
-						overlay: true,
-						message: "只是当时已惘然",
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/overlay.png'
-					},
+					}
 				],
 			}
 		},
@@ -144,8 +131,6 @@ Toast 组件主要用于消息通知、加载提示、操作结果提示等醒�
 | text | 显示的文本  | String \| Number | - | - |
 | icon | 图标，或者绝对路径的图片 | String | - | - |
 | type | 主题类型 | String | - | - |
-| overlay | 是否显示透明遮罩，防止点击穿透 | Boolean | false | true |
-| position | 位置 | String | center | top / bottom |
 | params | 跳转的参数 | Object | - | - |
 | duration | 展示时间，单位ms | String \| Number | 2000 | - |
 | isTab | 是否返回的为tab页面 | Boolean | false | - |
