@@ -7,7 +7,9 @@
 						多平台快速开发的UI框架
 					</h1>
 					<h2 class="desc-text">
-						uView UI，是uni-app生态最优秀的UI框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水
+						uView UI，是全面兼容nvue的uni-app生态框架，全面的组件和便捷的工具宛如您手上的一把利剑
+						<br>
+						我们的宗旨是：利剑出鞘，一统江湖！
 					</h2>
 					<div class="banner-img">
 						<img src="/index/banner_1920x1080.png" />
