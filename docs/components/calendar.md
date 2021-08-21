@@ -11,9 +11,9 @@
 
 ### 平台差异说明
 
-|  App  |  H5   | 微信小程序 | 支付宝小程序 | 百度小程序 | 头条小程序 | QQ小程序 |
-| :---: | :---: | :--------: | :----------: | :--------: | :--------: | :------: |
-|   √   |   √   |     √      |      √       |     √      |     √      |    √     |
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:| :-:		|:-:			| :-:		| :-:		| :-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 
 ### 基本使用
@@ -361,37 +361,37 @@
 
 ### Props
 
-| 参数                   | 说明                                                                                                | 类型             | 默认值                | 可选值                                    |
-| ---------------------- | --------------------------------------------------------------------------------------------------- | ---------------- | --------------------- | ----------------------------------------- |
-| title                   | 是否显示标题 | Boolean           | true                  | false                       |
-|showSubtitle                | 是否显示副标题   | Boolean          | true                 | false   |
-| mode| 日期类型选择 | String          | single                 | multiple-可以选择多个日期，range-选择日期范围  |
-| startText          |mode=range时，第一个日期底部的提示文字 | String          | 开始                  | -|
-| endText          | mode=range时，最后一个日期底部的提示文字 | String          | 结束 | - |
-|customList| 自定义列表|Array | []               |  []  |
-| color | 主题色，对底部按钮和选中日期有效                 | String | #3c9cff                  | -                                         |
-| minDate               |最小的可选日期 | Number \| String | 0 | -                                         |
-| maxDate              | 最大可选日期                                                                                        | Number \| String | 0| -                                         |
-| defaultDate  | 默认选中的日期，mode为multiple或range是必须为数组格式  | Array \| String \| Date| null  | -                                         |
-| maxCount | mode=multiple时，最多可选多少个日期 | Number \| String | Infinity                  | -                 |
-| rowHeight | 日期行高                 |  Number \|String           | 56              | -                                         |
-| formatter  | 日期格式化函数                 | Function           | null             | -                                         |
-| showLunar                  |是否显示农历  | Boolean           | false | true                         |
-| showMark | 是否显示月份背景色 | Boolean           | true  | false    |
-| z-index                | 弹出时的`z-index`值                                                                                 | String \| Number | 10075                 | -                                         |
-| confirmText           | 确定按钮的文字 | String           | 确定   | -                                         |
-| confirmDisabledText | 确认按钮处于禁用状态时的文字 | String           |确定 | -                                         |
-| show         | 是否显示日历弹窗                   | Boolean | false    | true                                  |
-| closeOnClickOverly  | 是否允许点击遮罩关闭日历 | Boolean           | false                | true              |
+| 参数					| 说明													| 类型		| 默认值	| 可选值										|
+| :-					| :-													| :-		| :-		| :-											|
+| title					| 是否显示标题											| Boolean	| true		| false											|
+|showSubtitle			| 是否显示副标题										| Boolean	| true		| false											|
+| mode					| 日期类型选择											| String	| single	| multiple-可以选择多个日期，range-选择日期范围	|
+| startText				|mode=range时，第一个日期底部的提示文字					| String	| 开始		| -												|
+| endText				| mode=range时，最后一个日期底部的提示文字				| String	| 结束		| -												|
+|customList				| 自定义列表											|Array		| []		|  []											|
+| color					| 主题色，对底部按钮和选中日期有效						| String	| #3c9cff	| -												|
+| minDate               |最小的可选日期			| Number \												| String	| 0			| -												|
+| maxDate              | 最大可选日期			| Number \												| String	| 0			| -												|
+| defaultDate  | 默认选中的日期，mode为multiple或range是必须为数组格式  | Array \				| String \												| Date		| null		| -												|
+| maxCount | mode=multiple时，最多可选多少个日期| Number \												| String	| Infinity	| -												|
+| rowHeight | 日期行高				|  Number \												|String		| 56		| -												|
+| formatter				| 日期格式化函数										| Function	| null		| -												|
+| showLunar				|是否显示农历											| Boolean	| false		| true											|
+| showMark				| 是否显示月份背景色									| Boolean	| true		| false											|
+| z-index                | 弹出时的`z-index`值	| String \												| Number	| 10075		| -												|
+| confirmText			| 确定按钮的文字										| String	| 确定		| -												|
+| confirmDisabledText	| 确认按钮处于禁用状态时的文字							| String	|确定		| -												|
+| show					| 是否显示日历弹窗										| Boolean	| false		| true											|
+| closeOnClickOverly	| 是否允许点击遮罩关闭日历								| Boolean	| false		| true											|
 
 
 
 ### Event
 
-| 事件名 | 说明 | 回调参数 |
-| :----- | :--- | :------- |
-| confirm | 点击`确定`按钮时触发 | 选择日期相关的返回参数 |
-| close | 日历关闭时触发 | 可定义页面关闭时的回调事件 |
+| 事件名		| 说明					| 回调参数				|
+| :-		| :-					| :-					|
+| confirm	| 点击`确定`按钮时触发		| 选择日期相关的返回参数	|
+| close		| 日历关闭时触发			| 可定义页面关闭时的回调事件	|
 
 
 

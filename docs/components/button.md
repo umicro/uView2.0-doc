@@ -16,9 +16,9 @@ uni-app`button`组件比较特殊，因为它有一些其他小程序平台的�
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|	支付宝小程序	|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 文字内容通过`slot`传入
@@ -126,9 +126,9 @@ uView已对接uni-app档关于[uni-app方button组件](https://uni-app.dcloud.io
 |loading|按钮名称前是否带 loading 图标|Boolean|false|true|App-nvue 平台，在 ios 上为雪花，Android上为圆圈|
 |loadingText|加载中提示文字|String|-|-|-|
 |loadingMode|加载状态图标类型|String|spinner|-|-|
-|loadingSize|加载图标大小|String / Number|16|-|-|
+|loadingSize|加载图标大小|String &#124; Number|16|-|-|
 |openType|开放能力，具体请看uniapp稳定关于button组件部分说明|String|-|-|-|
-|formType|用于 <form> 组件，点击分别会触发 <form> 组件的 submit/reset 事件|String|-|-|-|
+|formType|用于 \<form\> 组件，点击分别会触发 \<form\> 组件的 submit/reset 事件|String|-|-|-|
 |appParameter|打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效 （注：只微信小程序、QQ小程序有效）|String|-|-|-|
 |hoverStopPropagation|指定是否阻止本节点的祖先节点出现点击态，微信小程序有效（默认 true）|Boolean|default|medium / mini|-|
 |lang|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文|String|-|-|-|

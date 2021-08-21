@@ -7,9 +7,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App| H5|微信小程序	| 支付宝小程序	|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -137,30 +137,37 @@ export default {
 
 注意：props中没有控制组件弹出与收起的参数，因为这是通过show绑定变量实现的，见上方说明。
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| actions | 按钮的文字数组，见上方文档示例  | Array\<Object\>	 | [ ] | - |
-| show | 是否展示 | Boolean  | false | - |
-| title | 设置标题 | String  | - | - |
-| description | 选项上方的描述信息，见上方文档示例 | String | - | - |
-| cancelText | 取消按钮的文字，不为空时显示按钮 | String  | - | - |
-| closeOnClickAction | 点击某个菜单项时是否关闭弹窗，见上方文档示例 | String  | - | - |
-| safeAreaInsetBottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
-| openType | 小程序的打开方式 | Number \ String  | - | - |
-| closeOnClickOverly | 点击遮罩是否允许关闭，见上方文档示例 | String  | - | - |
-| round | 是否显示圆角 | Boolean  | false | - |
+| 参数					|说明																							|类型					|默认值	|可选值							|
+| :-					|:-																								|:-						|:-		|:-								|
+| show					| 是否展示																						| Boolean				| false	| true							|
+| title					| 设置标题																						| String				| -		| -								|
+| description			| 选项上方的描述信息，见上方文档示例																	| String				| -		| -								|
+| actions				| 按钮的文字数组，见上方文档示例																		| Array\<Object\>		| [ ]	| -								|
+| cancelText			| 取消按钮的文字，不为空时显示按钮																	| String				| -		| -								|
+| closeOnClickAction	| 点击某个菜单项时是否关闭弹窗，见上方文档示例															| String				| -		| -								|
+| safeAreaInsetBottom	| 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明)	| Boolean				| false	| true							|
+| openType				| 小程序的打开方式																					| String &#124; Number	| -		| -								|
+| closeOnClickOverly	| 点击遮罩是否允许关闭，见上方文档示例																| String				| -		| -								|
+| round					| 是否显示圆角																					| Boolean				| false	| true							|
+| lang					| 指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文										| Sting					| en	| zh_CN &#124; zh_TW &#124; en	|
+| sessionFrom			| 会话来源，open-type="contact"时有效。只微信小程序有效												| Sting					| -		| -								|
+| sendMessageTitle		| 会话内消息卡片标题，openType="contact"时有效														| Sting					| -		| -								|
+| sendMessagePath		| 会话内消息卡片点击跳转小程序路径，openType="contact"时有效											| Sting					| -		| -								|
+| sendMessageImg		| 会话内消息卡片图片，openType="contact"时有效														| Sting					| -		| -								|
+| showMessageCard		| 是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，用户点击后可以快速发送小程序消息，openType="contact"时有效| Boolean					|false		| true								|
+| appParameter			| 打开 APP 时，向 APP 传递的参数，openType=launchApp 时有效											| Sting					| -		| -								|
 
 
 ### Event
 
-|事件名|说明|回调参数|版本|
-|:-|:-|:-|:-|
-| select |点击ActionSheet列表项时触发 （默认true） | index: 选项名字 | - |
-| close | 点击取消按钮时触发 | - | - |
-| getuserinfo | 用户点击该按钮时，会返回获取到的用户信息，回调的 detail 数据与 wx.getUserInfo 返回的一致，openType="getUserInfo"时有效 | detail | - |
-| contact | 客服消息回调，openType="contact"时有效 | - | - |
-| getphonenumber | 获取用户手机号回调，openType="getPhoneNumber"时有效 | - | - |
-| error | 当使用开放能力时，发生错误的回调，openType="launchApp"时有效 | - | - |
-| launchapp | 打开 APP 成功的回调，openType="launchApp"时有效 | - | - |
-| opensetting | 在打开授权设置页后回调，openType="openSetting"时有效 | - | - |
+|事件名			|说明																													|回调参数				|版本	|
+|:-				|:-																														|:-					|:-		|
+|select			| 点击ActionSheet列表项时触发 （默认true）																					| index: 选项名字		| -		|
+|close			| 点击取消按钮时触发																										| -					| -		|
+|getuserinfo	| 用户点击该按钮时，会返回获取到的用户信息，回调的 detail 数据与 wx.getUserInfo 返回的一致，openType="getUserInfo"时有效			| detail			| -		| 
+|contact		| 客服消息回调，openType="contact"时有效																					| -					| -		|
+|getphonenumber	| 获取用户手机号回调，openType="getPhoneNumber"时有效																		| -					| -		|
+|error			| 当使用开放能力时，发生错误的回调，openType="error"时有效																		| -					| -		|
+|launchapp		| 打开 APP 成功的回调，openType="launchApp"时有效																			| -					| -		|
+|opensetting	| 在打开授权设置页后回调，openType="openSetting"时有效																		| -					| -		|
 

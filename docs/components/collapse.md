@@ -208,7 +208,7 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| value | 当前展开面板的name，非手风琴模式：\[<String / Number>\]，手风琴模式：String / Number  | String / Number / Array | - | - |
+| value | 当前展开面板的name，非手风琴模式：\[<String &#124; Number>\]，手风琴模式：String &#124; Number  | String &#124; Number &#124;  Array | - | - |
 | accordion | 是否手风琴模式  | Boolean | true | false |
 | border | 是否显示外边框  | Boolean | true | false |
 
@@ -224,7 +224,7 @@
 | clickable | 是否开启点击反馈  | Boolean | true | false |
 | border | 是否显示内边框  | Boolean | true | false |
 | align | 标题的对齐方式  | String | left | - |
-| name | 唯一标识符，如不设置，默认用当前`collapse-item`的索引值 | String \/ Number | - | - |
+| name | 唯一标识符，如不设置，默认用当前`collapse-item`的索引值 | String \&#124; Number | - | - |
 | icon | 标题左侧图片，可为绝对路径的图片或内置图标 | String | - | - |
 
 
@@ -234,9 +234,9 @@
 
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
-| change | 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array) | activeNames: String / Array |
-| open | 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array) | activeNames: String / Array |
-| close | 当前激活面板关闭时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array) | activeNames: String / Array |
+| change | 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array) | activeNames: String &#124;  Array |
+| open | 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array) | activeNames: String &#124;  Array |
+| close | 当前激活面板关闭时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array) | activeNames: String &#124;  Array |
 
 
 ### Collapse Methods 

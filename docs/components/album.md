@@ -6,9 +6,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	| 支付宝小程序	|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -166,23 +166,23 @@
 
 ### Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| urls | 图片地址列表 | Array | - | - |
-| keyName | 指定从数组的对象元素中读取哪个属性作为图片地址 | String  | - | - |
-| singleSize | 单图时，图片长边的长度 | String \| Number | 180 | - |
-| multipleSize | 多图时，图片边长 | String \| Number  | 70 | - |
-| space | 多图时，图片水平和垂直之间的间隔 | String \| Number  | 6 | - |
-| singleMode | 单图时，图片缩放裁剪的模式 | String  | scaleToFill | - |
-| multipleMode | 多图时，图片缩放裁剪的模式 | String  | aspectFill | - |
-| maxCount | 取消按钮的提示文字 | String \| Number  | 9 | - |
-| previewFullImage | 是否可以预览图片 | Boolean | true | false |
-| rowCount | 每行展示图片数量，如设置，singleSize和multipleSize将会无效 | String \| Number | 3 | - |
-| showMore | 超出maxCount时是否显示查看更多的提示 | Boolean | true | false |z
+| 参数				| 说明														| 类型					|	 默认值		|  可选值	|
+|:-					|:-															|:-						|:-				|:-			|
+| urls				| 图片地址列表 支持 Array\<String\> &#124; Array\<Object\>形式	| Array					| -				| -			|
+| keyName			| 指定从数组的对象元素中读取哪个属性作为图片地址					| String				| -				| -			|
+| singleSize		| 单图时，图片长边的长度										| String &#124; Number	| 180			| -			|
+| multipleSize		| 多图时，图片边长												| String &#124; Number	| 70			| -			|
+| space				| 多图时，图片水平和垂直之间的间隔								| String &#124; Number	| 6				| -			|
+| singleMode		| 单图时，图片缩放裁剪的模式										| String				| scaleToFill	| -			|
+| multipleMode		| 多图时，图片缩放裁剪的模式										| String				| aspectFill	| -			|
+| maxCount			| 取消按钮的提示文字											| String &#124; Number	| 9				| -			|
+| previewFullImage	| 是否可以预览图片												| Boolean				| true			| false		|
+| rowCount			| 每行展示图片数量，如设置，singleSize和multipleSize将会无效		| String &#124; Number	| 3				| -			|
+| showMore			| 超出maxCount时是否显示查看更多的提示							| Boolean				| true			| false		|
 
 
 ### Event
 
-|事件名|说明|回调参数|
-|:-|:-|:-|:-|
-| albumWidth | 某些特殊的情况下，需要让文字与相册的宽度相等，这里事件的形式对外发送 | width |
+|事件名		|说明																	| 回调参数	|
+|:-			|:-																		|:-			|
+|albumWidth	|某些特殊的情况下，需要让文字与相册的宽度相等，这里事件的形式对外发送				| width		|
