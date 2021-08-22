@@ -56,8 +56,6 @@
 
 ### 如何控制键盘的打开和关闭？
 
-通过v-model绑定一个值为布尔值的变量控制组件的弹出与收起，v-model的值是双向绑定的。
-
 ```html
 <template>
 	<u-keyboard mode="number" :show="show"></u-keyboard>
@@ -121,11 +119,12 @@
 
 ### Props
 
-注意：props中没有控制键盘弹出与收起的参数，因为这是通过v-model绑定变量实现的，见上方说明。
 
 | 参数                                 | 说明                                                                                                | 类型             | 默认值 | 可选值     |
 | ------------------------------------ | --------------------------------------------------------------------------------------------------- | ---------------- | ------ | ---------- |
+| show                                 | 展开或收起键盘 | Boolean           | false | true |
 | mode                                 | 键盘的类型，number-数字键盘，card-身份证键盘，car-车牌号键盘 | String           | car | number / card |
+| autoChange  | 车牌号键盘下，输入一个中文后，是否自动切换到英文 | Boolean           | false | true |
 | dotDisabled                          | 是否显示"."按键，只在mode=number时有效       | Boolean          | false   | true      |
 | tooltip                              | 是否显示键盘顶部工具条                     | Boolean          | true   | false      |
 | showTips                              | 是否显示工具条中间的提示   | Boolean          | true   | false      |
