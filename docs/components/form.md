@@ -466,7 +466,7 @@ export default {
 | errorType | 错误的提示方式，数组形式，见上方说明 | Array | ['message', 'toast'] | - |
 | borderBottom | 是否显示表单域的下划线边框 | Boolean | true | - |
 | labelPosition | 表单域提示文字的位置，`left`-左侧，`top`-上方 | String | left | top |
-| labelWidth | 提示文字的宽度，单位rpx | String \| Number | 45 | 数值 / auto |
+| labelWidth | 提示文字的宽度，单位rpx | String &#124; Number | 45 | 数值 / auto |
 | labelAlign | lable字体的对齐方式 | String | left | center / right |
 | labelStyle | lable的样式，对象形式 | Object | - |  - |
 
@@ -490,7 +490,7 @@ export default {
 | label | 左侧提示文字  | String	 | - | - |
 | prop | 表单域`model`对象的属性名，在使用 validate、resetFields 方法的情况下，该属性是必填的 | String | - | - |
 | borderBottom | 是否显示下边框，如不需要下边框，需同时将`u-form`的同名参数设置为`false` | Boolean | true | true / false |
-| labelWidth | 提示文字的宽度，单位rpx，如设置，将覆盖`u-form`的同名参数| String \| Number | - | - |
+| labelWidth | 提示文字的宽度，单位rpx，如设置，将覆盖`u-form`的同名参数| String &#124; Number | - | - |
 | rightIcon | 右侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |
 | leftIcon | 左侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |
 | required | 是否显示左边的"*"号，这里仅起展示作用，如需校验必填，请通过`rules`配置必填规则 | Boolean | false | true |

@@ -213,24 +213,24 @@ export default {
 | 参数           | 说明                                                     | 类型              | 默认值                    | 可选值 |
 | -------------- | -------------------------------------------------------- | ----------------- | ------------------------- | ------ |
 | v-model        | 用于双向绑定的值，初始化时设置设为默认min值(最小值)      | Number            | 1                         | -      |
-| name           | 步进器标识符，在change回调返回                           | String \| Number  | -                         | -      |
+| name           | 步进器标识符，在change回调返回                           | String &#124; Number  | -                         | -      |
 | min            | 用户可输入的最小值                                       | Number            | 0                         | -      |
 | max            | 用户可输入的最大值                                       | Number            | `Number.MAX_SAFE_INTEGER` | -      |
-| step           | 步长，每次加或减的值， 支持小数值，如需小数              | String \|  Number | 1                         | -      |
+| step           | 步长，每次加或减的值， 支持小数值，如需小数              | String &#124;  Number | 1                         | -      |
 | integer        | 是否只能输入正整数                                       | Boolean           | false                     | true   |
 | disabled       | 是否禁用操作，包括输入框，加减按钮                       | Boolean           | false                     | true   |
 | disabledInput | 是否禁止输入框                                           | Boolean           | false                     | true   |
 | disabledInput | 是否禁止输入框                                           | Boolean           | false                     | true   |
 | asyncChange   | 是否开启异步变更，开启后需要手动控制输入值               | Boolean           | false                     | true   |
-| inputWidth    | 输入框宽度，单位px                                       | String \| Number  | 35                        | -      |
+| inputWidth    | 输入框宽度，单位px                                       | String &#124; Number  | 35                        | -      |
 | showMinus     | 是否显示减少按钮                                         | Boolean           | true                      | false  |
 | showPlus      | 是否显示增加按钮                                         | Boolean           | true                      | false  |
-| decimalLength | 显示的小数位数                                           | String \| Number  | -                         | -      |
+| decimalLength | 显示的小数位数                                           | String &#124; Number  | -                         | -      |
 | longPress     | 输入框文字和按钮字体大小，单位rpx                        | Boolean           | true                      | false  |
 | color          | 输入框文字和加减按钮图标的颜色                           | String            | #323233                   | -      |
-| buttonSize    | 按钮大小，宽高等于此值，单位px，输入框高度和此值保持一致 | String \| Number  | 30                        | -      |
+| buttonSize    | 按钮大小，宽高等于此值，单位px，输入框高度和此值保持一致 | String &#124; Number  | 30                        | -      |
 | bgColor       | 输入框和按钮的背景颜色                                   | String            | #EBECEE                   | -      |
-| cursorSpacing | 指定光标于键盘的距离，避免键盘遮挡输入框，单位px         | String \| Number  | 100                       | -      |
+| cursorSpacing | 指定光标于键盘的距离，避免键盘遮挡输入框，单位px         | String &#124; Number  | 100                       | -      |
 | disablePlus   | 是否禁用增加按钮                                         | Boolean           | false                     | true   |
 | disableMinus  | 是否禁用减少按钮                                         | Boolean           | false                     | true   |
 | iconStyle     | 加减按钮图标的样式                                       | String            | -                         | -      |

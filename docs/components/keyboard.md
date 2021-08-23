@@ -135,7 +135,7 @@
 | overlay                                 | 是否显示遮罩                                                                                        | Boolean          | true   | false      |
 | confirmText                                 | 确认按钮的文字     | String          | 确认   | -      |
 | cancelText                                 | 取消按钮的文字     | String          | 取消   | -      |
-| zIndex                              | 弹出键盘的`z-index`值                       | Number \| String | 1075   | -          |
+| zIndex                              | 弹出键盘的`z-index`值                       | Number &#124; String | 1075   | -          |
 | random                               | 是否打乱键盘按键的顺序                                                                              | Boolean          | false  | true       |
 | safeAreaInsetBottom            | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean          | false  | true       |
 | maskCloseAble                      | 是否允许点击遮罩收起键盘                    | Boolean          | true   | false      |

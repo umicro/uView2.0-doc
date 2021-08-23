@@ -108,10 +108,10 @@
 | inactiveColor  | 图标的暗边颜色, `mode`为`circle` 模式有效                                              | String           | transparent | -                   |
 | vertical        | 图标和文字是否垂直排列                                                                 | Boolean          | false       | true                |
 | text            | 文字内容                                                                               | String           | -           | -                   |
-| size            | 加载图标的大小，单位px                                                                 | String \| Number | 24          | -                   |
-| textSize        | 加载文字的大小，单位px                                                                 | String \| Number | 15          | -                   |
+| size            | 加载图标的大小，单位px                                                                 | String &#124; Number | 24          | -                   |
+| textSize        | 加载文字的大小，单位px                                                                 | String &#124; Number | 15          | -                   |
 | show            | 是否显示动画                                                                           | Boolean          | true        | false               |
 | timingFunction | 指定`animation-timing-function`的css属性，但只支持`mode`为`circle`或`semicircle`才有效 | Boolean          | true        | false               |
-| duration        | 动画执行周期时间，单位ms                                                               | string \| Number | 1200        | -                   |
+| duration        | 动画执行周期时间，单位ms                                                               | string &#124; Number | 1200        | -                   |
 
 

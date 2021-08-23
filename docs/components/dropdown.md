@@ -236,13 +236,13 @@ let options = [
 | inactive-color | 标题和选项卡未选中的颜色  | String  | #606266 | - |
 | close-on-click-mask | 点击遮罩是否关闭菜单  | Boolean | true | false |
 | close-on-click-self | 点击当前激活项标题是否关闭菜单  | Boolean | true | false |
-| duration | 选项卡展开和收起的过渡时间，单位ms  | String \| Number | 300 | - |
-| height | 标题菜单的高度，单位任意，数值默认为rpx单位 | String \| Number | 80 | - |
+| duration | 选项卡展开和收起的过渡时间，单位ms  | String &#124; Number | 300 | - |
+| height | 标题菜单的高度，单位任意，数值默认为rpx单位 | String &#124; Number | 80 | - |
 | border-bottom | 标题菜单是否显示下边框  | Boolean | false | true |
-| title-size | 标题的字体大小，单位任意，数值默认为rpx单位 | String \| Number | 28 | - |
-| border-radius <Badge text="1.7.2" /> | 菜单展开内容下方的圆角值，单位任意 | String \| Number | 0 | - |
+| title-size | 标题的字体大小，单位任意，数值默认为rpx单位 | String &#124; Number | 28 | - |
+| border-radius <Badge text="1.7.2" /> | 菜单展开内容下方的圆角值，单位任意 | String &#124; Number | 0 | - |
 | menu-icon <Badge text="1.7.6" /> | 标题菜单右侧的图标 | String | arrow-down | arrow-down-fill |
-| menu-icon-size <Badge text="1.7.6" /> | 标题菜单右侧的图标的大小，单位任意，数值默认为rpx单位 | String \| Number | 26 | - |
+| menu-icon-size <Badge text="1.7.6" /> | 标题菜单右侧的图标的大小，单位任意，数值默认为rpx单位 | String &#124; Number | 26 | - |
 
 
 ### Dropdown Events <Badge text="1.6.5" />
@@ -257,11 +257,11 @@ let options = [
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| v-model | 双向绑定选项卡选择值  | String \| Number | - | - |
+| v-model | 双向绑定选项卡选择值  | String &#124; Number | - | - |
 | title | 菜单项标题  | String  | - | - |
 | options | 选项数据，如果传入了默认slot，此参数无效，数据结构见上方说明  | Array[Object]  | - | - |
 | disabled | 是否禁用此选项卡  | Boolean | false | true |
-| height <Badge text="1.7.0" /> | 弹窗下拉内容的高度(内容超出将会滚动)，`slot`自定义内容时无效(自行使用`scroll-view`处理)，单位任意，默认rpx | String \| Number | auto | - |
+| height <Badge text="1.7.0" /> | 弹窗下拉内容的高度(内容超出将会滚动)，`slot`自定义内容时无效(自行使用`scroll-view`处理)，单位任意，默认rpx | String &#124; Number | auto | - |
 
 
 

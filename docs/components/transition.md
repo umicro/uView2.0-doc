@@ -72,7 +72,7 @@
 |------------- |---------------- |---------------|------------------ |-------- |
 | show         | 是否展示组件 | Boolean | true | false |
 | mode         | 使用的动画模式 | String | fade | true |
-| duration     | 动画的执行时间，单位ms | String \| Number  | 300 | - |
+| duration     | 动画的执行时间，单位ms | String &#124; Number  | 300 | - |
 | timingFunction  | 使用的动画过渡函数，见上方说明 | String  | ease-out | - |
 | customStyle  | 自定义样式 | Object  | - | - |
 

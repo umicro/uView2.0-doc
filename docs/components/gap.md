@@ -29,6 +29,6 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | bgColor |  背景颜色 | String	 | transparent(背景透明) | - |
-| height | 间隔槽高度，单位rpx  | String \| Number | 20 | - |
-| marginTop | 与前一个元素的距离，单位px | String \| Number  | 0 | - |
-| marginBottom | 与后一个元素的距离，单位px | String \| Number  | 0 | - |
+| height | 间隔槽高度，单位rpx  | String &#124; Number | 20 | - |
+| marginTop | 与前一个元素的距离，单位px | String &#124; Number  | 0 | - |
+| marginBottom | 与后一个元素的距离，单位px | String &#124; Number  | 0 | - |

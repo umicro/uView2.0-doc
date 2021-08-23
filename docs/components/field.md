@@ -229,11 +229,11 @@ export default {
 | label | 输入框左边的文字提示 | String  | - | - |
 | password | 是否密码输入方式(用点替换文字)，`type`为`text`时有效 | Boolean  | false | true |
 | clearable | 是否显示右侧清空内容的图标控件(输入框有内容，且获得焦点时才显示)，点击可清空输入框内容 | Boolean  | true | false |
-| label-width | `label`的宽度，单位rpx | Number \| String | 130 | - |
+| label-width | `label`的宽度，单位rpx | Number &#124; String | 130 | - |
 | label-align | `label`的文字对齐方式 | String  | left | center / right |
 | input-align | 输入框内容对齐方式 | String | left | center / right |
 | icon-color | 左边通过`icon`配置的图标的颜色 | String  | #606266 | - |
-| clear-size | 清除图标的大小，单位rpx | Number \| String | 30 | - |
+| clear-size | 清除图标的大小，单位rpx | Number &#124; String | 30 | - |
 | field-style | 输入框的样式，对象形式 | Object  | - | - |
 | auto-height | 是否自动增高输入区域，`type`为`textarea`时有效 | Boolean | true | false |
 | error-message | 显示的错误提示内容，如果为空字符串或者`false`，则不显示错误信息 | String \ Boolean  | - | - |
@@ -242,7 +242,7 @@ export default {
 | focus | 是否自动获得焦点 | Boolean | false | true |
 | fixed | 如果`type`为`textarea`，且在一个"position:fixed"的区域，需要指明为`true` | Boolean | false | true |
 | disabled | 是否不可输入 | Boolean | false | true |
-| maxlength | 最大输入长度，设置为 -1 的时候不限制最大长度 | Number \| String | 140 | - |
+| maxlength | 最大输入长度，设置为 -1 的时候不限制最大长度 | Number &#124; String | 140 | - |
 | confirm-type | 设置键盘右下角按钮的文字，仅在type="text"时生效 | String | done | - |
 | trim <Badge text="1.5.8" /> | 是否自动去除两端的空格 | Boolean | true | false |
 

@@ -87,15 +87,16 @@ export default {
 
 ### Props
 
-| 参数			| 说明											| 类型					| 默认值			| 可选值								|
-|:-				|:-												|:-						|:-				|:-									|
-| title			| 显示的文字										| String				| -				| -									|
-| description	| 辅助性文字，颜色比`title`浅一点，字号也小一点，可选	| String				| -				| -									|
-| closable		| 关闭按钮(默认为叉号icon图标)						| Boolean				| false			| true								|
-| type			| 使用预设的颜色									| String				| warning		| success  &#124; primary  &#124; error  &#124; info	|
-| showIcon		| 是否显示左边的辅助图标							| String				| light(浅色)	| dark(深色)							|
-| center		| 文字是否居中									| Boolean				| false			| true								|
-| fontSize		| 字体大小										| String &#124; Number	| -				| -									|
+| 参数			| 说明													| 类型					| 	默认值		| 	可选值											|
+|:-				|:-														|:-						|:-				|:-													|
+| title			| 显示的文字												| String				| -				| -													|
+| type			| 使用预设的颜色											| String				| warning		| success &#124; primary &#124; error &#124; info	|
+| description	| 辅助性文字，颜色比`title`浅一点，字号也小一点，可选			| String				| -				| -													|
+| closable		| 关闭按钮(默认为叉号icon图标)								| Boolean				| false			| true												|
+| showIcon		| 是否显示左边的辅助图标									| Boolean				| false			| true												|
+| effect		| 多图时，图片缩放裁剪的模式									| String				| light(浅色)	| dark(深色)											|
+| center		| 文字是否居中											| Boolean				| false			| true												|
+| fontSize		| 字体大小												| String &#124; Number	| 14			| -													|
 
 
 ### Events

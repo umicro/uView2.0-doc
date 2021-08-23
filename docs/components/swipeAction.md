@@ -273,12 +273,12 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | show | 控制打开或者关闭 | Boolean  | false | true |
-| index | 标识符，如果是v-for，可用index索引 | String \| Number | - | - |
+| index | 标识符，如果是v-for，可用index索引 | String &#124; Number | - | - |
 | disabled | 是否禁用 | Boolean  | false | true |
 | autoClose | 是否自动关闭其他swipe按钮组 | Boolean  | true | false |
 | threshold | 滑动距离阈值，只有大于此值，才被认为是要打开菜单 | Number  | 30 | - |
 | rightOptions | 右侧按钮内容 | Array  | [] | - |
-| duration | 动画过渡时间，单位ms | String \| Number  | 350 | - |
+| duration | 动画过渡时间，单位ms | String &#124; Number  | 350 | - |
 
 ### SwipeActionItem Event
 

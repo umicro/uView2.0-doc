@@ -173,15 +173,15 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |------------- |---------------- |---------------|------------------ |-------- |
-| showHeight   | 内容超出此高度才会显示展开全文按钮，单位rpx | String \| Number | 400 | - |
+| showHeight   | 内容超出此高度才会显示展开全文按钮，单位rpx | String &#124; Number | 400 | - |
 | toggle       | 展开后是否显示收起按钮 | Boolean  | false | true |
 | closeText    | 关闭时的提示文字 | String  | 展开阅读全文 | - |
 | openText     | 展开时的提示文字 | String  | 收起 | - |
-| fontSize     | 提示文字的大小，默认单位px | String \| Number  | 14 | - |
+| fontSize     | 提示文字的大小，默认单位px | String &#124; Number  | 14 | - |
 | color        | 提示文字的颜色 | String  | #2979ff | - |
 | textIndent   | 段落首行缩进的字符个数 | String  | 2em | - |
 | shadowStyle  | 对阴影的自定义处理，对象形式 | Object  | 见上方说明 | - |
-| name         | 用于在`open`和`close`事件中当作回调参数返回 | String \| Number  | - | - |
+| name         | 用于在`open`和`close`事件中当作回调参数返回 | String &#124; Number  | - | - |
 
 ### Methods
 

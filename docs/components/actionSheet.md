@@ -146,7 +146,7 @@ export default {
 | cancelText			| 取消按钮的文字，不为空时显示按钮																	| String				| -		| -								|
 | closeOnClickAction	| 点击某个菜单项时是否关闭弹窗，见上方文档示例															| String				| -		| -								|
 | safeAreaInsetBottom	| 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明)	| Boolean				| false	| true							|
-| openType				| 小程序的打开方式																					| String &#124; Number	| -		| -								|
+| openType				| 小程序的打开方式																					| String				| -		| -								|
 | closeOnClickOverly	| 点击遮罩是否允许关闭，见上方文档示例																| String				| -		| -								|
 | round					| 是否显示圆角																					| Boolean				| false	| true							|
 | lang					| 指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文										| Sting					| en	| zh_CN &#124; zh_TW &#124; en	|
@@ -154,7 +154,7 @@ export default {
 | sendMessageTitle		| 会话内消息卡片标题，openType="contact"时有效														| Sting					| -		| -								|
 | sendMessagePath		| 会话内消息卡片点击跳转小程序路径，openType="contact"时有效											| Sting					| -		| -								|
 | sendMessageImg		| 会话内消息卡片图片，openType="contact"时有效														| Sting					| -		| -								|
-| showMessageCard		| 是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，用户点击后可以快速发送小程序消息，openType="contact"时有效| Boolean					|false		| true								|
+| showMessageCard		| 是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，用户点击后可以快速发送小程序消息，openType="contact"时有效| Boolean|false| true|
 | appParameter			| 打开 APP 时，向 APP 传递的参数，openType=launchApp 时有效											| Sting					| -		| -								|
 
 
@@ -162,7 +162,7 @@ export default {
 
 |事件名			|说明																													|回调参数				|版本	|
 |:-				|:-																														|:-					|:-		|
-|select			| 点击ActionSheet列表项时触发 （默认true）																					| index: 选项名字		| -		|
+|select			| 点击ActionSheet列表项时触发																								| -					| -		|
 |close			| 点击取消按钮时触发																										| -					| -		|
 |getuserinfo	| 用户点击该按钮时，会返回获取到的用户信息，回调的 detail 数据与 wx.getUserInfo 返回的一致，openType="getUserInfo"时有效			| detail			| -		| 
 |contact		| 客服消息回调，openType="contact"时有效																					| -					| -		|

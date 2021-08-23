@@ -119,12 +119,12 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | list | 选项的数组，形式见上方"基本使用" | Array | - | - |
-| current | 初始化时默认选中的选项索引值  | String \| Number | 0 | - |
+| current | 初始化时默认选中的选项索引值  | String &#124; Number | 0 | - |
 | active-color | 激活时的颜色 | String | #303133 | - |
 | inactive-color | 未激活时的颜色 | String | #606266 | - |
 | mode | 模式选择，见上方"模式选择"说明 | String | button | subsection |
-| font-size | 字体大小，单位rpx | String \| Number | 28 | - |
-| height | 组件高度，单位rpx | String \| Number | 70 | - |
+| font-size | 字体大小，单位rpx | String &#124; Number | 28 | - |
+| height | 组件高度，单位rpx | String &#124; Number | 70 | - |
 | animation | 是否开启动画效果，见上方说明 | Boolean | true | false |
 | bold | 激活选项的字体是否加粗 | Boolean | true | false |
 | bg-color | 组件背景颜色，`mode`为`button`时有效 | String | #eeeeef | - |

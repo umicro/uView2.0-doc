@@ -114,10 +114,10 @@
 | iconColor    | 加载中的动画图标的颜色                                  | String           | #b7b7b7     | -                    |
 | isDot        | `status`为`nomore`时，内容显示为一个"●"                 | Boolean          | false       | true                 |
 | color         | 字体颜色                                                | String           | #606266     | -                    |
-| fontSize     | 字体大小，单位rpx                                       | String \| Number | 28          | -                    |
-| height        | 高度                                                    | String \| Number | auto        | -                    |
-| marginTop    | 与前一个元素的距离，单位rpx                             | String \| Number | 20          | -                    |
-| marginBottom | 与后一个元素的距离，单位rpx                             | String \| Number | 20          | -                    |
+| fontSize     | 字体大小，单位rpx                                       | String &#124; Number | 28          | -                    |
+| height        | 高度                                                    | String &#124; Number | auto        | -                    |
+| marginTop    | 与前一个元素的距离，单位rpx                             | String &#124; Number | 20          | -                    |
+| marginBottom | 与后一个元素的距离，单位rpx                             | String &#124; Number | 20          | -                    |
 | loadingIcon  | 加载中状态的图标                                        | String           | circle      | spinner / semicircle |
 | loadingText  | 加载中提示语                                            | String           | 正在加载... | -                    |
 | loadmoreText | 加载前的提示语                                          | String           | 加载更多    | -                    |

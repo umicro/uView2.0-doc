@@ -192,15 +192,15 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 |-------------  |---------------- |---------------|------------------ |-------- |
 | is-scroll | tabs是否可以左右拖动  | Boolean | true | false |
 | list | 标签数组，元素为对象，如[{name: '推荐'}] | Array  | - | - |
-| current | 指定哪个tab为激活状态 | String \| Number  | 0，即`list`的第一项 | - |
-| height | 导航栏的高度，单位rpx | String \| Number  | 80 | - |
-| font-size | tab文字大小，单位rpx | String \| Number  | 30 | - |
-| swiper-width | tabs组件外部swiper的宽度，默认为屏幕宽度，单位rpx | string \| Number  | 750 | - |
+| current | 指定哪个tab为激活状态 | String &#124; Number  | 0，即`list`的第一项 | - |
+| height | 导航栏的高度，单位rpx | String &#124; Number  | 80 | - |
+| font-size | tab文字大小，单位rpx | String &#124; Number  | 30 | - |
+| swiper-width | tabs组件外部swiper的宽度，默认为屏幕宽度，单位rpx | string &#124; Number  | 750 | - |
 | active-color | 滑块和激活tab文字的颜色  | String | #2979ff | - |
 | inactive-color | tabs文字颜色 | String  | #303133 | - |
-| bar-width | 滑块宽度，单位rpx | String \| Number  | 40 | - |
-| bar-height | 滑块高度，单位rpx | String \| Number  | 6 | - |
-| gutter | 单个tab标签的左右内边距之和，单位rpx | String \| Number  | 40 | - |
+| bar-width | 滑块宽度，单位rpx | String &#124; Number  | 40 | - |
+| bar-height | 滑块高度，单位rpx | String &#124; Number  | 6 | - |
+| gutter | 单个tab标签的左右内边距之和，单位rpx | String &#124; Number  | 40 | - |
 | bg-color | tabs导航栏的背景颜色 | string  | #ffffff | - |
 | name | 组件内部读取的`list`参数中的属性名（tab名称），见上方说明 | string  | name | - |
 | bold | 激活选项的字体是否加粗 | Boolean | true | false |

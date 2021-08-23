@@ -73,13 +73,13 @@ export default {
 
 | 参数                | 说明                                   | 类型             | 默认值  | 可选值 |
 | ------------------- | -------------------------------------- | ---------------- | ------- | ------ |
-| top                 | 到顶部的距离                           | String \| Number | 0       | -      |
+| top                 | 到顶部的距离                           | String &#124; Number | 0       | -      |
 | type                | 主题，primary，success，warning，error | String           | primary | -      |
 | color               | 字体颜色                               | String           | #ffffff | -      |
 | bgColor            | 背景颜色                               | String           | -       | -      |
 | message             | 展示的文字内容                         | String           | -       | -      |
-| duration            | 展示时长，为0时不消失，单位ms          | String \| Number | 3000    | -      |
-| fontSize           | 字体大小，单位rpx                      | String \| Number | 30      | -      |
+| duration            | 展示时长，为0时不消失，单位ms          | String &#124; Number | 3000    | -      |
+| fontSize           | 字体大小，单位rpx                      | String &#124; Number | 30      | -      |
 | safeAreaInsetTop | 是否留出顶部安全距离（状态栏高度）     | Boolean          | false   | true   |
 
 

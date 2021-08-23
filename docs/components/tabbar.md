@@ -200,10 +200,10 @@ value6: 0,
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| value | 当前匹配项的name | String \| Number | null | - |
+| value | 当前匹配项的name | String &#124; Number | null | - |
 | safeAreaInsetBottom | 是否为iPhoneX留出底部安全距离 | Boolean | true | false |
 | border | 是否显示上方边框 | Boolean | true | false |
-| zIndex | 元素层级z-index | String \| Number | 1 | - |
+| zIndex | 元素层级z-index | String &#124; Number | 1 | - |
 | activeColor |  选中标签的颜色 | String | #1989fa | - |
 | inactiveColor | 未选中标签的颜色 | String  | #7d7e80 | - |
 | fixed | 是否固定在底部 | Boolean | true | false |
@@ -214,12 +214,12 @@ value6: 0,
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| name | item标签的名称，作为与u-tabbar的value参数匹配的标识符 | String \| Number | null | - |
+| name | item标签的名称，作为与u-tabbar的value参数匹配的标识符 | String &#124; Number | null | - |
 | icon | uView内置图标或者绝对路径的图片 | String \ | - | - |
-| badge | 右上角的角标提示信息 | String \| Number  | null | - |
+| badge | 右上角的角标提示信息 | String &#124; Number  | null | - |
 | dot | 是否显示圆点，将会覆盖badge参数 | Boolean | false | true |
 | text | 描述文本 | String | - | - |
-| badgeStyle | 控制徽标的位置，对象或者字符串形式，可以设置top和right属性 | Object \| String | 'top: 6px;right:2px;' | - |
+| badgeStyle | 控制徽标的位置，对象或者字符串形式，可以设置top和right属性 | Object &#124; String | 'top: 6px;right:2px;' | - |
 
 ### TableBarItem Events
 

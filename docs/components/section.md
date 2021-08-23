@@ -42,7 +42,7 @@
 | sub-title | 右边副标题 | String  | 更多 | - |
 | right | 是否显示右边的内容 | Boolean  | true | false |
 | show-line <Badge text="1.3.3" /> | 是否显示左边的竖条 | Boolean  | true | false |
-| font-size | 主标题的字体大小 | String \| Number  | 28 | - |
+| font-size | 主标题的字体大小 | String &#124; Number  | 28 | - |
 | bold | 主标题是否加粗 | Boolean  | true | false |
 | color | 主标题颜色 | String  | #303133 | - |
 | sub-color | 右边副标题的颜色(右箭头同此颜色) | String  | #909399 | - |

@@ -87,8 +87,8 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | value | 输入框的内容 | String | - | - |
-| placeholder | 输入框为空时占位符 | Number \| String | - | - |
-| height | 输入框高度 | String \| Number  | 70 | - |
+| placeholder | 输入框为空时占位符 | Number &#124; String | - | - |
+| height | 输入框高度 | String &#124; Number  | 70 | - |
 | confirmType | 设置键盘右下角按钮的文字，仅微信小程序，App-vue和H5有效 | String | done | - |
 | disabled | 是否禁用 | Boolean | false | true |
 | count | 是否显示统计字数 | Boolean | false | true |
@@ -96,14 +96,14 @@
 | autoHeight | 是否自动增加高度 | Boolean | false | true |
 | fixed | 如果textarea是在一个position:fixed的区域，需要显示指定属性fixed为true | Boolean  | false | true |
 | cursorSpacing | 指定光标与键盘的距离 | Number  | 0 | - |
-| cursor | 指定focus时的光标位置 | Number \| String  | - | - |
+| cursor | 指定focus时的光标位置 | Number &#124; String  | - | - |
 | showConfirmBar | 是否显示键盘上方带有”完成“按钮那一栏， | Boolean | true | false |
 | selectionStart | 光标起始位置，自动聚焦时有效，需与selection-end搭配使用 | Number | -1 | - |
 | selectionEnd | 光标结束位置，自动聚焦时有效，需与selection-start搭配使用 | Number | -1 | - |
 | adjustPosition | 键盘弹起时，是否自动上推页面 | Boolean | true | false |
 | disableDefaultPadding | 是否去掉 iOS 下的默认内边距，只微信小程序有效 | Boolean | false | true |
 | holdKeyboard | focus时，点击页面的时候不收起键盘，只微信小程序有效 | Boolean | false | true |
-| maxlength | 最大输入长度，设置为 -1 的时候不限制最大长度 | String \| Number | 140 | - |
+| maxlength | 最大输入长度，设置为 -1 的时候不限制最大长度 | String &#124; Number | 140 | - |
 | border | 边框类型 | String | surround | bottom |
 
 

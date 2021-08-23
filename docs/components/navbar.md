@@ -152,7 +152,7 @@ uView提供了一个`bg-color`参数，可以自定义导航栏的背景颜色�
 
 | 参数                | 说明                                                   | 类型             | 默认值     | 可选值 |
 | ------------------- | ------------------------------------------------------ | ---------------- | ---------- | ------ |
-| height              | 导航栏高度(不包括状态栏高度在内，内部自动加上)，单位px | String \| Number | 44         | -      |
+| height              | 导航栏高度(不包括状态栏高度在内，内部自动加上)，单位px | String &#124; Number | 44         | -      |
 | placeholder         | 固定在顶部时，是否生成一个等高元素，以防止塌陷         | Boolean          | false      | true   |
 | fixed               | 导航栏是否固定在顶部                                   | Boolean          | true       | false  |
 | border              | 导航栏底部是否显示下边框                               | Boolean          | false      | true   |
@@ -162,7 +162,7 @@ uView提供了一个`bg-color`参数，可以自定义导航栏的背景颜色�
 | rightText          | 右边的提示文字                                         | String           | -          | -      |
 | title               | 导航栏标题，如设置为空字符，将会隐藏标题占位区域       | String           | -          | -      |
 | bgColor            | 导航栏背景设置                                         | String           | #ffffff    | -      |
-| titleWidth         | 导航栏标题的最大宽度，内容超出会以省略号隐藏，单位rpx  | String \| Number | 400        | -      |
+| titleWidth         | 导航栏标题的最大宽度，内容超出会以省略号隐藏，单位rpx  | String &#124; Number | 400        | -      |
 | safeAreaInsetTop | 是否开启顶部安全区适配                                 | Boolean          | true       | false  |
 
 

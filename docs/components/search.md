@@ -100,15 +100,15 @@
 | disabled      | 是否启用输入框 | Boolean | false | true |
 | animation     | 是否开启动画，见上方说明 | Boolean | false | true |
 | borderColor   | 边框颜色，配置了颜色，才会有边框  | String | - | - |
-| height        | 输入框高度，单位rpx | String \| Number | 64 | - |
+| height        | 输入框高度，单位rpx | String &#124; Number | 64 | - |
 | margin        | 组件与其他上下左右元素之间的距离，带单位的字符串形式，如"30rpx"、"30rpx 20rpx"等写法 | String | - | - |
 | inputStyle    | 自定义输入框样式，对象形式 | Object | - | - |
-| maxlength     | 输入框最大能输入的长度，-1为不限制长度 | String \| Number | -1 | - |
+| maxlength     | 输入框最大能输入的长度，-1为不限制长度 | String &#124; Number | -1 | - |
 | searchIcon    | 输入框左边的图标，可以为uView图标名称或图片路径 | String | search | - |
 | searchIconColor | 搜索图标的颜色，默认同输入框字体颜色 | String | #909399 | - |
 | color         | 输入框字体颜色 | String | #606266 | - |
 | placeholderColor | placeholder的颜色 | String | #909399 | - |
-| label         | 搜索左侧文本信息 | String \| Number | - | - |
+| label         | 搜索左侧文本信息 | String &#124; Number | - | - |
 
 
 ### Events

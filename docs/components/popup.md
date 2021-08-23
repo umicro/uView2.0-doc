@@ -94,12 +94,12 @@
 | show         | 是否展示弹窗 | Boolean | false | true |
 | overlay      | 是否显示遮罩 | Boolean | true | false |
 | mode         | 弹出方向 | String | left | top / right / bottom / center |
-| duration     | 遮罩打开或收起的动画过渡时间，单位ms | String \| Number | 3000 | - |
-| borderRadius | 弹窗圆角值 | String \| Number | 0 | - |
+| duration     | 遮罩打开或收起的动画过渡时间，单位ms | String &#124; Number | 3000 | - |
+| borderRadius | 弹窗圆角值 | String &#124; Number | 0 | - |
 | closeable    | 是否显示关闭图标 | Boolean | false | true |
 | overlayStyle | 遮罩自定义样式，一般用于修改遮罩透明度对象形式，如：{background: 'rgba(0, 0, 0, 0.5)'}  | Object | - | - |
 | closeOnClickOverly | 点击遮罩是否关闭弹窗 | Boolean | true | false |
-| zIndex       | 弹出层的`z-index`值 | Number \| String | 10075 | - |
+| zIndex       | 弹出层的`z-index`值 | Number &#124; String | 10075 | - |
 | safeAreaInsetBottom | 是否为留出[底部安全距离](/components/safeAreaInset.html) | Boolean | true | false |
 | safeAreaInsetTop | 是否留出[顶部安全距离](/components/safeAreaInset.html)（状态栏高度） | Boolean | false | true |
 | closeIconPos | 自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角  | String | top-right | top-left / bottom-left / bottom-right |

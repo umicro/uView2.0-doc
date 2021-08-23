@@ -25,4 +25,4 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | bgColor | 背景色  | String | transparent | - |
-| customStyle | 自定义样式  | String \| Object | - | - |
+| customStyle | 自定义样式  | String &#124; Object | - | - |

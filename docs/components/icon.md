@@ -56,20 +56,20 @@
 |-----------|-----------|----------|----------|---------|
 | name | 图标名称，见示例图标集，如名称带有`/`，会被认为是图片图标  | String | - | - |
 | color | 图标颜色 | String  | #606266 | - |
-| size | 图标字体大小，单位默认px | String \| Number  | 16px | - |
+| size | 图标字体大小，单位默认px | String &#124; Number  | 16px | - |
 | bold | 是否显示粗体 | Boolean  | false | - |
-| index | 一个用于区分多个图标的值，点击图标时通过`click`事件传出 | String \| Number  | - | - |
+| index | 一个用于区分多个图标的值，点击图标时通过`click`事件传出 | String &#124; Number  | - | - |
 | hoverClass | 图标按下去的样式类，用法同uni的`view`组件的`hover-class`参数，详见：[hover-class](https://uniapp.dcloud.io/component/view) | String  | - | - |
 | customPrefix | 自定义字体图标库时，需要写上此值，详见：[扩展自定义图标库](https://www.uviewui.com/guide/customIcon.html) | String  | uicon | - |
-| label | 图标右侧/下方的label文字 | String \| Number  | - | - |
+| label | 图标右侧/下方的label文字 | String &#124; Number  | - | - |
 | labelPos | `label`相对于图标的位置 | String  | right | bottom / top / left |
-| labelSize | `label`字体大小，单位默认px | String \| Number  | 15px | - |
+| labelSize | `label`字体大小，单位默认px | String &#124; Number  | 15px | - |
 | labelColor | `label`字体颜色 | String  | #606266 | - |
-| space | `label`与图标的距离，单位默认px | String \| Number  | 3px | - |
+| space | `label`与图标的距离，单位默认px | String &#124; Number  | 3px | - |
 | imgMode | 图片裁剪、缩放的模式，image组件原生属性，详见：[image](https://uniapp.dcloud.io/component/image?id=image) | String  | - | - |
-| width | `name`为图片路径时图片的宽度，单位默认px | String \| Number  | - | - |
-| height | `name`为图片路径时图片的高度，单位默认px | String \| Number  | - | - |
-| top | 图标到顶部的距离，如果某些场景，如果图标没有垂直居中，可以调整此参数，单位默认px | String \| Number  | 0 | - |
+| width | `name`为图片路径时图片的宽度，单位默认px | String &#124; Number  | - | - |
+| height | `name`为图片路径时图片的高度，单位默认px | String &#124; Number  | - | - |
+| top | 图标到顶部的距离，如果某些场景，如果图标没有垂直居中，可以调整此参数，单位默认px | String &#124; Number  | 0 | - |
 | stop | 是否阻止事件传播 | Boolean  | false | - |
 
 ### Events

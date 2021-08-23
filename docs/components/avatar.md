@@ -144,22 +144,22 @@
 
 ### Avatar Props
 
-| 参数				| 说明																									| 类型				| 默认值		|  可选值	|
-|:-					|:-																										|:-					|:-			|:-			|
-| src				| 头像路径，如加载失败，将会显示默认头像(不能为相对路径)															| String			| -			| -			|
-| shape				| 头像形状																								| String			| circle	| square	|
-| size				| 头像尺寸，可以为指定字符串(large, default, mini)，或者数值													| String &#124; Number	| default	| -			|
-| mode				| 头像图片的裁剪类型，与uni的`image`组件的`mode`参数一致，如效果达不到需求，可尝试传`widthFix`值					| String			| aspectFill| -			|
-| text				| 用文字替代图片，级别优先于`src`																			| String			| -			| -			|
-| bg-color			| 背景颜色，一般显示文字时用																					| String			| #ffffff	| -			|
-| color				| 文字颜色																								| String			| #ffffff	| -			|
+| 参数				| 说明																									| 类型					|  默认值	|  可选值	|
+|:-					|:-																										|:-						|:-			|:-			|
+| src				| 头像路径，如加载失败，将会显示默认头像(不能为相对路径)															| String				| -			| -			|
+| shape				| 头像形状																								| String				| circle	| square	|
+| size				| 头像尺寸，可以为指定字符串(large, default, mini)，或者数值													| String &#124; Number	| 40		| -			|
+| mode				| 头像图片的裁剪类型，与uni的`image`组件的`mode`参数一致，如效果达不到需求，可尝试传`widthFix`值					| String				| scaleToFill| -		|
+| text				| 用文字替代图片，级别优先于`src`																			| String				| -			| -			|
+| bg-color			| 背景颜色，一般显示文字时用																					| String				| #c0c4cc	| -			|
+| color				| 文字颜色																								| String				| #ffffff	| -			|
 | font-size			| 文字大小																								| String &#124; Number	| 18		| -			|
-| icon				| 显示的图标																								| String			| -			| -			|
-| mp-avatar			| 显示小程序头像，只对百度，微信，QQ小程序有效																	| Boolean			| false		| true		|
-| random-bg-color	| 是否使用随机背景色																						| Boolean			| false		| true		|
-| default-url		| 加载失败的默认头像(组件有内置默认图片)																		| String			| -			| -			|
+| icon				| 显示的图标																								| String				| -			| -			|
+| mp-avatar			| 显示小程序头像，只对百度，微信，QQ小程序有效																	| Boolean				| false		| true		|
+| random-bg-color	| 是否使用随机背景色																						| Boolean				| false		| true		|
+| default-url		| 加载失败的默认头像(组件有内置默认图片)																		| String				| -			| -			|
 | color-index		| 如果配置了randomBgColor为true，且配置了此值，则从默认的背景色数组中取出对应索引的颜色值，取值0-19之间				| String &#124; Number	| -			| -			|
-| name				| 组件标识符																								| String			| level		| -			|
+| name				| 组件标识符																								| String				| level		| -			|
 
 
 ### Avatar Event

@@ -119,7 +119,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | direction | row-横向，column-竖向 | String  | row | column |
-| current | 设置当前处于第几步 | Number \| String  | 0 | - |
+| current | 设置当前处于第几步 | Number &#124; String  | 0 | - |
 | activeColor | 激活状态颜色 | String  | #3c9cff | - |
 | inactiveColor | 未激活状态颜色 | String  | #969799 | - |
 | activeIcon | 激活状态的图标 | String  | - | - |
@@ -132,7 +132,7 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | title | 标题文字 | String  | - | - |
 | current | 描述文本 | String  | - | - |
-| iconSize | 图标大小 | String \| Number  | 17 | - |
+| iconSize | 图标大小 | String &#124; Number  | 17 | - |
 | error | 当前步骤是否处于失败状态 | Boolean  | false | true |
 
 

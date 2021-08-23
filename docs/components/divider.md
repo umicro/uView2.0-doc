@@ -65,8 +65,8 @@
 | hairline | 是否细线 | Boolean  | false | true |
 | dot | 是否以点替代文字，优先于text字段起作用 | Boolean  | false | true |
 | textPosition | 内容文本的位置 | String \ | center | left、right |
-| text | 文本内容 | String \| Number  | - | - |
-| textSize | 文本大小 | String \| Number  | 14 | - |
+| text | 文本内容 | String &#124; Number  | - | - |
+| textSize | 文本大小 | String &#124; Number  | 14 | - |
 | textColor | 文本颜色 | String  | #909399 | - |
 | lineColor | 线条颜色 | String | #dcdfe6 | - |
 

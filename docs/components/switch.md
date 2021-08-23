@@ -142,14 +142,14 @@ value12: true,
 |-------------  |---------------- |---------------|------------------ |-------- |
 | loading | 是否处于加载中  | Boolean | false | true |
 | disabled | 是否禁用  | Boolean | false | true |
-| size | 开关尺寸，单位rpx | String \| Number  | 25 | - |
+| size | 开关尺寸，单位rpx | String &#124; Number  | 25 | - |
 | activeColor | 打开时的背景色 | String  | #2979ff | - |
 | inactiveColor | 关闭时的背景色 | String  | #ffffff | - |
-| value | 通过v-model双向绑定的值 | Boolean /| String \| Number | false | - |
-| activeValue | 打开选择器时的值 | Boolean /| String \| Number | true | - |
-| inactiveValue | 关闭选择器时的值 | Boolean /| String \| Number | false | - |
+| value | 通过v-model双向绑定的值 | Boolean /| String &#124; Number | false | - |
+| activeValue | 打开选择器时的值 | Boolean /| String &#124; Number | true | - |
+| inactiveValue | 关闭选择器时的值 | Boolean /| String &#124; Number | false | - |
 | asyncChange | 是否开启异步变更，开启后需要手动控制输入值 | Boolean | false | true |
-| space | 圆点与外边框的距离 | String \| Number | 0 | - |
+| space | 圆点与外边框的距离 | String &#124; Number | 0 | - |
 
 
 ### Switch Event

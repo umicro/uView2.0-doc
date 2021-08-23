@@ -149,7 +149,7 @@
 |------------- |---------------- |---------------|------------------ |-------- |
 | show         | 用于控制选择器的弹出与收起 | Boolean | false | true |
 | showToolbar  | 是否显示顶部的操作栏 | Boolean | true | false |
-| value        | 绑定值 | String \| Number | - | - |
+| value        | 绑定值 | String &#124; Number | - | - |
 | title      | 顶部标题 | String | - | - |
 | mode      | 展示格式 | String | datetime | date为日期选择，time为时间选择，year-month为年月选择|
 | maxDate   | 可选的最大时间 | Number | 最大默认值为后10年 | - |
@@ -161,12 +161,12 @@
 | filter | 选项过滤函数 | Function | null | - |
 | formatter      | 选项格式化函数 | Function | null | - |
 | loading | 是否显示加载中状态 | Boolean | false | true |
-| itemHeight | 各列中，单个选项的高度 | String \| Number | 44 | - |
+| itemHeight | 各列中，单个选项的高度 | String &#124; Number | 44 | - |
 | cancelText | 取消按钮的文字 | String | 取消 | - |
 | confirmText | 确认按钮的文字 | String | 确认 | - |
 | cancelColor | 取消按钮的颜色 | String | #909193 | - |
 | confirmColor | 取消按钮的颜色 | String | #3c9cff | - |
-| visibleItemCount | 每列中可见选项的数量 | String \| Number | 5 | - |
+| visibleItemCount | 每列中可见选项的数量 | String &#124; Number | 5 | - |
 | closeOnClickOverly | 是否允许点击遮罩关闭选择器 | Boolean | false | true |
 | defaultIndex | 各列的默认索引 | Array | [] | - |
 

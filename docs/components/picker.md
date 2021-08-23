@@ -191,13 +191,13 @@
 | title        | 顶部中间的标题 | String | - | - |
 | columns      | 设置每一列的数据，见上方说明 | Array | - | - |
 | loading      | 加载状态 | Boolean | false | true |
-| itemHeight   | 各列中，单个选项的高度 | String \| Number | 44 | - |
+| itemHeight   | 各列中，单个选项的高度 | String &#124; Number | 44 | - |
 | confirmText  | 确认按钮的文字 | String | 确认 | - |
 | cancelText   | 取消按钮的文字 | String | 取消 | - |
 | confirmColor | 确认按钮的颜色 | String | #3c9cff | - |
 | cancelColor  | 取消按钮的颜色 | String | #909193 | - |
-| singleIndex  | 选择器只有一列时，默认选中项的索引，从0开始 | String \| Number | 0 | - |
-| visibleItemCount | 每列中可见选项的数量 | String \| Number | 5 | - |
+| singleIndex  | 选择器只有一列时，默认选中项的索引，从0开始 | String &#124; Number | 0 | - |
+| visibleItemCount | 每列中可见选项的数量 | String &#124; Number | 5 | - |
 | keyName      | 自定义需要展示的`text`属性键名 | String | text | - |
 | closeOnClickOverly | 是否允许点击遮罩关闭选择器 | Boolean | false | true |
 | defaultIndex | 各列的默认索引 | Array | - | - |

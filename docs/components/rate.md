@@ -73,14 +73,14 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| v-model       | 双向绑定选择星星的数量 | String \| Number | 1 | - |
-| count         | 最多可选的星星数量 | String \| Number | 5 | - |
+| v-model       | 双向绑定选择星星的数量 | String &#124; Number | 1 | - |
+| count         | 最多可选的星星数量 | String &#124; Number | 5 | - |
 | disabled      | 是否禁止用户操作 | Boolean | false | true |
-| size          | 星星的大小，单位rpx | String \| Number | 18 | - |
+| size          | 星星的大小，单位rpx | String &#124; Number | 18 | - |
 | activeColor   | 选中的星星颜色 | String | #FA3534 | - |
 | inactiveColor | 未选中星星的颜色 | String | #b2b2b2 | - |
-| gutter        | 星星之间的距离 | String \| Number | 5 | - |
-| minCount      | 最少选中星星的个数 | String \| Number | 1 | - |
+| gutter        | 星星之间的距离 | String &#124; Number | 5 | - |
+| minCount      | 最少选中星星的个数 | String &#124; Number | 1 | - |
 | allowHalf     | 是否允许半星选择 | Boolean | false | true |
 | activeIcon    | 选中时的图标名，只能为uView的内置图标 | String | star-fill | - |
 | inactiveIcon  | 未选中时的图标名，只能为uView的内置图标 | String | star | - |

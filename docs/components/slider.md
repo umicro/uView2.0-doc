@@ -112,17 +112,17 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| v-model | 双向绑定滑块选择值  | String \| Number | 0 | - |
-| min | 可选的最小值(0-100之间)  | String \| Number | 0 | - |
-| max | 可选的最大值(0-100之间)  | String \| Number | 100 | - |
-| step | 选择的步长  | String \| Number | 1 | - |
+| v-model | 双向绑定滑块选择值  | String &#124; Number | 0 | - |
+| min | 可选的最小值(0-100之间)  | String &#124; Number | 0 | - |
+| max | 可选的最大值(0-100之间)  | String &#124; Number | 100 | - |
+| step | 选择的步长  | String &#124; Number | 1 | - |
 | disabled | 是否禁用滑块  | Boolean | false | true |
-| blockHeight | 滑块宽度，高等于宽 | String \| Number | 15 | - |
-| height | 滑块条高度 | String \| Number | 10 | - |
+| blockHeight | 滑块宽度，高等于宽 | String &#124; Number | 15 | - |
+| height | 滑块条高度 | String &#124; Number | 10 | - |
 | inactiveColor | 进度条的背景颜色  | String | #c0c4cc | - |
 | activeColor | 进度条的激活部分颜色  | String | #2979ff | - |
 | blockColor | 滑块背景颜色  | String | #ffffff | - |
-| blockStyle | 滑块按钮自定义样式，对象形式  | Object \| String | - | - |
+| blockStyle | 滑块按钮自定义样式，对象形式  | Object &#124; String | - | - |
 
 
 ### Slot

@@ -92,12 +92,12 @@
 | loading | 是否显示骨架占位图，设置为`false`将会展示子组件内容 | Boolean  | true | false |
 | avatar | 是否展示头像占位图 | Boolean  | false | true |
 | avatarShape | 头像占位图的形状，circle-圆形，square-方形 | String  | circle | square |
-| avatarSize | 头像占位图大小 | String \| Number  | 32 | - |
+| avatarSize | 头像占位图大小 | String &#124; Number  | 32 | - |
 | title | 是否展示标题占位图 | Boolean  | true | false |
-| titleHeight | 标题的高度  | String \| Number | 18 | - |
-| rows | 段落占位图行数 | Number \| String  | 0 | - |
-| titleWidth | 标题的宽度  | String \| Number | 50% | - |
-| rowsHeight | 段落的高度  | String \| Number | 18 | - |
-| rowsWidth | 段落占位图的宽度，可以为百分比，数值，带单位字符串等，可通过数组传入指定每个段落行的宽度 | String \| Array \| Number  | 100% | - |
+| titleHeight | 标题的高度  | String &#124; Number | 18 | - |
+| rows | 段落占位图行数 | Number &#124; String  | 0 | - |
+| titleWidth | 标题的宽度  | String &#124; Number | 50% | - |
+| rowsHeight | 段落的高度  | String &#124; Number | 18 | - |
+| rowsWidth | 段落占位图的宽度，可以为百分比，数值，带单位字符串等，可通过数组传入指定每个段落行的宽度 | String &#124; Array &#124; Number  | 100% | - |
 | animate | 是否开启动画效果 | Boolean  | true | false |	
 

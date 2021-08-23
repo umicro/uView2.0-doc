@@ -63,7 +63,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | color | 文字颜色 | String | #3c9cff | - |
-| fontSize | 字体大小，默认单位px | String \| Number  | 15 | - |
+| fontSize | 字体大小，默认单位px | String &#124; Number  | 15 | - |
 | underLine | 是否显示下划线 | Boolean  | false | true |
 | href | 跳转的链接，要带上http(s) | String  | - | - |
 | mpTips | 各个小程序平台把链接复制到粘贴板后的提示语 | String  | 链接已复制，请在浏览器打开 | - |

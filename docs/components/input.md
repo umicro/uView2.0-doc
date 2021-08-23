@@ -126,34 +126,34 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| value | 输入的值 | Number \| String | - | - |
+| value | 输入的值 | Number &#124; String | - | - |
 | type | 输入框类型，见上方说明 | String | text | number / idcard / digit  |
 | disabled | 是否禁用输入框 | Boolean | false | true |
 | disabledColor | 禁用状态时的背景色 | String | #f5f7fa | - |
 | clearable | 是否显示清除控件 | Boolean | false | true |
 | password | 是否密码类型 | Boolean | false | true |
-| maxlength | 最大输入长度，设置为 -1 的时候不限制最大长度 | String \| Number | -1 | - |
+| maxlength | 最大输入长度，设置为 -1 的时候不限制最大长度 | String &#124; Number | -1 | - |
 | placeholder | 输入框为空时的占位符 | String | - | - |
 | placeholderClass | 指定placeholder的样式类，注意页面或组件的style中写了scoped时，需要在类名前写/deep/ | String | input-placeholder | - |
-| placeholderStyle | 指定placeholder的样式，字符串形式，如"color: red;" | String \| Object | - | - |
-| confirmType | 设置右下角按钮的文字，兼容性详见uni-app文档 | String | done | send \| search \| next \| go \| done |
+| placeholderStyle | 指定placeholder的样式，字符串形式，如"color: red;" | String &#124; Object | - | - |
+| confirmType | 设置右下角按钮的文字，兼容性详见uni-app文档 | String | done | send &#124; search &#124; next &#124; go &#124; done |
 | confirmHold | 点击键盘右下角按钮时是否保持键盘不收起，H5无效 | Boolean | false | true |
 | holdKeyboard | focus时，点击页面的时候不收起键盘，微信小程序有效 | Boolean | false | true |
 | focus | 自动获取焦点，在 H5 平台能否聚焦以及软键盘是否跟随弹出，取决于当前浏览器本身的实现。nvue 页面不支持，需使用组件的 focus()、blur() 方法控制焦点 | Boolean | false | true |
 | autoBlur | 键盘收起时，是否自动失去焦点，目前仅App3.0.0+有效 | Boolean | false | true |
-| cursor | 指定focus时光标的位置 | String \| Number | -1 | - |
-| cursorSpacing | 输入框聚焦时底部与键盘的距离 | String \| Number | 30 | - |
-| selectionStart | 光标起始位置，自动聚集时有效，需与selection-end搭配使用 | String \| Number | -1 | - |
-| selectionEnd | 光标结束位置，自动聚集时有效，需与selection-start搭配使用 | String \| Number | -1 | - |
+| cursor | 指定focus时光标的位置 | String &#124; Number | -1 | - |
+| cursorSpacing | 输入框聚焦时底部与键盘的距离 | String &#124; Number | 30 | - |
+| selectionStart | 光标起始位置，自动聚集时有效，需与selection-end搭配使用 | String &#124; Number | -1 | - |
+| selectionEnd | 光标结束位置，自动聚集时有效，需与selection-start搭配使用 | String &#124; Number | -1 | - |
 | adjustPosition | 键盘弹起时，是否自动上推页面 | Boolean | true | false |
-| inputAlign | 输入框内容对齐方式 | String | left | left \| center \| right |
-| fontSize | 输入框字体的大小 | String \| Number | 15px | - |
+| inputAlign | 输入框内容对齐方式 | String | left | left &#124; center &#124; right |
+| fontSize | 输入框字体的大小 | String &#124; Number | 15px | - |
 | color | 输入框字体颜色 | String | #606266 | - |
 | prefixIcon | 输入框前置图标 | String | - | - |
-| prefixIconStyle | 前置图标样式，对象或字符串 | String \| Object | - | - |
+| prefixIconStyle | 前置图标样式，对象或字符串 | String &#124; Object | - | - |
 | suffixIcon | 输入框后置图标 | String | - | - |
-| suffixIconStyle | 后置图标样式，对象或字符串 | String \| Object | - | - |
-| border | 边框类型，surround-四周边框，bottom-底部边框，none-无边框 | String | surround | bottom \| none |
+| suffixIconStyle | 后置图标样式，对象或字符串 | String &#124; Object | - | - |
+| border | 边框类型，surround-四周边框，bottom-底部边框，none-无边框 | String | surround | bottom &#124; none |
 | readonly | 是否只读，与disabled不同之处在于disabled会置灰组件，而readonly则不会 | Boolean | false | true |
 | shape | 输入框形状，circle-圆形，square-方形 | String | square | circle |
 		

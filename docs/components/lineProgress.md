@@ -113,9 +113,9 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | activeColor | 进度条激活部分的颜色 | String  | #19be6b | - |
 | inactiveColor | 进度条的底色，默认为灰色 | String  | #ececec | - |
-| percentage | 进度百分比，数值 | String \| Number | 0 | - |
+| percentage | 进度百分比，数值 | String &#124; Number | 0 | - |
 | showText | 是否在进度条内部显示百分比的值 | Boolean | true | false |
-| height | 进度条的高度，默认单位px | String \| Number  | 12 | - |
+| height | 进度条的高度，默认单位px | String &#124; Number  | 12 | - |
 
 
  ### Slots
