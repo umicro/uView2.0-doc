@@ -7,9 +7,9 @@
 
 ### 平台差异说明
 
-|  App  |  H5   | 微信小程序 | 支付宝小程序 | 百度小程序 | 头条小程序 | QQ小程序 |
-| :---: | :---: | :--------: | :----------: | :--------: | :--------: | :------: |
-|   √   |   √   |     √      |      √       |     √      |     √      |    √     |
+|App	|H5		|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+| :-:	| :-:	| :-:		| :-:			| :-:		| :-:		| :-:		|
+|√		|√		|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -123,39 +123,40 @@
 
 注意：props中没有控制键盘弹出与收起的参数，因为这是通过v-model绑定变量实现的，见上方说明。
 
-| 参数                                 | 说明                                                                                                | 类型             | 默认值 | 可选值     |
-| ------------------------------------ | --------------------------------------------------------------------------------------------------- | ---------------- | ------ | ---------- |
-| mode                                 | 键盘的类型，number-数字键盘，card-身份证键盘，car-车牌号键盘 | String           | car | number / card |
-| dotDisabled                          | 是否显示"."按键，只在mode=number时有效       | Boolean          | false   | true      |
-| tooltip                              | 是否显示键盘顶部工具条                     | Boolean          | true   | false      |
-| showTips                              | 是否显示工具条中间的提示   | Boolean          | true   | false      |
-| tips                                 | 工具条中间的提示文字，见上方`基本使用`的说明                                                        | String           | -      | -          |
-| cancelBtn                           | 是否显示工具条左边的"取消"按钮                                                                      | Boolean          | true   | false      |
-| confirmBtn                          | 是否显示工具条右边的"完成"按钮                                                                      | Boolean          | true   | false      |
-| overlay                                 | 是否显示遮罩                                                                                        | Boolean          | true   | false      |
-| confirmText                                 | 确认按钮的文字     | String          | 确认   | -      |
-| cancelText                                 | 取消按钮的文字     | String          | 取消   | -      |
-| zIndex                              | 弹出键盘的`z-index`值                       | Number &#124; String | 1075   | -          |
-| random                               | 是否打乱键盘按键的顺序                                                                              | Boolean          | false  | true       |
-| safeAreaInsetBottom            | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean          | false  | true       |
-| maskCloseAble                      | 是否允许点击遮罩收起键盘                    | Boolean          | true   | false      |
-| customStyle                      | 自定义样式，对象形式                    | Object          | {}   | -      |
+| 参数					| 说明																								| 类型					| 默认值	| 可选值			|
+| :-					| :-																								| :-					| :-	| :-			|
+| mode					| 键盘的类型，number-数字键盘，card-身份证键盘，car-车牌号键盘											| String				| car	| number / card	|
+| dotDisabled			| 是否显示"."按键，只在mode=number时有效																| Boolean				| false	| true			|
+| tooltip				| 是否显示键盘顶部工具条																				| Boolean				| true	| false			|
+| showTips				| 是否显示工具条中间的提示																			| Boolean				| true	| false			|
+| tips					| 工具条中间的提示文字，见上方`基本使用`的说明															| String				| -		| -				|
+| showCancel			| 是否显示工具条左边的"取消"按钮																		| Boolean				| true	| false			|
+| showConfirm			| 是否显示工具条右边的"完成"按钮																		| Boolean				| true	| false			|
+| random				| 是否打乱键盘按键的顺序																				| Boolean				| false	| true			|
+| safeAreaInsetBottom	| 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明)	| Boolean				| false	| true			|
+| closeOnClickOverly	| 是否允许点击遮罩收起键盘																			| Boolean				| true	| false			|
+| show					| 控制键盘的弹出与收起																				| Boolean				| true	| false			|
+| overlay				| 是否显示遮罩																						| Boolean				| true	| false			|
+| zIndex				| 弹出键盘的`z-index`值																				| String &#124; Number 	| 1075	| -				|
+| confirmText			| 确认按钮的文字																						| String				| 确认	| -				|
+| cancelText			| 取消按钮的文字																						| String				| 取消	| -				|
+| customStyle			| 自定义样式，对象形式																				| Object				| {}	| -				|
 
 
 ### Events
 
-| 事件名    | 说明                                 | 回调参数                   | 版本 |
-| :-------- | :----------------------------------- | :------------------------- | :--- |
-| change    | 按键被点击(不包含退格键被点击)       | 按键的值，见上方说明和示例 | -    |
-| popupClose    | 键盘关闭 | -                          | -    |
-| onConfirm   | 键盘顶部工具条右边的"完成"按钮被点击 | -                          | -    |
-| onCancel | 键盘顶部工具条左边的"取消"按钮被点击                     | -                          | -    |
-| backspace | 键盘退格键被点击                     | -                          | -    |
+| 事件名		| 说明									| 回调参数					| 版本	|
+| :-		| :-									| :-						| :-	|
+| change	| 按键被点击(不包含退格键被点击)			| 按键的值，见上方说明和示例	| -		|
+| popupClose| 键盘关闭								| -							| -		|
+| onConfirm	| 键盘顶部工具条右边的"完成"按钮被点击	| -							| -		|
+| onCancel	| 键盘顶部工具条左边的"取消"按钮被点击	| -							| -		|
+| backspace	| 键盘退格键被点击						| -							| -		|
 ### Slot
 
-| 名称    | 说明                                                                                                                                               | 版本 |
-| :------ | :------------------------------------------------------------------------------------------------------------------------------------------------- | :--- |
-| default | 内容将会显示键盘的工具条上面，可以结合[MessageInput 验证码输入](/components/messageInput.html)组件实现类似支付宝输入密码时，上方显示输入内容的功能 | -    |
+| 名称		| 说明																																				| 版本	|
+| :-		| :-																																				| :---	|
+| default	| 内容将会显示键盘的工具条上面，可以结合[MessageInput 验证码输入](/components/messageInput.html)组件实现类似支付宝输入密码时，上方显示输入内容的功能		| -		|
 
 
 <style scoped>

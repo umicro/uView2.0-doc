@@ -9,9 +9,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 
 ### 基本使用
@@ -115,42 +115,42 @@
 
 ### Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| src | 图片地址，**强烈建议**使用绝对或者网络路径 | String | - | - |
-| mode | 裁剪模式，见上方说明 | String  | aspectFill | - |
-| width | 宽度，单位任意，如果为数值，默认单位px | String &#124; Number  | 300 | - |
-| height | 高度，单位任意，如果为数值，默认单位px | String &#124; Number  | 225 | - |
-| shape | 图片形状，circle-圆形，square-方形 | String  | square | square |
-| radius | 圆角，默认单位px | String &#124; Number  | 0 | - |
-| lazyLoad | 是否懒加载，仅微信小程序、App、百度小程序、字节跳动小程序有效 | Boolean  | true | - |
-| showMenuByLongpress | 是否开启长按图片显示识别小程序码菜单，仅微信小程序有效 | Boolean  | true | - |
-| loadingIcon | 加载中的图标，或者小图片 | String  | photo | - |
-| errorIcon | 加载失败的图标，或者小图片 | String  | error-circle | - |
-| showLoading | 是否显示加载中的图标或者自定义的slot | Boolean  | true | false |
-| showError | 是否显示加载错误的图标或者自定义的slot | Boolean  | true | false |
-| fade | 是否需要淡入效果 | Boolean  | true | false |
-| webp | 只支持网络资源，只对微信小程序有效 | Boolean  | false | true |
-| duration | 搭配`fade`参数的过渡时间，单位ms | String &#124; Number   | 500 | - |
-| bg-color | 背景颜色，用于深色页面加载图片时，为了和背景色融合 | String   | #f3f4f6 | - |
+| 参数					| 说明														| 类型					| 默认值			|  可选值	|
+|:-						|:-															|:-						|:-				|:-			|
+| src					| 图片地址，**强烈建议**使用绝对或者网络路径					| String				| -				| -			|
+| mode					| 裁剪模式，见上方说明										| String				| aspectFill	| -			|
+| width					| 宽度，单位任意，如果为数值，默认单位px						| String &#124; Number	| 300			| -			|
+| height				| 高度，单位任意，如果为数值，默认单位px						| String &#124; Number	| 225			| -			|
+| shape					| 图片形状，circle-圆形，square-方形							| String				| square		| square	|
+| radius				| 圆角，默认单位px											| String &#124; Number	| 0				| -			|
+| lazyLoad				| 是否懒加载，仅微信小程序、App、百度小程序、字节跳动小程序有效	| Boolean				| true			| -			|
+| showMenuByLongpress	| 是否开启长按图片显示识别小程序码菜单，仅微信小程序有效			| Boolean				| true			| -			|
+| loadingIcon			| 加载中的图标，或者小图片										| String				| photo			| -			|
+| errorIcon				| 加载失败的图标，或者小图片									| String				| error-circle	| -			|
+| showLoading			| 是否显示加载中的图标或者自定义的slot							| Boolean				| true			| false		|
+| showError				| 是否显示加载错误的图标或者自定义的slot						| Boolean				| true			| false		|
+| fade					| 是否需要淡入效果											| Boolean				| true			| false		|
+| webp					| 只支持网络资源，只对微信小程序有效							| Boolean				| false			| true		|
+| duration				| 搭配`fade`参数的过渡时间，单位ms								| String &#124; Number	| 500			| -			|
+| bg-color				| 背景颜色，用于深色页面加载图片时，为了和背景色融合				| String				| #f3f4f6		| -			|
 
 
 
 ### Slot
 
-|名称|说明|
-|:-|:-|
-| loading | 自定义加载中的提示内容 |
-| error | 自定义失败的提示内容 |
+|名称		|说明					|
+|:-			|:-						|
+| loading	| 自定义加载中的提示内容	|
+| error		| 自定义失败的提示内容	|
 
 
 ### CellItem Events
 
-|事件名|说明|回调参数|
-|:-|:-|:-|:-|
-| click | 点击图片时触发 | - |
-| error | 图片加载失败时触发 | err: 错误信息 |
-| load | 图片加载成功时触发 | - |
+|事件名	|说明				|回调参数		|
+|:-		|:-					|:-				|
+| click	| 点击图片时触发		| -				|
+| error	| 图片加载失败时触发	| err: 错误信息	|
+| load	| 图片加载成功时触发	| -				|
 
 
 

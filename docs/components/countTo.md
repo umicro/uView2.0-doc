@@ -11,9 +11,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -87,37 +87,37 @@
 
 ### Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| startVal | 开始值  | String &#124; Number | 0 | - |
-| endVal | 结束值 | String &#124; Number  | 0 | - |
-| duration | 滚动过程所需的时间，单位ms | String &#124; Number  | 2000 | - |
-| autoplay | 是否自动开始滚动 | Boolean  | true | false |
-| decimals | 要显示的小数位数，见上方说明 | String &#124; Number  | 0 | - |
-| useEasing | 滚动结束时，是否缓动结尾，见上方说明 | Boolean  | true | false |
-| separator | 千位分隔符，见上方说明 | String  | - | - |
-| separator | 十进制分割 | String &#124; Number | . | - |
-| color | 字体颜色 | String  | #303133 | - |
-| fontSize | 字体大小，单位rpx | String &#124; Number  | 50 | - |
-| bold | 字体是否加粗 | Boolean | false | true |
+| 参数		| 说明									| 类型					| 默认值		|  可选值	|
+|:-			|:-										|:-						|:-			|:-			|
+| startVal	| 开始值									| String &#124; Number	| 0			| -			|
+| endVal	| 结束值									| String &#124; Number	| 0			| -			|
+| duration	| 滚动过程所需的时间，单位ms				| String &#124; Number	| 2000		| -			|
+| autoplay	| 是否自动开始滚动						| Boolean				| true		| false		|
+| decimals	| 要显示的小数位数，见上方说明				| String &#124; Number	| 0			| -			|
+| useEasing	| 滚动结束时，是否缓动结尾，见上方说明		| Boolean				| true		| false		|
+| decimal	| 十进制分割								| String				| .			| -			|
+| color		| 字体颜色								| String				| #606266	| -			|
+| fontSize	| 字体大小，单位px						| String &#124; Number	| 22		| -			|
+| bold		| 字体是否加粗							| Boolean				| false		| true		|
+| separator	| 千位分隔符，见上方说明					| String				| -			| -			|
 
 
 ### Methods
 
 此方法如要通过ref手动调用
 
-| 名称          | 说明            |
-|-------------  |---------------- |
-| start |  	`autoplay`为`false`时，通过此方法启动滚动 |
-| reStart |   暂停后重新开始滚动(从暂停前的值开始滚动) |
-| paused |   暂停滚动 |
+| 名称		| 说明										|
+|:-			|:-											|
+| start		|`autoplay`为`false`时，通过此方法启动滚动		|
+| reStart	|暂停后重新开始滚动(从暂停前的值开始滚动)		|
+| paused	|暂停滚动									|
 
 
 ### Event
 
-|事件名|说明|回调参数|版本|
-|:-|:-|:-|:-|
-| end | 数值滚动到目标值时触发 | - | - |
+|事件名	|说明					|回调参数	|版本	|
+|:-		|:-						|:-			|:-		|
+| end	| 数值滚动到目标值时触发	| -			| -		|
 
 
 <style scoped>

@@ -367,7 +367,7 @@
 | showTitle				| 是否显示标题										| Boolean							| true		| false											|
 | showSubtitle			| 是否显示副标题										| Boolean							| true		| false											|
 | mode					| 日期类型选择										| String							| single	| multiple-可以选择多个日期，range-选择日期范围		|
-| startText				| mode=range时，第一个日期底部的提示文字					| String							| 开始		| -												|
+| startText				| mode=range时，第一个日期底部的提示文字				| String							| 开始		| -												|
 | endText				| mode=range时，最后一个日期底部的提示文字				| String							| 结束		| -												|
 | customList			| 自定义列表											| Array								| []		|  []											|
 | color					| 主题色，对底部按钮和选中日期有效						| String							| #3c9cff	| -												|
@@ -381,16 +381,16 @@
 | showMark				| 是否显示月份背景色									| Boolean							| true		| false											|
 | confirmText			| 确定按钮的文字										| String							| 确定		| -												|
 | confirmDisabledText	| 确认按钮处于禁用状态时的文字							| String							| 确定		| -												|
-| show					| 是否显示日历弹窗										| Boolean							| false		| true											|
+| show					| 是否显示日历弹窗									| Boolean							| false		| true											|
 | closeOnClickOverly	| 是否允许点击遮罩关闭日历								| Boolean							| false		| true											|
 
 
 
 ### Event
 
-| 事件名		| 说明					| 回调参数				|
-| :-		| :-					| :-					|
-| confirm	| 点击`确定`按钮时触发		| 选择日期相关的返回参数	|
+| 事件名		| 说明					| 回调参数					|
+| :-		| :-					| :-						|
+| confirm	| 点击`确定`按钮时触发	| 选择日期相关的返回参数		|
 | close		| 日历关闭时触发			| 可定义页面关闭时的回调事件	|
 
 

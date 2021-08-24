@@ -6,9 +6,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 通过slot传入内容
@@ -195,21 +195,21 @@ export default {
 
 ### Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|------------- |---------------- |---------------|------------------ |-------- |
-| indicator         | 是否显示面板指示器 | Boolean | true | false |
-| indicatorWidth    | 指示器的整体宽度 | String &#124; Number  | 50 | - |
-| indicatorBarWidth | 滑块的宽度 | String &#124; Number  | 20 | - |
-| indicatorColor    | 指示器非激活颜色 | String  | #f2f2f2 | - |
-| indicatorActiveColor | 指示器滑块颜色 | String  | #3c9cff | - |
-| indicatorStyle    | 指示器样式，可通过bottom，left，right进行定位 | String &#124; Object | - | - |
+| 参数					| 说明											| 类型					| 默认值		|  可选值	|
+|:-						|:-												|:-						|:-			|:-			|
+| indicatorWidth		| 指示器的整体宽度								| String &#124; Number	| 50		| -			|
+| indicatorBarWidth		| 滑块的宽度										| String &#124; Number	| 20		| -			|
+| indicator				| 是否显示面板指示器								| Boolean				| true		| false		|
+| indicatorColor		| 指示器非激活颜色								| String				| #f2f2f2	| -			|
+| indicatorActiveColor	| 指示器滑块颜色									| String				| #3c9cff	| -			|
+| indicatorStyle		| 指示器样式，可通过bottom，left，right进行定位	| String &#124; Object	| -			| -			|
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| :- | :- | :- |
-| left  | 滑动到左边时触发 | - |
-| right | 滑动到右边时触发 | - |
+| 事件名| 说明				| 回调参数	|
+| :-	| :-				| :-		|
+| left	| 滑动到左边时触发	| -			|
+| right	| 滑动到右边时触发	| -			|
 
 
 <style scoped>

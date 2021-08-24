@@ -7,7 +7,7 @@
 
 ### 平台差异说明
 
-|App|H5	|微信小程序	| 支付宝小程序	|百度小程序	|头条小程序	|QQ小程序	|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
 |:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
 |√	|√	|√			|√				|√			|√			|√			|
 
@@ -165,25 +165,25 @@
 ### Avatar Event
 
 |事件名	|说明		|回调参数					|
-|:-		|:-			|:-						|
-| click	| 头像被点击| index: 用户传递的标识符	|
+|:-		|:-			|:-							|
+| click	| 头像被点击	| index: 用户传递的标识符		|
 
 ### AvatarGroup Props
 
-| 参数		| 说明											| 类型				| 默认值		|  可选值	|
-|:-			|:-												|:-					|:-			|:-			|
-| urls		| 头像图片组										| Array				| []		| -			|
+| 参数		| 说明											| 类型					| 默认值		|  可选值	|
+|:-			|:-												|:-						|:-			|:-			|
+| urls		| 头像图片组										| Array					| []		| -			|
 | maxCount	| 最多展示的头像数量								| String &#124; Number	| 5			| -			|
-| shape		| 头像形状										| String			| circle	| square	|
-| mode		| 图片裁剪模式									| String			| aspectFill| -			|
-| showMore	| 超出maxCount时是否显示查看更多的提示				| Boolean			| true		| -			|
+| shape		| 头像形状										| String				| circle	| square	|
+| mode		| 图片裁剪模式									| String				| aspectFill| -			|
+| showMore	| 超出maxCount时是否显示查看更多的提示				| Boolean				| true		| -			|
 | size		| 头像大小										| String &#124; Number	| 40		| -			|
-| keyName	| 指定从数组的对象元素中读取哪个属性作为图片地址		| String			| -			| -			|
+| keyName	| 指定从数组的对象元素中读取哪个属性作为图片地址		| String				| -			| -			|
 | gap		| 头像之间的遮挡比例（0.4代表遮挡40%）				| String &#124; Number	| 0.5		| -			|
 
 ### AvatarGroup Event
 
-|事件名		|说明			|回调参数		|
+|事件名		|说明			|回调参数	|
 |:-			|:-				|:-			|
 | showMore	| 头像组更多点击	| -			|
 

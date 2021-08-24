@@ -6,9 +6,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 
 ### 基本使用
@@ -184,37 +184,37 @@
 ### API
 
 ### Props
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|------------- |---------------- |---------------|------------------ |-------- |
-| show         | 用于控制选择器的弹出与收起 | Boolean | false | true |
-| showToolbar  | 是否显示顶部的操作栏 | Boolean | true | false |
-| title        | 顶部中间的标题 | String | - | - |
-| columns      | 设置每一列的数据，见上方说明 | Array | - | - |
-| loading      | 加载状态 | Boolean | false | true |
-| itemHeight   | 各列中，单个选项的高度 | String &#124; Number | 44 | - |
-| confirmText  | 确认按钮的文字 | String | 确认 | - |
-| cancelText   | 取消按钮的文字 | String | 取消 | - |
-| confirmColor | 确认按钮的颜色 | String | #3c9cff | - |
-| cancelColor  | 取消按钮的颜色 | String | #909193 | - |
-| singleIndex  | 选择器只有一列时，默认选中项的索引，从0开始 | String &#124; Number | 0 | - |
-| visibleItemCount | 每列中可见选项的数量 | String &#124; Number | 5 | - |
-| keyName      | 自定义需要展示的`text`属性键名 | String | text | - |
-| closeOnClickOverly | 是否允许点击遮罩关闭选择器 | Boolean | false | true |
-| defaultIndex | 各列的默认索引 | Array | - | - |
+| 参数				| 说明										| 类型					| 默认值		|  可选值	|
+|:-					|:-											|:-						|:-			|:-			|
+| show				| 用于控制选择器的弹出与收起					| Boolean				| false		| true		|
+| showToolbar		| 是否显示顶部的操作栏						| Boolean				| true		| false		|
+| title				| 顶部中间的标题								| String				| -			| -			|
+| columns			| 设置每一列的数据，见上方说明					| Array					| -			| -			|
+| loading			| 加载状态									| Boolean				| false		| true		|
+| itemHeight		| 各列中，单个选项的高度						| String &#124; Number	| 44		| -			|
+| cancelText		| 取消按钮的文字								| String				| 取消		| -			|
+| confirmText		| 确认按钮的文字								| String				| 确认		| -			|
+| cancelColor		| 取消按钮的颜色								| String				| #909193	| -			|
+| confirmColor		| 确认按钮的颜色								| String				| #3c9cff	| -			|
+| singleIndex		| 选择器只有一列时，默认选中项的索引，从0开始	| String &#124; Number	| 0			| -			|
+| visibleItemCount	| 每列中可见选项的数量						| String &#124; Number	| 5			| -			|
+| keyName			| 自定义需要展示的`text`属性键名				| String				| text		| -			|
+| closeOnClickOverly| 是否允许点击遮罩关闭选择器					| Boolean				| false		| true		|
+| defaultIndex		| 各列的默认索引								| Array					| -			| -			|
 
 ### Methods
-| 名称          | 说明            |
-|------------- |---------------- |
-| setIndexs    | (index, setLastIndex) 设置对应列的选择值 |
-| setColumnValues | 多列联动时需要用到，见上方说明 |
+| 名称				| 说明										|
+|:-					|:-											|
+| setIndexs			| (index, setLastIndex) 设置对应列的选择值	|
+| setColumnValues	| 多列联动时需要用到，见上方说明				|
 
 ### Events
-|事件名|说明|回调参数|版本|
-|:-|:-|:-|:-|
-| close  | 关闭选择器时触发 | - | - |
-| confirm| 点击确定按钮，返回当前选择的值 | Array: 见上方"回调参数"部分说明 | - |
-| change | 当选择值变化时触发 | Array: 见上方"回调参数"部分说明 | - |
-| cancel | 点击取消按钮 | - | - |
+|事件名		|说明							|回调参数							|版本	|
+|:-			|:-								|:-									|:-		|
+| close		| 关闭选择器时触发				| -									| -		|
+| confirm	| 点击确定按钮，返回当前选择的值	| Array: 见上方"回调参数"部分说明		| -		|
+| change	| 当选择值变化时触发				| Array: 见上方"回调参数"部分说明		| -		|
+| cancel	| 点击取消按钮					| -									| -		|
 
 <style scoped>
 h3[id=props] + table thead tr th:nth-child(2){

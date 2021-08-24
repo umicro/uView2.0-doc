@@ -4,9 +4,9 @@
 
 ### 平台差异说明
 
-|  App  |  H5   | 微信小程序 | 支付宝小程序 | 百度小程序 | 头条小程序 | QQ小程序 |
-| :---: | :---: | :--------: | :----------: | :--------: | :--------: | :------: |
-|   √   |   √   |     √      |      √       |     √      |     √      |    √     |
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -88,16 +88,16 @@
 
 ### Props
 
-| 参数          | 说明                              | 类型    | 默认值   | 可选值               |
-| ------------- | --------------------------------- | ------- | -------- | -------------------- |
-| loading       | 是否加载中                        | boolean | false    | true                 |
-| loadingText  | 提示内容                          | String  | 正在加载 | -                    |
-| loadingMode  | 加载动画的模式                    | String  | circle   | spinner \ semicircle |
-| image         | 文字上方用于替换loading动画的图片 | String  | -        | -                    |
-| color         | 文字颜色                          | String  | #C8C8C8  | -                    |
-| fontSize     | 文字大小                          | String  | 19       | -                    |
-| bgColor      | 背景颜色                          | String  | #ffffff  | -                    |
-| loadingColor | 加载中图标的颜色                  | String  | #C8C8C8  | -                    |
+| 参数			| 说明								| 类型					| 默认值		| 可选值					|
+| :-			| :-								| :-					| :-		| :-					|
+| loadingText	| 提示内容							| String &#124; Number	| 正在加载	| -						|
+| image			| 文字上方用于替换loading动画的图片	| String				| -			| -						|
+| loadingMode	| 加载动画的模式						| String				| circle	| spinner \ semicircle	|
+| loading		| 是否加载中							| boolean				| false		| true					|
+| bgColor		| 背景颜色							| String				| #ffffff	| -						|
+| color			| 文字颜色							| String				| #C8C8C8	| -						|
+| fontSize		| 文字大小							| String &#124; Number	| 19		| -						|
+| loadingColor	| 加载中图标的颜色					| String				| #C8C8C8	| -						|
 
 
 

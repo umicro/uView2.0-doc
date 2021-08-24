@@ -214,26 +214,26 @@
 
 ### Collapse Item Props
 
-| 参数		| 说明												| 类型					| 默认值	|  可选值	|
-|:-			|:-													|:-						|:-		|:-			|
-| title		| 面板标题											| String				| -		| -			|
-| value		| 标题右侧内容										| String				| -		| -			|
-| label		| 标题下方的描述信息									| String				| -		| -			|
-| disabled	| 面板是否可以打开或收起								| Boolean				| false	| true		|
+| 参数		| 说明													| 类型					| 默认值	|  可选值	|
+|:-			|:-														|:-						|:-		|:-			|
+| title		| 面板标题												| String				| -		| -			|
+| value		| 标题右侧内容											| String				| -		| -			|
+| label		| 标题下方的描述信息										| String				| -		| -			|
+| disabled	| 面板是否可以打开或收起									| Boolean				| false	| true		|
 | isLink	| 是否展示右侧箭头并开启点击反馈							| Boolean				| true	| false		|
 | clickable	| 是否开启点击反馈										| Boolean				| true	| false		|
-| border	| 是否显示内边框										| Boolean				| true	| false		|
-| align		| 标题的对齐方式										| String				| left	| -			|
+| border	| 是否显示内边框											| Boolean				| true	| false		|
+| align		| 标题的对齐方式											| String				| left	| -			|
 | name		| 唯一标识符，如不设置，默认用当前`collapse-item`的索引值	| String &#124; Number	| -		| -			|
-| icon		| 标题左侧图片，可为绝对路径的图片或内置图标				| String				| -		| -			|
+| icon		| 标题左侧图片，可为绝对路径的图片或内置图标					| String				| -		| -			|
 
 
 ### Collapse Event
 
 注意：请在`<u-collapse></u-collapse>`上监听此事件
 
-|事件名	|说明																		|回调参数								|
-|:-		|:-																			|:-									|
+|事件名	|说明																			|回调参数							|
+|:-		|:-																				|:-									|
 | change| 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array)	| activeNames: String &#124;  Array	|
 | open	| 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array)	| activeNames: String &#124;  Array	|
 | close	| 当前激活面板关闭时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array)	| activeNames: String &#124;  Array	|
@@ -243,9 +243,9 @@
 
 注意：此方法需要通过`ref`调用
 
-| 方法	| 说明																			|
-|:-		|:-																				|
-| init	| 重新初始化内部高度计算，用于异步获取内容的情形，请结合`this.$nextTick()`使用			|
+| 方法	| 说明																		|
+|:-		|:-																			|
+| init	| 重新初始化内部高度计算，用于异步获取内容的情形，请结合`this.$nextTick()`使用		|
 
 ### Slot
 

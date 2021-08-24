@@ -7,9 +7,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -116,22 +116,19 @@
 
 ### Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| list | 选项的数组，形式见上方"基本使用" | Array | - | - |
-| current | 初始化时默认选中的选项索引值  | String &#124; Number | 0 | - |
-| active-color | 激活时的颜色 | String | #303133 | - |
-| inactive-color | 未激活时的颜色 | String | #606266 | - |
-| mode | 模式选择，见上方"模式选择"说明 | String | button | subsection |
-| font-size | 字体大小，单位rpx | String &#124; Number | 28 | - |
-| height | 组件高度，单位rpx | String &#124; Number | 70 | - |
-| animation | 是否开启动画效果，见上方说明 | Boolean | true | false |
-| bold | 激活选项的字体是否加粗 | Boolean | true | false |
-| bg-color | 组件背景颜色，`mode`为`button`时有效 | String | #eeeeef | - |
-| button-color | 按钮背景颜色，`mode`为`button`时有效 | String | #ffffff | - |
+| 参数			| 说明									| 类型					| 默认值		|  可选值	|
+|:-				|:-										|:-						|:-			|:-			|
+| list			| 选项的数组，形式见上方"基本使用"			| Array					| -			| -			|
+| current		| 初始化时默认选中的选项索引值				| String &#124; Number	| 0			| -			|
+| activeColor	| 激活时的颜色							| String				| #3c9cff	| -			|
+| inactiveColor| 未激活时的颜色							| String				| #303133	| -			|
+| mode			| 模式选择，见上方"模式选择"说明			| String				| button	| subsection|
+| fontSize		| 字体大小，单位px						| String &#124; Number	| 12		| -			|
+| bold			| 激活选项的字体是否加粗					| Boolean				| true		| false		|
+| bgColor		| 组件背景颜色，`mode`为`button`时有效		| String				| #eeeeef	| -			|
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| :- | :- | :- |
-| change | 分段器选项发生改变时触发 | index：选项的index索引值，从0开始 |
+| 事件名| 说明						| 回调参数							|
+| :-	| :-						| :-								|
+| change| 分段器选项发生改变时触发		| index：选项的index索引值，从0开始	|

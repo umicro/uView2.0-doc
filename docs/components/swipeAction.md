@@ -13,9 +13,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -258,31 +258,31 @@
 
 ### SwipeAction Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| autoClose | 是否自动关闭其他swipe按钮组 | Boolean  | true | false |
+| 参数		| 说明							| 类型		| 默认值	|  可选值	|
+|:-			|:-								|:-			|:-		|:-			|
+| autoClose	| 是否自动关闭其他swipe按钮组		| Boolean	| true	| false		|
 
 ### SwipeAction Event
 
-|事件名|说明|回调参数|
-|:-|:-|:-|
-| click | 点击组件时触发 | (index) |
+|事件名	|说明			|回调参数	|
+|:-		|:-				|:-			|
+| click	| 点击组件时触发	| (index)	|
 
 ### SwipeActionItem Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| show | 控制打开或者关闭 | Boolean  | false | true |
-| index | 标识符，如果是v-for，可用index索引 | String &#124; Number | - | - |
-| disabled | 是否禁用 | Boolean  | false | true |
-| autoClose | 是否自动关闭其他swipe按钮组 | Boolean  | true | false |
-| threshold | 滑动距离阈值，只有大于此值，才被认为是要打开菜单 | Number  | 30 | - |
-| rightOptions | 右侧按钮内容 | Array  | [] | - |
-| duration | 动画过渡时间，单位ms | String &#124; Number  | 350 | - |
+| 参数			| 说明											| 类型					| 默认值	|  可选值	|
+|:-				|:-												|:-						|:-		|:-			|
+| show			| 控制打开或者关闭								| Boolean				| false	| true		|
+| index			| 标识符，如果是v-for，可用index索引				| String &#124; Number	| -		| -			|
+| disabled		| 是否禁用										| Boolean				| false	| true		|
+| autoClose		| 是否自动关闭其他swipe按钮组						| Boolean				| true	| false		|
+| threshold		| 滑动距离阈值，只有大于此值，才被认为是要打开菜单	| Number				| 30	| -			|
+| options		| 右侧按钮内容									| Array					| []	| -			|
+| duration		| 动画过渡时间，单位ms							| String &#124; Number	| 350	| -			|
 
 ### SwipeActionItem Event
 
-|事件名|说明|回调参数|
-|:-|:-|:-|
-| open | 组件打开时触发 | (index) |
-| close | 组件关闭时触发 | (index) |
+|事件名	|说明			|回调参数	|
+|:-		|:-				|:-			|
+| open	| 组件打开时触发	| (index)	|
+| close	| 组件关闭时触发	| (index)	|

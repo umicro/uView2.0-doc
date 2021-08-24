@@ -6,9 +6,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -116,31 +116,31 @@
 
 ### Steps Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| direction | row-横向，column-竖向 | String  | row | column |
-| current | 设置当前处于第几步 | Number &#124; String  | 0 | - |
-| activeColor | 激活状态颜色 | String  | #3c9cff | - |
-| inactiveColor | 未激活状态颜色 | String  | #969799 | - |
-| activeIcon | 激活状态的图标 | String  | - | - |
-| inactiveIcon | 未激活状态图标 | String  | - | - |
-| dot | 是否显示点类型 | Boolean  | false | true |
-
+| 参数			| 说明					| 类型					| 默认值		|  可选值	|
+|:-				|:-						|:-						|:-			|:-			|
+| direction		| row-横向，column-竖向	| String				| row		| column	|
+| current		| 设置当前处于第几步		| Number &#124; String	| 0			| -			|
+| activeColor	| 激活状态颜色			| String				| #3c9cff	| -			|
+| inactiveColor	| 未激活状态颜色			| String				| #969799	| -			|
+| activeIcon	| 激活状态的图标			| String				| -			| -			|
+| inactiveIcon	| 未激活状态图标			| String				| -			| -			|
+| dot			| 是否显示点类型			| Boolean				| false		| true		|
+	
 
 ### Steps Item Props
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| title | 标题文字 | String  | - | - |
-| current | 描述文本 | String  | - | - |
-| iconSize | 图标大小 | String &#124; Number  | 17 | - |
-| error | 当前步骤是否处于失败状态 | Boolean  | false | true |
+| 参数		| 说明						| 类型					| 默认值	|  可选值	|
+|:-			|:-							|:-						|:-		|:-			|
+| title		| 标题文字					| String				| -		| -			|
+| current	| 描述文本					| String				| -		| -			|
+| iconSize	| 图标大小					| String &#124; Number	| 17	| -			|
+| error		| 当前步骤是否处于失败状态		| Boolean				| false	| true		|
 
 
 ### Slot
 
-| 名称          | 说明            |
-|-------------  |---------------- |
-| - | 自定步骤状态内容  |
+| 名称	| 说明				|
+|:-		|:-					|
+| -		| 自定步骤状态内容	|
 
 
 <style >

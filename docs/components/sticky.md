@@ -8,9 +8,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 :::tip 说明
 本组件内部通过多种手段嗅探当前运行环境是否支持`css sticky`，在`H5`，`APP-VUE`，`NVUE`，`MP-WEIIXN`，`安卓`
@@ -49,12 +49,12 @@
 
 ### Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| offset-top | 吸顶时与顶部的距离，单位rpx  | String &#124; Number | 0 | - |
-| index | 自定义标识，用于区分是哪一个组件 | String &#124; Number  | - | - |
-| disabled | 是否禁用吸顶功能 | Boolean  | false | true |
-| bg-color | 组件背景颜色 | String  | #ffffff | - |
-| z-index | 吸顶时的`z-index`值，`NVUE`无效 | String &#124; Number  | 970 | - |
-| customNavHeight | 导航栏高度，自定义导航栏时，需要传入此值 | String &#124; Number  | - | - |
+| 参数				| 说明									| 类型					| 默认值		|  可选值	|
+|:-					|:-										|:-						|:-			|:-			|
+| offsetTop			| 吸顶时与顶部的距离，单位rpx				| String &#124; Number	| 0			| -			|
+| customNavHeight	| 导航栏高度，自定义导航栏时，需要传入此值	| String &#124; Number	| 0			| -			|
+| disabled			| 是否禁用吸顶功能						| Boolean				| false		| true		|
+| bgColor			| 组件背景颜色							| String				| #ffffff	| -			|
+| zIndex			| 吸顶时的`z-index`值，`NVUE`无效			| String &#124; Number	| -			| -			|
+| index				| 自定义标识，用于区分是哪一个组件			| String &#124; Number	| -			| -			|
 

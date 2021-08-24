@@ -27,9 +27,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 
 ### 基本使用
@@ -198,32 +198,32 @@ value6: 0,
 
 ### TableBar Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| value | 当前匹配项的name | String &#124; Number | null | - |
-| safeAreaInsetBottom | 是否为iPhoneX留出底部安全距离 | Boolean | true | false |
-| border | 是否显示上方边框 | Boolean | true | false |
-| zIndex | 元素层级z-index | String &#124; Number | 1 | - |
-| activeColor |  选中标签的颜色 | String | #1989fa | - |
-| inactiveColor | 未选中标签的颜色 | String  | #7d7e80 | - |
-| fixed | 是否固定在底部 | Boolean | true | false |
-| placeholder | fixed定位固定在底部时，是否生成一个等高元素防止塌陷 | Boolean | true | false |
+| 参数					| 说明												| 类型					| 默认值		|  可选值	|
+|:-						|:-													|:-						|:-			|:-			|
+| value					| 当前匹配项的name									| String &#124; Number	| null		| -			|
+| safeAreaInsetBottom	| 是否为iPhoneX留出底部安全距离						| Boolean				| true		| false		|
+| border				| 是否显示上方边框									| Boolean				| true		| false		|
+| zIndex				| 元素层级z-index									| String &#124; Number	| 1			| -			|
+| activeColor			| 选中标签的颜色										| String				| #1989fa	| -			|
+| inactiveColor			| 未选中标签的颜色									| String				| #7d7e80	| -			|
+| fixed					| 是否固定在底部										| Boolean				| true		| false		|
+| placeholder			| fixed定位固定在底部时，是否生成一个等高元素防止塌陷	| Boolean				| true		| false		|
 
 
 ### TableBarItem Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| name | item标签的名称，作为与u-tabbar的value参数匹配的标识符 | String &#124; Number | null | - |
-| icon | uView内置图标或者绝对路径的图片 | String \ | - | - |
-| badge | 右上角的角标提示信息 | String &#124; Number  | null | - |
-| dot | 是否显示圆点，将会覆盖badge参数 | Boolean | false | true |
-| text | 描述文本 | String | - | - |
-| badgeStyle | 控制徽标的位置，对象或者字符串形式，可以设置top和right属性 | Object &#124; String | 'top: 6px;right:2px;' | - |
+| 参数		| 说明													| 类型					| 默认值					|  可选值	|
+|:-			|:-														|:-						|:-						|:-			|
+| name		| item标签的名称，作为与u-tabbar的value参数匹配的标识符		| String &#124; Number	| null					| -			|
+| icon		| uView内置图标或者绝对路径的图片							| String 				| -						| -			|
+| badge		| 右上角的角标提示信息									| String &#124; Number	| null					| -			|
+| dot		| 是否显示圆点，将会覆盖badge参数							| Boolean				| false					| true		|
+| text		| 描述文本												| String				| -						| -			|
+| badgeStyle| 控制徽标的位置，对象或者字符串形式，可以设置top和right属性	| Object &#124; String	| 'top: 6px;right:2px;'	| -			|
 
 ### TableBarItem Events
 
-| 事件名 | 说明 | 回调参数 |
-| :- | :- | :- |
-| change | 切换选项时触发 | index：当前要切换项的name |
-| click | 切换选项时触发 | index：当前要切换项的name |
+| 事件名	| 说明			| 回调参数					|
+| :-	| :-			| :-						|
+| change| 切换选项时触发	| index：当前要切换项的name	|
+| click	| 切换选项时触发	| index：当前要切换项的name	|

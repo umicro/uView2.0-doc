@@ -19,9 +19,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -159,22 +159,23 @@ H5、App（含NVUE）外链可以直接打开，小程序端将自动复制链�
 
 ### Props
 
-| 参数           | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |--------------- |------------------| -------- |
-|content        | 要显示的富文本字符串 | String	| - | - |
-|copyLink       | 是否允许外部链接被点击时自动复制 | Boolean | true | false |
-|domain	        | 主域名，设置后将给链接自动拼接上主域名或协议名 | String | - | - |
-|errorImg       | 图片出错时的占位图链接 | String | - | - |
-|lazyLoad       | 是否开启图片懒加载，nvue不支持此属性 | Boolean | false | true |
-|loadingImg     | 图片加载完成前的占位图，详见 占位图	| String | - | - |
-|pauseVideo	    | 是否在播放一个视频时自动暂停其它视频 | Boolean | true | false |
-|previewImg 	| 是否开启图片被点击时自动预览 | Boolean | true | false |
-|showImgMenu 	| 是否开启图片被长按时显示菜单 | Boolean | true | false |
-|scrollTable    | 是否自动给 table 添加一个滚动层（使表格可以单独横向滚动）| Boolean | false | true |
-|setTitle       | 是否自动将 title 标签的内容设置到页面标题 | Boolean | true | false |
-|selectable     | 是否开启长按复制内容	| Boolean | false | true |
-|tagStyle       | 设置标签的默认样式 | Object | - | - |
-|useAnchor      | 是否使用页面内锚点 | Boolean/Number | false | true |
+| 参数		| 说明													| 类型			| 默认值	|  可选值	|
+|:-			|:-														|:-				|:-		| :-		|
+|bgColoe	| 背景颜色，只适用与APP-PLUS-NVUE							| String		| -		| -			|
+|content	| 要显示的富文本字符串									| String		| -		| -			|
+|copyLink	| 是否允许外部链接被点击时自动复制							| Boolean		| true	| false		|
+|domain		| 主域名，设置后将给链接自动拼接上主域名或协议名				| String		| -		| -			|
+|errorImg	| 图片出错时的占位图链接									| String		| -		| -			|
+|lazyLoad	| 是否开启图片懒加载，nvue不支持此属性						| Boolean		| true	| false		|
+|loadingImg	| 图片加载完成前的占位图，详见 占位图						| String		| -		| -			|
+|pauseVideo	| 是否在播放一个视频时自动暂停其它视频						| Boolean		| true	| false		|
+|previewImg	| 是否开启图片被点击时自动预览								| Boolean		| true	| false		|
+|scrollTable| 是否自动给 table 添加一个滚动层（使表格可以单独横向滚动）	| Boolean		| false	| true		|
+|selectable	| 是否开启长按复制内容									| Boolean		| false	| true		|
+|setTitle	| 是否自动将 title 标签的内容设置到页面标题					| Boolean		| true	| false		|
+|showImgMenu| 是否开启图片被长按时显示菜单								| Boolean		| true	| false		|
+|tagStyle	| 设置标签的默认样式										| Object		| -		| -			|
+|useAnchor	| 是否使用页面内锚点										| Boolean/Number| false	| true		|
 
 ### Event
 

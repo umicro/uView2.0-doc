@@ -7,9 +7,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基础使用
 
@@ -138,23 +138,24 @@ value12: true,
 当用打开选择器时，该值在`switch`组件内部被修改为`true`，并反映到父组件，否则为`false`，换言之，您无需监听`switch`的`change`事件，也能
 知道某一个`switch`是否被选中的状态
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| loading | 是否处于加载中  | Boolean | false | true |
-| disabled | 是否禁用  | Boolean | false | true |
-| size | 开关尺寸，单位rpx | String &#124; Number  | 25 | - |
-| activeColor | 打开时的背景色 | String  | #2979ff | - |
-| inactiveColor | 关闭时的背景色 | String  | #ffffff | - |
-| value | 通过v-model双向绑定的值 | Boolean /| String &#124; Number | false | - |
-| activeValue | 打开选择器时的值 | Boolean /| String &#124; Number | true | - |
-| inactiveValue | 关闭选择器时的值 | Boolean /| String &#124; Number | false | - |
-| asyncChange | 是否开启异步变更，开启后需要手动控制输入值 | Boolean | false | true |
-| space | 圆点与外边框的距离 | String &#124; Number | 0 | - |
+| 参数			| 说明									| 类型									| 默认值		|  可选值	|
+|:-				|:-										|:-										|:-			|:-			|
+| loading		| 是否处于加载中							| Boolean								| false		| true		|
+| disabled		| 是否禁用								| Boolean								| false		| true		|
+| size			| 开关尺寸，单位rpx						| String &#124; Number					| 25		| -			|
+| activeColor	| 打开时的背景色							| String								| #2979ff	| -			|
+| inactiveColor	| 关闭时的背景色							| String								| #ffffff	| -			|
+| value			| 通过v-model双向绑定的值					| Boolean &#124; String &#124; Number	| false		| -			|
+| activeValue	| 打开选择器时的值						| Boolean &#124; String &#124; Number	| true		| -			|
+| inactiveValue	| 关闭选择器时的值						| Boolean &#124; String &#124; Number	| false		| -			|
+| asyncChange	| 是否开启异步变更，开启后需要手动控制输入值	| Boolean								| false		| true		|
+| space			| 圆点与外边框的距离						| String &#124; Number					| 0			| -			|
 
 
 ### Switch Event
 
-|事件名|说明|回调参数|
-|:-|:-|:-|:-|
-| change | 在`switch`打开或关闭时触发 | value：打开时为`activeColor`值，关闭时为`inactiveColor`值 |
-| input | 在`switch`打开或关闭时触发（没开启异步） | value：打开时为`activeColor`值，关闭时为`inactiveColor`值 |
+|事件名	|说明										|回调参数													|
+|:-		|:-											|:-															|
+| change| 在`switch`打开或关闭时触发					| value：打开时为`activeColor`值，关闭时为`inactiveColor`值	|
+| input	| 在`switch`打开或关闭时触发（没开启异步）		| value：打开时为`activeColor`值，关闭时为`inactiveColor`值	|
+	
