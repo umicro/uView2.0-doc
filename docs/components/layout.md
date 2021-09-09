@@ -1,6 +1,6 @@
 ## Layout 布局 <to-api/>
 
-<demo-model url="/pages/componentsC/layout/index"></demo-model>
+<demo-model url="/pages/componentsC/layout/layout"></demo-model>
 
 
 通过基础的 12 分栏，迅速简便地创建布局  

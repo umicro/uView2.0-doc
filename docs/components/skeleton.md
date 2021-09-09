@@ -1,6 +1,6 @@
 ## Skeleton 骨架屏 <to-api/>
 
-<demo-model url="/pages/componentsB/skeleton/index"></demo-model>
+<demo-model url="/pages/componentsC/skeleton/skeleton"></demo-model>
 
 
 骨架屏一般用于页面在请求远程数据尚未完成时，页面用灰色块预显示本来的页面结构，给用户更好的体验。  

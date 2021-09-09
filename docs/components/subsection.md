@@ -1,6 +1,6 @@
 ## Subsection 分段器 <to-api/>
 
-<demo-model url="/pages/componentsC/subsection/index"></demo-model>
+<demo-model url="/pages/componentsC/subsection/subsection"></demo-model>
 
 
 该分段器一般用于用户从几个选项中选择某一个的场景

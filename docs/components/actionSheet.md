@@ -1,6 +1,6 @@
 ## ActionSheet 操作菜单 <to-api/>
 
-<demo-model url="/pages/componentsC/actionSheet/index"></demo-model>
+<demo-model url="/pages/componentsB/actionSheet/actionSheet"></demo-model>
 
 本组件用于从底部弹出一个操作菜单，供用户选择并返回结果。  
 本组件功能类似于uni的`uni.showActionSheet`API，配置更加灵活，所有平台都表现一致。

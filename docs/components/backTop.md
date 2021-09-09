@@ -1,6 +1,6 @@
 ## BackTop 返回顶部 <Badge text="1.3.0" /> <to-api/>
 
-<demo-model url="/pages/componentsA/backTop/index"></demo-model>
+<demo-model url="/pages/componentsA/backtop/backtop"></demo-model>
 
 
 该组件一个用于长页面，滑动一定距离后，出现返回顶部按钮，方便快速返回顶部的场景。

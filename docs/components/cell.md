@@ -1,6 +1,6 @@
 ## Cell 单元格 <to-api/>
 
-<demo-model url="/pages/componentsC/cell/index"></demo-model>
+<demo-model url="/pages/componentsA/cell/cell"></demo-model>
 
 
 cell单元格一般用于一组列表的情况，比如个人中心页，设置页等。

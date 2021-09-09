@@ -1,6 +1,6 @@
 ## Radio 单选框 <to-api/>
 
-<demo-model url="/pages/componentsB/radio/index"></demo-model>
+<demo-model url="/pages/componentsA/radio/radio"></demo-model>
 
 
 单选框用于有一个选择，用户只能选择其中一个的场景。

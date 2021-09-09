@@ -1,6 +1,6 @@
 ## Slider 滑动选择器 <to-api/>
       
-<demo-model url="/pages/componentsA/slider/index"></demo-model>
+<demo-model url="/pages/componentsB/slider/slider"></demo-model>
 
 该组件一般用于表单中，手动选择一个区间范围的场景。
 

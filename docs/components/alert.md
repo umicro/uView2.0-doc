@@ -1,6 +1,6 @@
 ## Alert 警告提示 <to-api/>
 
-<demo-model url="/pages/componentsC/alertTips/index"></demo-model>
+<demo-model url="/pages/componentsB/alert/alert"></demo-model>
 
 警告提示，展现需要关注的信息。
 

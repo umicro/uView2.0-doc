@@ -1,6 +1,6 @@
 ## Code 验证码输入框 <to-api/>
 
-<demo-model url="/pages/componentsA/verificationCode/index"></demo-model>
+<demo-model url="/pages/componentsB/code/code"></demo-model>
 
 
 考虑到用户实际发送验证码的场景，可能是一个按钮，也可能是一段文字，提示语各有不同，所以本组件

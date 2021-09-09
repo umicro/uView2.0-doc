@@ -1,6 +1,6 @@
 ## Toast 消息提示 <to-api/>
 
-<demo-model url="/pages/componentsA/toast/index"></demo-model>
+<demo-model url="/pages/componentsB/toast/toast"></demo-model>
 
 
 Toast 组件主要用于消息通知、加载提示、操作结果提示等醒目提示效果，我们为其提供了多种丰富的API。

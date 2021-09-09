@@ -1,6 +1,6 @@
 ## Album 相册 <to-api/>
 
-<demo-model url="/pages/componentsC/actionSheet/index"></demo-model>
+<demo-model url="/pages/componentsC/album/album"></demo-model>
 
 本组件提供一个类似相册的功能，让开发者开发起来更加得心应手。减少重复的模板代码
 

@@ -1,6 +1,6 @@
 ## Upload 上传 <to-api/>
 
-<demo-model url="/pages/componentsB/upload/index"></demo-model>
+<demo-model url="/pages/componentsB/upload/upload"></demo-model>
 
 
 该组件用于上传图片场景

@@ -1,6 +1,6 @@
 ## IndexList 索引列表 <to-api/>
 
-<demo-model url="/pages/componentsA/indexList/index"></demo-model>
+<demo-model url="/pages/componentsC/indexList/indexList"></demo-model>
 
 
 通过折叠面板收纳内容区域
