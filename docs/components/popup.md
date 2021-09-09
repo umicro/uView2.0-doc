@@ -6,9 +6,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -89,27 +89,27 @@
 
 注意：props中没有控制弹窗打开与收起的参数，因为这是通过v-model绑定变量实现的，见上方说明。
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|------------- |---------------- |---------------|------------------ |-------- |
-| show         | 是否展示弹窗 | Boolean | false | true |
-| overlay      | 是否显示遮罩 | Boolean | true | false |
-| mode         | 弹出方向 | String | left | top / right / bottom / center |
-| duration     | 遮罩打开或收起的动画过渡时间，单位ms | String \| Number | 3000 | - |
-| borderRadius | 弹窗圆角值 | String \| Number | 0 | - |
-| closeable    | 是否显示关闭图标 | Boolean | false | true |
-| overlayStyle | 遮罩自定义样式，一般用于修改遮罩透明度对象形式，如：{background: 'rgba(0, 0, 0, 0.5)'}  | Object | - | - |
-| closeOnClickOverly | 点击遮罩是否关闭弹窗 | Boolean | true | false |
-| zIndex       | 弹出层的`z-index`值 | Number \| String | 10075 | - |
-| safeAreaInsetBottom | 是否为留出[底部安全距离](/components/safeAreaInset.html) | Boolean | true | false |
-| safeAreaInsetTop | 是否留出[顶部安全距离](/components/safeAreaInset.html)（状态栏高度） | Boolean | false | true |
-| closeIconPos | 自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角  | String | top-right | top-left / bottom-left / bottom-right |
-| round        | 是否显示圆角 | Boolean | false | true |
-| zoom         | 当mode=center时 是否开启缩放 | Boolean | true | false |
-| customStyle  | 用户自定义样式  | Object | - | - |
+| 参数					| 说明																							| 类型					| 默认值		|  可选值								|
+|:-						|:-																								|:-						|:-			|:-										|
+| show					| 是否展示弹窗																					| Boolean				| false		| true									|
+| overlay				| 是否显示遮罩																					| Boolean				| true		| false									|
+| mode					| 弹出方向																						| String				| bottom	| top / right / bottom / center			|
+| duration				| 遮罩打开或收起的动画过渡时间，单位ms																| String &#124; Number	| 300		| -										|
+| borderRadius			| 弹窗圆角值																						| String &#124; Number	| 0			| -										|
+| closeable				| 是否显示关闭图标																				| Boolean				| false		| true									|
+| overlayStyle			| 遮罩自定义样式，一般用于修改遮罩透明度对象形式，如：{background: 'rgba(0, 0, 0, 0.5)'}				| Object				| -			| -										|
+| closeOnClickOverly	| 点击遮罩是否关闭弹窗																			| Boolean				| true		| false									|
+| zIndex				| 弹出层的`z-index`值																			| Number &#124; String	| 10075		| -										|
+| safeAreaInsetBottom	| 是否为留出[底部安全距离](/components/safeAreaInset.html)											| Boolean				| true		| false									|
+| safeAreaInsetTop		| 是否留出[顶部安全距离](/components/safeAreaInset.html)（状态栏高度）								| Boolean				| false		| true									|
+| closeIconPos			| 自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角	| String				| top-right	| top-left / bottom-left / bottom-right	|
+| round					| 是否显示圆角																					| Boolean				| false		| true									|
+| zoom					| 当mode=center时 是否开启缩放																	| Boolean				| true		| false									|
+| customStyle			| 用户自定义样式																					| Object				| -			| -										|
 
 ### Event
 
-|事件名|说明|回调参数|版本|
-|:-|:-|:-|:-|
-| open  | 弹出层打开 | - | - |
-| close | 弹出层收起 | - | - |
+|事件名	|说明		|回调参数	|版本	|
+|:-		|:-			|:-			|:-		|
+| open	| 弹出层打开	| -			| -		|
+| close	| 弹出层收起	| -			| -		|

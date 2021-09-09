@@ -7,9 +7,9 @@
 
 ### 平台差异说明
 
-|  App  |  H5   | 微信小程序 | 支付宝小程序 | 百度小程序 | 头条小程序 | QQ小程序 |
-| :---: | :---: | :--------: | :----------: | :--------: | :--------: | :------: |
-|   √   |   √   |     √      |      √       |     √      |     √      |    √     |
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -101,17 +101,17 @@
 
 ### Props
 
-| 参数            | 说明                                                                                   | 类型             | 默认值      | 可选值              |
-| --------------- | -------------------------------------------------------------------------------------- | ---------------- | ----------- | ------------------- |
-| mode            | 模式选择，见上方说明                                                                   | String           | spinner     | circle \ semicircle |
-| color           | 图标颜色                                                                               | String           | #909193     | -                   |
-| inactiveColor  | 图标的暗边颜色, `mode`为`circle` 模式有效                                              | String           | transparent | -                   |
-| vertical        | 图标和文字是否垂直排列                                                                 | Boolean          | false       | true                |
-| text            | 文字内容                                                                               | String           | -           | -                   |
-| size            | 加载图标的大小，单位px                                                                 | String \| Number | 24          | -                   |
-| textSize        | 加载文字的大小，单位px                                                                 | String \| Number | 15          | -                   |
-| show            | 是否显示动画                                                                           | Boolean          | true        | false               |
-| timingFunction | 指定`animation-timing-function`的css属性，但只支持`mode`为`circle`或`semicircle`才有效 | Boolean          | true        | false               |
-| duration        | 动画执行周期时间，单位ms                                                               | string \| Number | 1200        | -                   |
+| 参数			| 说明																					| 类型					| 默认值					| 可选值				|
+| :-			| :-																					| :-					| :-					| :-					|
+| show			| 是否显示动画																			| Boolean				| true					| false					|
+| color			| 图标颜色																				| String				| color['u-tips-color']	| -						|
+| vertical		| 图标和文字是否垂直排列																	| Boolean				| false					| true					|
+| mode			| 模式选择，见上方说明																	| String				| circle 				| circle \ semicircle	|
+| size			| 加载图标的大小，单位px																	| String &#124; Number	| 24					| -						|
+| textSize		| 加载文字的大小，单位px																	| String &#124; Number	| 15					| -						|
+| text			| 文字内容																				| String				| -						| -						|
+| timingFunction| 指定`animation-timing-function`的css属性，但只支持`mode`为`circle`或`semicircle`才有效	| String				| ease-in-out			| -						|
+| duration		| 动画执行周期时间，单位ms																	| string &#124; Number	| 1200					| -						|
+| inactiveColor	| 图标的暗边颜色, `mode`为`circle` 模式有效												| String				| transparent			| -						|
 
 

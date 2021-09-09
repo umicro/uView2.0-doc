@@ -10,9 +10,9 @@
 
 ### 平台差异说明
 
-|  App  |  H5   | 微信小程序 | 支付宝小程序 | 百度小程序 | 头条小程序 | QQ小程序 |
-| :---: | :---: | :--------: | :----------: | :--------: | :--------: | :------: |
-|   √   |   √   |     √      |      √       |     √      |     √      |    √     |
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -106,28 +106,28 @@
 
 ### Props
 
-| 参数          | 说明                                                    | 类型             | 默认值      | 可选值               |
-| ------------- | ------------------------------------------------------- | ---------------- | ----------- | -------------------- |
-| status        | 组件状态                                                | String           | loadmore    | loading / nomore     |
-| bgColor      | 组件背景颜色，在页面是非白色时会用到(默认为transparent) | String           | #ffffff     | -                    |
-| icon          | 加载中时是否显示图标                                    | Boolean          | true        | false                |
-| iconColor    | 加载中的动画图标的颜色                                  | String           | #b7b7b7     | -                    |
-| isDot        | `status`为`nomore`时，内容显示为一个"●"                 | Boolean          | false       | true                 |
-| color         | 字体颜色                                                | String           | #606266     | -                    |
-| fontSize     | 字体大小，单位rpx                                       | String \| Number | 28          | -                    |
-| height        | 高度                                                    | String \| Number | auto        | -                    |
-| marginTop    | 与前一个元素的距离，单位rpx                             | String \| Number | 20          | -                    |
-| marginBottom | 与后一个元素的距离，单位rpx                             | String \| Number | 20          | -                    |
-| loadingIcon  | 加载中状态的图标                                        | String           | circle      | spinner / semicircle |
-| loadingText  | 加载中提示语                                            | String           | 正在加载... | -                    |
-| loadmoreText | 加载前的提示语                                          | String           | 加载更多    | -                    |
-| nomoreText   | 没有更多的提示语                                        | String           | 没有更多了  | -                    |
-| line          | 是否显示左边分割线                                      | Boolean          | false       | true                 |
+| 参数			| 说明													| 类型					| 默认值			| 可选值					|
+| :-			| :-													| :-					| :-			| :-					|
+| status		| 组件状态												| String				| loadmore		| loading / nomore		|
+| bgColor		| 组件背景颜色，在页面是非白色时会用到(默认为transparent)	| String				| transparent	| -						|
+| icon			| 加载中时是否显示图标									| Boolean				| true			| false					|
+| fontSize		| 字体大小，单位rpx										| String &#124; Number	| 14			| -						|
+| color			| 字体颜色												| String				| #606266		| -						|
+| loadingIcon	| 加载中状态的图标										| String				| circle		| spinner / semicircle	|
+| loadmoreText	| 加载前的提示语											| String				| 加载更多		| -						|
+| loadingText	| 加载中提示语											| String				| 正在加载...	| -						|
+| nomoreText	| 没有更多的提示语										| String				| 没有更多了		| -						|
+| isDot			| `status`为`nomore`时，内容显示为一个"●"					| Boolean				| false			| true					|
+| iconColor		| 加载中的动画图标的颜色									| String				| #b7b7b7		| -						|
+| marginTop		| 与前一个元素的距离，单位rpx								| String &#124; Number	| 10			| -						|
+| marginBottom	| 与后一个元素的距离，单位rpx								| String &#124; Number	| 10			| -						|
+| height		| 高度													| String &#124; Number	| auto			| -						|
+| line			| 是否显示左边分割线										| Boolean				| false			| true					|
 
 
 ### Event
 
 
-| 事件名   | 说明                                         | 回调参数 | 版本 |
-| :------- | :------------------------------------------- | :------- | :--- |
-| loadmore | `status`为`loadmore`时，点击组件会发出此事件 | -        | -    |
+| 事件名		| 说明											| 回调参数	| 版本	|
+| :-		| :-											| :-		| :-	|
+| loadmore	| `status`为`loadmore`时，点击组件会发出此事件		| -			| -		|

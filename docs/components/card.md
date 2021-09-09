@@ -123,23 +123,23 @@ export default {
 | full | 卡片与屏幕两侧是否留空隙  | Boolean | fasle | true |
 | title | 头部左边的标题  | String	 | - | - |
 | title-color | 标题颜色 | String  | #303133 | - |
-| title-size | 标题字体大小，单位rpx | String \| Number  | 30 | - |
+| title-size | 标题字体大小，单位rpx | String &#124; Number  | 30 | - |
 | sub-title | 头部右边的副标题 | String  | - | - |
 | sub-title-color | 副标题颜色 | String  | #909399 | - |
-| sub-title-size | 副标题字体大小 | String \| Number  | 26 | - |
+| sub-title-size | 副标题字体大小 | String &#124; Number  | 26 | - |
 | border | 是否显示边框 | Boolean  | true | false |
-| index | 用于标识点击了第几个卡片 | String \| Number  | - | - |
+| index | 用于标识点击了第几个卡片 | String &#124; Number  | - | - |
 | margin | 卡片与屏幕两边和上下元素的间距，需带单位，如"30rpx 20rpx"，见上方说明 | String  | 30rpx | - |
-| border-radius | 卡片整体的圆角值，单位rpx | String \| Number  | 16 | - |
+| border-radius | 卡片整体的圆角值，单位rpx | String &#124; Number  | 16 | - |
 | head-style | 头部自定义样式，对象形式 | Object  | - | - |
 | body-style | 主体自定义样式，对象形式 | Object  | - | - |
 | foot-style | 底部自定义样式，对象形式 | Object  | - | - |
 | head-border-bottom | 是否显示头部的下边框 | Boolean  | true | false |
 | foot-border-top | 是否显示底部的上边框 | Boolean  | true | false |
 | thumb | 缩略图路径，如设置将显示在标题的左边，不建议使用相对路径 | String  | - | - |
-| thumb-width | 缩略图的宽度，高等于宽，单位rpx | String \| Number  | 60 | - |
+| thumb-width | 缩略图的宽度，高等于宽，单位rpx | String &#124; Number  | 60 | - |
 | thumb-circle | 缩略图是否为圆形 | Boolean  | false | true |
-| padding | 给head，body，foot部的内边距，见上方说明，单位rpx | String \| Number  | 30 | - |
+| padding | 给head，body，foot部的内边距，见上方说明，单位rpx | String &#124; Number  | 30 | - |
 | show-head <Badge text="1.3.5" /> | 是否显示头部 | Boolean  | true | false |
 | show-foot <Badge text="1.3.5" /> | 是否显示尾部 | Boolean  | true | false |
 | box-shadow <Badge text="1.6.2" /> | 卡片外围阴影，字符串形式 | String  | none | - |

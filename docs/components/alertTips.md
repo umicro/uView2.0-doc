@@ -11,9 +11,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -87,19 +87,20 @@ export default {
 
 ### Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| title | 显示的文字  | String | - | - |
-| description | 辅助性文字，颜色比`title`浅一点，字号也小一点，可选 | String  | - | - |
-| closable | 关闭按钮(默认为叉号icon图标) | Boolean  | false | true |
-| type | 使用预设的颜色 | String  | warning | success / primary / error / info |
-| showIcon | 是否显示左边的辅助图标 | String  | light(浅色) | dark(深色) |
-| center | 文字是否居中 | Boolean  | false | true |
-| fontSize | 字体大小 | 	Number / String  | - | - |
+| 参数			| 说明												| 类型					| 默认值			| 可选值												|
+|:-				|:-													|:-						|:-				|:-													|
+| title			| 显示的文字											| String				| -				| -													|
+| type			| 使用预设的颜色										| String				| warning		| success &#124; primary &#124; error &#124; info	|
+| description	| 辅助性文字，颜色比`title`浅一点，字号也小一点，可选	| String				| -				| -													|
+| closable		| 关闭按钮(默认为叉号icon图标)							| Boolean				| false			| true												|
+| showIcon		| 是否显示左边的辅助图标								| Boolean				| false			| true												|
+| effect		| 多图时，图片缩放裁剪的模式							| String				| light(浅色)	| dark(深色)											|
+| center		| 文字是否居中										| Boolean				| false			| true												|
+| fontSize		| 字体大小											| String &#124; Number	| 14			| -													|
 
 
 ### Events
 
-|事件名|说明|回调参数|
-|:-|:-|:-|
-|click|点击组件时触发|-|
+|事件名	|说明			|回调参数	|
+|:-		|:-				|:-			|
+|click	|点击组件时触发	|-			|
