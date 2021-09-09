@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>I18n 多语言切换 | uView 2.0 - 全面兼容nvue的uni-app生态框架 - uni-app UI框架</title>
+		<meta charset="utf-8">
+		
+		<meta name="description" content="uView UI，是uni-app生态最优秀的UI框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="uview,uView,uviewui,uview ui,uviewUI,uViewui,uViewUI,uView UI,uni ui,uni UI,uni-app ui框架,uni-app UI框架,uniapp ui,ui,UI框架,uniapp ui框架,uniapp UI">
+		<link rel="preload" href="/u-view2.0-doc/assets/css/0.styles.df54b02e.css" as="style"><link rel="preload" href="/u-view2.0-doc/assets/js/app.57b369f2.js" as="script"><link rel="preload" href="/u-view2.0-doc/assets/js/2.dcabbb37.js" as="script"><link rel="preload" href="/u-view2.0-doc/assets/js/4.3c0f9e97.js" as="script"><link rel="preload" href="/u-view2.0-doc/assets/js/126.1ee7ac05.js" as="script"><link rel="preload" href="/u-view2.0-doc/assets/js/10.6d4a7e6a.js" as="script"><link rel="preload" href="/u-view2.0-doc/assets/js/7.bfbff2e7.js" as="script"><link rel="prefetch" href="/u-view2.0-doc/assets/js/100.6cf5033e.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/101.46ec93d4.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/102.0677145b.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/103.0f90dcc0.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/104.a5ab7014.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/105.ccbcc110.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/106.19fdffa4.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/107.39c46341.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/108.0531e3f3.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/109.72c13415.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/11.8cf431b8.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/110.15a5c9fb.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/111.31e0e227.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/112.d1ccff27.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/113.665dcda0.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/114.afb8a15b.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/115.164cbbe3.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/116.0bf3a295.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/117.f65b2ff8.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/118.aea113d9.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/119.8ba7a5cd.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/12.ab074aa0.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/120.545e0cde.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/121.78c18d73.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/122.4f8cd072.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/123.bdf4bbfb.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/124.7c06d619.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/125.df40d7dd.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/127.663592fb.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/128.113e0f81.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/129.1b9fd526.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/13.d09bbf9b.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/130.c44eab7d.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/131.e47e08e1.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/132.0975291e.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/133.7b50f454.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/134.b9120333.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/135.ce3988eb.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/136.49ea82cb.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/137.156992c1.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/138.ced7c752.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/139.9935f4b4.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/14.76acef83.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/140.69a0fad4.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/141.0b260b37.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/142.b59b077b.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/143.6d3ab7a7.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/144.28bc0360.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/145.fdd0470c.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/146.bcbe0ed4.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/147.152c1340.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/148.33ce599d.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/149.8329a3cc.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/15.2f54467e.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/150.3df60b2d.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/151.773d0425.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/152.63c2a76d.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/153.40456f95.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/154.fdff5e5f.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/155.5e16403c.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/156.e39829d8.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/157.19ca5b1e.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/158.bddf5c25.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/16.7baf2fe7.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/17.0e49d855.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/18.bed73702.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/19.af8fcfae.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/20.d1657ec1.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/21.66fb4cb1.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/22.f0e866b7.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/23.0d33cd09.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/24.2ead79ff.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/25.dbe8807b.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/26.83a53665.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/27.3660a941.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/28.d22908ac.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/29.f90c26ab.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/3.15991e10.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/30.9b45434f.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/31.682f0ba4.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/32.793b39b5.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/33.8ea293d6.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/34.1b97a70f.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/35.042064e8.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/36.44672280.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/37.b00db349.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/38.474139f4.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/39.f6520c66.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/40.abc60e8b.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/41.c21f4231.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/42.123bb13a.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/43.7e65c289.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/44.a5a76281.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/45.881b2314.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/46.e6d25d4b.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/47.592f80c6.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/48.1b0d7f34.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/49.65c48ca4.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/5.99916401.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/50.dafc8bd5.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/51.01371194.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/52.5427dd37.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/53.c3d32913.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/54.c82003cc.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/55.fa67d50e.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/56.42a00bc7.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/57.a7f8c760.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/58.21db8f55.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/59.fd4a5cd3.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/6.497e783b.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/60.0aaf98ec.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/61.640ca2ca.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/62.11d7e869.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/63.cb0359d7.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/64.7606db6e.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/65.6574974e.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/66.19ea3bf9.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/67.bcb1e70d.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/68.dd8cdba2.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/69.b3d59d9f.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/70.7fcd2aac.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/71.ba2e7853.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/72.148b48d8.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/73.5e01967c.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/74.8608381f.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/75.582d37a0.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/76.e0642b65.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/77.9661e69c.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/78.427c34a8.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/79.9bc660b6.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/8.6cc33884.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/80.6e661192.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/81.2e37bb30.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/82.d8051fdd.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/83.8861d10a.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/84.ff3ca7b5.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/85.09295895.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/86.d936314a.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/87.92ce7282.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/88.22a0ae56.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/89.85d581f4.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/9.b1712a9f.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/90.36098d6e.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/91.cc9bb911.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/92.9340b553.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/93.6a7ffd54.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/94.4c981c8e.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/95.744fddd4.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/96.c84b6cc2.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/97.9c192a1c.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/98.b7413633.js"><link rel="prefetch" href="/u-view2.0-doc/assets/js/99.10bd188b.js">
+		<link rel="stylesheet" href="/u-view2.0-doc/assets/css/0.styles.df54b02e.css">
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?43e7eadc8f61e1e064906952da7d51f0";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/u-view2.0-doc/" class="home-link router-link-active"><img src="/u-view2.0-doc/common/logo.png" alt="uView 2.0 - 全面兼容nvue的uni-app生态框架 - uni-app UI框架" class="logo"> <span class="site-name can-hide">uView</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/u-view2.0-doc/guide/demo.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/u-view2.0-doc/components/intro.html" class="nav-link">
+  组件
+</a></div><div class="nav-item"><a href="/u-view2.0-doc/js/intro.html" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/u-view2.0-doc/layout/intro.html" class="nav-link">
+  模板
+</a></div><div class="nav-item"><a href="/u-view2.0-doc/components/resource.html" class="nav-link">
+  资源
+</a></div><div class="nav-item"><a href="/u-view2.0-doc/cooperation/about.html" class="nav-link">
+  关于我们
+</a></div><div class="nav-item"><a href="https://github.com/YanxinNet/uView" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/xuqu/uView" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div><aside class="sidebar"><a target="_blank" href="https://uni.cool-js.com" class="jump-link"><img src="https://cdn.uviewui.com/uview/resources/d0c76525dcf7c08f73c90fbb5f5bfe1.jpg"></a> <a target="_blank" href="http://tool.zjhlone.com/sms.php" class="jump-link"><img src="https://tool.zjhlone.com/3.jpg"></a> <nav class="nav-links"><div class="nav-item"><a href="/u-view2.0-doc/guide/demo.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/u-view2.0-doc/components/intro.html" class="nav-link">
+  组件
+</a></div><div class="nav-item"><a href="/u-view2.0-doc/js/intro.html" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/u-view2.0-doc/layout/intro.html" class="nav-link">
+  模板
+</a></div><div class="nav-item"><a href="/u-view2.0-doc/components/resource.html" class="nav-link">
+  资源
+</a></div><div class="nav-item"><a href="/u-view2.0-doc/cooperation/about.html" class="nav-link">
+  关于我们
+</a></div><div class="nav-item"><a href="https://github.com/YanxinNet/uView" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/xuqu/uView" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>开发指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/u-view2.0-doc/guide/demo.html" class="sidebar-link">效果演示</a></li><li><a href="/u-view2.0-doc/guide/customIcon.html" class="sidebar-link">扩展自定义图标库</a></li><li><a href="/u-view2.0-doc/guide/theme.html" class="sidebar-link">自定义主题</a></li><li><a href="/u-view2.0-doc/guide/i18n.html" aria-current="page" class="active sidebar-link">多语言切换</a></li><li><a href="/u-view2.0-doc/guide/globalVariable.html" class="sidebar-link">全局变量的实现</a></li><li><a href="/u-view2.0-doc/guide/codeHint.html" class="sidebar-link">HBuilder X代码提示</a></li><li><a href="/u-view2.0-doc/guide/design.html" class="sidebar-link">设计理念</a></li><li><a href="/u-view2.0-doc/guide/note.html" class="sidebar-link">注意事项</a></li></ul></section></li></ul> </aside></div> <main class="page"> <div class="theme-default-content content__default"><h2 id="i18n-多语言切换"><a href="#i18n-多语言切换" class="header-anchor">#</a> I18n 多语言切换</h2> <div class="demo-model" data-v-7371a506><div class="model-content" data-v-7371a506><iframe scrolling="auto" frameborder="0" src="https://i18n.uviewui.com" id="demo-modal" class="iframe" data-v-7371a506></iframe></div></div> <p>本教程旨在指导您在uni-app(小程序，H5，APP(不含NVUE)等)中从0开始，到熟练使用多语言切换功能，在这里，我们使用的是<code>vue-i18n</code>插件，请您务必按照我们提供的步骤，完整的做好每一步的配置。</p> <p>前言：</p> <ul><li><code>i18n</code>是一个专门用于处理多语言的插件，其义来自于<code>internationalization</code>(国际化)，取其首尾两个字母<code>i</code>和<code>n</code>，中间部分<code>nternationalizatio</code>刚好18个字母，
+故被起名<code>i18n</code>。</li> <li>此插件非uView内置功能，您需要通过<code>npm</code>下载方可使用。</li></ul> <div class="custom-block tip"><p class="custom-block-title">温馨提示</p> <p>uView精心为您准备了一个多语言切换的工程，包含了本文的所有演示功能，在下载页找到对应资源下载运行即可：<a href="http://uviewui.com/components/resource.html" target="_blank" rel="noopener noreferrer">资源下载<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <h3 id="安装vue-i18n"><a href="#安装vue-i18n" class="header-anchor">#</a> 安装vue-i18n</h3> <p>您需要通过<code>npm</code>安装此插件：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 如果您的项目由HX创建，根目录没有package.json的话，先通过如下命令创建package.json</span>
+<span class="token comment">// npm init -y</span>
+
+<span class="token comment">// 安装vue-i18n</span>
+npm install vue<span class="token operator">-</span>i18n
+</code></pre></div><h3 id="在main-js中引用vue-i18n"><a href="#在main-js中引用vue-i18n" class="header-anchor">#</a> 在main.js中引用vue-i18n</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 原有内容</span>
+<span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span>
+
+
+<span class="token comment">// 以下为添加的内容</span>
+
+<span class="token comment">// 引入语言包，注意路径</span>
+<span class="token keyword">import</span> zh <span class="token keyword">from</span> <span class="token string">'@/common/locales/zh.js'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> en <span class="token keyword">from</span> <span class="token string">'@/common/locales/en.js'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 引入并使用vue-i18n</span>
+<span class="token keyword">import</span> VueI18n <span class="token keyword">from</span> <span class="token string">'vue-i18n'</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>VueI18n<span class="token punctuation">)</span>
+
+<span class="token comment">// 构造i18n对象</span>
+<span class="token keyword">const</span> i18n <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueI18n</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	<span class="token comment">// 默认语言，这里的local属性，对应message中的zh、en属性</span>
+	locale<span class="token operator">:</span> <span class="token string">'zh'</span><span class="token punctuation">,</span>
+	<span class="token comment">// 引入语言文件</span>
+	messages<span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token comment">// 这里的属性名是任意的，您也可以把zh设置为cn等，只是后续切换语言时</span>
+		<span class="token comment">// 要标识这里的语言属性，如：this.$i18n.locale = zh|en|zh|xxx</span>
+		<span class="token string">'zh'</span><span class="token operator">:</span> zh<span class="token punctuation">,</span> <span class="token comment">// 这里为上面通过import引入的语言包</span>
+		<span class="token string">'en'</span><span class="token operator">:</span> en<span class="token punctuation">,</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 由于微信小程序的运行机制问题，需声明如下一行，H5和APP非必填</span>
+<span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>_i18n <span class="token operator">=</span> i18n
+
+
+<span class="token comment">// 原有内容，需在这添加i18n</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	<span class="token comment">// 记得在这添加i18n</span>
+	i18n<span class="token punctuation">,</span>
+	store<span class="token punctuation">,</span>
+    <span class="token operator">...</span>App
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="custom-block danger"><p class="custom-block-title">注意</p> <p>别忘了上面的最后处，需要在<code>new Vue</code>构造器中写入<code>i18n</code></p></div> <h3 id="定义语言包"><a href="#定义语言包" class="header-anchor">#</a> 定义语言包</h3> <p>上面我们在<code>main.js</code>通过<code>import</code>引入了两个语言包，一般来说，需要多少种语言，就要有多少个语言包，建议语言包中通过定义不同的字段划分不同页面
+所属的素材：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// zh.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+	<span class="token comment">// 可以以页面为单位来写，比如首页的内容，写在index字段，个人中心写在center，公共部分写在common部分</span>
+	lang<span class="token operator">:</span> <span class="token punctuation">{</span>
+		title<span class="token operator">:</span> <span class="token string">'uView UI'</span><span class="token punctuation">,</span>
+		intro<span class="token operator">:</span> <span class="token string">'多平台快速开发的UI框架'</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	common<span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token comment">// ......</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	index<span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token comment">// ......</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h3> <p>在实际场景中，我们可能在js中，也有可能在模板中使用，需通过<code>$t('lang.title')</code>的形式引用，这里的<code>lang</code>是我们上一步<code>zh.js</code>中定义的<code>lange</code>字段，<code>title</code>
+自然而然就是<code>lang</code>对象的<code>title</code>属性了。</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">margin-top</span><span class="token punctuation">:</span> 200rpx<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>
+		{{$t('lang.intro')}}
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+		<span class="token function">onLoad</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span><span class="token string">'lang.intro'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="语言切换"><a href="#语言切换" class="header-anchor">#</a> 语言切换</h3> <p>当我们点击语言切换的时候，通过<code>this.$i18n.locale</code>来设置新的语言，这个语言是我们定义在<code>main.js</code>中的<code>message</code>属性：</p> <p>回顾：我们上面第二步在<code>main.js</code>中进行了如下设置，其中的<code>message</code>对象的<code>zh</code>和<code>en</code>就是我们所能切换的语言：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// main.js</span>
+<span class="token comment">// 构造i18n对象</span>
+<span class="token keyword">const</span> i18n <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueI18n</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	<span class="token comment">// 默认语言，这里的local属性，对应message中的zh、en属性</span>
+	locale<span class="token operator">:</span> <span class="token string">'zh'</span><span class="token punctuation">,</span>
+	<span class="token comment">// 引入语言文件</span>
+	messages<span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token comment">// 这里的属性名是任意的，您也可以把zh设置为zh等，只是后续切换语言时</span>
+		<span class="token comment">// 要标识这里的语言属性，如：this.$i18n.locale = zh|en|zh|xxx</span>
+		<span class="token string">'zh'</span><span class="token operator">:</span> Chinese<span class="token punctuation">,</span>
+		<span class="token string">'en'</span><span class="token operator">:</span> English<span class="token punctuation">,</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>语言切换：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">margin-top</span><span class="token punctuation">:</span> 200rpx<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>
+		{{$t('lang.intro')}}
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u-button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>switchLang<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>切换语言<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u-button</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+		<span class="token function">onLoad</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span><span class="token string">'lang.intro'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token function">switchLang</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token comment">// 切换为英文</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span>$i18n<span class="token punctuation">.</span>locale <span class="token operator">=</span> <span class="token string">'en'</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="双向绑定的陷阱"><a href="#双向绑定的陷阱" class="header-anchor">#</a> 双向绑定的陷阱</h3> <p>有时候，我们可能需要给<code>data</code>中的属性赋值多语言的值，很遗憾当您切换语言时会发现这是无法双向绑定的，体现在语言切换了，但是视图并没有更新。
+这本质上是因为<code>data</code>中的属性是一次性赋值的，解决办法是在<code>computed</code>中定义相关的变量。</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">margin-top</span><span class="token punctuation">:</span> 200rpx<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>
+		{{intro}}
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u-button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>switchLang<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>切换语言<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u-button</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+		<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token punctuation">{</span>
+				<span class="token comment">// 错误示例，切换语言时，这个intro并不会自动更新到视图</span>
+				<span class="token comment">// intro: this.$t('lang.intro')</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token comment">// 正确用法</span>
+			<span class="token function">intro</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span><span class="token string">'lang.intro'</span><span class="token punctuation">)</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token function">switchLang</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span>$i18n<span class="token punctuation">.</span>locale <span class="token operator">=</span> <span class="token string">'en'</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="难点"><a href="#难点" class="header-anchor">#</a> 难点</h3> <p>上面我们解决了如何引入插件，定义和使用语言包，但是我们依然会碰到如下几个难点：</p> <ul><li>如果我需要在js中判断当前语言，进行不同的页面跳转怎么办？</li> <li>如何修改导航栏的标题？</li> <li>如何修改底部Tabbar导航的文字？</li></ul> <p>没关系，uView已经为您提供了完善的解决方案：</p> <h4 id="_1-如果我需要在js中判断当前语言-进行不同的页面跳转怎么办"><a href="#_1-如果我需要在js中判断当前语言-进行不同的页面跳转怎么办" class="header-anchor">#</a> 1. 如果我需要在js中判断当前语言，进行不同的页面跳转怎么办？</h4> <p>这个其实很简单，我们只需通过<code>this.$i18n.locale</code>就能获取当前的语言名称。当然，您也可以将当前的语言变量放到一个全局变量中，
+关于全局变量，详见我们的另一个专题：<a href="/u-view2.0-doc/guide/globalVariable.html">全局变量的实现方式</a></p> <h4 id="_2-如何修改导航栏的标题"><a href="#_2-如何修改导航栏的标题" class="header-anchor">#</a> 2. 如何修改导航栏的标题？</h4> <p>修改原生导航栏，我们需要通过<code>uni.setNavigationBarTitle()</code>进行，既然是调用uni的接口，意味着我们无法通过双向绑定，切换语言时自动更新导航栏标题，所以
+我们需要在<code>onShow</code>生命周期调用此接口，当每次页面出现在窗口时，重新设置导航栏(不管语言是否切换)：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">margin-top</span><span class="token punctuation">:</span> 200rpx<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>
+		{{$t('lang.intro')}}
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u-button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>switchLang<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>切换语言<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u-button</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+		<span class="token comment">// 在onShow生命周期设置导航栏标题</span>
+		<span class="token function">onShow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			uni<span class="token punctuation">.</span><span class="token function">setNavigationBarTitle</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+				title<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span><span class="token string">'lang.title'</span><span class="token punctuation">)</span>
+			<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token function">switchLang</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span>$i18n<span class="token punctuation">.</span>locale <span class="token operator">=</span> <span class="token string">'en'</span><span class="token punctuation">;</span>
+				<span class="token comment">// 当您切换了语言之后，并不会触发onShow生命周期，意味着本页的标题不会马上</span>
+				<span class="token comment">// 变更，所以我们需要在切换了语言之后，手动执行一遍设置标题的接口</span>
+				uni<span class="token punctuation">.</span><span class="token function">setNavigationBarTitle</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+					title<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span><span class="token string">'lang.title'</span><span class="token punctuation">)</span>
+				<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="_3-如何修改底部tabbar导航的文字"><a href="#_3-如何修改底部tabbar导航的文字" class="header-anchor">#</a> 3. 如何修改底部Tabbar导航的文字？</h4> <p>我们可以通过<code>uni.setTabBarItem()</code>设置单个的Tabbar Item，这很简单，我们在切换语言的地方，将所有的<code>item</code>设置一遍即可：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">margin-top</span><span class="token punctuation">:</span> 200rpx<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u-button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>switchLang<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>切换语言<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u-button</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+		methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token function">switchLang</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span>$i18n<span class="token punctuation">.</span>locale <span class="token operator">=</span> <span class="token string">'en'</span><span class="token punctuation">;</span>
+				<span class="token comment">// uni.setTabBarItem接口详见：https://uniapp.dcloud.io/api/ui/tabbar?id=settabbaritem</span>
+				<span class="token comment">// 说明：这种方法不适用自定义tabbar，自定义tabbar请自行根据逻辑调整</span>
+				<span class="token comment">// 注意：【支付宝小程序开发工具】需要1.13版本才支持此接口的模拟，真机预览不受限制</span>
+				uni<span class="token punctuation">.</span><span class="token function">setTabBarItem</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+					index<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+					text<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span><span class="token string">'tabbar.index'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+				<span class="token punctuation">}</span><span class="token punctuation">)</span>
+				uni<span class="token punctuation">.</span><span class="token function">setTabBarItem</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+					index<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+					text<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span><span class="token string">'tabBar.news'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+				<span class="token punctuation">}</span><span class="token punctuation">)</span>
+				uni<span class="token punctuation">.</span><span class="token function">setTabBarItem</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+					index<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+					text<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span><span class="token string">'tabBar.center'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+				<span class="token punctuation">}</span><span class="token punctuation">)</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="写在最后"><a href="#写在最后" class="header-anchor">#</a> 写在最后</h3> <p>通过上面的教程，相信您已经对多语言切换有了全面的认识，但不止于此，因为uView对您的爱是无微不至的，我们为您准备了一个完整的示例，下载运行即可，快试试吧！</p> <p>点击下载：<a href="https://download.uviewui.com/i18n.zip" target="_blank" rel="noopener noreferrer">https://download.uviewui.com/i18n.zip<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/u-view2.0-doc/guide/theme.html" class="prev">
+        自定义主题
+      </a></span> <span class="next"><a href="/u-view2.0-doc/guide/globalVariable.html">
+        全局变量的实现
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+		<script src="/u-view2.0-doc/assets/js/app.57b369f2.js" defer></script><script src="/u-view2.0-doc/assets/js/2.dcabbb37.js" defer></script><script src="/u-view2.0-doc/assets/js/4.3c0f9e97.js" defer></script><script src="/u-view2.0-doc/assets/js/126.1ee7ac05.js" defer></script><script src="/u-view2.0-doc/assets/js/10.6d4a7e6a.js" defer></script><script src="/u-view2.0-doc/assets/js/7.bfbff2e7.js" defer></script>
+	</body>
+</html>
