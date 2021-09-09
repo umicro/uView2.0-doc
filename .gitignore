@@ -17,7 +17,8 @@ TODOs.md
 # VuePress temp directory
 .temp
 
-/docs/.vuepress/dist/*
+# 暂时注释，为了使用gitee pages
+#/docs/.vuepress/dist/*
 
 # ftp配置相关信息
 /.ftp
