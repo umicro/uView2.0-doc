@@ -1,6 +1,6 @@
 module.exports = {
-    title: 'uView - 多平台快速开发的UI框架 - uni-app UI框架', // 设置网站标题
-    description: 'uView UI，是uni-app生态最优秀的UI框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水',
+    title: 'uView 2.0 - 全面兼容nvue的uni-app生态框架 - uni-app UI框架', // 设置网站标题
+    description: 'uView UI，全面的组件和便捷的工具宛如您手上的一把利剑',
     base: '/u-view2.0-doc/',
     markdown: {
         //lineNumbers: true
