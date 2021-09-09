@@ -1,4 +1,4 @@
-## notify 消息提示 <to-api/>
+## Notify 消息提示 <to-api/>
 
 <demo-model url="/pages/componentsA/topTips/index"></demo-model>
 

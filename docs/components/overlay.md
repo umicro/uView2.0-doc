@@ -1,4 +1,4 @@
-## overlay 遮罩层 <to-api/>
+## Overlay 遮罩层 <to-api/>
 
 <demo-model url="/pages/componentsC/mask/index"></demo-model>
 
