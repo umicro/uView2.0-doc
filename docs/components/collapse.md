@@ -7,9 +7,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
 
@@ -206,11 +206,11 @@
 
 ### Collapse Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| value | 当前展开面板的name，非手风琴模式：\[<String &#124; Number>\]，手风琴模式：String &#124; Number  | String &#124; Number &#124;  Array | - | - |
-| accordion | 是否手风琴模式  | Boolean | true | false |
-| border | 是否显示外边框  | Boolean | true | false |
+| 参数		| 说明																							| 类型								| 默认值	|  可选值	|
+|:-			|:-																								|:-									|:-		|:-			|
+| value		| 当前展开面板的name，非手风琴模式：\[<String &#124; Number>\]，手风琴模式：String &#124; Number		| String &#124; Number &#124;  Array| -		| -			|
+| accordion	| 是否手风琴模式																					| Boolean							| false	| true		|
+| border	| 是否显示外边框																					| Boolean							| false	| true		|
 
 ### Collapse Item Props
 
@@ -234,30 +234,30 @@
 
 注意：请在`<u-collapse></u-collapse>`上监听此事件
 
-|事件名|说明|回调参数|
-|:-|:-|:-|:-|
-| change | 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array) | activeNames: String &#124;  Array |
-| open | 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array) | activeNames: String &#124;  Array |
-| close | 当前激活面板关闭时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array) | activeNames: String &#124;  Array |
+|事件名	|说明																			|回调参数							|
+|:-		|:-																				|:-									|
+| change| 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array)	| activeNames: String &#124;  Array	|
+| open	| 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array)	| activeNames: String &#124;  Array	|
+| close	| 当前激活面板关闭时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array)	| activeNames: String &#124;  Array	|
 
 
 ### Collapse Methods 
 
 注意：此方法需要通过`ref`调用
 
-| 方法          | 说明            |
-|-------------  |---------------- |
-| init | 重新初始化内部高度计算，用于异步获取内容的情形，请结合`this.$nextTick()`使用 |
+| 方法	| 说明																		|
+|:-		|:-																			|
+| init	| 重新初始化内部高度计算，用于异步获取内容的情形，请结合`this.$nextTick()`使用		|
 
 ### Slot
 
-| 名称          | 说明            |
-|-------------  |---------------- |
-| - | 主体部分的内容 |
-| title | 头部的内容 |
-| icon | icon |
-| value | 右侧value |
-| rightIcon | 右侧icon |
+| 名称		| 说明			|
+|:-			|:_				|
+| -			| 主体部分的内容	|
+| title		| 头部的内容		|
+| icon		| icon			|
+| value		| 右侧value		|
+| rightIcon	| 右侧icon		|
 
 
 <style scoped>

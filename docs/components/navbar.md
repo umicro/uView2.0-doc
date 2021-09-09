@@ -8,9 +8,9 @@
 
 ### 平台差异说明
 
-|  App  |  H5   | 微信小程序 | 支付宝小程序 | 百度小程序 | 头条小程序 | QQ小程序 |
-| :---: | :---: | :--------: | :----------: | :--------: | :--------: | :------: |
-|   √   |   √   |     √      |      √       |     √      |     √      |    √     |
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 
 ### 基本使用
@@ -150,35 +150,35 @@ uView提供了一个`bg-color`参数，可以自定义导航栏的背景颜色�
 ### Props
 
 
-| 参数                | 说明                                                   | 类型             | 默认值     | 可选值 |
-| ------------------- | ------------------------------------------------------ | ---------------- | ---------- | ------ |
-| height              | 导航栏高度(不包括状态栏高度在内，内部自动加上)，单位px | String \| Number | 44         | -      |
-| placeholder         | 固定在顶部时，是否生成一个等高元素，以防止塌陷         | Boolean          | false      | true   |
-| fixed               | 导航栏是否固定在顶部                                   | Boolean          | true       | false  |
-| border              | 导航栏底部是否显示下边框                               | Boolean          | false      | true   |
-| leftIcon           | 左边返回图标的名称，只能为uView自带的图标              | String           | arrow-left | -      |
-| leftText           | 左边的提示文字                                         | String           | -          | -      |
-| rightIcon          | 右边返回图标的名称，只能为uView自带的图标              | String           | -          | -      |
-| rightText          | 右边的提示文字                                         | String           | -          | -      |
-| title               | 导航栏标题，如设置为空字符，将会隐藏标题占位区域       | String           | -          | -      |
-| bgColor            | 导航栏背景设置                                         | String           | #ffffff    | -      |
-| titleWidth         | 导航栏标题的最大宽度，内容超出会以省略号隐藏，单位rpx  | String \| Number | 400        | -      |
-| safeAreaInsetTop | 是否开启顶部安全区适配                                 | Boolean          | true       | false  |
+| 参数				| 说明												| 类型					| 默认值		| 可选值	|
+| :-				| :-												| :-					| :-		| :-	|
+| safeAreaInsetTop	| 是否开启顶部安全区适配								| Boolean				| false		| true	|
+| placeholder		| 固定在顶部时，是否生成一个等高元素，以防止塌陷			| Boolean				| false		| true	|
+| fixed				| 导航栏是否固定在顶部								| Boolean				| true		| false	|
+| border			| 导航栏底部是否显示下边框								| Boolean				| false		| true	|
+| leftIcon			| 左边返回图标的名称，只能为uView自带的图标				| String				| arrow-left| -		|
+| leftText			| 左边的提示文字										| String				| -			| -		|
+| rightText			| 右边的提示文字										| String				| -			| -		|
+| rightIcon			| 右边返回图标的名称，只能为uView自带的图标				| String				| -			| -		|
+| title				| 导航栏标题，如设置为空字符，将会隐藏标题占位区域		| String				| -			| -		|
+| bgColor			| 导航栏背景设置										| String				| #ffffff	| -		|
+| titleWidth		| 导航栏标题的最大宽度，内容超出会以省略号隐藏，单位rpx	| String &#124; Number	| 400rpx	| -		|
+| height			| 导航栏高度(不包括状态栏高度在内，内部自动加上)，单位px	| String &#124; Number	| 44px		| -		|
 
 
 ### Event
 
-| 名称        | 说明         | 类型    |
-| ----------- | ------------ | ------- |
-| leftClick  | 点击左侧区域 | Handler |
-| rightClick | 点击右侧区域 | Handler |
+| 名称		| 说明			| 类型		|
+| :-		| :-			| :-		|
+| leftClick	| 点击左侧区域	| Handler	|
+| rightClick| 点击右侧区域	| Handler	|
 
 ### Slot
 
-| 名称  | 说明         |
-| ----- | ------------ |
-| left  | 点击左侧区域 |
-| right | 点击右侧区域 |
+| 名称	| 说明			|
+| :-	| :-			|
+| left	| 点击左侧区域	|
+| right	| 点击右侧区域	|
 
 
 

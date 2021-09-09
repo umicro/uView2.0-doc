@@ -8,9 +8,9 @@
 
 ### 平台差异说明
 
-|App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
+|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
+|√	|√	|√			|√				|√			|√			|√			|
 
 
 ### 基本使用
@@ -458,56 +458,56 @@ export default {
 ### API
 
 ### Form Props
-
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| model | 表单数据对象  | Object	 | - | - |
-| rules | 通过`ref`设置，见上方说明 | Object | - | - |
-| errorType | 错误的提示方式，数组形式，见上方说明 | Array | ['message', 'toast'] | - |
-| borderBottom | 是否显示表单域的下划线边框 | Boolean | true | - |
-| labelPosition | 表单域提示文字的位置，`left`-左侧，`top`-上方 | String | left | top |
-| labelWidth | 提示文字的宽度，单位rpx | String \| Number | 45 | 数值 / auto |
-| labelAlign | lable字体的对齐方式 | String | left | center / right |
-| labelStyle | lable的样式，对象形式 | Object | - |  - |
+	
+| 参数			| 说明											| 类型								| 默认值					|  可选值		|
+|:-				|:-												|:-									|:-						|:-				|
+| model			| 表单数据对象									| Object							| -						| -				|
+| rules			| 通过`ref`设置，见上方说明						| Object&#124;Function&#124;Array	| -						| -				|
+| errorType		| 错误的提示方式，数组形式，见上方说明				| Array								| ['message', 'toast']	| -				|
+| borderBottom	| 是否显示表单域的下划线边框						| Boolean							| true					| -				|
+| labelPosition	| 表单域提示文字的位置，`left`-左侧，`top`-上方		| String							| left					| top			|
+| labelWidth	| 提示文字的宽度，单位rpx							| String &#124; Number				| 45					| 数值 / auto	|
+| labelAlign	| lable字体的对齐方式								| String							| left					| center / right|
+| labelStyle	| lable的样式，对象形式							| Object							| -						|  -			|
 
 
 ### Form Methods
 
 此方法如要通过ref手动调用
 
-| 名称          | 说明            |    参数   |
-|-------------  |---------------- |  ---------------- |  
-| validate | 对整个表单进行校验的方法  |- |
-| validateField | 对部分表单字段进行校验  | Function(value, Function(errorsRes)) |
-| resetFields | 对整个表单进行重置，将所有字段值重置为初始值并移除校验结果  | - |
-| clearValidate | 清空校验结果  | Function(props) |
+| 名称			| 说明													|参数									|
+|:-				|:-														|:-										|
+| validate		| 对整个表单进行校验的方法									| -										|
+| validateField	| 对部分表单字段进行校验									| Function(value, Function(errorsRes))	|
+| resetFields	| 对整个表单进行重置，将所有字段值重置为初始值并移除校验结果	| -										|
+| clearValidate	| 清空校验结果											| Function(props)						|
 
 
 ### Form-item Props
 
-| 参数          | 说明            | 类型            | 默认值             |  可选值   |
-|-------------  |---------------- |---------------|------------------ |-------- |
-| label | 左侧提示文字  | String	 | - | - |
-| prop | 表单域`model`对象的属性名，在使用 validate、resetFields 方法的情况下，该属性是必填的 | String | - | - |
-| borderBottom | 是否显示下边框，如不需要下边框，需同时将`u-form`的同名参数设置为`false` | Boolean | true | true / false |
-| labelWidth | 提示文字的宽度，单位rpx，如设置，将覆盖`u-form`的同名参数| String \| Number | - | - |
-| rightIcon | 右侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |
-| leftIcon | 左侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |
-| required | 是否显示左边的"*"号，这里仅起展示作用，如需校验必填，请通过`rules`配置必填规则 | Boolean | false | true |
+| 参数			| 说明																				| 类型					| 默认值	| 可选值			|
+|:-				|:-																					|:-						|:-		|:-				|
+| label			| 左侧提示文字																		| String				| -		| -				|
+| prop			| 表单域`model`对象的属性名，在使用 validate、resetFields 方法的情况下，该属性是必填的	| String				| -		| -				|
+| borderBottom	| 是否显示下边框，如不需要下边框，需同时将`u-form`的同名参数设置为`false`					| String &#124; Boolean	| true	| true / false	|
+| labelWidth	| 提示文字的宽度，单位rpx，如设置，将覆盖`u-form`的同名参数								| String &#124; Number	| -		| -				|
+| rightIcon		| 右侧自定义字体图标(限uView内置图标)或图片地址											| String				|  -	| -				|
+| leftIcon		| 左侧自定义字体图标(限uView内置图标)或图片地址											| String				|  -	| -				|
+| required		| 是否显示左边的"*"号，这里仅起展示作用，如需校验必填，请通过`rules`配置必填规则			| Boolean				| false	| true			|
 
 
 ### Form-item Slot
 
-|名称|说明|
-|:-|:-|
-| - | Form Item 的内容 |
-| right | 右侧自定义内容，可以在此传入一个按钮，用于获取验证码等场景 |
+|名称	|说明													|
+|:-		|:-														|
+| -		| Form Item 的内容										|
+| right	| 右侧自定义内容，可以在此传入一个按钮，用于获取验证码等场景	|
 
 ### Form-item Events
 
-|事件名|说明|回调参数|版本|
-|:-|:-|:-|:-|
-|click|点击时触发|-|-|
+|事件名	|说明		|回调参数	|版本	|
+|:-		|:-			|:-			|:-		|
+|click	|点击时触发	|-			|-		|
 
 
 
