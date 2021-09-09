@@ -24,7 +24,7 @@
 		},
 		computed: {
 			href() {
-				return this.url.indexOf('http') == 0 ? this.url : 'http://uview2.wcolt.com/#' + this.url;
+				return this.url.indexOf('http') == 0 ? this.url : 'https://uview2.wcolt.com/#' + this.url;
 			}
 		},
 		created() {
@@ -51,7 +51,7 @@
 		box-sizing: border-box;
 		overflow-y: auto;
 		/* background-image: url(/iPhone_model.png); */
-		background-image: url(/common/iPhoneX_model.png);
+		background-image: url(/u-view2.0-doc/common/iPhoneX_model.png);
         background-repeat: no-repeat;
 		background-size: 100%;
 		/* box-shadow: 0 4px 25px 0 rgba(4, 40, 60, 0.18); */
