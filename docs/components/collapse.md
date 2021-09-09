@@ -1,6 +1,6 @@
 ## Collapse 折叠面板 <to-api/>
 
-<demo-model url="/pages/componentsC/collapse/index"></demo-model>
+<demo-model url="/pages/componentsB/collapse/collapse"></demo-model>
 
 
 通过折叠面板收纳内容区域

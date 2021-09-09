@@ -1,6 +1,6 @@
 ## Table 表格 <to-api/>
 
-<demo-model url="/pages/componentsB/table/index"></demo-model>
+<demo-model url="/pages/componentsC/table/table"></demo-model>
 
 
 表格组件一般用于展示大量结构化数据的场景

@@ -1,6 +1,6 @@
 ## Sticky 吸顶 <to-api/>
 
-<demo-model url="/pages/componentsB/sticky/index"></demo-model>
+<demo-model url="/pages/componentsA/sticky/sticky"></demo-model>
 
 
 该组件与CSS中`position: sticky`属性实现的效果一致，当组件达到预设的到顶部距离时，

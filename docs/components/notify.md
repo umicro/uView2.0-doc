@@ -1,6 +1,6 @@
-## notify 消息提示 <to-api/>
+## Notify 消息提示 <to-api/>
 
-<demo-model url="/pages/componentsA/topTips/index"></demo-model>
+<demo-model url="/pages/componentsB/notify/notify"></demo-model>
 
 
 该组件一般用于页面顶部向下滑出一个提示，尔后自动收起的场景。

@@ -1,6 +1,6 @@
 ## CountTo 数字滚动 <to-api/>
 
-<demo-model url="/pages/componentsC/countTo/index"></demo-model>
+<demo-model url="/pages/componentsB/countTo/countTo"></demo-model>
 
 该组件一般用于需要滚动数字到某一个值的场景，目标要求是一个递增的值。
 

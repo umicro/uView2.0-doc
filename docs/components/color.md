@@ -1,6 +1,6 @@
 ## Color 色彩
 
-<demo-model url="/pages/componentsC/color/index"></demo-model>
+<demo-model url="/pages/componentsB/color/color"></demo-model>
 
 
 uView经过大量调试和研究，得出一套专有的调色板，在各个组件内部，使用统一的配色，为您的产品带来统一又鲜明的视觉效果。

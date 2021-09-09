@@ -1,6 +1,6 @@
 ## Input 输入框 <Badge text="1.3.0" /> <to-api/>
 
-<!-- <demo-model url="/pages/componentsA/input/index"></demo-model> -->
+<demo-model url="/pages/componentsC/input/input"></demo-model>
 
 去除`fixed`、`showWordLimit`、`showConfirmBar`、`disableDefaultPadding`、`autosize`字段
 

@@ -3,7 +3,7 @@
 此组件一般用于表单场景，可以配置Input输入框，Select弹出框，进行表单验证等。
 
 
-<demo-model url="/pages/componentsA/form/index"></demo-model>
+<demo-model url="/pages/componentsC/form/form"></demo-model>
 
 
 ### 平台差异说明

@@ -2,7 +2,7 @@
 
 此组件一般用于在特殊情况下，需要自定义导航栏的时候用到，一般建议使用uni-app带的导航栏。
 
-<demo-model url="/pages/componentsA/navbar/index"></demo-model>
+<demo-model url="/pages/componentsC/navbar/navbar"></demo-model>
 
 <custom-block text="右侧的演示中，导航栏上方有圆角，也有顶部的手机模型状态栏内容，以及返回图标和文字不对齐的情况。这是因为网页演示导致，实际中无此情况，请通过右上角的“演示”扫码查看实际效果。"></custom-block>
 

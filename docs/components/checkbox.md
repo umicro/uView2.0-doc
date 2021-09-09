@@ -1,6 +1,6 @@
 ## Checkbox 复选框 <to-api/>
 
-<demo-model url="/pages/componentsB/checkbox/index"></demo-model>
+<demo-model url="/pages/componentsA/checkbox/checkbox"></demo-model>
 
 
 复选框组件一般用于需要多个选择的场景，该组件功能完整，使用方便

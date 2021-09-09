@@ -1,6 +1,6 @@
 ## Image 图片 <to-api/>
 
-<demo-model url="/pages/componentsB/image/index"></demo-model>
+<demo-model url="/pages/componentsA/image/image"></demo-model>
 
 
 此组件为uni-app的`image`组件的加强版，在继承了原有功能外，还支持淡入动画、加载中、加载失败提示、圆角值和形状等。   

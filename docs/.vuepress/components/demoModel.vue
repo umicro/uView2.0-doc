@@ -24,7 +24,7 @@
 		},
 		computed: {
 			href() {
-				return this.url.indexOf('http') == 0 ? this.url : 'https://h5.uviewui.com/#' + this.url;
+				return this.url.indexOf('http') == 0 ? this.url : 'http://uview2.wcolt.com/#' + this.url;
 			}
 		},
 		created() {

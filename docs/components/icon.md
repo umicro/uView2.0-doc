@@ -1,6 +1,6 @@
 ## Icon 图标 <to-api/>
 
-<demo-model url="/pages/componentsA/icon/index"></demo-model>
+<demo-model url="/pages/componentsA/icon/icon"></demo-model>
 
 
 基于字体的图标集，包含了大多数常见场景的图标。

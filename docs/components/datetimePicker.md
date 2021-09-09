@@ -1,6 +1,6 @@
 ## DatatimePicker 选择器 <to-api/>
 
-<demo-model url="/pages/componentsC/picker/picker"></demo-model>
+<demo-model url="/pages/componentsC/datetimePicker/datetimePicker"></demo-model>
 
 此选择器用于时间日期
 

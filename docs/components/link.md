@@ -1,6 +1,6 @@
 ## Link 超链接
 
-<demo-model url="/pages/componentsC/link/index"></demo-model>
+<demo-model url="/pages/componentsA/link/link"></demo-model>
 
 
 该组件为超链接组件，在不同平台有不同表现形式：

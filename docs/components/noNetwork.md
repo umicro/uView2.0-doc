@@ -1,6 +1,6 @@
 ## NoNetwork 无网络提示 <to-api/>
 
-<demo-model url="/pages/componentsA/noNetwork/index"></demo-model>
+<demo-model url="/pages/componentsC/noNetwork/noNetwork"></demo-model>
 
 
 该组件无需任何配置，引入即可，内部自动处理所有功能和事件，有如下特点：

@@ -1,6 +1,6 @@
 ## Swiper 轮播图 <to-api/>
 
-<demo-model url="/pages/componentsB/swiper/index"></demo-model>
+<demo-model url="/pages/componentsC/swiper/swiper"></demo-model>
 
 
 

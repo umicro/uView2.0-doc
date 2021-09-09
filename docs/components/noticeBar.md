@@ -1,6 +1,6 @@
 ## NoticeBar 滚动通知 <to-api/>
 
-<demo-model url="/pages/componentsB/noticeBar/index"></demo-model>
+<demo-model url="/pages/componentsB/noticeBar/noticeBar"></demo-model>
 
 
 该组件用于滚动通告场景，有多种模式可供选择

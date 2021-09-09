@@ -2,7 +2,7 @@
 
 弹出模态框，常用于消息提示、消息确认、在当前页面内完成特定的交互操作。
 
-<demo-model url="/pages/componentsA/modal/index"></demo-model>
+<demo-model url="/pages/componentsC/modal/modal"></demo-model>
 
 
 ### 平台差异说明

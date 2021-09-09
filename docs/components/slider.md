@@ -1,6 +1,6 @@
 ## Slider 滑动选择器 <to-api/>
       
-<demo-model url="/pages/componentsA/slider/index"></demo-model>
+<demo-model url="/pages/componentsB/slider/slider"></demo-model>
 
 该组件一般用于表单中，手动选择一个区间范围的场景。
 
@@ -113,23 +113,25 @@
 | 参数			| 说明							| 类型					| 默认值		|  可选值	|
 |:-				|:-								|:-						|:-			|:-			|
 | value			| 双向绑定滑块选择值				| String &#124; Number	| 0			| -			|
-| disabled		| 是否禁用滑块					| Boolean				| true		| false		|
-| blockHeight	| 滑块宽度，高等于宽				| String &#124; Number	| 15		| -			|
+| blockSize		| 滑块的大小					| String &#124; Number				| 18		| 12 - 28		|
 | min			| 可选的最小值(0-100之间)		| String &#124; Number	| 1			| -			|
 | max			| 可选的最大值(0-100之间)		| String &#124; Number	| 100		| -			|
 | step			| 选择的步长						| String &#124; Number	| 1			| -			|
-| height		| 滑块条高度						| String &#124; Number	| 10		| -			|
 | activeColor	| 进度条的激活部分颜色			| String				| #2979ff	| -			|
 | inactiveColor	| 进度条的背景颜色				| String				| #c0c4cc	| -			|
 | blockColor	| 滑块背景颜色					| String				| #ffffff	| -			|
+| showValue	| 是否显示当前 value					| Boolean				| false	| true		|
 | blockStyle	| 滑块按钮自定义样式，对象形式	| Object &#124; String	| -			| -			|
 
 
-### Slot
+### Slider Events
 
-| 名称	| 说明			|
-|:-		|:-				|
-| -		| 自定义滑块内容	|
+| 事件名	| 说明			| 回调参数					|
+| :-	| :-			| :-						|
+| input| 更新v-model的（拖动过程中）	| value：当前值	|
+| changing	| 触发事件（拖动过程中）	| value：当前值	|
+| input	| 更新v-model的	| value：当前值	|
+| change	| 触发事件	| value：当前值	|
 
 
 <style >

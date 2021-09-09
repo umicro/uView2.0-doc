@@ -1,6 +1,6 @@
 ## Divider 分割线 <to-api/>
 
-<demo-model url="/pages/componentsB/divider/index"></demo-model>
+<demo-model url="/pages/componentsA/divider/divider"></demo-model>
 
 
 区隔内容的分割线，一般用于页面底部"没有更多"的提示。

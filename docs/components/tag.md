@@ -1,6 +1,6 @@
 ## Tag 标签 <to-api/>
 
-<demo-model url="/pages/componentsA/tag/index"></demo-model>
+<demo-model url="/pages/componentsB/tag/tag"></demo-model>
 
 
 tag组件一般用于标记和选择，我们提供了更加丰富的表现形式，能够较全面的涵盖您的使用场景

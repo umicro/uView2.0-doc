@@ -4,7 +4,7 @@
 该组件的一个特点是配置为滚动模式时，激活的tab会自动移动到组件的中间位置。
 <br>
 
-<demo-model url="/pages/componentsA/tabs/index"></demo-model>
+<demo-model url="/pages/componentsC/tabs/tabs"></demo-model>
 
 uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件，`tabsSwiper`组件，他们的异同点是：  
 

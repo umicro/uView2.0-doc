@@ -1,6 +1,6 @@
 ## Button 按钮 <to-api/>
 
-<demo-model url="/pages/componentsC/button/index"></demo-model>
+<demo-model url="/pages/componentsA/button/button"></demo-model>
 
 
 该组件内部实现以uni-app`button`组件为基础，进行二次封装，主要区别在于：

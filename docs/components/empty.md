@@ -1,6 +1,6 @@
 ## Empty 内容为空 <to-api/>
 
-<demo-model url="/pages/componentsA/empty/index"></demo-model>
+<demo-model url="/pages/componentsA/empty/empty"></demo-model>
 
 
 该组件用于需要加载内容，但是加载的第一页数据就为空，提示一个"没有内容"的场景，

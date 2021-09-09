@@ -1,6 +1,6 @@
 ## Avatar 头像 <to-api/>
 
-<demo-model url="/pages/componentsA/avatar/index"></demo-model>
+<demo-model url="/pages/componentsC/avatar/avatar"></demo-model>
 
 
 本组件一般用于展示头像的地方，如个人中心，或者评论列表页的用户头像展示等场所。

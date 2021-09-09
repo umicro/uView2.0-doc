@@ -1,6 +1,6 @@
 ## LoadingPage 加载页 <to-api/>
 
-<demo-model url="/pages/componentsB/loading/index"></demo-model>
+<demo-model url="/pages/componentsA/loading-page/loading-page"></demo-model>
 
 ### 平台差异说明
 

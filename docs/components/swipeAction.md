@@ -1,6 +1,6 @@
 ## SwipeAction 滑动单元格 <to-api/>
 
-<demo-model url="/pages/componentsB/swipeAction/index"></demo-model>
+<demo-model url="/pages/componentsA/swipeAction/swipeAction"></demo-model>
 
 
 该组件一般用于左滑唤出操作菜单的场景，用的最多的是左滑删除操作。

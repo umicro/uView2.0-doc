@@ -1,6 +1,6 @@
 ## Rate 评分 <to-api/>
 
-<demo-model url="/pages/componentsB/rate/index"></demo-model>
+<demo-model url="/pages/componentsA/rate/rate"></demo-model>
 
 该组件一般用于满意度调查，星型评分的场景。
 

@@ -1,6 +1,6 @@
 ## Switch 开关选择器 <to-api/>
 
-<demo-model url="/pages/componentsB/switch/index"></demo-model>
+<demo-model url="/pages/componentsB/switch/switch"></demo-model>
 
 
 选择开关用于在打开和关闭状态之间进行切换。
@@ -158,4 +158,3 @@ value12: true,
 |:-		|:-											|:-															|
 | change| 在`switch`打开或关闭时触发					| value：打开时为`activeColor`值，关闭时为`inactiveColor`值	|
 | input	| 在`switch`打开或关闭时触发（没开启异步）		| value：打开时为`activeColor`值，关闭时为`inactiveColor`值	|
-	

@@ -1,6 +1,6 @@
 ## Calendar 日历 <Badge text="1.3.0" type="tip"/> <to-api/>
 
-<demo-model url="/pages/componentsA/calendar/index"></demo-model>
+<demo-model url="/pages/componentsC/calendar/calendar"></demo-model>
 
 
 此组件用于单个选择日期，范围选择日期等，日历被包裹在底部弹起的容器中。

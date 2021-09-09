@@ -1,6 +1,6 @@
 ## NumberBox 步进器 <to-api/>
 
-<demo-model url="/pages/componentsC/numberBox/index"></demo-model>
+<demo-model url="/pages/componentsB/numberBox/numberBox"></demo-model>
 
 
 该组件一般用于商城购物选择物品数量的场景

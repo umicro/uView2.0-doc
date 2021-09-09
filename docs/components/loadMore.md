@@ -1,6 +1,6 @@
 ## LoadMore 加载更多 <to-api/>
 
-<demo-model url="/pages/componentsC/loadmore/index"></demo-model>
+<demo-model url="/pages/componentsC/loadmore/loadmore"></demo-model>
 
 
 此组件一般用于标识页面底部加载数据时的状态，共有三种状态：

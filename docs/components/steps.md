@@ -1,6 +1,6 @@
 ## Steps 步骤条 <to-api/>
 
-<demo-model url="/pages/componentsB/steps/index"></demo-model>
+<demo-model url="/pages/componentsC/steps/steps"></demo-model>
 
 该组件一般用于完成一个任务要分几个步骤，标识目前处于第几步的场景。
 

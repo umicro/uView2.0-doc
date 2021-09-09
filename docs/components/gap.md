@@ -1,6 +1,6 @@
 ## Gap 间隔槽 <to-api/>
 
-<demo-model url="/pages/componentsC/gap/index"></demo-model>
+<demo-model url="/pages/componentsA/gap/gap"></demo-model>
 
 
 该组件一般用于内容块之间的用一个灰色块隔开的场景，方便用户风格统一，减少工作量

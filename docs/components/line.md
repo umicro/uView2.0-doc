@@ -1,6 +1,6 @@
 ## Line 线条 <to-api/>
 
-<demo-model url="/pages/componentsB/line/index"></demo-model>
+<demo-model url="/pages/componentsA/line/line"></demo-model>
 
 此组件一般用于显示一根线条，用于分隔内容块，有横向和竖向两种模式，且能设置0.5px线条，使用也很简单。
 
