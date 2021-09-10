@@ -1,4 +1,4 @@
-## throttle & debounce节流防抖 <Badge text="1.5.8" />
+## throttle & debounce节流防抖
 
 <demo-model url="/pages/library/debounce/index"></demo-model>
 

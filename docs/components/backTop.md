@@ -1,4 +1,4 @@
-## BackTop 返回顶部 <Badge text="1.3.0" /> <to-api/>
+## BackTop 返回顶部 <to-api/>
 
 <demo-model url="/pages/componentsA/backtop/backtop"></demo-model>
 

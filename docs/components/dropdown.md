@@ -1,4 +1,4 @@
-## Dropdown 下拉菜单  <Badge text="1.6.3" /> <to-api/>
+## Dropdown 下拉菜单  <to-api/>
       
 <demo-model url="/pages/componentsB/dropdown/index"></demo-model>
 
@@ -156,7 +156,7 @@ let options = [
 ```
 
 
-### 如何保持菜单高亮 <Badge text="1.6.5" />
+### 如何保持菜单高亮
 
 有时候，我们可能会希望下拉菜单收起之后，标题部分可以保持高亮，组件内部可以做到这样的要求，但是如果通过自定义`slot`传入了内容，那么组件就不知道
 收起的时候，是否该保持菜单的高亮了，因为组件不知道您在自定义的内容中是否进行了"操作"，所以我们提供了一个手动通过`ref`设置的`highlight(index)`方法，
@@ -240,12 +240,12 @@ let options = [
 | height | 标题菜单的高度，单位任意，数值默认为rpx单位 | String &#124; Number | 80 | - |
 | border-bottom | 标题菜单是否显示下边框  | Boolean | false | true |
 | title-size | 标题的字体大小，单位任意，数值默认为rpx单位 | String &#124; Number | 28 | - |
-| border-radius <Badge text="1.7.2" /> | 菜单展开内容下方的圆角值，单位任意 | String &#124; Number | 0 | - |
-| menu-icon <Badge text="1.7.6" /> | 标题菜单右侧的图标 | String | arrow-down | arrow-down-fill |
-| menu-icon-size <Badge text="1.7.6" /> | 标题菜单右侧的图标的大小，单位任意，数值默认为rpx单位 | String &#124; Number | 26 | - |
+| border-radius | 菜单展开内容下方的圆角值，单位任意 | String &#124; Number | 0 | - |
+| menu-icon  | 标题菜单右侧的图标 | String | arrow-down | arrow-down-fill |
+| menu-icon-size | 标题菜单右侧的图标的大小，单位任意，数值默认为rpx单位 | String &#124; Number | 26 | - |
 
 
-### Dropdown Events <Badge text="1.6.5" />
+### Dropdown Events
 
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
@@ -261,7 +261,7 @@ let options = [
 | title | 菜单项标题  | String  | - | - |
 | options | 选项数据，如果传入了默认slot，此参数无效，数据结构见上方说明  | Array[Object]  | - | - |
 | disabled | 是否禁用此选项卡  | Boolean | false | true |
-| height <Badge text="1.7.0" /> | 弹窗下拉内容的高度(内容超出将会滚动)，`slot`自定义内容时无效(自行使用`scroll-view`处理)，单位任意，默认rpx | String &#124; Number | auto | - |
+| height | 弹窗下拉内容的高度(内容超出将会滚动)，`slot`自定义内容时无效(自行使用`scroll-view`处理)，单位任意，默认rpx | String &#124; Number | auto | - |
 
 
 
@@ -280,7 +280,7 @@ let options = [
 | change | 每个`u-dropdown`均有此回调，点击某个`options`选项时触发 | (value) - 点击项绑定的`value`属性值 |
 
 
-### Dropdown-item Methods <Badge text="1.6.5" />
+### Dropdown-item Methods
 
 这些为组件内部的方法，需要通过`ref`调用
 

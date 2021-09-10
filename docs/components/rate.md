@@ -13,7 +13,7 @@
 ### 基本使用
 
 - 通过`count`参数设置总共有多少颗星星可选择
-- 通过`v-model`双向绑定初始化时默认选中的星星数量 <Badge text="1.4.5新增" />
+- 通过`v-model`双向绑定初始化时默认选中的星星数量
 
 ```html
 <template>
@@ -86,8 +86,8 @@
 | inactiveIcon	| 未选中时的图标名，只能为uView的内置图标	| String				| star		| -			|
 | touchable		| 是否可以通过滑动手势选择评分				| Boolean				| true		| false		|
 
-<!-- | colors <Badge text="1.7.2" /> | 颜色分级显示，可以用不同颜色区分评分层级 | Array  | - | - | -->
-<!-- | icons <Badge text="1.7.2" /> | 图标分级显示，可以用不同类型的icon区分评分层级 | Array  | - | - | -->
+<!-- | colors | 颜色分级显示，可以用不同颜色区分评分层级 | Array  | - | - | -->
+<!-- | icons | 图标分级显示，可以用不同类型的icon区分评分层级 | Array  | - | - | -->
 
 ### Events
 
