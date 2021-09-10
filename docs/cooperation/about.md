@@ -150,6 +150,15 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 						addr: '长沙',
 						duty: '负责uView组件维护与升级，社区管理、等工作',
 						intro: '独立开发过多个项目，学习能力极强，精通Vue，uni-app，Java，Linux，SQL'
+					},
+					{
+						avatar: '',
+						name: '莫成尘',
+						job: '前端兼产品',
+						addr: '北京',
+						csdn: 'https://blog.csdn.net/weixin_47821281?spm=1001.2101.3001.5343',
+						duty: '负责uView文档维护编写，社区管理、等工作',
+						intro: '一名高级前端转型的产品经理，技术栈：uniapp,vue,react，Axure，墨刀等'
 					}
 				]
 			}

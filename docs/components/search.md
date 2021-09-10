@@ -85,8 +85,8 @@
 
 ### Props
 
-| 参数				| 说明																				| 类型					| 默认值			|  可选值		|
-|:-					|:-																					|:-						|:-				|:_				|
+| 参数					| 说明											| 类型					| 默认值		|  可选值	|
+|:-						|:-												|:-						|:-			|:-			|
 | v-model			| 双向绑定输入框搜索值																| String				| -				| -				|
 | shape				| 搜索框形状，round-圆形，square-方形													| String				| round			| square		|
 | bgColor			| 搜索框背景颜色																		| String				| #f2f2f2		| -				|
