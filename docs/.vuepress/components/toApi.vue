@@ -1,6 +1,6 @@
 <template>
 	<a :href="'#' + anchor" class="anchor">
-		<img src="/common/to_api.png" />
+		<img src="/u-view2.0-doc/common/to_api.png" />
 	</a>
 </template>
 
@@ -20,7 +20,7 @@
 		display: inline-block;
 		margin-left: 1.2rem;
 		transform: translateY(0.5rem);
-		
+
 		img {
 			width: 2rem;
 		}
