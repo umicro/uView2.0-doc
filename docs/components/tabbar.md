@@ -1,4 +1,4 @@
-## Tabbar 底部导航栏 <Badge text="1.4.8" type="tip"/> <to-api/>
+## Tabbar 底部导航栏 <to-api/>
 
 <demo-model url="/pages/componentsB/tabbar/tabbar"></demo-model>
 

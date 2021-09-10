@@ -6,7 +6,7 @@ uView内置了一些校验规则，如是否手机号，邮箱号，URL等
 <demo-model url="/pages/library/test/index"></demo-model>
 
 
-### 是否验证码 <Badge text="1.6.3" />
+### 是否验证码
 
 #### code(value, len = 6)
 
@@ -21,7 +21,7 @@ console.log(this.$u.test.code('4567', 4));
 
 
 
-### 是否数组 <Badge text="1.5.4" />
+### 是否数组
 
 #### array(array)
 
@@ -33,7 +33,7 @@ console.log(this.$u.test.code('4567', 4));
 console.log(this.$u.test.array([1, 2, 3]));
 ```
 
-### 是否Json字符串 <Badge text="1.5.4" />
+### 是否Json字符串
 
 #### jsonString(json)
 
@@ -50,7 +50,7 @@ console.log(this.$u.test.jsonString('{"a": 1}'));
 ```
 
 
-### 是否对象 <Badge text="1.5.4" />
+### 是否对象
 
 #### object(object)
 

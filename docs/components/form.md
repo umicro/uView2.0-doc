@@ -1,4 +1,4 @@
-## Form 表单 <Badge text="1.3.0" /> <to-api/>
+## Form 表单 <to-api/>
 
 此组件一般用于表单场景，可以配置Input输入框，Select弹出框，进行表单验证等。
 

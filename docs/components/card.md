@@ -140,9 +140,9 @@ export default {
 | thumb-width | 缩略图的宽度，高等于宽，单位rpx | String &#124; Number  | 60 | - |
 | thumb-circle | 缩略图是否为圆形 | Boolean  | false | true |
 | padding | 给head，body，foot部的内边距，见上方说明，单位rpx | String &#124; Number  | 30 | - |
-| show-head <Badge text="1.3.5" /> | 是否显示头部 | Boolean  | true | false |
-| show-foot <Badge text="1.3.5" /> | 是否显示尾部 | Boolean  | true | false |
-| box-shadow <Badge text="1.6.2" /> | 卡片外围阴影，字符串形式 | String  | none | - |
+| show-head | 是否显示头部 | Boolean  | true | false |
+| show-foot | 是否显示尾部 | Boolean  | true | false |
+| box-shadow | 卡片外围阴影，字符串形式 | String  | none | - |
 
 
 ### Slot

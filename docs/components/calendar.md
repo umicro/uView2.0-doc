@@ -1,4 +1,4 @@
-## Calendar 日历 <Badge text="1.3.0" type="tip"/> <to-api/>
+## Calendar 日历 <to-api/>
 
 <demo-model url="/pages/componentsC/calendar/calendar"></demo-model>
 

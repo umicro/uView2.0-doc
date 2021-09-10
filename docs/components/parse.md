@@ -1,4 +1,4 @@
-## Parse 富文本解析器 <Badge text="1.5.3" /> <to-api/>
+## Parse 富文本解析器 <to-api/>
 
 <demo-model url="/pages/componentsB/parse/parse"></demo-model>
 

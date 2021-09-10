@@ -186,7 +186,7 @@ export default {
 | 名称									| 说明													|
 |:-										|:-														|
 | default								| 传入自定义内容，一般为富文本，见上方说明					|
-| confirm-button <Badge text="1.6.0" />	| 传入自定义按钮，用于在微信小程序弹窗通过按钮授权的场景		|
+| confirm-button | 传入自定义按钮，用于在微信小程序弹窗通过按钮授权的场景		|
 
 
 <style scoped>

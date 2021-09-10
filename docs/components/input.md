@@ -1,4 +1,4 @@
-## Input 输入框 <Badge text="1.3.0" /> <to-api/>
+## Input 输入框 <to-api/>
 
 <demo-model url="/pages/componentsC/input/input"></demo-model>
 
