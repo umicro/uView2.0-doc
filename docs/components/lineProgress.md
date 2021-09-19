@@ -1,7 +1,7 @@
 ## LineProgress 线形进度条 <to-api/>
 
 
-<demo-model url="/pages/componentsC/progress/index"></demo-model>
+<demo-model url="/pages/componentsB/progress/progress"></demo-model>
 
 
 展示操作或任务的当前进度，比如上传文件，是一个线形的进度条。
@@ -15,11 +15,11 @@
 ### 基本使用
 
 - 通过`percentage`设置当前的进度值，该值区间为0-100.
-- 通过`active-color`设置进度条的颜色
+- 通过`activeColor`设置进度条的颜色
 
 ```html
 <template>
-	<u-line-progress :percentage="30" active-color="#ff0000"></u-line-progress>
+	<u-line-progress :percentage="30" activeColor="#ff0000"></u-line-progress>
 </template>
 ```
 
@@ -30,7 +30,7 @@
 
 ```html
 <template>
-	<u-line-progress :percentage="30" :show-text="false"></u-line-progress>
+	<u-line-progress :percentage="30" :showText="false"></u-line-progress>
 </template>
 ```
 
