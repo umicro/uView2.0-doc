@@ -97,6 +97,186 @@ uni-app是基Vuejs，Vue和View(延伸为UI、视图之意)同音，同时view�
 </script>
 ```
 
+### 演示项目完整代码
+:::demo 演示项目完整代码
+```html
+<template>
+	<view class="u-page">
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">基础功能</text>
+			<view class="u-demo-block__content">
+				<view class="u-page__text-item">
+					<u--text text="我用十年青春,赴你最后之约"></u--text>
+				</view>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">设置主题</text>
+			<view class="u-demo-block__content">
+				<view class="u-page__text-item">
+					<u--text
+					    text="主色"
+					    type="primary"
+					></u--text>
+				</view>
+				<view class="u-page__text-item">
+					<u--text
+					    type="error"
+					    text="错误"
+					></u--text>
+				</view>
+				<view class="u-page__text-item">
+					<u--text
+					    type="success"
+					    text="成功"
+					></u--text>
+				</view>
+				<view class="u-page__text-item">
+					<u--text
+					    type="warning"
+					    text="警告"
+					></u--text>
+				</view>
+				<view class="u-page__text-item">
+					<u--text
+					    type="info"
+					    text="信息"
+					></u--text>
+				</view>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">拨打电话</text>
+			<view class="u-demo-block__content">
+				<view class="u-page__text-item">
+					<u--text
+					    mode="phone"
+					    text="15019479320"
+					    encrypt
+					></u--text>
+				</view>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">日期格式化</text>
+			<view class="u-demo-block__content">
+				<view class="u-page__text-item">
+					<u--text
+					    mode="date"
+					    text="1612959739"
+					></u--text>
+				</view>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">姓名脱敏</text>
+			<view class="u-demo-block__content">
+				<view class="u-page__text-item">
+					<u--text
+					    mode="name"
+					    text="张**"
+					    encrypt
+					></u--text>
+				</view>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">超链接</text>
+			<view class="u-demo-block__content">
+				<view class="u-page__text-item">
+					<u--text
+					    mode="link"
+					    text="Go to uView docs"
+					    href="https://www.uviewui.com"
+					></u--text>
+				</view>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">显示金额</text>
+			<view class="u-demo-block__content">
+				<view class="u-page__text-item">
+					<u--text
+					    mode="price"
+					    text="728732.32"
+					></u--text>
+				</view>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">前后图标</text>
+			<view class="u-demo-block__content">
+				<view
+				    class="u-page__text-item"
+				    style="margin-right: 50px;"
+				>
+					<u--text
+					    prefixIcon="baidu"
+					    iconStyle="font-size: 19px"
+					    text="百度一下,你就知道"
+					></u--text>
+				</view>
+				<view class="u-page__text-item">
+					<u--text
+					    suffixIcon="arrow-leftward"
+					    iconStyle="font-size: 18px"
+					    text="查看更多"
+					></u--text>
+				</view>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">超出隐藏</text>
+			<view class="u-demo-block__content">
+				<u--text
+				    :lines="2"
+				    text="关于uView的取名来由，首字母u来自于uni-app首字母，uni-app是基于Vue.js，Vue和View(延伸为UI、视图之意)同音，同时view组件uni-app中 最基础，最重要的组件，故取名uView，表达源于uni-app和Vue之意，同时在此也对它们表示感谢。"
+				></u--text>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">小程序开放能力</text>
+			<view class="u-demo-block__content">
+				<u--text
+				    text="分享到微信"
+				    openType="share"
+				    type="success"
+					@click="clickHandler"
+				></u--text>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		onLoad() {},
+		methods: {
+			clickHandler() {
+				// #ifndef MP-WEIXIN
+				uni.$u.toast('请在微信小程序内查看效果')
+				// #endif
+			}
+		},
+	}
+</script>
+
+<style lang="scss">
+	.u-page__text-item {
+		margin-right: 10px;
+	}
+
+	.u-demo-block__content {
+		@include flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+</style>
+
+```
+:::
+
 ### API
 
 ### List Props

@@ -155,6 +155,65 @@ H5、App（含NVUE）外链可以直接打开，小程序端将自动复制链�
 
 <br>
 
+### 演示项目完整代码
+:::demo 演示项目完整代码
+```html
+<template>
+	<view class="u-content">
+		<u-parse container-style="padding: 20px" :content="content" domain="https://6874-html-foe72-1259071903.tcb.qcloud.la/demo" lazy-load scroll-table selectable use-anchor :tag-style="tagStyle" @load="load" @ready="ready" @imgTap="imgTap" @linkTap="linkTap" />
+	</view>
+</template>
+
+<script>
+    // 复制后解开下面一行注释
+	// const content = require('./content')
+	export default {
+		data() {
+			return {
+				content: '',
+				tagStyle: {
+					table: 'box-sizing: border-box; border-top: 1px solid #dfe2e5; border-left: 1px solid #dfe2e5;',
+					th: 'border-right: 1px solid #dfe2e5; border-bottom: 1px solid #dfe2e5;',
+					td: 'border-right: 1px solid #dfe2e5; border-bottom: 1px solid #dfe2e5;',
+					li: 'margin: 5px 0;'
+				}
+			}
+		},
+		onLoad() {
+			// 模拟网络请求
+			setTimeout(() => {
+				this.content = content
+			}, 200)
+		},
+		methods: {
+			load() {
+				// dom 结构加载完毕时触发
+			},
+			ready() {
+				// 渲染完毕时触发
+			},
+			imgTap() {
+				// 图片被点击时触发
+			},
+			linkTap() {
+				// 链接被点击时触发
+			}
+		}
+	}
+</script>
+
+<style lang="scss">
+	.u-content {
+		padding: 24rpx;
+		font-size: 32rpx;
+		color: $u-content-color;
+		line-height: 1.6;
+	}
+</style>
+
+```
+:::
+
 ### API
 
 ### Props
