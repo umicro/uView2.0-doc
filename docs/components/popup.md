@@ -105,6 +105,7 @@
 | closeIconPos			| 自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角	| String				| top-right	| top-left / bottom-left / bottom-right	|
 | round					| 是否显示圆角																					| Boolean				| false		| true									|
 | zoom					| 当mode=center时 是否开启缩放																	| Boolean				| true		| false									|
+| bgColor				| 背景色，一般用于特殊弹窗内容场景，设置为`transparent`可去除默认的白色背景																| String				| -		| -									|
 | customStyle			| 用户自定义样式																					| Object				| -			| -										|
 
 ### Event

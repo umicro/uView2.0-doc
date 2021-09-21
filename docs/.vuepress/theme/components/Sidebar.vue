@@ -7,9 +7,9 @@
 			<!-- <a target="_blank" class="jump-link" :href="jumpInfo.url">
 				<img :src="jumpInfo.src" />
 			</a> -->
-			<a target="_blank" class="jump-link" href="http://tool.zjhlone.com/sms.php">
+			<!-- <a target="_blank" class="jump-link" href="http://tool.zjhlone.com/sms.php">
 				<img src="https://tool.zjhlone.com/3.jpg" />
-			</a>
+			</a> -->
 			<NavLinks />
 			<slot name="top" />
 			<SidebarLinks :depth="0" :items="items" />
