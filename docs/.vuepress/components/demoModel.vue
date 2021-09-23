@@ -109,8 +109,8 @@
 
 	@media screen and (min-width: 1920px) {
 		.demo-model {
-			width: 350px;
-			height: calc(350px * 143.6 / 70.9);
+			width: 360px;
+			height: calc(360px * 143.6 / 70.9);
 			top: calc((100vh - 350px * 143.6 / 70.9 - 3.6rem) / 2 + 3.6rem);
 		}
 	}
