@@ -417,6 +417,8 @@ data(){
 | uploadText		| 上传区域的提示文字																	| String				| -							| -							|
 | width				| 内部预览图片区域和选择图片按钮的区域宽度，单位rpx，不能是百分比，或者`auto`				| String &#124; Number	| 80						| -							|
 | height			| 内部预览图片区域和选择图片按钮的区域高度，单位rpx，不能是百分比，或者`auto`				| String &#124; Number	| 80						| -							|
+| previewImage		| 是否在上传完成后展示预览图													    | Boolean				| true						| false						|
+
 
 ### Methods
 
