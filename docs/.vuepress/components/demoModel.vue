@@ -51,7 +51,8 @@
 		box-sizing: border-box;
 		overflow-y: auto;
 		/* background-image: url(/iPhone_model.png); */
-		background-image: url(/u-view2.0-doc/common/iPhoneX_model.png);
+		/*background-image: url(/u-view2.0-doc/common/iPhoneX_model.png);*/
+		background-image: url(/u-view2.0-doc/common/iPhone13pro_model.png);
         background-repeat: no-repeat;
 		background-size: 100%;
 		/* box-shadow: 0 4px 25px 0 rgba(4, 40, 60, 0.18); */
@@ -61,9 +62,10 @@
 
 	.model-content {
 		box-sizing: border-box;
-		width: 100%;
+		width: 99%;
 		height: 100%;
 		border-bottom-left-radius: 30px;
+    margin-left: 4px;
 	}
 
 	.iframe {
@@ -107,8 +109,8 @@
 
 	@media screen and (min-width: 1920px) {
 		.demo-model {
-			width: 350px;
-			height: calc(350px * 143.6 / 70.9);
+			width: 360px;
+			height: calc(360px * 143.6 / 70.9);
 			top: calc((100vh - 350px * 143.6 / 70.9 - 3.6rem) / 2 + 3.6rem);
 		}
 	}

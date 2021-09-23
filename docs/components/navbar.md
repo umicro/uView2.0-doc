@@ -144,6 +144,133 @@ uView提供了一个`bg-color`参数，可以自定义导航栏的背景颜色�
 </script>
 ```
 
+### 演示项目完整代码
+:::demo 演示项目完整代码
+```html
+<template>
+	<view class="u-page">
+		<u-navbar
+			title="步骤条"
+			safeAreaInsetTop
+			fixed
+			placeholder
+			@leftClick="navigateBack"
+		>
+		</u-navbar>
+		<view class="u-page__item">
+			<text class="u-page__item__title">基础功能</text>
+			<u-navbar
+				title="个人中心"
+				@rightClick="rightClick"
+				@leftClick="leftClick"
+			>
+			</u-navbar>
+		</view>
+		<view class="u-page__item">
+			<text class="u-page__item__title">自定义文本</text>
+			<u-navbar
+				title="个人中心"
+				left-text="返回"
+				rightIcon="map"
+			>
+			</u-navbar>
+		</view>
+		<view class="u-page__item">
+			<text class="u-page__item__title">自定义插槽</text>
+			<u-navbar
+				leftText="返回"
+				title="个人中心"
+				:safeAreaInsetTop="false"
+			>
+				<view
+					class="u-nav-slot"
+					slot="left"
+				>
+					<u-icon
+						name="arrow-left"
+						size="19"
+					></u-icon>
+					<u-line
+						direction="column"
+						:hairline="false"
+						length="16"
+						margin="0 8px"
+					></u-line>
+					<u-icon
+						name="home"
+						size="20"
+					></u-icon>
+				</view>
+			</u-navbar>
+		</view>
+		<u-gap height="50"></u-gap>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+
+			}
+		},
+		methods: {
+			navigateBack() {
+				uni.navigateBack({
+					delta: 1
+				})
+			},
+			rightClick() {
+				console.log('rightClick');
+			},
+			leftClick() {
+				console.log('leftClick');
+			}
+		}
+	}
+</script>
+
+<style lang="scss">
+	/* #ifndef APP-NVUE */
+	page {
+		background-color: $u-bg-color;
+	}
+
+	/* #endif */
+
+	.u-page {
+		padding: 0;
+
+		&__item {
+
+			&__title {
+				color: $u-tips-color;
+				background-color: $u-bg-color;
+				padding: 15px;
+				font-size: 15px;
+
+				&__slot-title {
+					color: $u-primary;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	.u-nav-slot {
+		@include flex;
+		align-items: center;
+		justify-content: space-between;
+		border-width: 0.5px;
+		border-radius: 100px;
+		border-color: $u-border-color;
+		padding: 3px 7px;
+		opacity: 0.8;
+	}
+</style>
+
+```
+:::
 
 ### API
 
