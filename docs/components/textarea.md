@@ -104,7 +104,9 @@
 | disableDefaultPadding	| 是否去掉 iOS 下的默认内边距，只微信小程序有效							| Boolean				| false		| true		|
 | holdKeyboard			| focus时，点击页面的时候不收起键盘，只微信小程序有效					| Boolean				| false		| true		|
 | maxlength				| 最大输入长度，设置为 -1 的时候不限制最大长度							| String &#124; Number	| 140		| -			|
-| border				| 边框类型															| String				| surround	| bottom	|
+| border				| 边框类型，surround-四周边框，none-无边框，bottom-底部边框															| String				| surround	| bottom	|
+| placeholderClass		| 指定placeholder的样式类，注意页面或组件的style中写了scoped时，需要在类名前写/deep/																| String				| textarea-placeholder	| -														|
+| placeholderStyle		| 指定placeholder的样式，字符串/对象形式，如"color: red;"																					| String &#124; Object	| color: #c0c4cc	| -														|
 
 
 ### List Events

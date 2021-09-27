@@ -495,7 +495,6 @@ export default {
 | leftIcon		| 左侧自定义字体图标(限uView内置图标)或图片地址											| String				|  -	| -				|
 | required		| 是否显示左边的"*"号，这里仅起展示作用，如需校验必填，请通过`rules`配置必填规则			| Boolean				| false	| true			|
 
-
 ### Form-item Slot
 
 |名称	|说明													|
