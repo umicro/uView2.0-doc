@@ -6,13 +6,6 @@
 
 <demo-model url="/pages/componentsC/tabs/tabs"></demo-model>
 
-uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件，`tabsSwiper`组件，他们的异同点是：  
-
-- `tabs`组件可以不结合uni-app`swiper`轮播组件使用，`tabsSwiper`组件是必须要结uni-app`swiper`轮播组件才能使用的。
-- `tabs`组件使用更简洁明了(这也是其存在的理由)，`tabsSwiper`组件配置相对复杂一些。
-- `tabsSwiper`组件相比`tabs`组件，由于搭配了uni-app`swiper`轮播组件，获得了滑块跟随，标签颜色渐变等效果(请在演示中扫码查看效果)，而`tabs`组件是不具备的。
-
-总的来说，二者配置参数和功能都差不多，看用户的需求自行衡量该使用哪一个组件。
 
 ### 平台差异说明
 
@@ -22,13 +15,13 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 
 ### 基本使用
 
-- 通过设置`is-scroll`(默认为`true`)，配置tabs组件的内容是否可以左右拖动，一般4个标签以下时，无需拖动，设置为`false`，5个标签以上，建议可以左右拖动。  
+- 通过设置`scrollable`(默认为`true`)，配置tabs组件的内容是否可以左右拖动，一般4个标签以下时，无需拖动，设置为`false`，5个标签以上，建议可以左右拖动。  
 - tabs标签的切换，需要绑定`current`值，在`change`事件回调中可以得到`index`，将其赋值给`current`即可。
 
 具体的标签，通过`list`参数配置，该参数要求为数组，元素为对象，对象要有`name`属性，见示例：
 
 :::tip 说明
-`is-scroll`参数很重要，如果您的tabs项只有几个，且不想tabs导航栏可以被左右滑动的话，请一定要设置`is-scroll`为`false`，因为它默认为`true`。
+`scrollable`参数很重要，如果您的tabs项只有几个，且不想tabs导航栏可以被左右滑动的话，请一定要设置`scrollable`为`false`，因为它默认为`true`。
 :::
 
 
@@ -136,6 +129,217 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 <u-tabs ref="tabs" :list="list" active-color="#2979ff" inactive-color="#606266" font-size="30" :current="current"></u-tabs>
 ```
 
+### 演示项目完整代码
+:::demo 演示项目完整代码
+```html
+<template>
+	<view class="u-page">
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">基础演示</text>
+			<view class="u-demo-block__content">
+				<u-tabs :list="list1">
+				</u-tabs>
+			</view>
+		</view>
+		<view
+			class="u-demo-block"
+			style="margin-bottom: 0;"
+		>
+			<text class="u-demo-block__title">粘性布局</text>
+		</view>
+		<u-sticky bgColor="#fff">
+			<u-tabs
+				:list="list1"
+				sticky
+			>
+			</u-tabs>
+		</u-sticky>
+		<u-gap
+			height="23"
+			bgColor="#fff"
+		></u-gap>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">显示徽标</text>
+			<view class="u-demo-block__content">
+				<u-tabs :list="list2">
+				</u-tabs>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">禁止滚动</text>
+			<view class="u-demo-block__content">
+				<u-tabs :list="list6" :scrollable="false">
+				</u-tabs>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">禁用菜单</text>
+			<view class="u-demo-block__content">
+				<u-tabs :list="list3">
+				</u-tabs>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">自定义样式</text>
+			<view class="u-demo-block__content">
+				<u-tabs
+					:list="list4"
+					lineWidth="30"
+					lineColor="#f56c6c"
+					:activeStyle="{
+						color: '#303133',
+						fontWeight: 'bold',
+						transform: 'scale(1.05)'
+					}"
+					:inactiveStyle="{
+						color: '#606266',
+						transform: 'scale(1)'
+					}"
+					itemStyle="padding-left: 15px; padding-right: 15px; height: 34px;"
+				>
+				</u-tabs>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">右侧自定义插槽</text>
+			<view class="u-demo-block__content">
+				<u-tabs :list="list1">
+					<view
+						slot="right"
+						style="padding-left: 4px;"
+						@tap="$u.toast('插槽被点击')"
+					>
+						<u-icon
+							name="list"
+							size="21"
+							bold
+						></u-icon>
+					</view>
+				</u-tabs>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+        // 复制代码后解开注释
+		// mixins: [uni.$u.mixin],
+		data() {
+			return {
+				list1: [{
+					name: '关注',
+				}, {
+					name: '推荐',
+				}, {
+					name: '电影'
+				}, {
+					name: '科技'
+				}, {
+					name: '音乐'
+				}, {
+					name: '美食'
+				}, {
+					name: '文化'
+				}, {
+					name: '财经'
+				}, {
+					name: '手工'
+				}],
+				list2: [{
+					name: '关注'
+				}, {
+					name: '推荐',
+					badge: {
+						isDot: true
+					}
+				}, {
+					name: '电影',
+					badge: {
+						value: 5,
+					}
+				}, {
+					name: '科技'
+				}, {
+					name: '音乐'
+				}, {
+					name: '美食'
+				}, {
+					name: '文化'
+				}, {
+					name: '财经'
+				}, {
+					name: '手工'
+				}],
+				list3: [{
+					name: '关注'
+				}, {
+					name: '推荐',
+				}, {
+					name: '电影',
+					disabled: true
+				}, {
+					name: '科技'
+				}, {
+					name: '音乐'
+				}, {
+					name: '美食'
+				}, {
+					name: '文化'
+				}, {
+					name: '财经'
+				}, {
+					name: '手工'
+				}],
+				list4: [{
+					name: '关注'
+				}, {
+					name: '推荐',
+					badge: {
+						isDot: true
+					}
+				}, {
+					name: '电影',
+				}, {
+					name: '科技'
+				}, {
+					name: '音乐'
+				}, {
+					name: '美食'
+				}, {
+					name: '文化'
+				}, {
+					name: '财经'
+				}, {
+					name: '手工'
+				}],
+				list6: [
+					{
+						name: '关注'
+					}, {
+						name: '推荐',
+					}, {
+						name: '电影',
+					}, {
+						name: '科技'
+					}
+				]
+			}
+		},
+		onLoad() {
+
+		}
+	}
+</script>
+
+<style lang="scss">
+	.u-page {
+		padding-bottom: 500px;
+	}
+</style>
+
+```
+:::
 
 ### API
 

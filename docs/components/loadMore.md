@@ -101,6 +101,95 @@
 有时候可能会因为网络，或者数据不满一页的原因，导致无法上拉触发`onReachBottom`生命周期，这时候(需`status`为`loadmore`状态)，用户点击组件，就会触发`loadmore`
 事件，可以在回调中，进行状态的控制和数据的加载，同时也可以修改`loadText`的`loadmore`为"上拉或点击加载更多"进行更加人性化的提示。
 
+### 演示项目完整代码
+:::demo 演示项目完整代码
+```html
+<template>
+	<view class="u-page">
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">基础使用</text>
+			<view class="u-demo-block__content">
+				<u-loadmore
+					status="loading"
+					:isDot="true"
+					loadingIcon="circle"
+				></u-loadmore>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">无更多数据</text>
+			<view class="u-demo-block__content">
+				<u-loadmore
+					:line="true"
+					status="nomore"
+				></u-loadmore>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">加载更多(点击触发事件)</text>
+			<view class="u-demo-block__content">
+				<u-loadmore
+					:line="true"
+					status="loadmore"
+					@loadmore="loadmore"
+				></u-loadmore>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">自定义图标</text>
+			<view class="u-demo-block__content">
+				<u-loadmore
+					status="loading"
+					loadingIcon="spinner"
+				></u-loadmore>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">显示点</text>
+			<view class="u-demo-block__content">
+				<u-loadmore
+					status="nomore"
+					:isDot="true"
+					:line="true"
+					color="#909399"
+				></u-loadmore>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">自定义提示语</text>
+			<view class="u-demo-block__content">
+				<u-loadmore
+					status="loading"
+					loadingText="努力加载中,先喝杯茶"
+					color="#909399"
+				></u-loadmore>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+
+			}
+		},
+		methods: {
+			loadmore() {
+				console.log('loadmore');
+				uni.$u.toast('加载更多')
+			}
+		},
+	}
+</script>
+
+<style lang="scss">
+
+</style>
+
+```
+:::
 
 ### API
 

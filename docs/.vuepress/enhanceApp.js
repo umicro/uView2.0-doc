@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import CustomDemoBlock from './CustomDemoBlock.vue'
 
 // 使用异步函数也是可以的
 export default ({
@@ -12,6 +13,8 @@ export default ({
 }) => {
 	// 配置element
 	Vue.use(ElementUI);
+	//使用自定义渲染md
+	Vue.component('CustomDemoBlock', CustomDemoBlock);
 	// ...做一些其他的应用级别的优化
 	Vue.mixin({
 		mounted() {

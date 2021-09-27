@@ -253,6 +253,240 @@
 </style>
 ```
 
+### 演示项目完整代码
+:::demo 演示项目完整代码
+```html
+<template>
+	<view class="u-page">
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">演示案例</text>
+			<view class="u-page__swipe-action-item">
+				<u-swipe-action>
+					<u-swipe-action-item
+						v-if="show1"
+						:options="options1"
+						@click="click"
+					>
+						<view class="swipe-action u-border-top u-border-bottom">
+							<view class="swipe-action__content">
+								<text class="swipe-action__content__text">基础使用</text>
+							</view>
+						</view>
+					</u-swipe-action-item>
+				</u-swipe-action>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">按钮组</text>
+			<view class="u-page__swipe-action-item">
+				<u-swipe-action>
+					<u-swipe-action-item :options="options2">
+						<view class="swipe-action u-border-top u-border-bottom">
+							<view class="swipe-action__content">
+								<text class="swipe-action__content__text">两个按钮并列</text>
+							</view>
+						</view>
+					</u-swipe-action-item>
+				</u-swipe-action>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">带图标</text>
+			<view class="u-page__swipe-action-item">
+				<u-swipe-action>
+					<u-swipe-action-item :options="options3">
+						<view class="swipe-action u-border-top u-border-bottom">
+							<view class="swipe-action__content">
+								<text class="swipe-action__content__text">自定义图标</text>
+							</view>
+						</view>
+					</u-swipe-action-item>
+				</u-swipe-action>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">组合使用</text>
+			<view class="u-page__swipe-action-item">
+				<u-swipe-action>
+					<u-swipe-action-item
+						:options="item.options"
+						v-for="(item, index) in options4"
+						:disabled="item.disabled"
+						:key="index"
+					>
+						<view
+							class="swipe-action u-border-top"
+							:class="[index === options4.length - 1 && 'u-border-bottom']"
+						>
+							<view class="swipe-action__content">
+								<text class="swipe-action__content__text">{{ item.text }}</text>
+							</view>
+						</view>
+					</u-swipe-action-item>
+				</u-swipe-action>
+			</view>
+		</view>
+		<view class="u-demo-block">
+			<text class="u-demo-block__title">自定义按钮形状</text>
+			<view class="u-page__swipe-action-item">
+				<u-swipe-action>
+					<u-swipe-action-item :options="options5">
+						<view class="swipe-action u-border-top u-border-bottom">
+							<view class="swipe-action__content">
+								<text class="swipe-action__content__text">圆形按钮</text>
+							</view>
+						</view>
+					</u-swipe-action-item>
+				</u-swipe-action>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				show1: true,
+				moveX: 0,
+				showText: '当前状态：关',
+				showStatus: false,
+				options1: [{
+					text: '删除',
+					style: {
+						backgroundColor: '#f56c6c'
+					}
+				}],
+				options2: [{
+					text: '收藏',
+					style: {
+						backgroundColor: '#3c9cff'
+					}
+				}, {
+					text: '删除',
+					style: {
+						backgroundColor: '#f56c6c'
+					}
+				}],
+				options3: [{
+					text: '收藏',
+					icon: 'star-fill',
+					iconSize: '20',
+					style: {
+						backgroundColor: '#f9ae3d'
+					}
+				}],
+				options4: [{
+					text: '禁用状态',
+					disabled: true,
+					options: [{
+							text: '置顶',
+							style: {
+								backgroundColor: '#3c9cff',
+							}
+						},
+						{
+							text: '取消',
+							style: {
+								backgroundColor: '#f9ae3d',
+							}
+						},
+					],
+				}, {
+					text: '正常状态',
+					disabled: false,
+					options: [{
+							text: '置顶',
+							style: {
+								backgroundColor: '#3c9cff',
+							}
+						},
+						{
+							text: '取消',
+							style: {
+								backgroundColor: '#f9ae3d',
+							}
+						},
+					],
+				}, {
+					text: '自动关闭',
+					disabled: false,
+					options: [{
+							text: '置顶',
+							style: {
+								backgroundColor: '#3c9cff',
+							}
+						},
+						{
+							text: '取消',
+							style: {
+								backgroundColor: '#f9ae3d',
+							}
+						},
+					],
+				}],
+				options5: [{
+					icon: 'trash-fill',
+					style: {
+						backgroundColor: '#f56c6c',
+						width: '40px',
+						height: '40px',
+						borderRadius: '100px',
+						margin: '0 6px'
+					}
+				}, {
+					icon: 'heart-fill',
+					style: {
+						backgroundColor: '#5ac725',
+						width: '40px',
+						height: '40px',
+						borderRadius: '100px',
+						margin: '0 6px'
+					}
+				}]
+			}
+		},
+		methods: {
+			click(index) {
+				// console.log(index);
+				uni.showModal({
+					title: '温馨提示',
+					content: '确定要删除吗？',
+					success: res => {
+						if (res.confirm) {
+							this.show1 = false
+						}
+					}
+				})
+			}
+		}
+	}
+</script>
+
+<style lang="scss">
+	.u-page {
+		padding: 0;
+	}
+
+	.u-demo-block__title {
+		padding: 10px 0 2px 15px;
+	}
+
+	.swipe-action {
+		&__content {
+			padding: 25rpx 0;
+
+			&__text {
+				font-size: 15px;
+				color: $u-main-color;
+				padding-left: 30rpx;
+			}
+		}
+	}
+</style>
+
+```
+:::
 
 ### API
 
@@ -272,13 +506,13 @@
 
 | 参数			| 说明											| 类型					| 默认值	|  可选值	|
 |:-				|:-												|:-						|:-		|:-			|
-| show			| 控制打开或者关闭								| Boolean				| false	| true		|
+| show			| 控制打开或者关闭							    	| Boolean				| false	| true		|
 | index			| 标识符，如果是v-for，可用index索引				| String &#124; Number	| -		| -			|
 | disabled		| 是否禁用										| Boolean				| false	| true		|
 | autoClose		| 是否自动关闭其他swipe按钮组						| Boolean				| true	| false		|
-| threshold		| 滑动距离阈值，只有大于此值，才被认为是要打开菜单	| Number				| 30	| -			|
+| threshold		| 滑动距离阈值，只有大于此值，才被认为是要打开菜单		| Number				| 20	| - 		|
 | options		| 右侧按钮内容									| Array					| []	| -			|
-| duration		| 动画过渡时间，单位ms							| String &#124; Number	| 350	| -			|
+| duration		| 动画过渡时间，单位ms							    | String &#124; Number	| 300	| -			|
 
 ### SwipeActionItem Event
 
