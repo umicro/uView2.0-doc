@@ -295,7 +295,7 @@
 | maxlength				| 最大输入长度，设置为 -1 的时候不限制最大长度																									| String &#124; Number	| -1				| -														|
 | placeholder			| 输入框为空时的占位符																														| String				| -					| -														|
 | placeholderClass		| 指定placeholder的样式类，注意页面或组件的style中写了scoped时，需要在类名前写/deep/																| String				| input-placeholder	| -														|
-| placeholderStyle		| 指定placeholder的样式，字符串形式，如"color: red;"																							| String &#124; Object	| -					| -														|
+| placeholderStyle		| 指定placeholder的样式，字符串/对象形式，如"color: red;"																					| String &#124; Object	| color: #c0c4cc	| -														|
 | showWordLimit			| 是否显示输入字数统计，只在 type ="text"或type ="textarea"时有效																				| Boolean				| false				| true													|
 | confirmType			| 设置右下角按钮的文字，兼容性详见uni-app文档																									| String				| done				| send &#124; search &#124; next &#124; go &#124; done	|
 | confirmHold			| 点击键盘右下角按钮时是否保持键盘不收起，H5无效																									| Boolean				| false				| true													|
@@ -311,7 +311,7 @@
 | inputAlign			| 输入框内容对齐方式																															| String				| left				| left &#124; center &#124; right						|
 | autosize				| 是否自适应内容高度，只对type=textarea有效，可传入对象,如{ maxHeight: 100, minHeight: 50 }														| Boolean				| false				| true													|
 | fontSize				| 输入框字体的大小																															| String &#124; Number	| 15px				| -														|
-| color					| 输入框字体颜色																																| String				| #606266			| -														|
+| color					| 输入框字体颜色																																| String				| #303133			| -														|
 | prefixIcon			| 输入框前置图标																																| String				| -					| -														|
 | prefixIconStyle		| 前置图标样式，对象或字符串																													| String &#124; Object	| -					| -														|
 | suffixIcon			| 输入框后置图标																																| String				| -					| -														|
