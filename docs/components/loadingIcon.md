@@ -190,6 +190,7 @@
 | :-			| :-																					| :-					| :-					| :-					|
 | show			| 是否显示动画																			| Boolean				| true					| false					|
 | color			| 图标颜色																				| String				| color['u-tips-color']	| -						|
+| textColor			| 提示文本颜色																				| String				| color['u-tips-color']	| -						|
 | vertical		| 图标和文字是否垂直排列																	| Boolean				| false					| true					|
 | mode			| 模式选择，见上方说明																	| String				| circle 				| circle \ semicircle	|
 | size			| 加载图标的大小，单位px																	| String &#124; Number	| 24					| -						|

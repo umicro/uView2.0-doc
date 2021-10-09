@@ -35,9 +35,9 @@
           :class="['copy-action', { 'copying ': copied }]"
           @click.stop="copyCode"
       >{{ copiedText }}</span>
-      <transition name="bounce">
+      <!-- <transition name="bounce">
         <span v-show="copied" class="copy-action copy-action-success">{{ copiedText }}</span>
-      </transition>
+      </transition> -->
     </div>
   </div>
 </template>
@@ -109,6 +109,10 @@ export default {
       document.execCommand("selectAll", false, null);
       this.copied = document.execCommand("copy");
       pre.removeAttribute("contenteditable");
+	  this.$message({
+		message: '复制成功',
+		type: 'success'
+	  });
       setTimeout(() => {
         this.copied = false;
       }, 1500);
@@ -224,7 +228,7 @@ export default {
   font-weight: 400;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
+  line-height: 44px;
   vertical-align: baseline;
   display: inline-block;
   -webkit-font-smoothing: antialiased;
@@ -238,6 +242,7 @@ export default {
   border-bottom: 6px solid #ccc;
   border-right: 6px solid transparent;
   border-left: 6px solid transparent;
+  margin-top: 5px;
 }
 .demo-block .demo-block-control .caret-bottom::before {
   content: "";
@@ -248,6 +253,7 @@ export default {
   border-top: 6px solid #ccc;
   border-right: 6px solid transparent;
   border-left: 6px solid transparent;
+  margin-top: 5px;
 }
 .demo-block .demo-block-control i {
   font-size: 16px;
@@ -256,6 +262,7 @@ export default {
 }
 .demo-block .demo-block-control i.hovering {
   transform: translateX(-40px);
+  color: #409eff;
 }
 .demo-block .demo-block-control > span {
   position: absolute;

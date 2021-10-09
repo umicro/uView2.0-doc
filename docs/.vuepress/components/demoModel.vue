@@ -18,13 +18,12 @@
 		},
 		data() {
 			return {
-				// baseUrl: 'https://h5.uviewui.com/#'
-				// baseUrl: 'http://192.168.100.7:8080'
+				baseUrl: 'https://v2.h5.uviewui.com'
 			}
 		},
 		computed: {
 			href() {
-				return this.url.indexOf('http') == 0 ? this.url : 'https://uview2.wcolt.com/#' + this.url;
+				return this.url.indexOf('http') == 0 ? this.url : `${this.baseUrl}${this.url}`;
 			}
 		},
 		created() {
@@ -51,20 +50,18 @@
 		box-sizing: border-box;
 		overflow-y: auto;
 		/* background-image: url(/iPhone_model.png); */
-		background-image: url(/common/iPhone13pro_model.png);
+		background-image: url(/common/iPhone13.png);
         background-repeat: no-repeat;
 		background-size: 100%;
 		/* box-shadow: 0 4px 25px 0 rgba(4, 40, 60, 0.18); */
 		border-radius: 30px;
-		padding: 48px 23px 38px 16px;
+		padding: 48px 13px 25px 13px;
 	}
 
 	.model-content {
 		box-sizing: border-box;
-		width: 99%;
 		height: 100%;
 		border-bottom-left-radius: 30px;
-    margin-left: 4px;
 	}
 
 	.iframe {
