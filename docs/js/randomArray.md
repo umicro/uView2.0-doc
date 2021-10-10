@@ -1,7 +1,5 @@
 ## randomArray 数组乱序
 
-<demo-model url="/pages/library/randomArray/index"></demo-model>
-
 
 #### randomArray(array)
 

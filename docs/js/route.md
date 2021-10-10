@@ -1,7 +1,5 @@
 ## route 路由跳转
 
-<demo-model url="/pages/library/route/index"></demo-model>
-
 
 #### route(Object)
 

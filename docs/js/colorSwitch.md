@@ -1,7 +1,5 @@
 ## colorSwitch 颜色转换
 
-<demo-model url="/pages/library/colorSwitch/index"></demo-model>
-
 
 ### RGB转十六进制Hex
 

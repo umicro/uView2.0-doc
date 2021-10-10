@@ -1,7 +1,5 @@
 ## guid 全局唯一标识符
 
-<demo-model url="/pages/library/guid/index"></demo-model>
-
 
 ### 唯一标识符
 

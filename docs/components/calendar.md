@@ -226,7 +226,7 @@
 
 <style lang="scss" scoped>
 	.title{
-		color: $u-type-primary;
+		color: $u-primary;
 		text-align: center;
 		padding: 20rpx 0 0 0;
 	}
@@ -270,7 +270,7 @@
 
 <style lang="scss" scoped>
 	.title{
-		color: $u-type-primary;
+		color: $u-primary;
 		text-align: center;
 		padding: 20rpx 0 0 0;
 	}
@@ -307,7 +307,7 @@
 
 <style lang="scss" scoped>
 	.title{
-		color: $u-type-primary;
+		color: $u-primary;
 		text-align: center;
 		padding: 20rpx 0 0 0;
 	}
@@ -350,7 +350,7 @@
 
 <style lang="scss" scoped>
 	.title{
-		color: $u-type-primary;
+		color: $u-primary;
 		text-align: center;
 		padding: 20rpx 0 0 0;
 	}

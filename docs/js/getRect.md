@@ -1,7 +1,5 @@
 ## getRect 节点布局信息
 
-<demo-model url="/pages/library/getRect/index"></demo-model>
-
 
 此方法封装自uni的[nodesRef.boundingClientRect](https://uniapp.dcloud.io/api/ui/nodes-info?id=nodesrefboundingclientrect)，它极大简化了
 使用复杂度，内部使用`Promise`，可以让用户同步获取节点信息。

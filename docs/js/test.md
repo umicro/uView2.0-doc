@@ -3,8 +3,6 @@
 uView内置了一些校验规则，如是否手机号，邮箱号，URL等  
 这些规则方法，挂载在`$u.test`下面，如验证是否手机号：`$u.test.mobile('13888889999')`，如果验证通过，返回`true`，否则返回`false`
 
-<demo-model url="/pages/library/test/index"></demo-model>
-
 
 ### 是否验证码
 

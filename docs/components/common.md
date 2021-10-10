@@ -437,16 +437,16 @@ uView提供了四个关于文字颜色的scss变量名，具体详见文档的[C
 
 uView提供五个关于主题的scss颜色变量，如有需要，可合理使用。具体详见文档的[Color 色彩](/components/color.html)部分，分别是：
 
-- `$u-type-primary`为蓝色，uView的主色彩，代表热情，友好，积极，向上之意。
-- `$u-type-warning`为黄色，代表警告之意。
-- `$u-type-success`为绿色，代表成功之意。
-- `$u-type-error`为红色，代表错误之意。
-- `$u-type-info`为灰色，代表一般信息之意。
+- `$u-primary`为蓝色，uView的主色彩，代表热情，友好，积极，向上之意。
+- `$u-warning`为黄色，代表警告之意。
+- `$u-success`为绿色，代表成功之意。
+- `$u-error`为红色，代表错误之意。
+- `$u-info`为灰色，代表一般信息之意。
 
 ```html
 <style lang="scss" scoped>
 	.item {
-		color: $u-type-primary;
+		color: $u-primary;
 	}
 </style>
 ```

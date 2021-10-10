@@ -1,8 +1,5 @@
 ## color 颜色值
 
-<demo-model url="/pages/componentsC/color/index"></demo-model>
-
-
 此功能为uView内部通过js提供的一些颜色值，可以用于通过js修改元素字体，背景颜色等一些场景，常用于uView的各个组件中。  
 这些颜色值，挂载在`$u`对象下的`color`数组中，关于这些颜色值的具体描述，详见[Color 色彩](/components/color.html)  
 使用方法：如使用`primary`颜色值，方法为：`$u.color['primary']`

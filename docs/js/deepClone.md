@@ -1,7 +1,5 @@
 ### deepClone 对象深度克隆
 
-<demo-model url="/pages/library/deepClone/index"></demo-model>
-
 
 <br>
 

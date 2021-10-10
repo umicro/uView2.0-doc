@@ -1,7 +1,5 @@
 ## mpShare 小程序分享
 
-<demo-model url="/pages/library/mpShare/index"></demo-model>
-
 
 此功能，是对uni的[onShareAppMessage 生命周期](https://uniapp.dcloud.io/api/plugins/share?id=onshareappmessage)的封装。  
 

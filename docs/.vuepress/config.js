@@ -57,10 +57,11 @@ module.exports = {
 			}, {
 				text: 'JS',
 				link: '/js/intro'
-			}, {
-				text: '模板',
-				link: '/layout/intro'
-			},
+			}, 
+			// {
+			// 	text: '模板',
+			// 	link: '/layout/intro'
+			// },
 			{
 				text: '资源',
 				link: '/components/resource'
@@ -292,7 +293,6 @@ module.exports = {
 				sidebarDepth: 0,
 				children: [
 					['/js/http', 'Http请求'],
-					['/js/apiManage', 'API集中管理']
 				]
 			}, {
 				title: '工具库',
@@ -390,7 +390,6 @@ module.exports = {
 			'/components/subsection',
 			'/components/steps',
 			'/components/empty',
-			'/js/apiManage',
 			'/components/codeInput',
 			'/components/changeGuide',
 			'/components/avatarCropper',
@@ -414,32 +413,13 @@ module.exports = {
 			'/layout/keyboardPay',
 			'/layout/login',
 			'/layout/address',
-			'/js/time',
-			'/js/intro',
-			'/js/fastUse',
-			'/js/http',
-			'/js/route',
-			'/js/randomArray',
-			'/js/guid',
-			'/js/colorSwitch',
-			'/js/color',
-			'/js/queryParams',
-			'/js/test',
-			'/js/md5',
-			'/js/random',
-			'/js/trim',
-			'/js/getRect',
-			'/js/mpShare',
 			'/components/navbar',
 			'/components/calendar',
 			'/components/form',
 			'/components/backTop',
-			'/js/deepMerge',
-			'/js/deepClone',
 			'/layout/citySelect',
 			'/guide/theme',
 			'/components/parse',
-			'/js/debounce',
 			'/guide/i18n',
 			'/components/dropdown',
 			'/course/promise'

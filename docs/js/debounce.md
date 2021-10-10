@@ -1,6 +1,5 @@
 ## throttle & debounce节流防抖
 
-<demo-model url="/pages/library/debounce/index"></demo-model>
 
 #### 何谓节流和防抖？
 

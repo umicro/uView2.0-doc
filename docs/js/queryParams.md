@@ -1,7 +1,5 @@
 ## queryParams 对象转URL参数
 
-<demo-model url="/pages/library/queryParams/index"></demo-model>
-
 
 该方法，可以将一个对象形式参数转换成`get`传参所需参数形式，如把`{name: 'lisa', age: 20}`转换成`?name=lisa&age=20`  
 用途：可以用于`uni.navigateTo`接口传参等场景，无需自己手动拼接`URL`参数
