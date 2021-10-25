@@ -57,7 +57,7 @@ module.exports = {
 			}, {
 				text: 'JS',
 				link: '/js/intro'
-			}, 
+			},
 			// {
 			// 	text: '模板',
 			// 	link: '/layout/intro'
@@ -76,14 +76,14 @@ module.exports = {
 						link: 'https://www.uviewui.com'
 					}
 				]
-			}, 
+			},
 			// {
 			// 	text: 'GitHub',
-			// 	link: 'https://github.com/YanxinNet/uView'
-			// }, 
+			// 	link: 'https://github.com/umicro/uView'
+			// },
 			{
 				text: 'Gitee',
-				link: 'https://gitee.com/xuqu/uView2.0'
+				link: 'https://gitee.com/umicro/uView2.0'
 			}
 		],
 		sidebar: {
