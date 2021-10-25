@@ -9,6 +9,6 @@
 - `pos` <String\> 去除那些位置的空格，可选为：`both`-默认值，去除两端空格，`left`-去除左边空格，`right`-去除右边空格，`all`-去除包括中间和两端的所有空格
 
 ```js
-console.log(this.$u.trim('abc    b ', 'all')); // 去除所有空格
-console.log(this.$u.trim(' abc '));	// 去除两端空格
+console.log(uni.$u.trim('abc    b ', 'all')); // 去除所有空格
+console.log(uni.$u.trim(' abc '));	// 去除两端空格
 ```

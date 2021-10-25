@@ -22,7 +22,7 @@ export default {
 		}
 	},
 	onLoad() {
-		console.log(this.$u.queryParams(this.data));
+		console.log(uni.$u.queryParams(this.data));
 		// 结果为：?name=lisa&age=20
 	}
 }
@@ -45,16 +45,16 @@ export default {
 		}
 	},
 	onLoad() {
-		this.$u.queryParams(this.data, true, 'indices');
+		uni.$u.queryParams(this.data, true, 'indices');
 		// 结果为：?name=冷月夜&fruits[0]=apple&fruits[1]=banana&fruits[2]=orange
 		
-		this.$u.queryParams(this.data, true, 'brackets');
+		uni.$u.queryParams(this.data, true, 'brackets');
 		// 结果为：?name=冷月夜&fruits[]=apple&fruits[]=banana&fruits[]=orange
 		
-		this.$u.queryParams(this.data, true, 'repeat');
+		uni.$u.queryParams(this.data, true, 'repeat');
 		// 结果为：?name=冷月夜&fruits=apple&fruits=banana&fruits=orange
 		
-		this.$u.queryParams(this.data, true, 'comma');
+		uni.$u.queryParams(this.data, true, 'comma');
 		// 结果为：?name=冷月夜&fruits=apple,banana,orange
 	}
 }

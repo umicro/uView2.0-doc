@@ -23,7 +23,7 @@ uView UI，是[uni-app](https://uniapp.dcloud.io/)生态优秀的UI框架，全�
 
 ```bash
 # npm方式安装
-npm i uview-ui
+npm i uview-v2
 ```
 
 ## 快速上手

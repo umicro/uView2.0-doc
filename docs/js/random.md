@@ -10,5 +10,5 @@
 
 
 ```js
-console.log(this.$u.random(1, 3));
+console.log(uni.$u.random(1, 3));
 ```

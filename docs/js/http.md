@@ -425,25 +425,28 @@ export const getMenu = (data) => http.get('/ebapi/public_api/index', data)
 import { postMenu, getMenu } from '/config/api.js';
 
 // 发出post，假设需要带上token
-postMenu('/common/menu', { custome: { auth: true }}).then(() => {
+postMenu({ custome: { auth: true }}).then(() => {
 	
 }).catch(() =>{
 	
 })
 
+// await等待，注意与async结合使用
+await postMenu({ custome: { auth: true }})
+
 // 假设不需要在响应拦截器中自动弹出的toast，以及不想写catch(如果promise中进行reject，但是却没有catch的话会报错)
-postMenu('/common/menu', { custome: { auth: true, toast: false, catch: false }}).then(() => {
+postMenu({ custome: { auth: true, toast: false, catch: false }}).then(() => {
 	
 })
 
 // get请求
-getMenu('/common/menu', { custome: { auth: true }}).then(() => {
+getMenu({ custome: { auth: true }}).then(() => {
 	
 }).catch(() =>{
 	
 })
 
-// 也可以直接通过uni.$u.post发出请求
+// 也可以直接通过uni.$u.post发出请求，注意此处需要写上接口地址
 uni.$u.http.post('/common/menu', { custome: { auth: true }}).then(() => {
 	
 }).catch(() =>{

@@ -274,7 +274,7 @@ rules: {
 uView在JS板块的[Test 规则校验](/js/test.html)中有大量内置的验证规则，这些规则对表单验证来说，属于**自定义规则**，故需要用到上方规则属性的
 `validator`自定义验证函数，这里做一个详细说明。  
 
-我们知道uView有自带的判断手机号的验证方法`this.$u.test.mobile(value)`，但是[async-validator](https://github.com/yiminghe/async-validator)没有
+我们知道uView有自带的判断手机号的验证方法`uni.$u.test.mobile(value)`，但是[async-validator](https://github.com/yiminghe/async-validator)没有
 内置判断手机号的规则，所以将二者结合使用：
 
 ```js
@@ -290,8 +290,8 @@ rules: {
 			// 自定义验证函数，见上说明
 			validator: (rule, value, callback) => {
 				// 上面有说，返回true表示校验通过，返回false表示不通过
-				// this.$u.test.mobile()就是返回true或者false的
-				return this.$u.test.mobile(value);
+				// uni.$u.test.mobile()就是返回true或者false的
+				return uni.$u.test.mobile(value);
 			},
 			message: '手机号码不正确',
 			// 触发器可以同时用blur和change
@@ -311,7 +311,7 @@ rules: {
 1. 必填，同时可接受`change`和`blur`触发校验：配置`required`参数为`true`，同时配置`trigger`为`[change, bulr]`
 2. 必须为字母或字符串，校验前先将字段值转为字符串类型：通过`pattern`参数配置正则：/^[0-9a-zA-Z]*$/g，通过`transform`参数在校验前对字段值转换为字符串
 3. 长度6-8个字符之间：通过 配置`min`为6，`max`为8
-4. 需要包含字母"A"：使用uView的`this.$u.test.contains()`方法，并结合`validator`自定义函数实现
+4. 需要包含字母"A"：使用uView的`uni.$u.test.contains()`方法，并结合`validator`自定义函数实现
 5. 异步校验，输入完账号，输入框失去焦点时，向后端请求该账号是否已存在：通过上方的`asyncValidator`异步函数进行验证。
 
 
@@ -345,14 +345,14 @@ rules: {
 		// 自定义规则判断是否包含字母"A"
 		{
 			validator: (rule, value, callback) => {
-				return this.$u.test.contains(value, "A");
+				return uni.$u.test.contains(value, "A");
 			},
 			message: '必须包含字母"A"'
 		},
 		// 校验用户是否已存在
 		{
 			asyncValidator: (rule, value, callback) => {
-				this.$u.post('/xxx/xxx', {name: value}).then(res => {
+				uni.$u.http.post('/xxx/xxx', {name: value}).then(res => {
 					// 如果验证不通过，需要在callback()抛出new Error('错误提示信息')
 					if(res.error) {
 						callback(new Error('姓名重复'));

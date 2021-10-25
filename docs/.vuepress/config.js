@@ -309,11 +309,10 @@ module.exports = {
 					['/js/color', '颜色值'],
 					['/js/queryParams', '对象转URL参数'],
 					['/js/test', '规则校验'],
-					['/js/md5', 'md5加密'],
 					['/js/random', '随机数值'],
 					['/js/trim', '去除空格'],
 					['/js/getRect', '节点布局信息'],
-					['/js/mpShare', '小程序分享'],
+					['/js/mpShare', '小程序分享']
 				]
 			}],
 			'/course': [{

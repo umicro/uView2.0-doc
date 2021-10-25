@@ -112,7 +112,6 @@
 				<u-loadmore
 					status="loading"
 					:isDot="true"
-					loadingIcon="circle"
 				></u-loadmore>
 			</view>
 		</view>
@@ -140,7 +139,7 @@
 			<view class="u-demo-block__content">
 				<u-loadmore
 					status="loading"
-					loadingIcon="spinner"
+					loadingIcon="circle"
 				></u-loadmore>
 			</view>
 		</view>

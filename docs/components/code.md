@@ -63,19 +63,19 @@
 					setTimeout(() => {
 						uni.hideLoading();
 						// 这里此提示会被this.start()方法中的提示覆盖
-						this.$u.toast('验证码已发送');
+						uni.$u.toast('验证码已发送');
 						// 通知验证码组件内部开始倒计时
 						this.$refs.uCode.start();
 					}, 2000);
 				} else {
-					this.$u.toast('倒计时结束后再发送');
+					uni.$u.toast('倒计时结束后再发送');
 				}
 			},
 			end() {
-				this.$u.toast('倒计时结束');
+				uni.$u.toast('倒计时结束');
 			},
 			start() {
-				this.$u.toast('倒计时开始');
+				uni.$u.toast('倒计时开始');
 			}
 		}
 	}

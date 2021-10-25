@@ -277,7 +277,7 @@
 </script>
 
 <style lang="scss">
-	@import "@/uview-ui/libs/css/components.scss";
+	@import "@/uview-v2/libs/css/components.scss";
 
 	.u-page__tag-item {
 		@include flex(row);

@@ -69,9 +69,9 @@ module.exports = {
 module.exports = {
 	created() {
 		// 将vuex方法挂在到$u中
-		// 使用方法为：如果要修改vuex的state中的user.name变量为"史诗" => this.$u.vuex('user.name', '史诗')
-		// 如果要修改vuex的state的version变量为1.0.1 => this.$u.vuex('version', '1.0.1')
-		this.$u.vuex = (name, value) => {
+		// 使用方法为：如果要修改vuex的state中的user.name变量为"史诗" => uni.$u.vuex('user.name', '史诗')
+		// 如果要修改vuex的state的version变量为1.0.1 => uni.$u.vuex('version', '1.0.1')
+		uni.$u.vuex = (name, value) => {
 			this.$store.commit('$uStore', {
 				name,value
 			})
@@ -80,7 +80,7 @@ module.exports = {
 }
 ```
 
-当我们要修改某一个`state`值的时候，就用`this.$u.vuex('name', value)`的形式，通过其他办法，也可以实现`this.name = value`的简写，但是这种方式
+当我们要修改某一个`state`值的时候，就用`uni.$u.vuex('name', value)`的形式，通过其他办法，也可以实现`this.name = value`的简写，但是这种方式
 不支持对象的修改，同时也会造成其他的问题，这里不做过多讨论。
 
 - 针对第4点，其实已经在第1点中解决了。

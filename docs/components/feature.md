@@ -136,7 +136,7 @@ Vue.prototype.system = uni.getSystemInfoSync();
 但是uni-app中，设备信息的`windowHeight`属性是不含APP的导航栏和tabbar高度在内的，当我们进入首页时，`windowHeight`不含tabbar高度在内，高度可能为
 '700px'，但是进入内页后，没有tabbar，这时的`windowHeight`高度依然为700px(少掉了tabbar的50px高度)，显然是不正确的。  
 上面说的只是对`windowHeight`属性有影响，其他的属性无碍，如果是需要获取高度，建议每次都执行`uni.getSystemInfoSync()`，或者通过uView提供的快捷工具
-`this.$u.sys()`方法获取即可。
+`uni.$u.sys()`方法获取即可。
 
 
 

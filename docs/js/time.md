@@ -36,7 +36,7 @@
 			}
 		},
 		onLoad() {
-			this.time = this.$u.timeFormat(this.timestamp, 'yyyy-mm-dd');
+			this.time = uni.$u.timeFormat(this.timestamp, 'yyyy-mm-dd');
 		}
 	}
 </script>
@@ -61,7 +61,7 @@ uView同时把timeFormat()注册到了全局过滤器中，方便您在模板中
 也即实际表现为：
 
 ```js
-this.$u.date('1585926095536', 'yyyy-mm')
+uni.$u.date('1585926095536', 'yyyy-mm')
 ```
 
 
@@ -100,7 +100,7 @@ this.$u.date('1585926095536', 'yyyy-mm')
 			}
 		},
 		onLoad() {
-			this.time = this.$u.timeFrom(this.timestamp);
+			this.time = uni.$u.timeFrom(this.timestamp);
 		}
 	}
 </script>

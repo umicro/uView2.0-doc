@@ -17,7 +17,7 @@ export default{
 		}
 	},
 	onLoad() {
-		console.log(this.$u.rgbToHex(this.rgb));
+		console.log(uni.$u.rgbToHex(this.rgb));
 	}
 }
 ```
@@ -39,7 +39,7 @@ export default{
 		}
 	},
 	onLoad() {
-		console.log(this.$u.hexToRgb(this.hex));
+		console.log(uni.$u.hexToRgb(this.hex));
 	}
 }
 ```
@@ -59,7 +59,7 @@ export default{
 ```js
 export default{
 	onLoad() {
-		console.log(this.$u.colorGradient('rgb(250,250,250)', 'rgb(252,252,252)', 3));
+		console.log(uni.$u.colorGradient('rgb(250,250,250)', 'rgb(252,252,252)', 3));
 		// 结果为：["#fafafa", "#fafafa", "#fbfbfb"]
 	}
 }
@@ -77,10 +77,10 @@ export default{
 
 
 ```js
-this.$u.colorToRgba('#000000', 0.35);
+uni.$u.colorToRgba('#000000', 0.35);
 // 结果为 rgba(0, 0, 0, 0.35)
 
-this.$u.colorToRgba('rgb(255, 180, 0)', 0.4);
+uni.$u.colorToRgba('rgb(255, 180, 0)', 0.4);
 // 结果为 rgba(255, 180, 0, 0.4)
 ```
 

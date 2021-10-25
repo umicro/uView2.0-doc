@@ -1,10 +1,10 @@
 ## API集中管理
 
-这里说的集中管理，是指把各个请求，统一放到一个文件中进行管理，这样的好处是不用每次调用`this.$u.get`时都需要传入`url`参数，一些固定的
+这里说的集中管理，是指把各个请求，统一放到一个文件中进行管理，这样的好处是不用每次调用`uni.$u.get`时都需要传入`url`参数，一些固定的
 请求参数也可以不用显式的传入，如下为配置后的使用示例：
 
 ```
-this.$u.api.getSearch().then(res => {
+uni.$u.api.getSearch().then(res => {
 	console.log(res);
 })
 ```
@@ -44,7 +44,7 @@ const install = (Vue, vm) => {
 	// 此处使用了传入的params参数，一切自定义即可
 	let getInfo = (params = {}) => vm.$u.post(indexUrl, params);
 	
-	// 将各个定义的接口名称，统一放进对象挂载到vm.$u.api(因为vm就是this，也即this.$u.api)下
+	// 将各个定义的接口名称，统一放进对象挂载到vm.$u.api(因为vm就是this，也即uni.$u.api)下
 	vm.$u.api = {getSearch, getInfo};
 }
 
@@ -81,12 +81,12 @@ app.$mount()
 
 ```js
 // 调用getSearch接口
-this.$u.api.getSearch().then(res => {
+uni.$u.api.getSearch().then(res => {
 	console.log(res);
 })
 
 // 调用getInfo接口
-this.$u.api.getInfo({id: 3}).then(res => {
+uni.$u.api.getInfo({id: 3}).then(res => {
 	console.log(res);
 })
 ```

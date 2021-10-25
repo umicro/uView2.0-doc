@@ -53,7 +53,7 @@
 		methods: {
 			chooseAvatar() {
 				// 此为uView的跳转方法，详见"文档-JS"部分，也可以用uni的uni.navigateTo
-				this.$u.route({
+				uni.$u.route({
 					// 关于此路径，请见下方"注意事项"
 					url: '/uview-ui/components/u-avatar-cropper/u-avatar-cropper',
 					// 内部已设置以下默认参数值，可不传这些参数

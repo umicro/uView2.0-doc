@@ -14,7 +14,7 @@ uView内置了一些校验规则，如是否手机号，邮箱号，URL等
 - `len` <Number\> 验证码长度，默认为6
 
 ```js
-console.log(this.$u.test.code('4567', 4));
+console.log(uni.$u.test.code('4567', 4));
 ```
 
 
@@ -28,7 +28,7 @@ console.log(this.$u.test.code('4567', 4));
 - `array` <Array\> 数组
 
 ```js
-console.log(this.$u.test.array([1, 2, 3]));
+console.log(uni.$u.test.array([1, 2, 3]));
 ```
 
 ### 是否Json字符串
@@ -44,7 +44,7 @@ console.log(this.$u.test.array([1, 2, 3]));
 2. 字符串对象内的属性需要用`""`双引号包含
 
 ```js
-console.log(this.$u.test.jsonString('{"a": 1}'));
+console.log(uni.$u.test.jsonString('{"a": 1}'));
 ```
 
 
@@ -57,7 +57,7 @@ console.log(this.$u.test.jsonString('{"a": 1}'));
 - `object` <Object\> 对象
 
 ```js
-console.log(this.$u.test.object({a: 1}));
+console.log(uni.$u.test.object({a: 1}));
 ```
 
 ### 是否邮箱号
@@ -69,7 +69,7 @@ console.log(this.$u.test.object({a: 1}));
 - `email` <String\> 字符串
 
 ```js
-console.log(this.$u.test.email('123465798@gmail.com'));
+console.log(uni.$u.test.email('123465798@gmail.com'));
 ```
 
 
@@ -82,7 +82,7 @@ console.log(this.$u.test.email('123465798@gmail.com'));
 - `mobile` <String\> 字符串
 
 ```js
-console.log(this.$u.test.mobile('13845678900'));
+console.log(uni.$u.test.mobile('13845678900'));
 ```
 
 
@@ -95,7 +95,7 @@ console.log(this.$u.test.mobile('13845678900'));
 - `url` <String\> 字符串
 
 ```js
-console.log(this.$u.test.url('http://www.uviewui.com'));
+console.log(uni.$u.test.url('http://www.uviewui.com'));
 ```
 
 
@@ -116,7 +116,7 @@ console.log(this.$u.test.url('http://www.uviewui.com'));
 - `value` <any\> 字符串
 
 ```js
-console.log(this.$u.test.isEmpty(false));
+console.log(uni.$u.test.isEmpty(false));
 ```
 
 
@@ -135,7 +135,7 @@ console.log(this.$u.test.isEmpty(false));
 - `date` <String\> 日期字符串
 
 ```js
-console.log(this.$u.test.date('2020-02-10 08:32:10'));
+console.log(uni.$u.test.date('2020-02-10 08:32:10'));
 ```
 
 
@@ -148,7 +148,7 @@ console.log(this.$u.test.date('2020-02-10 08:32:10'));
 - `number` <String\> 数字
 
 ```js
-console.log(this.$u.test.number('2020'));
+console.log(uni.$u.test.number('2020'));
 ```
 
 
@@ -161,7 +161,7 @@ console.log(this.$u.test.number('2020'));
 - `number` <String\> 数字
 
 ```js
-console.log(this.$u.test.digits('2020'));
+console.log(uni.$u.test.digits('2020'));
 ```
 
 
@@ -174,7 +174,7 @@ console.log(this.$u.test.digits('2020'));
 - `idCard` <String\> 身份证号
 
 ```js
-console.log(this.$u.test.idCard('110101199003070134'));
+console.log(uni.$u.test.idCard('110101199003070134'));
 ```
 
 
@@ -187,7 +187,7 @@ console.log(this.$u.test.idCard('110101199003070134'));
 - `carNo` <String\> 车牌号
 
 ```js
-console.log(this.$u.test.carNo('京A88888'));
+console.log(uni.$u.test.carNo('京A88888'));
 ```
 
 
@@ -200,7 +200,7 @@ console.log(this.$u.test.carNo('京A88888'));
 - `amount` <String\> 金额字符串
 
 ```js
-console.log(this.$u.test.amount('3,233.08'));
+console.log(uni.$u.test.amount('3,233.08'));
 ```
 
 
@@ -213,7 +213,7 @@ console.log(this.$u.test.amount('3,233.08'));
 - `zh` <String\> 中文字符串
 
 ```js
-console.log(this.$u.test.chinese('更上一层楼'));
+console.log(uni.$u.test.chinese('更上一层楼'));
 ```
 
 
@@ -226,7 +226,7 @@ console.log(this.$u.test.chinese('更上一层楼'));
 - `en` <String\> 字母串
 
 ```js
-console.log(this.$u.test.letter('uView'));
+console.log(uni.$u.test.letter('uView'));
 ```
 
 ### 是否字母或者数字
@@ -238,7 +238,7 @@ console.log(this.$u.test.letter('uView'));
 - `str` <String\> 字母或者数字字符串
 
 ```js
-console.log(this.$u.test.enOrNum('uView'));
+console.log(uni.$u.test.enOrNum('uView'));
 ```
 
 
@@ -252,7 +252,7 @@ console.log(this.$u.test.enOrNum('uView'));
 - `subStr` <String\> 子字符串
 
 ```js
-console.log(this.$u.test.contains('uView', 'View'));
+console.log(uni.$u.test.contains('uView', 'View'));
 ```
 
 
@@ -266,7 +266,7 @@ console.log(this.$u.test.contains('uView', 'View'));
 - `range` <Array\> 如"[25-35]"
 
 ```js
-console.log(this.$u.test.range(35, [30, 34]));
+console.log(uni.$u.test.range(35, [30, 34]));
 ```
 
 
@@ -280,5 +280,5 @@ console.log(this.$u.test.range(35, [30, 34]));
 - `range` <Array\> 如"[25, 35]"
 
 ```js
-console.log(this.$u.test.rangeLength('abc', [3, 10]));
+console.log(uni.$u.test.rangeLength('abc', [3, 10]));
 ```

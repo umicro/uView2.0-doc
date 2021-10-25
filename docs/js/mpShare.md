@@ -44,7 +44,7 @@ Vue.mixin(mpShare)
 
 ```js
 // 该对象已集成到this.$u中，内部属性如下
-this.$u.mpShare = {
+uni.$u.mpShare = {
 	title: '', // 默认为小程序名称，可自定义
 	path: '', // 默认为当前页面路径，一般无需修改，QQ小程序不支持
 	// 分享图标，路径可以是本地文件路径、代码包文件路径或者网络图片路径。
@@ -53,12 +53,12 @@ this.$u.mpShare = {
 }
 ```
 
-以上这些，uView已通过`mixin`集成，当某一个页面您需要自定义分享信息时，可以通过"this.$u.mpShare"对进行修改，在页面的`onLoad`生命周期修改即可。
+以上这些，uView已通过`mixin`集成，当某一个页面您需要自定义分享信息时，可以通过"uni.$u.mpShare"对进行修改，在页面的`onLoad`生命周期修改即可。
 
 ```js
 export default {
 	onLoad() {
-		this.$u.mpShare.title = '天苍苍野茫茫，风吹草低见牛羊';
+		uni.$u.mpShare.title = '天苍苍野茫茫，风吹草低见牛羊';
 	}
 }
 ```
@@ -105,14 +105,14 @@ export default {
 
 <!-- ### 如何取消全局分享
 
-此功能为uView默认开启的，如果用户想全局取消或者单个页面取消分享功能，只需将"this.$u.mpShare"设置为`false`即可
+此功能为uView默认开启的，如果用户想全局取消或者单个页面取消分享功能，只需将"uni.$u.mpShare"设置为`false`即可
 
 - 全局取消，在App.vue的`onLaunch`应用生命周期中设置
 
 ```js
 export default {
 	onLaunch() {
-		this.$u.mpShare = false;
+		uni.$u.mpShare = false;
 	}
 }
 ```
@@ -122,7 +122,7 @@ export default {
 ```js
 export default {
 	onLoad() {
-		this.$u.mpShare = false
+		uni.$u.mpShare = false
 	}
 }
 ``` -->

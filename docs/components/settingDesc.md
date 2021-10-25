@@ -4,14 +4,14 @@
 
 为何要在`main.js`引入uView的JS库？
 
-因为uView内部集成了很多的便捷JS工具，比如获取随机数的`radnom`方法，调用为`this.$u.radom(min, max)`，可见这些方法都挂载在`$u`下，
+因为uView内部集成了很多的便捷JS工具，比如获取随机数的`radnom`方法，调用为`uni.$u.radom(min, max)`，可见这些方法都挂载在`$u`下，
 我们能通过`this`调用`$u`，又是因为`$u`挂载在Vue的原型链上，在这里uView的做法为通过`Vue.use`，以插件的形式在内部进行`Vue.property`的挂载。  
 
 而`main.js`就是整个项目JS的入口，且Vue也是在这里引入的，所以我们自然而然就会想到把uView的JS库在`mian.js`中引入了，如下：
 
 ```js
 // main.js
-import uView from "uview-ui";
+import uView from "uview-v2";
 Vue.use(uView);
 ```
 

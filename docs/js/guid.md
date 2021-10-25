@@ -26,7 +26,7 @@
 	export default{
 		data() {
 			return {
-				elClass: this.$u.guid(20),
+				elClass: uni.$u.guid(20),
 			}
 		}
 	}

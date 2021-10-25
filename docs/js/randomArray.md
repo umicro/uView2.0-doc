@@ -15,7 +15,7 @@ export default{
 		}
 	},
 	onLoad() {
-		console.log(this.$u.randomArray(this.array));
+		console.log(uni.$u.randomArray(this.array));
 	}
 }
 ```

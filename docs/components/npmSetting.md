@@ -1,4 +1,4 @@
-## npm安装方式配置 <to-api/>
+## NPM安装方式配置 <to-api/>
 
 ### 关于SCSS
 
@@ -25,7 +25,7 @@ npm i sass-loader -D
 // npm init -y
 
 // 安装
-npm install uview-ui
+npm install uview-v2
 ```
 
 ### 配置步骤
@@ -36,7 +36,7 @@ npm install uview-ui
 
 ```js
 // main.js
-import uView from "uview-ui";
+import uView from "uview-v2";
 Vue.use(uView);
 ```
 
@@ -47,7 +47,7 @@ Vue.use(uView);
 
 ```css
 /* uni.scss */
-@import 'uview-ui/theme.scss';
+@import 'uview-v2/theme.scss';
 ```
 
 
@@ -60,7 +60,7 @@ Vue.use(uView);
 ```css
 <style lang="scss">
 	/* 注意要写在第一行，同时给style标签加入lang="scss"属性 */
-	@import "uview-ui/index.scss";
+	@import "uview-v2/index.scss";
 </style>
 ```
 
@@ -78,12 +78,24 @@ Vue.use(uView);
 // pages.json
 {
 	"easycom": {
-		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+		"^u-(.*)": "uview-v2/components/u-$1/u-$1.vue"
 	},
 	
 	// 此为本身已有的内容
 	"pages": [
 		// ......
 	]
+}
+```
+
+
+#### 5. Cli模式额外配置
+
+如果您是`vue-cli`模式的项目，还需要在项目`根目录`的`vue.config.js`文件中进行如下配置：
+
+```js
+// vue.config.js，如没有此文件则手动创建
+module.exports = {
+    transpileDependencies: ['uview-v2']
 }
 ```

@@ -53,4 +53,4 @@ export default {
 }
 ```
 
-从上面我们可以看出，uView把"$u"挂载到了`Vue.prototype`上，所以我们在项目的内部可以使用`this.$u.xxx`这种形式。
+从上面我们可以看出，uView把"$u"挂载到了`Vue.prototype`上，所以我们在项目的内部可以使用`uni.$u.xxx`这种形式。
