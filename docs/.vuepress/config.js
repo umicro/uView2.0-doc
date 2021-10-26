@@ -83,7 +83,7 @@ module.exports = {
 			// }, 
 			{
 				text: 'Gitee',
-				link: 'https://gitee.com/xuqu/uView2.0'
+				link: 'https://gitee.com/umicro/uView2.0'
 			}
 		],
 		sidebar: {
