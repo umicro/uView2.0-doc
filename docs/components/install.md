@@ -28,7 +28,7 @@
 // 如果您的根目录没有package.json文件的话，请先执行如下命令：
 // npm init -y
 
-nmp install uview-v2
+npm install uview-v2
 
 // 更新
 // npm update uview-v2
