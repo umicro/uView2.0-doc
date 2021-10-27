@@ -40,7 +40,7 @@
 通过`mode`参数配置填充模式，此模式用法与uni-app的`image`组件的`mode`参数完全一致，详见：[Image](https://uniapp.dcloud.io/component/image)
 
 ```html
-<u-image src="https://cdn.uviewui.com/uview/album/1.jpg" mode="widthFix"></u-image>
+<u--image src="https://cdn.uviewui.com/uview/album/1.jpg" mode="widthFix"></u--image>
 ```
 
 ### 图片形状
@@ -49,7 +49,7 @@
 - 如果为方形时，还可以通过`border-radius`参数设置圆角值
 
 ```html
-<u-image src="https://cdn.uviewui.com/uview/album/1.jpg" shape="circle"></u-image>
+<u--image src="https://cdn.uviewui.com/uview/album/1.jpg" shape="circle"></u--image>
 ```
 
 
@@ -67,9 +67,9 @@
 图片加载过程中，为加载中状态(默认显示一个小图标)，可以通过`loading`自定义插槽，结合uView的`u-loading`组件，实现加载的动画效果。
 
 ```html
-<u-image src="https://cdn.uviewui.com/uview/album/1.jpg">
+<u--image src="https://cdn.uviewui.com/uview/album/1.jpg">
 	<u-loading slot="loading"></u-loading>
-</u-image>
+</u--image>
 ```
 
 
@@ -78,9 +78,9 @@
 图片加载失败时，默认显示一个错误提示图标，可以通过`error`自定义插槽，实现个性化的提示方式。
 
 ```html
-<u-image src="https://cdn.uviewui.com/uview/album/1.jpg">
+<u--image src="https://cdn.uviewui.com/uview/album/1.jpg">
 	<view slot="error" style="font-size: 24rpx;">加载失败</view>
-</u-image>
+</u--image>
 ```
 
 
@@ -92,7 +92,7 @@
 - 通过`duration`参数配置动画的过渡时间，单位ms
 
 ```html
-<u-image src="https://cdn.uviewui.com/uview/album/1.jpg" :fade="true" duration="450"></u-image>
+<u--image src="https://cdn.uviewui.com/uview/album/1.jpg" :fade="true" duration="450"></u--image>
 ```
 
 
@@ -105,7 +105,7 @@
 <!-- 点击图片将不会触发clickHandler -->
 <view @tap="clickHandler">
 	<view @tap.stop>
-		<u-image src="https://cdn.uviewui.com/uview/album/1.jpg"></u-image>
+		<u--image src="https://cdn.uviewui.com/uview/album/1.jpg"></u--image>
 	</view>
 </view>
 ```
