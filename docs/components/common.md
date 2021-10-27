@@ -18,9 +18,7 @@ uView组件功能的实现，并不依赖全局样式，内置的一些类名，
 `u-line-1`,`u-line-2`,`u-line-3`,`u-line-4`,`u-line-5`五个类名在文字超出内容盒子时，分别只显示一行、两行、三行、四行、五行+省略号。
 
 ```html
-<view class="u-line-1">
-	是日也，天朗气清，惠风和畅，仰观宇宙之大，俯察品类之盛，所以游目骋怀，足以极视听之娱，信可乐也
-</view>
+<text class="u-line-1">是日也，天朗气清，惠风和畅，仰观宇宙之大，俯察品类之盛</text>
 ```
 
 ### 定位
@@ -167,64 +165,6 @@ uView为文字对齐定义了3个类，分别如下：
 		}
 	}
 </script>
-```
-
-
-### 内外边距
-
-uView定义了一套内外边距的类名，调用简单，方便用户使用，类似`u-padding-x`、`u-margin-left-x`等，这里的`x`取值规则如下：
-
-- 1-80(可以等于80)之间的偶数(双数)
-- 能被5除尽的1-80之间的数，如5，10，15，35等
-
-类名的取值有如下：
-
-**注意：** uView同时也给了一套简写的方法，二者是等价的。
-
-- u-padding-x  ==  u-p-x
-- u-padding-left-x  ==  u-p-l-x
-- u-padding-top-x  ==  u-p-t-x
-- u-padding-right-x  ==  u-p-r-x
-- u-padding-bottom-x  ==  u-p-b-x
-- u-margin-x  ==  u-m-x
-- u-margin-left-x  ==  u-m-l-x
-- u-margin-top-x  ==  u-m-t-x
-- u-margin-right-x  ==  u-m-r-x
-- u-margin-bottom-x  ==  u-m-b-x
-
-<!-- 以下为1.3.9新增的样式：
-
-- u-margin-left-right-x  ==  u-m-l-r-x
-- u-margin-top-button-x  ==  u-m-t-b-x
-- u-padding-left-right-x  ==  u-p-l-r-x
-- u-padding-top-bottom-x  ==  u-p-t-b-x -->
-
-如果我们想定义`26rpx`的**左外边距**：
-
-```html
-<view class="u-margin-left-26"></viwe>
-```
-
-这个`.u-margin-left-26`在uView的内部样式定义为：
-
-```css
-.u-margin-left-26 {
-	margin-left: 26rpx;
-}
-```
-
-如果我们想要`35rpx`的内边距：
-
-```html
-<view class="u-padding-35"></viwe>
-```
-
-这个`.u-padding-35`在uView的内部样式定义为：
-
-```css
-.u-padding-35 {
-	padding: 35rpx;
-}
 ```
 
 
