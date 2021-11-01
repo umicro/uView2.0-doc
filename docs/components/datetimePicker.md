@@ -1,4 +1,4 @@
-## DatatimePicker 选择器 <to-api/>
+## DatetimePicker 选择器 <to-api/>
 
 <demo-model url="/pages/componentsC/datetimePicker/datetimePicker"></demo-model>
 

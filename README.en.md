@@ -1,11 +1,11 @@
 # uView2.0 Doc
 
 #### Introduce
-Uview2.0 document
+uView 2.0 document
 ##### UI framework for rapid development of multi platform
 #### Project description
-Uview UI is a uni app ecological framework fully compatible with nvue. Its comprehensive components and convenient tools are like a sword in your hand
-Our aim is: the sword out of the scabbard, unify the Jianghu!
+uView UI is a uni-app ecological framework fully compatible with nvue. Its comprehensive components and convenient tools are like a sword in your hand
+Our aim is: the sword out of the scabbard, unify the jianghu!
 
 
 
@@ -13,10 +13,10 @@ Our aim is: the sword out of the scabbard, unify the Jianghu!
 
 1：You can use NPM to install the following commands
 ``` html
-// 安装
+// install
 npm install uview-ui
 
-// 更新
+// update
 npm update uview-ui
 ```
 2：Install in the plug-in Market: the address link is (please note the version difference)
@@ -29,9 +29,9 @@ Please refer to `configuration` and `quick start`
 
 #### Participation contribution
 
-For open source, ideal and freedom, you can join the research and development team of uview, and we will work together.
+For open source, ideal and freedom, you can join the research and development team of uView, and we will work together.
 
-If you are a student of UI development, uview is also welcome, because uview needs both internal and external training.
+If you are a designer developed by UI, we is also welcome, because uView needs to be repaired inside and outside.
 
-If you are an active person, you are also welcome to join the QQ group of uview and become an administrator.
+If you are an active person, you are also welcome to join the QQ group of uView and become an administrator.
 

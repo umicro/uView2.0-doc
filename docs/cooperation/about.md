@@ -4,7 +4,6 @@ uView为采用[MIT](https://baike.baidu.com/item/MIT/10772952)许可证的开源
 
 <qq-group></qq-group>
 
-
 ### 作者
 
 作者网名"亡灵叙曲"，真名易瑞文，广西人，目前在深圳。  
@@ -24,6 +23,15 @@ uView免费开源，无需授权，欢迎商用。uView的发展也得到各个�
 <team-member-item v-for="(item, index) in memberList" :key="index" :list="item"></team-member-item>
 
 <br>
+
+### Github贡献名单
+<br>
+<githubContribution-list></githubContribution-list>
+
+### Gitee贡献名单
+<br>
+<giteeContribution-list></giteeContribution-list>
+
 
 ### 文档
 
@@ -175,5 +183,6 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 .col-box {
 	text-align: center;
 }
+
 </style>
 
