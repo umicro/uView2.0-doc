@@ -2,6 +2,7 @@
   <el-table
       :data="tableData"
       max-height="550"
+      :style="{maxWidth:'300px'}"
       :border="false"
       stripe>
     <el-table-column
@@ -53,7 +54,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .item {
   display: flex;
   align-items: center;
@@ -62,4 +63,7 @@ export default {
     margin-left: 10px;
   }
 }
+
+
+
 </style>

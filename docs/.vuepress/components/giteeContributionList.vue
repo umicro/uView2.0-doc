@@ -2,6 +2,7 @@
   <el-table
       :data="tableData"
       max-height="550"
+      :style="{maxWidth:'630px'}"
       :border="false"
       stripe>
     <el-table-column
