@@ -27,22 +27,27 @@
 import axios from 'axios'
 
 export default {
-  name: "giteeContributionList",
+  name: 'giteeContributionList',
   props: {
     // 仓库所属空间地址(企业、组织或个人的地址path)
     owner: {
       type: String,
-      default: "umicro"
+      default: 'umicro'
     },
     // 仓库路径(path)
     repo: {
       type: String,
-      default: "uView"
+      default: 'uView'
     },
     // 贡献者类型(authors或者committers)
     type: {
       type: String,
-      default: "authors"
+      default: 'authors'
+    },
+    // 加上访问token，解决多次刷新请求被限制的问题
+    access_token: {
+      type: String,
+      default: '24890dea20e1ae987bce019160034b2b'
     }
   },
   data() {
@@ -51,7 +56,7 @@ export default {
     }
   },
   created() {
-    axios.get(`https://gitee.com/api/v5/repos/${this.owner}/${this.repo}/contributors?type=${this.type}`).then(response => {
+    axios.get(`https://gitee.com/api/v5/repos/${this.owner}/${this.repo}/contributors?type=${this.type}&access_token=${this.access_token}`).then(response => {
       this.tableData = response.data
     });
   }
