@@ -63,7 +63,8 @@ export default {
     margin-left: 10px;
   }
 }
-
-
+table {
+  margin: 0;
+}
 
 </style>

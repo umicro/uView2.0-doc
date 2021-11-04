@@ -3,6 +3,7 @@
       :data="tableData"
       max-height="550"
       :style="{maxWidth:'630px'}"
+      :header-cell-style="{margin:'0px'}"
       :border="false"
       stripe>
     <el-table-column
@@ -57,3 +58,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+
+table {
+  margin: 0;
+}
+
+</style>
