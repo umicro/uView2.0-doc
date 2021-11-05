@@ -43,11 +43,6 @@ export default {
     type: {
       type: String,
       default: 'authors'
-    },
-    // 加上访问token，解决多次刷新请求被限制的问题
-    access_token: {
-      type: String,
-      default: '24890dea20e1ae987bce019160034b2b'
     }
   },
   data() {
@@ -56,7 +51,7 @@ export default {
     }
   },
   created() {
-    axios.get(`https://gitee.com/api/v5/repos/${this.owner}/${this.repo}/contributors?type=${this.type}&access_token=${this.access_token}`).then(response => {
+    axios.get(`https://gitee.com/api/v5/repos/${this.owner}/${this.repo}/contributors?type=${this.type}`).then(response => {
       this.tableData = response.data
     });
   }
