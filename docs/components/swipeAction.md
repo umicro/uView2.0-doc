@@ -513,10 +513,10 @@
 | threshold		| 滑动距离阈值，只有大于此值，才被认为是要打开菜单		| Number				| 20	| - 		|
 | options		| 右侧按钮内容									| Array					| []	| -			|
 | duration		| 动画过渡时间，单位ms							    | String &#124; Number	| 300	| -			|
+| name		| 标识符，如果是v-for，可用index索引值						    | String &#124; Number	| -	| -			|
 
 ### SwipeActionItem Event
 
 |事件名	|说明			|回调参数	|
 |:-		|:-				|:-			|
-| open	| 组件打开时触发	| (index)	|
-| close	| 组件关闭时触发	| (index)	|
+| click	| 按钮被点击时触发	| name: props参数`name`的值，index: 第几个按钮被点击	|

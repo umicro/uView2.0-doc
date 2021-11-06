@@ -559,6 +559,11 @@
 | confirmDisabledText	| 确认按钮处于禁用状态时的文字							| String							| 确定		| -												|
 | show					| 是否显示日历弹窗									| Boolean							| false		| true											|
 | closeOnClickOverly	| 是否允许点击遮罩关闭日历								| Boolean							| false		| true											|
+| readonly	            | 是否为只读状态，只读状态下禁止选择日期								| Boolean							| false		| true											|
+| maxRange	            | 日期区间最多可选天数，默认无限制，mode = range时有效				    | Number &#124; String				| 无限制		| -											|
+| rangePrompt	        | 范围选择超过最多可选天数时的提示文案，mode = range时有效				| String &#124; null				| 	选择天数不能超过 xx 天	| -											|
+| showRangePrompt	    | 范围选择超过最多可选天数时，是否展示提示文案，mode = range时有效								| Boolean							| true		| false											|
+| allowSameDay	            | 是否允许日期范围的起止时间为同一天，mode = range时有效								| Boolean							| false		| true											|
 
 
 
@@ -566,7 +571,7 @@
 
 | 事件名		| 说明					| 回调参数					|
 | :-		| :-					| :-						|
-| confirm	| 点击`确定`按钮时触发	| 选择日期相关的返回参数		|
+| confirm	| 日期选择完成后触发，若`show-confirm`为`true`，则点击确认按钮后触发	| 选择日期相关的返回参数		|
 | close		| 日历关闭时触发			| 可定义页面关闭时的回调事件	|
 
 
