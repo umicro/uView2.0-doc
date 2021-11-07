@@ -165,7 +165,7 @@
 
 | 参数					| 说明																| 类型					| 默认值		|  可选值	|
 |:-						|:-																	|:-						|:-			|:-			|
-| value					| 输入框的内容														| String				| -			| -			|
+| value					| 输入框的内容														| String &#124; String	| -			| -			|
 | placeholder			| 输入框为空时占位符													| Number &#124; String	| -			| -			|
 | height				| 输入框高度															| String &#124; Number	| 70		| -			|
 | confirmType			| 设置键盘右下角按钮的文字，仅微信小程序，App-vue和H5有效				| String				| done		| -			|

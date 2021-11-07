@@ -70,16 +70,21 @@
 
 ### 格式化
 
-通过`formatter`参数编写自定义格式化规则。
+如有需要，可以通过`formatter`参数编写自定义格式化规则。
+
+:::warning 注意：
+微信小程序不支持通过`props`传递函数参数，所以组件内部暴露了一个`setFormatter`方法用于设置格式化方法，注意在页面的`onReady`生命周期获取`ref`再操作。
+:::
 
 ```html
 <template>
     <view>
         <u-datetime-picker
-                :show="show"
-                :value="value1"
-                mode="datetime"
-                :formatter="formatter"
+			ref="datetimePicker"
+			:show="show"
+			:value="value1"
+			mode="datetime"
+			:formatter="formatter"
         ></u-datetime-picker>
         <u-button @click="show = true">打开</u-button>
     </view>
@@ -93,6 +98,10 @@
                 value1: Number(new Date()),
             }
         },
+		onReady() {
+			// 微信小程序需要用此写法
+			this.$refs.datetimePicker.setFormatter(this.formatter)
+		},
         methods: {
             formatter(type, value) {
                 if (type === 'year') {
@@ -418,8 +427,18 @@
 | change	| 当选择值变化时触发				| -			| -		|
 | cancel	| 点击取消按钮					| -			| -		|
 
+
+### Methods
+| 方法名								| 说明					| 
+| :-								| :-					|
+| setFormatter	| 为兼容微信小程序而暴露的内部方法，见上方说明	 |
+
 <style scoped>
-h3[id=props] + table thead tr th:nth-child(2){
+h3[id=props] + table thead tr th:nth-child(2) {
 	width: 30%;
+}
+
+h3[id=methods] + table thead tr th:nth-child(2) {
+	width: 50%;
 }
 </style>

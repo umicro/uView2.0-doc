@@ -371,7 +371,7 @@
 |:-			|:-																								|:-									|:-		|:-			|
 | value		| 当前展开面板的name，非手风琴模式：\[<String &#124; Number>\]，手风琴模式：String &#124; Number		| String &#124; Number &#124;  Array| -		| -			|
 | accordion	| 是否手风琴模式																					| Boolean							| false	| true		|
-| border	| 是否显示外边框																					| Boolean							| false	| true		|
+| border	| 是否显示外边框																					| Boolean							| true	| false		|
 
 ### Collapse Item Props
 
@@ -412,10 +412,12 @@
 
 ### Slot
 
+微信小程序不支持`slot`写法
+
 | 名称		| 说明			|
 |:-			|:_				|
 | -			| 主体部分的内容	|
-| title		| 头部的内容		|
+| title		| 标题内容		|
 | icon		| icon			|
 | value		| 右侧value		|
 | rightIcon	| 右侧icon		|

@@ -138,11 +138,12 @@ Tooltip组件主要用于长按操作，类似微信的长按气泡
 | showCopy	| 是否显示复制按钮																			| Boolean               				| true		| false					|
 | buttons	| 扩展的按钮组                    														| Array 								| - 		| - 					|
 | overlay	| 是否显示透明遮罩以防止触摸穿透                           									| Boolean								| true		| false					|
+| showToast	| 是否显示复制成功或者失败的`toast`                           									| Boolean								| true		| false					|
 
 
 ### Tooltip Events
 
 |事件名	|说明			|回调参数	|
 |:-		|:-				|:-			|
-| click	| 点击触发事件	| -			|
+| click	| 点击触发事件	| index，被点击按钮的索引		|
 

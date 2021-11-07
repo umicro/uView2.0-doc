@@ -44,7 +44,7 @@
 
 ```html
 <template>
-    <u-picker :show="show" :columns="columns" @confirm="confirm" @change="changeHandler"></u-picker>
+    <u-picker :show="show" ref="uPicker" :columns="columns" @confirm="confirm" @change="changeHandler"></u-picker>
 </template>
 
 <script>
@@ -69,7 +69,8 @@
                     value,
                     values, // values为当前变化列的数组内容
                     index,
-                    picker
+					// 微信小程序无法将picker实例传出来，只能通过ref操作
+                    picker = this.$refs.uPicker
                 } = e
                 // 当第一列值发生变化时，变化第二列(后一列)对应的选项
                 if (columnIndex === 0) {
@@ -94,7 +95,7 @@
 
 ```html
 <template>
-    <u-picker :show="show" :columns="columns" @change="changeHandler"></u-picker>
+    <u-picker :show="show" ref="uPicker" :columns="columns" @change="changeHandler"></u-picker>
 </template>
 
 <script>
@@ -117,7 +118,8 @@
                 const {
                     columnIndex,
                     index,
-                    picker
+					// 微信小程序无法将picker实例传出来，只能通过ref操作
+					picker = this.$refs.uPicker
                 } = e
                 if (columnIndex === 0) {
                     this.loading = true
@@ -412,7 +414,7 @@
 | 名称				| 说明										|
 |:-					|:-											|
 | setIndexs			| (index, setLastIndex) 设置对应列的选择值	|
-| setColumnValues	| 多列联动时需要用到，见上方说明				|
+| setColumnValues	| 多列联动时需要用到，见上方说明，注意`微信小程序`的特殊用法				|
 
 ### Events
 |事件名		|说明							|回调参数							|版本	|
