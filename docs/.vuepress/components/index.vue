@@ -142,11 +142,11 @@
           </li>
         </ul>
       </div>
-<!--      <div class="card-box friend-link">-->
-<!--        <p class="card-title">友情链接</p>-->
-<!--        &lt;!&ndash;        内测期间去掉友情链接&ndash;&gt;-->
-<!--        <friend-link></friend-link>-->
-<!--      </div>-->
+      <!--      <div class="card-box friend-link">-->
+      <!--        <p class="card-title">友情链接</p>-->
+      <!--        &lt;!&ndash;        内测期间去掉友情链接&ndash;&gt;-->
+      <!--        <friend-link></friend-link>-->
+      <!--      </div>-->
     </div>
     <div class="foot">
       Copyright 2020 uView UI | <a target="_blank" href="http://www.beian.miit.gov.cn">粤ICP备19025822号</a>
@@ -160,6 +160,12 @@ export default {
     return {}
   },
   created() {
+    this.$alert('uView2.0正在做最后的完善工作，本文档用于体验浏览，目前<b>无法使用！</b> <br>源码包发布 npm 和 uni-app 插件市场还在紧急整理中。请大家再耐心等待。' +
+        '<br><span style="background: #ffe6e6;padding: 5px">提示:<b>uView1.0无法直接升级uView2.0</b></span>', '提示', {
+      confirmButtonText: '确定',
+      dangerouslyUseHTMLString: true,
+      type: 'warning'
+    })
     // this.$alert('深圳宝安区高薪招聘前端开发岗位，加入我们，和uView UI核心研发团队一起工作和成长，快来看看吧！联系QQ：1416956117，查看岗位：http://zpurl.cn/Y3SzR', '高薪招聘前端开发', {
     // 	confirmButtonText: '确定',
     // 	callback: action => {
