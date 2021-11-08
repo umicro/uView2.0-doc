@@ -241,7 +241,7 @@ export default {
 
 | 参数			| 说明							| 类型					| 默认值		|  可选值	|
 |:-				|:-								|:-						|:-			|:-			|
-| show			| 是否展示组件					| Boolean				| true		| false		|
+| show			| 是否展示组件					| Boolean				| false		| true		|
 | mode			| 使用的动画模式					| String				| fade		| true		|
 | duration		| 动画的执行时间，单位ms			| String &#124; Number	| 300		| -			|
 | timingFunction| 使用的动画过渡函数，见上方说明	| String				| ease-out	| -			|
