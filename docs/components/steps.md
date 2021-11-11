@@ -12,8 +12,8 @@
 
 ### 基本使用
 
-:::tip 说明
-本组件需要```u-steps```和```u-steps-item```配合使用
+:::warning 说明
+由于安卓`nvue`下，`overflow`属性不支持`visible`值，故此组件暂不支持安卓`nvue`环境。
 :::
 
 - 通过`current`参数标识目前处于第几步，从0开始

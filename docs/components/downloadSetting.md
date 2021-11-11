@@ -65,11 +65,13 @@ Vue.use(uView)
 :::tip 温馨提示
 1. uni-app为了调试性能的原因，修改`easycom`规则不会实时生效，配置完后，您需要重启HX或者重新编译项目才能正常使用uView的功能。
 2. 请确保您的`pages.json`中只有一个`easycom`字段，否则请自行合并多个引入规则。
+3. 如果您是通过`uni_modules`形式引入uView，可以忽略此配置
 :::
 
 ```json
 // pages.json
 {
+	// 如果您是通过uni_modules形式引入uView，可以忽略此配置
 	"easycom": {
 		"^u-(.*)": "@/uni_modules/uview-v2/components/u-$1/u-$1.vue"
 	},

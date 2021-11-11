@@ -182,7 +182,7 @@
 			:show="show1"
 			:value="value1"
 			mode="datetime"
-			closeOnClickOverly
+			closeOnClickOverlay
 			@confirm="confirm"
 			@cancel="cancel"
 			@change="change"
@@ -192,7 +192,7 @@
 			:show="show2"
 			:value="value2"
 			mode="date"
-			closeOnClickOverly
+			closeOnClickOverlay
 			@confirm="confirm"
 			@cancel="cancel"
 			@change="change"
@@ -202,7 +202,7 @@
 			:show="show3"
 			:value="value3"
 			mode="year-month"
-			closeOnClickOverly
+			closeOnClickOverlay
 			@confirm="confirm"
 			@cancel="cancel"
 			@change="change"
@@ -212,7 +212,7 @@
 			:show="show4"
 			:value="value4"
 			mode="time"
-			closeOnClickOverly
+			closeOnClickOverlay
 			@confirm="confirm"
 			@cancel="cancel"
 			@change="change"
@@ -223,7 +223,7 @@
 			:value="value5"
 			:filter="filter"
 			mode="date"
-			closeOnClickOverly
+			closeOnClickOverlay
 			@confirm="confirm"
 			@cancel="cancel"
 			@change="change"
@@ -234,7 +234,7 @@
 			:value="value6"
 			mode="date"
 			:formatter="formatter"
-			closeOnClickOverly
+			closeOnClickOverlay
 			@confirm="confirm"
 			@cancel="cancel"
 			@change="change"
@@ -246,7 +246,7 @@
 			mode="datetime"
 			:minDate="1587524800000"
 			:maxDate="1786778555000"
-			closeOnClickOverly
+			closeOnClickOverlay
 			@confirm="confirm"
 			@cancel="cancel"
 			@change="change"
@@ -407,7 +407,7 @@
 | minMinute			| 可选的最小分钟，仅mode=time有效	| Number				| 0					| -														|
 | maxMinute			| 可选的最大分钟，仅mode=time有效	| Number				| 59				| -														|
 | filter			| 选项过滤函数					| Function				| null				| -														|
-| formatter			| 选项格式化函数					| Function				| null				| -														|
+| formatter			| 输入过滤或格式化函数(如需兼容微信小程序，则只能通过`setFormatter`方法)					| Function				| null				| -														|
 | loading			| 是否显示加载中状态				| Boolean				| false				| true													|
 | itemHeight		| 各列中，单个选项的高度			| String &#124; Number	| 44				| -														|
 | cancelText		| 取消按钮的文字					| String				| 取消				| -														|
@@ -415,7 +415,7 @@
 | cancelColor		| 取消按钮的颜色					| String				| #909193			| -														|
 | confirmColor		| 取消按钮的颜色					| String				| #3c9cff			| -														|
 | visibleItemCount	| 每列中可见选项的数量			| String &#124; Number	| 5					| -														|
-| closeOnClickOverly| 是否允许点击遮罩关闭选择器		| Boolean				| false				| true													|
+| closeOnClickOverlay| 是否允许点击遮罩关闭选择器		| Boolean				| false				| true													|
 | defaultIndex		| 各列的默认索引					| Array					| []				| -														|
 
 

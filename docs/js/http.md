@@ -81,7 +81,7 @@ uni.$u.http.trace(url[, data[, config]])
 
 可以通过`uni.$u.http.setConfig()`方法进行全局配置，比如配置请求的全局域名`baseUrl`：
 ```js
-uni.$u.uni.$u.http.setConfig((config) => {
+uni.$u.http.setConfig((config) => {
     /* config 为默认全局配置*/
     config.baseURL = `https://www.example.com`; /* 根域名 */
     return config

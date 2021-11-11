@@ -80,6 +80,43 @@
 </script>
 ```
 
+
+### 格式化处理
+
+
+如有需要，可以通过`formatter`参数编写自定义格式化规则。
+
+:::warning 注意：
+微信小程序不支持通过`props`传递函数参数，所以组件内部暴露了一个`setFormatter`方法用于设置格式化方法，注意在页面的`onReady`生命周期获取`ref`再操作。
+:::
+
+```html
+<template>
+    <u-textarea v-model="value" :formatter="formatter" ref="textarea"></u-textarea>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                value: ''
+            }
+        },
+		onReady() {
+			// 如果需要兼容微信小程序的话，需要用此写法
+			this.$refs.textarea.setFormatter(this.formatter)
+		},
+        methods: {
+            formatter(value) {
+				// 让输入框只能输入数值，过滤其他字符
+            	return value.replace(/[^0-9]/ig, "")
+            }
+        },
+    }
+</script>
+```
+
+
 ### 演示项目完整代码
 :::demo 演示项目完整代码
 ```html
@@ -186,6 +223,13 @@
 | border				| 边框类型，surround-四周边框，none-无边框，bottom-底部边框															| String				| surround	| bottom	|
 | placeholderClass		| 指定placeholder的样式类，注意页面或组件的style中写了scoped时，需要在类名前写/deep/																| String				| textarea-placeholder	| -														|
 | placeholderStyle		| 指定placeholder的样式，字符串/对象形式，如"color: red;"																					| String &#124; Object	| color: #c0c4cc	| -														|
+| formatter			    | 输入过滤或格式化函数(如需兼容微信小程序，则只能通过`setFormatter`方法)					| Function				| null				| -														|		
+
+
+### Methods
+| 方法名								| 说明					| 
+| :-								| :-					|
+| setFormatter	| 为兼容微信小程序而暴露的内部方法，见上方说明	 |
 
 
 ### List Events
@@ -198,3 +242,10 @@
 | input					| 当键盘输入时，触发 input 事件												| e.detail.value|
 | confirm				| 点击完成时， 触发 confirm 事件												| e				|
 | keyboardheightchange	| 键盘高度发生变化的时候触发此事件												| e				|
+
+
+<style scoped>
+h3[id=methods] + table thead tr th:nth-child(2) {
+	width: 50%;
+}
+</style>

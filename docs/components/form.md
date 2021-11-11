@@ -650,7 +650,7 @@ export default {
 					:show="showBirthday"
 					:value="birthday"
 					mode="date"
-					closeOnClickOverly
+					closeOnClickOverlay
 					@confirm="birthdayConfirm"
 					@cancel="birthdayClose"
 					@close="birthdayClose"

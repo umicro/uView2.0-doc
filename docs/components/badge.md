@@ -286,8 +286,8 @@ export default {
 | type		| 主题类型																							| String				| error		| warning / success / primary / info|
 | showZero	| 当数值为 0 时，是否展示 Badge																			| Boolean				| false		| true								|
 | bgColor	| 背景颜色，优先级比`type`高，如设置，`type`参数会失效														| String				| -			| -									|
-| color		| 字体颜色																							| String				| circle	| -									|
-| shape		| 徽标形状，circle-四角均为圆角，horn-左下角为直角														| String				| #ffffff	| horn								|
+| color		| 字体颜色																							| String				| #ffffff	| -									|
+| shape		| 徽标形状，circle-四角均为圆角，horn-左下角为直角														| String				| circle	| horn								|
 | numberType| 置数字的显示方式，详细见上分文档																		| String				| overflow	| ellipsis / limit					|
 | offset	| 设置badge的位置偏移，格式为 [x, y]，也即设置的为`top`和`right`的值，`absolute`为`true`时有效				| Array					| -			| -									|
 | inverted	| 是否反转背景和字体颜色																				| Boolean				| false		| true								|

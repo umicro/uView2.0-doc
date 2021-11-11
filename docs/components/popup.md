@@ -125,7 +125,7 @@
 			:overlay="popupData.overlay"
 			:borderRadius="popupData.borderRadius"
 			:closeable="popupData.closeable"
-			:closeOnClickOverly="popupData.closeOnClickOverly"
+			:closeOnClickOverlay="popupData.closeOnClickOverlay"
 			@close="close"
 			@open="open"
 		>
@@ -156,14 +156,14 @@
 					mode: 'bottom',
 					borderRadius: '',
 					closeable: true,
-					closeOnClickOverly: true
+					closeOnClickOverlay: true
 				},
 				list: [{
 						popupData: {
 							overlay: true,
 							mode: 'top',
 							round: false,
-							closeOnClickOverly: true
+							closeOnClickOverlay: true
 						},
 						title: '顶部弹出',
 						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/modeTop.png'
@@ -173,7 +173,7 @@
 							overlay: true,
 							mode: 'right',
 							round: false,
-							closeOnClickOverly: true
+							closeOnClickOverlay: true
 						},
 						title: '右侧弹出',
 						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/modeRight.png'
@@ -183,7 +183,7 @@
 							overlay: true,
 							mode: 'bottom',
 							round: false,
-							closeOnClickOverly: true
+							closeOnClickOverlay: true
 						},
 						title: '底部弹出',
 						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/modeBottom.png'
@@ -193,7 +193,7 @@
 							overlay: true,
 							mode: 'left',
 							round: false,
-							closeOnClickOverly: true
+							closeOnClickOverlay: true
 						},
 						title: '左侧弹出',
 						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/modeLeft.png'
@@ -203,7 +203,7 @@
 							overlay: true,
 							mode: 'center',
 							round: true,
-							closeOnClickOverly: true
+							closeOnClickOverlay: true
 						},
 						title: '居中弹出',
 						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/modeCenter.png'
@@ -213,7 +213,7 @@
 							overlay: true,
 							mode: 'bottom',
 							round: true,
-							closeOnClickOverly: true
+							closeOnClickOverlay: true
 						},
 						title: '显示圆角',
 						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/showRadis.png'
@@ -224,7 +224,7 @@
 							mode: 'bottom',
 							closeable: false,
 							round: false,
-							closeOnClickOverly: false
+							closeOnClickOverlay: false
 						},
 						title: '禁止点击遮罩关闭',
 						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/noClose.png'
@@ -234,7 +234,7 @@
 							overlay: true,
 							mode: 'bottom',
 							closeable: true,
-							closeOnClickOverly: true
+							closeOnClickOverlay: true
 						},
 						title: '显示关闭按钮',
 						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/showCloseBtn.png'
@@ -292,7 +292,7 @@
 | closeable				| 是否显示关闭图标																				| Boolean				| false		| true									|
 | overlayStyle			| 遮罩自定义样式，一般用于修改遮罩颜色，如：{background: 'rgba(3, 100, 219, 0.5)'}				| Object &#124; String				| -			| -										|
 | overlayOpacity		| 遮罩透明度，`0-1`之间，勿与`overlayStyle`共用			| Number &#124; String				| 0.5			| -										|
-| closeOnClickOverly	| 点击遮罩是否关闭弹窗																			| Boolean				| true		| false									|
+| closeOnClickOverlay	| 点击遮罩是否关闭弹窗																			| Boolean				| true		| false									|
 | zIndex				| 弹出层的`z-index`值																			| Number &#124; String	| 10075		| -										|
 | safeAreaInsetBottom	| 是否为留出[底部安全距离](/components/safeAreaInset.html)											| Boolean				| true		| false									|
 | safeAreaInsetTop		| 是否留出[顶部安全距离](/components/safeAreaInset.html)（状态栏高度）								| Boolean				| false		| true									|

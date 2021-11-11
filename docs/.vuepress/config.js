@@ -99,7 +99,7 @@ module.exports = {
 						['/components/quickstart', '快速上手'],
 						['/components/common', '内置样式'],
 						['/components/feature', '注意事项'],
-						['/components/nvue', 'Nvue排错指南'],
+						['/components/diff1.x', '对比1.X'],
 						['/components/changelog', '更新日志'],
 						['/components/changeGuide', '升级指南'],
 					]

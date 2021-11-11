@@ -86,7 +86,7 @@
 选择日期后，需要点击底部的`确定`按钮才能触发回调事件，回调参数为一个数组，有如下属性：
 
 ```js
- ["2021-07-27", "2021-07-29", "2021-07-30"]
+ ["2021-07-27", "2021-07-29", "2021-07-30"]
 ```
 
 示例代码：
@@ -184,6 +184,10 @@
 
 组件可以通过`formatter`以函数的方式定义日期文案
 
+:::warning 注意：
+微信小程序不支持通过`props`传递函数参数，所以组件内部暴露了一个`setFormatter`方法用于设置格式化方法，注意在页面的`onReady`生命周期获取`ref`再操作。
+:::
+
 ```html
 <template>
 	<u-calendar 
@@ -193,8 +197,10 @@
         :formatter="formatter"
         :show="show" 
         :mode="mode" 
-        @confirm="confirm">
-        </u-calendar>
+        @confirm="confirm"
+		ref="calendar"
+	>
+    </u-calendar>
 </template>
 
 <script>
@@ -204,6 +210,10 @@
 				show: true,
 				mode: 'range'
 			}
+		},
+		onReady() {
+			// 如果需要兼容微信小程序的话，需要用此写法
+			this.$refs.calendar.setFormatter(this.formatter)
 		},
 		methods: {
 			confirm(e) {
@@ -552,19 +562,24 @@
 | defaultDate			| 默认选中的日期，mode为multiple或range是必须为数组格式	| Array &#124; String &#124; Date	| null		| -												|
 | maxCount				| mode=multiple时，最多可选多少个日期					| Number &#124; String				| Number.MAX_SAFE_INTEGER	| -								|
 | rowHeight				| 日期行高											| Number &#124;String				| 56		| -												|
-| formatter				| 日期格式化函数										| Function							| null		| -												|
+| formatter			    | 日期格式化函数(如需兼容微信小程序，则只能通过`setFormatter`方法)					| Function				| null				| -														|		
 | showLunar				| 是否显示农历										| Boolean							| false		| true											|
 | showMark				| 是否显示月份背景色									| Boolean							| true		| false											|
 | confirmText			| 确定按钮的文字										| String							| 确定		| -												|
 | confirmDisabledText	| 确认按钮处于禁用状态时的文字							| String							| 确定		| -												|
 | show					| 是否显示日历弹窗									| Boolean							| false		| true											|
-| closeOnClickOverly	| 是否允许点击遮罩关闭日历								| Boolean							| false		| true											|
+| closeOnClickOverlay	| 是否允许点击遮罩关闭日历								| Boolean							| false		| true											|
 | readonly	            | 是否为只读状态，只读状态下禁止选择日期								| Boolean							| false		| true											|
 | maxRange	            | 日期区间最多可选天数，默认无限制，mode = range时有效				    | Number &#124; String				| 无限制		| -											|
 | rangePrompt	        | 范围选择超过最多可选天数时的提示文案，mode = range时有效				| String &#124; null				| 	选择天数不能超过 xx 天	| -											|
 | showRangePrompt	    | 范围选择超过最多可选天数时，是否展示提示文案，mode = range时有效								| Boolean							| true		| false											|
 | allowSameDay	            | 是否允许日期范围的起止时间为同一天，mode = range时有效								| Boolean							| false		| true											|
 
+
+### Methods
+| 方法名								| 说明					| 
+| :-								| :-					|
+| setFormatter	| 为兼容微信小程序而暴露的内部方法，见上方说明	 |
 
 
 ### Event

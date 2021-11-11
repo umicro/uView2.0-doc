@@ -1,10 +1,15 @@
-## Tooltip 操作菜单 <to-api/>
+## Tooltip 长按提示 <to-api/>
 
 <demo-model url="/pages/componentsC/tooltip/tooltip"></demo-model>
 
 Tooltip组件主要用于长按操作，类似微信的长按气泡
 
-### 基本使用
+### 基本使用.
+
+:::warning 说明
+由于安卓`nvue`下，`overflow`属性不支持`visible`值，故此组件暂不支持安卓`nvue`环境。
+:::
+
 ```html
 <template>
     <u-tooltip text="复制" overlay></u-tooltip>

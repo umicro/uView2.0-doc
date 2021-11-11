@@ -402,6 +402,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 | titleStyle	| 标题的样式														| Object				| -				| -						|
 | size			| 单位元的大小，可选值为large										| String				| -				| -						|
 | stop			| 点击cell是否阻止事件传播										| Boolean				| true 			| false					|
+| name			| 标识符，用于在`click`事件中进行返回							    | String &#124; Number  | - 			| -					|
 
 
 ### CellItem Slot
@@ -418,7 +419,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 
 | 事件名	| 说明				| 回调参数	|
 | :-	| :-				| :-		|
-| click	| 点击cell列表时触发	|			|
+| click	| 点击cell列表时触发	| name: `props`的`name`参数标识符  |
 
 
 
