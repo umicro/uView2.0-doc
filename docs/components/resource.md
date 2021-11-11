@@ -13,7 +13,7 @@
                 <img src="https://cdn.uviewui.com/uview/docs/b4b910e7f5919defa0b936c4fe03f4d.png" alt="">
                 <h3>Sketch Template</h3>
                 <p>通过在Sketch中导入uView组件库，可以在交互设计阶段方便地调用常用的组件</p>
-                <a href="https://cdn.uviewui.com/uview/resources/sketch.sketch">下载</a>
+                <a href="https://cdn.uviewui.com/uview/resources/uView2.0.sketch">下载</a>
             </div>
         </li>
         <li >

@@ -13,8 +13,7 @@
 	export default {
 		data() {
 			return {
-				iconList: [
-					{
+				iconList: [{
 						name: 'level'
 					},
 					{
@@ -105,10 +104,10 @@
 						name: 'share-fill'
 					},
 					{
-						name: 'volume-up'
+						name: 'volume'
 					},
 					{
-						name: 'volume-up-fill'
+						name: 'volume-fill'
 					},
 					{
 						name: 'volume-off'
@@ -363,12 +362,6 @@
 						name: 'setting-fill'
 					},
 					{
-						name: 'volume'
-					},
-					{
-						name: 'volume-fill'
-					},
-					{
 						name: 'more-dot-fill'
 					},
 					{
@@ -597,7 +590,7 @@
 						name: 'baidu-circle-fill'
 					},
 					{
-						name: 'zhuanfa'
+						name: 'share-square'
 					},
 				]
 			}
@@ -606,7 +599,7 @@
 </script>
 
 <style scoped>
-	@import url("//at.alicdn.com/t/font_1529455_adug8z8qzbi.css");
+	@import url("//at.alicdn.com/t/font_2225171_fpznzepxph9.css");
 
 	.icon-box {
 		display: flex;
