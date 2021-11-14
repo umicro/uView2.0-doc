@@ -26,7 +26,7 @@ uView内置的按钮组件`u-button`内部已做节流处理(1.5.8版本)，无�
 
 - `func` <Function\> 触发回调执行的函数
 - `wait` <Number\> 时间间隔，单位ms
-- `immediate` <Number\> 在开始还是结束处触发，比如设置`wait`为1000ms，如果在一秒内进行了5次操作，只触发一次，如果`immediate`为`true`，那么就会在第一次操作
+- `immediate` <Boolean\> 在开始还是结束处触发，比如设置`wait`为1000ms，如果在一秒内进行了5次操作，只触发一次，如果`immediate`为`true`，那么就会在第一次操作
 触发回调，如果为`false`，就会在第5次操作触发回调。
 
 
