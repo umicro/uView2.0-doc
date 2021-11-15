@@ -28,10 +28,10 @@
 // 如果您的根目录没有package.json文件的话，请先执行如下命令：
 // npm init -y
 
-npm install uview-v2
+npm install uview-ui
 
 // 更新
-// npm update uview-v2
+// npm update uview-ui
 ```
 
 **注意：**  此安装方式必须要按照[npm方式安装的配置](/components/npmSetting.html)中的说明配置了才可用，且项目名称不能有**中文**字符。

@@ -10,6 +10,12 @@
 **注意：** 当您仅是需要一个输入框的话，可以考虑使用[u-field](/components/field.html)组件，而如果是一个表单组，比如有多个输入框一起，且需要验证功能的时候，
 应该在`u-form`中嵌套`u-form-item`，再嵌套`u-input`去实现。
 
+
+::: danger 注意：
+由于在`nvue`下，`u-input`名称被uni-app官方占用，在`nvue`页面中请使用`u--input`名称，在`vue`页面中使用`u--input`或者`u-input`均可。
+:::
+
+
 ### 平台差异说明
 
 |App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
