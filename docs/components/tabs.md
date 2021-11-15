@@ -350,7 +350,7 @@
 
 <script>
     export default {
-        mixins: [uni.$u.mixin],
+        // mixins: [uni.$u.mixin],
         data() {
             return {
                 list1: [{
