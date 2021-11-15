@@ -47,7 +47,7 @@ h3[id=vue特性在各平台支持度] + ol + table thead tr th:nth-child(2){
 
 <!-- ### 二次修改封装uView组件
 
-uView组件一直追求完善而精致，如果您觉得某个组件可能和您的需求不一致，或者您有更好的实现方案和或思路，您可以在群里反馈给我们，也可以在[github](https://github.com/YanxinNet/uView)上
+uView组件一直追求完善而精致，如果您觉得某个组件可能和您的需求不一致，或者您有更好的实现方案和或思路，您可以在群里反馈给我们，也可以在[github](https://github.com/umicro/uView2.0)上
 给我们提PR，我们会第一时间跟进和处理。 
 如果您仍然有需要修改uView组件源码的需求，通常情况下，可以有如下两个办法：
 
