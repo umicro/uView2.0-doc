@@ -27,12 +27,12 @@ uView免费开源，无需授权，欢迎商用。uView的发展也得到各个�
 ### Github贡献名单
 
 <br>
-<githubContribution-list></githubContribution-list>
+<githubContribution-list repo="uView2.0"></githubContribution-list>
 
 ### Gitee贡献名单
 
 <br>
-<giteeContribution-list></giteeContribution-list>
+<giteeContribution-list repo="uView2.0"></giteeContribution-list>
 
 ### 文档
 
