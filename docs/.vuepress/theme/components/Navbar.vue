@@ -1,39 +1,44 @@
 <template>
-  <header class="navbar">
-    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
-
-    <router-link
-      :to="$localePath"
-      class="home-link"
-    >
-      <img
-        class="logo"
-        v-if="$site.themeConfig.logo"
-        :src="$withBase($site.themeConfig.logo)"
-        :alt="$siteTitle"
-      >
-      <span
-        ref="siteName"
-        class="site-name"
-        v-if="$siteTitle"
-        :class="{ 'can-hide': $site.themeConfig.logo }"
-      >uView</span>
-    </router-link>
-
-    <div
-      class="links"
-      :style="linksWrapMaxWidth ? {
-        'max-width': linksWrapMaxWidth + 'px'
-      } : {}"
-    >
-      <AlgoliaSearchBox
-        v-if="isAlgoliaSearch"
-        :options="algolia"
-      />
-      <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
-      <NavLinks class="can-hide"/>
-    </div>
-  </header>
+  <div class="custom-navbar">
+	  <div class="jump-link">您正在浏览的为uView2.x的文档，如果想查看1.x的文档，请点此进行跳转：
+		<a class="link" href="https://v1.uviewui.com">uView1.x</a>
+	  </div>
+	  <header class="navbar">
+	    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+	  
+	    <router-link
+	      :to="$localePath"
+	      class="home-link"
+	    >
+	      <img
+	        class="logo"
+	        v-if="$site.themeConfig.logo"
+	        :src="$withBase($site.themeConfig.logo)"
+	        :alt="$siteTitle"
+	      >
+	      <span
+	        ref="siteName"
+	        class="site-name"
+	        v-if="$siteTitle"
+	        :class="{ 'can-hide': $site.themeConfig.logo }"
+	      >uView</span>
+	    </router-link>
+	  
+	    <div
+	      class="links"
+	      :style="linksWrapMaxWidth ? {
+	        'max-width': linksWrapMaxWidth + 'px'
+	      } : {}"
+	    >
+	      <AlgoliaSearchBox
+	        v-if="isAlgoliaSearch"
+	        :options="algolia"
+	      />
+	      <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
+	      <NavLinks class="can-hide"/>
+	    </div>
+	  </header>
+  </div>
 </template>
 
 <script>

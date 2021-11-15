@@ -45,18 +45,7 @@
 		},
 		props: ['items'],
 		created() {
-			// 概率计算
-			//this.jumpInfo = this.random();
-			// 每隔一定时间，执行一次随机概率
-			// setInterval(() => {
-			// 	this.jumpInfo = this.random();
-            // }, 3000);
-            // 与广州亿速云的广告合作到期时间为2020-11-22，时间戳为：1608911994000(ms)
-            // if (+new Date() > 1606058735000) {
-            //     this.url = '/customer/contact1.png'
-            // } else {
-            //     this.url = 'https://cdn.uviewui.com/uview/friends-link/apipost_350x150px.jpeg';
-            // }
+			
 		},
 		methods: {
 			// 根据概率，获得结果

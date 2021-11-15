@@ -4,6 +4,12 @@
 
 文本域此组件满足了可能出现的表单信息补充，编辑等实际逻辑的功能，内置了字数校验等 
 
+
+::: danger 注意：
+由于在`nvue`下，`u-textarea`名称被uni-app官方占用，在`nvue`页面中请使用`u--textarea`名称，在`vue`页面中使用`u--textarea`或者`u-textarea`均可。
+:::
+
+
 ### 基本使用
 
 ```html

@@ -5,6 +5,9 @@
 
 <demo-model url="/pages/componentsC/form/form"></demo-model>
 
+::: danger 注意：
+由于在`nvue`下，`u-form`名称被uni-app官方占用，在`nvue`页面中请使用`u--form`名称，在`vue`页面中使用`u--form`或者`u-form`均可。
+:::
 
 ### 平台差异说明
 

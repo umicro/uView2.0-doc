@@ -11,7 +11,7 @@
 
 ```js
 // main.js
-import uView from "uview-v2";
+import uView from "uview-ui";
 Vue.use(uView);
 ```
 

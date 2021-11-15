@@ -5,6 +5,8 @@
 @require './wrapper'
 @require './toc'
 
+$navbarHeight = 6.1rem
+
 html, body
   padding 0
   margin 0
@@ -19,14 +21,35 @@ body
 
 .page
   padding-left $sidebarWidth
-
-.navbar
+  
+.custom-navbar 
   position fixed
   z-index 20
   top 0
   left 0
   right 0
-  height $navbarHeight
+  height $navbarHeight + 2.5rem
+  
+.jump-link
+	background-color #208EFF
+	color #FFFFFF
+	font-size 15px
+	text-align center
+	height 2.3rem
+	line-height 2.3rem
+	
+.jump-link .link 
+  color #FFFFFF !important
+  text-decoration underline
+	
+
+.navbar
+  position relative
+  // z-index 20
+  // top 0
+  // left 0
+  // right 0
+  height 3.6rem
   background-color #fff
   box-sizing border-box
   border-bottom 1px solid $borderColor

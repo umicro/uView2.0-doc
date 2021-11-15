@@ -25,7 +25,7 @@ npm i sass-loader -D
 // npm init -y
 
 // 安装
-npm install uview-v2
+npm install uview-ui
 ```
 
 ### 配置步骤
@@ -36,7 +36,7 @@ npm install uview-v2
 
 ```js
 // main.js
-import uView from "uview-v2";
+import uView from "uview-ui";
 Vue.use(uView);
 ```
 
@@ -47,7 +47,7 @@ Vue.use(uView);
 
 ```css
 /* uni.scss */
-@import 'uview-v2/theme.scss';
+@import 'uview-ui/theme.scss';
 ```
 
 
@@ -60,7 +60,7 @@ Vue.use(uView);
 ```css
 <style lang="scss">
 	/* 注意要写在第一行，同时给style标签加入lang="scss"属性 */
-	@import "uview-v2/index.scss";
+	@import "uview-ui/index.scss";
 </style>
 ```
 
@@ -78,7 +78,7 @@ Vue.use(uView);
 // pages.json
 {
 	"easycom": {
-		"^u-(.*)": "uview-v2/components/u-$1/u-$1.vue"
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
 	},
 	
 	// 此为本身已有的内容
@@ -96,6 +96,6 @@ Vue.use(uView);
 ```js
 // vue.config.js，如没有此文件则手动创建
 module.exports = {
-    transpileDependencies: ['uview-v2']
+    transpileDependencies: ['uview-ui']
 }
 ```
