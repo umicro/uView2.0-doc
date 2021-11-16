@@ -102,8 +102,6 @@ export default {
 			setTimeout(() => {
 				// 3秒后自动关闭
 				this.show = false;
-				// 如果不想关闭，而单是清除loading状态，需要通过ref手动调用方法
-				// this.$refs.uModal.clearLoading();
 			}, 3000)
 		}
     }
@@ -371,16 +369,6 @@ export default {
 | confirm	| 点击确认按钮时触发								| -			|
 | cancel	| 点击取消按钮时触发								| -			|
 | close		| 点击遮罩关闭出发，closeOnClickOverlay为true有效	| -			|
-
-
-### Method
-
-此方法需要通过ref调用，详见上方的"异步关闭"
-
-|事件名			|说明																|
-|:-				|:-																	|
-| clearLoading	| 异步控制时，通过调用此方法，可以不关闭Modal，而单是清除loading状态		|
-
 
 ### Slots
 
