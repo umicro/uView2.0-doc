@@ -73,7 +73,7 @@ module.exports = {
 				text: '2.X',
 				items: [{
 						text: '1.X',
-						link: 'https://www.uviewui.com'
+						link: 'https://v1.uviewui.com'
 					}
 				]
 			},
