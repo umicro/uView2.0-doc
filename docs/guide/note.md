@@ -20,10 +20,9 @@ uView有很多的自带的js工具函数，挂载在`$u`对象中，而`$u`又�
 #### 技术点要求
 
 1. uView依赖`SCSS`预处理器，所以您需要给HBuilder X安装 “sass/scss编译” 插件，详见[快速上手](/components/quickstart.html)
-2. uView目前没有兼容nvue，目前正在着手兼容，发布后nvue和vue将会是同一个版本，完全兼容
-3. uView基于HX的最新版本开发，旧版本可能会不兼容，如遇问题，请升级HX尝试是否可解决
-4. uView要求项目开启uniapp的V3版本，V3有很大的优势，详见[V3版本介绍](https://ask.dcloud.net.cn/article/36599)
-5. HX2.5.5稳定版正式引入`easycom`，建议开发者升级HX到2.5.1及以上的稳定版，详见[关于easycom](/components/quickstart.html#_3-配置easycom组件模式)
+2. uView基于HX的最新版本开发，旧版本可能会不兼容，如遇问题，请升级HX尝试是否可解决
+3. uView要求项目开启uniapp的V3版本，V3有很大的优势，详见[V3版本介绍](https://ask.dcloud.net.cn/article/36599)
+4. HX2.5.5稳定版正式引入`easycom`，建议开发者升级HX到2.5.1及以上的稳定版，详见[关于easycom](/components/quickstart.html#_3-配置easycom组件模式)
 
 
 #### 关于Hbuilder X
