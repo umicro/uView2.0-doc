@@ -40,11 +40,11 @@
 
 ### 头像形状
 
-- `mode`参数指定头像的形状，取值`circle`为圆形，取值`square`为圆角方形
+- `shape`参数指定头像的形状，取值`circle`为圆形，取值`square`为圆角方形
 
 ```html
 <template>
-	<u-avatar :src="src" mode="square"></u-avatar>
+	<u-avatar :src="src" shape="square"></u-avatar>
 </template>
 
 <script>
