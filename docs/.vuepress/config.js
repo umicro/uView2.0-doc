@@ -77,10 +77,10 @@ module.exports = {
 					}
 				]
 			},
-			// {
-			// 	text: 'GitHub',
-			// 	link: 'https://github.com/umicro/uView'
-			// },
+			{
+				text: 'GitHub',
+				link: 'https://github.com/umicro/uView2.0'
+			},
 			{
 				text: 'Gitee',
 				link: 'https://gitee.com/umicro/uView2.0'
