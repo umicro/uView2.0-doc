@@ -21,10 +21,10 @@ uni-app`button`组件比较特殊，因为它有一些其他小程序平台的�
 |√	|√	|√			|√				|√			|√			|√			|
 
 ### 基本使用
-文字内容通过`slot`传入
+文字内容通过`text`传入
 
 ```html
-<u-button>月落</u-button>
+<u-button text="月落"></u-button>
 ```
 
 ### 设置按钮的多种形态
