@@ -1,6 +1,6 @@
 <template>
   <div class="custom-navbar">
-	  <div class="jump-link">您正在浏览的为uView2.x的文档，如果想查看1.x的文档，请点此进行跳转：
+	  <div class="jump-link">您正在浏览uView2.x的文档，1.x不支持升级到2.x，请点此跳转1.x文档：
 		<a class="link" href="https://v1.uviewui.com">uView1.x</a>
 	  </div>
 	  <header class="navbar">
