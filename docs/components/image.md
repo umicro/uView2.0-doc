@@ -8,7 +8,7 @@
 
 
 ::: danger 注意：
-由于在`nvue`下，`u-iamge`名称被uni-app官方占用，在`nvue`页面中请使用`u--iamge`名称，在`vue`页面中使用`u--iamge`或者`u-iamge`均可。
+由于在`nvue`下，`u-image`名称被uni-app官方占用，在`nvue`页面中请使用`u--image`名称，在`vue`页面中使用`u--image`或者`u-image`均可。
 :::
 
 

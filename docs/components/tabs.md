@@ -26,317 +26,449 @@
 
 
 ```html
-<u-tabs :list="list" :is-scroll="false" :current="current" @change="change"></u-tabs>
+<template>
+    <u-tabs :list="list1" @click="click"></u-tabs>
+</template>
 
 <script>
 	export default {
 		data() {
 			return {
-				list: [{
-					name: '待收货'
-				}, {
-					name: '待付款'
-				}, {
-					name: '待评价',
-					count: 5
-				}],
-				current: 0
+                list1: [{
+                    name: '关注',
+                }, {
+                    name: '推荐',
+                }, {
+                    name: '电影'
+                }, {
+                    name: '科技'
+                }, {
+                    name: '音乐'
+                }, {
+                    name: '美食'
+                }, {
+                    name: '文化'
+                }, {
+                    name: '财经'
+                }, {
+                    name: '手工'
+                }]
 			}
 		},
 		methods: {
-			change(index) {
-				this.current = index;
-			}
+            click(item) {
+                console.log('item', item);
+            }
 		}
 	}
 </script>
 ```
 
 
-### 控制组件读取的数组元素属性名
+### 粘性布局
 
-某些情况下，数据可能是从后端获取的，`list`所需的数组中不一定会有`name`属性，比如可能为`cate_name`，如果这种情况还需一定要提供`name`属性
-会导致用户需要循环一遍，把`cate_name`改成`name`，显然不人性的，所以uView给tabsSwiper组件提供了一个`name`参数，您可以设置其值为`cate_name`，组件内部会读取数组中的`cate_name`属性，而不是默认的`name`属性。
-
-同理，在1.7.4版本中新增的`count`属性，您可以设置其值为`cate_count`，组件内部会读取数组中的`cate_count`属性，而不是默认的`count`属性。
+通过加上`sticky`来使tabs滑动浮动在最顶部。
 
 ```html
-<u-tabs name="cate_name" count="cate_count" :list="list" :is-scroll="false" :current="current" @change="change"></u-tabs>
+<template>
+    <u-tabs :list="list1" sticky></u-tabs>
+</template>
 
 <script>
-	export default {
-		data() {
-			return {
-				list: [{
-					cate_name: '待收货'
-				}, {
-					cate_name: '待付款'
-				}, {
-					cate_name: '待评价',
-                    cate_count: 5
-				}],
-				current: 0
-			}
-		},
-		methods: {
-			change(index) {
-				this.current = index;
-			}
-		}
-	}
+    export default {
+        data() {
+            return {
+                list1: [{
+                    name: '关注',
+                }, {
+                    name: '推荐',
+                }, {
+                    name: '电影'
+                }, {
+                    name: '科技'
+                }, {
+                    name: '音乐'
+                }, {
+                    name: '美食'
+                }, {
+                    name: '文化'
+                }, {
+                    name: '财经'
+                }, {
+                    name: '手工'
+                }]
+            }
+        }
+    }
 </script>
 ```
 
 
-### 手动配置激活的标签
+### 显示徽标
 
-可以通过`current`控制tabs当前的第几个tab处于激活状态
+可以通过在列表对象中加入`badge`来设置徽标。
 
 ```html
-<u-tabs ref="tabs" :list="list" current="2"></u-tabs>
+<template>
+    <u-tabs :list="list2"></u-tabs>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                list2: [{
+                    name: '关注'
+                }, {
+                    name: '推荐',
+                    badge: {
+                        isDot: true
+                    }
+                }, {
+                    name: '电影',
+                    badge: {
+                        value: 5,
+                    }
+                }, {
+                    name: '科技'
+                }, {
+                    name: '音乐'
+                }, {
+                    name: '美食'
+                }, {
+                    name: '文化'
+                }, {
+                    name: '财经'
+                }, {
+                    name: '手工'
+                }]
+            }
+        }
+    }
+</script>
 ```
 
 
-### 控制tabs组件的宽度
+### 自定义样式
 
-有时候我们并不想让tabs组件占满整个屏幕的宽度，如果有此需求，可以给tabs外面嵌套一个view元素，控制这个view的宽度或者内外边距，view里面的tabs组件
-宽度也会相应的发生变化。
+通过使用`activeStyle`、`inactiveStyle`、`itemStyle`来设置tabs的样式。
 
 ```html
-<view style="width: 400rpx;">
-	<u-tabs ref="tabs" :list="list" current="2"></u-tabs>
-</view>
+<template>
+    <u-tabs
+            :list="list4"
+            lineWidth="30"
+            lineColor="#f56c6c"
+            :activeStyle="{
+						color: '#303133',
+						fontWeight: 'bold',
+						transform: 'scale(1.05)'
+					}"
+            :inactiveStyle="{
+						color: '#606266',
+						transform: 'scale(1)'
+					}"
+            itemStyle="padding-left: 15px; padding-right: 15px; height: 34px;"
+    >
+    </u-tabs>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                list4: [{
+                    name: '关注'
+                }, {
+                    name: '推荐',
+                    badge: {
+                        isDot: true
+                    }
+                }, {
+                    name: '电影',
+                }, {
+                    name: '科技'
+                }, {
+                    name: '音乐'
+                }, {
+                    name: '美食'
+                }, {
+                    name: '文化'
+                }, {
+                    name: '财经'
+                }, {
+                    name: '手工'
+                }],
+            }
+        }
+    }
+</script>
 ```
 
 
-### 控制底部滑块的样式
+### 右侧自定义插槽
 
-1. 可以通过`active-color`控制颜色(同时为当前活动tab文字颜色和滑块的颜色)。
-2. `bar-width`控制滑块的长度(rpx)。
-3. `bar-height`控制滑块高度。
 
 ```html
-<u-tabs ref="tabs" :list="list" bar-height="6" bar-width="40" active-color="#2979ff"></u-tabs>
+<template>
+    <u-tabs :list="list1">
+        <view
+                slot="right"
+                style="padding-left: 4px;"
+                @tap="$u.toast('插槽被点击')"
+        >
+            <u-icon
+                    name="list"
+                    size="21"
+                    bold
+            ></u-icon>
+        </view>
+    </u-tabs>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                list1: [{
+                    name: '关注',
+                }, {
+                    name: '推荐',
+                }, {
+                    name: '电影'
+                }, {
+                    name: '科技'
+                }, {
+                    name: '音乐'
+                }, {
+                    name: '美食'
+                }, {
+                    name: '文化'
+                }, {
+                    name: '财经'
+                }, {
+                    name: '手工'
+                }]
+            }
+        }
+    }
+</script>
 ```
 
-### 控制tabs组件的活动tab样式
-
-1. 通过`active-color`和`inactive-color`控制tabs的激活和非激活颜色。
-2. `font-size`为tabs文字大小。
-3. `current`为初始化tabs的激活tab索引，默认为0。`gutter`为单个tab标签的左右内边距之和，即左右各占`gutter`的一半。
-
-```html
-<u-tabs ref="tabs" :list="list" active-color="#2979ff" inactive-color="#606266" font-size="30" :current="current"></u-tabs>
-```
 
 ### 演示项目完整代码
 :::demo 演示项目完整代码
 ```html
 <template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础演示</text>
-			<view class="u-demo-block__content">
-				<u-tabs :list="list1">
-				</u-tabs>
-			</view>
-		</view>
-		<view
-			class="u-demo-block"
-			style="margin-bottom: 0;"
-		>
-			<text class="u-demo-block__title">粘性布局</text>
-		</view>
-		<u-sticky bgColor="#fff">
-			<u-tabs
-				:list="list1"
-				sticky
-			>
-			</u-tabs>
-		</u-sticky>
-		<u-gap
-			height="23"
-			bgColor="#fff"
-		></u-gap>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">显示徽标</text>
-			<view class="u-demo-block__content">
-				<u-tabs :list="list2">
-				</u-tabs>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">禁止滚动</text>
-			<view class="u-demo-block__content">
-				<u-tabs :list="list6" :scrollable="false">
-				</u-tabs>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">禁用菜单</text>
-			<view class="u-demo-block__content">
-				<u-tabs :list="list3">
-				</u-tabs>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义样式</text>
-			<view class="u-demo-block__content">
-				<u-tabs
-					:list="list4"
-					lineWidth="30"
-					lineColor="#f56c6c"
-					:activeStyle="{
+    <view class="u-page">
+        <view class="u-demo-block">
+            <text class="u-demo-block__title">基础演示</text>
+            <view class="u-demo-block__content">
+                <u-tabs :list="list1" @click="click">
+                </u-tabs>
+            </view>
+        </view>
+        <view
+                class="u-demo-block"
+                style="margin-bottom: 0;"
+        >
+            <text class="u-demo-block__title">粘性布局</text>
+        </view>
+        <u-sticky bgColor="#fff">
+            <u-tabs
+                    :list="list1"
+                    sticky
+            >
+            </u-tabs>
+        </u-sticky>
+        <u-gap
+                height="23"
+                bgColor="#fff"
+        ></u-gap>
+        <view class="u-demo-block">
+            <text class="u-demo-block__title">显示徽标</text>
+            <view class="u-demo-block__content">
+                <u-tabs :list="list2">
+                </u-tabs>
+            </view>
+        </view>
+        <view class="u-demo-block">
+            <text class="u-demo-block__title">禁止滚动</text>
+            <view class="u-demo-block__content">
+                <u-tabs :list="list6" :scrollable="false">
+                </u-tabs>
+            </view>
+        </view>
+        <view class="u-demo-block">
+            <text class="u-demo-block__title">禁用菜单</text>
+            <view class="u-demo-block__content">
+                <u-tabs :list="list3">
+                </u-tabs>
+            </view>
+        </view>
+        <view class="u-demo-block">
+            <text class="u-demo-block__title">自定义样式</text>
+            <view class="u-demo-block__content">
+                <u-tabs
+                        :list="list4"
+                        lineWidth="30"
+                        lineColor="#f56c6c"
+                        :activeStyle="{
 						color: '#303133',
 						fontWeight: 'bold',
 						transform: 'scale(1.05)'
 					}"
-					:inactiveStyle="{
+                        :inactiveStyle="{
 						color: '#606266',
 						transform: 'scale(1)'
 					}"
-					itemStyle="padding-left: 15px; padding-right: 15px; height: 34px;"
-				>
-				</u-tabs>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">右侧自定义插槽</text>
-			<view class="u-demo-block__content">
-				<u-tabs :list="list1">
-					<view
-						slot="right"
-						style="padding-left: 4px;"
-						@tap="$u.toast('插槽被点击')"
-					>
-						<u-icon
-							name="list"
-							size="21"
-							bold
-						></u-icon>
-					</view>
-				</u-tabs>
-			</view>
-		</view>
-	</view>
+                        itemStyle="padding-left: 15px; padding-right: 15px; height: 34px;"
+                >
+                </u-tabs>
+            </view>
+        </view>
+        <view class="u-demo-block">
+            <text class="u-demo-block__title">右侧自定义插槽</text>
+            <view class="u-demo-block__content">
+                <u-tabs :list="list1">
+                    <view
+                            slot="right"
+                            style="padding-left: 4px;"
+                            @tap="$u.toast('插槽被点击')"
+                    >
+                        <u-icon
+                                name="list"
+                                size="21"
+                                bold
+                        ></u-icon>
+                    </view>
+                </u-tabs>
+            </view>
+        </view>
+    </view>
 </template>
 
 <script>
-	export default {
-        // 复制代码后解开注释
-		// mixins: [uni.$u.mixin],
-		data() {
-			return {
-				list1: [{
-					name: '关注',
-				}, {
-					name: '推荐',
-				}, {
-					name: '电影'
-				}, {
-					name: '科技'
-				}, {
-					name: '音乐'
-				}, {
-					name: '美食'
-				}, {
-					name: '文化'
-				}, {
-					name: '财经'
-				}, {
-					name: '手工'
-				}],
-				list2: [{
-					name: '关注'
-				}, {
-					name: '推荐',
-					badge: {
-						isDot: true
-					}
-				}, {
-					name: '电影',
-					badge: {
-						value: 5,
-					}
-				}, {
-					name: '科技'
-				}, {
-					name: '音乐'
-				}, {
-					name: '美食'
-				}, {
-					name: '文化'
-				}, {
-					name: '财经'
-				}, {
-					name: '手工'
-				}],
-				list3: [{
-					name: '关注'
-				}, {
-					name: '推荐',
-				}, {
-					name: '电影',
-					disabled: true
-				}, {
-					name: '科技'
-				}, {
-					name: '音乐'
-				}, {
-					name: '美食'
-				}, {
-					name: '文化'
-				}, {
-					name: '财经'
-				}, {
-					name: '手工'
-				}],
-				list4: [{
-					name: '关注'
-				}, {
-					name: '推荐',
-					badge: {
-						isDot: true
-					}
-				}, {
-					name: '电影',
-				}, {
-					name: '科技'
-				}, {
-					name: '音乐'
-				}, {
-					name: '美食'
-				}, {
-					name: '文化'
-				}, {
-					name: '财经'
-				}, {
-					name: '手工'
-				}],
-				list6: [
-					{
-						name: '关注'
-					}, {
-						name: '推荐',
-					}, {
-						name: '电影',
-					}, {
-						name: '科技'
-					}
-				]
-			}
-		},
-		onLoad() {
+    export default {
+        // mixins: [uni.$u.mixin],
+        data() {
+            return {
+                list1: [{
+                    name: '关注',
+                }, {
+                    name: '推荐',
+                }, {
+                    name: '电影'
+                }, {
+                    name: '科技'
+                }, {
+                    name: '音乐'
+                }, {
+                    name: '美食'
+                }, {
+                    name: '文化'
+                }, {
+                    name: '财经'
+                }, {
+                    name: '手工'
+                }],
+                list2: [{
+                    name: '关注'
+                }, {
+                    name: '推荐',
+                    badge: {
+                        isDot: true
+                    }
+                }, {
+                    name: '电影',
+                    badge: {
+                        value: 5,
+                    }
+                }, {
+                    name: '科技'
+                }, {
+                    name: '音乐'
+                }, {
+                    name: '美食'
+                }, {
+                    name: '文化'
+                }, {
+                    name: '财经'
+                }, {
+                    name: '手工'
+                }],
+                list3: [{
+                    name: '关注'
+                }, {
+                    name: '推荐',
+                }, {
+                    name: '电影',
+                    disabled: true
+                }, {
+                    name: '科技'
+                }, {
+                    name: '音乐'
+                }, {
+                    name: '美食'
+                }, {
+                    name: '文化'
+                }, {
+                    name: '财经'
+                }, {
+                    name: '手工'
+                }],
+                list4: [{
+                    name: '关注'
+                }, {
+                    name: '推荐',
+                    badge: {
+                        isDot: true
+                    }
+                }, {
+                    name: '电影',
+                }, {
+                    name: '科技'
+                }, {
+                    name: '音乐'
+                }, {
+                    name: '美食'
+                }, {
+                    name: '文化'
+                }, {
+                    name: '财经'
+                }, {
+                    name: '手工'
+                }],
+                list6: [
+                    {
+                        name: '关注'
+                    }, {
+                        name: '推荐',
+                    }, {
+                        name: '电影',
+                    }, {
+                        name: '科技'
+                    }
+                ]
+            }
+        },
+        onLoad() {
 
-		}
-	}
+        },
+        methods: {
+            click(item) {
+                console.log('item', item);
+            }
+        }
+    }
 </script>
 
 <style lang="scss">
-	.u-page {
-		padding-bottom: 500px;
-	}
+    .u-page {
+        padding-bottom: 500px;
+    }
 </style>
+
 
 ```
 :::
@@ -347,29 +479,18 @@
 
 | 参数								| 说明																		| 类型					| 默认值					|  可选值	|
 |:-									|:-																			|:-						|:-						|:-			|
-| is-scroll							| tabs是否可以左右拖动														| Boolean				| true					| false		|
+| duration							| 滑块移动一次所需的时间，单位**ms**											| String &#124; Number	| 300					| -			|
 | list								| 标签数组，元素为对象，如[{name: '推荐'}]										| Array					| -						| -			|
-| current							| 指定哪个tab为激活状态														| String &#124; Number	| 0，即`list`的第一项		| -			|
-| height							| 导航栏的高度，单位rpx														| String &#124; Number	| 80					| -			|
-| font-size							| tab文字大小，单位rpx														| String &#124; Number	| 30					| -			|
-| duration							| 滑块移动一次所需的时间，单位**秒**											| String &#124; Number	| 0.5					| -			|
-| active-color						| 滑块和激活tab文字的颜色														| String				| #2979ff				| -			|
-| inactive-color					| tabs文字颜色																| String				| #303133				| -			|
-| bar-width							| 滑块宽度，单位rpx															| String &#124; Number	| 40					| -			|
-| bar-height						| 滑块高度，单位rpx															| String &#124; Number	| 6						| -			|
-| gutter							| 单个tab标签的左右内边距之和，单位rpx											| String &#124; Number	| 40					| -			|
-| bg-color							| tabs导航栏的背景颜色														| string				| #ffffff				| -			|
-| name								| 组件内部读取的`list`参数中的属性名（tab名称），见上方说明						| string				| name					| -			|
-| bold								| 激活选项的字体是否加粗														| Boolean				| true					| false		|
-| show-bar							| 是否显示底部的滑块															| Boolean				| true					| false		|
-| bar-style							| 底部滑块的样式，对象形式														| Object				| {}					| -			|
-| active-item-style					| 当前活动Item的样式，对象形式													| Object				| {}					| -			|
-| item-width	| 标签的宽度，单位rpx															| String &#124; Number	| auto					| -			|
-| count 	| 组件内部读取的`list`参数中的属性名（badge徽标数），用法与`name`一致，见上方说明	| string				| count					| -			|
-| offset 	| 设置badge的位置偏移，格式为 [x, y]，也即设置的为`top`和`right`的值，单位rpx		| Array					| [5, 20]				| -			|
+| lineColor							| 滑块颜色                              									| String					| #3c9cff						| -			|
+| activeStyle						| 菜单选择中时的样式														| String &#124; Object		| { color: '#303133' }				| -			|
+| inactiveStyle						| 菜单非选中时的样式														| String &#124; Object		| { color: '#606266' }				| -			|
+| lineWidth							| 滑块长度      															| String &#124; Number	| 20					| -			|
+| lineHeight						| 滑块高度      															| String &#124; Number	| 3						| -			|
+| itemStyle					    	| 菜单item的样式      													| String &#124; Object	| { height: '44px' }					| -			|
+| scrollable						| 菜单是否可滚动						        							| Boolean				| true					| false		|
 
 ### Events
 
 |事件名	|说明			|回调参数							|版本	|
 |:-		|:-				|:-									|:-		|
-|click	|点击标签时触发	|index: 点击了第几个tab，索引从0开始	|-		|
+|click	|点击标签时触发	|{...item, index}	|-		|

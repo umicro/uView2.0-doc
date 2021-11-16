@@ -73,7 +73,7 @@ module.exports = {
 				text: '2.X',
 				items: [{
 						text: '1.X',
-						link: 'https://www.uviewui.com'
+						link: 'https://v1.uviewui.com'
 					}
 				]
 			},
@@ -156,9 +156,9 @@ module.exports = {
 							sidebarDepth: 0,
 							children: [
 								'/components/list',
-								'/components/circleProgress',
+								// '/components/circleProgress',
 								'/components/lineProgress',
-								'/components/table',
+								// '/components/table',
 								'/components/countDown',
 								'/components/countTo',
 							]
