@@ -156,9 +156,9 @@ module.exports = {
 							sidebarDepth: 0,
 							children: [
 								'/components/list',
-								'/components/circleProgress',
+								// '/components/circleProgress',
 								'/components/lineProgress',
-								'/components/table',
+								// '/components/table',
 								'/components/countDown',
 								'/components/countTo',
 							]
