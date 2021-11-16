@@ -220,7 +220,7 @@
 | fade					| 是否需要淡入效果											| Boolean				| true			| false		|
 | webp					| 只支持网络资源，只对微信小程序有效							| Boolean				| false			| true		|
 | duration				| 搭配`fade`参数的过渡时间，单位ms								| String &#124; Number	| 500			| -			|
-| bg-color				| 背景颜色，用于深色页面加载图片时，为了和背景色融合				| String				| #f3f4f6		| -			|
+| bgColor				| 背景颜色，用于深色页面加载图片时，为了和背景色融合				| String				| #f3f4f6		| -			|
 
 
 
