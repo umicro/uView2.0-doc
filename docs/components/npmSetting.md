@@ -12,8 +12,8 @@ uView依赖SCSS，您必须要安装此插件，否则无法正常运行。
 // 安装node-sass
 npm i node-sass -D
 
-// 安装sass-loader
-npm i sass-loader -D
+// 安装sass-loader，注意需要版本10，否则可能会导致vue与sass的兼容问题而报错
+npm i sass-loader@10 -D
 ```
 
 ### 准备工作
@@ -32,7 +32,7 @@ npm install uview-ui
 
 #### 1. 引入uView主JS库
 
-在项目根目录中的`main.js`中，引入并使用uView的JS库，注意这两行要放在`import Vue`之后。
+在项目`src`目录中的`main.js`中，引入并使用uView的JS库，注意这两行要放在`import Vue`之后。
 
 ```js
 // main.js
@@ -43,7 +43,7 @@ Vue.use(uView);
 
 #### 2. 在引入uView的全局SCSS主题文件
 
-在项目根目录的`uni.scss`中引入此文件。
+在项目`src`目录的`uni.scss`中引入此文件。
 
 ```css
 /* uni.scss */
@@ -67,7 +67,7 @@ Vue.use(uView);
 
 #### 4. 配置easycom组件模式
 
-此配置需要在项目根目录的`pages.json`中进行。
+此配置需要在项目`src`目录的`pages.json`中进行。
 
 :::tip 温馨提示
 1. uni-app为了调试性能的原因，修改`easycom`规则不会实时生效，配置完后，您需要重启HX或者重新编译项目才能正常使用uView的功能。
