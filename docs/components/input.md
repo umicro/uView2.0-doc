@@ -365,7 +365,20 @@
 | formatter			    | 输入过滤或格式化函数(如需兼容微信小程序，则只能通过`setFormatter`方法)					| Function				| null				| -														|		
 
 
-### Methods
+
+### Events
+
+|事件名	|说明					|回调参数			|版本	|
+|:-		|:-						|:-					|:-		|
+| blur| 输入框失去焦点时触发	| event: input默认参数，event.detail.value获取内容	| -		|
+| focus| 输入框聚焦时触发	|-	| -		|
+| confirm| 点击完成按钮时触发	| 	| -		|
+| keyboardheightchange| 键盘高度发生变化的时候触发此事件	| -	| 微信小程序2.7.0+、App 3.1.0+	|
+| input| 内容发生变化触发此事件	| value：内容值	| -	|
+| change| 内容发生变化触发此事件	|  value：内容值	| -	|
+| clear| 点击清空内容	|  -	| -	|
+
+### Others
 | 方法名								| 说明					| 
 | :-								| :-					|
 | setFormatter	| 为兼容微信小程序而暴露的内部方法，见上方说明	 |

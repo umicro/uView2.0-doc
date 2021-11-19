@@ -385,7 +385,7 @@
 | clickable | 是否开启点击反馈  | Boolean | true | false |
 | border | 是否显示内边框  | Boolean | true | false |
 | align | 标题的对齐方式  | String | left | - |
-| name | 唯一标识符，如不设置，默认用当前`collapse-item`的索引值 | String \&#124; Number | - | - |
+| name | 唯一标识符，如不设置，默认用当前`collapse-item`的索引值 | String &#124; Number | - | - |
 | icon | 标题左侧图片，可为绝对路径的图片或内置图标 | String | - | - |
 | duration | 面板展开收起的过渡时间，单位`ms` | Number | 300 | - |
 
