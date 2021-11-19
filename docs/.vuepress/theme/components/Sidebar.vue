@@ -1,6 +1,15 @@
 <template>
 	<div>
 		<aside class="sidebar">
+			<a target="_blank" class="jump-link" href="https://www.jnpfsoft.com/index.html?from=uview">
+				<img src="https://cdn.uviewui.com/uview/resources/456481858555415.png" />
+			</a>
+			<a target="_blank" class="jump-link" href="https://code.fun/">
+				<img src="https://cdn.uviewui.com/uview/resources/codeFun.jpg" />
+			</a>
+			<!-- <a target="_blank" class="jump-link" href="http://tool.zjhlone.com/sms.php">
+				<img src="https://tool.zjhlone.com/3.jpg" />
+			</a> -->
 			<NavLinks />
 			<slot name="top" />
 			<SidebarLinks :depth="0" :items="items" />
@@ -45,7 +54,18 @@
 		},
 		props: ['items'],
 		created() {
-			
+			// 概率计算
+			//this.jumpInfo = this.random();
+			// 每隔一定时间，执行一次随机概率
+			// setInterval(() => {
+			// 	this.jumpInfo = this.random();
+            // }, 3000);
+            // 与广州亿速云的广告合作到期时间为2020-11-22，时间戳为：1608911994000(ms)
+            // if (+new Date() > 1606058735000) {
+            //     this.url = '/customer/contact1.png'
+            // } else { 
+            //     this.url = 'https://cdn.uviewui.com/uview/friends-link/apipost_350x150px.jpeg';
+            // }
 		},
 		methods: {
 			// 根据概率，获得结果
