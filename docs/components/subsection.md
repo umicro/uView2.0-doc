@@ -25,17 +25,7 @@
 	export default {
 		data() {
 			return {
-				list: [
-					{
-						name: '待发货'
-					}, 
-					{
-						name: '待付款'
-					}, 
-					{
-						name: '待评价'
-					}
-				],
+                list: ['未付款', '待评价', '已付款'],
 				current: 1
 			}
 		}
@@ -50,25 +40,18 @@
 - 值为`subsection`时为分段器形式
 
 ```html
-<u-subsection :list="list" :current="1"></u-subsection>
+<u-subsection :list="list" mode="subsection" :current="1"></u-subsection>
 ```
 
-### 是否开启动画效果
-
-`animation`(默认为`true`)设置为`true`的话，分段器的三种模式滑块移动时都会有动画效果
-
-```html
-<u-subsection :animation="true"></u-subsection>
-```
 
 ### 颜色配置
 
-- 通过`active-color`配置激活选项的文字颜色，`mode`为`subsection`时无效，此时默认为白色：
-- 通过`bgColor`配置背景颜色
-- 通过`buttonColor`配置按钮颜色，`mode`为`button`时有效
+- 通过`activeColor`配置激活选项的文字颜色
+- 通过`inactiveColor`配置未激活选项的文字颜色
+- 通过`bgColor`配置背景颜色，mode为button时有效（默认 '#eeeeef' ）
 
 ```html
-<u-subsection active-color="#ff9900"></u-subsection>
+<u-subsection activeColor="#f56c6c"></u-subsection>
 ```
 
 
@@ -79,26 +62,14 @@
 
 ```html
 <template>
-	<view>
-		<u-subsection :list="list" :current="curNow" @change="sectionChange"></u-subsection>
-	</view>
+    <u-subsection :list="list" :current="curNow" @change="sectionChange"></u-subsection>
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
-				list: [
-					{
-						name: '待发货'
-					}, 
-					{
-						name: '待付款'
-					}, 
-					{
-						name: '待评价'
-					}
-				],
+                list: ['未付款', '待评价', '已付款'],
 				curNow: 0
 			}
 		},
