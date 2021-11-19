@@ -23,8 +23,8 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 ```html
 <template>
 	<u-cell-group>
-		<u-cell-item icon="setting-fill" title="个人设置"></u-cell-item>
-		<u-cell-item icon="integral-fill" title="会员等级" value="新版本"></u-cell-item>
+		<u-cell icon="setting-fill" title="个人设置"></u-cell>
+		<u-cell icon="integral-fill" title="会员等级" value="新版本"></u-cell>
 	</u-cell-group>
 </template>
 ```
@@ -37,16 +37,16 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 
 ```html
 <u-cell-group>
-	<u-cell-item  title="夕阳无限好" arrow-direction="down">
+	<u-cell  title="夕阳无限好" arrow-direction="down">
 		<u-icon slot="icon" size="32" name="search"></u-icon>
 		<!-- <u-badge count="99" :absolute="false" slot="right-icon"></u-badge> -->
 		<u-switch slot="right-icon" v-model="checked"></u-switch>
-	</u-cell-item>
-	<u-cell-item icon="setting-fill" title="只是近黄昏"></u-cell-item>
+	</u-cell>
+	<u-cell icon="setting-fill" title="只是近黄昏"></u-cell>
 </u-cell-group>
 ```
 
-如上所示，可以给`cell-item`组件通过`slot="right-icon"`设定右边uView自带的`badge`或者`switch`组件：
+如上所示，可以给`cell`组件通过`slot="right-icon"`设定右边uView自带的`badge`或者`switch`组件：
 - 如果搭配的是`badge`组件，注意设置`absolute`参数为`false`去掉绝对定位，否则其位于右侧的恰当位置，详见[Badge 徽标数](/components/badge.html)。
 - 如果搭配的是`switch`组件，注意要通过`v-model`绑定一个内容为布尔值的变量，否则无法操作`switch`，详见[Switch 开关选择器](/components/switch.html)。
 ### 自定义大小
@@ -77,8 +77,8 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 
 ```html
 <u-cell-group>
-	<u-cell-item icon="share" title="停车坐爱枫林晚" :isLink="true" arrow-direction="down"></u-cell-item>
-	<u-cell-item icon="map" title="霜叶红于二月花" :isLink="false"></u-cell-item>
+	<u-cell icon="share" title="停车坐爱枫林晚" :isLink="true" arrow-direction="down"></u-cell>
+	<u-cell icon="map" title="霜叶红于二月花" :isLink="false"></u-cell>
 </u-cell-group>
 ```
 ### 跳转页面
@@ -378,7 +378,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 | border		| 是否显示外边框																	| Boolean	| true	| false	|
 | customStyle	| 分组标题的的样式，对象形式，如{'font-size': '24rpx'} 或 {'fontSize': '24rpx'}		| object	| -		| -		|
 
-### CellItem Props
+### Cell Props
 
 | 参数			| 说明															| 类型					| 默认值			| 可选值					|
 | :-			| :-															| :-					| :-			| :-					|
@@ -405,7 +405,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 | name			| 标识符，用于在`click`事件中进行返回							    | String &#124; Number  | - 			| -					|
 
 
-### CellItem Slot
+### Cell Slot
 
 | 名称		| 说明																	|
 | :-		| :-																	|
@@ -415,7 +415,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 | right-icon| 自定义右侧图标内容，需设置`arrow`为`false`才起作用						|
 | label		| 自定义`label`内容														|
 
-### CellItem Event
+### Cell Event
 
 | 事件名	| 说明				| 回调参数	|
 | :-	| :-				| :-		|
@@ -428,11 +428,11 @@ h3[id=cellgroup-props] + table thead tr th:nth-child(2){
 	width: 40%;
 }
 
-h3[id=cellitem-props] + table thead tr th:nth-child(2){
+h3[id=cell-props] + table thead tr th:nth-child(2){
 	width: 40%;
 }
 
-h3[id=cellitem-slot] + table thead tr th:nth-child(2){
+h3[id=cell-slot] + table thead tr th:nth-child(2){
 	width: 50%;
 }
 </style>
