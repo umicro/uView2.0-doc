@@ -26,19 +26,17 @@
 ```html
 <template>
 	<view>
-        <u-swipe-action>
-            <u-swipe-action-item
-                    :rightOptions="options1"
-            >
-                <u-line></u-line>
-                <view class="swipe-action">
-                    <view class="swipe-action__content">
-                        <text class="swipe-action__content__text">基础使用</text>
-                    </view>
-                </view>
-                <u-line></u-line>
-            </u-swipe-action-item>
-        </u-swipe-action>
+      <u-swipe-action>
+        <u-swipe-action-item
+          :options="options1"
+        >
+          <view class="swipe-action u-border-top u-border-bottom">
+            <view class="swipe-action__content">
+              <text class="swipe-action__content__text">基础使用</text>
+            </view>
+          </view>
+        </u-swipe-action-item>
+      </u-swipe-action>
 	</view>
 </template>
 
@@ -47,10 +45,7 @@
 		data() {
 			return {
                 options1: [{
-                    text: '删除',
-                    style: {
-                        backgroundColor: '#f56c6c'
-                    }
+                    text: '删除'
                 }]
 			};
 		},
@@ -82,23 +77,21 @@
 
 ### 多个按钮并列
 
-- 通过添加`rightOptions`的值，达到多个并列的效果
+- 通过添加`options`的值，达到多个并列的效果
 
 
 ```html
 <template>
 	<view>
-        <u-swipe-action>
-            <u-swipe-action-item :rightOptions="options2">
-                <u-line></u-line>
-                <view class="swipe-action">
-                    <view class="swipe-action__content">
-                        <text class="swipe-action__content__text">两个按钮并列</text>
-                    </view>
-                </view>
-                <u-line></u-line>
-            </u-swipe-action-item>
-        </u-swipe-action>
+      <u-swipe-action>
+        <u-swipe-action-item :options="options2">
+          <view class="swipe-action u-border-top u-border-bottom">
+            <view class="swipe-action__content">
+              <text class="swipe-action__content__text">两个按钮并列</text>
+            </view>
+          </view>
+        </u-swipe-action-item>
+      </u-swipe-action>
 	</view>
 </template>
 
@@ -147,28 +140,29 @@
 
 ### 组合使用
 
-- 通过增设`rightOptions`的`options`达成组合效果
+- 通过增设`options`的`options`达成组合效果
 
 
 ```html
 <template>
 	<view>
-        <u-swipe-action>
-            <u-swipe-action-item
-                    :rightOptions="item.options"
-                    v-for="(item, index) in options4"
-                    :disabled="item.disabled"
-                    :key="index"
-            >
-                <u-line v-if="index === 0"></u-line>
-                <view class="swipe-action">
-                    <view class="swipe-action__content">
-                        <text class="swipe-action__content__text">{{ item.text }}</text>
-                    </view>
-                </view>
-                <u-line></u-line>
-            </u-swipe-action-item>
-        </u-swipe-action>
+      <u-swipe-action>
+        <u-swipe-action-item
+          :options="item.options"
+          v-for="(item, index) in options4"
+          :disabled="item.disabled"
+          :key="index"
+        >
+          <view
+            class="swipe-action u-border-top"
+            :class="[index === options4.length - 1 && 'u-border-bottom']"
+          >
+            <view class="swipe-action__content">
+              <text class="swipe-action__content__text">{{ item.text }}</text>
+            </view>
+          </view>
+        </u-swipe-action-item>
+      </u-swipe-action>
 	</view>
 </template>
 
