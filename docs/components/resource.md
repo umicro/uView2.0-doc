@@ -39,7 +39,7 @@
                 <img src="https://cdn.uviewui.com/uview/docs/425b2a05e181894a8e3f09f4d95af4e.png" alt="">
                 <h3>Empty组件配套占位图</h3>
                 <p>我们的专业设计师精心为您做了一套精美的缺省图，涵盖各个场景，文件内含图片和Sketch源文件</p>
-                <a href="http://cdn.uviewui.com/uview/resources/Empty.zip">下载</a>
+                <a href="https://yanxincloudplatform.oss-cn-beijing.aliyuncs.com/cloudplatform/Empty.zip">下载</a>
             </div>
         </li>
     </ul>
