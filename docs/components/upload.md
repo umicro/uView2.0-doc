@@ -401,8 +401,9 @@ data(){
 | capture			| 图片或视频拾取模式，当accept为image类型时设置capture可选额外camera可以直接调起摄像头		| String &#124; Array	| ['album', 'camera']		| -							|
 | compressed		| 当accept为video时生效，是否压缩视频，默认为true										| Boolean				| true						| false						|
 | camera			| 当accept为video时生效，可选值为back或front											| String				| back						| -							|
-| maxDuration		| 当accept为video时生效，拍摄视频最长拍摄时间，单位秒									| Number				| 60						| true						|
+| maxDuration		| 当accept为video时生效，拍摄视频最长拍摄时间，单位秒						    			| Number				| 60						| true						|
 | uploadIcon		| 上传区域的图标，只能内置图标															| String				| camera-fill				| -							|
+| uploadIconColor	| 上传区域的图标的颜色            														| String				| #D3D4D6   				| -							|
 | useBeforeRead		| 是否启用(显示/隐藏)组件																| Boolean				| false						| true						|
 | previewFullImage	| previewFullImage																	| Boolean				| true						| false						|
 | maxCount			| 最大选择图片的数量																	| String &#124; Number	| 52						| -							|
