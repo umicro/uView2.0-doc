@@ -3,21 +3,6 @@
 <div class="doc-update">
 	<ul class="u-timeline u-timeline-pending">
 		<li class="u-timeline-item">
-			<div class="u-timeline-item-tail"></div>
-			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
-			<div class="u-timeline-item-content">
-				<div class="anchor">
-					<h2>2.0.0</h2>
-				</div>
-				<p><code>2021-11-15</code></p>
-				<h2>正式发布，全面兼容nvue，进入公测阶段</h2>
-				<ul>
-					<li>包含50+组件</li>
-					<li>众多JS工具库</li>
-				</ul>
-			</div>
-		</li>
-		<li class="u-timeline-item">
 		    <div class="u-timeline-item-tail"></div>
 		    <div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 		    <div class="u-timeline-item-content">
@@ -57,6 +42,21 @@
 					</li>
 		        </ul>
 		    </div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>2.0.0</h2>
+				</div>
+				<p><code>2021-11-15</code></p>
+				<h2>正式发布，全面兼容nvue，进入公测阶段</h2>
+				<ul>
+					<li>包含50+组件</li>
+					<li>众多JS工具库</li>
+				</ul>
+			</div>
 		</li>
 	</ul>
 </div>
