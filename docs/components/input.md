@@ -372,16 +372,26 @@
 |:-		|:-						|:-					|:-		|
 | blur| 输入框失去焦点时触发	| event: input默认参数，event.detail.value获取内容	| -		|
 | focus| 输入框聚焦时触发	|-	| -		|
-| confirm| 点击完成按钮时触发	| 	| -		|
+| confirm| 点击完成按钮时触发	| value：内容值  | -		|
 | keyboardheightchange| 键盘高度发生变化的时候触发此事件	| -	| 微信小程序2.7.0+、App 3.1.0+	|
 | input| 内容发生变化触发此事件	| value：内容值	| -	|
 | change| 内容发生变化触发此事件	|  value：内容值	| -	|
 | clear| 点击清空内容	|  -	| -	|
 
-### Others
+
+### Methods
 | 方法名								| 说明					| 
 | :-								| :-					|
 | setFormatter	| 为兼容微信小程序而暴露的内部方法，见上方说明	 |
+
+
+### Slots
+
+| 名称          | 说明            |
+|-------------  |---------------- |
+| prefix | 输入框前置内容，微信小程序环境只有`u-input`写法才有效  |
+| subfix | 输入框后置内容，微信小程序环境只有`u-input`写法才有效  |
+
 
 
 <style scoped>
@@ -390,6 +400,10 @@ h3[id=props] + table thead tr th:nth-child(2){
 }
 
 h3[id=methods] + table thead tr th:nth-child(2) {
-	width: 50%;
+	width: 60%;
+}
+
+h3[id=slots] + table thead tr th:nth-child(2) {
+	width: 60%;
 }
 </style>
