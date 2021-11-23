@@ -18,7 +18,7 @@
 ```html
 <template>
 	<view>
-		<u-popup :show="show">
+		<u-popup :show="show" @close="close" @open="open">
             <view>
                 <text>出淤泥而不染，濯清涟而不妖</text>
             </view>
@@ -28,11 +28,20 @@
 </template>
 <script>
 	export default {
-		data() {
-			return {
-				show: false
-			}
-		}
+      data() {
+        return {
+          show: false
+        }
+      }, 
+      methods: {
+        open() {
+          // console.log('open');
+        },
+        close() {
+          this.show = false
+          // console.log('close');
+        }
+      }
 	}
 </script>
 ```
@@ -43,20 +52,29 @@
 
 ```html
 <template>
-	<u-popup :show="show" mode="top">
+	<u-popup :show="show" mode="top"  @close="close" @open="open">
         <view>
             <text>人生若只如初见，何事秋风悲画扇</text>
         </view>
 	</u-popup>
 </template>
 <script>
-    export default {
-        data() {
-            return {
-                show: true
-            }
-        }
+  export default {
+    data() {
+      return {
+        show: false
+      }
+    },
+    methods: {
+      open() {
+        // console.log('open');
+      },
+      close() {
+        this.show = false
+        // console.log('close');
+      }
     }
+  }
 </script>
 ```
 
@@ -66,20 +84,29 @@
 
 ```html
 <template>
-	<u-popup :show="show" :round="true" mode="top" borderRadius="12">
+	<u-popup :show="show" :round="true" mode="top" borderRadius="12" @close="close" @open="open">
 		<view>
             <text>人生若只如初见，何事秋风悲画扇</text>
 		</view>
 	</u-popup>
 </template>
 <script>
-    export default {
-        data() {
-            return {
-                show: true
-            }
-        }
+  export default {
+    data() {
+      return {
+        show: false
+      }
+    },
+    methods: {
+      open() {
+        // console.log('open');
+      },
+      close() {
+        this.show = false
+        // console.log('close');
+      }
     }
+  }
 </script>
 ```
 
