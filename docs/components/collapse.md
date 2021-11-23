@@ -13,76 +13,95 @@
 
 ### 基本使用
 
-默认关闭手风琴模式，即打开一个，另外所有的都会关闭。可以将`u-collapse`的`accordion`设置为`true`，这样可以开启手风琴模式
-
 ```html
 <template>
-	<u-collapse>
-		<u-collapse-item :title="item.head" v-for="(item, index) in itemList" :key="index">
-			{{item.body}}
-		</u-collapse-item>
-	</u-collapse>
+  <u-collapse
+    @change="change"
+    @close="close"
+    @open="open"
+  >
+    <u-collapse-item
+      title="文档指南"
+      name="Docs guide"
+    >
+      <text class="u-collapse-content">涵盖uniapp各个方面，给开发者方向指导和设计理念，让您茅塞顿开，一马平川</text>
+    </u-collapse-item>
+    <u-collapse-item
+      title="组件全面"
+      name="Variety components"
+    >
+      <text class="u-collapse-content">众多组件覆盖开发过程的各个需求，组件功能丰富，多端兼容。让您快速集成，开箱即用</text>
+    </u-collapse-item>
+    <u-collapse-item
+      title="众多利器"
+      name="Numerous tools"
+    >
+      <text class="u-collapse-content">众多的贴心小工具，是您开发过程中召之即来的利器，让您飞镖在手，百步穿杨</text>
+    </u-collapse-item>
+  </u-collapse>
 </template>
 
 <script>
 	export default {
-		data() {
-			return {
-				itemList: [{
-					head: "赏识在于角度的转换",
-					body: "只要我们正确择取一个合适的参照物乃至稍降一格去看待他人，值得赏识的东西便会扑面而来",
-					open: true,
-					disabled: true
-				},{
-					head: "生活中不是缺少美，而是缺少发现美的眼睛",
-					body: "学会欣赏，实际是一种积极生活的态度，是生活的调味品，会在欣赏中发现生活的美",
-					open: false,
-				},{
-					head: "周围一些不起眼的人、事、物，或许都隐藏着不同凡响的智慧",
-					body: "但是据说雕刻大卫像所用的这块大理石，曾被多位雕刻家批评得一无是处，有些人认为这块大理石采凿得不好，有些人嫌它的纹路不够美",
-					open: false,
-				}],
-			}
-		}
+		methods: {
+            open(e) {
+              // console.log('open', e)
+            },
+            close(e) {
+              // console.log('close', e)
+            },
+            change(e) {
+              // console.log('change', e)
+            }
+        }
 	}
 </script>
 ```
 
 ### 控制面板的初始状态，以及是否可以操作
 
-- 设置`u-collapse-item`的`open`参数为`true`，可以让面板初始化时为打开状态
-- 如果设置`u-collapse-item`的`disabled`参数为`true`，那么面板会保持初始状态，无法关闭或打开
+- 设置`u-collapse-item`的`name`参数，并在`u-collapse`中指定数组`value`可以让面板初始化时为打开状态
+- 如果设置`u-collapse-item`的`disabled`参数，那么面板会保持被禁用状态
 
 ```html
 <template>
-	<u-collapse>
-		<u-collapse-item :title="item.head" v-for="(item, index) in itemList" :key="index" :open="item.open" :disabled="item.disabled">
-			{{item.body}}
-		</u-collapse-item>
-	</u-collapse>
+  <u-collapse
+    :value="['2']"
+  >
+    <u-collapse-item
+      title="文档指南"
+    >
+      <text class="u-collapse-content">涵盖uniapp各个方面，给开发者方向指导和设计理念，让您茅塞顿开，一马平川</text>
+    </u-collapse-item>
+    <u-collapse-item
+      disabled
+      title="组件全面"
+    >
+      <text class="u-collapse-content">众多组件覆盖开发过程的各个需求，组件功能丰富，多端兼容。让您快速集成，开箱即用</text>
+    </u-collapse-item>
+    <u-collapse-item
+      name="2"
+      title="众多利器"
+    >
+      <text class="u-collapse-content">众多的贴心小工具，是您开发过程中召之即来的利器，让您飞镖在手，百步穿杨</text>
+    </u-collapse-item>
+  </u-collapse>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				itemList: [{
-					head: "赏识在于角度的转换",
-					body: "只要我们正确择取一个合适的参照物乃至稍降一格去看待他人，值得赏识的东西便会扑面而来",
-					open: true,
-					disabled: true
-				},{
-					head: "生活中不是缺少美，而是缺少发现美的眼睛",
-					body: "学会欣赏，实际是一种积极生活的态度，是生活的调味品，会在欣赏中发现生活的美",
-					open: false,
-				},{
-					head: "周围一些不起眼的人、事、物，或许都隐藏着不同凡响的智慧",
-					body: "但是据说雕刻大卫像所用的这块大理石，曾被多位雕刻家批评得一无是处，有些人认为这块大理石采凿得不好，有些人嫌它的纹路不够美",
-					open: false,
-				}],
-			}
-		}
-	}
+  export default {
+    methods: {
+      open(e) {
+        // console.log('open', e)
+      },
+      close(e) {
+        // console.log('close', e)
+      },
+      change(e) {
+        // console.log('change', e)
+      }
+    }
+  }
 </script>
 ```
 
