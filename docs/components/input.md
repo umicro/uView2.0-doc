@@ -25,7 +25,6 @@
 
 ### 基本使用
 
-- 通过`value`绑定输入框的值
 - 通过`type`设置输入框的类型，默认text
 - 通过`placeholder`设置输入框为空时的占位符
 - 通过`border`配置是否显示输入框的边框
@@ -33,16 +32,26 @@
 
 ```html
 <template>
-	<u--input :value="value" placeholder="请输入内容" border="surround" @change="change"></u--input>
+  <u--input
+    placeholder="请输入内容"
+    border="surround"
+    v-model="value"
+    @change="change"
+  ></u--input>
 </template>
 
 <script>
 	export default {
-		data() {
-			return {
-				value: ''
-			}
-		}
+      data() {
+        return {
+          value: ''
+        }
+      },
+      methods: {
+        change(e) {
+          console.log('change', e);
+        }
+      }
 	}
 </script>
 ```
@@ -57,47 +66,33 @@
 4. digit-带小数点的数字键盘，App的nvue页面、微信、支付宝、百度、头条、QQ小程序。
 
 
-#### Text模式
+#### 可清空字符
 
-将`type`设置为`text`，此种情况为一个单纯的输入框，但是还可以将其设置为`number`、`idcard`、`digit`等值，需要考虑兼容性，见上方说明。
+将`clearable`设置为`true`，会在输入框后方增加一个清空按钮。
 
 ```html
 <template>
-	<u-input v-model="value" :type="type" :border="border"  />
+  <u--input
+    placeholder="请输入内容"
+    border="surround"
+    clearable
+  ></u--input>
 </template>
-
-<script>
-	export default {
-		data() {
-			return {
-				value: '',
-				type: 'number',
-				border: 'surround',
-			}
-		},
-	}
-</script>
 ```
 
 
-#### Password模式
+#### 下划线
 
-密码设置为独立字段属性`password`，如果`:password='true'`此时输入内容将会用点替代：
+通过设置属性`border`为`bottom`即可变成一个下划线
 
 ```html
 <template>
-	<u-input v-model="value" :password="true" suffix-icon="lock-fill" />
+  <u--input
+    placeholder="请输入内容"
+    border="bottom"
+    clearable
+  ></u--input>
 </template>
-
-<script>
-	export default {
-		data() {
-			return {
-				value: '',
-			}
-		}
-	}
-</script>
 ```
 
 
@@ -125,38 +120,106 @@
 ```
 
 
-### 格式化处理
+### 前后插槽
 
-
-如有需要，可以通过`formatter`参数编写自定义格式化规则。
-
-:::warning 注意：
-微信小程序不支持通过`props`传递函数参数，所以组件内部暴露了一个`setFormatter`方法用于设置格式化方法，注意在页面的`onReady`生命周期获取`ref`再操作。
-:::
+通过设置`slot`为`prefix`或`suffix`来指定前后插槽
 
 ```html
 <template>
-    <u-input v-model="value" :formatter="formatter" ref="input"></u-input>
+  <view class="u-demo-block">
+    <text class="u-demo-block__title">前后插槽</text>
+    <view class="u-demo-block__content">
+      <!-- #ifdef MP-WEIXIN -->
+      <u-input placeholder="前置插槽">
+        <!-- #endif -->
+        <!-- #ifndef MP-WEIXIN -->
+        <u--input placeholder="前置插槽">
+          <!-- #endif -->
+          <u--text
+            text="http://"
+            slot="prefix"
+            margin="0 3px 0 0"
+            type="tips"
+          ></u--text>
+          <!-- #ifdef MP -->
+      </u-input>
+      <!-- #endif -->
+      <!-- #ifndef MP-WEIXIN -->
+      </u--input>
+      <!-- #endif -->
+    </view>
+    <view
+      class="u-demo-block__content"
+      style="margin-top: 15px;"
+    >
+      <!-- #ifdef MP-WEIXIN -->
+      <u-input placeholder="后置插槽">
+        <!-- #endif -->
+        <!-- #ifndef MP-WEIXIN -->
+        <u--input placeholder="后置插槽">
+          <!-- #endif -->
+          <template slot="suffix">
+            <u-code
+              ref="uCode"
+              @change="codeChange"
+              seconds="20"
+            ></u-code>
+            <u-button
+              @tap="getCode"
+              :text="tips"
+              type="success"
+              size="mini"
+            ></u-button>
+          </template>
+          <!-- #ifdef MP -->
+      </u-input>
+      <!-- #endif -->
+      <!-- #ifndef MP-WEIXIN -->
+      </u--input>
+      <!-- #endif -->
+    </view>
+  </view>
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                value: ''
-            }
-        },
-		onReady() {
-			// 如果需要兼容微信小程序的话，需要用此写法
-			this.$refs.input.setFormatter(this.formatter)
-		},
-        methods: {
-            formatter(value) {
-				// 让输入框只能输入数值，过滤其他字符
-            	return value.replace(/[^0-9]/ig, "")
-            }
-        },
+  export default {
+    data() {
+      return {
+        tips: '',
+        value: ''
+      }
+    },
+    watch: {
+      value(newValue, oldValue) {
+        // console.log('v-model', newValue);
+      }
+    },
+    methods: {
+      codeChange(text) {
+        this.tips = text;
+      },
+      getCode() {
+        if (this.$refs.uCode.canGetCode) {
+          // 模拟向后端请求验证码
+          uni.showLoading({
+            title: '正在获取验证码'
+          })
+          setTimeout(() => {
+            uni.hideLoading();
+            // 这里此提示会被this.start()方法中的提示覆盖
+            uni.$u.toast('验证码已发送');
+            // 通知验证码组件内部开始倒计时
+            this.$refs.uCode.start();
+          }, 2000);
+        } else {
+          uni.$u.toast('倒计时结束后再发送');
+        }
+      },
+      change(e) {
+        console.log('change', e);
+      }
     }
+  }
 </script>
 ```
 
