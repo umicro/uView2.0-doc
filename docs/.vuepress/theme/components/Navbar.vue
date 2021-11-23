@@ -5,7 +5,7 @@
 	  </div>
 	  <header class="navbar">
 	    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
-	  
+
 	    <router-link
 	      :to="$localePath"
 	      class="home-link"
@@ -23,7 +23,7 @@
 	        :class="{ 'can-hide': $site.themeConfig.logo }"
 	      >uView</span>
 	    </router-link>
-	  
+
 	    <div
 	      class="links"
 	      :style="linksWrapMaxWidth ? {
