@@ -13,16 +13,12 @@
 
 ### 基本使用
 
-- 通过`list`数组参数设置需要滚动的内容
-- 滚动`direction`参数有两种模式，分别是`row`水平滚动，`column`垂直滚动。其中水平滚动又可以通过`step`来配置是否使用步进形式滚动，
-衔接滚动滚动会把`list`数组元素拼接成一个字符串形式进行滚动，步进滚动模式类似轮播图水平滚动的形式，具体效果请见实例
+- 通过`text`参数设置需要滚动的内容
 
 ```html
 <template>
 	<view>
-		<u-notice-bar direction="row" :text="list"></u-notice-bar>
-		<u-notice-bar direction="column" :text="list"></u-notice-bar>
-        <u-notice-bar direction="row" :text="list" :step="true"></u-notice-bar>
+      <u-notice-bar :text="text1"></u-notice-bar>
     </view>
 </template>
 
@@ -30,30 +26,33 @@
 	export default {
 		data() {
 			return {
-				list: [
-					'寒雨连江夜入吴',
-					'平明送客楚山孤',
-					'洛阳亲友如相问',
-					'一片冰心在玉壶'
-				]
+              text1: 'uView UI众多组件覆盖开发过程的各个需求，组件功能丰富，多端兼容。让您快速集成，开箱即用'
 			}
 		}
 	}
 </script>
 ```
 
-### 配置图标
+### 可关闭
 
-- `volume-icon`参数配置是否显示左侧的音量小喇叭图标，默认显示
-- `more-icon`配置是否显示右侧的向右箭头，默认关闭
-- `close-icon`配置是否显示关闭的图标，默认关闭
+通过`mode`配置为`closable`让右侧显示关闭按钮
 
 ```html
-<u-notice-bar text="uView 2.0来了" :volume-icon="false"></u-notice-bar>
+<template>
+  <view>
+    <u-notice-bar :text="text1" mode="closable"></u-notice-bar>
+  </view>
+</template>
 
-<u-notice-bar text="uView 2.0来了" :more-icon="true"></u-notice-bar>
-
-<u-notice-bar text="uView 2.0来了" mode="closable"></u-notice-bar>
+<script>
+  export default {
+    data() {
+      return {
+        text1: 'uView UI众多组件覆盖开发过程的各个需求，组件功能丰富，多端兼容。让您快速集成，开箱即用'
+      }
+    }
+  }
+</script>
 ```
 
 ### 配置滚动速度和跳转
@@ -62,9 +61,21 @@
 - `url`可配置跳转
 
 ```html
-<u-notice-bar speed="250" :text="list"></u-notice-bar>
+<template>
+  <view>
+    <u-notice-bar :text="text1" mode="closable" speed="250" url="/pages/componentsB/tag/tag"></u-notice-bar>
+  </view>
+</template>
 
-<u-notice-bar :is-circular="false" url="/pages/componentsB/tag/tag" :list="list"></u-notice-bar>
+<script>
+  export default {
+    data() {
+      return {
+        text1: 'uView UI众多组件覆盖开发过程的各个需求，组件功能丰富，多端兼容。让您快速集成，开箱即用'
+      }
+    }
+  }
+</script>
 ```
 
 ### 演示项目完整代码
@@ -182,7 +193,7 @@
 
 | 参数			| 说明																						| 类型					| 默认值		|  可选值			|
 |:-				|:-																							|:-						|:-			|:-					|
-| text			| 显示的内容，数组																			| Array &#124;  String	| -			| -					|
+| text			| 显示的内容，数组									    										| Array &#124;  String	| -			| -					|
 | direction		| 通告滚动模式，row-横向滚动，column-竖向滚动													| String				| row		| column			|
 | step			| direction = row时，是否使用步进形式滚动														| Boolean				| false		| true				|
 | icon			| 是否显示左侧的音量图标																		| String				| volume	| -					|
