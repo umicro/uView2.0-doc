@@ -12,7 +12,7 @@
             <div class="card">
                 <img src="https://cdn.uviewui.com/uview/docs/b4b910e7f5919defa0b936c4fe03f4d.png" alt="">
                 <h3>Sketch Template</h3>
-                <p>通过在Sketch中导入uView组件库，可以在交互设计阶段方便地调用常用的组件</p>
+                <p>通过在Sketch中导入uView组件库，可以在交互设计阶段方便地调用常用的组件(Sketch版本：78)</p>
                 <a href="https://cdn.uviewui.com/uview/resources/uView2.0.sketch" download>下载</a>
             </div>
         </li>
@@ -20,7 +20,7 @@
             <div class="card">
                 <img src="https://cdn.uviewui.com/uview/docs/9d24f116e345f13d2fc46734fbcd7a9.png" alt="">
                 <h3>Axure Template</h3>
-                <p>通过在Axure中导入uView组件库，可以在交互设计阶段方便地调用常用的组件，需要Axure9.0版本打开</p>
+                <p>通过在Axure中导入uView组件库，可以在交互设计阶段方便地调用常用的组件(Axure版本：9.0)</p>
                 <a href="https://download.uviewui.com/uView2.0.rp" download>下载</a>
             </div>
         </li>
