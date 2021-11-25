@@ -375,12 +375,11 @@ rules: {
 
 #### 校验错误提示方式
 
-uView提供了多种校验的错误提示方式，这些值需要包含在数组(可以填写多个值，同时进行多种提示)中，传递给`Form`组件的`errory-type`参数：
+uView提供了多种校验的错误提示方式，传递给`Form`组件的`errorType`参数：
 - `message`：默认为输入框下方用文字进行提示
-- `none`：只要包含此值，将不会进行任何提示
-- `border-bottom`：配置作用域底部的下划线显示为红色
-- `border`：配置输入框的边框为红色进行提示 -- 如果有配置显示`Input`组件显示边框的话
-- `toast`：以"toast"提示的方式弹出错误信息，每次只弹出最前面的那个表单域的错误信息(1.3.5新增)
+- `none`：不会进行任何提示
+- `border-bottom`：配置作用域底部的下划线显示为红色，要求给form-item设置了borderBottom=true才有效
+- `toast`：以"toast"提示的方式弹出错误信息，每次只弹出最前面的那个表单域的错误信息
 
 ```html
 <template>
@@ -394,11 +393,11 @@ export default {
 	data() {
 		return {
 			// 文字提示
-			errorType: ['message'],
+			errorType: 'message',
 			// 不提示
-			// errorType: ['none'],
-			// 文字和下划线提示
-			// errorType: ['message', 'border-bottom'],
+			// errorType: 'none',
+			// 下划线提示，要求给form-item设置了borderBottom=true才有效
+			// errorType: 'border-bottom'
 		};
 	}
 };
@@ -877,7 +876,7 @@ export default {
 |:-				|:-												|:-									|:-						|:-				|
 | model			| 表单数据对象									| Object							| -						| -				|
 | rules			| 通过`ref`设置，见上方说明						| Object&#124;Function&#124;Array	| -						| -				|
-| errorType		| 错误的提示方式，数组形式，见上方说明				| Array								| ['message', 'toast']	| -				|
+| errorType		| 错误的提示方式，见上方说明				| String								| message	| none&#124;toast&#124;border-bottom&#124;none 			|
 | borderBottom	| 是否显示表单域的下划线边框						| Boolean							| true					| -				|
 | labelPosition	| 表单域提示文字的位置，`left`-左侧，`top`-上方		| String							| left					| top			|
 | labelWidth	| 提示文字的宽度，单位rpx							| String &#124; Number				| 45					| 数值 / auto	|

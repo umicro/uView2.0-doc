@@ -480,7 +480,7 @@ export default {
 | showMinus		| 是否显示减少按钮										| Boolean				| true						| false	|
 | showPlus		| 是否显示增加按钮										| Boolean				| true						| false	|
 | decimalLength	| 显示的小数位数											| String &#124; Number	| -							| -		|
-| longPress		| 输入框文字和按钮字体大小，单位rpx							| Boolean				| true						| false	|
+| longPress		| 是否允许长按进行加减							| Boolean				| true						| false	|
 | color			| 输入框文字和加减按钮图标的颜色							| String				| #323233					| -		|
 | buttonSize	| 按钮大小，宽高等于此值，单位px，输入框高度和此值保持一致	| String &#124; Number	| 30						| -		|
 | bgColor		| 输入框和按钮的背景颜色									| String				| #EBECEE					| -		|
