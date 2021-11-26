@@ -54,10 +54,11 @@ uView为了更好编写css，使用了scss预处理器，使用uView之前，请
 
 ```css
 /* 变量的定义，该部分uView已全局引入，无需您编写 */
-$u-type-primary: #2979ff;
-$u-type-primary-light: #ecf5ff;
-$u-type-primary-disabled: #a0cfff;
-$u-type-primary-dark: #2b85e4;
+$u-primary: #3c9cff;
+$u-warning: #f9ae3d;
+$u-success: #5ac725;
+$u-error: #f56c6c;
+$u-info: #909399;
 
 
 /* 在您编写css的地方使用这些变量 */
@@ -152,25 +153,30 @@ $u-type-primary-dark: #2b85e4;
 ```css
 /* 变量的定义，该部分uView已全局引入，无需您编写 */
 
-$u-type-warning: #ff9900;
-$u-type-warning-disabled: #fcbd71;
-$u-type-warning-dark: #f29100;
-$u-type-warning-light: #fdf6ec;
+$u-primary: #3c9cff;
+$u-primary-dark: #398ade;
+$u-primary-disabled: #9acafc;
+$u-primary-light: #ecf5ff;
 
-$u-type-success: #19be6b;
-$u-type-success-disabled: #71d5a1;
-$u-type-success-dark: #18b566;
-$u-type-success-light: #dbf1e1;
+$u-warning: #f9ae3d;
+$u-warning-dark: #f1a532;
+$u-warning-disabled: #f9d39b;
+$u-warning-light: #fdf6ec;
 
-$u-type-error: #fa3534;
-$u-type-error-disabled: #fab6b6;
-$u-type-error-dark: #dd6161;
-$u-type-error-light: #fef0f0;
+$u-success: #5ac725;
+$u-success-dark: #53c21d;
+$u-success-disabled: #a9e08f;
+$u-success-light: #f5fff0;
 
-$u-type-info: #909399;
-$u-type-info-disabled: #c8c9cc;
-$u-type-info-dark: #82848a;
-$u-type-info-light: #f4f4f5;
+$u-error: #f56c6c;
+$u-error-dark: #e45656;
+$u-error-disabled: #f7b2b2;
+$u-error-light: #fef0f0;
+
+$u-info: #909399;
+$u-info-dark: #767a82;
+$u-info-disabled: #c4c6c9;
+$u-info-light: #f4f4f5;
 
 /* 在您编写css的地方使用这些变量 */
 .title {
@@ -213,8 +219,11 @@ uView中，分别提炼了4种用于文字颜色，分别是：主要文字、�
 /* 变量的定义，该部分uView已全局引入，无需您编写 */
 $u-main-color: #303133;
 $u-content-color: #606266;
-$u-tips-color: #909399;
+$u-tips-color: #909193;
 $u-light-color: #c0c4cc;
+$u-border-color: #dadbde;
+$u-bg-color: #f3f4f6;
+$u-disabled-color: #c8c9cc;
 
 /* 在您编写css的地方使用这些变量 */
 .title {
