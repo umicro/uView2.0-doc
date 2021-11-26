@@ -234,25 +234,6 @@ Toast 组件主要用于消息通知、加载提示、操作结果提示等醒�
 
 ### API
 
-### Props
-
-| 参数		| 说明												| 类型					|  默认值	|  可选值	|
-|:-			|:-													|:-						|:-			|:-			|
-| zIndex	| toast展示时的`z-index`值							| String &#124; Number	| 10090		| -			|
-| loading	| 是否加载中											| Boolean				| false		| true		|
-| text		| 显示的文本											| String &#124; Number	| -			| -			|
-| icon		| 图标，或者绝对路径的图片								| String				| -			| -			|
-| type		| 主题类型											| String				| -			| -			|
-| show		| 是否显示该组件										| Boolean				| false		| true		|
-| overlay	| 是否显示透明遮罩，防止点击穿透						| Boolean				| false		| true		|
-| position	| 位置												| String				| center	| -			|
-| params	| 跳转的参数											| Object				| -			| -			|
-| duration	| 展示时间，单位ms									| String &#124; Number	| 2000		| -			|
-| isTab		| 是否返回的为tab页面									| Boolean				| false		| -			|
-| url		| toast消失后是否跳转页面，有则跳转，优先级高于back参数	| String				| -			| -			|
-| callback	| 执行完后的回调函数									| Function				| null		| -			|
-| back		| 结束toast是否自动返回上一页							| Boolean				| false		| true		|
-
 ### Params
 
 这些参数为通过`ref`调用`<toast/>`组件内部的`show`方法时，需要传递参数

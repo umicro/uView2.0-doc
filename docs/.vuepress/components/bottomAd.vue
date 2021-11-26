@@ -3,7 +3,7 @@
         class="info-box"
         v-if="showAd"
         target="_blank"
-        href="https://www.yisu.com/hk/huodong.html?f=uview&unit=xr10000&yisu0501"
+        href="http://mp.weixin.qq.com/s?__biz=MzkxODMwMDY1Mw==&mid=2247483829&idx=1&sn=91d32262e9ccb5b13b4a88611ac5abf2&chksm=c1b23337f6c5ba21ae62b8756e5cb6d15c877fc5cda9a3e53ef074c315ded936b74b23b2fcdc#rd"
     >
 
         <!-- <div class="left">
@@ -18,7 +18,7 @@
         <div class="right">
             <div class="btn">立即注册</div>
         </div> -->
-        <img src="https://cdn.uviewui.com/uview/resources/156418598104555.gif" />
+        <img src="https://cdn.uviewui.com/uview/resources/su8.gif" />
     </a>
 </template>
 
@@ -30,8 +30,8 @@ export default {
         };
     },
     created() {
-        // 与广州亿速云的广告合作到期时间为2020-12-25，时间戳为：1608911994000(ms)
-        if (+new Date() > 1624636800000) this.showAd = false;
+        // 到期时间2021-12-27
+        if (+new Date() > 1640575292000) this.showAd = false;
     },
 };
 </script>

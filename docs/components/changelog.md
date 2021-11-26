@@ -3,6 +3,39 @@
 <div class="doc-update">
 	<ul class="u-timeline u-timeline-pending">
 		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>2.0.5</h2>
+				</div>
+				<p><code>2021-11-25</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						calendar在vue下显示异常问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						form组件labelPosition和errorType参数无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						input组件inputAlign无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						其他一些修复
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
 		    <div class="u-timeline-item-tail"></div>
 		    <div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 		    <div class="u-timeline-item-content">
