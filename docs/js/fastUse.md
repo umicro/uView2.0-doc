@@ -5,20 +5,6 @@
 快速使用。
 
 
-### toast(title [, duration = 2000])
-
-用于弹出`toast`
-
-- `title` <String\> `toast`的消息内容
-- `duration` <Number\> 可选，`toast`出现到消失的时间，单位`ms`，默认`2000`
-
-此方法为uniapp的`uni.showToast`的二次封装，方便用户使用，参数只能配置`title`和`duration`
-
-```js
-uni.$u.toast('Hello uView!');
-```
-
-
 ### os()
 
 此方法用于返回平台的名称，为小写的`ios`或`android`  
