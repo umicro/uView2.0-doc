@@ -36,6 +36,7 @@
                 <text class="grid-text">{{baseListItem.title}}</text>
             </u-grid-item>
         </u-grid>
+        <u-toast ref="uToast" />
     </view>
 </template>
 
@@ -100,6 +101,7 @@
                 <text class="grid-text">{{listItem.title}}</text>
             </u-grid-item>
         </u-grid>
+        <u-toast ref="uToast" />
     </view>
 </template>
 
