@@ -83,157 +83,20 @@ export default {
 </script>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础功能</text>
-			<view class="u-demo-block__content">
-				<view class="u-alert-item">
-					<u-alert
-					    description="山不在于高，有了神仙就出名"
-					    type="warning"
-					></u-alert>
-				</view>
-				<view class="u-alert-item">
-					<u-alert
-					    description="水不在深，有龙则灵"
-					    type="primary"
-					></u-alert>
-				</view>
-				<view class="u-alert-item">
-					<u-alert
-					    description="斯是陋室，惟吾德馨。苔痕上阶绿，草色入帘青"
-					    type="error"
-					></u-alert>
-				</view>
-				<view class="u-alert-item">
-					<u-alert
-					    description="谈笑有鸿儒，往来无白丁"
-					    type="info"
-					></u-alert>
-				</view>
-				<view class="u-alert-item">
-					<u-alert
-					    description="可以调素琴，阅金经"
-					    type="success"
-					></u-alert>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">深浅色</text>
-			<view class="u-demo-block__content">
-				<view class="u-alert-item">
-					<u-alert
-					    description="无丝竹之乱耳，无案牍之劳形"
-					    type="warning"
-					></u-alert>
-				</view>
-				<view class="u-alert-item">
-					<u-alert
-					    description="南阳诸葛庐，西蜀子云亭。孔子云：何陋之有"
-					    type="warning"
-					    effect="dark"
-					></u-alert>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">显示图标</text>
-			<view class="u-demo-block__content">
-				<view class="u-alert-item">
-					<u-alert
-					    description="六王毕，四海一；蜀山兀，阿房出"
-					    type="error"
-					    showIcon
-					></u-alert>
-				</view>
-				<view class="u-alert-item">
-					<u-alert
-					    description="覆压三百余里，隔离天日。骊山北构而西折，直走咸阳，二川溶溶，流入宫墙"
-					    type="error"
-					    effect="dark"
-					    showIcon
-					></u-alert>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">可关闭</text>
-			<view class="u-demo-block__content">
-				<view class="u-alert-item">
-					<u-alert
-					    description="五步一楼，十步一阁；廊腰缦回，檐牙高啄；各抱地势，钩心斗角"
-					    type="success"
-					    showIcon
-					    closable
-					></u-alert>
-				</view>
-				<view class="u-alert-item">
-					<u-alert
-					    description="盘盘焉，囷囷焉，蜂房水涡，矗不知其几千万落"
-					    type="success"
-					    effect="dark"
-					    closable
-					    showIcon
-					></u-alert>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">带标题</text>
-			<view class="u-demo-block__content">
-				<view class="u-alert-item">
-					<u-alert
-					    title="妃嫔媵嫱，王子皇孙，辞楼下殿"
-					    description="长桥卧波，未云何龙？复道行空，不霁何虹"
-					    type="info"
-					    showIcon
-					    closable
-					></u-alert>
-				</view>
-				<view class="u-alert-item">
-					<u-alert
-					    title="辇来于秦，朝歌夜弦，为秦宫人。明星荧荧，开妆镜也"
-					    description="高低冥迷，不知西东。歌台暖响，春光融融；舞殿冷袖，风雨凄凄。一日之内，一宫之间，而气候不齐"
-					    type="info"
-					    effect="dark"
-					    closable
-					    showIcon
-					></u-alert>
-				</view>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				description: '',
-				title: ''
-			}
-		}
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.u-alert-item {
-		flex: 1;
-		margin-bottom: 10px;
-	}
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsB/alert/alert.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-	.u-demo-block__content {
-		flex-direction: column !important;
-		align-items: stretch;
-	}
-</style>
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsB/alert/alert.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-```
+<br/>
 :::
 
 ### API

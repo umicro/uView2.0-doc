@@ -224,165 +224,20 @@
 ```
 
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础使用</text>
-			<view class="u-demo-block__content">
-				<u--input
-				    placeholder="请输入内容"
-				    border="surround"
-					v-model="value"
-					@change="change"
-				></u--input>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">可清空内容</text>
-			<view class="u-demo-block__content">
-				<u--input
-				    placeholder="请输入内容"
-				    border="surround"
-				    clearable
-				></u--input>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">显示下划线</text>
-			<view class="u-demo-block__content">
-				<u--input
-				    placeholder="请输入内容"
-				    border="bottom"
-				    clearable
-				></u--input>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">禁用状态</text>
-			<view class="u-demo-block__content">
-				<u--input
-				    placeholder="禁用状态"
-				    border="surround"
-				    disabled
-				></u--input>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">圆形</text>
-			<view class="u-demo-block__content">
-				<u--input
-				    placeholder="请输入内容"
-				    border="surround"
-				    shape="circle"
-				></u--input>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">前后图标</text>
-			<view class="u-demo-block__content">
-				<u--input
-				    placeholder="前置图标"
-				    prefixIcon="search"
-				    prefixIconStyle="font-size: 22px;color: #909399"
-				></u--input>
-			</view>
-			<view
-			    class="u-demo-block__content"
-			    style="margin-top: 15px;"
-			>
-				<u--input
-				    placeholder="后置图标"
-				    suffixIcon="map-fill"
-				    suffixIconStyle="color: #909399"
-				></u--input>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">前后插槽</text>
-			<view class="u-demo-block__content">
-				<u--input placeholder="前置插槽">
-					<u--text
-					    text="http://"
-					    slot="prefix"
-					    margin="0 3px 0 0"
-					    type="tips"
-					></u--text>
-				</u--input>
-			</view>
-			<view
-			    class="u-demo-block__content"
-			    style="margin-top: 15px;"
-			>
-				<u--input placeholder="后置插槽">
-					<template slot="suffix">
-						<u-code
-						    ref="uCode"
-						    @change="codeChange"
-						    seconds="20"
-						></u-code>
-						<u-button
-						    @tap="getCode"
-						    :text="tips"
-						    type="success"
-							size="mini"
-						></u-button>
-					</template>
-				</u--input>
-			</view>
-		</view>
-		<u-gap bgColor="#fff" height="50"></u-gap>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				tips: '',
-				value: ''
-			}
-		},
-		watch: {
-			value(newValue, oldValue) {
-				console.log('v-model', newValue);
-			}
-		},
-		methods: {
-			codeChange(text) {
-				this.tips = text;
-			},
-			getCode() {
-				if (this.$refs.uCode.canGetCode) {
-					// 模拟向后端请求验证码
-					uni.showLoading({
-						title: '正在获取验证码'
-					})
-					setTimeout(() => {
-						uni.hideLoading();
-						// 这里此提示会被this.start()方法中的提示覆盖
-						uni.$u.toast('验证码已发送');
-						// 通知验证码组件内部开始倒计时
-						this.$refs.uCode.start();
-					}, 2000);
-				} else {
-					uni.$u.toast('倒计时结束后再发送');
-				}
-			},
-			change(e) {
-				console.log('change', e);
-			}
-		}
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	
-</style>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsC/input/input.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-```
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsC/input/input.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
+
+<br/>
 :::
 
 ### API

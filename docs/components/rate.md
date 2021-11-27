@@ -67,149 +67,20 @@
 <u-rate :value="3.7" :disabled="true"></u-rate>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基本案例</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-rate size="20"></u-rate>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义选中星星数量</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-rate
-						size="20"
-						v-model="value"
-						@change="change"
-					></u-rate>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义星星大小</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-rate size="30" count="4"></u-rate>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">是否禁用评分</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__rate-item">
-					<u-rate size="20" :disabled="true"></u-rate>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义选中星星颜色</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__rate-item">
-					<u-rate
-						size="20"
-						v-model="activeColorValue"
-						activeColor="#2979ff"
-					></u-rate>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义未选中星星颜色</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__rate-item">
-					<u-rate
-						size="20"
-						v-model="value1"
-						inactiveColor="#2979ff"
-					></u-rate>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">禁止触摸选择</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__rate-item">
-					<u-rate size="20" :touchable="false"></u-rate>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">允许触摸选择</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__rate-item">
-					<u-rate size="20" :touchable="true"></u-rate>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">是否允许半星</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__rate-item">
-					<u-rate
-						size="20"
-						v-model="HalfValue"
-						:allowHalf="true"
-						@change="change"
-					></u-rate>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义选中的图标</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__rate-item">
-					<u-rate
-						size="20"
-						v-model="activeIconValue"
-						inactiveIcon="heart"
-						activeIcon="heart-fill"
-					></u-rate>
-				</view>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				//自定义星星的个数
-				value: 3,
-				value1: 2,
-				// 自定义选择星星颜色个数
-				activeColorValue: 3,
-				// 是否允许半星的个数
-				HalfValue: 3.5,
-				// 自定义图标星星个数
-				activeIconValue: 3,
-			}
-		},
-		watch: {
-			value(newValue, oldValue) {
-				// console.log(newValue);
-			}
-		},
-		methods: {
-			change(e) {
-				// console.log('change', e);
-			}
-		},
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.u-page {}
-</style>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsA/rate/rate.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-```
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsA/rate/rate.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
+
+<br/>
 :::
 
 ### API

@@ -78,113 +78,20 @@
 </script>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础功能</text>
-			<view class="u-demo-block__content">
-				<u-notice-bar
-				    :text="text1"
-				></u-notice-bar>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">可关闭</text>
-			<view class="u-demo-block__content">
-				<u-notice-bar
-				    :text="text5"
-					mode="closable"
-				></u-notice-bar>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义横向滚动速度</text>
-			<view class="u-demo-block__content">
-				<u-notice-bar
-				    :text="text2"
-					speed="250"
-					mode="closable"
-				></u-notice-bar>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">可跳转(点击右箭头)</text>
-			<view class="u-demo-block__content">
-				<u-notice-bar
-				    :text="text3"
-					mode="link"
-					url="/pages/componentsB/tag/tag"
-				></u-notice-bar>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">横向步进滚动</text>
-			<view class="u-demo-block__content">
-				<u-notice-bar
-				    :text="text4"
-					:step="true"
-				></u-notice-bar>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">纵向滚动</text>
-			<view class="u-demo-block__content">
-				<u-notice-bar
-				    :text="text4"
-					direction="column"
-				></u-notice-bar>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义样式</text>
-			<view class="u-demo-block__content">
-				<u-notice-bar
-				    :text="text1"
-					color="#ffffff"
-					bgColor="#f56c6c"
-				></u-notice-bar>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				text1: 'uView UI众多组件覆盖开发过程的各个需求，组件功能丰富，多端兼容。让您快速集成，开箱即用',
-				text2: 'uView UI众多的贴心小工具，是您开发过程中召之即来的利器，让您飞镖在手，百步穿杨',
-				text3: 'uView UI收集众多的常用页面和布局，减少开发者的重复工作，让您专注逻辑，事半功倍',
-				text4: [
-					'寒雨连江夜入吴',
-					'平明送客楚山孤',
-					'洛阳亲友如相问',
-					'一片冰心在玉壶'
-				],
-				text5: '涵盖uniapp各个方面，给开发者方向指导和设计理念，让您茅塞顿开，一马平川'
-			}
-		},
-		onLoad() {
-			
-		},
-		methods: {
-			click() {
-				
-			}
-		},
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.u-demo-block__content {
-		@include flex;
-	}
-</style>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsB/noticeBar/noticeBar.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-```
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsB/noticeBar/noticeBar.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
+
+<br/>
 :::
 
 ### API

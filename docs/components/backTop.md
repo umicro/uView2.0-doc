@@ -106,143 +106,20 @@ export default {
 </style>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view
-	    class="u-page"
-	    ref="u-back-top"
-	>
-	<view class="u-demo-block">
-		<text class="u-demo-block__title">自定义backTop(滚动页面即可在右下角看到图标)</text>
-		<view class="u-demo-block__content">
-			<view class="u-page__backTop-item">
-				<u-checkbox-group
-				    placement="column"
-					shape="square"
-				    @change="checkboxChange"
-					:value="['自定义图标']"
-				>
-					<u-checkbox
-					    :customStyle="{marginBottom: '8px'}"
-					    v-for="(item, index) in checkboxList"
-					    :key="index"
-					    :label="item.name"
-					    :name="item.name"
-					>
-					</u-checkbox>
-				</u-checkbox-group>
-			</view>
-		</view>
-	</view>
-		<u-back-top
-		    :right="backTopData.right"
-		    :customStyle="backTopData.customStyle"
-		    :bottom="backTopData.bottom"
-		    :icon="backTopData.icon"
-		    :mode="backTopData.mode"
-		    :iconStyle="backTopData.iconStyle"
-			:duration="backTopData.duration"
-		    :scrollTop="scrollTop"
-			@click="click"
-		></u-back-top>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	// const dom = weex.requireModule('dom')
-	export default {
-		data() {
-			return {
-				backTopData: {
-					mode: 'circle',
-					icon: 'arrow-upward',
-					bottom: 100,
-					customStyle: {},
-					iconStyle: {},
-					right:20,
-					duration: 300
-				},
-				scrollTop: 0,
-				// 被自定义的样式
-				checkboxList: [{
-						name: '显示方形',
-					},
-					{
-						name: '自定义图标',
-					},
-					{
-						name: '自定义距离',
-					},
-					{
-						name: '自定义样式',
-					},
-					{
-						name:'自定义返回顶部滚动时间',
-					}
-				]
-			}
-		},
-		onLoad() {
-			// 演示中默认勾选了自定义图标
-			this.backTopData.icon = "arrow-up"
-		},
-		onPageScroll(e) {
-			this.scrollTop = e.scrollTop;
-		},
-		methods: {
-			checkboxChange(n) {
-				if (n.includes('显示方形')) {
-					this.backTopData.mode = 'square'
-				} else {
-					this.backTopData.mode = "circle"
-				}
-				if (n.includes('自定义图标')) {
-					this.backTopData.icon = "arrow-up"
-				} else {
-					this.backTopData.icon = "arrow-upward"
-				}
-				if (n.includes('自定义距离')) {
-					this.backTopData.bottom = 300
-					this.backTopData.right=20
-				} else {
-					this.backTopData.bottom = 100
-				}
-				if (n.includes('自定义样式')) {
-					this.backTopData.customStyle = {
-						backgroundColor: '#2979ff',
-					}
-					this.backTopData.iconStyle = {
-						color: '#ffffff'
-					}
-				} else {
-					this.backTopData.customStyle = {}
-					this.backTopData.iconStyle = {}
-				}
-				if (n.includes('自定义返回顶部滚动时间')) {
-					this.backTopData.duration =1500 
-				} else {
-					this.backTopData.duration =300
-				}
-			},
-			click() {
-				console.log('click');
-			}
-		}
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.u-page {
-		height: 1200px;
-		&__backTop-item{
-			margin-top:10px;
-		}
-	}
-</style>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsA/backtop/backtop.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-```
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsA/backtop/backtop.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
+
+<br/>
 :::
 
 ### API

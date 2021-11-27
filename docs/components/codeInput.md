@@ -109,164 +109,20 @@ uView有[键盘](/components/keyboard.html)组件，如果您想结合键盘组�
 </script>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础使用</text>
-			<view class="u-demo-block__content">
-				<u-code-input
-					v-model="value1"
-					:maxlength="4"
-					@change="change"
-					@finish="finish"
-				></u-code-input>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">横线模式</text>
-			<view class="u-demo-block__content">
-				<u-code-input
-					v-model="value2"
-					mode="line"
-					:maxlength="4"
-					:bold="true"
-				></u-code-input>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">设置长度</text>
-			<view class="u-demo-block__content">
-				<u-code-input
-					v-model="value3"
-					:maxlength="6"
-				></u-code-input>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">设置间距</text>
-			<view class="u-demo-block__content">
-				<u-code-input
-					v-model="value4"
-					mode="box"
-					:space="0"
-					:maxlength="4"
-				></u-code-input>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">细边框</text>
-			<view class="u-demo-block__content">
-				<u-code-input
-					v-model="value5"
-					mode="box"
-					:space="0"
-					:maxlength="4"
-					hairline
-				></u-code-input>
-			</view>
-			<view
-				class="u-demo-block__content"
-				style="margin-top: 10px;"
-			>
-				<u-code-input
-					v-model="value6"
-					mode="line"
-					:space="10"
-					:maxlength="4"
-					hairline
-				></u-code-input>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">调整颜色</text>
-			<view class="u-demo-block__content">
-				<u-code-input
-					v-model="value7"
-					mode="box"
-					:space="0"
-					:maxlength="4"
-					hairline
-					color="#f56c6c"
-					borderColor="#f56c6c"
-				></u-code-input>
-				<view class="u-demo-block__content" style="margin-top: 10px;">
-					<u-code-input
-						v-model="value10"
-						mode="line"
-						size="30"
-						:maxlength="4"
-						hairline
-						color="#3c9cff"
-						borderColor="#3c9cff"
-					></u-code-input>
-				</view>
+### 此页面源代码地址
 
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">点模式</text>
-			<view class="u-demo-block__content">
-				<u-code-input
-					v-model="value8"
-					mode="box"
-					dot
-					:space="0"
-					:maxlength="4"
-					hairline
-				></u-code-input>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">预置内容</text>
-			<view class="u-demo-block__content">
-				<u-code-input
-					v-model="value9"
-					mode="box"
-					:space="0"
-					:maxlength="4"
-					hairline
-					fontSize="17"
-				></u-code-input>
-			</view>
-		</view>
-	</view>
-</template>
+:::tip 页面源码地址
+<br/>
 
-<script>
-	export default {
-		data() {
-			return {
-				value1: '',
-				value2: '',
-				value3: '',
-				value4: '',
-				value5: '',
-				value6: '',
-				value7: '',
-				value8: '',
-				value9: '123',
-				value10: '34'
-			}
-		},
-		methods: {
-			change(e) {
-				console.log('change', e);
-			},
-			finish(e) {
-				console.log('finish', e);
-			}
-		},
-	}
-</script>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsC/codeInput/codeInput.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-<style lang="scss">
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsC/codeInput/codeInput.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-</style>
-
-```
+<br/>
 :::
 
 ### API

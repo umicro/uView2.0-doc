@@ -54,93 +54,20 @@
 ></u-divider>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基本案例</text>
-			<view>
-				<u-divider text="分割线"></u-divider>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">是否虚线</text>
-			<view>
-			<u-divider
-			    text="分割线"
-			    :dashed="true"
-			></u-divider>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">是否细线</text>
-			<view>
-			<u-divider
-			    text="分割线"
-			    :hairline="true"
-			></u-divider>
-			</view>
-		</view>
- <view class="u-demo-block">
-			<text class="u-demo-block__title">是否以点代替文字</text>
-			<view>
-			<u-divider
-			    text="分割线"
-			    :dot="true"
-			></u-divider>
-			</view>
-		</view>
- <view class="u-demo-block">
-			<text class="u-demo-block__title">文本内容靠左</text>
-			<view>
-		<u-divider
-		    text="分割线"
-		    textPosition="left"
-		></u-divider>
-			</view>
-		</view>
- <view class="u-demo-block">
-			<text class="u-demo-block__title">文本内容靠右</text>
-			<view>
-		<u-divider
-		    text="分割线"
-		    textPosition="right"
-		></u-divider>
-			</view>
-		</view>
- <view class="u-demo-block">
-			<text class="u-demo-block__title">自定义文本颜色</text>
-			<view>
-		<u-divider
-		    text="分割线"
-		    textColor="#2979ff"
-			lineColor="#2979ff"
-		></u-divider>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
+:::tip 页面源码地址
+<br/>
 
-			}
-		},
-		methods: {
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsA/divider/divider.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-		}
-	}
-</script>
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsA/divider/divider.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-<style lang="scss">
-	.u-divider {}
-</style>
-
-```
+<br/>
 :::
 
 ### API

@@ -115,87 +115,20 @@
 </view>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基本案例</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__image-item">
-					 <u--image
-					     :showLoading="true"
-					     :src="src"
-					     width="80px"
-					     height="80px"
-						 @click="click"
-					 ></u--image>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义形状</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__image-item">
-					<u--image
-					    shape="circle"
-					    :src="src"
-					    width="80px"
-					    height="80px"
-					></u--image>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义圆角</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__image-item">
-					<u--image
-					    radius="4"
-					    :src="src"
-					    width="80px"
-					    height="80px"
-					></u--image>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">图片模式(widthFit)</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__image-item">
-					<u--image
-					    :src="src"
-					    width="80px"
-					    height="80px"
-						mode="widthFit"
-					></u--image>
-				</view>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				src: 'https://cdn.uviewui.com/uview/album/1.jpg'
-			}
-		},
-		methods: {
-			click() {
-				console.log('click');
-			}
-		}
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	 
-</style>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsA/image/image.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-```
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsA/image/image.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
+
+<br/>
 :::
 
 

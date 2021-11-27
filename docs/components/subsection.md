@@ -82,112 +82,20 @@
 </script>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础使用</text>
-			<view class="u-demo-block__content">
-				<u-subsection
-					:list="list"
-					mode="subsection"
-					:current="current1"
-					@change="change1"
-				></u-subsection>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">按钮模式</text>
-			<view class="u-demo-block__content">
-				<u-subsection
-					:list="list"
-					mode="button"
-					:current="current2"
-					@change="change2"
-				></u-subsection>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">更换主题</text>
-			<view class="u-demo-block__content">
-				<u-subsection
-					:list="list"
-					mode="subsection"
-					:current="current3"
-					activeColor="#f56c6c"
-					@change="change3"
-				></u-subsection>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">默认位置</text>
-			<view class="u-demo-block__content">
-				<u-subsection
-					:list="list"
-					mode="button"
-					:current="current4"
-					activeColor="#f9ae3d"
-					@change="change4"
-				></u-subsection>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				current1: 0,
-				current2: 0,
-				current3: 0,
-				current4: 1,
-				list: ['未付款', '待评价', '已付款']
-			}
-		},
-		onLoad() {
-			// setTimeout(() => {
-			// 	this.current1 = 2
-			// }, 3000); 
-		},
-		methods: {
-			change1(index) {
-				this.current1 = index
-			},
-			change2(index) {
-				this.current2 = index
-			},
-			change3(index) {
-				this.current3 = index
-			},
-			change4(index) {
-				this.current4 = index
-			}
-		},
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.album {
-		@include flex;
-		align-items: flex-start;
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsC/subsection/subsection.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-		&__avatar {
-			background-color: $u-bg-color;
-			padding: 5px;
-			border-radius: 3px;
-		}
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsC/subsection/subsection.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-		&__content {
-			margin-left: 10px;
-			flex: 1;
-		}
-	}
-</style>
-
-```
+<br/>
 :::
 
 ### API

@@ -128,188 +128,20 @@ value12: true,
 </script>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础功能</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-switch
-						v-model="value1"
-						@change="change"
-					></u-switch>
-				</view>
-				<view class="u-page__tag-item">
-					<u-switch v-model="value2"></u-switch>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">加载中</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-switch
-						v-model="value3"
-						loading
-					></u-switch>
-				</view>
-				<view class="u-page__tag-item">
-					<u-switch
-						v-model="value4"
-						loading
-					></u-switch>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">禁用状态</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-switch
-						v-model="value5"
-						disabled
-					></u-switch>
-				</view>
-				<view class="u-page__tag-item">
-					<u-switch
-						v-model="value6"
-						disabled
-					></u-switch>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义尺寸</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-switch
-						v-model="value7"
-						size="28"
-					></u-switch>
-				</view>
-				<view class="u-page__tag-item">
-					<u-switch
-						v-model="value8"
-						size="20"
-					></u-switch>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义颜色</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-switch
-						v-model="value9"
-						activeColor="#f56c6c"
-						loading
-					></u-switch>
-				</view>
-				<view class="u-page__tag-item">
-					<u-switch
-						v-model="value10"
-						activeColor="#5ac725"
-						loading
-					></u-switch>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义样式</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-switch
-						:space="2"
-						v-model="value11"
-						activeColor="#f56c6c"
-						inactiveColor="rgb(230, 230, 230)"
-					></u-switch>
-				</view>
-				<view class="u-page__tag-item">
-					<u-switch
-						space="2"
-						v-model="value12"
-						activeColor="#f9ae3d"
-						inactiveColor="rgb(230, 230, 230)"
-					></u-switch>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">异步控制</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-switch
-						v-model="value13"
-						asyncChange
-						@change="asyncChange"
-					></u-switch>
-				</view>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				value1: false,
-				value2: true,
-				value3: false,
-				value4: true,
-				value5: false,
-				value6: true,
-				value7: false,
-				value8: true,
-				value9: true,
-				value10: true,
-				value11: false,
-				value12: true,
-				value13: true,
-			}
-		},
-		watch: {
-			value1(newValue, oldValue) {
-				console.log('v-model', newValue);
-			}
-		},
-		methods: {
-			change(e) {
-				console.log('change', e);
-			},
-			asyncChange(e) {
-				uni.showModal({
-					content: e ? '确定要打开吗' : '确定要关闭吗',
-					success: (res) => {
-						if (res.confirm) {
-							this.value13 = e
-						}
-					}
-				})
-			}
-		}
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.u-page {
-		&__tag-item {
-			margin-right: 30px;
-		}
-	}
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsB/switch/switch.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-	.u-demo-block__content {
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
-	}
-</style>
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsB/switch/switch.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-```
+<br/>
 :::
 
 ### API

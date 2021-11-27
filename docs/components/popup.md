@@ -110,197 +110,20 @@
 </script>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view>
-		<u-navbar
-			title="弹窗"
-			@leftClick="navigateBack"
-			safeAreaInsetTop
-			fixed
-			placeholder
-		></u-navbar>
-		<u-gap
-			height="20"
-			bgColor="#fff"
-		></u-gap>
-		<u-cell-group>
-			<u-cell
-				:titleStyle="{fontWeight: 500}"
-				@click="openPopup(item.popupData)"
-				:title="item.title"
-				v-for="(item, index) in list"
-				:key="index"
-				isLink
-			>
-				<image
-					slot="icon"
-					class="u-cell-icon"
-					:src="item.iconUrl"
-					mode="widthFix"
-				></image>
-			</u-cell>
-		</u-cell-group>
-		<u-popup
-			:safeAreaInsetBottom="true"
-			:safeAreaInsetTop="true"
-			:mode="popupData.mode"
-			:show="show"
-			:round="popupData.round"
-			:overlay="popupData.overlay"
-			:borderRadius="popupData.borderRadius"
-			:closeable="popupData.closeable"
-			:closeOnClickOverlay="popupData.closeOnClickOverlay"
-			@close="close"
-			@open="open"
-		>
-			<view
-				class="u-popup-slot"
-				:style="{
-					width: ['bottom', 'top'].includes(popupData.mode) ? '750rpx' : '200px',
-					marginTop: ['left', 'right'].includes(popupData.mode) ? '480rpx' : '0',
-				}"
-			>
-				<u-button
-					type="success"
-					text="点我关闭"
-					@click="show = !show"
-				></u-button>
-			</view>
-		</u-popup>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				show: false,
-				popupData: {
-					overlay: true,
-					mode: 'bottom',
-					borderRadius: '',
-					closeable: true,
-					closeOnClickOverlay: true
-				},
-				list: [{
-						popupData: {
-							overlay: true,
-							mode: 'top',
-							round: false,
-							closeOnClickOverlay: true
-						},
-						title: '顶部弹出',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/modeTop.png'
-					},
-					{
-						popupData: {
-							overlay: true,
-							mode: 'right',
-							round: false,
-							closeOnClickOverlay: true
-						},
-						title: '右侧弹出',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/modeRight.png'
-					},
-					{
-						popupData: {
-							overlay: true,
-							mode: 'bottom',
-							round: false,
-							closeOnClickOverlay: true
-						},
-						title: '底部弹出',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/modeBottom.png'
-					},
-					{
-						popupData: {
-							overlay: true,
-							mode: 'left',
-							round: false,
-							closeOnClickOverlay: true
-						},
-						title: '左侧弹出',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/modeLeft.png'
-					},
-					{
-						popupData: {
-							overlay: true,
-							mode: 'center',
-							round: true,
-							closeOnClickOverlay: true
-						},
-						title: '居中弹出',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/modeCenter.png'
-					},
-					{
-						popupData: {
-							overlay: true,
-							mode: 'bottom',
-							round: true,
-							closeOnClickOverlay: true
-						},
-						title: '显示圆角',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/showRadis.png'
-					},
-					{
-						popupData: {
-							overlay: true,
-							mode: 'bottom',
-							closeable: false,
-							round: false,
-							closeOnClickOverlay: false
-						},
-						title: '禁止点击遮罩关闭',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/noClose.png'
-					},
-					{
-						popupData: {
-							overlay: true,
-							mode: 'bottom',
-							closeable: true,
-							closeOnClickOverlay: true
-						},
-						title: '显示关闭按钮',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/popup/showCloseBtn.png'
-					}
-				]
-			}
-		},
-		methods: {
-			openPopup(popupData) {
-				this.popupData = popupData
-				uni.$u.sleep().then(() => {
-					this.show = !this.show
-				})
-			},
-			navigateBack() {
-				uni.navigateBack()
-			},
-			open() {
-				// console.log('open');
-			},
-			close() {
-				this.show = false
-				// console.log('close');
-			}
-		}
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.u-popup-slot {
-		width: 200px;
-		height: 150px;
-		@include flex;
-		justify-content: center;
-		align-items: center;
-	}
-</style>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsA/popup/popup.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-```
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsA/popup/popup.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
+
+<br/>
 :::
 
 ### API

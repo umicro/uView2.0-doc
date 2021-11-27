@@ -103,174 +103,20 @@ export default {
 </style>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">直角边形状</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="1500"
-						shape="horn"
-					></u-badge>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">徽标数显示方式</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="5132"
-						numberType="ellipsis"
-					></u-badge>
-				</view>
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="1011"
-						numberType="overflow"
-					></u-badge>
-				</view>
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="1500"
-						numberType="limit"
-					></u-badge>
-				</view>
+### 此页面源代码地址
 
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="45187"
-						numberType="limit"
-					></u-badge>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">显示圆点</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="1011"
-						numberType="overflow"
-						isDot
-					>
-					</u-badge>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义主题</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="9"
-						type="error"
-					>
-					</u-badge>
-				</view>
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="9"
-						type="warning"
-					>
-					</u-badge>
-				</view>
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="9"
-						type="success"
-					>
-					</u-badge>
-				</view>
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="9"
-						type="primary"
-					>
-					</u-badge>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">反转色</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="9"
-						type="error"
-						inverted
-					>
-					</u-badge>
-				</view>
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="1532"
-						inverted
-						type="warning"
-					>
-					</u-badge>
-				</view>
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="12"
-						inverted
-						type="success"
-					>
-					</u-badge>
-				</view>
-				<view class="u-page__tag-item">
-					<u-badge
-						:value="999"
-						inverted
-						type="primary"
-					>
-					</u-badge>
-				</view>
-			</view>
-		</view>
-	</view>
-</template>
+:::tip 页面源码地址
+<br/>
 
-<script>
-	export default {
-		data() {
-			return {}
-		}
-	}
-</script>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsB/badge/badge.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-<style lang="scss">
-	.box {
-		justify-content: space-between;
-	}
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsB/badge/badge.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-	.u-page__tag-item {
-		margin-right: 40px;
-		margin-top: 10px;
-	}
-
-	.badge-box {
-		width: 45px;
-		height: 45px;
-		border-top-left-radius: 3px;
-		border-top-right-radius: 3px;
-		border-bottom-left-radius: 3px;
-		border-bottom-right-radius: 3px;
-		background-color: #E6E6E6;
-	}
-
-	.u-demo-block__content {
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
-	}
-</style>
-
-```
+<br/>
 :::
 
 ### API

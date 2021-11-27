@@ -37,94 +37,20 @@ Tooltip组件主要用于长按操作，类似微信的长按气泡
 </template>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-    <view class="u-page">
-        <view class="u-demo-block">
-            <text class="u-demo-block__title">基础使用</text>
-            <view class="u-demo-block__content">
-                <u-tooltip
-                        :text="text1"
-                        overlay
-                ></u-tooltip>
-            </view>
-        </view>
-        <view class="u-demo-block">
-            <text class="u-demo-block__title">下方显示</text>
-            <view class="u-demo-block__content" style="padding-bottom: 30px;">
-                <u-tooltip
-                        :text="text2"
-                        direction="bottom"
-                ></u-tooltip>
-            </view>
-        </view>
-        <view class="u-demo-block">
-            <text class="u-demo-block__title">扩展按钮</text>
-            <view class="u-demo-block__content">
-                <u-tooltip
-                        :text="text3"
-                        :buttons="buttons1"
-                ></u-tooltip>
-            </view>
-        </view>
-        <view class="u-demo-block">
-            <text class="u-demo-block__title">自动调整位置</text>
-            <view class="u-demo-block__content">
-                <u-tooltip
-                        :text="text4"
-                        :buttons="buttons2"
-                ></u-tooltip>
-            </view>
-        </view>
-        <view class="u-demo-block">
-            <text class="u-demo-block__title">高亮选中文本背景色</text>
-            <view class="u-demo-block__content">
-                <u-tooltip
-                        :text="text5"
-                        :buttons="buttons3"
-                        bgColor="#e3e4e6"
-                ></u-tooltip>
-            </view>
-        </view>
-    </view>
-</template>
+### 此页面源代码地址
 
-<script>
-    export default {
-        data() {
-            return {
-                text1: '长按文本，上方提示',
-                text2: '长按文本，下方提示',
-                text3: '显示多个扩展按钮',
-                text4: '自动调整气泡位置',
-                text5: '长按文本，显示背景色',
-                buttons1: ['扩展'],
-                buttons2: ['扩展', '搜索', '翻译'],
-                buttons3: ['扩展', '搜索', '翻译']
-            }
-        },
-        onLoad() {
-            uni.$u.sleep(3000).then(() => {
-                this.buttons3 = ['扩展']
-            })
-        }
-    }
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-    .u-page {
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsC/tooltip/tooltip.vue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-    }
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsC/tooltip/tooltip.vue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-    .u-demo-block__content {
-        padding-top: 10px;
-    }
-</style>
-
-
-```
+<br/>
 :::
 
 ### API

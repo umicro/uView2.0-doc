@@ -83,141 +83,20 @@
 <u-loading-page loading-color="#000000"></u-loading-page>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<u-navbar
-			title="加载页"
-			@leftClick="navigateBack"
-			safeAreaInsetTop
-			fixed
-			placeholder
-		></u-navbar>
-		<u-gap
-		    bgColor="#fff"
-		    height="20"
-		></u-gap>
-		<u-cell-group>
-			<u-cell
-			    :titleStyle="{fontWeight: 500}"
-			    @click="openLoadingPage(index)"
-			    :title="item.title"
-			    v-for="(item, index) in list"
-			    :key="index"
-			    isLink
-			>
-				<image
-				    slot="icon"
-				    class="u-cell-icon"
-				    :src="item.iconUrl"
-				    mode="widthFix"
-				></image>
-			</u-cell>
-		</u-cell-group>
-		<u-loading-page
-		    :loadingText="loadingPageData.loadingText"
-		    :image="loadingPageData.image"
-		    :loadingMode="loadingPageData.loadingMode"
-		    :bgColor="loadingPageData.bgColor"
-		    :loading="loading"
-		    :color="loadingPageData.color"
-		    :loadingColor="loadingPageData.loadingColor"
-		>
-		</u-loading-page>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				loading: false,
-				loadingPageData: {
-					// 自定义提示内容
-					loadingText: '',
-					// 自定义图片
-					image: '',
-					// 自定义加载动画模式
-					loadingMode: '',
-					// 自定义背景色
-					bgColor: '#ffffff',
-				},
-				list: [{
-						title: '自定义提示内容',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/loading-page/promptContent.png',
-					},
-					{
-						title: '自定义图片',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/loading-page/customPicture.png',
-					},
-					{
-						title: '自定义加载动画模式',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/loading-page/customMode.png',
-					},
-					{
-						title: '自定义背景色',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/loading-page/customBgColor.png',
+:::tip 页面源码地址
+<br/>
 
-					},
-				]
-			}
-		},
-		methods: {
-			navigateBack() {
-				uni.navigateBack()
-			},
-			openLoadingPage(indexNum) {
-				this.loadingPageData = {
-					loadingText: '',
-					image: '',
-					loadingMode: '',
-					bgColor: '#ffffff',
-				}
-				if (indexNum == 0) {
-					//自定义提示内容
-					this.loadingPageData.loadingMode = 'semicircle'
-					this.loadingPageData.loadingText = "Hello uView"
-					this.loadingPageData.color = '#C8C8C8',
-						this.loadingPageData.loadingColor = '#C8C8C8'
-				} else if (indexNum == 1) {
-					// 自定义图片
-					this.loadingPageData.image =
-						"/static/uview/common/logo.png"
-					this.loadingPageData.loadingText = "uView UI"
-					this.loadingPageData.color = '#C8C8C8',
-						this.loadingPageData.loadingColor = '#C8C8C8'
-				} else if (indexNum == 2) {
-					// 自定义加载动画模式
-					this.loadingPageData.loadingMode = 'circle'
-					this.loadingPageData.loadingText = "uView UI"
-					this.loadingPageData.color = '#C8C8C8',
-						this.loadingPageData.loadingColor = '#C8C8C8'
-				} else if (indexNum == 3) {
-					// 自定义背景色
-					this.loadingPageData.loadingMode = 'spinner'
-					this.loadingPageData.bgColor = 'rgba(0, 0, 0, 0.3)'
-					this.loadingPageData.loadingText = "uView UI"
-					this.loadingPageData.color = '#eee',
-						this.loadingPageData.loadingColor = '#ddd'
-				}
-				this.loading = true
-				setTimeout(() => {
-					this.loading = false
-				}, 2000)
-			}
-		}
-	}
-</script>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsA/loading-page/loading-page.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-<style lang="scss">
-	.u-page {
-		padding: 0;
-	}
-</style>
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsA/loading-page/loading-page.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-```
+<br/>
 :::
 
 ### API

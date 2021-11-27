@@ -82,78 +82,20 @@
 </script>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<u-list
-			@scrolltolower="scrolltolower"
-		>
-			<u-list-item
-				v-for="(item, index) in indexList"
-				:key="index"
-			>
-				<u-cell
-					:title="`列表长度-${index + 1}`"
-				>
-					<u-avatar
-						slot="icon"
-						shape="square"
-						size="35"
-						:src="item.url"
-						customStyle="margin: -3px 5px -3px 0"
-					></u-avatar>
-				</u-cell>
-			</u-list-item>
-		</u-list>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				indexList: [],
-				urls: [
-					'https://cdn.uviewui.com/uview/album/1.jpg',
-					'https://cdn.uviewui.com/uview/album/2.jpg',
-					'https://cdn.uviewui.com/uview/album/3.jpg',
-					'https://cdn.uviewui.com/uview/album/4.jpg',
-					'https://cdn.uviewui.com/uview/album/5.jpg',
-					'https://cdn.uviewui.com/uview/album/6.jpg',
-					'https://cdn.uviewui.com/uview/album/7.jpg',
-					'https://cdn.uviewui.com/uview/album/8.jpg',
-					'https://cdn.uviewui.com/uview/album/9.jpg',
-					'https://cdn.uviewui.com/uview/album/10.jpg',
-				]
-			}
-		},
-		onLoad() {
-			this.loadmore()
-		},
-		methods: {
-			scrolltolower() {
-				this.loadmore()
-			},
-			loadmore() {
-				for (let i = 0; i < 30; i++) {
-					this.indexList.push({
-						url: this.urls[uni.$u.random(0, this.urls.length - 1)]
-					})
-				}
-			}
-		},
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.u-page {
-		padding: 0;
-	}
-</style>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsC/list/list.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-```
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsC/list/list.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
+
+<br/>
 :::
 
 ### API

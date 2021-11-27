@@ -155,63 +155,20 @@ H5、App（含NVUE）外链可以直接打开，小程序端将自动复制链�
 
 <br>
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-content">
-		<u-parse container-style="padding: 20px" :content="content" domain="https://6874-html-foe72-1259071903.tcb.qcloud.la/demo" lazy-load scroll-table selectable use-anchor :tag-style="tagStyle" @load="load" @ready="ready" @imgTap="imgTap" @linkTap="linkTap" />
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-    // 复制后解开下面一行注释
-	// const content = require('./content')
-	export default {
-		data() {
-			return {
-				content: '',
-				tagStyle: {
-					table: 'box-sizing: border-box; border-top: 1px solid #dfe2e5; border-left: 1px solid #dfe2e5;',
-					th: 'border-right: 1px solid #dfe2e5; border-bottom: 1px solid #dfe2e5;',
-					td: 'border-right: 1px solid #dfe2e5; border-bottom: 1px solid #dfe2e5;',
-					li: 'margin: 5px 0;'
-				}
-			}
-		},
-		onLoad() {
-			// 模拟网络请求
-			setTimeout(() => {
-				this.content = content
-			}, 200)
-		},
-		methods: {
-			load() {
-				// dom 结构加载完毕时触发
-			},
-			ready() {
-				// 渲染完毕时触发
-			},
-			imgTap() {
-				// 图片被点击时触发
-			},
-			linkTap() {
-				// 链接被点击时触发
-			}
-		}
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.u-content {
-		padding: 24rpx;
-		font-size: 32rpx;
-		color: $u-content-color;
-		line-height: 1.6;
-	}
-</style>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsB/parse/parse.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-```
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsB/parse/parse.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
+
+<br/>
 :::
 
 ### API

@@ -257,190 +257,20 @@
 </view>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础使用</text>
-			<view class="u-demo-block__content">
-				<u-row customStyle="margin-bottom: 10px">
-					<u-col span="6">
-						<view class="demo-layout bg-purple-light"></view>
-					</u-col>
-					<u-col span="6">
-						<view class="demo-layout bg-purple"></view>
-					</u-col>
-				</u-row>
-				<u-row customStyle="margin-bottom: 10px">
-					<u-col span="4">
-						<view class="demo-layout bg-purple"></view>
-					</u-col>
-					<u-col span="4">
-						<view class="demo-layout bg-purple-light"></view>
-					</u-col>
-					<u-col span="4">
-						<view class="demo-layout bg-purple-dark"></view>
-					</u-col>
-				</u-row>
-				<u-row justify="space-between">
-					<u-col span="3">
-						<view class="demo-layout bg-purple"></view>
-					</u-col>
-					<u-col span="3">
-						<view class="demo-layout bg-purple-light"></view>
-					</u-col>
-					<u-col span="3">
-						<view class="demo-layout bg-purple"></view>
-					</u-col>
-					<u-col span="3">
-						<view class="demo-layout bg-purple-light"></view>
-					</u-col>
-				</u-row>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">分栏间隔</text>
-			<view class="u-demo-block__content">
-				<u-row
-				    justify="space-between"
-				    gutter="10"
-				>
-					<u-col span="3">
-						<view class="demo-layout bg-purple"></view>
-					</u-col>
-					<u-col span="3">
-						<view class="demo-layout bg-purple-light"></view>
-					</u-col>
-					<u-col span="3">
-						<view class="demo-layout bg-purple"></view>
-					</u-col>
-					<u-col span="3">
-						<view class="demo-layout bg-purple-light"></view>
-					</u-col>
-				</u-row>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">混合布局</text>
-			<view class="u-demo-block__content">
-				<u-row
-				    justify="space-between"
-				    gutter="10"
-				>
-					<u-col span="2">
-						<view class="demo-layout bg-purple-light"></view>
-					</u-col>
-					<u-col span="4">
-						<view class="demo-layout bg-purple"></view>
-					</u-col>
-					<u-col span="6">
-						<view class="demo-layout bg-purple-dark"></view>
-					</u-col>
-				</u-row>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">分栏偏移</text>
-			<view class="u-demo-block__content">
-				<u-row
-				    justify="space-between"
-				    customStyle="margin-bottom: 10px"
-				>
-					<u-col
-					    span="3"
-					    offset="3"
-					>
-						<view class="demo-layout bg-purple-light"></view>
-					</u-col>
-					<u-col
-					    span="3"
-					    offset="3"
-					>
-						<view class="demo-layout bg-purple"></view>
-					</u-col>
-				</u-row>
-				<u-row>
-					<u-col span="3">
-						<view class="demo-layout bg-purple-light"></view>
-					</u-col>
-					<u-col
-					    span="3"
-					    offset="3"
-					>
-						<view class="demo-layout bg-purple"></view>
-					</u-col>
-				</u-row>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">对齐方式</text>
-			<view class="u-demo-block__content">
-				<u-row
-				    justify="space-between"
-					customStyle="margin-bottom: 10px"
-				>
-					<u-col
-					    span="3"
-					>
-						<view class="demo-layout bg-purple-light"></view>
-					</u-col>
-					<u-col
-					    span="3"
-					>
-						<view class="demo-layout bg-purple"></view>
-					</u-col>
-				</u-row>
-				<u-row>
-					<u-col span="3">
-						<view class="demo-layout bg-purple-light"></view>
-					</u-col>
-					<u-col
-					    span="3"
-					>
-						<view class="demo-layout bg-purple"></view>
-					</u-col>
-				</u-row>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
+:::tip 页面源码地址
+<br/>
 
-			}
-		}
-	}
-</script>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsC/layout/layout.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-<style lang="scss">
-	.wrap {
-		padding: 12px;
-	}
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsC/layout/layout.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-	.demo-layout {
-		height: 25px;
-		border-radius: 4px;
-	}
-
-	.bg-purple {
-		background: #CED7E1;
-	}
-
-	.bg-purple-light {
-		background: #e5e9f2;
-	}
-
-	.bg-purple-dark {
-		background: #99a9bf;
-	}
-</style>
-
-```
+<br/>
 :::
 
 ### API

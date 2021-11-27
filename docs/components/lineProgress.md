@@ -104,180 +104,20 @@
 </script>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础功能</text>
-			<view class="u-demo-block__content">
-				<u-line-progress :percentage="percentage1">
-				</u-line-progress>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">不显示百分比</text>
-			<view class="u-demo-block__content">
-				<u-line-progress
-				    :showText="false"
-				    :percentage="percentage2"
-				>
-				</u-line-progress>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义高度</text>
-			<view class="u-demo-block__content">
-				<u-line-progress
-				    height="8"
-				    :showText="false"
-				    :percentage="percentage3"
-				>
-				</u-line-progress>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义颜色</text>
-			<view class="u-demo-block__content">
-				<u-line-progress
-				    height="8"
-				    :showText="false"
-				    :percentage="percentage4"
-				    activeColor="#3c9cff"
-				    inactiveColor="#f3f4f6"
-				>
-				</u-line-progress>
-			</view>
-		</view>
-		<view
-		    class="u-demo-block"
-		    v-if="!androidNvue"
-		>
-			<text class="u-demo-block__title">自定义样式(不支持安卓环境的nvue)</text>
-			<view class="u-demo-block__content">
-				<u-line-progress
-				    height="8"
-				    :showText="false"
-				    :percentage="percentage5"
-				    activeColor="#3c9cff"
-				    inactiveColor="#f3f4f6"
-				>
-					<text class="u-percentage-slot">{{percentage4}}%</text>
-				</u-line-progress>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">手动加减</text>
-			<view class="u-demo-block__content">
-				<u-line-progress
-				    height="8"
-				    :showText="false"
-				    :percentage="percentage6"
-				    activeColor="#3c9cff"
-				    inactiveColor="#f3f4f6"
-				>
-				</u-line-progress>
-				<u-grid
-				    border
-				    align="center"
-					customStyle="margin-top: 30px"
-				>
-					<u-grid-item @click="computedWidth('minus')">
-						<view class="u-grid-slot">
-							<view class="u-grid-slot__circle">
-								<text class="u-grid-slot__circle__text">减少</text>
-							</view>
-						</view>
-					</u-grid-item>
-					<u-grid-item @click="computedWidth('plus')">
-						<view class="u-grid-slot">
-							<view class="u-grid-slot__circle">
-								<text class="u-grid-slot__circle__text">增加</text>
-							</view>
-						</view>
-					</u-grid-item>
-				</u-grid>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				androidNvue: false,
-				percentage1: 30,
-				percentage2: 40,
-				percentage3: 50,
-				percentage4: 60,
-				percentage5: 70,
-				percentage6: 50,
-			}
-		},
-		onLoad() {
-			// #ifdef APP-NVUE
-			this.androidNvue = uni.$u.os() === 'android'
-			// #endif
-			uni.$u.sleep(2500).then(() => {
-				this.percentage1 = 120
-			})
-		},
-		methods: {
-			computedWidth(type) {
-				if(type === 'plus') {
-					this.percentage6 = uni.$u.range(0, 100, this.percentage6 + 10)
-				} else {
-					this.percentage6 = uni.$u.range(0, 100, this.percentage6 - 10)
-				}
-			}
-		},
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.u-page {}
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsB/progress/progress.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-	.u-percentage-slot {
-		padding: 1px 5px;
-		background-color: $u-warning;
-		color: #fff;
-		border-radius: 100px;
-		font-size: 10px;
-		margin-right: -5px;
-	}
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsB/progress/progress.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-	.u-demo-block__content {
-		flex-direction: column !important;
-		flex-wrap: nowrap;
-		align-items: stretch;
-	}
-
-	.u-grid-slot {
-		border-radius: 100px;
-		border-color: #dbfbdb;
-		border-width: 2px;
-		@include flex;
-
-		&__circle {
-			width: 50px;
-			height: 50px;
-			background-color: #dbfbdb;
-			border-radius: 100px;
-			justify-content: center;
-			align-items: center;
-			margin: 2px;
-
-			&__text {
-				color: rgb(25, 190, 107);
-				font-size: 13px;
-			}
-		}
-	}
-</style>
-
-```
+<br/>
 :::
 
 ### API

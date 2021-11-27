@@ -83,187 +83,20 @@
 </script>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础功能</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-count-to
-						:endVal="value"
-						@end="end"
-					></u-count-to>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">倒计数</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-count-to :startVal="startVal1"></u-count-to>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">显示小数位</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-count-to
-						:startVal="startVal2"
-						:endVal="endVal"
-						:decimals="decimals"
-					></u-count-to>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">千分位分隔符</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-count-to
-						:startVal="startVal3"
-						:endVal="endVal2"
-						separator=","
-						:decimals="decimals"
-					></u-count-to>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义控制</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-count-to
-						ref="uCountTo"
-						:endVal="endVal3"
-						:autoplay="autoplay"
-					></u-count-to>
-				</view>
-			</view>
-			<view class="u-demo-block__content">
-				<view
-					class=""
-					style="flex: 1;"
-				>
-					<u-grid
-						border
-						align="center"
-						customStyle="margin-top: 20px;margin-bottom: 20"
-					>
-						<u-grid-item @click="start">
-							<view class="u-grid-slot">
-								<view class="u-grid-slot__circle">
-									<text class="u-grid-slot__circle__text">开始</text>
-								</view>
-							</view>
-						</u-grid-item>
-						<u-grid-item @click="paused">
-							<view class="u-grid-slot">
-								<view class="u-grid-slot__circle">
-									<text class="u-grid-slot__circle__text">暂停</text>
-								</view>
-							</view>
-						</u-grid-item>
-						<u-grid-item @click="resume">
-							<view class="u-grid-slot">
-								<view class="u-grid-slot__circle">
-									<text class="u-grid-slot__circle__text">继续</text>
-								</view>
-							</view>
-						</u-grid-item>
-					</u-grid>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__tag-item">
-					<u-count-to
-						:endVal="value"
-						color="#909399"
-						:fontSize="fontSize"
-						:bold="true"
-					></u-count-to>
-				</view>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				value: 3000,
-				startVal1: 300,
-				startVal2: 100.00,
-				endVal: 10.55,
-				decimals: 2,
-				startVal3: 2000,
-				endVal2: 1542,
-				endVal3: 3000,
-				autoplay: false,
-				color: '#FF0000',
-				fontSize: 40,
-			}
-		},
-		onLoad() {
-			// setTimeout(() => {
-			// 	this.value = 3000
-			// }, 3000)
-		},
-		methods: {
-			start() {
-				this.$refs.uCountTo.start();
-			},
-			paused() {
-				this.$refs.uCountTo.stop()
-			},
-			resume() {
-				this.$refs.uCountTo.resume()
-			},
-			end() {
-				console.log('end');
-			}
-		}
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.u-demo-block__content {
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
-	}
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsB/countTo/countTo.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-	.u-grid-slot {
-		border-radius: 100px;
-		border-color: #dbfbdb;
-		border-width: 2px;
-		@include flex;
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsB/countTo/countTo.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-		&__circle {
-			width: 50px;
-			height: 50px;
-			background-color: #dbfbdb;
-			border-radius: 100px;
-			justify-content: center;
-			align-items: center;
-			margin: 2px;
-
-			&__text {
-				color: rgb(25, 190, 107);
-				font-size: 13px;
-			}
-		}
-	}
-</style>
-
-```
+<br/>
 :::
 
 ### API
