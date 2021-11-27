@@ -488,9 +488,11 @@
 | lineHeight						| 滑块高度      															| String &#124; Number	| 3						| -			|
 | itemStyle					    	| 菜单item的样式      													| String &#124; Object	| { height: '44px' }					| -			|
 | scrollable						| 菜单是否可滚动						        							| Boolean				| true					| false		|
+| current							| 当前选中标签的索引      															| String &#124; Number	| 0					| -			|
 
 ### Events
 
 |事件名	|说明			|回调参数							|版本	|
 |:-		|:-				|:-									|:-		|
-|click	|点击标签时触发	|{...item, index}	|-		|
+|click	|点击标签时触发	| index: 标签索引值，item: 传入的其他值	|-		|
+|change	|标签索引改变时触发(`disalbed`时不会触发)	| index: 标签索引值，item: 传入的其他值	|-		|

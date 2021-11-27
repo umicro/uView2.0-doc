@@ -80,11 +80,11 @@
 
 ### 设置弹出层的圆角
 
-需要将`round`设置为`ture`，并给`borderRadius`设置一个值来给弹窗增加圆角，单位rpx。
+需要将`round`设置为圆角值(仅对`mode = top | bottom | center`有效)。
 
 ```html
 <template>
-	<u-popup :show="show" :round="true" mode="top" borderRadius="12" @close="close" @open="open">
+	<u-popup :show="show" :round="10" mode="top" @close="close" @open="open">
 		<view>
             <text>人生若只如初见，何事秋风悲画扇</text>
 		</view>
@@ -324,7 +324,7 @@
 | safeAreaInsetBottom	| 是否为留出[底部安全距离](/components/safeAreaInset.html)											| Boolean				| true		| false									|
 | safeAreaInsetTop		| 是否留出[顶部安全距离](/components/safeAreaInset.html)（状态栏高度）								| Boolean				| false		| true									|
 | closeIconPos			| 自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角	| String				| top-right	| top-left / bottom-left / bottom-right	|
-| round					| 是否显示圆角																					| Boolean				| false		| true									|
+| round					| 设置圆角值，仅对`mode = top | bottom | cener`有效  										| Number &#124; String				| 0		| -									|
 | zoom					| 当mode=center时 是否开启缩放																	| Boolean				| true		| false									|
 | bgColor				| 背景色，一般用于特殊弹窗内容场景，设置为`transparent`可去除默认的白色背景																| String				| -		| -									|
 | customStyle			| 用户自定义样式																					| Object				| -			| -										|
