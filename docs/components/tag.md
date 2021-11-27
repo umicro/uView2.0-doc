@@ -537,7 +537,7 @@ icon="https://cdn.uviewui.com/uview/example/tag.png"></u-tag>
 | name			| 点击时返回的索引值，用于区分例遍的数组哪个元素被点击了	| String &#124; Number	| -			| -									|
 | plainFill		| 镂空时是否填充背景色								| Boolean				| false		| true								|
 | plain			| 是否镂空											| Boolean				| false		| true								|
-| closeable		| 是否可关闭，设置为`true`，文字右边会出现一个关闭图标	| Boolean				| false		| true								|
+| closable		| 是否可关闭，设置为`true`，文字右边会出现一个关闭图标	| Boolean				| false		| true								|
 | show			| 标签显示与否										| Boolean				| true		| false								|
 | icon			| 内置图标，或绝对路径的图片							| String				| -			| -									|
 
@@ -546,4 +546,4 @@ icon="https://cdn.uviewui.com/uview/example/tag.png"></u-tag>
 |事件名	|说明											|回调参数					|版本	|
 |:-		|:-												|:-							|:-		|
 | click	| 点击标签触发									| index: 传递的`index`参数值	| -		|
-| close	| `closeable`为`true`时，点击标签关闭按钮触发		| index: 传递的`index`参数值	| -		|
+| close	| `closable`为`true`时，点击标签关闭按钮触发		| index: 传递的`index`参数值	| -		|
