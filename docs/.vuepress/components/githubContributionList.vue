@@ -3,9 +3,12 @@
   <el-row class="row">
     <el-col :span="80" v-for="(item, index) in tableData" :key="index" class="col">
       <el-card @click.native="open(item)" shadow="hover" :body-style="{ padding: '0px' }">
-        <img :src="item.avatar_url" class="image">
+        <el-image
+            style="width: 100px; height: 100px"
+            :src="item.avatar_url"
+            fit="fill"></el-image>
         <div style="padding: 14px;">
-          <span>{{ item.login }}</span>
+          <div class="login">{{ item.login }}</div>
           <div class="bottom clearfix">
             <div class="count">{{ item.contributions }} commit</div>
           </div>
@@ -55,11 +58,18 @@ export default {
 .row {
   max-height: 500px;
   overflow: auto;
-
 }
 
 .col {
   margin: 10px;
+}
+
+.login {
+  font-size: 14px;
+  width: 70px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .bottom {
@@ -70,12 +80,8 @@ export default {
 .count {
   color: #208EFF;
   padding: 0;
+  font-size: 12px;
   float: right;
-}
-
-.image {
-  width: 100px;
-  display: block;
 }
 
 .clearfix:before,
