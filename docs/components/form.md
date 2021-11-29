@@ -442,13 +442,11 @@ export default {
 	},
 	methods: {
 		submit() {
-			this.$refs.uForm.validate(valid => {
-				if (valid) {
-					console.log('验证通过');
-				} else {
-					console.log('验证失败');
-				}
-			});
+			this.$refs.uForm.validate().then(res => {
+				uni.$u.toast('校验通过')
+			}).catch(errors => {
+				uni.$u.toast('校验失败')
+			})
 		}
 	},
 };
