@@ -1,5 +1,4 @@
 <template>
-
   <el-row class="row">
     <el-col :span="80" v-for="(item, index) in tableData" :key="index" class="col">
       <el-card @click.native="open(item)" shadow="hover" :body-style="{ padding: '0px' }">
