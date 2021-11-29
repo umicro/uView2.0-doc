@@ -21,51 +21,55 @@
 
 ```html
 <template>
-	<view class="">
-		<u-radio-group v-model="value" @change="radioGroupChange">
-			<u-radio 
-				@change="radioChange" 
-				v-for="(item, index) in list" :key="index" 
-				:name="item.name"
-				:disabled="item.disabled"
-			>
-				{{item.name}}
-			</u-radio>
-		</u-radio-group>
-	</view>
+  <u-radio-group
+    v-model="radiovalue1"
+    placement="column"
+    @change="groupChange"
+  >
+    <u-radio
+      :customStyle="{marginBottom: '8px'}"
+      v-for="(item, index) in radiolist1"
+      :key="index"
+      :label="item.name"
+      :name="item.name"
+      @change="radioChange"
+    >
+    </u-radio>
+  </u-radio-group>
 </template>
 
 <script>
 export default {
 	data() {
 		return {
-			list: [
-				{
-					name: 'apple',
-					disabled: false
-				},
-				{
-					name: 'banner',
-					disabled: false
-				},
-				{
-					name: 'orange',
-					disabled: false
-				}
-			],
-			// u-radio-group的v-model绑定的值如果设置为某个radio的name，就会被默认选中
-			value: 'orange',
+          // 基本案列数据
+          radiolist1: [{
+            name: '苹果',
+            disabled: false
+          },
+            {
+              name: '香蕉',
+              disabled: false
+            },
+            {
+              name: '橙子',
+              disabled: false
+            }, {
+              name: '榴莲',
+              disabled: false
+            }
+          ],
+          // u-radio-group的v-model绑定的值如果设置为某个radio的name，就会被默认选中
+          radiovalue1: '苹果',
 		};
 	},
 	methods: {
-		// 选中某个单选框时，由radio时触发
-		radioChange(e) {
-			console.log(e);
-		},
-		// 选中任一radio时，由radio-group触发
-		radioGroupChange(e) {
-			console.log(e);
-		}
+      groupChange(n) {
+        console.log('groupChange', n);
+      },
+      radioChange(n) {
+        console.log('radioChange', n);
+      }
 	}
 };
 </script>
@@ -161,14 +165,14 @@ export default {
 | 参数			| 说明																		| 类型				| 默认值	| 可选值	|
 | :-			| :-																		| :-				| :-	| :-	|
 | name			| checkbox的名称																| String \ Number	| -		| -		|
-| shape			| 形状，square为方形，circle为圆型											| String			| square| circle|
+| shape			| 形状，square为方形，circle为圆型									    		| String			| square| circle|
 | disabled		| 是否禁用																	| Boolean			| -		| -		|
 | labelDisabled	| 是否禁止点击提示语选中复选框													| String \ Boolean	| -		| -		|
-| activeColor	| 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值					| String			| -		| -		|
+| activeColor	| 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值			    		| String			| -		| -		|
 | inactiveColor	| 未选中的颜色																| String			| -		| -		|
 | iconSize		| 图标的大小，单位px															| String \ Number	| -		| -		|
 | labelSize		| label的字体大小，px单位														| String \ Number	| -		| -		|
-| label			| label提示文字，因为nvue下，直接slot进来的文字，由于特殊的结构，无法修改样式		| String \ Number	| -		| -		|
+| label			| label提示文字，因为nvue下，直接slot进来的文字，由于特殊的结构，无法修改样式	    	| String \ Number	| -		| -		|
 | size			| 整体的大小																	| String \ Number	| -		| -		|
 | iconColor		| 图标颜色																	| String			| -		| -		|
 | labelColor	| label的颜色																| String			| -		| -		|
@@ -190,9 +194,9 @@ export default {
 | size			| 整个组件的尺寸，默认px									| String \ Number		| 18		| -		|
 | placement		| 布局方式，row-横向，column-纵向							| Boolean				| row		| column|
 | label			| 文本													| String				| -			| -		|
-| labelColor	| label的字体颜色										| String				| #303133	| -		|
+| labelColor	| label的字体颜色								    		| String				| #303133	| -		|
 | labelSize		| label的字体大小，px单位									| String \ Number		| 14		| -		|
-| labelDisabled	| 是否禁止点击文本操作									| Boolean				| false		| true	|
+| labelDisabled	| 是否禁止点击文本操作							    		| Boolean				| false		| true	|
 | iconColor		| 图标颜色												| String				| #ffffff	| -		|
 | iconSize		| 图标的大小，单位px										| String \ Number		| 12		| -		|
 | borderBottom	| 竖向配列时，是否显示下划线								| Boolean				| false		| true	|
