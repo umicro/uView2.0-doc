@@ -40,7 +40,7 @@
                                 margin="0 0 8px 0"
                                 text="全面的组件和便捷的工具会让您信手拈来，如鱼得水"
                         ></u--text>
-                        <u-album :urls="urls2"></u-album>
+                        <u-album :urls="urls1" keyName="src2"></u-album>
                     </view>
                 </view>
             </view>
@@ -54,7 +54,7 @@
             return {
                 albumWidth: 0,
                 urls1: [{
-                    src: 'https://cdn.uviewui.com/uview/album/1.jpg',
+                    src2: 'https://cdn.uviewui.com/uview/album/1.jpg',
                 }]
             }
         }
@@ -80,44 +80,42 @@
 </style>
 ```
 
+
 ### 多图模式
 
 - 通过`urls`传入更多的图片地址形成图片列表
 
 ```html
 <template>
-    <view class="u-page">
-        <view class="u-demo-block">
-            <text class="u-demo-block__title">基础使用</text>
-            <view class="u-demo-block__content">
-                <view class="album">
-                    <view class="album__avatar">
-                        <image
-                                src="/static/uview/common/logo.png"
-                                mode=""
-                                style="width: 32px;height: 32px;"
-                        ></image>
-                    </view>
-                    <view class="album__content">
-                        <u--text
-                                text="uView UI"
-                                type="primary"
-                                bold
-                                size="17"
-                        ></u--text>
-                        <u--text
-                                margin="0 0 8px 0"
-                                text="全面的组件和便捷的工具会让您信手拈来，如鱼得水"
-                        ></u--text>
-                        <u-album
-                                :urls="urls1"
-                                keys="src"
-                        ></u-album>
-                    </view>
-                </view>
-            </view>
+  <view class="u-page">
+    <view class="u-demo-block">
+      <text class="u-demo-block__title">多图模式</text>
+      <view class="u-demo-block__content">
+        <view class="album">
+          <view class="album__avatar">
+            <image
+              src="/static/uview/common/logo.png"
+              mode=""
+              style="width: 32px;height: 32px;"
+            ></image>
+          </view>
+          <view class="album__content">
+            <u--text
+              text="uView UI"
+              type="primary"
+              bold
+              size="17"
+            ></u--text>
+            <u--text
+              margin="0 0 8px 0"
+              text="全面的组件和便捷的工具会让您信手拈来，如鱼得水"
+            ></u--text>
+            <u-album :urls="urls2"></u-album>
+          </view>
         </view>
+      </view>
     </view>
+  </view>
 </template>
 
 <script>
@@ -186,13 +184,13 @@
 | urls				| 图片地址列表 支持 Array\<String\> &#124; Array\<Object\>形式	| Array					| -				| -			|
 | keyName			| 指定从数组的对象元素中读取哪个属性作为图片地址						| String				| -				| -			|
 | singleSize		| 单图时，图片长边的长度											| String &#124; Number	| 180			| -			|
-| multipleSize		| 多图时，图片边长												| String &#124; Number	| 70			| -			|
+| multipleSize		| 多图时，图片边长								    				| String &#124; Number	| 70			| -			|
 | space				| 多图时，图片水平和垂直之间的间隔									| String &#124; Number	| 6				| -			|
 | singleMode		| 单图时，图片缩放裁剪的模式										| String				| scaleToFill	| -			|
 | multipleMode		| 多图时，图片缩放裁剪的模式										| String				| aspectFill	| -			|
 | maxCount			| 取消按钮的提示文字												| String &#124; Number	| 9				| -			|
-| previewFullImage	| 是否可以预览图片												| Boolean				| true			| false		|
-| rowCount			| 每行展示图片数量，如设置，singleSize和multipleSize将会无效		| String &#124; Number	| 3				| -			|
+| previewFullImage	| 是否可以预览图片											    	| Boolean				| true			| false		|
+| rowCount			| 每行展示图片数量，如设置，singleSize和multipleSize将会无效		    | String &#124; Number	| 3				| -			|
 | showMore			| 超出maxCount时是否显示查看更多的提示								| Boolean				| true			| false		|
 
 
