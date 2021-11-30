@@ -274,6 +274,7 @@
 | confirmText			| 确认按钮的文字																						| String				| 确认	| -				|
 | cancelText			| 取消按钮的文字																						| String				| 取消	| -				|
 | customStyle			| 自定义样式，对象形式																				| Object				| {}	| -				|
+| autoChange			| `mode`为`car`下，输入文字后，是否自动切换为字母模式																	| Boolean				| false	| true			|
 
 
 ### Events
