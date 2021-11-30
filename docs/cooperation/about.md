@@ -18,7 +18,7 @@ uView为采用[MIT](https://baike.baidu.com/item/MIT/10772952)许可证的开源
 uView的理念是"挣脱束缚，向往自由"，目标是做uni-app生态的标杆，推动uni-app生态和互联网的发展。  
 uView免费开源，无需授权，欢迎商用。uView的发展也得到各个小伙伴的支持，我们一起为构建一个更加优秀的UI框架而努力。
 
-以下为部分对uView有特出贡献的研发组成员，排名不分先后：
+以下为部分对uView2.0有特出贡献的研发组成员，排名不分先后：
 
 <team-member-item v-for="(item, index) in memberList" :key="index" :list="item"></team-member-item>
 
@@ -77,22 +77,15 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 			return {
 				memberList: [
 					{
-						avatar: 'http://q.qlogo.cn/headimg_dl?dst_uin=1363931801&spec=640&img_type=jpg',
-						name: '小恐龙',
-						job: '前端开发',
-						addr: '深圳',
-						duty: '负责uView核心组件研发，各端兼容处理，社区日常管理等工作。',
-						intro: `丰富的移动端H5，微信公众号，小程序开发经验，擅长前端优化，有自己独自摸索和实践的优化方案，擅长思考总结，\
-								熟悉uniapp多端开发，适配，兼容处理。为人亲切，易相处，致力于互联网开源，在互联网拥有一席之地。`
-					},
-					{
 						avatar: 'https://cdn.uviewui.com/uview/team/9151E1673BCE.jpg',
 						name: '北桥',
 						job: '全栈开发',
 						addr: '在读学生',
 						csdn: 'https://me.csdn.net/qq_33162604',
 						duty: '负责uView核心组件研发，维护与升级，社区管理、宣传等工作',
-						intro: '多个项目开发经验，技术栈：原生安卓，java，前端，服务器等'
+						intro: '多个项目开发经验，技术栈：原生安卓，java，前端，服务器等',
+                        github: 'https://github.com/BeiQiaoT',
+                        gitee: 'https://gitee.com/beiqiao'
 					},
 					{
 						avatar: 'https://cdn.uviewui.com/uview/team/546BC1A58D6EA.jpg',
@@ -101,14 +94,6 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 						addr: '贵阳创业',
 						duty: '负责uView js工具库开发，测试、兼容处理、文档管理、视频教程等相关工作',
 						intro: '项目经验丰富，喜欢挑战新兴技术，对微服务、虚拟化容器有自己独到的见解，主要技术栈：Golang、Vue'
-					},
-					{
-						avatar: 'https://cdn.uviewui.com/uview/team/BB145F91D8DA6129897D479C71F63490.jpg',
-						name: '陈慧敏',
-						job: '前端开发',
-						addr: '深圳',
-						duty: '负责uView模板维护开发，收集，样式调整，社区管理、宣传等工作',
-						intro: '擅长移动端开发，以及对前端交互和性能的优化。善于处理不同端和不同机型的样式适配。有多个线上成熟的实战项目'
 					},
 					{
 						avatar: 'https://cdn.uviewui.com/uview/team/15915681648132.jpg',
@@ -120,48 +105,6 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 						uniapp: 'https://ext.dcloud.net.cn/publisher?id=110853',
 						duty: '负责uView模板开发，社区管理等工作',
 						intro: '脾气不好的暴躁老哥。丰富的前端开发经验，对代码有洁癖，CSS能力出众'
-					},
-					{
-						avatar: 'https://cdn.uviewui.com/uview/team/19641856415541.jpg',
-						name: 'Pocky',
-						job: '前端开发',
-						link: 'https://www.yuque.com/pocky',
-						duty: '负责uView组件和JS工具库 开发、测试、维护，社区维护等工作',
-						intro: '好的代码像粥一样，都是用时间熬出来的。技术栈：前端'
-					},
-					{
-						avatar: 'https://cdn.uviewui.com/uview/team/A6A2AD122A73AB60F0.png',
-						name: '刘娇娇',
-						job: '前端开发',
-						addr: '深圳',
-						duty: '负责uView核心组件库研发，参与模板改进，社区管理等工作',
-						intro: '热爱编程技术，熟悉前端、Java，数据库等，有多个大型项目实践经验。对自己要求高，不断学习和吸收新技术，进步永无止境'
-					},
-					{
-						avatar: 'https://cdn.uviewui.com/uview/team/20200627204543.png',
-						name: '小谢童鞋',
-						job: '全栈开发',
-						addr: '武汉创业',
-						github: 'https://gitee.com/chuxinone',
-						duty: '负责uView核心组件库研发，测试改进，社区管理等工作',
-						intro: '喜欢挑战新型技术，独立完成过多个大型项目，技术栈：混合app,php,vue等'
-					},
-					{
-						avatar: 'https://cdn.uviewui.com/uview/team/DE94E17F7A1D5F3B1098520C7E51CEB6.jpg',
-						name: '陈熙鹏',
-						job: '全栈开发',
-						addr: '长沙',
-						duty: '负责uView组件维护与升级，社区管理、等工作',
-						intro: '独立开发过多个项目，学习能力极强，精通Vue，uni-app，Java，Linux，SQL'
-					},
-					{
-						avatar: '',
-						name: '莫成尘',
-						job: '前端兼产品',
-						addr: '北京',
-						csdn: 'https://blog.csdn.net/weixin_47821281?spm=1001.2101.3001.5343',
-						duty: '负责uView文档维护编写，社区管理、等工作',
-						intro: '一名高级前端转型的产品经理，技术栈：uniapp,vue,react，Axure，墨刀等'
 					}
 				]
 			}
