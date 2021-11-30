@@ -7,6 +7,43 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.7</h2>
+				</div>
+				<p><code>2021-11-30</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复radio和checkbox动态改变v-model无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						优化form规则validator在微信小程序用法
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复backtop组件mode参数在微信小程序无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						处理Album的previewFullImage属性无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						处理u-datetime-picker组件mode='time'在选择改变时间时，控制台报错的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.6</h2>
 				</div>
 				<p><code>2021-11-27</code></p>
