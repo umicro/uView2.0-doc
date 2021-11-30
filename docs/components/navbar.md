@@ -32,10 +32,10 @@
 	<view>
 		<u-navbar 
             title="剑未配妥，出门已是江湖" 
-            left-text="返回" 
-            right-text="帮助" 
-            @click-left="onClickBack" 
-            @click-right="onClickRight"
+            leftText="返回" 
+            rightText="帮助" 
+            @clickLeft="onClickBack" 
+            @clickRight="onClickRight"
         ></u-navbar>
 		<view class="content">
 			<!-- 正文内容 -->
