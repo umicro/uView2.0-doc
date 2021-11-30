@@ -21,51 +21,55 @@
 
 ```html
 <template>
-	<view class="">
-		<u-radio-group v-model="value" @change="radioGroupChange">
-			<u-radio 
-				@change="radioChange" 
-				v-for="(item, index) in list" :key="index" 
-				:name="item.name"
-				:disabled="item.disabled"
-			>
-				{{item.name}}
-			</u-radio>
-		</u-radio-group>
-	</view>
+  <u-radio-group
+    v-model="radiovalue1"
+    placement="column"
+    @change="groupChange"
+  >
+    <u-radio
+      :customStyle="{marginBottom: '8px'}"
+      v-for="(item, index) in radiolist1"
+      :key="index"
+      :label="item.name"
+      :name="item.name"
+      @change="radioChange"
+    >
+    </u-radio>
+  </u-radio-group>
 </template>
 
 <script>
 export default {
 	data() {
 		return {
-			list: [
-				{
-					name: 'apple',
-					disabled: false
-				},
-				{
-					name: 'banner',
-					disabled: false
-				},
-				{
-					name: 'orange',
-					disabled: false
-				}
-			],
-			// u-radio-group的v-model绑定的值如果设置为某个radio的name，就会被默认选中
-			value: 'orange',
+          // 基本案列数据
+          radiolist1: [{
+            name: '苹果',
+            disabled: false
+          },
+            {
+              name: '香蕉',
+              disabled: false
+            },
+            {
+              name: '橙子',
+              disabled: false
+            }, {
+              name: '榴莲',
+              disabled: false
+            }
+          ],
+          // u-radio-group的v-model绑定的值如果设置为某个radio的name，就会被默认选中
+          radiovalue1: '苹果',
 		};
 	},
 	methods: {
-		// 选中某个单选框时，由radio时触发
-		radioChange(e) {
-			console.log(e);
-		},
-		// 选中任一radio时，由radio-group触发
-		radioGroupChange(e) {
-			console.log(e);
-		}
+      groupChange(n) {
+        console.log('groupChange', n);
+      },
+      radioChange(n) {
+        console.log('radioChange', n);
+      }
 	}
 };
 </script>
@@ -136,344 +140,20 @@ export default {
 </u-radio-group>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基本案例</text>
-			<text class="u-block__title">苹果、香蕉和橙子那个最甜？</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__radio-item">
-					<u-radio-group
-						v-model="radiovalue1"
-						placement="column"
-						@change="groupChange"
-					>
-						<u-radio
-							:customStyle="{marginBottom: '8px'}"
-							v-for="(item, index) in radiolist1"
-							:key="index"
-							:label="item.name"
-							:name="item.name"
-							@change="radioChange"
-						>
-						</u-radio>
-					</u-radio-group>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义形状</text>
-			<text class="u-block__title">王者荣耀谁最帅？</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__radio-item">
-					<u-radio-group
-						v-model="radiovalue2"
-						placement="column"
-						shape="square"
-					>
-						<u-radio
-							:customStyle="{marginBottom: '8px'}"
-							v-for="(item, index) in radiolist2"
-							:key="index"
-							:label="item.name"
-							:name="item.name"
-						>
-						</u-radio>
-					</u-radio-group>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">是否禁用</text>
-			<text class="u-block__title">苹果、香蕉和菠萝那个最甜？</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__radio-item">
-					<u-radio-group
-						v-model="radiovalue3"
-						placement="column"
-					>
-						<u-radio
-							:customStyle="{marginBottom: '8px'}"
-							v-for="(item, index) in radiolist3"
-							:key="index"
-							:label="item.name"
-							:name="item.name"
-							:disabled="!index"
-						>
-						</u-radio>
-					</u-radio-group>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">纵向排列</text>
-			<text class="u-block__title">狙击枪用哪个倍镜最好？</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__radio-item">
-					<u-radio-group
-						v-model="radiovalue4"
-						placement="column"
-						:labelDisabled="true"
-					>
-						<u-radio
-							:customStyle="{marginBottom:'8px'}"
-							v-for="(item, index) in radiolist4"
-							:key="index"
-							:label="item.name"
-							:name="item.name"
-						>
-						</u-radio>
-					</u-radio-group>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义颜色？</text>
-			<text class="u-block__title">你比较喜欢下面哪个颜色？</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__radio-item">
-					<u-radio-group
-						v-model="radiovalue5"
-						placement="column"
-						activeColor="#19be6b"
-					>
-						<u-radio
-							:customStyle="{marginBottom: '8px'}"
-							v-for="(item, index) in radiolist5"
-							:key="index"
-							:label="item.name"
-							:name="item.name"
-						>
-						</u-radio>
-					</u-radio-group>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">横向排列形式？</text>
-			<text class="u-block__title">王者荣耀哪个英雄最美？</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__radio-item">
-					<u-radio-group
-						v-model="radiovalue6"
-						placement="row"
-					>
-						<u-radio
-							:customStyle="{marginRight: '16px'}"
-							v-for="(item, index) in radiolist6"
-							:key="index"
-							:label="item.name"
-							:name="item.name"
-						>
-						</u-radio>
-					</u-radio-group>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">横向两端排列形式？</text>
-			<text class="u-block__title">你觉得阿木木可爱吗？</text>
-			<view>
-				<view class="u-page__radio-item">
-					<u-radio-group
-						v-model="radiovalue7"
-						:borderBottom="true"
-						placement="column"
-						iconPlacement="right"
-					>
-						<u-radio
-							:customStyle="{marginBottom: '16px'}"
-							v-for="(item, index) in radiolist7"
-							:key="index"
-							:label="item.name"
-							:name="item.name"
-						>
-						</u-radio>
-					</u-radio-group>
-				</view>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				// 基本案列数据
-				radiolist1: [{
-						name: '苹果',
-						disabled: false
-					},
-					{
-						name: '香蕉',
-						disabled: false
-					},
-					{
-						name: '橙子',
-						disabled: false
-					}, {
-						name: '榴莲',
-						disabled: false
-					}
-				],
-				// u-radio-group的v-model绑定的值如果设置为某个radio的name，就会被默认选中
-				radiovalue1: '苹果',
+:::tip 页面源码地址
+<br/>
 
-				// 自定义形状数据
-				radiolist2: [{
-						name: '李白',
-						disabled: false
-					},
-					{
-						name: '韩信',
-						disabled: false
-					},
-					{
-						name: '马可波罗',
-						disabled: false
-					}, {
-						name: '百里守约',
-						disabled: false
-					}
-				],
-				// u-radio-group的v-model绑定的值如果设置为某个radio的name，就会被默认选中
-				radiovalue2: '李白',
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsA/radio/radio.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-				// 是否禁用数据
-				radiolist3: [{
-						name: '苹果',
-						disabled: false
-					},
-					{
-						name: '香蕉',
-						disabled: false
-					},
-					{
-						name: '菠萝',
-						disabled: false
-					}
-				],
-				// u-radio-group的v-model绑定的值如果设置为某个radio的name，就会被默认选中
-				radiovalue3: '苹果',
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsA/radio/radio.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-				// 是否禁止点击提示语选中单选框数据
-				radiolist4: [{
-						name: '3倍镜',
-						disabled: false
-					},
-					{
-						name: '4倍镜',
-						disabled: false
-					},
-					{
-						name: '6倍镜',
-						disabled: false
-					},
-					{
-						name: '8倍镜',
-						disabled: false
-					}
-				],
-				// u-radio-group的v-model绑定的值如果设置为某个radio的name，就会被默认选中
-				radiovalue4: '6倍镜',
-
-				//自定义颜色数据
-				radiolist5: [{
-						name: '红色',
-						disabled: false
-					},
-					{
-						name: '绿色',
-						disabled: false
-					},
-					{
-						name: '蓝色',
-						disabled: false
-					},
-					{
-						name: '黄色',
-						disabled: false
-					}
-				],
-				// u-radio-group的v-model绑定的值如果设置为某个radio的name，就会被默认选中
-				radiovalue5: '绿色',
-
-				//横向排列形式数据
-				radiolist6: [{
-						name: '妲己',
-						disabled: false
-					},
-					{
-						name: '虞姬',
-						disabled: false
-					},
-					{
-						name: '不知火舞',
-						disabled: false
-					},
-				],
-				// u-radio-group的v-model绑定的值如果设置为某个radio的name，就会被默认选中
-				radiovalue6: '妲己',
-
-				//横向两端排列形式数据
-				radiolist7: [{
-						name: '可爱',
-						disabled: false
-					},
-					{
-						name: '一般',
-						disabled: false
-					},
-					{
-						name: '不可爱',
-						disabled: false
-					},
-				],
-				// u-radio-group的v-model绑定的值如果设置为某个radio的name，就会被默认选中
-				radiovalue7: '可爱',
-			}
-		},
-		watch: {
-			radiovalue1(newValue, oldValue) {
-				console.log('v-model', newValue);
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-			groupChange(n) {
-				console.log('groupChange', n);
-			},
-			radioChange(n) {
-				console.log('radioChange', n);
-			}
-		}
-	}
-</script>
-
-<style lang="scss">
-	.u-page {
-		&__style {
-			font-size: 16px;
-			color: rgb(96, 98, 102);
-			margin-bottom: 20rpx;
-			font-weight: bold;
-		}
-
-		&__title {
-			font-size: 16px;
-			color: rgb(96, 98, 102);
-			margin-bottom: 20rpx;
-		}
-	}
-</style>
-
-```
+<br/>
 :::
 
 ### API
@@ -485,14 +165,14 @@ export default {
 | 参数			| 说明																		| 类型				| 默认值	| 可选值	|
 | :-			| :-																		| :-				| :-	| :-	|
 | name			| checkbox的名称																| String \ Number	| -		| -		|
-| shape			| 形状，square为方形，circle为圆型											| String			| square| circle|
+| shape			| 形状，square为方形，circle为圆型									    		| String			| square| circle|
 | disabled		| 是否禁用																	| Boolean			| -		| -		|
 | labelDisabled	| 是否禁止点击提示语选中复选框													| String \ Boolean	| -		| -		|
-| activeColor	| 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值					| String			| -		| -		|
+| activeColor	| 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值			    		| String			| -		| -		|
 | inactiveColor	| 未选中的颜色																| String			| -		| -		|
 | iconSize		| 图标的大小，单位px															| String \ Number	| -		| -		|
 | labelSize		| label的字体大小，px单位														| String \ Number	| -		| -		|
-| label			| label提示文字，因为nvue下，直接slot进来的文字，由于特殊的结构，无法修改样式		| String \ Number	| -		| -		|
+| label			| label提示文字，因为nvue下，直接slot进来的文字，由于特殊的结构，无法修改样式	    	| String \ Number	| -		| -		|
 | size			| 整体的大小																	| String \ Number	| -		| -		|
 | iconColor		| 图标颜色																	| String			| -		| -		|
 | labelColor	| label的颜色																| String			| -		| -		|
@@ -514,9 +194,9 @@ export default {
 | size			| 整个组件的尺寸，默认px									| String \ Number		| 18		| -		|
 | placement		| 布局方式，row-横向，column-纵向							| Boolean				| row		| column|
 | label			| 文本													| String				| -			| -		|
-| labelColor	| label的字体颜色										| String				| #303133	| -		|
+| labelColor	| label的字体颜色								    		| String				| #303133	| -		|
 | labelSize		| label的字体大小，px单位									| String \ Number		| 14		| -		|
-| labelDisabled	| 是否禁止点击文本操作									| Boolean				| false		| true	|
+| labelDisabled	| 是否禁止点击文本操作							    		| Boolean				| false		| true	|
 | iconColor		| 图标颜色												| String				| #ffffff	| -		|
 | iconSize		| 图标的大小，单位px										| String \ Number		| 12		| -		|
 | borderBottom	| 竖向配列时，是否显示下划线								| Boolean				| false		| true	|

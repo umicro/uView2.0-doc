@@ -113,142 +113,20 @@
 </script>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<u-navbar
-			title="键盘"
-			@leftClick="navigateBack"
-			safeAreaInsetTop
-			fixed
-			placeholder
-		></u-navbar>
-		<u-gap height="20" bgColor="#fff"></u-gap>
-		<u-cell-group>
-			<u-cell
-			    :titleStyle="{fontWeight: 500}"
-			    @click="openKeyboard(index)"
-			    :title="item.title"
-			    v-for="(item, index) in list"
-			    :key="index"
-			    isLink
-			>
-				<image
-				    slot="icon"
-				    class="u-cell-icon"
-				    :src="item.iconUrl"
-				    mode="widthFix"
-				></image>
-			</u-cell>
-		</u-cell-group>
-		<u-keyboard
-		    :mode="keyData.mode"
-		    :dotDisabled="keyData.dotDisabled"
-		    :random='keyData.random'
-		    :show="show"
-		    @close="close"
-			@cancel="cancel"
-			@confirm="confirm"
-			@change="change"
-			@backspace="backspace"
-		></u-keyboard>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				input: '',
-				keyData: {
-					mode: '',
-					dotDisabled: false,
-					random: false,
-				},
-				list: [{
-						title: '车牌号键盘',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/keyboard/car.png'
-					},
-					{
-						title: '数字键盘',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/keyboard/number.png'
-					},
-					{
-						title: '身份证键盘',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/keyboard/IdCard.png'
-					},
-					{
-						title: '隐藏键盘"."符号',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/keyboard/dot.png'
-					},
-					{
-						title: '打乱键盘按键的顺序',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/keyboard/order.png'
-					},
-				],
-				show: false
-			}
-		},
-		methods: {
-			navigateBack() {
-				uni.navigateBack();
-			},
-			// 点击展示不同的键盘
-			openKeyboard(indexNum) {
-				this.keyData = {
-					mode: '',
-					dotDisabled: false,
-					random: false,
-				}
-				if (indexNum == 0) {
-					this.keyData.mode = ''
-				} else if (indexNum == 1) {
-					this.keyData.mode = 'number'
-				} else if (indexNum == 2) {
-					this.keyData.mode = 'card'
-				} else if (indexNum == 3) {
-					this.keyData.mode = 'number'
-					this.keyData.dotDisabled = true
-				} else if (indexNum == 4) {
-					this.keyData.mode = 'number'
-					this.keyData.random = true
-				}
-				this.input = ''
-				this.show = true
-			},
-			change(e) {
-				// console.log('change');
-				this.input += e
-			},
-			close() {
-				// console.log('close');
-				this.show = false
-			},
-			cancel() {
-				// console.log('cancel');
-				this.show = false
-			},
-			confirm() {
-				// console.log('confirm');
-				this.show = false
-			},
-			backspace() {
-				this.input = this.input.slice(0, -1)
-			}
+:::tip 页面源码地址
+<br/>
 
-		}
-	}
-</script>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsB/keyboard/keyboard.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-<style lang="scss">
-	.u-page {
-		padding: 0;
-	}
-</style>
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsB/keyboard/keyboard.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-```
+<br/>
 :::
 
 ### API

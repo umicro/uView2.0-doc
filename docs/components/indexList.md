@@ -77,150 +77,20 @@
 
 - 如果自定义了导航栏，需要`custom-nav-height`设置为导航栏的高度
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<u-index-list>
-		<u-cell-group slot="header">
-			<u-cell title="新的朋友">
-				<u-avatar
-					slot="icon"
-					shape="square"
-					size="35"
-					icon="man-add-fill"
-					fontSize="26"
-					randomBgColor
-					customStyle="margin: -3px 5px -3px 0"
-				></u-avatar>
-			</u-cell>
-			<u-cell title="标签">
-				<u-avatar
-					slot="icon"
-					shape="square"
-					size="35"
-					icon="tags-fill"
-					fontSize="26"
-					randomBgColor
-					customStyle="margin: -3px 5px -3px 0"
-				></u-avatar>
-			</u-cell>
-			<u-cell title="朋友圈">
-				<u-avatar
-					slot="icon"
-					shape="square"
-					size="35"
-					icon="chrome-circle-fill"
-					fontSize="26"
-					randomBgColor
-					customStyle="margin: -3px 5px -3px 0"
-				></u-avatar>
-			</u-cell>
-			<u-cell
-				title="QQ"
-				:border="false"
-			>
-				<u-avatar
-					slot="icon"
-					shape="square"
-					size="35"
-					icon="qq-fill"
-					fontSize="26"
-					randomBgColor
-					customStyle="margin: -3px 5px -3px 0"
-				></u-avatar>
-			</u-cell>
-		</u-cell-group>
-		<template
-			v-for="(item, index) in itemArr"
-		>
-			<!-- #ifdef APP-NVUE -->
-			<u-index-anchor :text="indexList[index]" :key="index"></u-index-anchor>
-			<!-- #endif -->
-			<u-index-item :key="index">
-				<!-- #ifndef APP-NVUE -->
-				<u-index-anchor :text="indexList[index]"></u-index-anchor>
-				<!-- #endif -->
-				<u-cell
-					v-for="(item1, index1) in item"
-					:key="index1"
-					:title="item1.name"
-					:border="index1 !== item.length - 1"
-				>
-					<u-avatar
-						slot="icon"
-						shape="square"
-						size="35"
-						:src="item1.url"
-						customStyle="margin: -3px 5px -3px 0"
-					></u-avatar>
-				</u-cell>
-			</u-index-item>
-		</template>
-	</u-index-list>
-</template>
+### 此页面源代码地址
 
-<script>
-	const indexList = () => {
-		const indexList = []
-		const charCodeOfA = 'A'.charCodeAt(0)
-		for (let i = 0; i < 26; i++) {
-			indexList.push(String.fromCharCode(charCodeOfA + i))
-		}
-		return indexList
-	}
-	// #ifdef APP-NVUE
-    // 复制后解开下面一行注释
-	// const dom = uni.requireNativePlugin('dom')
-	// #endif
-	export default {
-		data() {
-			return {
-				indexList: indexList(),
-				urls: [
-					'https://cdn.uviewui.com/uview/album/1.jpg',
-					'https://cdn.uviewui.com/uview/album/2.jpg',
-					'https://cdn.uviewui.com/uview/album/3.jpg',
-					'https://cdn.uviewui.com/uview/album/4.jpg',
-					'https://cdn.uviewui.com/uview/album/5.jpg',
-					'https://cdn.uviewui.com/uview/album/6.jpg',
-					'https://cdn.uviewui.com/uview/album/7.jpg',
-					'https://cdn.uviewui.com/uview/album/8.jpg',
-					'https://cdn.uviewui.com/uview/album/9.jpg',
-					'https://cdn.uviewui.com/uview/album/10.jpg',
-				],
-				names: ["勇往无敌", "疯狂的迪飙", "磊爱可", "梦幻梦幻梦", "枫中飘瓢", "飞翔天使",
-					"曾经第一", "追风幻影族长", "麦小姐", "胡格罗雅", "Red磊磊", "乐乐立立", "青龙爆风", "跑跑卡叮车", "山里狼", "supersonic超"
-				]
-			}
-		},
-		computed: {
-			itemArr() {
-				return this.indexList.map(item => {
-					const arr = []
-					for (let i = 0; i < 10; i++) {
-						arr.push({
-                            // 复制后解开下面两行注释
-							// name: this.names[uni.$u.random(0, this.names.length - 1)],
-							// url: this.urls[uni.$u.random(0, this.urls.length - 1)]
-						})
-					}
-					return arr
-				})
-			}
-		},
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.icon {
-		width: 36px;
-		height: 36px;
-		margin: -3px 5px -3px 0;
-	}
-</style>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsC/indexList/indexList.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-```
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsC/indexList/indexList.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
+
+<br/>
 :::
 
 ### API

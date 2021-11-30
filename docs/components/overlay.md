@@ -80,114 +80,20 @@
 <u-overlay :show="show" :duration="400" :z-index ="999" :opacity="0.3"></u-overlay>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<u-navbar
-			title="遮罩层"
-			@leftClick="navigateBack"
-			safeAreaInsetTop
-			fixed
-			placeholder
-		></u-navbar>
-		<u-cell
-			:titleStyle="{fontWeight: 500}"
-			@click="openMask(index)"
-			:title="item.title"
-			v-for="(item, index) in list"
-			:key="index"
-			isLink
-		>
-			<image
-				slot="icon"
-				class="u-cell-icon"
-				:src="item.iconUrl"
-				mode="widthFix"
-			></image>
-		</u-cell>
-		<u-overlay
-			:show="show"
-			@click="show = !show"
-		></u-overlay>
+### 此页面源代码地址
 
-		<u-overlay
-			:show="showSlot"
-			@click="showSlot = !showSlot"
-		>
-			<view class="overlay-wrap">
-				<view class="overlay-wrap__box"></view>
-			</view>
-		</u-overlay>
-		<u-overlay
-			opacity=".85"
-			:show="showOpcatiy"
-			@click="showOpcatiy = !showOpcatiy"
-		>
-		</u-overlay>
-	</view>
-</template>
+:::tip 页面源码地址
+<br/>
 
-<script>
-	export default {
-		data() {
-			return {
-				show: false,
-				showSlot: false,
-				showOpcatiy: false,
-				list: [{
-						title: '基本案列',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/overlay/baseCases.png'
-					},
-					{
-						title: '嵌入内容',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/overlay/embeddedContent.png'
-					},
-					{
-						title: '设置透明度',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/overlay/setTransparency.png'
-					},
-				]
-			}
-		},
-		methods: {
-			openMask(indexNum) {
-				if (indexNum == 0) {
-					this.show = !this.show;
-				} else if (indexNum == 1) {
-					this.showSlot = !this.showSlot
-				} else if (indexNum == 2) {
-					this.showOpcatiy = !this.showOpcatiy
-				}
-			},
-			navigateBack() {
-				uni.navigateBack()
-			}
-		}
-	}
-</script>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsA/overlay/overlay.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-<style lang="scss">
-	.u-page {
-		padding: 0;
-	}
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsA/overlay/overlay.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-	.overlay-wrap {
-		@include flex;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-
-		&__box {
-			width: 200rpx;
-			height: 200rpx;
-			background-color: #70e1f5;
-		}
-	}
-</style>
-
-```
+<br/>
 :::
 
 ### API

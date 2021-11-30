@@ -83,79 +83,20 @@
 </style>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<u-no-network
-			@disconnected="disconnected"
-			@connected="connected"
-			@retry="retry"
-		></u-no-network>
-		<view class="u-content">
-			<view class="u-content__circle">
-				<u-icon
-					name="checkbox-mark"
-					color="#fff"
-					size="30"
-				></u-icon>
-			</view>
-			<text class="u-content__normal">网络正常</text>
-			<text class="u-content__tips">请您断开设备的WiFi和数据连接(或开启飞行模式)，即可看到效果</text>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		methods: {
-			disconnected() {
-				console.log('disconnected');
-			},
-			connected() {
-				console.log('connected');
-			},
-			retry() {
-				console.log('retry');
-			}
-		},
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.u-content {
-		padding: 150px 60px 0;
-		@include flex(column);
-		align-items: center;
-		justify-content: center;
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsC/noNetwork/noNetwork.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-		&__circle {
-			background-color: $u-success;
-			@include flex;
-			border-radius: 100px;
-			width: 60px;
-			height: 60px;
-			align-items: center;
-			justify-content: center;
-		}
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsC/noNetwork/noNetwork.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-		&__normal {
-			font-size: 15px;
-			color: $u-success;
-			margin-top: 15px;
-		}
-
-		&__tips {
-			color: $u-tips-color;
-			font-size: 13px;
-			margin-top: 15px;
-			text-align: center;
-		}
-	}
-</style>
-
-```
+<br/>
 :::
 
 ### API

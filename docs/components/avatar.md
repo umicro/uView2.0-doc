@@ -139,199 +139,20 @@
 </script>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<page-meta
-		background-color="#0000ff"
-		background-color-top="#000000"
-		background-color-bottom="#000000"
-		page-style="color: green, background-color: #000000"
-	></page-meta>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础演示</text>
-			<view class="u-demo-block__content">
-				<u-avatar :src="src1"></u-avatar>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">头像形状</text>
-			<view class="u-demo-block__content">
-				<view class="u-avatar-item">
-					<u-avatar
-						:src="src2"
-						shape="circle"
-						@click="click"
-					></u-avatar>
-				</view>
-				<view class="u-avatar-item">
-					<u-avatar
-						:src="src3"
-						shape="square"
-					></u-avatar>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">头像尺寸</text>
-			<view class="u-demo-block__content">
-				<view class="u-avatar-item">
-					<u-avatar
-						:src="src4"
-						size="30"
-					></u-avatar>
-				</view>
-				<view class="u-avatar-item">
-					<u-avatar
-						:src="src5"
-						size="40"
-					></u-avatar>
-				</view>
-				<view class="u-avatar-item">
-					<u-avatar
-						:src="src6"
-						size="50"
-					></u-avatar>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">图标头像</text>
-			<view class="u-demo-block__content">
-				<view class="u-avatar-item">
-					<u-avatar
-						icon="red-packet-fill"
-						fontSize="22"
-					></u-avatar>
-				</view>
-				<view class="u-avatar-item">
-					<u-avatar
-						icon="star-fill"
-						fontSize="22"
-					></u-avatar>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">文字头像(自动背景色)</text>
-			<view class="u-demo-block__content">
-				<view class="u-avatar-item">
-					<u-avatar
-						text="U"
-						fontSize="20"
-						randomBgColor
-						:colorIndex="0"
-					></u-avatar>
-				</view>
-				<view class="u-avatar-item">
-					<u-avatar
-						text="邓"
-						fontSize="18"
-						randomBgColor
-					></u-avatar>
-				</view>
-				<view class="u-avatar-item">
-					<u-avatar
-						text="张"
-						fontSize="18"
-						randomBgColor
-					></u-avatar>
-				</view>
-				<view class="u-avatar-item">
-					<u-avatar
-						text="王"
-						fontSize="18"
-						randomBgColor
-					></u-avatar>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">图片加载失败(显示默认头像)</text>
-			<view class="u-demo-block__content">
-				<u-avatar :src="src7"></u-avatar>
-			</view>
-		</view>
-		<!-- #ifdef MP-WEIXIN || MP-QQ || MP-BAIDU -->
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">小程序开放能力</text>
-			<view class="u-demo-block__content">
-				<view class="u-avatar-item">
-					<u-avatar
-						mpAvatar
-						size="60"
-					></u-avatar>
-				</view>
-			</view>
-		</view>
-		<!-- #endif -->
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">头像组</text>
-			<view class="u-demo-block__content">
-				<u-avatar-group
-					:urls="urls"
-					size="35"
-					gap="0.4"
-				></u-avatar-group>
-			</view>
-			<view class="u-demo-block__content" style="margin-top: 20px">
-				<u-avatar-group
-					:urls="urls"
-					size="35"
-					gap="0.6"
-				></u-avatar-group>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				src1: 'https://cdn.uviewui.com/uview/album/1.jpg',
-				src2: 'https://cdn.uviewui.com/uview/album/2.jpg',
-				src3: 'https://cdn.uviewui.com/uview/album/3.jpg',
-				src4: 'https://cdn.uviewui.com/uview/album/4.jpg',
-				src5: 'https://cdn.uviewui.com/uview/album/5.jpg',
-				src6: 'https://cdn.uviewui.com/uview/album/6.jpg',
-				src7: 'https://cdn.uviewui.com/uview/album/noExist.jpg',
-				urls: [
-					'https://cdn.uviewui.com/uview/album/1.jpg',
-					'https://cdn.uviewui.com/uview/album/2.jpg',
-					'https://cdn.uviewui.com/uview/album/3.jpg',
-					'https://cdn.uviewui.com/uview/album/4.jpg',
-					'https://cdn.uviewui.com/uview/album/7.jpg',
-					'https://cdn.uviewui.com/uview/album/6.jpg',
-					'https://cdn.uviewui.com/uview/album/5.jpg'
-				]
-			}
-		},
-		onLoad() {
+:::tip 页面源码地址
+<br/>
 
-		},
-		methods: {
-			click(name) {
-				console.log('click', name);
-			}
-		},
-	}
-</script>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsC/avatar/avatar.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-<style lang="scss">
-	.u-demo-block__content {
-		@include flex;
-		align-items: center;
-	}
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsC/avatar/avatar.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-	.u-avatar-item {
-		margin-right: 30px;
-	}
-</style>
-
-```
+<br/>
 :::
 
 ### API

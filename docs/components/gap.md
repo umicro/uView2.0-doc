@@ -21,52 +21,20 @@
 <u-gap height="80" bgColor="#bbb"></u-gap>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基本案列</text>
-			<view class="u-page__gap-item">
-				<u-gap></u-gap>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义颜色</text>
-			<view class="u-page__gap-item">
-				<u-gap bgColor="#2979ff"></u-gap>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义高度</text>
-			<view class="u-page__gap-item">
-				<u-gap height="40"></u-gap>
-			</view>
-		</view>	
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义上下边距</text>
-			<view class="u-page__gap-item">
-			<u-gap
-			    marginTop="20"
-			    marginBottom="20"
-			></u-gap>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
+:::tip 页面源码地址
+<br/>
 
-	}
-</script>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsA/gap/gap.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-<style lang="scss">
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsA/gap/gap.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-</style>
-
-```
+<br/>
 :::
 
 ### API

@@ -50,154 +50,20 @@
 | list		| 列表为空(通用)			|
 | data		| 数据为空(默认，通用)	|
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-page__top-box">
-			<text class="u-demo-block__title">演示效果</text>
-		</view>
-		<u-empty
-			:mode="mode"
-			:icon="imgList[mode]"
-		>
-			<u-button
-				size="small"
-				type="primary"
-				:style="{marginTop:10+'px'}"
-				v-if="mode=='car'"
-				text="查看更多商品"
-			>
-			</u-button>
-		</u-empty>
-		<div class="empty-select">
-			<u-cell
-				:titleStyle="{fontWeight: 500}"
-				@click="openImg(item.imgName)"
-				:title="item.title"
-				v-for="(item, index) in list"
-				:key="index"
-				isLink
-			>
-				<image
-					slot="icon"
-					class="u-cell-icon"
-					:src="item.iconUrl"
-					mode="widthFix"
-				></image>
-			</u-cell>
-		</div>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			// 如果使用这些图片，请勿直接引入cdn.uviewui.com的资源，因为此资源路径随时会有变动
-			// 变动后，您将会访问图片失败，如有需要，您可以将这些图片上传到自己的oss或者服务器再使用
-			const baseUrl = 'http://cdn.uviewui.com/uview/empty/'
-			return {
-				mode: 'car',
-				imgList: {
-					car: baseUrl + 'car.png',
-					address: baseUrl + 'address.png',
-					comment: baseUrl + 'comment.png',
-					coupon: baseUrl + 'coupon.png',
-					data: baseUrl + 'data.png',
-					history: baseUrl + 'history.png',
-					list: baseUrl + 'list.png',
-					message: baseUrl + 'message.png',
-					news: baseUrl + 'news.png',
-					order: baseUrl + 'order.png',
-					page: baseUrl + 'page.png',
-					permission: baseUrl + 'permission.png',
-					search: baseUrl + 'search.png',
-					wifi: baseUrl + 'wifi.png',
-				},
-				list: [{
-						imgName: 'car',
-						title: '购物车为空(同时传入slot)',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/empty/car.png'
-					},
-					{
-						imgName: 'data',
-						title: '数据为空',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/empty/data.png'
-					}, {
-						imgName: 'comment',
-						title: '评论为空',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/empty/comment.png'
-					}, {
-						imgName: 'coupon',
-						title: '没有优惠券',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/empty/coupon.png'
-					}, {
-						imgName: 'history',
-						title: '无历史记录',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/empty/history.png'
-					}, {
-						imgName: 'list',
-						title: '列表为空',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/empty/list.png'
-					}, {
-						imgName: 'message',
-						title: '消息列表为空',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/empty/message.png'
-					}, {
-						imgName: 'news',
-						title: '无新闻列表',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/empty/news.png'
-					}, {
-						imgName: 'order',
-						title: '订单为空',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/empty/order.png'
-					}, {
-						imgName: 'page',
-						title: '页面不存在',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/empty/page.png'
-					}, {
-						imgName: 'permission',
-						title: '无权限',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/empty/permission.png'
-					}, {
-						imgName: 'search',
-						title: '没有搜索结果',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/empty/search.png'
-					}, {
-						imgName: 'wifi',
-						title: '没有WiFi',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/empty/wifi.png'
-					},
-				]
+:::tip 页面源码地址
+<br/>
 
-			}
-		},
-		methods: {
-			//点击改变图片
-			openImg(imgName) {
-				// this.mode = this.imgList[imgName]
-				this.mode = imgName;
-			}
-		}
-	}
-</script>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsA/empty/empty.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-<style lang="scss">
-	.u-page {
-		padding: 40rpx 0px;
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsA/empty/empty.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-		&__top-box {
-			padding-left: 40rpx;
-		}
-	}
-
-	.empty-select {
-		margin-top: 10px;
-	}
-</style>
-
-```
+<br/>
 :::
 
 ### API

@@ -113,168 +113,20 @@
 <u-verification-code unique-key="page-b"></u-verification-code>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础功能</text>
-			<view class="u-demo-block__content">
-				<u-code
-				    ref="uCode"
-				    @change="codeChange"
-				    seconds="20"
-					change-text="XS获取"
-					@start="disabled1 = true"
-					@end="disabled1 = false"
-				></u-code>
-				<u-button
-				    @tap="getCode"
-				    :text="tips"
-				    type="success"
-					size="small"
-					:disabled="disabled1"
-				></u-button>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">保持倒计时(开始后，左上角返退出此页面再进入，会发现倒计时还在继续)</text>
-			<view class="u-demo-block__content">
-				<u-code
-				    ref="uCode1"
-				    @change="codeChange1"
-				    keep-running
-				    change-text="倒计时XS"
-					@start="disabled2 = true"
-					@end="disabled2 = false"
-				></u-code>
-				<u-button
-					type="primary"
-				    @tap="getCode1"
-				    :text="tips1"
-					size="small"
-					:disabled="disabled2"
-				></u-button>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">文本样式</text>
-			<view class="u-demo-block__content">
-				<u-code
-				    ref="uCode2"
-				    @change="codeChange2"
-				    keep-running
-					start-text="点我获取验证码"
-				></u-code>
-				<text
-				    @tap="getCode2"
-				    :text="tips2"
-					class="u-page__code-text"
-				>{{tips2}}</text>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				tips: '',
-				// 此为错误定义，见下方说明
-				// refCode: null,
-				tips1: '',
-				tips2: '',
-				disabled1: false,
-				disabled2: false,
-				disabled3: false
-			}
-		},
-		onReady() {
-			// 注意这里不能将一个组件赋值给data的一个变量，否则在微信小程序会
-			// 造成循环引用而报错，如果你想这样做，请在onReady或者onLoad生命周期中定义，如下
-			// this.refCode = this.$refs.uCode;
-		},
-		methods: {
-			codeChange(text) {
-				this.tips = text;
-			},
-			codeChange1(text) {
-				this.tips1 = text;
-			},
-			codeChange2(text) {
-				this.tips2 = text;
-			},
-			getCode() {
-				if (this.$refs.uCode.canGetCode) {
-					// 模拟向后端请求验证码
-					uni.showLoading({
-						title: '正在获取验证码'
-					})
-					setTimeout(() => {
-						uni.hideLoading();
-						// 这里此提示会被this.start()方法中的提示覆盖
-						uni.$u.toast('验证码已发送');
-						// 通知验证码组件内部开始倒计时
-						this.$refs.uCode.start();
-					}, 2000);
-				} else {
-					uni.$u.toast('倒计时结束后再发送');
-				}
-			},
-			getCode1() {
-				if (this.$refs.uCode1.canGetCode) {
-					// 模拟向后端请求验证码
-					uni.showLoading({
-						title: '正在获取验证码'
-					})
-					setTimeout(() => {
-						uni.hideLoading();
-						// 这里此提示会被this.start()方法中的提示覆盖
-						uni.$u.toast('验证码已发送');
-						// 通知验证码组件内部开始倒计时
-						this.$refs.uCode1.start();
-					}, 2000);
-				} else {
-					uni.$u.toast('倒计时结束后再发送');
-				}
-			},
-			getCode2() {
-				if (this.$refs.uCode2.canGetCode) {
-					// 模拟向后端请求验证码
-					uni.showLoading({
-						title: '正在获取验证码'
-					})
-					setTimeout(() => {
-						uni.hideLoading();
-						// 这里此提示会被this.start()方法中的提示覆盖
-						uni.$u.toast('验证码已发送');
-						// 通知验证码组件内部开始倒计时
-						this.$refs.uCode2.start();
-					}, 2000);
-				} else {
-					uni.$u.toast('倒计时结束后再发送');
-				}
-			}
-		}
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-	.u-page {
-		&__code-text {
-			color: $u-primary;
-			font-size: 15px;
-		}
-	}
-	
-	.u-demo-block__content {
-		@include flex;
-	}
-</style>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsB/code/code.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-```
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsB/code/code.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
+
+<br/>
 :::
 
 ### API

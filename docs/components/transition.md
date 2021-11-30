@@ -63,176 +63,20 @@
 </script>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-    <view class="u-page">
-        <u-gap height="20" bgColor="#fff"></u-gap>
-        <u-cell-group border>
-            <u-cell
-                :titleStyle="{ fontWeight: 500 }"
-                @click="openTransition(item.mode)"
-                :title="item.title"
-                v-for="(item, index) in list"
-                :key="index"
-                clickable
-            >
-                <image
-                    slot="icon"
-                    class="u-cell-icon"
-                    :src="item.iconUrl"
-                    mode="widthFix"
-                ></image>
-            </u-cell>
-            <u-transition
-                :mode="mode"
-                :show="show"
-                :custom-style="style"
-                @click="click"
-                @beforeEnter="beforeEnter"
-                @enter="enter"
-                @afterEnter="afterEnter"
-                @beforeLeave="beforeLeave"
-                @leave="leave"
-                @afterLeave="afterLeave"
-            >
-                <view class="transition"></view>
-            </u-transition>
-        </u-cell-group>
-    </view>
-</template>
+### 此页面源代码地址
 
-<script>
-export default {
-    data() {
-        return {
-            mode: "",
-            show: false,
-            style: {
-                position: "fixed",
-                top: `${uni.$u.sys().windowHeight / 2 - 50}px`,
-                left: `${uni.$u.sys().windowWidth / 2 - 50}px`,
-                width: "120px",
-                height: "120px",
-                backgroundColor: "#1989fa",
-            },
-            list: [
-                {
-                    mode: "fade",
-                    title: "淡入",
-                    iconUrl:
-                        "https://cdn.uviewui.com/uview/demo/transition/fade.png",
-                },
-                {
-                    mode: "fade-up",
-                    title: "上滑淡入",
-                    iconUrl:
-                        "https://cdn.uviewui.com/uview/demo/transition/fadeUp.png",
-                },
-                {
-                    mode: "zoom",
-                    title: "缩放",
-                    iconUrl:
-                        "https://cdn.uviewui.com/uview/demo/transition/zoom.png",
-                },
-                {
-                    mode: "fade-zoom",
-                    title: "缩放淡入",
-                    iconUrl:
-                        "https://cdn.uviewui.com/uview/demo/transition/fadeZoom.png",
-                },
-                {
-                    mode: "fade-down",
-                    title: "下滑淡入",
-                    iconUrl:
-                        "https://cdn.uviewui.com/uview/demo/transition/fadeDown.png",
-                },
-                {
-                    mode: "fade-left",
-                    title: "左滑淡入",
-                    iconUrl:
-                        "https://cdn.uviewui.com/uview/demo/transition/fadeLeft.png",
-                },
-                {
-                    mode: "fade-right",
-                    title: "右滑淡入",
-                    iconUrl:
-                        "https://cdn.uviewui.com/uview/demo/transition/fadeRight.png",
-                },
-                {
-                    mode: "slide-up",
-                    title: "上滑进入",
-                    iconUrl:
-                        "https://cdn.uviewui.com/uview/demo/transition/slideUp.png",
-                },
-                {
-                    mode: "slide-down",
-                    title: "下滑进入",
-                    iconUrl:
-                        "https://cdn.uviewui.com/uview/demo/transition/slideDown.png",
-                },
-                {
-                    mode: "slide-left",
-                    title: "左滑进入",
-                    iconUrl:
-                        "https://cdn.uviewui.com/uview/demo/transition/slideLeft.png",
-                },
-                {
-                    mode: "slide-right",
-                    title: "右滑进入",
-                    iconUrl:
-                        "https://cdn.uviewui.com/uview/demo/transition/slideRight.png",
-                },
-            ],
-        };
-    },
-    // 复制后解开下面注释
-    // mixins: [uni.$u.mixin],
-    methods: {
-        openTransition(mode) {
-            this.mode = mode;
-            this.show = true;
-            setTimeout(() => {
-                this.show = false;
-            }, 1500);
-        },
-        click() {
-            // console.log("click");
-        },
-        beforeEnter() {
-            // console.log("beforeEnter");
-        },
-        enter() {
-            // console.log("enter");
-        },
-        afterEnter() {
-            // console.log("afterEnter");
-        },
-        beforeLeave() {
-            // console.log("beforeLeave");
-        },
-        leave() {
-            // console.log("leave");
-        },
-        afterLeave() {
-            // console.log("afterLeave");
-        },
-    },
-};
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
-.u-page {
-    padding: 0;
-}
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsA/transition/transition.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-.transition {
-    background-color: $u-primary;
-}
-</style>
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsA/transition/transition.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-```
+<br/>
 :::
 
 ### API

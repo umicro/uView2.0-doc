@@ -96,90 +96,20 @@
 <u-loading-icon show></u-loading-icon>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基本案列</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__loading-item">
-					<u-loading-icon></u-loading-icon>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">半圆loading</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__loading-item">
-					<u-loading-icon mode="semicircle"></u-loading-icon>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">圆形loading</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__loading-item">
-					<u-loading-icon mode="circle"></u-loading-icon>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义动画</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__loading-item">
-					<u-loading-icon mode="circle" timingFunction="linear"></u-loading-icon>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义颜色</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__loading-item">
-					<u-loading-icon color="#19be6b"></u-loading-icon>
-				</view>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自定义文字</text>
-			<view class="u-demo-block__content">
-				<view class="u-page__loading-item">
-					<u-loading-icon
-					    :vertical="true"
-					    text="加载中"
-					></u-loading-icon>
-				</view>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
+:::tip 页面源码地址
+<br/>
 
-			}
-		}
-	}
-</script>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsA/loading-icon/loading-icon.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-<style lang="scss">
-	.u-page {
-		&__loading-item {
-			margin-top: 5px;
-		}
-	}
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsA/loading-icon/loading-icon.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-	.u-demo-block__content {
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
-	}
-</style>
-
-```
+<br/>
 :::
 
 ### API

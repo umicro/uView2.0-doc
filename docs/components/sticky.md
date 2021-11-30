@@ -45,63 +45,20 @@
 </u-sticky>
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<!-- <u-navbar
-			title="吸顶"
-			@leftClick="navigateBack"
-			safeAreaInsetTop
-			fixed
-			placeholder
-		></u-navbar> -->
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础使用</text>
-			<u--text
-				type="content"
-				text="滚动页面,即可看到下方的按钮会吸顶,目前由于nvue的bug,设置sticky的top值无效"
-			></u--text>
-		</view>
-		<u-sticky>
-			<u-button
-				text="吸顶按钮"
-				type="success"
-			></u-button>
-		</u-sticky>
-		<u-gap
-			bgColor="#fff"
-			height="1500px"
-		></u-gap>
-		<u-divider textColor="#2979ff" lineColor="#2979ff" text="已到底部"></u-divider>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-    export default {
-        data() {
-            return {
+:::tip 页面源码地址
+<br/>
 
-            }
-        },
-        // 复制代码之后解开下面注释
-        // mixins: [uni.$u.mixin],
-        methods: {
-            navigateBack() {
-                // 复制代码之后解开下面注释
-                // uni.navigateBack()
-            }
-        }
-    }
-</script>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsA/sticky/sticky.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-<style lang="scss">
-    .u-page {
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsA/sticky/sticky.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-    }
-</style>
-```
+<br/>
 :::
 
 ### API

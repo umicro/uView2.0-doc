@@ -123,83 +123,20 @@
 ```
 
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">基础使用</text>
-			<view class="u-demo-block__content">
-				<u--textarea
-					v-model="value1"
-					placeholder="请输入内容"
-				></u--textarea>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">字数统计</text>
-			<view class="u-demo-block__content">
-				<u--textarea
-					v-model="value2"
-					placeholder="请输入内容"
-					count
-				></u--textarea>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">自动增高</text>
-			<view class="u-demo-block__content">
-				<u--textarea
-					v-model="value3"
-					placeholder="请输入内容"
-					autoHeight
-				></u--textarea>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">禁用状态</text>
-			<view class="u-demo-block__content">
-				<u--textarea
-					v-model="value4"
-					placeholder="文本域已被禁用"
-					disabled
-					count
-				></u--textarea>
-			</view>
-		</view>
-		<view class="u-demo-block">
-			<text class="u-demo-block__title">下划线模式</text>
-			<view class="u-demo-block__content">
-				<u--textarea
-					v-model="value5"
-					placeholder="请输入内容"
-					border="bottom"
-				></u--textarea>
-			</view>
-		</view>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				value1: '',
-				value2: '统计字数',
-				value3: '',
-				value4: '',
-				value5: ''
-			}
-		},
-	}
-</script>
+:::tip 页面源码地址
+<br/>
 
-<style lang="scss">
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsC/textarea/textarea.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-</style>
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsC/textarea/textarea.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-```
+<br/>
 :::
 
 ### API

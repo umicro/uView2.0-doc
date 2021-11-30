@@ -112,124 +112,20 @@ Toast 组件主要用于消息通知、加载提示、操作结果提示等醒�
 
 ```
 
-### 演示项目完整代码
-:::demo 演示项目完整代码
-```html
-<template>
-	<view class="u-page">
-		<u-gap
-			height="30"
-			bgColor="#fff"
-		></u-gap>
-		<u-toast ref="uToast"></u-toast>
-		<u-cell-group title-bg-color="rgb(243, 244, 246)">
-			<u-cell
-				:titleStyle="{fontWeight: 500}"
-				:title="item.title"
-				v-for="(item, index) in list"
-				:key="index"
-				isLink
-				:icon="item.iconUrl"
-				@click="showToast(item)"
-			>
-				<!-- <image
-				    slot="icon"
-				    class="u-cell-icon"
-				    :src="getIcon(item.icon)"
-				    mode="widthFix"
-				></image> -->
-			</u-cell>
-		</u-cell-group>
-	</view>
-</template>
+### 此页面源代码地址
 
-<script>
-	export default {
-		data() {
-			return {
-				show: false,
-				list: [{
-						type: 'default',
-						title: '默认主题',
-						message: "锦瑟无端五十弦",
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/default.png'
-					},
-					{
-						type: 'error',
-						icon: false,
-						title: '失败主题',
-						message: "一弦一柱思华年",
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/error.png'
-					},
-					{
-						type: 'success',
-						title: '成功主题(带图标)',
-						message: "庄生晓梦迷蝴蝶",
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/success.png'
-					},
-					{
-						type: 'warning',
-						position: "top",
-						title: '位置偏移上方',
-						message: "望帝春心托杜鹃",
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/top.png'
-					},
-					{
-						type: 'loading',
-						title: '正在加载',
-						message: "正在加载",
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/loading.png'
-					},
-					{
-						type: 'default',
-						title: '结束后跳转标签页',
-						message: "此情可待成追忆",
-						url: '/pages/componentsB/tag/tag',
-						iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/jump.png'
-					}
-				],
-			}
-		},
-		computed: {
-			getIcon() {
-				return path => {
-					return 'https://cdn.uviewui.com/uview/example/' + path + '.png';
-				}
-			}, 
-		},
-		methods: {
-			showToast(params) {
-				this.$refs.uToast.show({
-					...params,
-					complete() {
-						params.url && uni.navigateTo({
-							url: params.url
-						})
-					}
-				})
-			}
+:::tip 页面源码地址
+<br/>
 
-		}
-	}
-</script>
+<a href="https://github.com/umicro/uView2.0/blob/master/pages/componentsB/toast/toast.nvue" target="_blank" style="display: flex;align-items: center">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/4b2bf3e5-68ad-4a15-b0d1-00b7a5246eab.png" title="github" width="30"/>&nbsp;github
+</a>
 
-<style lang="scss">
-	.u-page {
-		padding: 0;
-	}
+<a href="https://gitee.com/umicro/uView2.0/blob/master/pages/componentsB/toast/toast.nvue" target="_blank" style="display: flex;align-items: center;margin-top: 10px">
+   <img height="30" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/0d0bc2dc-64e3-4ea1-a641-9c23d198e36d.png" title="github" width="30"/>&nbsp;gitee
+</a>
 
-	.u-cell-icon {
-		width: 36rpx;
-		height: 36rpx;
-		margin-right: 8rpx;
-	}
-
-	.u-cell-group__title__text {
-		font-weight: bold;
-	}
-</style>
-
-```
+<br/>
 :::
 
 ### API
