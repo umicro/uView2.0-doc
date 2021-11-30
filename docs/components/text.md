@@ -40,7 +40,7 @@
 - 除此之外还有格式化日期，姓名脱敏，超链接，千分位金额等属性，将在以下实例中展示
 
 ```html
-<u--text mode="phone" text="15019479320" encrypt></u--text>
+<u--text mode="phone" text="15019479320"></u--text>
 ```
 
 ### 日期格式化
@@ -51,7 +51,7 @@
 ### 姓名脱敏
 
 ```html
-<u--text mode="name" text="张**"></u--text>
+<u--text mode="name" text="张三三" format="encrypt"></u--text>
 ```
 
 ### 超链接
@@ -129,17 +129,16 @@ uni-app是基Vuejs，Vue和View(延伸为UI、视图之意)同音，同时view�
 | href		| mode=link下，配置的链接																	| String								| -			| -						|
 | format	| 格式化规则																				| String &#124; Function				| -			| -						|
 | call		| mode=phone时，点击文本是否拨打电话														| Boolean								| false		| true					|
-| encrypt	| 是否对mode=phone|name类型文本进行脱敏，用*号替换部分文本									| Boolean								| false		| -						|
-| openType	| 小程序的打开方式																		| String								| -			| -						|
+| openType	| 小程序的打开方式													    					| String								| -			| -						|
 | bold		| 是否粗体，默认normal																	| Boolean								| false		| true					|
 | block		| 是否块状																				| Boolean								| false		| true					|
-| lines		| 文本显示的行数，如果设置，超出此行数，将会显示省略号										| String &#124; Number					| -			| -						|
+| lines		| 文本显示的行数，如果设置，超出此行数，将会显示省略号						    				| String &#124; Number					| -			| -						|
 | color		| 文本颜色																				| String								| #303133	| -						|
 | size		| 字体大小																				| String &#124; Number					| 15		| -						|
 | iconStyle	| 图标的样式																				| Object &#124; String					| 15px		| -						|
-| precision	| 是否显示金额的千分位，mode=price时有效													| Boolean								| true		| false					|
+| precision	| 是否显示金额的千分位，mode=price时有效										    			| Boolean								| true		| false					|
 | decoration| 文字装饰，下划线，中划线等																| String								| none		| underline/line-through|
-| margin	| 外边距，对象、字符串，数值形式均可														| Object &#124; Number &#124; String	| -			| -						|
+| margin	| 外边距，对象、字符串，数值形式均可												    		| Object &#124; Number &#124; String	| -			| -						|
 | lineHeight| 文本行高																				| Number &#124; String					| -			| -						|
 | align		| 文本对齐方式																			| String								| left		| center/right			|
 | wordWrap	| 文字换行																				| String								| normal	| break-word/anywhere	|
