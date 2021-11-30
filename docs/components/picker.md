@@ -217,7 +217,7 @@
 | singleIndex		| 选择器只有一列时，默认选中项的索引，从0开始	| String &#124; Number	| 0			| -			|
 | visibleItemCount	| 每列中可见选项的数量						| String &#124; Number	| 5			| -			|
 | keyName			| 自定义需要展示的`text`属性键名				| String				| text		| -			|
-| closeOnClickOverlay| 是否允许点击遮罩关闭选择器					| Boolean				| false		| true		|
+| closeOnClickOverlay| 是否允许点击遮罩关闭选择器（注意：关闭事件需要自行处理，我们只会在开启closeOnClickOverlay后点击遮罩层执行close回调）					| Boolean				| false		| true		|
 | defaultIndex		| 各列的默认索引								| Array					| -			| -			|
 
 ### Methods
