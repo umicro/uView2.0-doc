@@ -195,6 +195,7 @@
 | size		| 头像大小										| String &#124; Number	| 40		| -			|
 | keyName	| 指定从数组的对象元素中读取哪个属性作为图片地址		| String				| -			| -			|
 | gap		| 头像之间的遮挡比例（0.4代表遮挡40%）				| String &#124; Number	| 0.5		| -			|
+| extraValue | 需额外显示的值，如设置则优先于内部的`urls.length - maxCount`值			| String &#124; Number	| -		| -			|
 
 ### AvatarGroup Event
 

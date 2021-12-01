@@ -288,6 +288,7 @@
 | itemStyle					    	| 菜单item的样式      													| String &#124; Object	| { height: '44px' }					| -			|
 | scrollable						| 菜单是否可滚动						        							| Boolean				| true					| false		|
 | current							| 当前选中标签的索引      															| String &#124; Number	| 0					| -			|
+| keyName							| 从`list`元素对象中读取的键名											| String	| name					| -			|
 
 ### Events
 

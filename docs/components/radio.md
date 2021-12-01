@@ -192,7 +192,7 @@ export default {
 | inactiveColor	| 未选中的颜色											| String				| #c8c9cc	| -		|
 | name			| 标识符													| String				| -			| -		|
 | size			| 整个组件的尺寸，默认px									| String \ Number		| 18		| -		|
-| placement		| 布局方式，row-横向，column-纵向							| Boolean				| row		| column|
+| placement		| 布局方式，row-横向，column-纵向							| String				| row		| column|
 | label			| 文本													| String				| -			| -		|
 | labelColor	| label的字体颜色								    		| String				| #303133	| -		|
 | labelSize		| label的字体大小，px单位									| String \ Number		| 14		| -		|

@@ -7,6 +7,47 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.8</h2>
+				</div>
+				<p><code>2021-12-01</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复toast的position参数无效问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						处理input在ios nvue上无法获得焦点的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						avatar-group组件添加extraValue参数，让剩余展示数量可手动控制
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						tabs组件添加keyName参数用于配置从对象中读取的键名
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						处理text组件名字脱敏默认配置无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						处理picker组件item文本太长换行问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.7</h2>
 				</div>
 				<p><code>2021-11-30</code></p>
