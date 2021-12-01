@@ -63,7 +63,7 @@ $u-info: #909399;
 
 /* 在您编写css的地方使用这些变量 */
 .title {
-	color: $u-type-primary;
+	color: $u-primary;
 	......
 }
 ```
