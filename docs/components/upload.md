@@ -13,7 +13,6 @@
 ### 基础用法
 
 - 可以通过设置`fileList`参数(数组，元素为对象)，显示预置的图片。其中元素的`url`属性为图片路径
-- 设置`action`参数为后端服务器地址，注意H5在浏览器可能会有跨域限制，让后端允许域即可
 
 ```html
 <template>
@@ -24,7 +23,6 @@
 		name="1"
 		multiple
 		:maxCount="10"
-		action='链接地址'
 	></u-upload>
 </template>
 
