@@ -21,7 +21,7 @@
 	<view>
         <u-datetime-picker
                 :show="show"
-                :value="value1"
+                v-model="value1"
                 mode="datetime"
         ></u-datetime-picker>
 		<u-button @click="show = true">打开</u-button>
@@ -49,7 +49,7 @@
     <view>
         <u-datetime-picker
                 :show="show"
-                :value="value1"
+                v-model="value1"
                 mode="date"
         ></u-datetime-picker>
         <u-button @click="show = true">打开</u-button>
@@ -82,7 +82,7 @@
         <u-datetime-picker
 			ref="datetimePicker"
 			:show="show"
-			:value="value1"
+            v-model="value1"
 			mode="datetime"
 			:formatter="formatter"
         ></u-datetime-picker>
@@ -129,7 +129,7 @@
     <view>
         <u-datetime-picker
                 :show="show"
-                :value="value1"
+                v-model="value1"
                 :minDate="1587524800000"
                 :maxDate="1786778555000"
                 mode="datetime"
@@ -173,7 +173,7 @@
 |:-					|:-								|:-						|:-					|:-														|
 | show				| 用于控制选择器的弹出与收起		| Boolean				| false				| true													|
 | showToolbar		| 是否显示顶部的操作栏			| Boolean				| true				| false													|
-| value				| 绑定值							| String &#124; Number	| -					| -														|
+| v-model			| 绑定值							| String &#124; Number	| -					| -														|
 | title				| 顶部标题						| String				| -					| -														|
 | mode				| 展示格式						| String				| datetime			| date为日期选择，time为时间选择，year-month为年月选择		|
 | maxDate			| 可选的最大时间					| Number				| 最大默认值为后10年	| -														|
