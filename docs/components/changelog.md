@@ -2,6 +2,39 @@
 
 <div class="doc-update">
 	<ul class="u-timeline u-timeline-pending">
+<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>2.0.9</h2>
+				</div>
+				<p><code>2021-12-02</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复upload内嵌在其他组件中，选择图片可能不会换行的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化swiper的height支持100%值(仅vue有效)，修复嵌入视频时click事件无法触发的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化tabs组件对list值为空的判断，或者动态变化list时重新计算相关尺寸的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化datetime-picker组件逻辑，让其后续打开的默认值为上一次的选中值，需要通过v-model绑定值才有效
+					</li>
+				</ul>
+			</div>
+		</li>
 		<li class="u-timeline-item">
 			<div class="u-timeline-item-tail"></div>
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
