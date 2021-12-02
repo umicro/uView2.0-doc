@@ -599,7 +599,7 @@
 </script>
 
 <style scoped>
-	@import url("//at.alicdn.com/t/font_2225171_fpznzepxph9.css");
+	@import url("//at.alicdn.com/t/font_2225171_1f3wele8dcr.css");
 
 	.icon-box {
 		display: flex;

@@ -129,7 +129,7 @@
 	<view class="u-demo-block">
 		<text class="u-demo-block__title">前后插槽</text>
 		<view class="u-demo-block__content">
-			<!-- 注意：由于兼容性差异，如果需要使用前后插槽，nvue下需使用u--input，非nvue下需使用u-inpu -->
+			<!-- 注意：由于兼容性差异，如果需要使用前后插槽，nvue下需使用u--input，非nvue下需使用u-input -->
 			<!-- #ifndef APP-NVUE -->
 			<u-input placeholder="前置插槽">
 			<!-- #endif -->
@@ -153,7 +153,7 @@
 			class="u-demo-block__content"
 			style="margin-top: 15px;"
 		>
-			<!-- 注意：由于兼容性差异，如果需要使用前后插槽，nvue下需使用u--input，非nvue下需使用u-inpu -->
+			<!-- 注意：由于兼容性差异，如果需要使用前后插槽，nvue下需使用u--input，非nvue下需使用u-input -->
 			<!-- #ifndef APP-NVUE -->
 			<u-input placeholder="后置插槽">
 			<!-- #endif -->
