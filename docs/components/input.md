@@ -126,59 +126,62 @@
 
 ```html
 <template>
-  <view class="u-demo-block">
-    <text class="u-demo-block__title">前后插槽</text>
-    <view class="u-demo-block__content">
-      <!-- #ifdef MP-WEIXIN -->
-      <u-input placeholder="前置插槽">
-        <!-- #endif -->
-        <!-- #ifndef MP-WEIXIN -->
-        <u--input placeholder="前置插槽">
-          <!-- #endif -->
-          <u--text
-            text="http://"
-            slot="prefix"
-            margin="0 3px 0 0"
-            type="tips"
-          ></u--text>
-          <!-- #ifdef MP -->
-      </u-input>
-      <!-- #endif -->
-      <!-- #ifndef MP-WEIXIN -->
-      </u--input>
-      <!-- #endif -->
-    </view>
-    <view
-      class="u-demo-block__content"
-      style="margin-top: 15px;"
-    >
-      <!-- #ifdef MP-WEIXIN -->
-      <u-input placeholder="后置插槽">
-        <!-- #endif -->
-        <!-- #ifndef MP-WEIXIN -->
-        <u--input placeholder="后置插槽">
-          <!-- #endif -->
-          <template slot="suffix">
-            <u-code
-              ref="uCode"
-              @change="codeChange"
-              seconds="20"
-            ></u-code>
-            <u-button
-              @tap="getCode"
-              :text="tips"
-              type="success"
-              size="mini"
-            ></u-button>
-          </template>
-          <!-- #ifdef MP -->
-      </u-input>
-      <!-- #endif -->
-      <!-- #ifndef MP-WEIXIN -->
-      </u--input>
-      <!-- #endif -->
-    </view>
-  </view>
+	<view class="u-demo-block">
+		<text class="u-demo-block__title">前后插槽</text>
+		<view class="u-demo-block__content">
+			<!-- 注意：由于兼容性差异，如果需要使用前后插槽，nvue下需使用u--input，非nvue下需使用u-inpu -->
+			<!-- #ifndef APP-NVUE -->
+			<u-input placeholder="前置插槽">
+			<!-- #endif -->
+			<!-- #ifdef APP-NVUE -->
+			<u--input placeholder="前置插槽">
+			<!-- #endif -->
+				<u--text
+					text="http://"
+					slot="prefix"
+					margin="0 3px 0 0"
+					type="tips"
+				></u--text>
+			<!-- #ifndef APP-NVUE -->
+			</u-input>
+			<!-- #endif -->
+			<!-- #ifdef APP-NVUE -->
+			</u--input>
+			<!-- #endif -->
+		</view>
+		<view
+			class="u-demo-block__content"
+			style="margin-top: 15px;"
+		>
+			<!-- 注意：由于兼容性差异，如果需要使用前后插槽，nvue下需使用u--input，非nvue下需使用u-inpu -->
+			<!-- #ifndef APP-NVUE -->
+			<u-input placeholder="后置插槽">
+			<!-- #endif -->
+			<!-- #ifdef APP-NVUE -->
+			<u--input placeholder="后置插槽">
+			<!-- #endif -->
+				<template slot="suffix">
+					<u-code
+						ref="uCode"
+						@change="codeChange"
+						seconds="20"
+						changeText="X秒重新获取哈哈哈"
+					></u-code>
+					<u-button
+						@tap="getCode"
+						:text="tips"
+						type="success"
+						size="mini"
+					></u-button>
+				</template>
+			<!-- #ifndef APP-NVUE -->
+			</u-input>
+			<!-- #endif -->
+			<!-- #ifdef APP-NVUE -->
+			</u--input>
+			<!-- #endif -->
+		</view>
+	</view>
 </template>
 
 <script>
@@ -307,8 +310,8 @@
 
 | 名称          | 说明            |
 |-------------  |---------------- |
-| prefix | 输入框前置内容，微信小程序环境只有`u-input`写法才有效  |
-| suffix | 输入框后置内容，微信小程序环境只有`u-input`写法才有效  |
+| prefix | 输入框前置内容，`nuve`环境需`u--input`有效，非`nvue`环境需`u-input`才有效  |
+| suffix | 输入框后置内容，`nuve`环境需`u--input`有效，非`nvue`环境需`u-input`才有效  |
 
 
 
