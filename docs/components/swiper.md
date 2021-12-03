@@ -344,7 +344,7 @@
 | current				| 当前所在滑块的 index								| Number &#124; String	| 0							| -													|
 | currentItemId			| 当前所在滑块的 item-id ，不能与 current 被同时指定	| String				| -							| -													|
 | interval				| 滑块自动切换时间间隔（ms）							| String &#124; Number	| 3000						| -													|
-| duration				| 滑块切换过程所需时间（ms）							| String &#124; Number	| 300						| -													|
+| duration				| 滑块切换过程所需时间（ms），nvue不支持					| String &#124; Number	| 300						| -													|
 | circular				| 播放到末尾后是否重新回到开头							| Boolean				| false						| true												|
 | previousMargin		| 前边距，可用于露出前一项的一小部分，nvue和支付宝不支持	| String &#124; Number	| 0							| -													|
 | nextMargin			| 后边距，可用于露出后一项的一小部分，nvue和支付宝不支持	| String &#124; Number	| 0							| -													|
