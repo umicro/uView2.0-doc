@@ -164,13 +164,13 @@ export default {
 | openType				| 小程序的打开方式																					| String			| -		| -								|
 | closeOnClickOverlay	| 点击遮罩是否允许关闭，见上方文档示例（注意：关闭事件需要自行处理，只会在开启closeOnClickOverlay后点击遮罩层执行close回调）	| String			| -		| -								|
 | round					| 是否显示圆角																						| Boolean			| false	| true							|
-| lang					| 指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文											| Sting				| en	| zh_CN &#124; zh_TW &#124; en	|
-| sessionFrom			| 会话来源，open-type="contact"时有效。只微信小程序有效													| Sting				| -		| -								|
-| sendMessageTitle		| 会话内消息卡片标题，openType="contact"时有效															| Sting				| -		| -								|
-| sendMessagePath		| 会话内消息卡片点击跳转小程序路径，openType="contact"时有效												| Sting				| -		| -								|
-| sendMessageImg		| 会话内消息卡片图片，openType="contact"时有效															| Sting				| -		| -								|
+| lang					| 指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文											| String				| en	| zh_CN &#124; zh_TW &#124; en	|
+| sessionFrom			| 会话来源，open-type="contact"时有效。只微信小程序有效													| String				| -		| -								|
+| sendMessageTitle		| 会话内消息卡片标题，openType="contact"时有效															| String				| -		| -								|
+| sendMessagePath		| 会话内消息卡片点击跳转小程序路径，openType="contact"时有效												| String				| -		| -								|
+| sendMessageImg		| 会话内消息卡片图片，openType="contact"时有效															| String				| -		| -								|
 | showMessageCard		| 是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，用户点击后可以快速发送小程序消息，openType="contact"时有效| Boolean|false| true|
-| appParameter			| 打开 APP 时，向 APP 传递的参数，openType=launchApp 时有效											| Sting				| -		| -								|
+| appParameter			| 打开 APP 时，向 APP 传递的参数，openType=launchApp 时有效											| String				| -		| -								|
 
 
 ### Event
