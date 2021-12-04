@@ -159,6 +159,7 @@ uView已对接uni-app档关于[uni-app方button组件](https://uni-app.dcloud.io
 |hoverStayTime			|手指松开后点击态保留时间，单位毫秒															|String &#124; Number	|200	|-		|-			|
 |text					|按钮文字，之所以通过props传入，是因为slot传入的话（注：nvue中无法控制文字的样式）				|String &#124; Number	|-		|-		|-			|
 |icon					|按钮图标																				|String					|-		|-		|-			|
+|iconColor				|按钮颜色																				|String					| 在`plain=true`镂空状态下，颜色与边框保持一致，否则为白色（主题为info时为黑色#000000）		|-		|-			|
 |color					|按钮颜色，支持传入linear-gradient渐变色													|String					|-		|-		|-			|
 |customStyle			|定义需要用到的外部样式,详细见上方文档														|Object					|-		|-		|-			|
 
