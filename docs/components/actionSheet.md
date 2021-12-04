@@ -57,7 +57,7 @@ export default {
 ### 配置点击遮罩关闭和点击某个菜单项时关闭弹窗
 
 - 通过`closeOnClickAction`参数来配置点击某个菜单项时是否关闭弹窗。
-- 通过`closeOnClickOverlay`参数配置点击遮罩是否允许关闭
+- 通过`closeOnClickOverlay`参数配置点击遮罩是否允许关闭（注意：关闭事件需要自行处理，只会在开启closeOnClickOverlay后点击遮罩层执行close回调）
 
 ```html
 <template>
@@ -162,7 +162,7 @@ export default {
 | closeOnClickAction	| 点击某个菜单项时是否关闭弹窗，见上方文档示例															| String			| -		| -								|
 | safeAreaInsetBottom	| 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明)	| Boolean			| false	| true							|
 | openType				| 小程序的打开方式																					| String			| -		| -								|
-| closeOnClickOverlay	| 点击遮罩是否允许关闭，见上方文档示例																	| String			| -		| -								|
+| closeOnClickOverlay	| 点击遮罩是否允许关闭，见上方文档示例（注意：关闭事件需要自行处理，只会在开启closeOnClickOverlay后点击遮罩层执行close回调）	| String			| -		| -								|
 | round					| 是否显示圆角																						| Boolean			| false	| true							|
 | lang					| 指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文											| Sting				| en	| zh_CN &#124; zh_TW &#124; en	|
 | sessionFrom			| 会话来源，open-type="contact"时有效。只微信小程序有效													| Sting				| -		| -								|

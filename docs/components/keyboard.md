@@ -145,7 +145,7 @@
 | showConfirm			| 是否显示工具条右边的"完成"按钮																		| Boolean				| true	| false			|
 | random				| 是否打乱键盘按键的顺序																				| Boolean				| false	| true			|
 | safeAreaInsetBottom	| 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明)	| Boolean				| false	| true			|
-| closeOnClickOverlay	| 是否允许点击遮罩收起键盘																			| Boolean				| true	| false			|
+| closeOnClickOverlay	| 是否允许点击遮罩收起键盘（注意：关闭事件需要自行处理，只会在开启closeOnClickOverlay后点击遮罩层执行close回调）	| Boolean				| true	| false			|
 | show					| 控制键盘的弹出与收起																				| Boolean				| true	| false			|
 | overlay				| 是否显示遮罩																						| Boolean				| true	| false			|
 | zIndex				| 弹出键盘的`z-index`值																				| String &#124; Number 	| 1075	| -				|

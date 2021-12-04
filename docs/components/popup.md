@@ -142,7 +142,7 @@
 | closeable				| 是否显示关闭图标																				| Boolean				| false		| true									|
 | overlayStyle			| 遮罩自定义样式，一般用于修改遮罩颜色，如：{background: 'rgba(3, 100, 219, 0.5)'}				| Object &#124; String				| -			| -										|
 | overlayOpacity		| 遮罩透明度，`0-1`之间，勿与`overlayStyle`共用			| Number &#124; String				| 0.5			| -										|
-| closeOnClickOverlay	| 点击遮罩是否关闭弹窗																			| Boolean				| true		| false									|
+| closeOnClickOverlay	| 点击遮罩是否关闭弹窗（注意：关闭事件需要自行处理，只会在开启closeOnClickOverlay后点击遮罩层执行close回调）	| Boolean				| true		| false									|
 | zIndex				| 弹出层的`z-index`值																			| Number &#124; String	| 10075		| -										|
 | safeAreaInsetBottom	| 是否为留出[底部安全距离](/components/safeAreaInset.html)											| Boolean				| true		| false									|
 | safeAreaInsetTop		| 是否留出[顶部安全距离](/components/safeAreaInset.html)（状态栏高度）								| Boolean				| false		| true									|

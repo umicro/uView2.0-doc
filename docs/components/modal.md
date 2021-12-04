@@ -111,7 +111,7 @@ export default {
 
 ### 点击遮罩关闭
 
-有时候我们不显示"关闭"按钮的时候，需要点击遮罩也可以关闭Modal，这时通过配置`closeOnClickOverlay`为`true`即可
+有时候我们不显示"关闭"按钮的时候，需要点击遮罩也可以关闭Modal，这时通过配置`closeOnClickOverlay`为`true`即可（注意：关闭事件需要自行处理，只会在开启closeOnClickOverlay后点击遮罩层执行close回调）
 
 ```html
 <u-modal :show="show" :closeOnClickOverlay="true"></u-modal>
@@ -171,7 +171,7 @@ export default {
 | buttonReverse		| 对调确认和取消的位置																		| Boolean				| false		| true								|
 | zoom				| 是否开启缩放模式																			| Boolean				| true		| false								|
 | asyncClose		| 是否异步关闭，只对确定按钮有效，见上方说明														| Boolean				| false		| true								|
-| closeOnClickOverlay| 是否允许点击遮罩关闭Modal																	| Boolean				| false		| true								|
+| closeOnClickOverlay| 是否允许点击遮罩关闭Modal（注意：关闭事件需要自行处理，只会在开启closeOnClickOverlay后点击遮罩层执行close回调）	| Boolean				| false		| true								|
 | negativeTop		| 往上偏移的值，给一个负的margin-top，往上偏移，避免和键盘重合的情况，单位任意，数值则默认为rpx单位	| String &#124; Number	| 0			| -									|
 | width				| modal宽度，不支持百分比，可以数值，px，rpx单位												| String &#124; Number	| 650rpx	| px &#124; rpx						|
 | confirmButtonShape| 确认按钮的样式,如设置，将不会显示取消按钮														| String				| -			| circle(圆形) &#124; square(方形)	|

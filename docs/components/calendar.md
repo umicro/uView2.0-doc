@@ -408,7 +408,7 @@
 | confirmText			| 确定按钮的文字										| String							| 确定		| -												|
 | confirmDisabledText	| 确认按钮处于禁用状态时的文字							| String							| 确定		| -												|
 | show					| 是否显示日历弹窗									| Boolean							| false		| true											|
-| closeOnClickOverlay	| 是否允许点击遮罩关闭日历								| Boolean							| false		| true											|
+| closeOnClickOverlay	| 是否允许点击遮罩关闭日历	（注意：关闭事件需要自行处理，只会在开启closeOnClickOverlay后点击遮罩层执行close回调）	| Boolean							| false		| true											|
 | readonly	            | 是否为只读状态，只读状态下禁止选择日期								| Boolean							| false		| true											|
 | maxRange	            | 日期区间最多可选天数，默认无限制，mode = range时有效				    | Number &#124; String				| 无限制		| -											|
 | rangePrompt	        | 范围选择超过最多可选天数时的提示文案，mode = range时有效				| String &#124; null				| 	选择天数不能超过 xx 天	| -											|
