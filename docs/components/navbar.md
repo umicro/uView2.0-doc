@@ -30,30 +30,22 @@
 ``` html
 <template>
 	<view>
-		<u-navbar 
-            title="剑未配妥，出门已是江湖" 
-            leftText="返回" 
-            rightText="帮助" 
-            @clickLeft="onClickBack" 
-            @clickRight="onClickRight"
-        ></u-navbar>
-		<view class="content">
-			<!-- 正文内容 -->
-		</view>
+        <u-navbar
+            title="个人中心"
+            @rightClick="rightClick"
+            @leftClick="leftClick"
+        >
+        </u-navbar>
 	</view>
 </template>
 
 <script>
     methods:{
-        /**
-         * 点击返回页面
-         */
-        onClickBack(){
-            uni.navigateBack()
+        rightClick() {
+            console.log('rightClick');
         },
-
-        onClickRight(){
-            // do something...
+        leftClick() {
+            console.log('leftClick');
         }
     }
 </script>
@@ -95,36 +87,45 @@
 ``` html
 <template>
 	<view>
-		<u-navbar title="首页">
-            <view slot="left">
-				......
-			</view>
-            <view slot="right">
-				......
-			</view>
-		</u-navbar>
-		<view class="content">
-			<!-- 正文内容 -->
-		</view>
+        <u-navbar
+            leftText="返回"
+            title="个人中心"
+            :safeAreaInsetTop="false"
+        >
+            <view
+                class="u-nav-slot"
+                slot="left"
+            >
+                <u-icon
+                    name="arrow-left"
+                    size="19"
+                ></u-icon>
+                <u-line
+                    direction="column"
+                    :hairline="false"
+                    length="16"
+                    margin="0 8px"
+                ></u-line>
+                <u-icon
+                    name="home"
+                    size="20"
+                ></u-icon>
+            </view>
+        </u-navbar>
 	</view>
 </template>
 ```
 
 
-:::tip 温馨提示
-uView有写一个完善的导航栏自定义内容案例，如右侧演示区域所示，如果想要看到具体的案例代码，请下载[uView演示项目](http://uviewui.com/components/install.html#%E7%A4%BA%E4%BE%8B%E9%A1%B9%E7%9B%AE)查看。
-:::
-
-
 
 ### 自定义导航栏背景颜色
 
-uView提供了一个`bg-color`参数，可以自定义导航栏的背景颜色：
+uView提供了一个`bgColor`参数，可以自定义导航栏的背景颜色：
 
 ``` html
 <template>
 	<view>
-		<u-navbar title="" :bg-color="bgColor">
+		<u-navbar title="" :bgColor="bgColor">
 			
 		</u-navbar>
 		<view class="content">
