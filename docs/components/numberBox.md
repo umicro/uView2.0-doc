@@ -253,13 +253,12 @@ export default {
 
 ### Events
 
-| 事件名	| 说明											| 回调参数											|
-| :-	| :-											| :-												|
-| change| 输入框内容发生变化时触发，对象形式				| value：输入框当前值，index：通过props传递的`index`值	|
-| blur	| 输入框失去焦点时触发，对象形式					| value：输入框当前值，index：通过props传递的`index`值	|
-| minus	| 点击减少按钮时触发(按钮可点击情况下)，对象形式		| value：输入框当前值，index：通过props传递的`index`值	|
-| plus	| 点击增加按钮时触发(按钮可点击情况下)，对象形式		| value：输入框当前值，index：通过props传递的`index`值	|
-| blur	| 输入框失去焦点时触发，对象形式					| value：输入框当前值，index：通过props传递的`index`值	|
+| 事件名	| 说明											| 回调参数									|
+| :-	| :-											| :-										|
+| focus	| 输入框得到焦点触发(按钮可点击情况下)，对象形式		| value：输入框当前值，name：步进器标识符		|
+| blur	| 输入框失去焦点时触发，对象形式			    		| value：输入框当前值，name：步进器标识符		|
+| change| 输入框内容发生变化时触发，对象形式		    		| value：输入框当前值，name：步进器标识符        |
+| overlimit	| 超过范围阈值时触发                     		| type：（`minus`已达最小值，`plus`已达最大值）	|
 
 ### Slots
 
