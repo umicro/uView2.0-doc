@@ -2,7 +2,56 @@
 
 <div class="doc-update">
 	<ul class="u-timeline u-timeline-pending">
-<li class="u-timeline-item">
+         <li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>2.0.10</h2>
+				</div>
+				<p><code>2021-12-08</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复button sendMessagePath属性不生效
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						修复DatetimePicker选择器title无效
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						 修复u-toast设置loading=true不生效
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						  修复u-text金额模式传0报错
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						  修复u-toast组件的icon属性配置不生效
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						button的icon在特殊场景下的颜色优化
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						Picker选择器singleIndex文档修正
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						IndexList优化，增加#
+					</li>
+				</ul>
+			</div>
+		</li>
+         <li class="u-timeline-item">
 			<div class="u-timeline-item-tail"></div>
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
