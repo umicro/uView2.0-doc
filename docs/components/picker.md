@@ -205,7 +205,7 @@
 | 参数				| 说明										| 类型					| 默认值		|  可选值	|
 |:-					|:-											|:-						|:-			|:-			|
 | show				| 用于控制选择器的弹出与收起					| Boolean				| false		| true		|
-| showToolbar		| 是否显示顶部的操作栏						| Boolean				| true		| false		|
+| showToolbar		| 是否显示顶部的操作栏						    | Boolean				| true		| false		|
 | title				| 顶部中间的标题								| String				| -			| -			|
 | columns			| 设置每一列的数据，见上方说明					| Array					| -			| -			|
 | loading			| 加载状态									| Boolean				| false		| true		|
@@ -214,8 +214,8 @@
 | confirmText		| 确认按钮的文字								| String				| 确认		| -			|
 | cancelColor		| 取消按钮的颜色								| String				| #909193	| -			|
 | confirmColor		| 确认按钮的颜色								| String				| #3c9cff	| -			|
-| singleIndex		| 选择器只有一列时，默认选中项的索引，从0开始	| String &#124; Number	| 0			| -			|
-| visibleItemCount	| 每列中可见选项的数量						| String &#124; Number	| 5			| -			|
+| singleIndex		| 选择器只有一列时，默认选中项的索引，从0开始    	| Array             	| [0]		| -			|
+| visibleItemCount	| 每列中可见选项的数量						    | String &#124; Number	| 5			| -			|
 | keyName			| 自定义需要展示的`text`属性键名				| String				| text		| -			|
 | closeOnClickOverlay| 是否允许点击遮罩关闭选择器（注意：关闭事件需要自行处理，只会在开启closeOnClickOverlay后点击遮罩层执行close回调）					| Boolean				| false		| true		|
 | defaultIndex		| 各列的默认索引								| Array					| -			| -			|
