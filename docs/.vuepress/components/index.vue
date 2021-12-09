@@ -142,11 +142,10 @@
           </li>
         </ul>
       </div>
-      <!--      <div class="card-box friend-link">-->
-      <!--        <p class="card-title">友情链接</p>-->
-      <!--        &lt;!&ndash;        内测期间去掉友情链接&ndash;&gt;-->
-      <!--        <friend-link></friend-link>-->
-      <!--      </div>-->
+      <div class="card-box friend-link">
+        <p class="card-title">友情链接</p>
+        <friend-link></friend-link>
+      </div>
     </div>
     <div class="foot">
       Copyright 2020 uView UI | <a target="_blank" href="http://www.beian.miit.gov.cn">粤ICP备19025822号</a>
