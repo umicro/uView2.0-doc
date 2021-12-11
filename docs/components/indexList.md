@@ -101,7 +101,7 @@
 |:-					|:-								|:-								|:-			|:-			|
 | inactiveColor		| 右边锚点状态非激活时的颜色		| String						| #606266	| -			|
 | activeColor		| 右边锚点状态激活时的颜色			| String						| #5677fc	| -			|
-| indexList			| 索引字符列表，数组				| Array[string &#124; number]	| A-Z（其余字符用下划线`_`）		| -			|
+| indexList			| 索引字符列表，数组				| Array[string &#124; number]	| A-Z		| -			|
 | sticky			| 是否开启锚点自动吸顶			    | Boolean						| true		| false		|
 | customNavHeight	| 自定义导航栏的高度，单位默认px	    | String &#124; Number			| 0			| -			|
 
