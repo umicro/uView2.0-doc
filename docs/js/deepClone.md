@@ -20,7 +20,7 @@
 - 当我们将一个对象(变量A)赋值给另一个变量(变量B)时，修改变量B，因为对象引用的特性，导致A也同时被修改，所以有时候我们需要将A克隆给B，这样修改B的时候，就不会
 导致A也被修改。
 
-#### deepClone(object = {})
+### deepClone(object = {})
 
 - `object` <Object\> 需要被克隆的对象
 
@@ -53,7 +53,7 @@ console.log(a); // 结果为 {name: 'mary'}
 **注意：** 此处合并不同于`Object.assign`，因为`Object.assign(a, b)`会修改`a`的值为最终的结果(这往往不是我们所期望的)，但是`deepMerge(a, b)`并不会修改`a`的值。
 
 
-#### deepMerge(target = {}, source = {})
+### deepMerge(target = {}, source = {})
 
 - `target` <Object\> 目标对象
 - `source` <Object\> 源对象
@@ -124,7 +124,7 @@ c = {
 读取属性时，我们需要从一个`对象`中进行操作，否则就会引起报错，因此uView提供了一个链式属性的读取方式。  
 当然，我们也可以使用`可选链操作符`的形式去获取，但是此方式在`Vue2`的`template`中不适用。
 
-#### getProperty(object, key)
+### getProperty(object, key)
 
 ```js
 // 假设有如下一个对象

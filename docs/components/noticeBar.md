@@ -100,7 +100,7 @@
 
 | 参数			| 说明																						| 类型					| 默认值		|  可选值			|
 |:-				|:-																							|:-						|:-			|:-					|
-| text			| 显示的内容，数组									    										| Array &#124;  String	| -			| -					|
+| text			| 显示的内容，`direction`为`column`时要求为数组，	为`row`时要求为字符串									| Array &#124;  String	| -			| -					|
 | direction		| 通告滚动模式，row-横向滚动，column-竖向滚动													| String				| row		| column			|
 | step			| direction = row时，是否使用步进形式滚动														| Boolean				| false		| true				|
 | icon			| 是否显示左侧的音量图标																		| String				| volume	| -					|

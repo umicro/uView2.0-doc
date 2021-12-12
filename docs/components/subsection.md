@@ -13,7 +13,7 @@
 
 ### 基本使用
 
-- 通过`list`数组参数传递分段的选项
+- 通过`list`数组参数传递分段的选项，数组元素可为字符串，或者通过`keyName`参数传入对象(默认为`name`)
 - 通过`current`指定初始化时激活的选项
 
 ```html
@@ -26,6 +26,8 @@
 		data() {
 			return {
                 list: ['未付款', '待评价', '已付款'],
+				// 或者如下，也可以配置keyName参数修改对象键名
+				// list: [{name: '未付款'}, {name: '待评价'}, {name: '已付款'}],
 				current: 1
 			}
 		}
@@ -112,6 +114,7 @@
 | fontSize		| 字体大小，单位px						| String &#124; Number	| 12		| -			|
 | bold			| 激活选项的字体是否加粗					| Boolean				| true		| false		|
 | bgColor		| 组件背景颜色，`mode`为`button`时有效		| String				| #eeeeef	| -			|
+| keyName		| 从`list`元素对象中读取的键名				| String	            | name		| -			|
 
 ### Events
 

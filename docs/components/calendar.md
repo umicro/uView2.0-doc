@@ -413,7 +413,8 @@
 | maxRange	            | 日期区间最多可选天数，默认无限制，mode = range时有效				    | Number &#124; String				| 无限制		| -											|
 | rangePrompt	        | 范围选择超过最多可选天数时的提示文案，mode = range时有效				| String &#124; null				| 	选择天数不能超过 xx 天	| -											|
 | showRangePrompt	    | 范围选择超过最多可选天数时，是否展示提示文案，mode = range时有效								| Boolean							| true		| false											|
-| allowSameDay	            | 是否允许日期范围的起止时间为同一天，mode = range时有效								| Boolean							| false		| true											|
+| allowSameDay	        | 是否允许日期范围的起止时间为同一天，mode = range时有效								| Boolean							| false		| true											|
+| round					| 圆角值，默认无圆角																					| String &#124; Number			| 0	| -							|
 
 
 ### Methods

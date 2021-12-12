@@ -163,7 +163,7 @@ export default {
 | safeAreaInsetBottom	| 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明)	| Boolean			| false	| true							|
 | openType				| 小程序的打开方式																					| String			| -		| -								|
 | closeOnClickOverlay	| 点击遮罩是否允许关闭，见上方文档示例（注意：关闭事件需要自行处理，只会在开启closeOnClickOverlay后点击遮罩层执行close回调）	| Boolean			| -		| -								|
-| round					| 是否显示圆角																						| Boolean			| false	| true							|
+| round					| 圆角值，默认无圆角																					| String &#124; Number			| 0	| -							|
 | lang					| 指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文											| String				| en	| zh_CN &#124; zh_TW &#124; en	|
 | sessionFrom			| 会话来源，open-type="contact"时有效。只微信小程序有效													| String				| -		| -								|
 | sendMessageTitle		| 会话内消息卡片标题，openType="contact"时有效															| String				| -		| -								|

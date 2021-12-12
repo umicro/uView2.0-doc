@@ -229,8 +229,8 @@ export default {
 | 参数			| 说明													| 类型					| 默认值						| 可选值	|
 | :-			| :-													| :-					| :-						| :-	|
 | name			| 步进器标识符，在change回调返回							| String &#124; Number	| -							| -		|
-| value			| 用于双向绑定的值，初始化时设置设为默认min值(最小值)		| String &#124; Number	| 0							| -		|
-| min			| 用户可输入的最小值										| String &#124; Number	| 0							| -		|
+| value			| 用于双向绑定的值，初始化时设置设为默认min值(最小值)		| String &#124; Number	| 1							| -		|
+| min			| 用户可输入的最小值										| String &#124; Number	| 1						| -		|
 | max			| 用户可输入的最大值										| String &#124; Number	| `Number.MAX_SAFE_INTEGER`	| -		|
 | step			| 步长，每次加或减的值， 支持小数值，如需小数				| String &#124; Number	| 1							| -		|
 | integer		| 是否只能输入正整数										| Boolean				| false						| true	|

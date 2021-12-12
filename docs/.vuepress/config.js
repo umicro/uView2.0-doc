@@ -300,7 +300,7 @@ module.exports = {
 				sidebarDepth: 0,
 				children: [
 					['/js/debounce', '节流防抖'],
-					['/js/deepClone', '对象操作'],
+					['/js/object', '对象操作'],
 					['/js/time', '时间格式化'],
 					['/js/route', '路由跳转'],
 					['/js/randomArray', '数组乱序'],
