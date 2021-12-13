@@ -2,7 +2,76 @@
 
 <div class="doc-update">
 	<ul class="u-timeline u-timeline-pending">
-         <li class="u-timeline-item">
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>2.0.10</h2>
+				</div>
+				<p><code>2021-12-13</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						text组件align参数无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						subsection组件添加keyName参数
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						 upload组件无法判断[Object file]类型的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						  处理notify层级过低问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						  修复u-toast组件的icon属性配置不生效
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						codeInput组件添加disabledDot参数
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						处理actionSheet组件round参数无效的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						calendar组件添加round参数用于控制圆角值
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						处理swipeAction组件在vue环境下默认被打开的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						button组件的throttleTime节流参数无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						解决u-notify手动关闭方法close()无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						input组件readonly不生效问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						tag组件type参数为info不生效问题
+					</li>
+				</ul>
+			</div>
+		</li>
+        <li class="u-timeline-item">
 			<div class="u-timeline-item-tail"></div>
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
@@ -51,7 +120,7 @@
 				</ul>
 			</div>
 		</li>
-         <li class="u-timeline-item">
+        <li class="u-timeline-item">
 			<div class="u-timeline-item-tail"></div>
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
