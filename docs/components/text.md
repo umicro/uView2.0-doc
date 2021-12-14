@@ -136,7 +136,6 @@ uni-app是基Vuejs，Vue和View(延伸为UI、视图之意)同音，同时view�
 | color		| 文本颜色																				| String								| #303133	| -						|
 | size		| 字体大小																				| String &#124; Number					| 15		| -						|
 | iconStyle	| 图标的样式																				| Object &#124; String					| 15px		| -						|
-| precision	| 是否显示金额的千分位，mode=price时有效										    			| Boolean								| true		| false					|
 | decoration| 文字装饰，下划线，中划线等																| String								| none		| underline/line-through|
 | margin	| 外边距，对象、字符串，数值形式均可												    		| Object &#124; Number &#124; String	| -			| -						|
 | lineHeight| 文本行高																				| Number &#124; String					| -			| -						|

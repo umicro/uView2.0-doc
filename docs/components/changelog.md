@@ -7,6 +7,44 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.12</h2>
+				</div>
+				<p><code>2021-12-14</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复tabs组件在vue环境下划线消失的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复upload组件在安卓小程序无法选择视频的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复textarea组件在没绑定v-model时，字符统计不生效问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复nvue下控制是否出现滚动条失效问题
+					</li>
+					<li>
+						<span class="add">新增</span>
+						添加uni.$u.config.unit配置，用于配置参数默认单位，详见：
+						<a href="/components/setting.html#%E9%BB%98%E8%AE%A4%E5%8D%95%E4%BD%8D%E9%85%8D%E7%BD%AE" target="_blank">默认单位配置</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.11</h2>
 				</div>
 				<p><code>2021-12-13</code></p>

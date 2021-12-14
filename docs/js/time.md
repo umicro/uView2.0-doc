@@ -3,7 +3,7 @@
 
 ### 格式化时间
 
-#### timeFormat | date(timestamp, format = "yyyy-mm-dd")
+### timeFormat | date(timestamp, format = "yyyy-mm-dd")
 
 
 **注意**：`1.7.9`之前的版本只能传入`秒`或`毫秒`时间戳，date和timeFormat为同功能不同名函数，无论用哪个方法名，都是一样的。
@@ -67,7 +67,7 @@ uni.$u.date('1585926095536', 'yyyy-mm')
 
 ### 多久以前
 
-#### timeFrom(time, format = String | false)
+### timeFrom(time, format = String | false)
 
 **注意** `1.7.9`之前的版本只能传入`秒`或`毫秒`时间戳
 

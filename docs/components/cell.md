@@ -184,7 +184,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 | :-			| :-																			| :-		| :-	| :-	|
 | title			| 分组标题																		| String	| -		| -		|
 | border		| 是否显示外边框																	| Boolean	| true	| false	|
-| customStyle	| 分组标题的的样式，对象形式，如{'font-size': '24rpx'} 或 {'fontSize': '24rpx'}		| object	| -		| -		|
+| customStyle	| 分组标题的的样式，对象形式，如{'font-size': '12px'} 或 {'fontSize': '12px'}		| object	| -		| -		|
 
 ### Cell Props
 
@@ -194,7 +194,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 | label			| 标题下方的描述信息												| String &#124; Number	| -				| -						|
 | value			| 右侧的内容														| String &#124; Number	| -				| -						|
 | icon			| 左侧图标名称，或者图片链接(本地文件建议使用绝对地址)				| String				| -				| -						|
-| titleWidth	| 标题的宽度，单位任意，数值默认为rpx单位							| String &#124; Number	| -				| -						|
+| titleWidth	| 标题的宽度，单位任意，数值默认为`px`单位							| String &#124; Number	| -				| -						|
 | disabled		| 是否禁用cell													| Boolean				| false			| true					|
 | border		| 是否显示下边框													| Boolean				| true			| false					|
 | center		| 内容是否垂直居中(主要是针对右侧的value部分)						| Boolean				| false			| true					|
