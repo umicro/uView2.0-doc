@@ -24,7 +24,7 @@ export default {
     props: ["sidebarItems"],
     data() {
         return {
-            showV2Tips: !this.$cookies.get("showV2Tips"),
+            // showV2Tips: !localStorage.getItem("showV2Tips"),
         };
     },
 };
@@ -37,4 +37,3 @@ export default {
     padding-bottom: 2rem;
     display: block;
 }
-</style>

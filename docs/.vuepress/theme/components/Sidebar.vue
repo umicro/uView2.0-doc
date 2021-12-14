@@ -41,7 +41,7 @@ export default {
     },
     data() {
         return {
-            showV2Tips: !this.$cookies.get("showV2Tips"),
+            // showV2Tips: !localStorage.getItem("showV2Tips"),
         };
     },
     props: ["items"],

@@ -70,7 +70,6 @@ export default {
     data() {
         return {
             linksWrapMaxWidth: null,
-            showV2Tips: !this.$cookies.get("showV2Tips"),
         };
     },
 
@@ -113,7 +112,7 @@ export default {
     },
     methods: {
         noMoreTips() {
-            this.$cookies.set("showV2Tips", true, "365d");
+            localStorage.setItem("showV2Tips", true);
             // 刷新页面，因为多个地方的布局有依赖这个变量
             location.reload();
         },
