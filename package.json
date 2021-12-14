@@ -26,6 +26,7 @@
     "dependencies": {
         "axios": "^0.20.0",
         "core-js": "^2.6.11",
-        "element-ui": "^2.13.2"
+        "element-ui": "^2.13.2",
+        "vue-cookies": "^1.7.4"
     }
 }

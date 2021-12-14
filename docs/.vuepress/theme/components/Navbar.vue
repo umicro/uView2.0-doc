@@ -1,138 +1,195 @@
 <template>
-  <div class="custom-navbar">
-	  <div class="jump-link">您正在浏览uView2.x的文档，1.x不支持升级到2.x，请点此跳转1.x文档：
-		<a class="link" href="https://v1.uviewui.com">uView1.x</a>
-	  </div>
-	  <header class="navbar">
-	    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+    <div :class="{ 'custom-navbar': showV2Tips }">
+        <div v-if="showV2Tips" class="jump-link">
+            您正在浏览uView2.x的文档，1.x不支持升级到2.x，请点此跳转1.x文档：
+            <a class="link" href="https://v1.uviewui.com">uView1.x</a>
+            <a
+                class="link"
+                href="javascript:;"
+                style="margin-left: 30px"
+                @click="noMoreTips"
+                >不再提示</a
+            >
+        </div>
+        <header
+            class="navbar"
+            :style="{
+                position: showV2Tips ? 'relative' : 'fixed',
+            }"
+        >
+            <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
 
-	    <router-link
-	      :to="$localePath"
-	      class="home-link"
-	    >
-	      <img
-	        class="logo"
-	        v-if="$site.themeConfig.logo"
-	        :src="$withBase($site.themeConfig.logo)"
-	        :alt="$siteTitle"
-	      >
-	      <span
-	        ref="siteName"
-	        class="site-name"
-	        v-if="$siteTitle"
-	        :class="{ 'can-hide': $site.themeConfig.logo }"
-	      >uView</span>
-	    </router-link>
+            <router-link :to="$localePath" class="home-link">
+                <img
+                    class="logo"
+                    v-if="$site.themeConfig.logo"
+                    :src="$withBase($site.themeConfig.logo)"
+                    :alt="$siteTitle"
+                />
+                <span
+                    ref="siteName"
+                    class="site-name"
+                    v-if="$siteTitle"
+                    :class="{ 'can-hide': $site.themeConfig.logo }"
+                    >uView</span
+                >
+            </router-link>
 
-	    <div
-	      class="links"
-	      :style="linksWrapMaxWidth ? {
-	        'max-width': linksWrapMaxWidth + 'px'
-	      } : {}"
-	    >
-	      <AlgoliaSearchBox
-	        v-if="isAlgoliaSearch"
-	        :options="algolia"
-	      />
-	      <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
-	      <NavLinks class="can-hide"/>
-	    </div>
-	  </header>
-  </div>
+            <div
+                class="links"
+                :style="
+                    linksWrapMaxWidth
+                        ? {
+                              'max-width': linksWrapMaxWidth + 'px',
+                          }
+                        : {}
+                "
+            >
+                <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia" />
+                <SearchBox
+                    v-else-if="
+                        $site.themeConfig.search !== false &&
+                        $page.frontmatter.search !== false
+                    "
+                />
+                <NavLinks class="can-hide" />
+            </div>
+        </header>
+    </div>
 </template>
 
 <script>
-import AlgoliaSearchBox from '@AlgoliaSearchBox'
-import SearchBox from '@SearchBox'
-import SidebarButton from '@theme/components/SidebarButton.vue'
-import NavLinks from '@theme/components/NavLinks.vue'
+import AlgoliaSearchBox from "@AlgoliaSearchBox";
+import SearchBox from "@SearchBox";
+import SidebarButton from "@theme/components/SidebarButton.vue";
+import NavLinks from "@theme/components/NavLinks.vue";
 
 export default {
-  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
+    components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
 
-  data () {
-    return {
-      linksWrapMaxWidth: null
-    }
-  },
-
-  mounted () {
-    const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
-    const NAVBAR_VERTICAL_PADDING = parseInt(css(this.$el, 'paddingLeft')) + parseInt(css(this.$el, 'paddingRight'))
-    const handleLinksWrapWidth = () => {
-      if (document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT) {
-        this.linksWrapMaxWidth = null
-      } else {
-        this.linksWrapMaxWidth = this.$el.offsetWidth - NAVBAR_VERTICAL_PADDING
-          - (this.$refs.siteName && this.$refs.siteName.offsetWidth || 0)
-      }
-    }
-    handleLinksWrapWidth()
-    window.addEventListener('resize', handleLinksWrapWidth, false)
-  },
-
-  computed: {
-    algolia () {
-      return this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
+    data() {
+        return {
+            linksWrapMaxWidth: null,
+            showV2Tips: !this.$cookies.get("showV2Tips"),
+        };
     },
 
-    isAlgoliaSearch () {
-      return this.algolia && this.algolia.apiKey && this.algolia.indexName
-    }
-  }
-}
+    mounted() {
+        const MOBILE_DESKTOP_BREAKPOINT = 719; // refer to config.styl
+        const NAVBAR_VERTICAL_PADDING =
+            parseInt(css(this.$el, "paddingLeft")) +
+            parseInt(css(this.$el, "paddingRight"));
+        const handleLinksWrapWidth = () => {
+            if (
+                document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT
+            ) {
+                this.linksWrapMaxWidth = null;
+            } else {
+                this.linksWrapMaxWidth =
+                    this.$el.offsetWidth -
+                    NAVBAR_VERTICAL_PADDING -
+                    ((this.$refs.siteName && this.$refs.siteName.offsetWidth) ||
+                        0);
+            }
+        };
+        handleLinksWrapWidth();
+        window.addEventListener("resize", handleLinksWrapWidth, false);
+    },
 
-function css (el, property) {
-  // NOTE: Known bug, will return 'auto' if style value is 'auto'
-  const win = el.ownerDocument.defaultView
-  // null means not to return pseudo styles
-  return win.getComputedStyle(el, null)[property]
+    computed: {
+        algolia() {
+            return (
+                this.$themeLocaleConfig.algolia ||
+                this.$site.themeConfig.algolia ||
+                {}
+            );
+        },
+
+        isAlgoliaSearch() {
+            return (
+                this.algolia && this.algolia.apiKey && this.algolia.indexName
+            );
+        },
+    },
+    methods: {
+        noMoreTips() {
+            this.$cookies.set("showV2Tips", true, "365d");
+            // 刷新页面，因为多个地方的布局有依赖这个变量
+            location.reload();
+        },
+    },
+};
+
+function css(el, property) {
+    // NOTE: Known bug, will return 'auto' if style value is 'auto'
+    const win = el.ownerDocument.defaultView;
+    // null means not to return pseudo styles
+    return win.getComputedStyle(el, null)[property];
 }
 </script>
 
 <style lang="stylus">
-$navbar-vertical-padding = 0.7rem
-$navbar-horizontal-padding = 6rem
+$navbar-vertical-padding = 0.7rem;
+$navbar-horizontal-padding = 6rem;
 
-.navbar
-  padding $navbar-vertical-padding $navbar-horizontal-padding
-  line-height $navbarHeight - 1.4rem
-  a, span, img
-    display inline-block
-  .logo
-    height $navbarHeight - 1.4rem
-    min-width $navbarHeight - 1.4rem
-    margin-right 0.8rem
-    vertical-align top
-  .site-name
-    font-size 1.3rem
-    font-weight 600
-    color $textColor
-    position relative
-  .links
-    padding-left 1.5rem
-    box-sizing border-box
-    background-color white
-    white-space nowrap
-    font-size 0.9rem
-    position absolute
-    right $navbar-horizontal-padding
-    top $navbar-vertical-padding
-    display flex
-    .search-box
-      flex: 0 0 auto
-      vertical-align top
+.navbar {
+    padding: $navbar-vertical-padding $navbar-horizontal-padding;
+    line-height: $navbarHeight - 1.4rem;
 
-@media (max-width: $MQMobile)
-  .navbar
-    padding-left 4rem
-    .can-hide
-      display none
-    .links
-      padding-left 1.5rem
-    .site-name
-      width calc(100vw - 9.4rem)
-      overflow hidden
-      white-space nowrap
-      text-overflow ellipsis
+    a, span, img {
+        display: inline-block;
+    }
+
+    .logo {
+        height: $navbarHeight - 1.4rem;
+        min-width: $navbarHeight - 1.4rem;
+        margin-right: 0.8rem;
+        vertical-align: top;
+    }
+
+    .site-name {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: $textColor;
+        position: relative;
+    }
+
+    .links {
+        padding-left: 1.5rem;
+        box-sizing: border-box;
+        background-color: white;
+        white-space: nowrap;
+        font-size: 0.9rem;
+        position: absolute;
+        right: $navbar-horizontal-padding;
+        top: $navbar-vertical-padding;
+        display: flex;
+
+        .search-box {
+            flex: 0 0 auto;
+            vertical-align: top;
+        }
+    }
+}
+
+@media (max-width: $MQMobile) {
+    .navbar {
+        padding-left: 4rem;
+
+        .can-hide {
+            display: none;
+        }
+
+        .links {
+            padding-left: 1.5rem;
+        }
+
+        .site-name {
+            width: calc(100vw - 9.4rem);
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
 </style>
