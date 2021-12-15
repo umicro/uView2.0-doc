@@ -176,7 +176,7 @@
 | v-model			| 绑定值							| String &#124; Number	| -					| -														|
 | title				| 顶部标题						| String				| -					| -														|
 | mode				| 展示格式						| String				| datetime			| date为日期选择，time为时间选择，year-month为年月选择		|
-| maxDate			| 可选的最大时间（时间戳毫秒		| Number				| 最大默认值为后10年	| -														|
+| maxDate			| 可选的最大时间（时间戳毫秒）		| Number				| 最大默认值为后10年	| -														|
 | minDate			| 可选的最小时间（时间戳毫秒）		| Number				| 最小默认值为前10年	| -														|
 | minHour			| 可选的最小小时，仅mode=time有效	| Number				| 0					| -														|
 | maxHour			| 可选的最大小时，仅mode=time有效	| Number				| 23				| -														|
