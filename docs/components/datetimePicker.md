@@ -189,7 +189,7 @@
 | cancelText		| 取消按钮的文字					| String				| 取消				| -														|
 | confirmText		| 确认按钮的文字					| String				| 确认				| -														|
 | cancelColor		| 取消按钮的颜色					| String				| #909193			| -														|
-| confirmColor		| 取消按钮的颜色					| String				| #3c9cff			| -														|
+| confirmColor		| 确认按钮的颜色					| String				| #3c9cff			| -														|
 | visibleItemCount	| 每列中可见选项的数量			| String &#124; Number	| 5					| -														|
 | closeOnClickOverlay| 是否允许点击遮罩关闭选择器（注意：关闭事件需要自行处理，只会在开启closeOnClickOverlay后点击遮罩层执行close回调）		| Boolean				| false				| true													|
 | defaultIndex		| 各列的默认索引					| Array					| []				| -														|
