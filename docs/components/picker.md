@@ -151,7 +151,7 @@
 				show: true,
                 columns: [
                     [{
-                        label: '雪月夜'
+                        label: '雪月夜',
                         // 其他属性值
                         id: 2021
                         // ...
