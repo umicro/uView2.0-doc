@@ -7,6 +7,63 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.15</h2>
+				</div>
+				<p><code>2021-12-21</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复Cell单元格titleWidth无效
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复cheakbox组件ischecked不更新问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复keyboard是否显示"."按键默认值问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复number-keyboard是否显示键盘的"."符号问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复Input输入框 readonly无效
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-avatar 导致打包app、H5时候报错问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复Upload上传deletable无效
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复upload当设置maxSize时无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复tabs lineWidth传入带单位的字符串的时候偏移量计算错误问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复rate组件在有padding的view内，显示的星星位置和可触摸区域不匹配，无法正常选中星星
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.13</h2>
 				</div>
 				<p><code>2021-12-14</code></p>

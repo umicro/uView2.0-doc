@@ -1,6 +1,6 @@
 <template>
     <div :class="{ 'custom-navbar': showV2Tips }">
-        <div v-if="showV2Tips" class="jump-link">
+        <!-- <div v-if="showV2Tips" class="jump-link" style="background-color: #FF9900;color: #fff;">
             您正在浏览uView2.x的文档，1.x不支持升级到2.x，请点此跳转1.x文档：
             <a class="link" href="https://v1.uviewui.com">uView1.x</a>
             <a
@@ -10,7 +10,20 @@
                 @click="noMoreTips"
                 >不再提示</a
             >
-        </div>
+        </div> -->
+		<div v-if="showV2Tips" class="jump-link" style="background-color: #FF9900;color: #fff;">
+		    <!-- 您正在浏览uView2.x的文档，1.x不支持升级到2.x，请点此跳转1.x文档：
+		    <a class="link" href="https://v1.uviewui.com">uView1.x</a>
+		    <a
+		        class="link"
+		        href="javascript:;"
+		        style="margin-left: 30px"
+		        @click="noMoreTips"
+		        >不再提示</a
+		    > -->
+			uView正在参与开源中国的“年度最佳项目”评选，之前投过票的现在也可以投票(投票后扫码分享到微信可增加一票)，恳请同学们投一票，
+			<a class="link" target="_blank" href="https://www.oschina.net/project/top_cn_2021/?id=583">点此帮助uView</a>
+		</div>
         <header
             class="navbar"
             :style="{
