@@ -73,9 +73,7 @@
 
 ```html
 <u--image src="https://cdn.uviewui.com/uview/album/1.jpg">
-  <template v-slot:loading>
-    <u-loading-icon color="red"></u-loading-icon>
-  </template>
+	<u-loading slot="loading"></u-loading>
 </u--image>
 ```
 
