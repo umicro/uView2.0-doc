@@ -180,7 +180,8 @@ uView提供了一个`bgColor`参数，可以自定义导航栏的背景颜色：
 | bgColor			| 导航栏背景设置										| String				| #ffffff	| -		|
 | titleWidth		| 导航栏标题的最大宽度，内容超出会以省略号隐藏，单位rpx	| String &#124; Number	| 400rpx	| -		|
 | height			| 导航栏高度(不包括状态栏高度在内，内部自动加上)，单位px	| String &#124; Number	| 44px		| -		|
-| leftIconSize		| 左侧返回图标的大小，单位px	                    | String &#124; Number	| 20px		| -		| 
+| leftIconSize		| 左侧返回图标的大小	                    | String &#124; Number	| 20px		| -		| 
+| leftIconColor		| 左侧返回图标的颜色                 | String	| #303133		| -		| 
 
 
 ### Event
@@ -196,6 +197,7 @@ uView提供了一个`bgColor`参数，可以自定义导航栏的背景颜色：
 | :-	| :-			|
 | left	| 自定义左侧部分内容	|
 | right	| 自定义右侧部分内容	|
+| default <Badge text="1.0.16" />	| 默认`slot`，中部位置	|
 
 
 
