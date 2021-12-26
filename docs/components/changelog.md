@@ -7,6 +7,27 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.16</h2>
+				</div>
+				<p><code>2021-12-25</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复微信小程序下，setData导致的性能问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复countDown组件的change事件不触发问题
+					</li>
+				</ul>
+			</div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.15</h2>
 				</div>
 				<p><code>2021-12-21</code></p>

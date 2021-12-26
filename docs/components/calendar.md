@@ -415,6 +415,7 @@
 | showRangePrompt	    | 范围选择超过最多可选天数时，是否展示提示文案，mode = range时有效								| Boolean							| true		| false											|
 | allowSameDay	        | 是否允许日期范围的起止时间为同一天，mode = range时有效								| Boolean							| false		| true											|
 | round					| 圆角值，默认无圆角																					| String &#124; Number			| 0	| -							|
+| monthNum <Badge text="2.0.16" />		 | 最大展示的月份数量																					| String &#124; Number			| 3	| -							|
 
 
 ### Methods
