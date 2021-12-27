@@ -205,9 +205,9 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 | required		| 是否显示表单状态下的必填星号(此组件可能会内嵌入input组件)			| Boolean				| false			| true					|
 | rightIcon		| 右侧的图标箭头													| String				| arrow-right	| -						|
 | arrowDirection| 右侧箭头的方向，可选值为：left，up，down							| String				| right			| left&#124;up&#124;down|
-| iconStyle		| 左侧图标样式													| Object				| -				| -						|
-| rightIconStyle| 右侧箭头图标的样式												| Object				| -				| -						|
-| titleStyle	| 标题的样式														| Object				| -				| -						|
+| iconStyle		| 左侧图标样式													| Object &#124;	String			| -				| -						|
+| rightIconStyle| 右侧箭头图标的样式												| Object &#124;	String				| -				| -						|
+| titleStyle	| 标题的样式														| Object &#124;	String				| -				| -						|
 | size			| 单位元的大小，可选值为large										| String				| -				| -						|
 | stop			| 点击cell是否阻止事件传播										| Boolean				| true 			| false					|
 | name			| 标识符，用于在`click`事件中进行返回							    | String &#124; Number  | - 			| -					|
