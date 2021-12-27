@@ -17,15 +17,14 @@ export default ({
     Vue.component('CustomDemoBlock', CustomDemoBlock);
     // ...做一些其他的应用级别的优化
     Vue.mixin({
-		data() {
-			return {
-				// showV2Tips: false,
-				showV2Tips: true,
-			}
-		},
+        data() {
+            return {
+                showV2Tips: false,
+            }
+        },
         mounted() {
-			// 是否展示顶部跳转1.x文档的条幅
-			// this.showV2Tips = !localStorage.getItem("showV2Tips")
+            // 是否展示顶部跳转1.x文档的条幅
+            this.showV2Tips = !localStorage.getItem("showV2Tips")
             // 判断某一个页面是否需要添加右边预览的右内边距，通过一个类名实现，
             // 此for-simulator-padding类名定义于/docs/.vuepress/styles/index.styl
             if (this.$page && this.$page.path) {
