@@ -18,6 +18,10 @@
 					</li>
 					<li>
 						<span class="fix">修复</span>
+						修复app端编译报错问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
 						重新处理微信小程序端setData过大的性能问题
 					</li>
 					<li>
