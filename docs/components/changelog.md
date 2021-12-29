@@ -36,10 +36,6 @@
 						<span class="fix">修复</span>
 						其他修复
 					</li>
-					<li>
-						<span class="fix">修复</span>
-						修复input的placeholder在小程序端默认显示为true问题
-					</li>
 				</ul>
 			</div>
 		</li>
