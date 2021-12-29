@@ -7,6 +7,47 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.19</h2>
+				</div>
+				<p><code>2021-12-29</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="optimize">重要优化</span>
+						优化微信小程序包体积可在微信中预览，请升级HbuilderX3.3.4，同时在“运行->运行到小程序模拟器”中勾选“运行时是否压缩代码”
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化微信小程序setData性能，处理某些方法如$u.route()无法在模板中使用的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						允许avatar组件的事件冒泡
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复cell组件报错问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						其他修复
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复input的placeholder在小程序端默认显示为true问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.18</h2>
 				</div>
 				<p><code>2021-12-28</code></p>
@@ -62,6 +103,8 @@
 					</li>
 				</ul>
 			</div>
+		</li>
+		<li>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
 					<h2>2.0.17</h2>
@@ -87,6 +130,8 @@
 					</li>
 				</ul>
 			</div>
+		</li>
+		<li>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
 					<h2>2.0.16</h2>
@@ -108,6 +153,8 @@
 					</li>
 				</ul>
 			</div>
+		</li>
+		<li>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
 					<h2>2.0.15</h2>

@@ -30,10 +30,11 @@
 ``` html
 <template>
 	<view>
+		<!-- 2.0.19支持autoBack，默认为false -->
         <u-navbar
             title="个人中心"
             @rightClick="rightClick"
-            @leftClick="leftClick"
+            :autoBack="true"
         >
         </u-navbar>
 	</view>
@@ -168,7 +169,7 @@ uView提供了一个`bgColor`参数，可以自定义导航栏的背景颜色：
 
 | 参数				| 说明												| 类型					| 默认值		| 可选值	|
 | :-				| :-												| :-					| :-		| :-	|
-| safeAreaInsetTop	| 是否开启顶部安全区适配								| Boolean				| false		| true	|
+| safeAreaInsetTop	| 是否开启顶部安全区适配								| Boolean				| true		| false	|
 | placeholder		| 固定在顶部时，是否生成一个等高元素，以防止塌陷			| Boolean				| false		| true	|
 | fixed				| 导航栏是否固定在顶部								| Boolean				| true		| false	|
 | border			| 导航栏底部是否显示下边框								| Boolean				| false		| true	|
@@ -182,6 +183,7 @@ uView提供了一个`bgColor`参数，可以自定义导航栏的背景颜色：
 | height			| 导航栏高度(不包括状态栏高度在内，内部自动加上)，单位px	| String &#124; Number	| 44px		| -		|
 | leftIconSize		| 左侧返回图标的大小	                    | String &#124; Number	| 20px		| -		| 
 | leftIconColor		| 左侧返回图标的颜色                 | String	| #303133		| -		| 
+| autoBack <Badge text="2.0.19" />			| 点击左侧区域(返回图标)，是否自动返回上一页			| Boolean				| false		| true	|
 
 
 ### Event
