@@ -1,9 +1,7 @@
 <template>
 	<div class="demo-model">
 		<div class="model-content">
-			<iframe class="iframe" scrolling="auto" frameborder="0" :src="href" id="demo-modal">
-
-			</iframe>
+			<iframe id="demo-modal" class="iframe" scrolling="auto" frameborder="0" :src="href"></iframe>
 		</div>
 	</div>
 </template>
