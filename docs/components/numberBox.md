@@ -72,10 +72,10 @@
 <u-number-box :disabledInput="true"></u-number-box>
 
 <!-- 禁用增加按钮 -->
-<u-number-box :disable-plus="true"></u-number-box>
+<u-number-box :disablePlus="true"></u-number-box>
 
 <!-- 禁用减少按钮 -->
-<u-number-box :disable-minus="true"></u-number-box>
+<u-number-box :disableMinus="true"></u-number-box>
 
 <!-- 禁用长按 -->
 <u-number-box :longPress="false"></u-number-box>
@@ -91,11 +91,11 @@
 
 ### 异步变更
 
-通过`step`设置步进长度，`decimal-length`设置显示小数位数
+通过`asyncChange`设置异步变更，开启后需要手动控制输入值 （默认 false ）
 
 ```html
 <template>
-    <u-number-box v-model="value" :async-change="true" @change="onChange"></u-number-box>
+    <u-number-box v-model="value" :asyncChange="true" @change="onChange"></u-number-box>
 </template>
 
 <script>
@@ -124,9 +124,9 @@ export default {
 ```html
 <u-number-box 
     button-size="36"
-    color="#ffffff" 
-    bg-color="#2979ff"
-    icon-style="color: #fff"
+    color="#ffffff"
+    bgColor="#2979ff"
+    iconStyle="color: #fff"
 ></u-number-box>
 ```
 
