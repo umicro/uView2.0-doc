@@ -188,7 +188,7 @@
 | space				| 多图时，图片水平和垂直之间的间隔									| String &#124; Number	| 6				| -			|
 | singleMode		| 单图时，图片缩放裁剪的模式										| String				| scaleToFill	| -			|
 | multipleMode		| 多图时，图片缩放裁剪的模式										| String				| aspectFill	| -			|
-| maxCount			| 取消按钮的提示文字												| String &#124; Number	| 9				| -			|
+| maxCount			| 最多展示的图片数量，超出时最后一个位置将会显示剩余图片数量				| String &#124; Number	| 9				| -			|
 | previewFullImage	| 是否可以预览图片											    	| Boolean				| true			| false		|
 | rowCount			| 每行展示图片数量，如设置，singleSize和multipleSize将会无效		    | String &#124; Number	| 3				| -			|
 | showMore			| 超出maxCount时是否显示查看更多的提示								| Boolean				| true			| false		|
