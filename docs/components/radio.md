@@ -92,7 +92,7 @@ export default {
 设置`disabled`为`true`，即可禁用某个组件，让用户无法点击
 
 ```html
-<u-radio-group v-model="value"
+<u-radio-group v-model="value">
 	<u-radio :disabled="true">明月几时有</u-radio>
 </u-radio-group>
 ```
@@ -101,7 +101,7 @@ export default {
 设置`labelDisabled`为`true`，即可禁止点击提示语选中复选框
 
 ```html
-<u-radio-group v-model="value"
+<u-radio-group v-model="value">
 	<u-radio :labelDisabled="true">明月几时有</u-radio>
 </u-radio-group>
 ```
