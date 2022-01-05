@@ -71,11 +71,13 @@
 
 ### 粘性布局
 
-通过加上`sticky`来使tabs滑动浮动在最顶部。
+通过加上`u-sticky`来使tabs滑动浮动在最顶部。
 
 ```html
 <template>
-    <u-tabs :list="list1" sticky></u-tabs>
+  <u-sticky bgColor="#fff">
+    <u-tabs :list="list1"></u-tabs>
+  </u-sticky>
 </template>
 
 <script>
