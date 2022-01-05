@@ -102,7 +102,7 @@ module.exports = {
 						['/components/diff1.x', '对比1.X'],
 						['/components/changelog', '更新日志'],
 						['/components/changeGuide', '升级指南'],
-						['https://www.kancloud.cn/uview/uview-ui_v2/2587948', '2.X常见问题整理'],
+						['https://www.kancloud.cn/uview/uview-ui_v2', '2.X常见问题整理'],
 					]
 				},
 				{
