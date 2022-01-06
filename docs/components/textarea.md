@@ -9,6 +9,11 @@
 由于在`nvue`下，`u-textarea`名称被uni-app官方占用，在`nvue`页面中请使用`u--textarea`名称，在`vue`页面中使用`u--textarea`或者`u-textarea`均可。
 :::
 
+### 平台差异说明
+
+|App（vue）|App（nvue）|H5|小程序|
+|:-:|:-:|:-:|:-:|
+|√|√|√|√|
 
 ### 基本使用
 
