@@ -16,9 +16,9 @@ uni-app`button`组件比较特殊，因为它有一些其他小程序平台的�
 
 ### 平台差异说明
 
-|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
-|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
-|√	|√	|√			|√				|√			|√			|√			|
+|App（vue）|App（nvue）|H5|小程序|
+|:-:|:-:|:-:|:-:|
+|√|√|√|√|
 
 ### 基本使用
 文字内容通过`text`传入
@@ -154,7 +154,7 @@ uView已对接uni-app档关于[uni-app方button组件](https://uni-app.dcloud.io
 |sendMessageImg			|会话内消息卡片图片，openType="contact"时有效												|String					|-		|-		|-			|
 |showMessageCard		|是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，用户点击后可以快速发送小程序消息，openType="contact"时有效	|String	|-	|-	|-	|
 |dataName				|额外传参参数，用于小程序的data-xxx属性，通过target.dataset.name获取							|String					|-		|-		|-			|
-|throttleTime			|节流，一定时间内只能触发一次																|String &#124; Number	|0		|-		|-			|
+|throttleTime			|节流，一定时间内只能触发一次，单位毫秒														|String &#124; Number	|0		|-		|-			|
 |hoverStartTime			|按住后多久出现点击态，单位毫秒																|String &#124; Number	|0		|-		|-			|
 |hoverStayTime			|手指松开后点击态保留时间，单位毫秒															|String &#124; Number	|200	|-		|-			|
 |text					|按钮文字，之所以通过props传入，是因为slot传入的话（注：nvue中无法控制文字的样式）				|String &#124; Number	|-		|-		|-			|

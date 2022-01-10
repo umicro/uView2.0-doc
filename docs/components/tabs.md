@@ -9,9 +9,9 @@
 
 ### 平台差异说明
 
-|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
-|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
-|√	|√	|√			|√				|√			|√			|√			|
+|App（vue）|App（nvue）|H5|小程序|
+|:-:|:-:|:-:|:-:|
+|√|√|√|√|
 
 :::warning 说明
 目前`tabs`在`vue`页面下存在一些问题，在我们处理好之前，建议在`nvue`页面下使用此组件。
@@ -71,11 +71,13 @@
 
 ### 粘性布局
 
-通过加上`sticky`来使tabs滑动浮动在最顶部。
+通过加上`u-sticky`来使tabs滑动浮动在最顶部。
 
 ```html
 <template>
-    <u-tabs :list="list1" sticky></u-tabs>
+  <u-sticky bgColor="#fff">
+    <u-tabs :list="list1"></u-tabs>
+  </u-sticky>
 </template>
 
 <script>

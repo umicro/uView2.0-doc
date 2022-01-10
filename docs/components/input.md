@@ -18,9 +18,9 @@
 
 ### 平台差异说明
 
-|App|H5	|微信小程序	|支付宝小程序		|百度小程序	|头条小程序	|QQ小程序	|
-|:-:|:-:|:-:		|:-:			|:-:		|:-:		|:-:		|
-|√	|√	|√			|√				|√			|√			|√			|
+|App（vue）|App（nvue）|H5|小程序|
+|:-:|:-:|:-:|:-:|
+|√|√|√|√|
 
 
 ### 基本使用
@@ -274,7 +274,6 @@
 | selectionEnd			| 光标结束位置，自动聚集时有效，需与selection-start搭配使用																						| String &#124; Number	| -1				| -														|
 | adjustPosition		| 键盘弹起时，是否自动上推页面																													| Boolean				| true				| false													|
 | inputAlign			| 输入框内容对齐方式																															| String				| left				| left &#124; center &#124; right						|
-| autosize				| 是否自适应内容高度，只对type=textarea有效，可传入对象,如{ maxHeight: 100, minHeight: 50 }														| Boolean				| false				| true													|
 | fontSize				| 输入框字体的大小																															| String &#124; Number	| 15px				| -														|
 | color					| 输入框字体颜色																																| String				| #303133			| -														|
 | prefixIcon			| 输入框前置图标																																| String				| -					| -														|
