@@ -142,6 +142,7 @@
 | focus	| 输入框获得焦点时触发													| value：输入框的值	| -		|
 | clear	| 配置了`clearabled`后，清空内容时会发出此事件							| -					| -		|
 | click	| `disabled`为`true`时，点击输入框，发出此事件，用于跳转搜索页				| -					| -		|
+| clickIcon	| 左侧icon点击时候时触发		                            		| -					| -		|
 
 
 <style scoped>
