@@ -392,7 +392,7 @@
 | title					| 标题内容											| String							| 日期选择	| -												|
 | showTitle				| 是否显示标题										| Boolean							| true		| false											|
 | showSubtitle			| 是否显示副标题										| Boolean							| true		| false											|
-| mode					| 日期类型选择										| String							| single	| multiple-可以选择多个日期，range-选择日期范围		|
+| mode					| 日期类型选择										| String							| single	| multiple-可以选择多个日期，range-选择日期范围（多个月需配合`monthNum`属性使用）		|
 | startText				| mode=range时，第一个日期底部的提示文字				| String							| 开始		| -												|
 | endText				| mode=range时，最后一个日期底部的提示文字				| String							| 结束		| -												|
 | customList			| 自定义列表											| Array								| []		|  []											|
