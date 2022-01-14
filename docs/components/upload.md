@@ -221,7 +221,7 @@ data(){
 
 | 参数				| 说明																				| 类型					| 默认值						|  可选值					|
 |:-					|:-																					|:-						|:-							|:-							|
-| accept			| 接受的文件类型，`file`只支持`H5`														| String				| image						| all &#124; media &#124; image &#124; file &#124; video|
+| accept			| 接受的文件类型，`file`只支持`H5`（只有微信小程序才支持把accept配置为all、media）			| String				| image						| all &#124; media &#124; image &#124; file &#124; video|
 | capture			| 图片或视频拾取模式，当accept为image类型时设置capture可选额外camera可以直接调起摄像头		| String &#124; Array	| ['album', 'camera']		| -							|
 | compressed		| 当accept为video时生效，是否压缩视频，默认为true										| Boolean				| true						| false						|
 | camera			| 当accept为video时生效，可选值为back或front											| String				| back						| -							|
