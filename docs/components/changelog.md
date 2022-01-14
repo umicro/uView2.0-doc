@@ -7,6 +7,83 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.20</h2>
+				</div>
+				<p><code>2021-01-14</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化头像为空时显示默认头像 
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复calendar默认会选择一个日期，如果直接点确定的话，无法取到值的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复Slider缺少disabled props 还有注释
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-notice-bar点击事件无法拿到index索引值的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-collapse-item在vue文件下，app端自定义插槽不生效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复图片地址赋值后判断加载状态为完成问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复日历滚动到默认日期月份区域
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						search组件暴露点击左边icon事件
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-form clearValidate方法不生效
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						upload h5端增加返回文件参数（文件的name参数）
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						处理upload选择文件后url为blob类型无法预览的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						u-code-input 修复输入框没有往左移出一半屏幕
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复Upload上传 disabled为true时，控制台报hoverClass类型错误
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						临时处理ios app下grid点击坍塌问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						其他修复
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.19</h2>
 				</div>
 				<p><code>2021-12-29</code></p>
