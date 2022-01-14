@@ -36,6 +36,10 @@
 						<span class="fix">修复</span>
 						其他修复
 					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复input的placeholder在小程序端默认显示为true问题
+					</li>
 				</ul>
 			</div>
 		</li>
@@ -100,7 +104,9 @@
 				</ul>
 			</div>
 		</li>
-		<li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
 					<h2>2.0.17</h2>
@@ -127,7 +133,9 @@
 				</ul>
 			</div>
 		</li>
-		<li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
 					<h2>2.0.16</h2>
@@ -150,7 +158,9 @@
 				</ul>
 			</div>
 		</li>
-		<li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
 					<h2>2.0.15</h2>

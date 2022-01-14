@@ -63,6 +63,7 @@
 2. number-数字输入键盘，app-vue下可以输入浮点数，app-nvue和小程序平台下只能输入整数。
 3. idcard-身份证输入键盘，微信、支付宝、百度、QQ小程序。
 4. digit-带小数点的数字键盘，App的nvue页面、微信、支付宝、百度、头条、QQ小程序。
+5. password-等同于设置`password`为`true`的效果
 
 
 #### 可清空字符
@@ -250,7 +251,7 @@
 | 参数					| 说明																																		| 类型					| 默认值				|  可选值												|
 |:-						|:-																																			|:-						|:-					|:-														|
 | value					| 输入的值																																	| Number &#124; String	| -					| -														|
-| type					| 输入框类型，见上方说明																														| String				| text				| number / idcard / digit								|
+| type					| 输入框类型，见上方说明																														| String				| text				| number &#124; idcard &#124; digit &#124; password								|
 | disabled				| 是否禁用输入框																																| Boolean				| false				| true													|
 | disabledColor			| 禁用状态时的背景色																															| String				| #f5f7fa			| -														|
 | clearable				| 是否显示清除控件																															| Boolean				| false				| true													|
