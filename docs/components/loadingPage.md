@@ -75,7 +75,7 @@
 <u-loading-page bg-color="#e8e8e8"></u-loading-page>
 ```
 
-### 背景颜色
+### 图标颜色
 
 `loading-color`可以指定加载中图标的颜色
 

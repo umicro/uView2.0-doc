@@ -199,7 +199,7 @@ uView提供了一个`bgColor`参数，可以自定义导航栏的背景颜色：
 | :-	| :-			|
 | left	| 自定义左侧部分内容	|
 | right	| 自定义右侧部分内容	|
-| center <Badge text="1.0.17" />	| 自定义中部内容	|
+| center <Badge text="2.0.17" />	| 自定义中部内容	|
 
 
 
