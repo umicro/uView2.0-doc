@@ -10,9 +10,10 @@
     <div class="qq-group__item">官方8群：496409492(已满)</div>
     <div class="qq-group__item">官方9群：828504448(已满)</div>
     <div class="qq-group__item">官方10群：232041042(已满)</div>
+    <div class="qq-group__item">官方11群：364463526(已满)</div>
     <div class="qq-group__item">
-      官方11群：
-      <a href="https://jq.qq.com/?_chanwv=1027&k=mCxS3TGY" target="_blank">364463526</a>
+      官方12群：
+      <a href="https://jq.qq.com/?_wv=1027&k=k7L9eaoi" target="_blank">229707069</a>
     </div>
   </div>
 </template>
