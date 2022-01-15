@@ -9,7 +9,7 @@
 				<div class="anchor">
 					<h2>2.0.20</h2>
 				</div>
-				<p><code>2021-01-14</code></p>
+				<p><code>2022-01-14</code></p>
 				<ul>
 					<li>
 						<span class="add">交流反馈</span>
