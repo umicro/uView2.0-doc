@@ -481,7 +481,7 @@ export default {
 | errorType		| 错误的提示方式，见上方说明				| String								| message	| none&#124;toast&#124;border-bottom&#124;none 			|
 | borderBottom	| 是否显示表单域的下划线边框						| Boolean							| true					| -				|
 | labelPosition	| 表单域提示文字的位置，`left`-左侧，`top`-上方		| String							| left					| top			|
-| labelWidth	| 提示文字的宽度，单位rpx							| String &#124; Number				| 45					| 数值 / auto	|
+| labelWidth	| 提示文字的宽度，单位px							| String &#124; Number				| 45					| 数值 / auto	|
 | labelAlign	| lable字体的对齐方式								| String							| left					| center / right|
 | labelStyle	| lable的样式，对象形式							| Object							| -						|  -			|
 

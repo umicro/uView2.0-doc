@@ -7,6 +7,59 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.21</h2>
+				</div>
+				<p><code>2022-01-19</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化form组件在用户设置rules的时候提示用户model必传
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化遗留的通过正则判断rpx单位的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复微信小程序环境中tabbar组件开启safeAreaInsetBottom属性后，placeholder高度填充不正确
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复swiper在current指定非0时缩放有误
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-icon添加stop属性的时候报错
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复upload组件在accept=all的时候没有作用
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复在text组件mode为phone时call属性无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						处理u-form clearValidate方法
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						其他修复
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.20</h2>
 				</div>
 				<p><code>2022-01-14</code></p>
