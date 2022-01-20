@@ -137,7 +137,6 @@
 | overlay				| 是否显示遮罩																					| Boolean				| true		| false									|
 | mode					| 弹出方向																						| String				| bottom	| top / right / bottom / center			|
 | duration				| 遮罩打开或收起的动画过渡时间，单位ms																| String &#124; Number	| 300		| -										|
-| borderRadius			| 弹窗圆角值																						| String &#124; Number	| 0			| -										|
 | closeable				| 是否显示关闭图标																				| Boolean				| false		| true									|
 | overlayStyle			| 遮罩自定义样式，一般用于修改遮罩颜色，如：{background: 'rgba(3, 100, 219, 0.5)'}				| Object &#124; String				| -			| -										|
 | overlayOpacity		| 遮罩透明度，`0-1`之间，勿与`overlayStyle`共用			| Number &#124; String				| 0.5			| -										|

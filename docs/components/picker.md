@@ -219,6 +219,7 @@
 | keyName			| 自定义需要展示的`text`属性键名				| String				| text		| -			|
 | closeOnClickOverlay| 是否允许点击遮罩关闭选择器（注意：关闭事件需要自行处理，只会在开启closeOnClickOverlay后点击遮罩层执行close回调）					| Boolean				| false		| true		|
 | defaultIndex		| 各列的默认索引								| Array					| -			| -			|
+| immediateChange <Badge text="2.0.22" /> | 是否在手指松开时立即触发`change`事件。若不开启则会在滚动动画结束后触发`change`事件，只在微信`2.21.1`及以上有效 	| Boolean					| false		| true			|
 
 ### Methods
 | 名称				| 说明										|

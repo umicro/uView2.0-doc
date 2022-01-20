@@ -221,6 +221,14 @@ uni.$u.priceFormat(3002.365)
 uni.$u.page()
 ```
 
+### pages() <badge text="2.0.22" />
+
+本方法为`getCurrentPages()`的封装，用于获取当前页面栈的实例，以数组形式按栈的顺序给出，第一个元素为首页，最后一个元素为当前页面。
+
+```js
+uni.$u.pages()
+```
+
 <style scoped>
 h4[id=各平台对应返回值如下表] + table thead tr th:nth-child(2){
 	width: 40%;

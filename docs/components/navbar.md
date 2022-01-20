@@ -184,6 +184,7 @@ uView提供了一个`bgColor`参数，可以自定义导航栏的背景颜色：
 | leftIconSize		| 左侧返回图标的大小	                    | String &#124; Number	| 20px		| -		| 
 | leftIconColor		| 左侧返回图标的颜色                 | String	| #303133		| -		| 
 | autoBack <Badge text="2.0.19" />			| 点击左侧区域(返回图标)，是否自动返回上一页			| Boolean				| false		| true	|
+| titleStyle <Badge text="2.0.23" />	| 标题的样式，对象或字符串形式			| String &#124; Object				| -		| -	|
 
 
 ### Event

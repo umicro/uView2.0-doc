@@ -7,6 +7,35 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.22</h2>
+				</div>
+				<p><code>2022-01-20</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						$u.page()方法优化，避免在特殊场景可能报错的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						picker组件添加immediateChange参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增$u.pages()方法
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.21</h2>
 				</div>
 				<p><code>2022-01-19</code></p>
