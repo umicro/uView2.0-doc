@@ -76,7 +76,7 @@
 | bold			| 是否显示粗体																											| Boolean				| false						| -						|
 | index			| 一个用于区分多个图标的值，点击图标时通过`click`事件传出																		| String &#124; Number	| -							| -						|
 | hoverClass	| 图标按下去的样式类，用法同uni的`view`组件的`hover-class`参数，详见：[hover-class](https://uniapp.dcloud.io/component/view)	| String				| -							| -						|
-| customPrefix	| 自定义字体图标库时，需要写上此值，详见：[扩展自定义图标库](https://www.uviewui.com/guide/customIcon.html)					| String				| uicon						| -						|
+<!-- | customPrefix	| 自定义字体图标库时，需要写上此值，详见：[扩展自定义图标库](https://www.uviewui.com/guide/customIcon.html)					| String				| uicon						| -						| -->
 | label			| 图标右侧/下方的label文字																								| String &#124; Number	| -							| -						|
 | labelPos		| `label`相对于图标的位置																									| String				| right						| bottom / top / left	|
 | labelSize		| `label`字体大小，单位默认px																								| String &#124; Number	| 15px						| -						|

@@ -279,7 +279,7 @@
 
 | 参数		| 说明									| 类型					| 默认值						|  可选值																					|
 |:-			|:-										|:-						|:-							|:-																							|
-| gutter	| 栅格间隔，左右各为此值的一半，单位rpx	| String &#124; Number	| 0							| -																							|
+| gutter	| 栅格间隔，左右各为此值的一半，单位任意	| String &#124; Number	| 0							| -																							|
 | justify	| 水平排列方式(微信小程序暂不支持)		| String				| `start`(或`flex-start`)	| `end`(或`flex-end`) / `center` / `around`(或`space-around`) / `between`(或`space-between`)|
 | align		| 垂直排列方式							| String				| center					| top / bottom																				|
 
