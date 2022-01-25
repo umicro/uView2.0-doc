@@ -7,6 +7,79 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.24</h2>
+				</div>
+				<p><code>2022-01-25</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复swiper在current指定非0时缩放有误
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-icon添加stop属性的时候报错
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化遗留的通过正则判断rpx单位的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化Layout布局 vue使用gutter时，会超出固定区域
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化search组件高度单位问题（rpx -> px）
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-image slot 加载和错误的图片失去了高度
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-index-list中footer插槽与header插槽存在性判断错误
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复部分机型下u-popup关闭时会闪烁
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-image在nvue-app下失去宽高
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-popup运行报错
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-tooltip报错
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复box-sizing在app下的警告
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-navbar在小程序中报运行时错误
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						其他修复
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.23</h2>
 				</div>
 				<p><code>2022-01-24</code></p>
