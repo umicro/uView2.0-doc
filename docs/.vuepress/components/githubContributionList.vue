@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .row {
   max-height: 500px;
