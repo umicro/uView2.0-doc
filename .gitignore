@@ -16,7 +16,7 @@ TODOs.md
 
 # VuePress temp directory
 .temp
-
+dist
 /docs/.vuepress/dist/
 
 # ftp配置相关信息
