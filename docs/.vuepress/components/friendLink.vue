@@ -45,6 +45,11 @@
         <img src="https://cdn.uviewui.com/uview/friends-link/15646154564185644515.png">
       </a>
     </div>
+	<div class="col-md-4 col-sm-4 col-xs-12 friend-link__wrap">
+	  <a target="_blank" class="friend-link__wrap__item" href="https://www.diygw.com">
+	    <img src="https://cdn.uviewui.com/uview/friends-link/156485481541054.jpg">
+	  </a>
+	</div>
   </div>
 </template>
 

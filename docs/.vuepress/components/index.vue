@@ -148,7 +148,7 @@
       </div>
     </div>
     <div class="foot">
-      Copyright 2022 uView UI | <a target="_blank" href="http://www.beian.miit.gov.cn">粤ICP备19025822号</a>
+      Copyright {{year}} uView UI | <a target="_blank" href="http://beian.miit.gov.cn">粤ICP备19025822号</a>
     </div>
   </div>
 </template>
@@ -156,7 +156,9 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+		year: new Date().getFullYear()
+	}
   },
   created() {
     // this.$alert('uView2.0正在做最后的完善工作，本文档用于体验浏览，目前<b>无法使用！</b> <br>源码包发布 npm 和 uni-app 插件市场还在紧急整理中。请大家再耐心等待。' +
