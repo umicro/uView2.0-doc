@@ -7,6 +7,44 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.25</h2>
+				</div>
+				<p><code>2022-01-27</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						添加$u.setConfig()方法，可设置uView内置的config, props, zIndex, color属性，详见：
+						<a href="/components/setting.html#修改uview内置配置方案" target="_blank">修改uView内置配置方案</a>
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化遗留的通过正则判断rpx单位的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复text组件mode=price时，可能会导致精度错误的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复$u.addUnit()对配置默认单位可能无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						其他修复
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.24</h2>
 				</div>
 				<p><code>2022-01-25</code></p>
