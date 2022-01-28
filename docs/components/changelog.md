@@ -7,7 +7,7 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
-					<h2>2.0.26</h2>
+					<h2>2.0.27</h2>
 				</div>
 				<p><code>2022-01-28</code></p>
 				<ul>
