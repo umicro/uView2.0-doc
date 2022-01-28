@@ -271,7 +271,7 @@ slot中您可以内置任何您所需要的样式。
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
 | afterRead  | 读取后的处理函数 | (file, lists, name)，错误信息 | 
-| beforeRead  | 读取后的处理函数 | (file, lists, name)，错误信息 | 
+| beforeRead  | 读取前的处理函数 | (file, lists, name)，错误信息 | 
 | oversize | 图片大小超出最大允许大小 | (file, lists, name), name为通过`props`传递的`index`参数 |
 | clickPreview | 全屏预览图片时触发 | (url, lists, name)，url为当前选中的图片地址，index为通过`props`传递的`index`参数 |
 | delete | 删除图片 | 传递`index` 回调 event 参数 包含`index，file，name` |
