@@ -7,7 +7,7 @@ uniapp可以通过配置`pages.json`生成原生元素的导航栏，简要说�
 - 缺点是配置不够灵活，遮罩无法覆盖导航栏等
 
 建议：
-- 如果开发者使用nuve，可以直接自定义导航栏，无需使用uniapp自带的
+- 如果开发者使用nvue，可以直接自定义导航栏，无需使用uniapp自带的
 - 如果是普通的vue页面，直接使用uniapp自带导航栏。如果自带的不能满足，条件允许就用`subNVue`绘制，否则就用普通元素绘制
 
 说明：uni官方有关于导航栏的详细说明，请参见[自定义导航栏](https://uniapp.dcloud.io/collocation/pages?id=customnav)
