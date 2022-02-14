@@ -160,8 +160,8 @@ value12: true,
 | activeColor	| 打开时的背景色							| String								| #2979ff	| -			|
 | inactiveColor	| 关闭时的背景色							| String								| #ffffff	| -			|
 | value			| 通过v-model双向绑定的值					| Boolean &#124; String &#124; Number	| false		| -			|
-| activeValue	| 打开选择器时的值						| Boolean &#124; String &#124; Number	| true		| -			|
-| inactiveValue	| 关闭选择器时的值						| Boolean &#124; String &#124; Number	| false		| -			|
+| activeValue	| switch打开时的值						| Boolean &#124; String &#124; Number	| true		| -			|
+| inactiveValue	| switch关闭时的值	    				| Boolean &#124; String &#124; Number	| false		| -			|
 | asyncChange	| 是否开启异步变更，开启后需要手动控制输入值	| Boolean								| false		| true		|
 | space			| 圆点与外边框的距离						| String &#124; Number					| 0			| -			|
 
