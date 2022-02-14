@@ -92,8 +92,9 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 						name: 'TtTao',
 						job: '全栈开发',
 						addr: '贵阳创业',
-						duty: '负责uView js工具库开发，测试、兼容处理、文档管理、视频教程等相关工作',
-						intro: '项目经验丰富，喜欢挑战新兴技术，对微服务、虚拟化容器有自己独到的见解，主要技术栈：Golang、Vue'
+						duty: '负责uView核心组件、API工具开发，测试、兼容处理、文档管理等相关工作',
+						intro: '项目经验丰富，喜欢挑战新兴技术，对微服务、虚拟化容器有自己独到的见解，主要技术栈：Golang、Vue',
+                        gitee: 'https://gitee.com/tttao7'
 					},
 					{
 						avatar: 'https://cdn.uviewui.com/uview/team/15915681648132.jpg',
