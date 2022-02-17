@@ -509,6 +509,7 @@ export default {
 | labelWidth	| 提示文字的宽度，单位rpx，如设置，将覆盖`u-form`的同名参数								| String &#124; Number	| -		| -				|
 | rightIcon		| 右侧自定义字体图标(限uView内置图标)或图片地址											| String				|  -	| -				|
 | leftIcon		| 左侧自定义字体图标(限uView内置图标)或图片地址											| String				|  -	| -				|
+| leftIconStyle		| 左侧自定义字体图标的样式										| String	&#124; Object			|  -	| -				|
 | required		| 是否显示左边的"*"号，这里仅起展示作用，如需校验必填，请通过`rules`配置必填规则，如需在`swiper`标签内显示星号，需要给予`swiper-item`内第一个根节点一定的`margin`样式			| Boolean				| false	| true			|
 
 ### Form-item Slot
