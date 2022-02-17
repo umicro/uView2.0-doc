@@ -1,35 +1,27 @@
-# uView2.0 Doc
+<p align="center">
+    <img alt="logo" src="https://uviewui.com/common/logo.png" width="120" height="120" style="margin-bottom: 10px;">
+</p>
+<h3 align="center" style="margin: 30px 0 30px;font-weight: bold;font-size:40px;">uView 2.0文档</h3>
+<h3 align="center">多平台快速开发的UI框架</h3>
 
-#### 介绍
-uView2.0文档
-##### 多平台快速开发的UI框架
-#### 项目说明
-uView UI，是全面兼容nvue的uni-app生态框架，全面的组件和便捷的工具宛如您手上的一把利剑
-我们的宗旨是：利剑出鞘，一统江湖！
+## 说明
 
+uView UI，是[uni-app](https://uniapp.dcloud.io/)生态优秀的UI框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水
 
+## [官方文档：https://uviewui.com](https://uviewui.com)
 
-#### 安装教程
+## 链接
 
-1：您可以使用npm根据以下命令安装
-``` html
-// 安装
-npm install uview-ui
+- [官方文档](https://uviewui.com/)
+- [更新日志](https://uviewui.com/components/changelog.html)
+- [升级指南](https://uviewui.com/components/changelog.html)
+- [关于我们](https://uviewui.com/cooperation/about.html)
 
-// 更新
-npm update uview-ui
-```
-2：在插件市场中安装：地址链接为（请您注意版本区别）
-<a style="color: #409eff!important;" target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
+## 交流反馈
 
-`具体安装请参考官网->组件->安装`
-#### 使用说明
+欢迎加入我们的QQ群交流反馈：[点此跳转](https://www.uviewui.com/components/addQQGroup.html)
 
-请参考`配置`和`快速上手`
+## 关于PR
 
-#### 参与贡献
-
-为了开源，理想和自由，您可以加入uView的研发工作组，我们一起并肩奋战。
-如果您是做UI开发的同学，uView同样欢迎，因为uView需要内外兼修。
-如果您是个积极活跃的人，那么也欢迎您加入uView的QQ群成为管理员。
-
+> 我们非常乐意接受各位的优质PR，但在此之前我希望您了解uView2.0是一个需要兼容多个平台的（小程序、h5、ios app、android app）包括nvue页面、vue页面。
+> 所以希望在您修复bug并提交之前尽可能的去这些平台测试一下兼容性。最好能携带测试截图以方便审核。非常感谢！
