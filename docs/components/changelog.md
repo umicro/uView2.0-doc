@@ -7,6 +7,55 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.28</h2>
+				</div>
+				<p><code>2022-02-22</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						search组件新增searchIconSize属性
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						兼容Safari/Webkit中传入时间格式如2022-02-17 12:00:56
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复text value.js 判断日期出format错误问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						priceFormat格式化金额出现精度错误
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						priceFormat在部分情况下出现精度损失问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						优化表单rules提示
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复avatar组件src为空时，展示状态不对
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						其他修复
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.27</h2>
 				</div>
 				<p><code>2022-01-28</code></p>
