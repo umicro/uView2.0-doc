@@ -312,7 +312,7 @@ rules: {
 上面讲述了[async-validator](https://github.com/yiminghe/async-validator)的规则和配置，以及uView内置规则的结合使用，下面我们进行一个综合
 实战示例，要入对某一个字段进行如下验证(验证实现有多种方法，下方仅为引导示例，非唯一，或最优做法)：
 
-1. 必填，同时可接受`change`和`blur`触发校验：配置`required`参数为`true`，同时配置`trigger`为`[change, bulr]`
+1. 必填，同时可接受`change`和`blur`触发校验：配置`required`参数为`true`，同时配置`trigger`为`[change, blur]`
 2. 必须为字母或字符串，校验前先将字段值转为字符串类型：通过`pattern`参数配置正则：/^[0-9a-zA-Z]*$/g，通过`transform`参数在校验前对字段值转换为字符串
 3. 长度6-8个字符之间：通过 配置`min`为6，`max`为8
 4. 需要包含字母"A"：使用uView的`uni.$u.test.contains()`方法，并结合`validator`自定义函数实现
