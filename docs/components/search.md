@@ -117,6 +117,7 @@
 | disabled			| 是否启用输入框																		| Boolean				| false			| true			|
 | borderColor		| 边框颜色，配置了颜色，才会有边框													| String				| transparent	| -				|
 | searchIconColor	| 搜索图标的颜色，默认同输入框字体颜色												| String				| #909399		| -				|
+| searchIconSize	| 搜索图标的大小                   												| Number				| 22		| -				|
 | color				| 输入框字体颜色																		| String				| #606266		| -				|
 | placeholderColor	| placeholder的颜色																	| String				| #909399		| -				|
 | searchIcon		| 输入框左边的图标，可以为uView图标名称或图片路径										| String				| search		| -				|
