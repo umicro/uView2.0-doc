@@ -336,8 +336,8 @@
 |:-						|:-													|:-						|:-							|:-													|
 | list					| 轮播图数据，见上方"基本使用"说明						| Array					| -							| -													|
 | indicator				| 是否显示面板指示器									| Boolean				| false						| true												|
-| indicatorActiveColor	| 指示器非激活颜色									| String				| #FFFFFF					| -													|
-| indicatorInactiveColor| 指示器的激活颜色									| String				| rgba(255, 255, 255, 0.35)	| -													|
+| indicatorActiveColor	| 指示器激活的颜色									| String			    	| #FFFFFF					| -													|
+| indicatorInactiveColor| 指示器非激活颜色									| String			    	| rgba(255, 255, 255, 0.35)	| -													|
 | indicatorStyle		| 指示器样式，可通过bottom，left，right进行定位			| String &#124; Object	| -							| -													|
 | indicatorMode			| 指示器模式											| String				| line						| dot												|
 | autoplay				| 是否自动切换										| Boolean				| true						| false												|
