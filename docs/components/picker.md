@@ -90,12 +90,11 @@
 
 ### 加载状态
 
-由于需要多列联动，此模式和上面的"多列模式"基本相同，但是也有区别的地方，因为需要"联动"，需要在每个对象中多一个`children`属性，用于标识
-它的子列(后一列)的可选值，回调参数和"多列模式"一致。
+由于需要多列联动，此模式和上面的"多列模式"基本相同，在加载之前将`loading`设置为`true`，数据获取完成之后再置为`false`即可。
 
 ```html
 <template>
-    <u-picker :show="show" ref="uPicker" :columns="columns" @change="changeHandler"></u-picker>
+    <u-picker :show="show" ref="uPicker" :loading="loading" :columns="columns" @change="changeHandler"></u-picker>
 </template>
 
 <script>
@@ -103,6 +102,7 @@
         data() {
             return {
                 show: true,
+                loading: false,
                 columns: [
                     ['中国', '美国'],
                     ['深圳', '厦门', '上海', '拉萨']

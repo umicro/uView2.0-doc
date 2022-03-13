@@ -2,6 +2,66 @@
 
 <div class="doc-update">
 	<ul class="u-timeline u-timeline-pending">
+        <li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>2.0.29</h2>
+				</div>
+				<p><code>2022-03-13</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u--text组件设置decoration属性未生效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-datetime-picker使用formatter后返回值不正确
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-datetime-picker intercept 可能为undefined
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复已设置单位 uni..config.unit = 'rpx'时，线型指示器 transform 的位置翻倍，导致指示器超出宽度
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复mixin中bem方法生成的类名在支付宝和字节小程序中失效
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复默认值传值为空的时候，打开u-datetime-picker报错，不能选中第一列时间的bug
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						修复u-datetime-picker使用formatter后返回值不正确
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						修复u-image组件loading无效果的问题
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						修复config.unit属性设为rpx时，导航栏占用高度不足导致塌陷的问题
+					</li>					<li>
+						<span class="fix">修复</span>
+						修复u-datetime-picker组件itemHeight无效问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						其他修复
+					</li>
+				</ul>
+			</div>
+		</li>
 		<li class="u-timeline-item">
 			<div class="u-timeline-item-tail"></div>
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
