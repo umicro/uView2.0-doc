@@ -294,7 +294,7 @@
 | title		| 标题内容		|
 | icon		| icon			|
 | value		| 右侧value		|
-| rightIcon	| 右侧icon		|
+| right-icon	| 右侧icon		|
 
 
 <style scoped>
