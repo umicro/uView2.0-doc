@@ -9,8 +9,8 @@ uView依赖SCSS，您必须要安装此插件，否则无法正常运行。
 - 如果您的项目是由`vue-cli`创建的，请通过以下命令安装对sass(scss)的支持，如果已安装，请略过。
 
 ```js
-// 安装node-sass
-npm i node-sass -D
+// 安装sass
+npm i sass -D
 
 // 安装sass-loader
 npm i sass-loader -D
