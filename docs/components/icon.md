@@ -17,6 +17,8 @@
 
 ::: danger 注意
 因为在`nvue`下暂时无法解决自定义图标的问题，所以此功能暂缓推出。
+
+[icon下载地址](/components/resource.html)
 :::
 
 <br>

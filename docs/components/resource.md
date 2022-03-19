@@ -41,6 +41,14 @@
                 <p>我们的专业设计师精心为您做了一套精美的缺省图，涵盖各个场景，文件内含图片和Sketch源文件</p>
                 <a href="https://yanxincloudplatform.oss-cn-beijing.aliyuncs.com/cloudplatform/Empty.zip">下载</a>
             </div>
+        </li>        
+        <li >
+            <div class="card">
+                <img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/918be742-1a59-4981-9d9b-ccf45104fc3b.jpg" alt="">
+                <h3>uView2.0 icon</h3>
+                <p>基于字体的图标集，包含了大多数常见场景的图标。</p>
+                <a href="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8f7e1d02-dcb1-46ba-90db-ae32fea44f22/5d3fabe3-464a-4fcd-b354-a35daed18eef.zip">下载</a>
+            </div>
         </li>
     </ul>
 </div>
