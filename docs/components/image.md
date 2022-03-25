@@ -51,7 +51,7 @@
 ### 图片形状
 
 - 通过`shape`参数设置图片的形状，`circle`为圆形，`square`为方形
-- 如果为方形时，还可以通过`border-radius`参数设置圆角值
+- 如果为方形时，还可以通过`radius`属性设置圆角值
 
 ```html
 <u--image src="https://cdn.uviewui.com/uview/album/1.jpg" shape="circle"></u--image>
