@@ -83,7 +83,7 @@ export default {
 
 ```html
 <u-radio-group v-model="value">
-	<u-radio shape="circle">月明人倚楼</u-radio>
+	<u-radio shape="circle" label="月明人倚楼"></u-radio>
 </u-radio-group>
 ```
 
@@ -93,7 +93,7 @@ export default {
 
 ```html
 <u-radio-group v-model="value">
-	<u-radio :disabled="true">明月几时有</u-radio>
+	<u-radio :disabled="true" label="明月几时有"></u-radio>
 </u-radio-group>
 ```
 ### 是否禁止点击提示语选中复选框
@@ -102,7 +102,7 @@ export default {
 
 ```html
 <u-radio-group v-model="value">
-	<u-radio :labelDisabled="true">明月几时有</u-radio>
+	<u-radio :labelDisabled="true" label="明月几时有"></u-radio>
 </u-radio-group>
 ```
 
@@ -113,7 +113,7 @@ export default {
 
 ```html
 <u-radio-group v-model="value">
-	<u-radio activeColor="red">思悠悠，恨悠悠，恨到归时方始休</u-radio>
+	<u-radio activeColor="red" label="思悠悠，恨悠悠，恨到归时方始休"></u-radio>
 </u-radio-group>
 ```
 
@@ -125,7 +125,7 @@ export default {
 <u-radio-group 
     v-model="value"
     placement="row">
-	<u-radio activeColor="red">思悠悠，恨悠悠，恨到归时方始休</u-radio>
+	<u-radio activeColor="red" label="思悠悠，恨悠悠，恨到归时方始休"></u-radio>
 </u-radio-group>
 ```
 ### 横向两端排列形式
@@ -136,7 +136,7 @@ export default {
 <u-radio-group 
     v-model="value"
     iconPlacement="right">
-	<u-radio activeColor="red">思悠悠，恨悠悠，恨到归时方始休</u-radio>
+	<u-radio activeColor="red" label="思悠悠，恨悠悠，恨到归时方始休"></u-radio>
 </u-radio-group>
 ```
 

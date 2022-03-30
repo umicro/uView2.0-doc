@@ -151,6 +151,52 @@
 </script>
 ```
 
+### 禁用
+
+可以通过在列表对象中加入`disabled = true`来设置禁用。
+
+```html
+<template>
+    <u-tabs :list="list2"></u-tabs>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                list2: [{
+                    name: '关注',
+                    disabled: true
+                }, {
+                    name: '推荐',
+                    badge: {
+                        isDot: true
+                    }
+                }, {
+                    name: '电影',
+                    badge: {
+                        value: 5,
+                    }
+                }, {
+                    name: '科技',
+                    disabled: true
+                }, {
+                    name: '音乐'
+                }, {
+                    name: '美食'
+                }, {
+                    name: '文化'
+                }, {
+                    name: '财经'
+                }, {
+                    name: '手工'
+                }]
+            }
+        }
+    }
+</script>
+```
+
 
 ### 自定义样式
 

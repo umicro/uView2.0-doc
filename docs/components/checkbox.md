@@ -181,7 +181,7 @@ export default {
 
 ```html
 <u-checkbox-group>
-	<u-checkbox v-model="checked" shape="circle">明月</u-checkbox>
+	<u-checkbox v-model="checked" shape="circle" label="明月"></u-checkbox>
 </u-checkbox-group>
 ```
 
@@ -193,7 +193,7 @@ export default {
 
 ```html
 <u-checkbox-group v-model="checked">
-	<u-checkbox  activeColor="red">光影</u-checkbox>
+	<u-checkbox  activeColor="red" label="光影"></u-checkbox>
 </u-checkbox-group>
 ```
 
@@ -204,8 +204,8 @@ export default {
 
 ```html
 <u-checkbox-group v-model="checked" placement="row">
-	<u-checkbox activeColor="red">红色</u-checkbox>
-	<u-checkbox activeColor="green">绿色</u-checkbox>
+	<u-checkbox activeColor="red" label="红色"></u-checkbox>
+	<u-checkbox activeColor="green" label="绿色"></u-checkbox>
 </u-checkbox-group>
 ```
 
@@ -219,8 +219,8 @@ export default {
     v-model="checked"
     iconPlacement="right" 
     placement="row">
-	<u-checkbox activeColor="red">红色</u-checkbox>
-	<u-checkbox activeColor="green">绿色</u-checkbox>
+	<u-checkbox activeColor="red" label="红色"></u-checkbox>
+	<u-checkbox activeColor="green" label="绿色"></u-checkbox>
 </u-checkbox-group>
 ```
 
