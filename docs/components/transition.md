@@ -95,12 +95,12 @@
 
 | 事件名			| 说明		| 回调参数	|
 | :-			| :-		| :-		|
-| before-enter	| 进入前触发	| -			|
+| beforeEnter	| 进入前触发	| -			|
 | enter			| 进入中触发	| -			|
-| after-enter	| 进入后触发	| -			|
-| before-leave	| 离开前触发	| -			|
+| afterEnter	| 进入后触发	| -			|
+| beforeLeave	| 离开前触发	| -			|
 | leave			| 离开中触发	| -			|
-| after-leave	| 离开后触发	| -			|
+| afterLeave	| 离开后触发	| -			|
 
 
 <style scoped>

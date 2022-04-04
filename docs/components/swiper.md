@@ -168,6 +168,43 @@
     }
 </script>
 ```
+
+### 指定类型 <Badge text="2.0.30" />
+
+默认会根据链接自动判断`swiper-item`类型，但是在极端情况下可能会不准确，所以我们提供了指定`item`的类型，通过设置`type`为`video`或`image`即可：
+
+```html
+<template>
+    <u-swiper
+            :list="list4"
+            keyName="url"
+            :autoplay="false"
+    ></u-swiper>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                list4: [{
+                    url: 'https://cdn.uviewui.com/uview/resources/video.mp4',
+                    title: '昨夜星辰昨夜风，画楼西畔桂堂东',
+                    poster: 'https://cdn.uviewui.com/uview/swiper/swiper1.png',
+                    type: 'video'
+                },{
+                    url: 'https://cdn.uviewui.com/uview/swiper/swiper2.png',
+                    title: '身无彩凤双飞翼，心有灵犀一点通',
+                    type: 'image'
+                },{
+                    url: 'https://cdn.uviewui.com/uview/swiper/swiper3.png',
+                    title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳'
+                }],
+            }
+        }
+    }
+</script>
+```
+
 ### 自定义指示器
 
 如您需要以指示点或数字形式来自定义指示器，请参考如下案例：

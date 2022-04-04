@@ -7,6 +7,111 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.30</h2>
+				</div>
+				<p><code>2022-04-04</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						`u-rate`增加`readonly`属性
+					</li>
+                    <li>
+						<span class="add">新增</span>
+						`tabs`滑块支持设置背景图片
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`u-subsection` `mode`为`subsection`时，滑块样式不正确的问题
+					</li>
+                    <li>
+						<span class="add">新增</span>
+						`u-code-input`添加光标效果动画
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`popup`的`open`事件不触发的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`u-flex-column`无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`u-datetime-picker`索引在特定场合异常问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`u-datetime-picker`最小时间字符串模板错误问题
+					</li>
+                    <li>
+						<span class="add">新增</span>
+						`u-swiper`添加`m3u8`验证
+					</li>
+                    <li>
+						<span class="optimize">优化</span>
+						 `u-swiper`修改判断image和video逻辑
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						修复`swiper`无法使用本地图片问题，增加`type`参数
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						修复`u-row-notice`格式错误问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`u-switch`组件当`unit`为`rpx`时,`nodeStyle`消失的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`datetime-picker`组件`showToolbar`与`visibleItemCount`属性无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`upload`组件条件编译位置判断错误，导致`previewImage`属性设置为`false`时，整个组件都会被隐藏的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`u-checkbox-group`设置`shape`属性无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`u-upload`的`capture`传入字符串的时候不生效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`u-action-sheet`组件，关闭事件逻辑错误的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`u-list`触顶事件的触发错误的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`u-text`只有手机号可拨打的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复`u-textarea`不能换行的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						其他修复
+					</li>
+				</ul>
+			</div>
+		</li>
+        <li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.29</h2>
 				</div>
 				<p><code>2022-03-13</code></p>
@@ -51,7 +156,8 @@
                     <li>
 						<span class="fix">修复</span>
 						修复config.unit属性设为rpx时，导航栏占用高度不足导致塌陷的问题
-					</li>					<li>
+					</li>
+                    <li>
 						<span class="fix">修复</span>
 						修复u-datetime-picker组件itemHeight无效问题
 					</li>

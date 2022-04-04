@@ -205,25 +205,83 @@
 ```html
 <template>
     <u-tabs
-            :list="list4"
-            lineWidth="30"
-            lineColor="#f56c6c"
-            :activeStyle="{
-						color: '#303133',
-						fontWeight: 'bold',
-						transform: 'scale(1.05)'
-					}"
-            :inactiveStyle="{
-						color: '#606266',
-						transform: 'scale(1)'
-					}"
-            itemStyle="padding-left: 15px; padding-right: 15px; height: 34px;"
+        :list="list4"
+        lineWidth="30"
+        lineColor="#f56c6c"
+        :activeStyle="{
+            color: '#303133',
+            fontWeight: 'bold',
+            transform: 'scale(1.05)'
+        }"
+        :inactiveStyle="{
+            color: '#606266',
+            transform: 'scale(1)'
+        }"
+        itemStyle="padding-left: 15px; padding-right: 15px; height: 34px;"
     >
     </u-tabs>
 </template>
 
 <script>
     export default {
+        data() {
+            return {
+                list4: [{
+                    name: '关注'
+                }, {
+                    name: '推荐',
+                    badge: {
+                        isDot: true
+                    }
+                }, {
+                    name: '电影',
+                }, {
+                    name: '科技'
+                }, {
+                    name: '音乐'
+                }, {
+                    name: '美食'
+                }, {
+                    name: '文化'
+                }, {
+                    name: '财经'
+                }, {
+                    name: '手工'
+                }],
+            }
+        }
+    }
+</script>
+```
+
+### 滑块设置背景图 <Badge text="2.0.30" />
+
+通过使用`lineColor`来设置滑块背景图。
+
+```html
+<template>
+    <u-tabs
+    :list="list4"
+    lineWidth="20"
+    lineHeight="7"
+    :lineColor="`url(${lineBg}) 100% 100%`"
+    :activeStyle="{
+        color: '#303133',
+        fontWeight: 'bold',
+        transform: 'scale(1.05)'
+    }"
+    :inactiveStyle="{
+        color: '#606266',
+        transform: 'scale(1)'
+    }"
+    itemStyle="padding-left: 15px; padding-right: 15px; height: 34px;"
+    >
+    </u-tabs>
+</template>
+
+<script>
+  const lineBg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAOCAYAAABdC15GAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFxSURBVHgBzZNRTsJAEIb/WTW+lpiY+FZPIDew3ABP4GJ8hxsI9zBpOYHeQDwBPQI+mRiRvpLojtPdYhCorQqF/6GdbGd2vvwzBXZcNAt4oj1ANeUoAT5iqkUjbEFLHNmhD1YPEvpZ3ghkGlVDCkc94/BmHMq998I5ONiY1ZBfpKAyuOtgAc5yOEDmYEWNh32BHF91sGHZHmwW4azciN9aQwnz3SJEgOmte+R2tdLprTYoa50mvuomlLpD4Y3oQZnov6D2RzCqI93bWOHaEmAGqQUyRBlZR1WfarcD/EJ2z8DtzDGvsMCwpm8XOCfDUsVOCYhiqRxI/CTQo4UOvjzO7Pow18vfywneuUHHUUxLn55lLw5JFpZ8bEUcY8oXdOLWiHLTxvoGpLqoUmy6dBT15o/ox3znpoycAmxUsiJTbs1cmxeVKp+0zmFIS7bGWiVghC7Vwse8jFKAX9eljh4ggKLLv7uaQvG9/F59Oo2SouxPu7OTCxN/s8wAAAAASUVORK5CYII=";
+  export default {
         data() {
             return {
                 list4: [{
@@ -334,6 +392,7 @@
 | inactiveStyle						| 菜单非选中时的样式														| String &#124; Object		| { color: '#606266' }				| -			|
 | lineWidth							| 滑块长度      															| String &#124; Number	| 20					| -			|
 | lineHeight						| 滑块高度      															| String &#124; Number	| 3						| -			|
+| lineBgSize <Badge text="2.0.30" />  | 滑块背景显示大小，当滑块背景设置为图片时使用     							| String               	| cover 				| -			|
 | itemStyle					    	| 菜单item的样式      													| String &#124; Object	| { height: '44px' }					| -			|
 | scrollable						| 菜单是否可滚动						        							| Boolean				| true					| false		|
 | current							| 当前选中标签的索引      															| String &#124; Number	| 0					| -			|
