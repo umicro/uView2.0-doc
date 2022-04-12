@@ -177,7 +177,7 @@ H5、App（含NVUE）外链可以直接打开，小程序端将自动复制链�
 
 | 参数		| 说明													| 类型			| 默认值	|  可选值	|
 |:-			|:-														|:-				|:-		| :-		|
-|bgColoe	| 背景颜色，只适用与APP-PLUS-NVUE							| String		| -		| -			|
+|bgColor	| 背景颜色，只适用与APP-PLUS-NVUE							| String		| -		| -			|
 |content	| 要显示的富文本字符串									| String		| -		| -			|
 |copyLink	| 是否允许外部链接被点击时自动复制							| Boolean		| true	| false		|
 |domain		| 主域名，设置后将给链接自动拼接上主域名或协议名				| String		| -		| -			|
