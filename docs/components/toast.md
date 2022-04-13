@@ -145,6 +145,7 @@ Toast 组件主要用于消息通知、加载提示、操作结果提示等醒�
 | loading	| 是否加载中											| Boolean				| false		| true		|
 | message	| 显示的文本											| String &#124; Number	| -			| -			|
 | icon		| 图标，或者绝对路径的图片								| String				| -			| -			|
+| position | toast出现的位置 | String  | center | top / bottom |
 | type		| 主题类型											| String				| -			| -			|
 | params	| 跳转的参数											| Object				| -			| -			|
 | duration	| 展示时间，单位ms									| String &#124; Number	| 2000		| -			|
