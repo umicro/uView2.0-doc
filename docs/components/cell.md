@@ -184,7 +184,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 | :-			| :-																			| :-		| :-	| :-	|
 | title			| 分组标题																		| String	| -		| -		|
 | border		| 是否显示外边框																	| Boolean	| true	| false	|
-| customStyle	| 分组标题的的样式，对象形式，如{'font-size': '12px'} 或 {'fontSize': '12px'}		| object	| -		| -		|
+| customStyle	| 用户自定义外部样式，对象形式，如{'font-size': '12px'} 或 {'fontSize': '12px'}		| object	| -		| -		|
 
 ### Cell Props
 
