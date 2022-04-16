@@ -117,7 +117,7 @@ export default {
 			radio: '',
 			switchVal: false
 		};
-	}
+	},
 	methods: {
 		sexSelect(e) {
 			this.model1.userInfo.sex = e.name
