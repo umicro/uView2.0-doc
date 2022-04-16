@@ -86,7 +86,7 @@
 		data() {
 			return {
 				status: 'loadmore',
-                loadingText: '努力加载中'
+                loadingText: '努力加载中',
                 loadmoreText: '轻轻上拉',
                 nomoreText: '实在没有了'
 			}
