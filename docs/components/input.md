@@ -283,6 +283,7 @@
 | readonly				| 是否只读，与disabled不同之处在于disabled会置灰组件，而readonly则不会																			| Boolean				| false				| true													|
 | shape					| 输入框形状，circle-圆形，square-方形																											| String				| square			| circle												|
 | formatter			    | 输入过滤或格式化函数(如需兼容微信小程序，则只能通过`setFormatter`方法)					| Function				| null				| -														|		
+| customStyle			| 定义需要用到的外部样式 										| Object 																	| - 						| - 				| -
 
 
 
@@ -290,7 +291,7 @@
 
 |事件名	|说明					|回调参数			|版本	|
 |:-		|:-						|:-					|:-		|
-| blur| 输入框失去焦点时触发	| event: input默认参数，event.detail.value获取内容	| -		|
+| blur| 输入框失去焦点时触发	| value：内容值	| -		|
 | focus| 输入框聚焦时触发	|-	| -		|
 | confirm| 点击完成按钮时触发	| value：内容值  | -		|
 | keyboardheightchange| 键盘高度发生变化的时候触发此事件	| -	| 微信小程序2.7.0+、App 3.1.0+	|
