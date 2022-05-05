@@ -20,17 +20,26 @@ module.exports = {
 	},
 	evergreen: true, // 只适配现代浏览器
 	// <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	configureWebpack: (config, isServer) => {
+    configureWebpack: (config, isServer) => {
+        const defaultConfig = {
+            node: {
+                global:true
+            }
+        }
+
 		// 只有在发布(isServer=true)的时候才进行此修改操作，否则在本地预览时出问题
-		if (isServer) {
-			// 修改客户端的 webpack 配置
-			// 加入一个时间戳，让每次编译时，文件都不一样，也即每次发版本，都强行更新所有文件
-			return {
+        if (isServer) {
+            const newConfig = {
 				output: {
 					filename: `assets/js/[name].${+ new Date()}.[chunkhash].js`,
 				}
 			}
-		}
+			// 修改客户端的 webpack 配置
+			// 加入一个时间戳，让每次编译时，文件都不一样，也即每次发版本，都强行更新所有文件
+			return Object.assign(defaultConfig,newConfig)
+        } else {
+            return defaultConfig;
+        }
 	},
 	head: [
 		['meta', {
