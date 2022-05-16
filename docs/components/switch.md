@@ -170,5 +170,5 @@ value12: true,
 
 |事件名	|说明										|回调参数													|
 |:-		|:-											|:-															|
-| change| 在`switch`打开或关闭时触发					| value：打开时为`activeColor`值，关闭时为`inactiveColor`值	|
-| input	| 在`switch`打开或关闭时触发（没开启异步）		| value：打开时为`activeColor`值，关闭时为`inactiveColor`值	|
+| change| 在`switch`打开或关闭时触发					| value：打开时为`activeValue`值，关闭时为`inactiveValue`值	|
+| input	| 在`switch`打开或关闭时触发（没开启异步）		| value：打开时为`activeValue`值，关闭时为`inactiveValue`值	|
