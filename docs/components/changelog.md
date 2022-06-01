@@ -7,6 +7,43 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.31</h2>
+				</div>
+				<p><code>2022-04-19</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复upload在vue页面上传成功后没有成功标志的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						解决演示项目中微信小程序模拟上传图片一直出于上传中问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-code-input组件在nvue页面编译到app平台上光标异常问题（app去除此功能）
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						修复actionSheet组件标题关闭按钮点击事件名称错误的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						其他修复
+					</li>
+				</ul>
+			</div>
+		</li>
+        <li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.30</h2>
 				</div>
 				<p><code>2022-04-04</code></p>
