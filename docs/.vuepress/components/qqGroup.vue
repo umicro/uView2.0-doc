@@ -12,15 +12,15 @@
     <div class="qq-group__item">官方10群：232041042(已满)</div>
     <div class="qq-group__item">官方11群：364463526(已满)</div>
     <div class="qq-group__item">官方12群：229707069(已满)</div>
+    <div class="qq-group__item">官方13群：879811455(已满)</div>
     <div class="qq-group__item">
-      官方13群：
-      <a href="https://jq.qq.com/?_wv=1027&k=cCPuR6xP" target="_blank">879811455</a>
+      官方14群：
+      <a href="https://jq.qq.com/?_wv=1027&k=HiY0Ta3O" target="_blank">965190918</a>
     </div>
   </div>
 </template>
 
-<script>
-</script>
+<script></script>
 
 <style lang="scss" scoped>
 .qq-group {
