@@ -94,7 +94,7 @@
 	}
 </script>
 ```
-### 线条自定义颜色和设置为虚线
+### 线条自定义颜色和设置为虚线 <badge text="2.0.32" />
 
 - 可以通过配置`dashed`和`lineColor`实现，见如下：
 
@@ -163,8 +163,8 @@
 | nomoreText	| 没有更多的提示语										| String				| 没有更多了		| -						|
 | isDot			| `status`为`nomore`时，内容显示为一个"●"					| Boolean				| false			| true					|
 | iconColor		| 加载中的动画图标的颜色									| String				| #b7b7b7		| -						|
-| lineColor		| 线条颜色										| String				| #E6E8EB			| -						|
-| dashed	| 是否虚线，false-实线，true-虚线											| Boolean				| false		| true		|
+| lineColor	<badge text="2.0.32" />	| 线条颜色										| String				| #E6E8EB			| -						|
+| dashed <badge text="2.0.32" />	| 是否虚线，false-实线，true-虚线											| Boolean				| false		| true		|
 | marginTop		| 与前一个元素的距离，单位rpx								| String &#124; Number	| 10			| -						|
 | marginBottom	| 与后一个元素的距离，单位rpx								| String &#124; Number	| 10			| -						|
 | height		| 高度													| String &#124; Number	| auto			| -						|
