@@ -67,7 +67,7 @@
 <u-loading-page font-size="24"></u-loading-page>
 ```
 
-### 图标大小
+### 图标大小 <badge text="2.0.32" />
 
 `icon-size`可以指定图标大小
 
@@ -120,7 +120,7 @@
 | bgColor		| 背景颜色							| String				| #ffffff	| -						|
 | color			| 文字颜色							| String				| #C8C8C8	| -						|
 | fontSize		| 文字大小							| String &#124; Number	| 19		| -						|
-| iconSize		| 图标大小							| String &#124; Number	| 28		| -						|
+| iconSize	<badge text="2.0.32" />	| 图标大小							| String &#124; Number	| 28		| -						|
 | loadingColor	| 加载中图标的颜色					| String				| #C8C8C8	| -						|
 
 
