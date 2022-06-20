@@ -172,6 +172,7 @@
 | placeholderClass		| 指定placeholder的样式类，注意页面或组件的style中写了scoped时，需要在类名前写/deep/																| String				| textarea-placeholder	| -														|
 | placeholderStyle		| 指定placeholder的样式，字符串/对象形式，如"color: red;"																					| String &#124; Object	| color: #c0c4cc	| -														|
 | formatter			    | 输入过滤或格式化函数(如需兼容微信小程序，则只能通过`setFormatter`方法)					| Function				| null				| -														|		
+| ignoreCompositionEvent			| 是否忽略组件内对文本合成系统事件的处理 										| Boolean 																	| true 						| false 				|
 
 
 ### Methods
