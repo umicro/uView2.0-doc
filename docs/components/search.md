@@ -66,7 +66,7 @@
 :::
 
 ```html
-<u-search :show-action="true" actionText="搜索" :animation="true"></u-search>
+<u-search :showAction="true" actionText="搜索" :animation="true"></u-search>
 ```
 
 ### 自定义样式
