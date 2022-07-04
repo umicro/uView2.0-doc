@@ -22,12 +22,16 @@ uView免费开源，无需授权，欢迎商用。uView的发展也得到各个�
 
 <team-member-item v-for="(item, index) in memberList" :key="index" :list="item"></team-member-item>
 
+### 活跃开发者
+
+<activeDeveloper :activeDeveloperList="activeDeveloperList"></activeDeveloper>
+
 <br>
 
 ### Github贡献名单
 
 <br>
-<githubContribution-list repo="uView2.0"></githubContribution-list>
+<github-contribution-list repo="uView2.0"></github-contribution-list>
 
 
 ### 文档
@@ -102,12 +106,29 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 						job: '前端开发',
 						addr: '长沙',
 						csdn: 'https://blog.csdn.net/u013350495',
-						link: 'http://www.jq22.com/mem395541',
+						link: 'https://www.jq22.com/mem395541',
 						uniapp: 'https://ext.dcloud.net.cn/publisher?id=110853',
 						duty: '负责uView模板开发，社区管理等工作',
 						intro: '脾气不好的暴躁老哥。丰富的前端开发经验，对代码有洁癖，CSS能力出众'
 					}
-				]
+				],
+                activeDeveloperList:[
+                    {
+                        avatar:"https://q.qlogo.cn/headimg_dl?dst_uin=1256262401&spec=640&img_type=jpg",
+                        name:"千珏",
+                        job: '前端开发',
+                        addr: '郑州',
+                        csdn: 'https://blog.csdn.net/qq_42543244',
+						intro: '使用uni开发过多个移动端项目，热爱编程，喜欢钻研。'
+                    },
+                    {
+                        avatar:"https://q.qlogo.cn/headimg_dl?dst_uin=591714093&spec=640&img_type=jpg",
+                        name:"yatoku",
+                        job: '前端开发',
+                        addr: '宁波',
+						intro: '熟悉并热爱ES6+新语法，且能够在项目开发中加以运用，提高项目的开发效率以及编写代码的质量。'
+                    }
+                ]
 			}
 		}
 	}

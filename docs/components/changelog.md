@@ -7,6 +7,92 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.33</h2>
+				</div>
+				<p><code>2022-06-17</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复loadmore组件lineColor类型错误问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-parse组件imgtap、linktap不生效问题
+					</li>
+				</ul>
+			</div>
+		</li>
+        <li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>2.0.32</h2>
+				</div>
+				<p><code>2022-06-16</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						u-loadmore新增自定义颜色、虚/实线
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-swiper-action组件部分平台不能上下滑动的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-list回弹问题
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						修复notice-bar组件动画在低端安卓机可能会抖动的问题
+					</li>
+                    <li>
+						<span class="add">新增</span>
+						u-loading-page添加控制图标大小的属性iconSize
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						修复u-tooltip组件color参数不生效的问题
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						修复u--input组件使用blur事件输出为undefined的bug
+					</li>
+                    <li>
+						<span class="add">新增</span>
+						u-code-input组件新增键盘弹起时，是否自动上推页面参数adjustPosition
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						修复image组件load事件无回调对象问题
+					</li>
+                    <li>
+						<span class="fix">修复</span>
+						修复button组件loadingSize设置无效问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						其他修复
+					</li>
+				</ul>
+			</div>
+		</li>
+        <li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.31</h2>
 				</div>
 				<p><code>2022-04-19</code></p>

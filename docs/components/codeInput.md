@@ -131,6 +131,7 @@ uView有[键盘](/components/keyboard.html)组件，如果您想结合键盘组�
 
 | 参数				| 说明							| 类型				| 默认值		|  可选值					|
 |:-					|:-								|:-					|:-			|:-							|
+| adjustPosition <badge text="2.0.32" /> | 键盘弹起时，是否自动上推页面   	| Boolean	| true		          	| false		|
 | maxlength			| 输入字符个数					| String \ Number	| 6			| -							|
 | dot				| 是否用圆点填充					| Boolean			| false		| true						|
 | mode				| 模式选择，见上方"基本使用"说明	| String			| box		| bottomLine / middleLine	|
