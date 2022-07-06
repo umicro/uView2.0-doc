@@ -8,6 +8,16 @@
 ::: danger 注意：
 由于在`nvue`下，`u-form`名称被uni-app官方占用，在`nvue`页面中请使用`u--form`名称，在`vue`页面中使用`u--form`或者`u-form`均可。
 :::
+::: danger 注意：
+需要兼容微信小程序，并且校验规则中含有方法等，只能通过setRules方法设置规则。
+如。
+```html
+onReady() {
+		//onReady 为uni-app支持的生命周期之一
+    	this.$refs.form.setRules(this.rules)
+},
+```
+:::
 
 ### 平台差异说明
 
@@ -124,6 +134,10 @@ export default {
 			this.$refs.form1.validateField('userInfo.sex')
 		},
 	},
+	onReady() {
+		//如果需要兼容微信小程序，并且校验规则中含有方法等，只能通过setRules方法设置规则。
+    	this.$refs.form1.setRules(this.rules)
+    },
 };
 </script>
 ```
