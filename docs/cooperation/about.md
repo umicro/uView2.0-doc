@@ -119,14 +119,21 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
                         job: '前端开发',
                         addr: '郑州',
                         csdn: 'https://blog.csdn.net/qq_42543244',
-						intro: '使用uni开发过多个移动端项目，热爱编程，喜欢钻研。'
+			intro: '使用uni开发过多个移动端项目，热爱编程，喜欢钻研。'
                     },
                     {
                         avatar:"https://q.qlogo.cn/headimg_dl?dst_uin=591714093&spec=640&img_type=jpg",
                         name:"yatoku",
                         job: '前端开发',
                         addr: '宁波',
-						intro: '熟悉并热爱ES6+新语法，且能够在项目开发中加以运用，提高项目的开发效率以及编写代码的质量。'
+			intro: '熟悉并热爱ES6+新语法，且能够在项目开发中加以运用，提高项目的开发效率以及编写代码的质量。'
+                    },
+	            {
+                        avatar:"https://q.qlogo.cn/headimg_dl?dst_uin=1592826708&spec=100&img_type=jpg",
+                        name:"小飞",
+                        job: '前端开发',
+                        addr: '宁波',
+			intro: '熟悉uni-app多端适配，开发过多个uni-app项目'
                     }
                 ]
 			}
