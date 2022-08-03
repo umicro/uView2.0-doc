@@ -327,7 +327,7 @@ rules: {
 		// 必填规则
 		{
 			required: true,
-			message: '此为必填字段'，
+			message: '此为必填字段',
 			// blur和change事件触发检验
 			trigger: ['blur', 'change'],
 		},
