@@ -147,7 +147,7 @@
 | 参数		| 说明						| 类型					| 默认值	|  可选值	|
 |:-			|:-							|:-						|:-		|:-			|
 | title		| 标题文字					| String				| -		| -			|
-| current	| 描述文本					| String				| -		| -			|
+| desc		| 描述文本					| String				| -		| -			|
 | iconSize	| 图标大小					| String &#124; Number	| 17	| -			|
 | error		| 当前步骤是否处于失败状态		| Boolean				| false	| true		|
 
