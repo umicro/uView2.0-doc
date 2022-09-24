@@ -194,6 +194,14 @@ uView提供了一个`bgColor`参数，可以自定义导航栏的背景颜色：
 | leftClick	| 点击左侧区域	| Handler	|
 | rightClick| 点击右侧区域	| Handler	|
 
+<br>
+
+::: danger 注意
+App端不存在$slots,插槽`slot`使用前,需要满足`rightIcon`或者`rightText`不为空。
+:::
+
+<br>
+
 ### Slot
 
 | 名称	| 说明			|
