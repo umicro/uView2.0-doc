@@ -521,6 +521,7 @@ export default {
 | prop			| 表单域`model`对象的属性名，在使用 validate、resetFields 方法的情况下，该属性是必填的	| String				| -		| -				|
 | borderBottom	| 是否显示下边框，如不需要下边框，需同时将`u-form`的同名参数设置为`false`					| String &#124; Boolean	| true	| true / false	|
 | labelWidth	| 提示文字的宽度，单位rpx，如设置，将覆盖`u-form`的同名参数								| String &#124; Number	| -		| -				|
+| labelPosition <Badge text="2.0.34" />	| label的位置											| String	| -		| left / top			|
 | rightIcon		| 右侧自定义字体图标(限uView内置图标)或图片地址											| String				|  -	| -				|
 | leftIcon		| 左侧自定义字体图标(限uView内置图标)或图片地址											| String				|  -	| -				|
 | leftIconStyle		| 左侧自定义字体图标的样式										| String	&#124; Object			|  -	| -				|

@@ -266,6 +266,7 @@
 | holdKeyboard			| focus时，点击页面的时候不收起键盘，微信小程序有效																								| Boolean				| false				| true													|
 | focus					| 自动获取焦点，在 H5 平台能否聚焦以及软键盘是否跟随弹出，取决于当前浏览器本身的实现。nvue 页面不支持，需使用组件的 focus()、blur() 方法控制焦点			| Boolean				| false				| true													|
 | autoBlur				| 键盘收起时，是否自动失去焦点，目前仅App3.0.0+有效																								| Boolean				| false				| true													|
+| ignoreCompositionEvent <Badge text="2.0.34" /> | 是否忽略组件内对文本合成系统事件的处理。为 false 时将触发 compositionstart、compositionend、compositionupdate 事件，且在文本合成期间会触发 input 事件	| Boolean				| true				| false													|
 | disableDefaultPadding	| 是否去掉 iOS 下的默认内边距，仅微信小程序，且type=textarea时有效																				| Boolean				| false				| true													|
 | cursor				| 指定focus时光标的位置																														| String &#124; Number	| -1				| -														|
 | cursorSpacing			| 输入框聚焦时底部与键盘的距离																													| String &#124; Number	| 30				| -														|

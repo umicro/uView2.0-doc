@@ -158,6 +158,7 @@
 | count					| 是否显示统计字数													| Boolean				| false		| true		|
 | focus					| 是否自动获取焦点，nvue不支持，H5取决于浏览器的实现						| Boolean				| false		| true		|
 | autoHeight			| 是否自动增加高度													| Boolean				| false		| true		|
+| ignoreCompositionEvent <Badge text="2.0.34" /> | 是否忽略组件内对文本合成系统事件的处理。为 false 时将触发 compositionstart、compositionend、compositionupdate 事件，且在文本合成期间会触发 input 事件	| Boolean				| true				| false													|
 | fixed					| 如果textarea是在一个position:fixed的区域，需要显示指定属性fixed为true	| Boolean				| false		| true		|
 | cursorSpacing			| 指定光标与键盘的距离												| Number				| 0			| -			|
 | cursor				| 指定focus时的光标位置												| Number &#124; String	| -			| -			|
