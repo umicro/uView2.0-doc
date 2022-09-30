@@ -14,7 +14,7 @@
 ```html
 onReady() {
 		//onReady 为uni-app支持的生命周期之一
-    	this.$refs.form.setRules(this.rules)
+    	this.$refs.uForm.setRules(this.rules)
 },
 ```
 :::
@@ -31,7 +31,7 @@ onReady() {
 此组件一般是用于表单验证使用，每一个表单域由一个`u-form-item`组成，表单域中可以放置`u-input`、`u-checkbox`、`u-radio`、`u-switch`等。
 
 - 在表单组中，通过`model`参数绑定一个对象，这个对象的属性为各个`u-form-item`内组件的对应变量。
-- 由于表单验证和绑定表单规则时，需要通过`ref`操作，故这里需要给`form`组件声明`ref="form1"`属性。
+- 由于表单验证和绑定表单规则时，需要通过`ref`操作，故这里需要给`form`组件声明`ref="uForm"`属性。
 - 关于`u-from-item`内其他可能包含的诸如`input`、`radio`等组件，请见各自组件的相关文档说明。
 
 
@@ -43,7 +43,7 @@ onReady() {
 				labelPosition="left"
 				:model="model1"
 				:rules="rules"
-				ref="form1"
+				ref="uForm"
 		>
 			<u-form-item
 					label="姓名"
@@ -131,12 +131,12 @@ export default {
 	methods: {
 		sexSelect(e) {
 			this.model1.userInfo.sex = e.name
-			this.$refs.form1.validateField('userInfo.sex')
+			this.$refs.uForm.validateField('userInfo.sex')
 		},
 	},
 	onReady() {
 		//如果需要兼容微信小程序，并且校验规则中含有方法等，只能通过setRules方法设置规则。
-    	this.$refs.form1.setRules(this.rules)
+    	this.$refs.uForm.setRules(this.rules)
     },
 };
 </script>
