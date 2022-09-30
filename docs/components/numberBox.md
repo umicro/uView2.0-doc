@@ -178,6 +178,7 @@ export default {
 		height: 22px;
 		border-width: 1px;
 		border-color: #E6E6E6;
+		border-style: solid;
 		border-top-left-radius: 100px;
 		border-top-right-radius: 100px;
 		border-bottom-left-radius: 100px;
