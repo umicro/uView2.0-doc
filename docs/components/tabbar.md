@@ -213,7 +213,7 @@ value6: 0,
 
 ### API
 
-### TableBar Props
+### TabBar Props
 
 | 参数					| 说明												| 类型					| 默认值		|  可选值	|
 |:-						|:-													|:-						|:-			|:-			|
@@ -227,7 +227,7 @@ value6: 0,
 | placeholder			| fixed定位固定在底部时，是否生成一个等高元素防止塌陷	| Boolean				| true		| false		|
 
 
-### TableBarItem Props
+### TabBarItem Props
 
 | 参数		| 说明													| 类型					| 默认值					|  可选值	|
 |:-			|:-														|:-						|:-						|:-			|
@@ -238,7 +238,7 @@ value6: 0,
 | text		| 描述文本												| String				| -						| -			|
 | badgeStyle| 控制徽标的位置，对象或者字符串形式，可以设置top和right属性	| Object &#124; String	| 'top: 6px;right:2px;'	| -			|
 
-### TableBarItem Events
+### TabBarItem Events
 
 | 事件名	| 说明			| 回调参数					|
 | :-	| :-			| :-						|
