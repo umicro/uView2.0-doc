@@ -108,7 +108,7 @@ export default {
 
 ### 各家小程序开放能力的对接
 
-uView已对接uni-app档关于[uni-app方button组件](https://uni-app.dcloud.io/component/button)的所有开放能力(截止2020-04-14)uni-app-app文档说明使用即可，如果有发现遗漏的地方，请加群反馈。
+uView已对接uni-app档关于[uni-app方button组件](https://uniapp.dcloud.net.cn/component/button)的所有开放能力(截止2020-04-14)uni-app-app文档说明使用即可，如果有发现遗漏的地方，请加群反馈。
 
 ### 此页面源代码地址
 
