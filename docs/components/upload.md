@@ -40,7 +40,7 @@
 			},
 			// 新增图片
 			async afterRead(event) {
-				// 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
+				// 当设置 multiple 为 true 时, file 为数组格式，否则为对象格式
 				let lists = [].concat(event.file)
 				let fileListLen = this[`fileList${event.name}`].length
 				lists.map((item) => {
