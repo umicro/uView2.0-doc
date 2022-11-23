@@ -88,6 +88,11 @@ export default {
           groupID: '965190918',
           groupLink: 'https://jq.qq.com/?_wv=1027&k=qWgiooZx'
         },
+        {
+          name: '官方15群',
+          groupID: '691550458',
+          groupLink: 'https://jq.qq.com/?_wv=1027&k=TcQ177ZA'
+        },
       ]
     }
   }
