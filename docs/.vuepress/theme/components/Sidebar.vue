@@ -1,33 +1,16 @@
 <template>
     <div>
-        <aside
-            class="sidebar"
-            :style="{
-                marginTop: showV2Tips ? '2.3rem' : 0,
-            }"
-        >
-            <a
-                target="_blank"
-                class="jump-linker"
-                href="https://cool-js.com/temp/server.html"
-            >
-                <img
-                    src="https://cdn.uviewui.com/uview/resources/234783242347234.jpg"
-                />
+        <aside class="sidebar" :style="{
+            marginTop: showV2Tips ? '2.3rem' : 0,
+        }">
+            <a target="_blank" class="jump-linker" href="https://cool-js.com/temp/server.html">
+                <img src="https://cdn.uviewui.com/uview/resources/15645618545.png" />
             </a>
-            <a
-                target="_blank"
-                class="jump-linker"
-                href="https://www.jnpfsoft.com/index.html?from=uview"
-            >
-                <img
-                    src="https://cdn.uviewui.com/uview/resources/4565165154.jpg"
-                />
+            <a target="_blank" class="jump-linker" href="https://www.jnpfsoft.com/index.html?from=uview">
+                <img src="https://cdn.uviewui.com/uview/resources/4565165154.jpg" />
             </a>
             <a target="_blank" class="jump-linker" href="https://code.fun/">
-                <img
-                    src="https://cdn.uviewui.com/uview/resources/codeFun.jpg"
-                />
+                <img src="https://cdn.uviewui.com/uview/resources/codeFun.jpg" />
             </a>
             <NavLinks />
             <slot name="top" />
@@ -54,7 +37,7 @@ export default {
         };
     },
     props: ["items"],
-    created() {},
+    created() { },
     methods: {},
 };
 </script>
