@@ -182,7 +182,7 @@ export default {
 |:-			|:-												|:-			|
 | confirm	| 点击确认按钮时触发								| -			|
 | cancel	| 点击取消按钮时触发								| -			|
-| close		| 点击遮罩关闭出发，closeOnClickOverlay为true有效	| -			|
+| close		| 点击遮罩关闭触发，closeOnClickOverlay为true有效	| -			|
 
 ### Slots
 
