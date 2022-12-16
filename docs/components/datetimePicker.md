@@ -122,7 +122,7 @@
 
 ### 限制最大最小值
 
-参数`minDate`和`maxData`可以设置最大值和最小值（传入时间戳）。
+参数`minDate`和`maxDate`可以设置最大值和最小值（传入时间戳）。
 
 ```html
 <template>
