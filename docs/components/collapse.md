@@ -271,7 +271,7 @@
 
 |事件名	|说明																			|回调参数							|
 |:-		|:-																				|:-									|
-| change| 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array)	| activeNames: String &#124;  Array	|
+| change| 当前激活面板展开/关闭时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array)	| activeNames: String &#124;  Array	|
 | open	| 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array)	| activeNames: String &#124;  Array	|
 | close	| 当前激活面板关闭时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array)	| activeNames: String &#124;  Array	|
 
