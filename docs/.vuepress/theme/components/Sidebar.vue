@@ -1,20 +1,38 @@
 <template>
     <div>
-        <aside class="sidebar" :style="{
-            marginTop: showV2Tips ? '2.3rem' : 0,
-        }">
-            <a target="_blank" class="jump-linker" href="https://cool-js.com/temp/server.html">
-                <img src="https://cdn.uviewui.com/uview/resources/15645618545.png" />
+        <aside
+            class="sidebar"
+            :style="{
+                marginTop: showV2Tips ? '2.3rem' : 0,
+            }"
+        >
+            <a
+                target="_blank"
+                class="jump-linker"
+                href="http://github.crmeb.net/u/uView"
+            >
+                <img src="https://cdn.uviewui.com/uview/resources/3c56cbc6216b47db61e37090fdb6619.jpg" />
             </a>
-            <a target="_blank" class="jump-linker" href="https://www.jnpfsoft.com/index.html?from=uview">
+            <a
+                target="_blank"
+                class="jump-linker"
+                href="https://www.jnpfsoft.com/index.html?from=uview"
+            >
                 <img src="https://cdn.uviewui.com/uview/resources/4565165154.jpg" />
             </a>
-            <a target="_blank" class="jump-linker" href="https://code.fun/">
+            <a
+                target="_blank"
+                class="jump-linker"
+                href="https://code.fun/"
+            >
                 <img src="https://cdn.uviewui.com/uview/resources/codeFun.jpg" />
             </a>
             <NavLinks />
             <slot name="top" />
-            <SidebarLinks :depth="0" :items="items" />
+            <SidebarLinks
+                :depth="0"
+                :items="items"
+            />
             <slot name="bottom" />
         </aside>
     </div>
