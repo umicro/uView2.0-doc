@@ -18,7 +18,7 @@
                 class="jump-linker"
                 href="https://www.jnpfsoft.com/index.html?from=uview"
             >
-                <img src="https://cdn.uviewui.com/uview/resources/4565165154.jpg" />
+                <img src="https://cdn.uviewui.com/uview/resources/1526456165456.jpg" />
             </a>
             <a
                 target="_blank"
