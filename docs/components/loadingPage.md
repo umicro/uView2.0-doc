@@ -77,7 +77,7 @@
 
 ### 背景颜色
 
-`bg-color`可以指定文字大小
+`bg-color`可以指定背景颜色
 
 ```html
 <u-loading-page bg-color="#e8e8e8"></u-loading-page>
