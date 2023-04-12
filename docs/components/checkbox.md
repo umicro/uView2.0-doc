@@ -201,6 +201,7 @@ export default {
 
 可以通过默认插槽更改`label`
 
+**注意：** nvue下，直接slot进来的文字，由于特殊的结构，无法修改样式
 
 ```html
 <u-checkbox-group>
@@ -212,8 +213,6 @@ export default {
 ### 横向排列形式
 
 可以通过设置`placement`为`row`或者`column`，将复选框设置为横向排列或者竖向排列
-
-**注意：** nvue下，直接slot进来的文字，由于特殊的结构，无法修改样式
 
 ```html
 <u-checkbox-group v-model="checked" placement="row">
