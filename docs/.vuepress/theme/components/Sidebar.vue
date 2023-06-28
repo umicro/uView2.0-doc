@@ -16,9 +16,9 @@
             <a
                 target="_blank"
                 class="jump-linker"
-                href="https://www.jnpfsoft.com/index.html?from=uview"
+                href="https://open.alipay.com/portal/forum/post/127901018?from=uview"
             >
-                <img src="https://cdn.uviewui.com/uview/resources/4565165154.jpg" />
+                <img src="https://cdn.uviewui.com/uview/resources/127901018.jpg" />
             </a>
             <a
                 target="_blank"
