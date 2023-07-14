@@ -23,9 +23,9 @@
             <a
                 target="_blank"
                 class="jump-linker"
-                href="https://code.fun/"
+                href="https://v3.hhyang.cn/"
             >
-                <img src="https://cdn.uviewui.com/uview/resources/codeFun.jpg" />
+                <img src="https://cdn.uviewui.com/uview/resources/12861689322612.jpg" />
             </a>
             <NavLinks />
             <slot name="top" />
