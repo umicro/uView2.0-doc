@@ -16,9 +16,9 @@
             <a
                 target="_blank"
                 class="jump-linker"
-                href="https://open.alipay.com/portal/forum/post/127901018?from=uview"
+                href="https://cloud.alipay.com/main/home?from=uview"
             >
-                <img src="https://cdn.uviewui.com/uview/resources/127901018.jpg" />
+                <img src="https://cdn.uviewui.com/uview/resources/alicloud.jpg" />
             </a>
             <a
                 target="_blank"
