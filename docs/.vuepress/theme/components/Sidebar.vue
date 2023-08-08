@@ -23,7 +23,7 @@
             <a
                 target="_blank"
                 class="jump-linker"
-                href="https://v3.hhyang.cn/"
+                href="https://www.hhyang.cn/"
             >
                 <img src="https://cdn.uviewui.com/uview/resources/12861689322612.jpg" />
             </a>
