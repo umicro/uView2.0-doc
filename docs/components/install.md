@@ -32,7 +32,7 @@
 // 如果您的根目录没有package.json文件的话，请先执行如下命令：
 // npm init -y
 
-npm install uview-ui@2.0.31
+npm install uview-ui@2.0.36
 
 // 更新
 // npm update uview-ui

@@ -16,16 +16,16 @@
             <a
                 target="_blank"
                 class="jump-linker"
-                href="https://www.jnpfsoft.com/index.html?from=uview"
+                href="https://cloud.alipay.com/main/home?from=uview"
             >
-                <img src="https://cdn.uviewui.com/uview/resources/1526456165456.jpg" />
+                <img src="https://cdn.uviewui.com/uview/resources/alicloud.jpg" />
             </a>
             <a
                 target="_blank"
                 class="jump-linker"
-                href="https://code.fun/"
+                href="https://v3.hhyang.cn/"
             >
-                <img src="https://cdn.uviewui.com/uview/resources/codeFun.jpg" />
+                <img src="https://cdn.uviewui.com/uview/resources/12861689322612.jpg" />
             </a>
             <NavLinks />
             <slot name="top" />

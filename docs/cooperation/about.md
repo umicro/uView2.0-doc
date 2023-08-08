@@ -81,10 +81,9 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 			return {
 				memberList: [
 					{
-						avatar: 'https://cdn.uviewui.com/uview/team/9151E1673BCE.jpg',
+						avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=604322871&spec=640&img_type=jpg',
 						name: '北桥',
 						job: '全栈开发',
-						addr: '在读学生',
 						csdn: 'https://me.csdn.net/qq_33162604',
 						duty: '负责uView核心组件研发，维护与升级，社区管理、宣传等工作',
 						intro: '多个项目开发经验，技术栈：原生安卓，java，前端，服务器等',
