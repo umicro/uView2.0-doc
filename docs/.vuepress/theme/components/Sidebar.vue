@@ -9,7 +9,7 @@
             <a
                 target="_blank"
                 class="jump-linker"
-                href="http://github.crmeb.net/u/uView"
+                href="https://www.crmeb.com/?from=uview"
             >
                 <img src="https://cdn.uviewui.com/uview/resources/3c56cbc6216b47db61e37090fdb6619.jpg" />
             </a>

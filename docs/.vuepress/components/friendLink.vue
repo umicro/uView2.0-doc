@@ -122,7 +122,7 @@
             <a
                 target="_blank"
                 class="friend-link__wrap__item"
-                href="http://github.crmeb.net/u/uView"
+                href="https://www.crmeb.com/?from=uview"
             >
                 <img src="https://cdn.uviewui.com/uview/resources/33b065d30beb6504d8eeef7cb7ff6af.jpg" />
             </a>
