@@ -134,4 +134,55 @@ div[class~="language-bash"]:before
 div[class~="language-php"]:before
   content "php"
 
+// custom code-copy style
+$posAbs = -2px
+$posAbsRight = 36px
+$font-color = #666
+
+normal-font-style()
+  font-size 12px
+  color $font-color
+
+normal-style()
+  top 0
+  right 0
+  padding 0px 6px 0px 2px
+  border 0
+  border-radius 3px
+  background none
+  normal-font-style()
+  outline none
+
+pre
+  position relative
+
+.m-mdic-copy-wrapper
+  position absolute
+  top $posAbs
+  right $posAbsRight
+
+  span.u-mdic-copy-code_lang
+    position absolute
+    top 0px
+    right calc(100% + 4px)
+    normal-font-style()
+
+  div.u-mdic-copy-notify
+    display none
+    position absolute
+    normal-style()
+    padding 3.5px 0px
+    opacity 1
+    right 100%
+    padding-right 4px
+    font-family none
+
+  button.u-mdic-copy-btn
+    position relative
+    normal-style()
+    cursor pointer
+    transition opacity .2s
+    &:hover
+      opacity 1
+
 @import '~prismjs/themes/prism-tomorrow.css'
