@@ -177,3 +177,4 @@ uView已对接uni-app档关于[uni-app方button组件](https://uniapp.dcloud.net
 |error			|当使用开放能力时，发生错误的回调														|Handler|微信小程序	|-		|-				|
 |opensetting	|在打开授权设置页并关闭后回调															|Handler|微信小程序	|-		|-				|
 |launchapp		|打开 APP 成功的回调																	|Handler|微信小程序	|-		|-				|
+|agreeprivacyauthorization	|用户同意隐私协议事件回调																	|Handler|微信小程序	|-		|-				|
