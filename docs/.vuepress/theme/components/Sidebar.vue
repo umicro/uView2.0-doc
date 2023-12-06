@@ -21,11 +21,10 @@
                 <img src="https://cdn.uviewui.com/uview/resources/alicloud.jpg" />
             </a>
             <a
-                target="_blank"
                 class="jump-linker"
-                href="https://www.hhyang.cn/"
+                href="javascript: void(0);"
             >
-                <img src="https://cdn.uviewui.com/uview/resources/12861689322612.jpg" />
+                <img src="https://cdn.uviewui.com/uview/resources/1351701780890.jpg" />
             </a>
             <NavLinks />
             <slot name="top" />
