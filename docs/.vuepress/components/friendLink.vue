@@ -127,6 +127,15 @@
                 <img src="https://cdn.uviewui.com/uview/resources/33b065d30beb6504d8eeef7cb7ff6af.jpg" />
             </a>
         </div>
+        <div class="col-md-2 col-sm-2 col-xs-4 friend-link__wrap">
+            <a
+                target="_blank"
+                class="friend-link__wrap__item"
+                href="http://www.yunchengxc.com/"
+            >
+                <img src="https://cdn.uviewui.com/uview/resources/1161701826675.jpg" />
+            </a>
+        </div>
     </div>
 </template>
 
