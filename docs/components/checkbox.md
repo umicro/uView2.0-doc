@@ -274,7 +274,7 @@ export default {
 | activeColor	| 选中状态下的颜色，如子`Checkbox`组件设置此值，将会覆盖本值	| String			| #2979ff	| -		|
 | inactiveColor	| 未选中的颜色											| String			| #c8c9cc	| -		|
 | size			| 整个组件的尺寸，默认px									| String			| 18		| -		|
-| placement		| 布局方式，row-横向，column-纵向							| Boolean			| row		| column|
+| placement		| 布局方式，row-横向，column-纵向							| String			| row		| column|
 | labelSize		| label的字体大小，px单位									| String \ Number	| 14		| -		|
 | labelColor	| label的字体颜色										| String			| #303133	| -		|
 | labelDisabled	| 是否禁止点击文本操作									| Boolean			| false		| true	|
