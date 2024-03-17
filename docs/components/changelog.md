@@ -7,6 +7,54 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>2.0.37</h2>
+				</div>
+				<p><code>2024-03-17</code></p>
+				<ul>
+					<li>
+                        <span class="fix">修复</span>
+                        表单校验trigger触发器参数无效问题 <git-link anchors="546" />
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        u-input组件的password属性在动态切换为false时失效的问题 <git-link anchors="1009" />
+                    </li>
+                    <li>
+						<span class="add">添加</span>
+						添加微信小程序用户同意隐私协议事件回调 <git-link anchors="992" />
+					</li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复支付宝小程序picker样式问题 <git-link anchors="955" />
+                    </li>
+                    <li>
+						<span class="add">添加</span>
+						u-modal添加duration字段控制动画过度时间 <git-link anchors="1023" />
+					</li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复picker lastIndex异常导致的column异常问题 <git-link anchors="1028" />
+                    </li>
+                    <li>
+						<span class="add">添加</span>
+						tabs增加长按事件支持 <git-link anchors="1029" />
+					</li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复u-avatar square属性在小程序open-data下无效问题 <git-link anchors="1030" />
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        其他一些修复
+                    </li>
+				</ul>
+			</div>
+		</li>
+        <li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>2.0.36</h2>
 				</div>
 				<p><code>2023-03-27</code></p>
