@@ -22,9 +22,10 @@
             </a>
             <a
                 class="jump-linker"
-                href="javascript: void(0);"
+                target="_blank"
+                href="http://www.zjhlone.com/"
             >
-                <img src="https://cdn.uviewui.com/uview/resources/1351701780890.jpg" />
+                <img src="https://skm.zjhlone.com/public/images/kaifa.png" />
             </a>
             <NavLinks />
             <slot name="top" />
