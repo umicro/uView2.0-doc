@@ -1,10 +1,18 @@
 module.exports = {
-  title: 'uView 2.0 - 全面兼容nvue的uni-app生态框架 - uni-app UI框架', // 设置网站标题
-  description: 'uView UI，是uni-app生态最优秀的UI框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水',
+  title: 'uView 2.0 - 全面兼容 nvue 的 uni-app 生态框架 - uni-app UI 框架', // 设置网站标题
+  description: 'uView UI，是 uni-app 生态最优秀的 UI 框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水',
   base: '/',
   dest: 'dist',
   markdown: {
     //lineNumbers: true
+    extendMarkdown: (md) => {
+        md.use(require("markdown-it-copy"),{
+            btnText: "copy",
+            failText: "❌ Copy failed",
+            successText: "✅ Copy success!",
+            successTextDelay: 2000,
+        });
+    },
   },
   plugins: {
     'demo-container': {
@@ -27,7 +35,7 @@ module.exports = {
       }
     }
 
-    // 只有在发布(isServer=true)的时候才进行此修改操作，否则在本地预览时出问题
+    // 只有在发布 (isServer=true) 的时候才进行此修改操作，否则在本地预览时出问题
     if (isServer) {
       const newConfig = {
         output: {
@@ -102,17 +110,17 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 0,
         children: [
-          ['/components/addQQGroup', '加QQ群交流反馈'],
+          ['/components/addQQGroup', '加 QQ 群交流反馈'],
           ['/components/intro', '介绍'],
           ['/components/install', '安装'],
           ['/components/setting', '配置'],
           ['/components/quickstart', '快速上手'],
           ['/components/common', '内置样式'],
           ['/components/feature', '注意事项'],
-          ['/components/diff1.x', '对比1.X'],
+          ['/components/diff1.x', '对比 1.X'],
           ['/components/changelog', '更新日志'],
           ['/components/changeGuide', '升级指南'],
-          ['https://www.kancloud.cn/uview/uview-ui_v2/2593659', '2.X常见问题整理']
+          ['https://www.kancloud.cn/uview/uview-ui_v2/2593659', '2.X 常见问题整理']
         ]
       },
         {
@@ -250,12 +258,12 @@ module.exports = {
         sidebarDepth: 0,
         children: [
           ['/guide/demo', '效果演示'],
-          //	['/guide/addQQGroup', '加QQ群交流反馈'],
+          //	['/guide/addQQGroup', '加 QQ 群交流反馈'],
           // ['/guide/customIcon', '扩展自定义图标库'],
           // ['/guide/theme', '自定义主题'],
           // ['/guide/i18n', '多语言切换'],
           // ['/guide/globalVariable', '全局变量的实现'],
-          ['/guide/codeHint', 'HBuilder X代码提示'],
+          ['/guide/codeHint', 'HBuilder X 代码提示'],
           // ['/guide/design', '设计理念'],
           ['/guide/note', '注意事项']
         ]
@@ -303,7 +311,7 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 0,
         children: [
-          ['/js/http', 'Http请求']
+          ['/js/http', 'Http 请求']
         ]
       }, {
         title: '工具库',
@@ -318,7 +326,7 @@ module.exports = {
           ['/js/guid', '全局唯一标识符'],
           ['/js/colorSwitch', '颜色转换'],
           ['/js/color', '颜色值'],
-          ['/js/queryParams', '对象转URL参数'],
+          ['/js/queryParams', '对象转 URL 参数'],
           ['/js/test', '规则校验'],
           ['/js/random', '随机数值'],
           ['/js/trim', '去除空格'],
@@ -331,12 +339,12 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 0,
         children: [
-          ['/course/promise', 'Promise入门到精通']
+          ['/course/promise', 'Promise 入门到精通']
         ]
       }]
     },
     logo: '/common/logo.png',
-    // 需要显示H5预览的地址集合
+    // 需要显示 H5 预览的地址集合
     simulatorUrl: [
       '/components/intro',
       '/components/install',

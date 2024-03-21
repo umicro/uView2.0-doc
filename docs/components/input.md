@@ -285,6 +285,7 @@
 | shape					| 输入框形状，circle-圆形，square-方形																											| String				| square			| circle												|
 | formatter			    | 输入过滤或格式化函数(如需兼容微信小程序，则只能通过`setFormatter`方法)					| Function				| null				| -														|		
 | customStyle			| 定义需要用到的外部样式 										| Object 																	| - 						| - 				| -
+| ignoreCompositionEvent			| 是否忽略组件内对文本合成系统事件的处理 										| Boolean 																	| true 						| false 				|
 
 
 

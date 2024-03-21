@@ -8,6 +8,21 @@
 
 uView UI，是[uni-app](https://uniapp.dcloud.io/)生态优秀的UI框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水
 
+## 文档环境
+node 14.x
+
+## 运行文档
+```bash
+npm install
+npm run serve
+```
+
+## 编译
+```bash
+npm run build
+```
+
+
 ## [官方文档：https://uviewui.com](https://uviewui.com)
 
 ## 链接

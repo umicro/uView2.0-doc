@@ -169,11 +169,12 @@ uView已对接uni-app档关于[uni-app方button组件](https://uniapp.dcloud.net
 **说明**：目前经测试(Hbuilder X 2.6.8)，在H5，APP，可以直接对组件监听`tap`事件，等同组件内部发出的`click`事件效果，某些HX版本上，
 微信小程序对组件使用`tap`事件可能无效，故建议对按钮组件的点击事件监听统一使用组件内部发出的`click`事件。
 
-|属性名			|说明																				|类型	|默认值		|可选值	|平台差异说明		|
-|:-				|:-																					|:-		|:-			|:-		|:-				|
-|click			|按钮点击，请勿使用`@tap`点击事件，微信小程序无效，返回值为点击事件及参数					|Handler|-			|-		|-				|
-|getphonenumber	|open-type="getPhoneNumber"时有效													|Handler|微信小程序	|-		|-				|
-|getuserinfo	|用户点击该按钮时，会返回获取到的用户信息，从返回参数的detail中获取到的值同uni.getUserInfo	|Handler|微信小程序	|-		|-				|
-|error			|当使用开放能力时，发生错误的回调														|Handler|微信小程序	|-		|-				|
-|opensetting	|在打开授权设置页并关闭后回调															|Handler|微信小程序	|-		|-				|
-|launchapp		|打开 APP 成功的回调																	|Handler|微信小程序	|-		|-				|
+| 属性名			                                            |说明																				|类型	|默认值		|可选值	|平台差异说明		|
+|:--------------------------------------------------|:-																					|:-		|:-			|:-		|:-				|
+| click			                                          |按钮点击，请勿使用`@tap`点击事件，微信小程序无效，返回值为点击事件及参数					|Handler|-			|-		|-				|
+| getphonenumber	                                   |open-type="getPhoneNumber"时有效													|Handler|微信小程序	|-		|-				|
+| getuserinfo	                                      |用户点击该按钮时，会返回获取到的用户信息，从返回参数的detail中获取到的值同uni.getUserInfo	|Handler|微信小程序	|-		|-				|
+| error			                                          |当使用开放能力时，发生错误的回调														|Handler|微信小程序	|-		|-				|
+| opensetting	                                      |在打开授权设置页并关闭后回调															|Handler|微信小程序	|-		|-				|
+| launchapp		                                       |打开 APP 成功的回调																	|Handler|微信小程序	|-		|-				|
+| agreeprivacyauthorization	<Badge text="2.0.37" /> |用户同意隐私协议事件回调																	|Handler|微信小程序	|-		|-				|
