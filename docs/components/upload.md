@@ -107,7 +107,7 @@ data(){
 
 ### 文件预览
 
-- 通过设置`:previewFullImage="true"'`属性，达到文件预览的目的。
+- 通过设置`:previewFullImage="true"`属性，达到文件预览的目的。
 ```html
 <u-upload
 	:fileList="fileList3"
