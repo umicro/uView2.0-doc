@@ -23,9 +23,9 @@
             <a
                 class="jump-linker"
                 target="_blank"
-                href="http://www.zjhlone.com/"
+                href="https://yunxin.163.com/im?from=uview_IM_0416"
             >
-                <img src="https://skm.zjhlone.com/public/images/kaifa.png" />
+                <img src="https://cdn.uviewui.com/uview/resources/18496183264.png" />
             </a>
             <NavLinks />
             <slot name="top" />
