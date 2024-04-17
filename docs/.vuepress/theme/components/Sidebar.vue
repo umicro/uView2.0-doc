@@ -7,6 +7,13 @@
             }"
         >
             <a
+                class="jump-linker"
+                target="_blank"
+                href="https://yunxin.163.com/im?from=uview_IM_0416"
+            >
+              <img src="https://cdn.uviewui.com/uview/resources/18496183264.png" />
+            </a>
+            <a
                 target="_blank"
                 class="jump-linker"
                 href="https://www.crmeb.com/?from=uview"
@@ -19,13 +26,6 @@
                 href="https://cloud.alipay.com/developer/0945907cc6974a5bb6efc9660672f5fb/post/47b66aba9aaf4d109d1c9b797385dff4?userUionId=DFiSP0JDFD8KLRlDuaftpbgiEiE&from=uview"
             >
                 <img src="https://cdn.uviewui.com/uview/resources/lQLPJxuC-ZcFyGTMoM0BVLD2lX-Lx12vGwTjBk_nwP0A_340_160.png" />
-            </a>
-            <a
-                class="jump-linker"
-                target="_blank"
-                href="https://yunxin.163.com/im?from=uview_IM_0416"
-            >
-                <img src="https://cdn.uviewui.com/uview/resources/18496183264.png" />
             </a>
             <NavLinks />
             <slot name="top" />
