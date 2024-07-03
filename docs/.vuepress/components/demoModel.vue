@@ -87,7 +87,7 @@
 
 	@media screen and (min-width: 1366px) {
 		.demo-model {
-			width: 270;
+			width: 270px;
 			height: calc(270px * 143.6 / 70.9);
 			top: calc((100vh - 270px * 143.6 / 70.9 - 3.6rem) / 2 + 3.6rem);
 		}
