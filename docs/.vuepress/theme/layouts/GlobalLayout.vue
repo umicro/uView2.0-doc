@@ -3,7 +3,7 @@
     <component :is="layout"/>
     <footer class="footer">
       本站由
-      <a href="https://www.houdeyun.cn/?from=uview" target="_blank">
+      <a href="https://www.upyun.com/?from=uview" target="_blank">
         <img src="https://cdn.uviewui.com/uview/resources/9c756df18653282ff831ffec402f46ea.PNG" />
       </a>
       提供CDN及云存储服务
