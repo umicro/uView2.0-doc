@@ -1,5 +1,5 @@
 {
-  "name": "uview2.0-doc",
+  "name": "uview2.0-doc2",
   "version": "1.0.0",
   "description": "Docs for uView2.0",
   "main": "index.js",
@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs",
     "build": "NODE_OPTIONS=--openssl-legacy-provider vuepress build docs",
-    "deploy": "node deploy"
+    "deploy": "pnpm build && node deploy",
+    "preinstall": "npx only-allow pnpm"
   },
   "repository": {
     "type": "git",
