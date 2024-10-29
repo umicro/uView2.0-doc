@@ -25,7 +25,7 @@ npm i sass-loader@10 -D
 // npm init -y
 
 // 安装
-npm install uview-ui@2.0.36
+npm install uview-ui@2.0.38
 ```
 
 ### 配置步骤
