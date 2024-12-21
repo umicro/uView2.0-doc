@@ -16,7 +16,7 @@
 		},
 		data() {
 			return {
-				baseUrl: 'https://v2-h5.uviewui.com/index.html#'
+				baseUrl: 'https://v2-h5.uviewui.com'
 			}
 		},
 		computed: {
