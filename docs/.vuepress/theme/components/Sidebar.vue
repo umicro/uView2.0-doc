@@ -21,11 +21,10 @@
                 <img src="https://cdn.uviewui.com/uview/resources/3c56cbc6216b47db61e37090fdb6619.jpg" />
             </a>
             <a
-                target="_blank"
                 class="jump-linker"
-                href="https://www.houdeyun.cn/?from=uview"
+                href="javascript:;"
             >
-                <img src="https://cdn.uviewui.com/uview/resources/b490bd2cefd8a827cbfed7d6386b368a.PNG" />
+                <img src="/customer/contact1.png" />
             </a>
             <NavLinks />
             <slot name="top" />

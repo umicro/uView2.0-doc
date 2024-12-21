@@ -1,13 +1,13 @@
 <template>
   <div id="global-layout">
     <component :is="layout"/>
-    <footer class="footer">
+    <!-- <footer class="footer">
       本站由
       <a href="https://www.upyun.com/?from=uview" target="_blank">
         <img src="https://cdn.uviewui.com/uview/resources/9c756df18653282ff831ffec402f46ea.PNG" />
       </a>
       提供CDN及云存储服务
-    </footer>
+    </footer> -->
   </div>
 </template>
 
