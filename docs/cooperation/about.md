@@ -88,7 +88,7 @@ uView 拥有众多用户，且文档详尽，经得起推敲，受得住考验�
                         gitee: 'https://gitee.com/beiqiao'
 					},
 					{
-						avatar: 'https://cdn.uviewui.com/uview/team/546BC1A58D6EA.jpg',
+						avatar: 'https://xxx.com/team/546BC1A58D6EA.jpg',
 						name: 'TtTao',
 						job: '全栈开发',
 						addr: '贵阳创业',
@@ -97,7 +97,7 @@ uView 拥有众多用户，且文档详尽，经得起推敲，受得住考验�
                         gitee: 'https://gitee.com/tttao7'
 					},
 					{
-						avatar: 'https://cdn.uviewui.com/uview/team/15915681648132.jpg',
+						avatar: 'https://xxx.com/team/15915681648132.jpg',
 						name: '黄河浪',
 						job: '前端开发',
 						addr: '长沙',

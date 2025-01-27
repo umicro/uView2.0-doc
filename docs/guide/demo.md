@@ -1,22 +1,22 @@
 ## 演示
 
-uView会将各个版本的演示在此展示，目前演示的版本有H5，安卓，微信小程序，其他版本的演示将会陆续添加。  
+uView 会将各个版本的演示在此展示，目前演示的版本有 H5，安卓，微信小程序，其他版本的演示将会陆续添加。  
 <br>
 
 ### 使用方法
 
-- H5版本可以用微信或者手机浏览器扫描二维码即可
+- H5 版本可以用微信或者手机浏览器扫描二维码即可
 - 微信小程序只能通过微信扫码查看
-- 安卓版本只能在安卓使用，可以用安卓浏览器或者QQ扫码进行安装(**微信中不能扫码安装**)，安装过程中您可能需要勾选相应的提示，允许安装来自非应用市场的APP，或者您需要在`设置`中打开
-[允许安装来自未知来源的应用](https://www.pc841.com/shoujijiqiao/45848.html)
+- 安卓版本只能在安卓使用，可以用安卓浏览器或者 QQ 扫码进行安装(**微信中不能扫码安装**)，安装过程中您可能需要勾选相应的提示，允许安装来自非应用市场的 APP，或者您需要在`设置`中打开
+  [允许安装来自未知来源的应用](https://www.pc841.com/shoujijiqiao/45848.html)
 
 <br>
 
 ### 说明
 
-文档中也有相应的演示示例，但它是通过`iframe`嵌入到网页的，所以可能会造成某些uni-appAPI在网页上(浏览器F12手机调试模式无问题)无法使用，造成组件有BUG的错觉。  
+文档中也有相应的演示示例，但它是通过`iframe`嵌入到网页的，所以可能会造成某些 uni-appAPI 在网页上(浏览器 F12 手机调试模式无问题)无法使用，造成组件有 BUG 的错觉。
 
-**注意：** 建议您只在浏览文档时使用文档右侧的演示功能，电脑示例由于分辨率和uni-app用`rpx`单位的问题，显示可能会不够细致，请通过微信扫码小程序体验最佳的效果。
+**注意：** 建议您只在浏览文档时使用文档右侧的演示功能，电脑示例由于分辨率和 uni-app 用`rpx`单位的问题，显示可能会不够细致，请通过微信扫码小程序体验最佳的效果。
 
 <br>
 <br>
@@ -36,7 +36,7 @@ uView会将各个版本的演示在此展示，目前演示的版本有H5，安�
 	</div>
 	<div class="col-md-3 col-sm-6 col-xs-12">
 		<div class="demo-item">
-			<img src="https://cdn.uviewui.com/uview/resources/1546181654815455.png" />
+			<img src="https://xxx.com/resources/1546181654815455.png" />
 			<div class="platform-name">
 				H5
 				<p class="platform-tips">微信或浏览器扫码</p>
@@ -45,7 +45,7 @@ uView会将各个版本的演示在此展示，目前演示的版本有H5，安�
 	</div>
 	<div class="col-md-3 col-sm-6 col-xs-12">
 		<div class="demo-item">
-			<img src="https://cdn.uviewui.com/uview/resources/168415644515.png" />
+			<img src="https://xxx.com/resources/168415644515.png" />
 			<div class="platform-name">
 				安卓
 				<p class="platform-tips">浏览器扫码安装(微信扫码无效)</p>
@@ -53,7 +53,6 @@ uView会将各个版本的演示在此展示，目前演示的版本有H5，安�
 		</div>
 	</div>
 </div>
-
 
 <style scoped>
 	.demo-item {
