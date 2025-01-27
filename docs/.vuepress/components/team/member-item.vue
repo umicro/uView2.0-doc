@@ -1,48 +1,59 @@
 <template>
-	<div class="member-item">
-		<div class="member-item__avatar"><img :src="list.avatar" /></div>
-		<div class="member-item__info">
-			<div class="member-item__name">{{ list.name }}</div>
+	<div>
+		<div class="member-item" v-for="item in list" :key="item.id">
+			<div class="member-item__avatar"><img :src="`https://api.uviewui.com${item.avatar}`" /></div>
+			<div class="member-item__info">
+			<div class="member-item__name">{{ item.name }}</div>
 			<div class="member-item__tag">
-				<div class="member-item__tag__item" v-if="list.job">{{ list.job }}</div>
-				<div class="member-item__tag__split" v-if="list.addr">·</div>
-				<div class="member-item__tag__item" v-if="list.addr">{{ list.addr }}</div>
-				<div class="member-item__tag__split" v-if="list.github">·</div>
-				<div class="member-item__tag__item" v-if="list.github">
-					<a :href="list.github" target="_blank"><span class="iconfont">&#xe64a;</span></a>
-				</div>
-				<div class="member-item__tag__split" v-if="list.uniapp">·</div>
-				<div class="member-item__tag__item" v-if="list.uniapp">
-					<a :href="list.uniapp" target="_blank"><span class="iconfont">&#xe609;</span></a>
-				</div>
-				<div class="member-item__tag__split" v-if="list.gitee">·</div>
-				<div class="member-item__tag__item" v-if="list.gitee">
-					<a :href="list.gitee" target="_blank"><span class="iconfont">&#xe600;</span></a>
-				</div>
-				<div class="member-item__tag__split" v-if="list.csdn">·</div>
-				<div class="member-item__tag__item" v-if="list.csdn">
-					<a :href="list.csdn" target="_blank"><span class="iconfont">&#xe601;</span></a>
-				</div>
-				<div class="member-item__tag__split" v-if="list.link">·</div>
-				<div class="member-item__tag__item" v-if="list.link">
-					<a :href="list.link" target="_blank"><span class="iconfont">&#xe67b;</span></a>
-				</div>
+				<div class="member-item__tag__item" v-if="item.position">{{ item.position }}</div>
+				<div class="member-item__tag__split" v-if="item.city">·</div>
+				<div class="member-item__tag__item" v-if="item.city">{{ item.city }}</div>
+				<template v-for="skill in item.skills">
+					<div class="member-item__tag__split" v-if="skill.tag === 'github'">·</div>
+					<div class="member-item__tag__item" v-if="skill.tag === 'github'">
+						<a :href="skill.url" target="_blank"><span class="iconfont">&#xe64a;</span></a>
+					</div>
+					<div class="member-item__tag__split" v-if="skill.tag === 'uniapp'">·</div>
+					<div class="member-item__tag__item" v-if="skill.tag === 'uniapp'">
+						<a :href="skill.url" target="_blank"><span class="iconfont">&#xe609;</span></a>
+					</div>
+					<div class="member-item__tag__split" v-if="skill.tag === 'gitee'">·</div>
+					<div class="member-item__tag__item" v-if="skill.tag === 'gitee'">
+						<a :href="skill.url" target="_blank"><span class="iconfont">&#xe600;</span></a>
+					</div>
+					<div class="member-item__tag__split" v-if="skill.tag === 'csdn'">·</div>
+					<div class="member-item__tag__item" v-if="skill.tag === 'csdn'">
+						<a :href="skill.url" target="_blank"><span class="iconfont">&#xe601;</span></a>
+					</div>
+					<div class="member-item__tag__split" v-if="skill.tag === 'link'">·</div>
+					<div class="member-item__tag__item" v-if="skill.tag === 'link'">
+						<a :href="item.link" target="_blank"><span class="iconfont">&#xe67b;</span></a>
+					</div>
+				</template>	
 			</div>
-			<div class="member-item__job">职责：{{ list.duty }}</div>
-			<div class="member-item__intro">介绍：{{ list.intro }}</div>
+				<div class="member-item__job">职责：{{ item.duty }}</div>
+				<div class="member-item__intro">介绍：{{ item.introduction }}</div>
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
-	props: {
-		list: {
-			type: Object,
-			default() {
-				return {};
+	data() {
+		return {
+			list: []
+		};
+	},
+	created() {
+		axios.get(`https://api.uviewui.com/client/member?type=1`).then(({ data }) => {
+			const { data: { list }, code } = data
+			if (code === 0) {
+				this.list = list
 			}
-		}
+		})
 	}
 };
 </script>

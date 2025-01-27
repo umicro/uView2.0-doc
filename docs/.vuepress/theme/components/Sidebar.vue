@@ -7,24 +7,13 @@
             }"
         >
             <a
+                v-for="item in adList"
+                :key="item._id"
                 class="jump-linker"
                 target="_blank"
-                href="https://yunxin.163.com/im?from=uview_IM_0416"
+                :href="item.link ? item.link : 'javascript:;'"
             >
-              <img src="https://cdn.uviewui.com/uview/resources/18496183264.png" />
-            </a>
-            <a
-                target="_blank"
-                class="jump-linker"
-                href="https://www.crmeb.com/?from=uview"
-            >
-                <img src="https://cdn.uviewui.com/uview/resources/3c56cbc6216b47db61e37090fdb6619.jpg" />
-            </a>
-            <a
-                class="jump-linker"
-                href="javascript:;"
-            >
-                <img src="/customer/contact1.png" />
+              <img :alt="item.title" :src="`https://api.uviewui.com${item.imageUrl}`" />
             </a>
             <NavLinks />
             <slot name="top" />
@@ -40,6 +29,7 @@
 <script>
 import SidebarLinks from "@theme/components/SidebarLinks.vue";
 import NavLinks from "@theme/components/NavLinks.vue";
+import axios from 'axios'
 
 export default {
     name: "Sidebar",
@@ -51,10 +41,18 @@ export default {
     data() {
         return {
             // showV2Tips: !localStorage.getItem("showV2Tips"),
+            adList: []
         };
     },
     props: ["items"],
-    created() { },
+    created() {
+        axios.get(`https://api.uviewui.com/client/ad?code=left-top`).then(({ data }) => {
+            const { data: { list }, code } = data
+            if (code === 0) {
+                this.adList = list
+            }
+        })
+    },
     methods: {},
 };
 </script>

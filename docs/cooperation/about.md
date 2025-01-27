@@ -20,11 +20,11 @@ uView 免费开源，无需授权，欢迎商用。uView 的发展也得到各�
 
 以下为部分对 uView2.0 有特出贡献的研发组成员，排名不分先后：
 
-<team-member-item v-for="(item, index) in memberList" :key="index" :list="item"></team-member-item>
+<team-member-item></team-member-item>
 
 ### 活跃开发者
 
-<activeDeveloper :activeDeveloperList="activeDeveloperList"></activeDeveloper>
+<activeDeveloper></activeDeveloper>
 
 <br>
 
@@ -71,78 +71,6 @@ uView 的目标是做成 uniapp 生态的标杆，自由且免费开源。
 uView 拥有众多用户，且文档详尽，经得起推敲，受得住考验，官方网站每天有数万 IP 访问量，如果您认为这些有助于您公司的业务推广，可以成为 uView 的赞助商， 我们会在适当的位置展示您的推广内容。
 
 赞助请联系 QQ(注明赞助)：1416956117
-
-<script>
-	export default {
-		data() {
-			return {
-				memberList: [
-					{
-						avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=604322871&spec=640&img_type=jpg',
-						name: '北桥',
-						job: '全栈开发',
-						csdn: 'https://me.csdn.net/qq_33162604',
-						duty: '负责uView核心组件研发，维护与升级，社区管理、宣传等工作',
-						intro: '多个项目开发经验，技术栈：原生安卓，java，前端，服务器等',
-                        github: 'https://github.com/BeiQiaoT',
-                        gitee: 'https://gitee.com/beiqiao'
-					},
-					{
-						avatar: 'https://xxx.com/team/546BC1A58D6EA.jpg',
-						name: 'TtTao',
-						job: '全栈开发',
-						addr: '贵阳创业',
-						duty: '负责uView核心组件、API工具开发，测试、兼容处理、文档管理等相关工作',
-						intro: '项目经验丰富，喜欢挑战新兴技术，对微服务、虚拟化容器有自己独到的见解，主要技术栈：Golang、Vue',
-                        gitee: 'https://gitee.com/tttao7'
-					},
-					{
-						avatar: 'https://xxx.com/team/15915681648132.jpg',
-						name: '黄河浪',
-						job: '前端开发',
-						addr: '长沙',
-						csdn: 'https://blog.csdn.net/u013350495',
-						link: 'https://www.jq22.com/mem395541',
-						uniapp: 'https://ext.dcloud.net.cn/publisher?id=110853',
-						duty: '负责uView模板开发，社区管理等工作',
-						intro: '脾气不好的暴躁老哥。丰富的前端开发经验，对代码有洁癖，CSS能力出众'
-					}
-				],
-                activeDeveloperList:[
-                    {
-                        avatar:"https://q.qlogo.cn/headimg_dl?dst_uin=1256262401&spec=640&img_type=jpg",
-                        name:"千珏",
-                        job: '前端开发',
-                        addr: '郑州',
-                        csdn: 'https://blog.csdn.net/qq_42543244',
-			intro: '使用uni开发过多个移动端项目，热爱编程，喜欢钻研。'
-                    },
-                    {
-                        avatar:"https://q.qlogo.cn/headimg_dl?dst_uin=591714093&spec=640&img_type=jpg",
-                        name:"yatoku",
-                        job: '前端开发',
-                        addr: '宁波',
-			intro: '熟悉并热爱ES6+新语法，且能够在项目开发中加以运用，提高项目的开发效率以及编写代码的质量。'
-                    },
-	            {
-                        avatar:"https://q.qlogo.cn/headimg_dl?dst_uin=1592826708&spec=100&img_type=jpg",
-                        name:"小飞",
-                        job: '前端开发',
-                        addr: '宁波',
-			intro: '熟悉uni-app多端适配，开发过多个uni-app项目'
-                    },
-					{
-						avatar:"https://q.qlogo.cn/headimg_dl?dst_uin=3927559397&spec=640&img_type=jpg",
-						name:'mermen',
-						job:'前端开发',
-						addr:'成都',
-						intro:'8年+开发经验，熟练使用uni-app进行跨平台开发，对于web前端有独特的理解'
-					}
-                ]
-			}
-		}
-	}
-</script>
 
 <style scoped>
 .page {
