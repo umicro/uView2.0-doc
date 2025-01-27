@@ -19,8 +19,47 @@
 				</div>
 			</div>
 		</div>
+
+		以下为历史捐赠者名单，无论金额多少，我们都铭记在心，感谢您的支持！
+		<br>
+		如有遗漏，请及时联系QQ（1416956117），我们将及时更新。
+		<br>
+		<br>
+
+		<el-table :data="donationList" border size="small">
+			<el-table-column prop="name" label="姓名" />
+			<el-table-column prop="amount" label="金额(元)" />
+			<el-table-column prop="donationDate" label="日期" />
+			<el-table-column prop="platform" label="平台">
+				<template #default="scope">
+					<span v-if="scope.row.platform === 'wechat'">微信</span>
+					<span v-else-if="scope.row.platform === 'alipay'">支付宝</span>
+					<span v-else>其他</span>
+				</template>
+			</el-table-column>
+		</el-table>
 	</div>
 </template>
+
+<script>
+import axios from 'axios'
+
+export default {
+	data() {
+		return {
+			donationList: []
+		}
+	},
+	created() {
+		axios.get(`https://api.uviewui.com/client/donation`).then(({ data }) => {
+			const { data: { list }, code } = data
+			if (code === 0) {
+				this.donationList = list
+			}
+		})
+	}
+}
+</script>
 
 <style scoped>
 	.sponsor-type {
@@ -32,5 +71,13 @@
 	.sponsor-type img {
 		max-width: 200px;
 		display: inline-block;
+	}
+
+	/deep/ td, /deep/ th, /deep/ tr {
+		border: none;
+	}
+
+	/deep/ table {
+		margin: 0;
 	}
 </style>

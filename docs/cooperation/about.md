@@ -60,17 +60,17 @@ uView 的目标是做成 uniapp 生态的标杆，自由且免费开源。
 
 <br>
 
-### 捐赠 uView 的研发
-
-<donation></donation>
-
-<br>
-
 ### 赞助商
 
 uView 拥有众多用户，且文档详尽，经得起推敲，受得住考验，官方网站每天有数万 IP 访问量，如果您认为这些有助于您公司的业务推广，可以成为 uView 的赞助商， 我们会在适当的位置展示您的推广内容。
 
 赞助请联系 QQ(注明赞助)：1416956117
+
+<br>
+
+### 捐赠 uView 的研发
+
+<donation></donation>
 
 <style scoped>
 .page {
