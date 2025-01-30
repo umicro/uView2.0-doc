@@ -3,7 +3,7 @@
 		<div class="member-item" v-for="item in list" :key="item.id">
 			<div class="member-item__avatar"><img :src="`https://api.uviewui.com${item.avatar}`" /></div>
 			<div class="member-item__info">
-			<div class="member-item__name">{{ item.name }}</div>
+			<div class="member-item__name">{{ item.nickname }}</div>
 			<div class="member-item__tag">
 				<div class="member-item__tag__item" v-if="item.position">{{ item.position }}</div>
 				<div class="member-item__tag__split" v-if="item.city">·</div>
@@ -29,7 +29,7 @@
 					<div class="member-item__tag__item" v-if="skill.tag === 'link'">
 						<a :href="item.link" target="_blank"><span class="iconfont">&#xe67b;</span></a>
 					</div>
-				</template>	
+				</template>
 			</div>
 				<div class="member-item__job">职责：{{ item.duty }}</div>
 				<div class="member-item__intro">介绍：{{ item.introduction }}</div>
