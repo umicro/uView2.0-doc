@@ -83,7 +83,7 @@
               v-if="skill.tag === 'link'"
             >
               <a
-                :href="item.link"
+                :href="skill.url"
                 target="_blank"
               ><span class="iconfont">&#xe67b;</span></a>
             </div>
