@@ -6,12 +6,12 @@ module.exports = {
   markdown: {
     //lineNumbers: true
     extendMarkdown: (md) => {
-        md.use(require("markdown-it-copy"),{
-            btnText: "copy",
-            failText: "❌ Copy failed",
-            successText: "✅ Copy success!",
-            successTextDelay: 2000,
-        });
+      md.use(require("markdown-it-copy"), {
+        btnText: "copy",
+        failText: "❌ Copy failed",
+        successText: "✅ Copy success!",
+        successTextDelay: 2000,
+      });
     },
   },
   plugins: {
@@ -76,33 +76,38 @@ module.exports = {
       text: 'API',
       link: '/js/intro'
     },
-      // {
-      // 	text: '模板',
-      // 	link: '/layout/intro'
-      // },
-      {
-        text: '资源',
-        link: '/components/resource'
-      },
-      {
-        text: '关于我们',
-        link: '/cooperation/about'
-      }, {
-        text: '2.X',
-        items: [{
-          text: '1.X',
-          link: 'https://v1.uviewui.com'
-        }
-        ]
-      },
-      {
-        text: 'GitHub',
-        link: 'https://github.com/umicro/uView2.0'
-      },
-      {
-        text: 'Gitee',
-        link: 'https://gitee.com/umicro/uView2.0'
+    // {
+    // 	text: '模板',
+    // 	link: '/layout/intro'
+    // },
+    {
+      text: '资源',
+      link: '/components/resource'
+    },
+    {
+      text: '关于我们',
+      link: '/cooperation/about'
+    },
+    {
+      text: '捐赠名单',
+      link: '/cooperation/donation'
+    },
+    {
+      text: '2.X',
+      items: [{
+        text: '1.X',
+        link: 'https://v1.uviewui.com'
       }
+      ]
+    },
+    {
+      text: 'GitHub',
+      link: 'https://github.com/umicro/uView2.0'
+    },
+    {
+      text: 'Gitee',
+      link: 'https://gitee.com/umicro/uView2.0'
+    }
     ],
     sidebar: {
       '/components/': [{
@@ -123,134 +128,134 @@ module.exports = {
           ['https://www.kancloud.cn/uview/uview-ui_v2/2593659', '2.X 常见问题整理']
         ]
       },
-        {
-          title: '组件',
+      {
+        title: '组件',
+        collapsable: false,
+        sidebarDepth: 0,
+        children: [{
+          title: '基础组件',
           collapsable: false,
           sidebarDepth: 0,
-          children: [{
-            title: '基础组件',
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-              '/components/color',
-              '/components/icon',
-              '/components/image',
-              '/components/button',
-              '/components/text',
-              '/components/layout',
-              '/components/cell',
-              '/components/badge',
-              '/components/tag',
-              '/components/loadingIcon',
-              '/components/loadingPage'
-            ]
-          },
-            {
-              title: '表单组件',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                '/components/form',
-                '/components/calendar',
-                '/components/keyboard',
-                '/components/picker',
-                '/components/datetimePicker',
-                '/components/rate',
-                '/components/search',
-                '/components/numberBox',
-                '/components/upload',
-                '/components/code',
-                '/components/input',
-                '/components/textarea',
-                '/components/checkbox',
-                '/components/radio',
-                '/components/switch',
-                '/components/slider',
-                '/components/album'
-              ]
-            },
-            {
-              title: '数据组件',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                '/components/list',
-                // '/components/circleProgress',
-                '/components/lineProgress',
-                // '/components/table',
-                '/components/countDown',
-                '/components/countTo'
-              ]
-            },
-            {
-              title: '反馈组件',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                '/components/tooltip',
-                '/components/actionSheet',
-                '/components/alert',
-                '/components/toast',
-                '/components/noticeBar',
-                '/components/notify',
-                '/components/swipeAction',
-                '/components/collapse',
-                '/components/popup',
-                '/components/modal'
-              ]
-            },
-            {
-              title: '布局组件',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                '/components/scrollList',
-                '/components/line',
-                '/components/overlay',
-                '/components/noNetwork',
-                '/components/grid',
-                '/components/swiper',
-                '/components/skeleton',
-                '/components/sticky',
-                '/components/divider'
-              ]
-            },
-            {
-              title: '导航组件',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                // '/components/dropdown',
-                '/components/tabbar',
-                '/components/backTop',
-                '/components/navbar',
-                '/components/tabs',
-                // '/components/tabsSwiper',
-                '/components/subsection',
-                '/components/indexList',
-                '/components/steps',
-                '/components/empty'
-              ]
-            },
-            {
-              title: '其他组件',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                '/components/parse',
-                '/components/codeInput',
-                // '/components/avatarCropper',
-                '/components/loadMore',
-                '/components/readMore',
-                // '/components/lazyLoad',
-                '/components/gap',
-                '/components/avatar',
-                '/components/link',
-                '/components/transition'
-              ]
-            }
+          children: [
+            '/components/color',
+            '/components/icon',
+            '/components/image',
+            '/components/button',
+            '/components/text',
+            '/components/layout',
+            '/components/cell',
+            '/components/badge',
+            '/components/tag',
+            '/components/loadingIcon',
+            '/components/loadingPage'
+          ]
+        },
+        {
+          title: '表单组件',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/components/form',
+            '/components/calendar',
+            '/components/keyboard',
+            '/components/picker',
+            '/components/datetimePicker',
+            '/components/rate',
+            '/components/search',
+            '/components/numberBox',
+            '/components/upload',
+            '/components/code',
+            '/components/input',
+            '/components/textarea',
+            '/components/checkbox',
+            '/components/radio',
+            '/components/switch',
+            '/components/slider',
+            '/components/album'
+          ]
+        },
+        {
+          title: '数据组件',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/components/list',
+            // '/components/circleProgress',
+            '/components/lineProgress',
+            // '/components/table',
+            '/components/countDown',
+            '/components/countTo'
+          ]
+        },
+        {
+          title: '反馈组件',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/components/tooltip',
+            '/components/actionSheet',
+            '/components/alert',
+            '/components/toast',
+            '/components/noticeBar',
+            '/components/notify',
+            '/components/swipeAction',
+            '/components/collapse',
+            '/components/popup',
+            '/components/modal'
+          ]
+        },
+        {
+          title: '布局组件',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/components/scrollList',
+            '/components/line',
+            '/components/overlay',
+            '/components/noNetwork',
+            '/components/grid',
+            '/components/swiper',
+            '/components/skeleton',
+            '/components/sticky',
+            '/components/divider'
+          ]
+        },
+        {
+          title: '导航组件',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            // '/components/dropdown',
+            '/components/tabbar',
+            '/components/backTop',
+            '/components/navbar',
+            '/components/tabs',
+            // '/components/tabsSwiper',
+            '/components/subsection',
+            '/components/indexList',
+            '/components/steps',
+            '/components/empty'
+          ]
+        },
+        {
+          title: '其他组件',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/components/parse',
+            '/components/codeInput',
+            // '/components/avatarCropper',
+            '/components/loadMore',
+            '/components/readMore',
+            // '/components/lazyLoad',
+            '/components/gap',
+            '/components/avatar',
+            '/components/link',
+            '/components/transition'
           ]
         }
+        ]
+      }
       ],
       '/guide': [{
         title: '开发指南',

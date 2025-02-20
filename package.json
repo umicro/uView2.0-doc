@@ -32,5 +32,9 @@
     "element-ui": "^2.13.2",
     "markdown-it-copy": "^1.2.0",
     "vue-cookies": "^1.7.4"
+  },
+  "volta": {
+    "node": "18.20.6",
+    "pnpm": "10.2.1"
   }
 }
