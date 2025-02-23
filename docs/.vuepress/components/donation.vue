@@ -27,6 +27,16 @@
 
     <el-table :data="donationList" border size="small">
       <el-table-column prop="name" label="姓名" />
+      <el-table-column prop="avatar" label="头像">
+        <template #default="scope">
+          <el-avatar
+            v-if="scope.row.avatar"
+            :src="baseUrl + scope.row.avatar"
+            :size="40"
+          ></el-avatar>
+          <span v-else>--</span>
+        </template>
+      </el-table-column>
       <el-table-column prop="amount" label="金额(元)" />
       <el-table-column prop="donationDate" label="日期" />
       <el-table-column prop="platform" label="平台">
@@ -52,10 +62,11 @@ export default {
   data() {
     return {
       donationList: [],
+      baseUrl: 'https://api.uviewui.com',
     };
   },
   created() {
-    axios.get(`https://api.uviewui.com/client/donation`).then(({ data }) => {
+    axios.get(`${this.baseUrl}/client/donation`).then(({ data }) => {
       const {
         data: { list },
         code,
