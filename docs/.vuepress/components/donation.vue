@@ -25,6 +25,18 @@
     <br />
     <br />
 
+    <div class="table-header">
+      <el-select
+        v-model="order"
+        placeholder="排序方式"
+        size="small"
+        @change="fetchDonationList"
+      >
+        <el-option label="按日期排序" value="donationDate"></el-option>
+        <el-option label="按金额排序" value="amount"></el-option>
+      </el-select>
+    </div>
+
     <el-table :data="donationList" border size="small">
       <el-table-column prop="name" label="姓名" />
       <el-table-column prop="avatar" label="头像">
@@ -63,18 +75,26 @@ export default {
     return {
       donationList: [],
       baseUrl: 'https://api.uviewui.com',
+      order: 'donationDate',
     };
   },
   created() {
-    axios.get(`${this.baseUrl}/client/donation`).then(({ data }) => {
-      const {
-        data: { list },
-        code,
-      } = data;
-      if (code === 0) {
-        this.donationList = list;
-      }
-    });
+    this.fetchDonationList();
+  },
+  methods: {
+    fetchDonationList() {
+      axios
+        .get(`${this.baseUrl}/client/donation?order=${this.order}`)
+        .then(({ data }) => {
+          const {
+            data: { list },
+            code,
+          } = data;
+          if (code === 0) {
+            this.donationList = list;
+          }
+        });
+    },
   },
 };
 </script>
@@ -91,13 +111,19 @@ export default {
   display: inline-block;
 }
 
-/deep/ td,
-/deep/ th,
-/deep/ tr {
+.table-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+:deep(td),
+:deep(th),
+:deep(tr) {
   border: none;
 }
 
-/deep/ table {
+:deep(table) {
   margin: 0;
 }
 </style>
