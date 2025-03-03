@@ -47,33 +47,33 @@ Toast 组件主要用于消息通知、加载提示、操作结果提示等醒�
             type: "default",
             title: "默认主题",
             message: "锦瑟无端五十弦",
-            iconUrl: "https://xxx.com/demo/toast/default.png",
+            iconUrl: "https://uviewui.com/demo/toast/default.png",
           },
           {
             type: "error",
             icon: false,
             title: "失败主题",
             message: "一弦一柱思华年",
-            iconUrl: "https://xxx.com/demo/toast/error.png",
+            iconUrl: "https://uviewui.com/demo/toast/error.png",
           },
           {
             type: "success",
             title: "成功主题(带图标)",
             message: "庄生晓梦迷蝴蝶",
-            iconUrl: "https://xxx.com/demo/toast/success.png",
+            iconUrl: "https://uviewui.com/demo/toast/success.png",
           },
           {
             type: "loading",
             title: "正在加载",
             message: "正在加载",
-            iconUrl: "https://xxx.com/demo/toast/loading.png",
+            iconUrl: "https://uviewui.com/demo/toast/loading.png",
           },
           {
             type: "default",
             title: "结束后跳转标签页",
             message: "此情可待成追忆",
             url: "/pages/componentsB/tag/tag",
-            iconUrl: "https://xxx.com/demo/toast/jump.png",
+            iconUrl: "https://uviewui.com/demo/toast/jump.png",
           },
         ],
       };
@@ -81,7 +81,7 @@ Toast 组件主要用于消息通知、加载提示、操作结果提示等醒�
     computed: {
       getIcon() {
         return (path) => {
-          return "https://xxx.com/example/" + path + ".png";
+          return "https://uviewui.com/example/" + path + ".png";
         };
       },
     },

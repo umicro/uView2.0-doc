@@ -34,7 +34,7 @@
   export default {
     data() {
       return {
-        src: "https://xxx.com/album/1.jpg",
+        src: "https://uviewui.com/album/1.jpg",
       };
     },
   };
@@ -46,7 +46,7 @@
 通过`mode`参数配置填充模式，此模式用法与 uni-app 的`image`组件的`mode`参数完全一致，详见：[Image](https://uniapp.dcloud.io/component/image)
 
 ```html
-<u--image src="https://xxx.com/album/1.jpg" mode="widthFix"></u--image>
+<u--image src="https://uviewui.com/album/1.jpg" mode="widthFix"></u--image>
 ```
 
 ### 图片形状
@@ -55,7 +55,7 @@
 - 如果为方形时，还可以通过`radius`属性设置圆角值
 
 ```html
-<u--image src="https://xxx.com/album/1.jpg" shape="circle"></u--image>
+<u--image src="https://uviewui.com/album/1.jpg" shape="circle"></u--image>
 ```
 
 ### 懒加载
@@ -63,7 +63,7 @@
 注意：此功能只对微信小程序、App、百度小程序、字节跳动小程序有效，默认开启。
 
 ```html
-<u-image src="https://xxx.com/album/1.jpg" :lazy-load="true"></u-image>
+<u-image src="https://uviewui.com/album/1.jpg" :lazy-load="true"></u-image>
 ```
 
 ### 加载中提示
@@ -71,7 +71,7 @@
 图片加载过程中，为加载中状态(默认显示一个小图标)，可以通过`loading`自定义插槽，结合 uView 的`u-loading`组件，实现加载的动画效果。
 
 ```html
-<u--image src="https://xxx.com/album/1.jpg">
+<u--image src="https://uviewui.com/album/1.jpg">
   <template v-slot:loading>
     <u-loading-icon color="red"></u-loading-icon>
   </template>
@@ -83,7 +83,7 @@
 图片加载失败时，默认显示一个错误提示图标，可以通过`error`自定义插槽，实现个性化的提示方式。
 
 ```html
-<u--image src="https://xxx.com/album/1.jpg">
+<u--image src="https://uviewui.com/album/1.jpg">
   <view slot="error" style="font-size: 24rpx;">加载失败</view>
 </u--image>
 ```
@@ -97,7 +97,7 @@
 
 ```html
 <u--image
-  src="https://xxx.com/album/1.jpg"
+  src="https://uviewui.com/album/1.jpg"
   :fade="true"
   duration="450"
 ></u--image>
@@ -112,7 +112,7 @@
 <!-- 点击图片将不会触发clickHandler -->
 <view @tap="clickHandler">
   <view @tap.stop>
-    <u--image src="https://xxx.com/album/1.jpg"></u--image>
+    <u--image src="https://uviewui.com/album/1.jpg"></u--image>
   </view>
 </view>
 ```

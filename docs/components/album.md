@@ -49,7 +49,7 @@
         albumWidth: 0,
         urls1: [
           {
-            src2: "https://xxx.com/album/1.jpg",
+            src2: "https://uviewui.com/album/1.jpg",
           },
         ],
       };
@@ -114,16 +114,16 @@
       return {
         albumWidth: 0,
         urls2: [
-          "https://xxx.com/album/1.jpg",
-          "https://xxx.com/album/2.jpg",
-          "https://xxx.com/album/3.jpg",
-          "https://xxx.com/album/4.jpg",
-          "https://xxx.com/album/5.jpg",
-          "https://xxx.com/album/6.jpg",
-          "https://xxx.com/album/7.jpg",
-          "https://xxx.com/album/8.jpg",
-          "https://xxx.com/album/9.jpg",
-          "https://xxx.com/album/10.jpg",
+          "https://uviewui.com/album/1.jpg",
+          "https://uviewui.com/album/2.jpg",
+          "https://uviewui.com/album/3.jpg",
+          "https://uviewui.com/album/4.jpg",
+          "https://uviewui.com/album/5.jpg",
+          "https://uviewui.com/album/6.jpg",
+          "https://uviewui.com/album/7.jpg",
+          "https://uviewui.com/album/8.jpg",
+          "https://uviewui.com/album/9.jpg",
+          "https://uviewui.com/album/10.jpg",
         ],
       };
     },

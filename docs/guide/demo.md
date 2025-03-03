@@ -36,7 +36,7 @@ uView 会将各个版本的演示在此展示，目前演示的版本有 H5，�
 	</div>
 	<div class="col-md-3 col-sm-6 col-xs-12">
 		<div class="demo-item">
-			<img src="https://xxx.com/resources/1546181654815455.png" />
+			<img src="https://uviewui.com/resources/1546181654815455.png" />
 			<div class="platform-name">
 				H5
 				<p class="platform-tips">微信或浏览器扫码</p>
@@ -45,7 +45,7 @@ uView 会将各个版本的演示在此展示，目前演示的版本有 H5，�
 	</div>
 	<div class="col-md-3 col-sm-6 col-xs-12">
 		<div class="demo-item">
-			<img src="https://xxx.com/resources/168415644515.png" />
+			<img src="https://uviewui.com/resources/168415644515.png" />
 			<div class="platform-name">
 				安卓
 				<p class="platform-tips">浏览器扫码安装(微信扫码无效)</p>

@@ -110,13 +110,13 @@
       data() {
           return {
               urls: [
-                  'https://xxx.com/album/1.jpg',
-                  'https://xxx.com/album/2.jpg',
-                  'https://xxx.com/album/3.jpg',
-                  'https://xxx.com/album/4.jpg',
-                  'https://xxx.com/album/7.jpg',
-                  'https://xxx.com/album/6.jpg',
-                  'https://xxx.com/album/5.jpg'
+                  'https://uviewui.com/album/1.jpg',
+                  'https://uviewui.com/album/2.jpg',
+                  'https://uviewui.com/album/3.jpg',
+                  'https://uviewui.com/album/4.jpg',
+                  'https://uviewui.com/album/7.jpg',
+                  'https://uviewui.com/album/6.jpg',
+                  'https://uviewui.com/album/5.jpg'
               ]
           }
       }

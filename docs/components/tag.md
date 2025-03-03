@@ -141,7 +141,7 @@ tag 组件一般用于标记和选择，我们提供了更加丰富的表现形�
   type="success"
   plain
   size="large"
-  icon="https://xxx.com/example/tag.png"
+  icon="https://uviewui.com/example/tag.png"
 ></u-tag>
 ```
 

@@ -29,9 +29,9 @@
     data() {
       return {
         list1: [
-          "https://xxx.com/swiper/swiper1.png",
-          "https://xxx.com/swiper/swiper2.png",
-          "https://xxx.com/swiper/swiper3.png",
+          "https://uviewui.com/swiper/swiper1.png",
+          "https://uviewui.com/swiper/swiper2.png",
+          "https://uviewui.com/swiper/swiper3.png",
         ],
       };
     },
@@ -62,15 +62,15 @@
       return {
         list2: [
           {
-            image: "https://xxx.com/swiper/swiper2.png",
+            image: "https://uviewui.com/swiper/swiper2.png",
             title: "昨夜星辰昨夜风，画楼西畔桂堂东",
           },
           {
-            image: "https://xxx.com/swiper/swiper1.png",
+            image: "https://uviewui.com/swiper/swiper1.png",
             title: "身无彩凤双飞翼，心有灵犀一点通",
           },
           {
-            image: "https://xxx.com/swiper/swiper3.png",
+            image: "https://uviewui.com/swiper/swiper3.png",
             title: "谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳",
           },
         ],
@@ -94,9 +94,9 @@
     data() {
       return {
         list3: [
-          "https://xxx.com/swiper/swiper3.png",
-          "https://xxx.com/swiper/swiper2.png",
-          "https://xxx.com/swiper/swiper1.png",
+          "https://uviewui.com/swiper/swiper3.png",
+          "https://uviewui.com/swiper/swiper2.png",
+          "https://uviewui.com/swiper/swiper1.png",
         ],
       };
     },
@@ -120,9 +120,9 @@
     data() {
       return {
         list3: [
-          "https://xxx.com/swiper/swiper3.png",
-          "https://xxx.com/swiper/swiper2.png",
-          "https://xxx.com/swiper/swiper1.png",
+          "https://uviewui.com/swiper/swiper3.png",
+          "https://uviewui.com/swiper/swiper2.png",
+          "https://uviewui.com/swiper/swiper1.png",
         ],
       };
     },
@@ -145,16 +145,16 @@
       return {
         list4: [
           {
-            url: "https://xxx.com/resources/video.mp4",
+            url: "https://uviewui.com/resources/video.mp4",
             title: "昨夜星辰昨夜风，画楼西畔桂堂东",
-            poster: "https://xxx.com/swiper/swiper1.png",
+            poster: "https://uviewui.com/swiper/swiper1.png",
           },
           {
-            url: "https://xxx.com/swiper/swiper2.png",
+            url: "https://uviewui.com/swiper/swiper2.png",
             title: "身无彩凤双飞翼，心有灵犀一点通",
           },
           {
-            url: "https://xxx.com/swiper/swiper3.png",
+            url: "https://uviewui.com/swiper/swiper3.png",
             title: "谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳",
           },
         ],
@@ -179,18 +179,18 @@
       return {
         list4: [
           {
-            url: "https://xxx.com/resources/video.mp4",
+            url: "https://uviewui.com/resources/video.mp4",
             title: "昨夜星辰昨夜风，画楼西畔桂堂东",
-            poster: "https://xxx.com/swiper/swiper1.png",
+            poster: "https://uviewui.com/swiper/swiper1.png",
             type: "video",
           },
           {
-            url: "https://xxx.com/swiper/swiper2.png",
+            url: "https://uviewui.com/swiper/swiper2.png",
             title: "身无彩凤双飞翼，心有灵犀一点通",
             type: "image",
           },
           {
-            url: "https://xxx.com/swiper/swiper3.png",
+            url: "https://uviewui.com/swiper/swiper3.png",
             title: "谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳",
           },
         ],
@@ -244,14 +244,14 @@
     data() {
       return {
         list5: [
-          "https://xxx.com/swiper/swiper3.png",
-          "https://xxx.com/swiper/swiper2.png",
-          "https://xxx.com/swiper/swiper1.png",
+          "https://uviewui.com/swiper/swiper3.png",
+          "https://uviewui.com/swiper/swiper2.png",
+          "https://uviewui.com/swiper/swiper1.png",
         ],
         list6: [
-          "https://xxx.com/swiper/swiper2.png",
-          "https://xxx.com/swiper/swiper3.png",
-          "https://xxx.com/swiper/swiper1.png",
+          "https://uviewui.com/swiper/swiper2.png",
+          "https://uviewui.com/swiper/swiper3.png",
+          "https://uviewui.com/swiper/swiper1.png",
         ],
       };
     },
@@ -320,9 +320,9 @@
     data() {
       return {
         list3: [
-          "https://xxx.com/swiper/swiper3.png",
-          "https://xxx.com/swiper/swiper2.png",
-          "https://xxx.com/swiper/swiper1.png",
+          "https://uviewui.com/swiper/swiper3.png",
+          "https://uviewui.com/swiper/swiper2.png",
+          "https://uviewui.com/swiper/swiper1.png",
         ],
       };
     },

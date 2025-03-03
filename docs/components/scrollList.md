@@ -29,19 +29,19 @@
       return {
         list: [
           {
-            thumb: "https://xxx.com/goods/1.jpg",
+            thumb: "https://uviewui.com/goods/1.jpg",
           },
           {
-            thumb: "https://xxx.com/goods/2.jpg",
+            thumb: "https://uviewui.com/goods/2.jpg",
           },
           {
-            thumb: "https://xxx.com/goods/3.jpg",
+            thumb: "https://uviewui.com/goods/3.jpg",
           },
           {
-            thumb: "https://xxx.com/goods/4.jpg",
+            thumb: "https://uviewui.com/goods/4.jpg",
           },
           {
-            thumb: "https://xxx.com/goods/5.jpg",
+            thumb: "https://uviewui.com/goods/5.jpg",
           },
         ],
       };
@@ -79,19 +79,19 @@
         indicator: true,
         list: [
           {
-            thumb: "https://xxx.com/goods/1.jpg",
+            thumb: "https://uviewui.com/goods/1.jpg",
           },
           {
-            thumb: "https://xxx.com/goods/2.jpg",
+            thumb: "https://uviewui.com/goods/2.jpg",
           },
           {
-            thumb: "https://xxx.com/goods/3.jpg",
+            thumb: "https://uviewui.com/goods/3.jpg",
           },
           {
-            thumb: "https://xxx.com/goods/4.jpg",
+            thumb: "https://uviewui.com/goods/4.jpg",
           },
           {
-            thumb: "https://xxx.com/goods/5.jpg",
+            thumb: "https://uviewui.com/goods/5.jpg",
           },
         ],
       };
@@ -135,35 +135,35 @@
         list: [
           {
             price: "230.5",
-            thumb: "https://xxx.com/goods/1.jpg",
+            thumb: "https://uviewui.com/goods/1.jpg",
           },
           {
             price: "74.1",
-            thumb: "https://xxx.com/goods/2.jpg",
+            thumb: "https://uviewui.com/goods/2.jpg",
           },
           {
             price: "8457",
-            thumb: "https://xxx.com/goods/6.jpg",
+            thumb: "https://uviewui.com/goods/6.jpg",
           },
           {
             price: "1442",
-            thumb: "https://xxx.com/goods/5.jpg",
+            thumb: "https://uviewui.com/goods/5.jpg",
           },
           {
             price: "541",
-            thumb: "https://xxx.com/goods/2.jpg",
+            thumb: "https://uviewui.com/goods/2.jpg",
           },
           {
             price: "234",
-            thumb: "https://xxx.com/goods/3.jpg",
+            thumb: "https://uviewui.com/goods/3.jpg",
           },
           {
             price: "562",
-            thumb: "https://xxx.com/goods/4.jpg",
+            thumb: "https://uviewui.com/goods/4.jpg",
           },
           {
             price: "251.5",
-            thumb: "https://xxx.com/goods/1.jpg",
+            thumb: "https://uviewui.com/goods/1.jpg",
           },
         ],
       };

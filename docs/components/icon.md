@@ -48,7 +48,7 @@
 <u-icon
   label="uView"
   size="40"
-  name="https://xxx.com/example/button.png"
+  name="https://uviewui.com/example/button.png"
 ></u-icon>
 ```
 

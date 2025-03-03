@@ -112,12 +112,12 @@ value3: 'play-right',
     <image
       class="u-page__item__slot-icon"
       slot="active-icon"
-      src="https://xxx.com/common/bell-selected.png"
+      src="https://uviewui.com/common/bell-selected.png"
     ></image>
     <image
       class="u-page__item__slot-icon"
       slot="inactive-icon"
-      src="https://xxx.com/common/bell.png"
+      src="https://uviewui.com/common/bell.png"
     ></image>
   </u-tabbar-item>
   <u-tabbar-item text="放映厅" icon="photo"></u-tabbar-item>

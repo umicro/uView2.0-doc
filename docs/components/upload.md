@@ -120,7 +120,7 @@ data(){ return{ fileList2: [], } }
   :previewFullImage="true"
 ></u-upload>
 <!-- data 方法请参考 基本用法 -->
-data(){ return{ fileList3: [{ url: 'https://xxx.com/swiper/1.jpg', }], } }
+data(){ return{ fileList3: [{ url: 'https://uviewui.com/swiper/1.jpg', }], } }
 ```
 
 ### 隐藏上传按钮
@@ -137,8 +137,8 @@ data(){ return{ fileList3: [{ url: 'https://xxx.com/swiper/1.jpg', }], } }
   :maxCount="2"
 ></u-upload>
 <!-- data 方法请参考 基本用法 -->
-data(){ return{ fileList4: [{ url: 'https://xxx.com/swiper/1.jpg', }, { url:
-'https://xxx.com/swiper/1.jpg', } ], } }
+data(){ return{ fileList4: [{ url: 'https://uviewui.com/swiper/1.jpg', }, { url:
+'https://uviewui.com/swiper/1.jpg', } ], } }
 ```
 
 ### 限制上传数量
@@ -174,7 +174,7 @@ data(){ return{ fileList5: [], } }
   height="150"
 >
   <image
-    src="https://xxx.com/demo/upload/positive.png"
+    src="https://uviewui.com/demo/upload/positive.png"
     mode="widthFix"
     style="width: 250px;height: 150px;"
   ></image>
