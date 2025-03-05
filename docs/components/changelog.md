@@ -34,7 +34,7 @@ export default {
         }
     },
     created() {
-        axios.get(`https://api.uviewui.com/client/changelog?size=10000&docs=v1`).then(({ data }) => {
+        axios.get(`https://api.uviewui.com/client/changelog?size=10000&docs=v2`).then(({ data }) => {
             const { data: { list }, code } = data
             if (code === 0) {
                 this.logList = list
